@@ -1,0 +1,55 @@
+## Instructions:
+- You are an expert in identifying triggers spans, events, and annotations of social determinants of health (SDOH) from free-text notes.
+- The SDOH categories are: 
+Alcohol
+Drug
+Employment
+LivingStatus
+Tobacco
+
+- You will receive a free-text note about a patient's social history information.
+- You will identify SDOH events present in the note.
+- Events are represented by a trigger and a set of entities.
+- The trigger consists of a multi-word span (word or phrase) and a label indicating te SDOH category.
+- For each event, depending on the SDOH category, there are some required and optional entities.
+- For Employment events:
+1. Trigger (required): span that most indicates the Employment event is present. Should be work-related key phrase unless not present, then should be profession.
+2. StatusEmploy (required): consists of span and label (employed, unemployed, retired, on disability, student, or homemaker)
+3. Duration (optional): span that describes how long the event persisted
+4. History (optional): span that describes how long ago an event occurred
+5. Type (optional): span that indicates the occupation or profession of the patient. Should specific professsion unless not present, then should be type of work or work location.
+- For LivingStatus events
+1. Trigger (required): span that most indicates the LivingStatus event is present.
+2. StatusTime (required): consists of span and label (current, past, or future)
+3. TypeLiving (required): consists of span and label (alone, with family, with others, or homeless)
+4. Duration (optional): span that describes how long the event persisted
+5. History (optional): span that describes how long ago the event occurred
+- For Alcohol, Drug, or Tobacco (Substance Abuse) events:
+1. Trigger (required): span that most indicates an Alcohol, Drug, or Tobacco event
+2. StatusTime (required): consists of span and label (none, current, past)
+3. Duration (optional): span that indicates the length of time the patient used the substance in the substance abuse event
+4. History (optional): span that indicates when a patient quit a given substance
+5. Method (optional): span that indicates how the substance is used by the patient
+6. Type (optional): span that indicates the specific type of substance used by the patient, beyond the general categories of alcohol, drug, and tobacoo
+7. Amount (optional): span that indicates the quantity of substance used by the patient
+8. Frequency (optional): span that indicates how often the given substance is used by the patient
+
+- Your output should have 3 sections.
+- The first sections is where you identify spans.
+- Each line of the first section should follow the following format, with a tab separating each of the 3 parts on the line:
+1. The letter T followed by the index of the span (starting from 1)
+2. The type of trigger. If the span is the Trigger of an event, this should be the event name. Otherwise, it should be the span's name. This should be followed by a space, then the starting character location of the span, then another space, and the ending character location of the span.
+3. The span itself verbatim from the note
+- The second section is where you identify the events.
+- Each line of the second section should follow the following format, with a tab separating each of the 2 parts on the line:
+1. The letter E followed by the index of the event (starting from 1)
+2. Each span associated with the event separated by a space. Each span is described by their name, followed by a colon, followed by the letter T, followed by their index. If the span is a Trigger, then its name is the SDOH category of the event.
+- The third section is where you identify the annotations, or labels for the spans that have them.
+- Each line of the second section should follow the following format, with a tab separating each of the 2 parts on the line:
+1. The letter A followed by the index of the event (starting from 1)
+2. The span's name, with the string Val appended to the end, then a space, then T followed by the index of the corresponding span, then a space, then the label value of the span.
+## Examples:
+### Input: "Social History:
+Patient lives with a female companion on [**Location (un) **]. He lost most of his possessions, including property, when his bank when under and recalled his loans which he could not pay and foreclosed his home and other properties. This precipitated his psychiatric admission for depression in [**Month (only) 116**]. Denies tobacco, alcohol or current IV drug use. Has h/o IVDU."
+### Output: \"T1\tLivingStatus 24 29\tlives\nT2\tStatusTime 24 29\tlives\nT3\tTypeLiving 30 53\twith a female companion\nT4\tTobacco 343 350\ttobacco\nT5\tAlcohol 352 359\talcohol\nT6\tDrug 363 382\tcurrent IV drug use\nT7\tMethod 371 373\tIV\nT8\tStatusTime 336 342\tDenies\nT9\tDrug 392 396\tIVDU\nT10\tStatusTime 384 391\tHas h/o\nT11\tMethod 392 396\tIVDU\nE1\tLivingStatus:T1 Status:T2 Type:T3\nE2\tTobacco:T4 Status:T8\nE3\tAlcohol:T5 Status:T8\nE4\tDrug:T6 Status:T8 Method:T7\nE5\tDrug:T9 Status:T10 Method:T11\nA1\tStatusTimeVal T2 current\nA2\tTypeLivingVal T3 with_others\nA3\tStatusTimeVal T8 none\nA4\tStatusTimeVal T10 past\n\"\n\n### Input: \"Social History:\nLives with: Wife\nOccupation: Technical writer\nCigarettes: Denies\nETOH: Denies\nIllicit drug use: Denies\"\n### Output: \"T1\tLivingStatus 16 21\tLives\nT2\tStatusTime 16 21\tLives\nT3\tTypeLiving 22 32\twith: Wife\nT4\tEmployment 33 43\tOccupation\nT5\tStatusEmploy 45 61\tTechnical writer\nT6\tType 45 61\tTechnical writer\nT7\tTobacco 62 72\tCigarettes\nT8\tType 62 72\tCigarettes\nT9\tStatusTime 74 80\tDenies\nT10\tAlcohol 81 85\tETOH\nT11\tStatusTime 87 93\tDenies\nT12\tDrug 94 110\tIllicit drug use\nT13\tType 94 101\tIllicit\nT14\tStatusTime 112 118\tDenies\nE1\tLivingStatus:T1 Status:T2 Type:T3\nE2\tEmployment:T4 Type:T6 Status:T5\nE3\tTobacco:T7 Type:T8 Status:T9\nE4\tAlcohol:T10 Status:T11\nE5\tDrug:T12 Type:T13 Status:T14\nA1\tStatusTimeVal T2 current\nA2\tTypeLivingVal T3 with_family\nA3\tStatusEmployVal T5 employed\nA4\tStatusTimeVal T9 none\nA5\tStatusTimeVal T11 none\nA6\tStatusTimeVal T14 none\n\"\n\n### Input: \"SOCIAL HISTORY:  The patient is a single college student with\noccasional alcohol intake; denies tobacco.\"\n### Output: \"T1\tEmployment 32 56\ta single college student\nT2\tStatusEmploy 32 56\ta single college student\nT3\tAlcohol 62 87\toccasional alcohol intake\nT4\tStatusTime 62 87\toccasional alcohol intake\nT6\tTobacco 96 103\ttobacco\nT7\tStatusTime 89 95\tdenies\nE1\tEmployment:T1 Status:T2\nE2\tAlcohol:T3 Status:T4\nE3\tTobacco:T6 Status:T7\nA1\tStatusEmployVal T2 student\nA2\tStatusTimeVal T4 current\nA4\tStatusTimeVal T7 none\n\"\n\n### Input: \"SOCIAL HISTORY:  Significant for 5 to 6 cigarettes per day\ntimes 58 years.\"\n### Output: \"T1\tTobacco 33 50\t5 to 6 cigarettes\nT2\tType 40 50\tcigarettes\nT3\tStatusTime 33 58;59 73\t5 to 6 cigarettes per day times 58 years\nT4\tFrequency 51 58\tper day\nT5\tDuration 59 73\ttimes 58 years\nT6\tAmount 33 50\t5 to 6 cigarettes\nE1\tTobacco:T1 Status:T3 Type:T2 Amount:T6 Frequency:T4 Duration:T5\nA1\tStatusTimeVal T3 current\n\"\n\n### Input: \"Social History:\nUnknown; pt. had parole papers on his person.\"\n### Output: \"\"\n\n## New Note:
+Please analyze the following new note and identify the trigger spans, events, and annotations of SDOH:

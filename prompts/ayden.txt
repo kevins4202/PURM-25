@@ -1,0 +1,390 @@
+# Objective
+Please annotate the medical note.
+# Information
+## Alcohol Annotations
+### Alcohol Annotation Overview
+|Key|Value|
+|:--:|:--:|
+|alcohol_status    | (evidence, label)   |
+|alcohol_duration  | evidence or 'null'  |
+|alcohol_history   | evidence or 'null'  |
+|alcohol_method    | evidence or 'null'  |
+|alcohol_type      | evidence or 'null'  |
+|alcohol_amount    | evidence or 'null'  |
+|alcohol_frequency | evidence or 'null'  |
+### Alcohol Annotation Keys
+- alcohol_status: text from the note indicating whether or not the patient has consumed alcohol
+- alcohol_duration: text from the note indicating how long a patient has been consuming alcohol 
+- alcohol_history: text from the note indicating when a patient quit consuming alcohol 
+- alcohol_method: text from the note indicating how the alcohol is consumed
+- alcohol_type: text from the note indicating the type of alcohol 
+- alcohol_amount: text from the note indicating the quantity of alcohol 
+- alcohol_frequency: text from the note indicating the frequency of alcohol use 
+### Alcohol Annotation Values
+#### Evidence
+Text from the note that explains the corresponding key
+#### Label
+- none: the patient has never consumed alcohol
+- current: the patient currently consumes alcohol
+- past: the patient has consumed alcohol
+#### Null
+There is NOT any evidence for the corresponding key
+### Alcohol Annotation Format
+{
+alcohol_status: (<evidence>, <label>),
+alcohol_duration: <evidence|'null'>,
+alcohol_history: <evidence|'null'>,
+alcohol_method: <evidence|'null'>,
+alcohol_type: <evidence|'null'>,
+alcohol_amount: <evidence|'null'>,
+alcohol_frequency: <evidence|'null'>
+}
+## Tobacco Annotations
+### Tobacco Annotation Overview
+|Key|Value|
+|:--:|:--:|
+|tobacco_status    | (evidence, label)   |
+|tobacco_duration  | evidence or 'null'  |
+|tobacco_history   | evidence or 'null'  |
+|tobacco_method    | evidence or 'null'  |
+|tobacco_type      | evidence or 'null'  |
+|tobacco_amount    | evidence or 'null'  |
+|tobacco_frequency | evidence or 'null'  |
+### Tobacco Annotation Keys
+- tobacco_status: text from the note indicating whether or not the patient has used tobacco 
+- tobacco_duration: text from the note indicating how long a patient has been using tobacco    
+- tobacco_history: text from the note indicating when a patient quit using tobacco             
+- tobacco_method: text from the note indicating how the tobacco is taken       
+- tobacco_type: text from the note indicating the type of tobacco product used 
+- tobacco_amount: text from the note indicating the quantity of tobacco product used          
+- tobacco_frequency: text from the note indicating the frequency of tobacco use                
+### Tobacco Annotation Values
+#### Evidence
+Text from the note that explains the corresponding key
+#### Label
+- none: the patient has never used tobacco products
+- current: the patient currently uses tobacco products
+- past: the patient has used tobacco products
+#### Null
+There is NOT any evidence for the corresponding key
+### Tobacco Annotation Format
+{
+tobacco_status: (<evidence>, <label>),
+tobacco_duration: <evidence|'null'>,
+tobacco_history: <evidence|'null'>,
+tobacco_method: <evidence|'null'>,
+tobacco_type: <evidence|'null'>,
+tobacco_amount: <evidence|'null'>,
+tobacco_frequency: <evidence|'null'>
+}
+## Illicit Drug Annotations
+### Illicit Drug Annotation Overview 
+|Key|Value|
+|:--:|:--:|
+|ill_drug_status    | (evidence, label)   |
+|ill_drug_duration  | evidence or 'null'  |
+|ill_drug_history   | evidence or 'null'  |
+|ill_drug_method    | evidence or 'null'  |
+|ill_drug_type      | evidence or 'null'  |
+|ill_drug_amount    | evidence or 'null'  |
+|ill_drug_frequency | evidence or 'null'  |
+### Illicit Drug Annotation Keys
+- ill_drug_status: text from the note indicating whether or not the patient has used an illicit drug
+- ill_drug_duration: text from the note indicating how long a patient has been using the illicit drug
+- ill_drug_history: text from the note indicating when a patient quit using the illicit drug
+- ill_drug_method: text from the note indicating how the illicit drug is taken
+- ill_drug_type: text from the note indicating the type of illicit drug 
+- ill_drug_amount: text from the note indicating the quantity of the illicit drug 
+- ill_drug_frequency: text from the note indicating the frequency of illicit drug use 
+### Illicit Drug Annotation Values
+#### Evidence
+Text from the note that explains the corresponding key
+#### Label
+- none: the patient has never used illicit drugs
+- current: the patient currently uses illicit drugs
+- past: the patient has used illicit drugs
+#### Null
+There is NOT any evidence for the corresponding key
+### Illicit Drug Annotation Format
+{
+ill_drug_status: (<evidence>, <label>),
+ill_drug_duration: <evidence|'null'>,
+ill_drug_history: <evidence|'null'>,
+ill_drug_method: <evidence|'null'>,
+ill_drug_type: <evidence|'null'>,
+ill_drug_amount: <evidence|'null'>,
+ill_drug_frequency: <evidence|'null'>
+}
+## Employment Annotations
+### Employment Annotation Overview
+|Key|Value|
+|:--:|:--:|
+|employment_status    | (evidence, label)  |
+|employment_duration  | evidence or 'null' |
+|employment_history   | evidence or 'null' |
+|employment_type      | evidence or 'null' |
+### Employment Annotation Keys
+- employment_status: text from the note indicating the patient's work status
+- employment_duration: text from the note indicating how long the patient held the position
+- employment_history: text from the note indicating when the patient was last employed, disability, etc. 
+- employment_type: text from the note indicating the type of position they held (if status is employed then specify the type of position held)
+### Employment Annotation Values
+#### Evidence
+Text from the note that explains the corresponding key
+#### Label
+- employed: the patient currently has a job
+- unemployed: the patient is currently unemployed
+- retired: the patient is retired
+- disability: the patient is on disability
+- student: the patient is a student
+- homemaker: the patient is a homemaker
+#### Null
+There is NOT any evidence for the corresponding key
+### Employment Annotation Format
+{
+employment_status: (<evidence>, <label>),
+employment_duration: <evidence|'null'>,
+employment_history: <evidence|'null'>,
+employment_type: <evidence|'null'>
+}
+## Shelter Annotations
+### Shelter Annotation Overview
+|Key|Value|
+|:--:|:--:|
+|shelter_status    | (evidence, status_label) |
+|shelter_type      | (evidence, type_label)   |
+|shelter_duration  | evidence or 'null'       |
+|shelter_history   | evidence or 'null'       |
+### Shelter Annotation Keys
+- shelter_status: text from the note indicating the patient's shelter status
+- shelter_type: text from the note indicating the type of shelter (e.g., house, townhome, apartment, etc.)
+- shelter_duration: text from the note indicating how long the patient lived in the shelter 
+- shelter_history: text from the note indicating when the patient last lived in the shelter   
+### Shelter Annotation Values
+#### Evidence
+Text from the note that explains the corresponding key
+#### Status Label
+- current: the patient currently has shelter 
+- past: the patient used to have shelter 
+- future: the patient will have shelter 
+#### Type Label
+- alone: the patient lives alone
+- family: the patient lives with their family
+- others: the patient lives with others
+- homeless: the patient is homeless
+#### Null
+There is NOT any evidence for the corresponding key
+### Shelter Annotation Format
+{
+shelter_status: (<evidence>, <status_label>),
+shelter_type: (<evidence>, <type_label>),
+shelter_duration: <evidence|'null'>,
+shelter_history: <evidence|'null'>
+}
+## Answer Format
+Please format the answer as follows:
+**ANNOTATIONS**
+**Alcohol** 
+<alcohol annotations|'null'>
+**Tobacco**
+<tobacco annotations|'null'>
+**Illicit Drug**
+<illicit drug annotations|'null'>
+**Employment**
+<employment annotations|'null'>
+**Shelter**
+<shelter annotations|'null'>
+# Examples
+## Example 1
+Q:"Social History:
+Patient lives with a female companion on [**Location (un) **]. He lost most
+of his possessions, including property, when his bank when under
+and recalled his loans which he could not pay and foreclosed his
+home and other properties.  This precipitated his psychiatric
+admission for depression in [**Month (only) 116**]. Denies tobacco, alcohol or
+current IV drug use. Has h/o IVDU."
+A:
+**ANNOTATIONS**
+**Alcohol** 
+{
+alcohol_status: ('Denies', none),
+alcohol_duration: 'null',
+alcohol_history: 'null',
+alcohol_method: 'null',
+alcohol_type: 'null',
+alcohol_amount: 'null',
+alcohol_frequency: 'null'
+}
+**Tobacco**
+{
+tobacco_status: ('Denies', none),
+tobacco_duration: 'null',
+tobacco_history: 'null',
+tobacco_method: 'null',
+tobacco_type: 'null',
+tobacco_amount: 'null',
+tobacco_frequency: 'null'
+}
+**Illicit Drug**
+{
+ill_drug_status: ('Denies', none),
+ill_drug_duration: 'null',
+ill_drug_history: 'null',
+ill_drug_method: 'IV',
+ill_drug_type: 'null',
+ill_drug_amount: 'null',
+ill_drug_frequency: 'null'
+}
+{
+ill_drug_status: ('Has h/o', past),
+ill_drug_duration: 'null',
+ill_drug_history: 'null',
+ill_drug_method: 'IVDU',
+ill_drug_type: 'null',
+ill_drug_amount: 'null',
+ill_drug_frequency: 'null'
+}
+**Employment**
+'null'
+**Shelter**
+{
+shelter_status: ('lives', current),
+shelter_type: ('with a female companion', others),
+shelter_duration: 'null',
+shelter_history: 'null'
+}
+## Example 2
+Q:"Social History:
+Lives with: Wife
+Occupation: Technical writer
+Cigarettes: Denies
+ETOH: Denies
+Illicit drug use: Denies"
+A:
+**ANNOTATIONS**
+**Alcohol** 
+{
+alcohol_status: ('Denies', none),
+alcohol_duration: 'null',
+alcohol_history: 'null',
+alcohol_method: 'null',
+alcohol_type: 'null',
+alcohol_amount: 'null',
+alcohol_frequency: 'null'
+}
+**Tobacco**
+{
+tobacco_status: ('Denies', none),
+tobacco_duration: 'null',
+tobacco_history: 'null',
+tobacco_method: 'null',
+tobacco_type: 'Cigarettes',
+tobacco_amount: 'null',
+tobacco_frequency: 'null'
+}
+**Illicit Drug**
+{
+ill_drug_status: ('Denies', none),
+ill_drug_duration: 'null',
+ill_drug_history: 'null',
+ill_drug_method: 'null',
+ill_drug_type: 'Illicit',
+ill_drug_amount: 'null',
+ill_drug_frequency: 'null'
+}
+**Employment**
+{
+employment_status: ('Technical writer', employed),
+employment_duration: 'null',
+employment_history: 'null',
+employment_type: 'Technical writer'
+}
+**Shelter**
+{
+shelter_status: ('Lives', current),
+shelter_type: ('with: Wife', family),
+shelter_duration: 'null',
+shelter_history: 'null'
+}
+## Example 3
+Q:"SOCIAL HISTORY:  The patient is a single college student with
+occasional alcohol intake; denies tobacco."
+A:
+**ANNOTATIONS**
+**Alcohol** 
+{
+alcohol_status: ('occasional alcohol intake', current),
+alcohol_duration: 'null',
+alcohol_history: 'null',
+alcohol_method: 'null',
+alcohol_type: 'null',
+alcohol_amount: 'null',
+alcohol_frequency: 'null'
+}
+**Tobacco**
+{
+tobacco_status: ('denies', none),
+tobacco_duration: 'null',
+tobacco_history: 'null',
+tobacco_method: 'null',
+tobacco_type: 'null',
+tobacco_amount: 'null',
+tobacco_frequency: 'null'
+}
+**Illicit Drug**
+'null'
+**Employment**
+{
+employment_status: ('a single college student', student),
+employment_duration: 'null',
+employment_history: 'null',
+employment_type: 'null'
+}
+**Shelter**
+'null'
+## Example 4
+Q:"SOCIAL HISTORY:  Significant for 5 to 6 cigarettes per day
+times 58 years."
+A:
+**ANNOTATIONS**
+**Alcohol** 
+'null'
+**Tobacco**
+{
+tobacco_status: ('5 to 6 cigarettes per day times 58 years', current),
+tobacco_duration: 'times 58 years',
+tobacco_history: 'null',
+tobacco_method: 'null',
+tobacco_type: 'cigarettes',
+tobacco_amount: '5 to 6 cigarettes',
+tobacco_frequency: 'per day'
+}
+**Illicit Drug**
+'null'
+**Employment**
+'null'
+**Shelter**
+'null'
+## Example 5
+Q:"Social History:
+Unknown; pt. had parole papers on his person."
+A:
+**ANNOTATIONS**
+**Alcohol** 
+'null'
+**Tobacco**
+'null'
+**Illicit Drug**
+'null'
+**Employment**
+'null'
+**Shelter**
+'null'
+# Question
+Q:"HABITS: 
+Tobacco Use: no  Alcohol Use: hx of etoh abuse   Drug Use: denies
+
+SOCIAL HISTORY: 
+Lives by himself in [LOCATION], has home health aid
+Has family in [LOCATION]"
+A:

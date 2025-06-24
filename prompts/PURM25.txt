@@ -1,0 +1,175 @@
+### You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes. 
+Your task is to extract certain categories of social risks and social needs given a free-text clinical note. 
+Here are the categories of social risks and social needs, followed by a short description. Only annotate for the bulleted categories of social needs and social risks.
+
+# Employment: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
+- EmplUnempl: Parent/caregiver under/unemployment 
+- EmplOther: Other
+
+# Housing Instability: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.
+- HousingHomeless: Homelessness 
+- HousingInstability: General Housing Instability 
+- HousingTemp: Need for temporary lodging 
+- HousingOther: Other
+
+# Food Insecurity: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods. 
+- FoodFunds: Lack of funds to pay for food 
+- FoodOther: Other
+
+# Financial Strain: Finances or financial resources fall short of meeting essential expenses. 
+- FinancialPoverty: Poverty 
+- FinancialInsurance: Lack of Insurance 
+- FinancialPay: Unable to pay
+- FinancialOther: Other
+
+# Transportation: Lack of safe and accessible transportation
+- TransportationDistance: Distance from hospital
+- TransportationLack: Lack of transportation 
+- TransportationOther: Other
+
+# Childcare: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements 
+- ChildcareHospitalized: Childcare as a barrier to being with hospitalized child 
+- ChildcareNonHospitalized: Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child 
+- ChildcareNeed: Need for childcare 
+- ChildcareOther: Other
+
+# Permanency: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian. 
+- PermanencyNonPermanent: In non-permanent placement 
+- PermanencyPending: Non-permanent or permanent placement pending 
+
+# Substance Abuse: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
+- SubstanceAbuseDrugs: Drug use 
+- SubstanceAbuseAlcohol: Alcoholism 
+- SubstanceAbuseOther: Other
+
+# Home Environment: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+- HomeEnvSafety: Home safety 
+- HomeEnvAccess: Home accessibility 
+- HomeEnvViolence: Intimate partner violence 
+- HomeEnvChildAbuse: Child abuse 
+- HomeEnvOther: Other
+
+# Community Environment: Risks, hazards, or trauma occurring in the surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+- CommunityEnvSafety: Community safety 
+- CommunityEnvAccess: Community accessibility 
+- CommunityEnvViolence: Community violence
+- CommunityEnvOther: Other
+
+## Output Format:
+{
+  Employment: [(label, evidence, positive | negative)] OR 'None',
+  Housing: [(label, evidence, positive | negative)] OR 'None',
+  Food: [(label, evidence, positive | negative)] OR 'None',
+  Financial: [(label, evidence, positive | negative)] OR 'None',
+  Transportation: [(label, evidence, positive | negative)] OR 'None',
+  Childcare: [(label, evidence, positive | negative)] OR 'None',
+  Permanency: [(label, evidence, positive | negative)] OR 'None',
+  Substance: [(label, evidence, positive | negative)] OR 'None',
+  Home: [(label, evidence, positive | negative)] OR 'None',
+  Community: [(label, evidence, positive | negative)] OR 'None', 
+} 
+
+OR 
+
+NoSocialNeedsFound
+
+## Annotation Rules: 
+- Keep asking the question “Is there a social need here?” We are not annotating interventions. 
+- Do not make assumptions or leap to conclusions during annotation. Focus on what is stated and whether there are any social needs represented by that statement. Information may be interesting or important to the patient, but if it does not reflect information regarding our predetermined categories of social needs, do not annotate.  
+- Annotate full sentence consistently (full sentences end at ; and . )  
+- When multiple lines are related to each other for the same social need, annotate all together.  
+- Denote negative examples 
+- When there are flowsheet rows with yes/no answers, and the answer is no or yes without a comment, do not annotate. If there is a “yes” answer with comments, highlight it with the comment below, if the comment is on the following line.  
+- If there is a note with no social needs found, highlight the entire note and choose the category “NoSocialNeedsFound.” No social needs found should only be highlighted in a whole note and not segments of a note that includes social needs 
+- Use the attribute “speculation” when there is an “if clause” conditional for the social need.   
+- Sleep rooms, laundry, and other hospital amenities, are not considered social needs.   
+- Pre-school and daycare are considered to be “child care” while school is not.
+- Child tobacco/vaping is not considered to be a substance use/social need.
+- SSI (Supplemental Security Income) is not considered a social need/financial strain unless specifically noted.
+- Assisting with FMLA paperwork can be considered a social need/employment (negated) based on the context.   
+- RTF (Residential Treatment Facility) is considered social need/permanent placement pending.
+- Secondary insurance should be coded as “social need/lack of insurance (negated).”
+- Only highlight DHS involvement if there is a specific social need  (i.e. do not highlight an individual line if the sentence only lists the DHS caseworker name and/or number). Continue to practice the rule of highlighting corresponding lines if relevant to the note. 
+- Visitor restriction would be included within Home environment-other 
+- Annotate “Distance from hospital” if the note mentions that the family lives +1hr from CHOP and/or documented stressors/barriers relating to distance to CHOP. 
+- Receiving financial assistance for adoption/fostering = financial strain negated  
+- For concrete resource (Rideshare (Lyft/Uber), Bus tokens, Cab fare, Meal Vouchers, Parking Passes, Medication Coverage, clothes, travel hygiene) documentation: If the documenter does not identify a specific reason for a CR distribution (i.e. approved 5 meal vouchers) annotate as “Financial Strain-Other, Resolution in Progress." 
+- Child Care: Unless mentioning specific barriers into visiting bedside, do NOT annotate/mark as negated for examples that would include “parent visiting bedside and/or parent not currently bedside” 
+- Only annotate negated social needs if there are other social needs found in the note -When parent plans to start their job soon = employment/negated. Should a note only consist of negated needs, the whole note is highlighted as “no social needs found."
+- When parent plans to start their job soon = employment/negated 
+- Childcare barrier: not highlighted unless specific mention of barrier (ie unable to visit because of siblings, sickness, job, etc) 
+
+## Acronyms:
+- FHCP/FHC: CHOP Family Health Coverage Program 
+- RMH: Ronald McDonald House 
+- FMLA: Family Medical Leave of Absence 
+- Open Doors Foundation: The MBA Opens Doors Foundation is dedicated to providing the comforts of home to families in crisis. Through our home grant program, we provide mortgage and rental payment assistance grants to parents and guardians caring for a critically ill or injured child, allowing them to take unpaid leave from work and spend precious time together without jeopardizing their cherished homes.
+
+## Examples:
+Employment:
+- Mother unemployed due to prolonged ICU admission 
+- Mom had to leave employment due to childcare needs 
+- dad is in jail 
+Other phrases: unemployment, suspended from work, Permanently/temporarily unable to perform work activities due to medical condition, low wage job  
+Negative example: Mom does not return to work after maternity leave to care for child.  
+
+Housing Instability:
+- Patient/family currently in unstable living situation/no permanent housing 
+- Family reports staying in a Motel until housing can be identified 
+Other phrases: homelessness, inadequate housing, evicted, live in a shelter, couch surfing, transient housing, frequent move 
+Negative example: Mother staying with grandmother after childbirth for support. 
+
+Food Insecurity:
+-Family disclosed food insecurity. Goes to school food pantry for food assistance. 
+-Grandmother indicated difficulty accessing funds for food during ICU admission 
+Other phrases: needs food stamps, lost SNAP card, did not reapply in time for food stamps 
+
+Financial Strain:
+- Family is a one income household and having difficulty paying for gas/tolls/utilities/medical bills  
+- Patient is currently uninsured 
+- Mother paying out of pocket for diapers and needs assistance setting up coverage through insurance. 
+Other phrases: extreme poverty, inadequate finances, insufficient welfare support, lack of economic independence, bankruptcy, unstable income, insufficient income for needs, inadequate health insurance 
+Negative example: Mom lost her job due to prolonged ICU admission but dad is employed and able to cover expenses.
+
+Transportation:
+- SW inquired about mother awareness of the Medical Assistance Transportation Program, but mother reported benefit expired and needed a document to re-enroll. 
+- Family needs assistance in connecting with medical assistance transportation program (MATP) to off-set some of the costs associated with driving 3 hours for care. 
+Other phrases: does not have a car, does not have means on their own to mobilize, need help for mobilization, not able to drive 
+
+Childcare:
+- Mom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. 
+- Needs assistance in accessing subsidized childcare 
+- Mom will need assistance with childcare while in the hospital to deliver the baby 
+- Dad wants to remain at bedside with patient, however cannot stay at the bedside after 9pm with siblings. 
+Other phrases: childcare, childcare, day care 
+Negative example: Patient’s siblings are staying with grandparents during hospitalization so the parents can remain at the bedside. 
+
+Permanency:
+- child in foster care 
+- permanency court case upcoming 
+- DHS obtaining an order of protective custody 
+- legal custody 
+- kinship care 
+- social hold pending DHS approval 
+Negative example: Who can provide consent for this patient? Mom and Dad 
+ 
+Substance Abuse:
+- Recent DHS involvement due to substance abuse and incarceration of the father 
+- Mother reports history of opiate use 
+- Caregiver in treatment for opioid use disorder, currently on methadone. 
+Other phrases: alcohol, drug, marijuana, opioid, narcotic 
+Negative example: Parents state they drink beer with dinner on the weekends, with no adverse consequences reported.
+
+Home Environment:
+- Child has grown out of his current car seat and the family needs financial assistance to get a new one.  
+- Family needs to ensure all weapons are safely secured and locked where child and siblings are not able to reach/access in any way  
+- Child in need of an outside ramp for the back of the house where the bus picks her up. Mom also requested a roll in shower   
+- Mother shared CPS involvement due to recent childline report indicating sexual abuse from father 
+- Mother currently does not have custody of the boys due to concern for neglect/ malnutrition. 
+Other phrases: inadequate living space, inadequate house sanitation, CYS (Child and Youth Services), CPS (Child Protective Services), family requests a gun safe lock. 
+Negative example: “Guardianship not in place but is needed” 
+
+Community Environment:
+- Father reports that child could not return to school due to issue with an inoperable elevator 
+Other phrases: unsafe neighborhood, dangerous neighborhood, lack of green space, lives next to freeway, high pollution 
+
