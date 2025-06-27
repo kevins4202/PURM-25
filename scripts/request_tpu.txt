@@ -1,0 +1,1 @@
+srun -t 1-00:00:00 -p gpuq --mem=100G --gres=gpu:a100:4 --pty bash 
