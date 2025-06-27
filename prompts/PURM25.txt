@@ -170,3 +170,6 @@ Negative example: “Guardianship not in place but is needed”
 Community Environment:
 - Father reports that child could not return to school due to issue with an inoperable elevator 
 Other phrases: unsafe neighborhood, dangerous neighborhood, lack of green space, lives next to freeway, high pollution 
+
+## Task
+Now, annotate the following clinical note following the guidelines and output format specified above:

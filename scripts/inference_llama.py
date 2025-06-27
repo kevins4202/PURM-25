@@ -3,6 +3,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import os
 
 hf_token = os.getenv("HF_TOKEN")
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 model_id = "meta-llama/Llama-3.1-8B-Instruct"
 
@@ -19,7 +21,7 @@ prompt_path = "prompts/PURM25.txt"
 with open(prompt_path, "r") as f:
     system_prompt = f.read()
 
-user_message = "## Annotation task\nNow with this information, annotate the following clinical note, using the output format specified.\n\nThe patient's father has chosen not to work due to mental health concerns and instead focuses on his treatment plan, with adequate financial support from family members, allowing them to maintain stability in their lives."
+user_message = "Mom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. In treatment for opioid use disorder, currently on methadone. Mother shared CPS involvement due to recent childline report indicating sexual abuse from father"
 
 # result = pipe(system_prompt + "\n\n" + user_message)
 # print(result[0]["generated_text"])
@@ -29,4 +31,7 @@ inputs = tokenizer(system_prompt + "\n\n" + user_message, return_tensors="pt")
 
 outputs = model.generate(**inputs, max_new_tokens=256)
 
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+with open("outputs/test/llama_output.txt", "w") as f:
+    f.write(tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+print("Done.")
