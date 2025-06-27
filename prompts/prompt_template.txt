@@ -1,0 +1,98 @@
+### Task
+
+You will read a *single* clinical note and identify every Social Determinant of Health (SDOH) issue that is **explicitly mentioned** or **clearly implied**.
+Choose from the category list below. Return **all** matching sub-labels; if *none* apply, return exactly one label: `NoSocialNeedsFoundLabel`.
+
+---
+
+### Category catalogue
+PatientCaregiver_Employment
+PatientCaregiver_Unemployment
+
+HousingInstability
+    ├─ Homelessness
+    ├─ GeneralHousingInstability
+    ├─ NeedTemporaryLodging
+    └─ HouseInstability_Other
+
+FoodInsecurity
+    ├─ LackofFundsforFood
+    └─ FoodInsecurity_Other
+
+FinancialStrain
+    ├─ Poverty
+    ├─ LackofInsurance
+    ├─ UnabletoPay
+    └─ FinancialStrain_Other
+
+Transportation
+    ├─ DistancefromHospital
+    ├─ LackofTransportation
+    └─ Transportation_Other
+
+Childcare
+    ├─ ChildcareBarrierfromHospitalization
+    ├─ ChildcareBarrierfromNonHospitalization
+    ├─ NeedofChildcare
+    └─ Childcare_Other
+
+SubstanceAbuse
+    ├─ DrugUse
+    ├─ Alcoholism
+    └─ SubstanceAbuse_Other
+
+Safety
+    ├─ HomeEnvironment
+    │     ├─ ChildAbuse
+    │     ├─ HomeSafety
+    │     ├─ HomeAccessibility
+    │     ├─ IntimatePartnerViolence
+    │     └─ HomeEnvironment_Other
+    └─ CommunityEnvironment
+          ├─ CommunitySafety
+          ├─ CommunityAccessibility
+          ├─ CommunityViolence
+          └─ CommunityEnvironment_Other
+
+Permanency
+    ├─ NonPermanentPlacement
+    ├─ PermanentPlacementPending
+    └─ Permanency_Other
+
+---
+
+### Label-selection rules
+
+1. **Most-specific wins**
+   - Always label the *deepest* sub-category that fits. (e.g., choose `Homelessness`, **not** `HousingInstability`.)
+
+2. **Implicit evidence counts**
+   - “Sleeping in car” -> `Homelessness`,
+   - “struggling to pay bills” -> `UnabletoPay`.
+
+3. **Financial context**
+   - Mention of Medicaid denial, uninsured, or inability to afford meds -> `LackofInsurance` or `UnabletoPay`.
+
+4. **Multiple issues**
+   - Output every label that applies, separated by commas, in **one line**.
+
+---
+
+### Output format
+
+Labels: <comma-separated list of chosen labels>
+
+*Examples*
+
+| Note snippet                                                                 | Expected output                             |
+| ---------------------------------------------------------------------------- | ------------------------------------------- |
+| “Family is couch-surfing and needs temporary shelter.”                       | `Labels: NeedTemporaryLodging`              |
+| “Patient lost job; caregiver now sole earner.”                               | `Labels: PatientCaregiver_Unemployment`     |
+| “No social concerns documented.”                                             | `Labels: NoSocialNeedsFoundLabel`           |
+| “Long commute; often can’t attend appointments and struggles to pay copays.” | `Labels: DistancefromHospital, UnabletoPay` |
+
+---
+
+**Now classify the following clinical text:**
+`{{CLINICAL_NOTE}}`
+

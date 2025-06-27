@@ -1,77 +1,75 @@
 ### You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes. 
-Your task is to extract certain categories of social risks and social needs given a free-text clinical note. 
-Here are the categories of social risks and social needs, followed by a short description. Only annotate for the bulleted categories of social needs and social risks.
+Your task is to extract certain categories of social risks and social needs given a free-text clinical note. Focus on issues that are **explicitly mentioned** or **clearly implied**.
+Choose from the category list below. Return **all** matching sub-labels; if *none* apply, return exactly one label: `NoSocialNeedsFoundLabel`.
+Here are the categories of social risks and social needs, followed by a short description. Only annotate for the bulleted labels of social needs and social risks.
 
 # Employment: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
-- EmplUnempl: Parent/caregiver under/unemployment 
-- EmplOther: Other
+- PatientCaregiver_Employment: Parent/caregiver under/unemployment 
+- PatientCaregiver_Unemployment: Other
 
 # Housing Instability: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.
-- HousingHomeless: Homelessness 
-- HousingInstability: General Housing Instability 
-- HousingTemp: Need for temporary lodging 
-- HousingOther: Other
+- Homelessness: Homelessness 
+- GeneralHousingInstability: General Housing Instability 
+- NeedTemporaryLodging: Need for temporary lodging 
+- HouseInstability_Other: Other
 
 # Food Insecurity: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods. 
-- FoodFunds: Lack of funds to pay for food 
-- FoodOther: Other
+- LackofFundsforFood: Lack of funds to pay for food 
+- FoodInsecurity_Other: Other
 
 # Financial Strain: Finances or financial resources fall short of meeting essential expenses. 
-- FinancialPoverty: Poverty 
-- FinancialInsurance: Lack of Insurance 
-- FinancialPay: Unable to pay
-- FinancialOther: Other
+- Poverty: Poverty 
+- LackofInsurance: Lack of Insurance 
+- UnabletoPay: Unable to pay
+- FinancialStrain_Other: Other
 
 # Transportation: Lack of safe and accessible transportation
-- TransportationDistance: Distance from hospital
-- TransportationLack: Lack of transportation 
-- TransportationOther: Other
+- DistancefromHospital: Distance from hospital
+- LackofTransportation: Lack of transportation 
+- Transportation_Other: Other
 
 # Childcare: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements 
-- ChildcareHospitalized: Childcare as a barrier to being with hospitalized child 
-- ChildcareNonHospitalized: Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child 
-- ChildcareNeed: Need for childcare 
-- ChildcareOther: Other
+- ChildcareBarrierfromHospitalization: Childcare as a barrier to being with hospitalized child 
+- ChildcareBarrierfromNonHospitalization: Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child 
+- NeedofChildcare: Need for childcare 
+- Childcare_Other: Other
 
 # Permanency: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian. 
-- PermanencyNonPermanent: In non-permanent placement 
-- PermanencyPending: Non-permanent or permanent placement pending 
+- NonPermanentPlacement: In non-permanent placement 
+- PermanentPlacementPending: Non-permanent or permanent placement pending 
+- Permanency_Other: Other
 
 # Substance Abuse: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
-- SubstanceAbuseDrugs: Drug use 
-- SubstanceAbuseAlcohol: Alcoholism 
-- SubstanceAbuseOther: Other
+- DrugUse: Drug use 
+- Alcoholism: Alcoholism 
+- SubstanceAbuse_Other: Other
 
 # Home Environment: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
-- HomeEnvSafety: Home safety 
-- HomeEnvAccess: Home accessibility 
-- HomeEnvViolence: Intimate partner violence 
-- HomeEnvChildAbuse: Child abuse 
-- HomeEnvOther: Other
+- HomeSafety: Home safety 
+- HomeAccessibility: Home accessibility 
+- IntimatePartnerViolence: Intimate partner violence 
+- ChildAbuse: Child abuse 
+- HomeEnvironment_Other: Other
 
 # Community Environment: Risks, hazards, or trauma occurring in the surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
-- CommunityEnvSafety: Community safety 
-- CommunityEnvAccess: Community accessibility 
-- CommunityEnvViolence: Community violence
-- CommunityEnvOther: Other
+- CommunitySafety: Community safety 
+- CommunityAccessibility: Community accessibility 
+- CommunityViolence: Community violence
+- CommunityEnvironment_Other: Other
 
 ## Output Format:
 {
-  Employment: [(label, evidence, positive | negative)] OR 'None',
-  Housing: [(label, evidence, positive | negative)] OR 'None',
-  Food: [(label, evidence, positive | negative)] OR 'None',
-  Financial: [(label, evidence, positive | negative)] OR 'None',
-  Transportation: [(label, evidence, positive | negative)] OR 'None',
-  Childcare: [(label, evidence, positive | negative)] OR 'None',
-  Permanency: [(label, evidence, positive | negative)] OR 'None',
-  Substance: [(label, evidence, positive | negative)] OR 'None',
-  Home: [(label, evidence, positive | negative)] OR 'None',
-  Community: [(label, evidence, positive | negative)] OR 'None', 
-} 
-
-OR 
-
-NoSocialNeedsFound
+  Employment: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Housing: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Food: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Financial: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Transportation: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Childcare: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Permanency: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Substance: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Home: [(label, evidence, 'positive' OR 'negative')] OR 'None',
+  Community: [(label, evidence, 'positive' OR 'negative')] OR 'None', 
+} OR 'NoSocialNeedsFound'
 
 ## Annotation Rules: 
 - Keep asking the question “Is there a social need here?” We are not annotating interventions. 
@@ -99,7 +97,7 @@ NoSocialNeedsFound
 - When parent plans to start their job soon = employment/negated 
 - Childcare barrier: not highlighted unless specific mention of barrier (ie unable to visit because of siblings, sickness, job, etc) 
 
-## Acronyms:
+## Helpful Acronyms:
 - FHCP/FHC: CHOP Family Health Coverage Program 
 - RMH: Ronald McDonald House 
 - FMLA: Family Medical Leave of Absence 
@@ -172,4 +170,3 @@ Negative example: “Guardianship not in place but is needed”
 Community Environment:
 - Father reports that child could not return to school due to issue with an inoperable elevator 
 Other phrases: unsafe neighborhood, dangerous neighborhood, lack of green space, lives next to freeway, high pollution 
-
