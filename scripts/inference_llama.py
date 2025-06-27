@@ -26,11 +26,13 @@ user_message = "Mom reports that she has to return to work on Monday but in need
 # result = pipe(system_prompt + "\n\n" + user_message)
 # print(result[0]["generated_text"])
 
-
+print("Tokenizing...")
 inputs = tokenizer(system_prompt + "\n\n" + user_message, return_tensors="pt")
 
+print("Generating...")
 outputs = model.generate(**inputs, max_new_tokens=256)
 
+print("Decoding...")
 with open("outputs/test/llama_output.txt", "w") as f:
     f.write(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
