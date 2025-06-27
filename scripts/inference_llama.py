@@ -33,7 +33,7 @@ print("Generating...")
 outputs = model.generate(**inputs, max_new_tokens=256)
 
 print("Decoding...")
-with open("outputs/test/llama_output.txt", "w") as f:
+with open("output/test/llama_output.txt", "w") as f:
     f.write(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 print("Done.")
