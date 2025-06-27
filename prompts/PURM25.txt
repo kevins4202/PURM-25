@@ -69,7 +69,7 @@ Here are the categories of social risks and social needs, followed by a short de
   Substance: [(label, evidence, 'positive' OR 'negative')] OR 'None',
   Home: [(label, evidence, 'positive' OR 'negative')] OR 'None',
   Community: [(label, evidence, 'positive' OR 'negative')] OR 'None', 
-} OR 'NoSocialNeedsFound'
+} OR 'NoSocialNeedsFoundLabel'
 
 ## Annotation Rules: 
 - Keep asking the question “Is there a social need here?” We are not annotating interventions. 
@@ -78,7 +78,7 @@ Here are the categories of social risks and social needs, followed by a short de
 - When multiple lines are related to each other for the same social need, annotate all together.  
 - Denote negative examples 
 - When there are flowsheet rows with yes/no answers, and the answer is no or yes without a comment, do not annotate. If there is a “yes” answer with comments, highlight it with the comment below, if the comment is on the following line.  
-- If there is a note with no social needs found, highlight the entire note and choose the category “NoSocialNeedsFound.” No social needs found should only be highlighted in a whole note and not segments of a note that includes social needs 
+- If there is a note with no social needs found, return NoSocialNeedsFoundLabel. No social needs found should only be highlighted in a whole note and not segments of a note that includes social needs 
 - Use the attribute “speculation” when there is an “if clause” conditional for the social need.   
 - Sleep rooms, laundry, and other hospital amenities, are not considered social needs.   
 - Pre-school and daycare are considered to be “child care” while school is not.
