@@ -59,14 +59,14 @@ inputs = tokenizer.apply_chat_template(
 )
 
 if cuda_available:
-    inputs = {k: v.to("cuda") for k, v in inputs.items()}
+    inputs = inputs.to("cuda")
 
 print(f"Tokenized in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
 
 print("Generating...")
 outputs = model.generate(
-    **inputs, max_new_tokens=256, do_sample=False, response_format="json_object"
+    inputs, max_new_tokens=256, do_sample=False, response_format="json_object"
 )
 
 print(f"Generated in {time.time() - start_time} seconds\n\n")
