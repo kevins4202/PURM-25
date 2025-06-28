@@ -60,14 +60,18 @@ print(f"Generated in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
 
 print("Decoding...")
+input_length = inputs["input_ids"].shape[1]
+generated_tokens = outputs[0][input_length:]
+decoded_output = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+
 with open("output/test/llama_output.txt", "w") as f:
-    f.write(tokenizer.decode(outputs[0], skip_special_tokens=True))
+    f.write(decoded_output)
 
 print(f"Decoded in {time.time() - start_time} seconds\n\n")
 
 print("--------------------------------\n\n")
 
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+print(decoded_output)
 print(len(outputs))
 print("--------------------------------\n\n")
 
