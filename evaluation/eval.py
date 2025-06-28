@@ -1,3 +1,5 @@
+import json
+
 categories = ['Employment', 'Housing', 'Food', 'Financial', 'Transportation', 'Childcare', 'Permanency', 'Substance', 'Home', 'Community']
 
 def parse_predictions(predictions):
@@ -35,6 +37,5 @@ def evaluate(predictions, labels):
 
 
 if __name__ == "__main__":
-    predictions = []
-    labels = []
-    evaluate(predictions, labels)
+    predictions = parse_predictions(json.load(open("output/test/llama_output.json")))
+    print(predictions)
