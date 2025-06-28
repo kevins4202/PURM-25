@@ -57,31 +57,6 @@ Here are the categories of social risks and social needs, followed by a short de
 - CommunityViolence: Community violence
 - CommunityEnvironment_Other: Other
 
-## Annotation Rules: 
-- Return **all** matching sub-labels; if *none* apply, return exactly one label: `NoSocialNeedsFoundLabel`. If some labels apply, return 'None' for the rest that do not appear. 
-- Focus on issues that are **explicitly mentioned** or **clearly implied**.
-- Sleep rooms, laundry, and other hospital amenities, are not considered social needs.   
-- Pre-school and daycare are considered to be “child care” while school is not.
-- Child tobacco/vaping is not considered to be a substance use/social need.
-- SSI (Supplemental Security Income) is not considered a social need/financial strain unless specifically noted.
-- Assisting with FMLA paperwork can be considered a social need/employment (negated) based on the context.   
-- RTF (Residential Treatment Facility) is considered social need/permanent placement pending.
-- Secondary insurance should be coded as “social need/lack of insurance (negated).”
-- Only highlight DHS involvement if there is a specific social need  (i.e. do not highlight an individual line if the sentence only lists the DHS caseworker name and/or number).
-- Visitor restriction would be included within Home environment-other 
-- Receiving financial assistance for adoption/fostering = financial strain negated  
-- For concrete resource (Rideshare (Lyft/Uber), Bus tokens, Cab fare, Meal Vouchers, Parking Passes, Medication Coverage, clothes, travel hygiene) documentation: If the documenter does not identify a specific reason for a CR distribution (i.e. approved 5 meal vouchers) annotate as “Financial Strain-Other, Resolution in Progress." 
-- Child Care: Unless mentioning specific barriers into visiting bedside, do NOT annotate/mark as negated for examples that would include “parent visiting bedside and/or parent not currently bedside” 
-- Only annotate negated social needs if there are other social needs found in the note -When parent plans to start their job soon = employment/negated. Should a note only consist of negated needs, the whole note is highlighted as “no social needs found."
-- When parent plans to start their job soon = employment/negated 
-- Childcare barrier: not highlighted unless specific mention of barrier (ie unable to visit because of siblings, sickness, job, etc) 
-
-## Helpful Acronyms:
-- FHCP/FHC: CHOP Family Health Coverage Program 
-- RMH: Ronald McDonald House 
-- FMLA: Family Medical Leave of Absence 
-- Open Doors Foundation: The MBA Opens Doors Foundation is dedicated to providing the comforts of home to families in crisis. Through our home grant program, we provide mortgage and rental payment assistance grants to parents and guardians caring for a critically ill or injured child, allowing them to take unpaid leave from work and spend precious time together without jeopardizing their cherished homes.
-
 ## Output Format:
 {
   Employment: 'None' OR [(label, evidence, 'positive' OR 'negative')],
