@@ -97,4 +97,4 @@ Here are the categories of social risks and social needs, followed by a short de
 } OR 'NoSocialNeedsFoundLabel'
 
 ## Task
-Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text.
+Now, annotate the following clinical note following the guidelines and output format specified above. Do not output **any other** text besides the specified output format.

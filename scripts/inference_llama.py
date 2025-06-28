@@ -65,6 +65,7 @@ with open("output/test/llama_output.txt", "w") as f:
 print(f"Decoded in {time.time() - start_time} seconds\n\n")
 
 print("--------------------------------\n\n")
+print(outputs)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 print("--------------------------------\n\n")
 
