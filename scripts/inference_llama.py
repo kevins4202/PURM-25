@@ -16,7 +16,9 @@ start_time = time.time()
 print(f"Starting...\n\n")
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id, torch_dtype=torch.bfloat16, device_map="auto"
+)
 
 # pipe = pipeline(
 #     "text-generation", model=model_id, use_auth_token=hf_token, trust_remote_code=True, device=0
@@ -26,7 +28,7 @@ cuda_available = torch.cuda.is_available()
 
 if cuda_available:
     print("CUDA is available")
-    model.to("cuda")
+    # model.to("cuda")
     print(f"Model moved to GPU\n\n")
 else:
     print("CUDA is not available")
