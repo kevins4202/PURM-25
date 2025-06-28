@@ -26,6 +26,7 @@ cuda_available = torch.cuda.is_available()
 if cuda_available:
     print("CUDA is available")
     model.to("cuda")
+    print(f"Model moved to GPU\n\n")
 else:
     print("CUDA is not available")
     print("Using CPU")
@@ -65,8 +66,9 @@ with open("output/test/llama_output.txt", "w") as f:
 print(f"Decoded in {time.time() - start_time} seconds\n\n")
 
 print("--------------------------------\n\n")
-print(outputs)
+
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+print(len(outputs))
 print("--------------------------------\n\n")
 
 print(f"Done. Total time: {time.time() - begin} seconds")
