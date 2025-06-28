@@ -39,7 +39,7 @@ prompt_path = "prompts/PURM25.txt"
 with open(prompt_path, "r") as f:
     system_prompt = f.read()
 
-user_message = "Mom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. In treatment for opioid use disorder, currently on methadone. Mother shared CPS involvement due to recent childline report indicating sexual abuse from father"
+user_message = "### Task:\n\nMom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. In treatment for opioid use disorder, currently on methadone. Mother shared CPS involvement due to recent childline report indicating sexual abuse from father.\n\nNow, annotate the above clinical note following the guidelines and output format specified above. Do not output **any other** text besides the specified output format:\n\n"
 
 # result = pipe(system_prompt + "\n\n" + user_message)
 # print(result[0]["generated_text"])
