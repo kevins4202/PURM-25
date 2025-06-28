@@ -2,6 +2,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import os
 import time
+import torch
 
 hf_token = os.getenv("HF_TOKEN")
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
@@ -20,6 +21,15 @@ model = AutoModelForCausalLM.from_pretrained(model_id)
 #     "text-generation", model=model_id, use_auth_token=hf_token, trust_remote_code=True, device=0
 # )
 
+cuda_available = torch.cuda.is_available()
+
+if cuda_available:
+    print("CUDA is available")
+    model.to("cuda")
+else:
+    print("CUDA is not available")
+    print("Using CPU")
+
 print(f"Model and tokenizer loaded in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
 
@@ -35,6 +45,9 @@ user_message = "Mom reports that she has to return to work on Monday but in need
 
 print("Tokenizing...")
 inputs = tokenizer(system_prompt + "\n\n" + user_message, return_tensors="pt")
+
+if cuda_available:
+    inputs = {k: v.to("cuda") for k, v in inputs.items()}
 
 print(f"Tokenized in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
