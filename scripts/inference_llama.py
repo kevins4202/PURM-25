@@ -54,7 +54,7 @@ print(f"Tokenized in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
 
 print("Generating...")
-outputs = model.generate(**inputs, max_new_tokens=256)
+outputs = model.generate(**inputs, max_new_tokens=512)
 
 print(f"Generated in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
@@ -62,17 +62,14 @@ start_time = time.time()
 print("Decoding...")
 input_length = inputs["input_ids"].shape[1]
 generated_tokens = outputs[0][input_length:]
+
+print(tokenizer.decode(outputs[0][:input_length], skip_special_tokens=True))
+
 decoded_output = tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
 with open("output/test/llama_output.txt", "w") as f:
     f.write(decoded_output)
 
 print(f"Decoded in {time.time() - start_time} seconds\n\n")
-
-print("--------------------------------\n\n")
-
-print(decoded_output)
-print(len(outputs))
-print("--------------------------------\n\n")
 
 print(f"Done. Total time: {time.time() - begin} seconds")
