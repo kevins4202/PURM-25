@@ -37,5 +37,5 @@ def evaluate(predictions, labels):
 
 
 if __name__ == "__main__":
-    predictions = parse_predictions(json.load(open("output/test/llama_output.json")))
+    predictions = parse_predictions(json.load(open("output/test/llama_output.txt")))
     print(predictions)

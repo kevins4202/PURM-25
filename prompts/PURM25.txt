@@ -59,16 +59,16 @@ Here are the categories of social risks and social needs, followed by a short de
 
 ## Output Format:
 {
-  Employment: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Housing: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Food: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Financial: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Transportation: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Childcare: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Permanency: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Substance: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Home: 'None' OR [(label, evidence, 'positive' OR 'negative')],
-  Community: 'None' OR [(label, evidence, 'positive' OR 'negative')], 
+  'Employment': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Housing': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Food': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Financial': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Transportation': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Childcare': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Permanency': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Substance': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Home': 'None' OR [(label, evidence, 'positive' OR 'negative')],
+  'Community': 'None' OR [(label, evidence, 'positive' OR 'negative')], 
 } OR 'NoSocialNeedsFoundLabel'
 
 ## Task
