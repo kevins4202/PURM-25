@@ -66,7 +66,7 @@ start_time = time.time()
 
 print("Generating...")
 outputs = model.generate(
-    inputs, max_new_tokens=256, do_sample=False, response_format="json_object"
+    inputs, max_new_tokens=256, do_sample=False, pad_token_id=tokenizer.eos_token_id
 )
 
 print(f"Generated in {time.time() - start_time} seconds\n\n")
