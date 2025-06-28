@@ -1,12 +1,17 @@
 # Load model directly
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import os
+import time
 
 hf_token = os.getenv("HF_TOKEN")
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 model_id = "meta-llama/Llama-3.1-8B-Instruct"
+
+begin = time.time()
+start_time = time.time()
+print(f"Starting...\n\n")
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id)
@@ -15,6 +20,8 @@ model = AutoModelForCausalLM.from_pretrained(model_id)
 #     "text-generation", model=model_id, use_auth_token=hf_token, trust_remote_code=True, device=0
 # )
 
+print(f"Model and tokenizer loaded in {time.time() - start_time} seconds\n\n")
+start_time = time.time()
 
 prompt_path = "prompts/PURM25.txt"
 
@@ -29,11 +36,23 @@ user_message = "Mom reports that she has to return to work on Monday but in need
 print("Tokenizing...")
 inputs = tokenizer(system_prompt + "\n\n" + user_message, return_tensors="pt")
 
+print(f"Tokenized in {time.time() - start_time} seconds\n\n")
+start_time = time.time()
+
 print("Generating...")
 outputs = model.generate(**inputs, max_new_tokens=256)
+
+print(f"Generated in {time.time() - start_time} seconds\n\n")
+start_time = time.time()
 
 print("Decoding...")
 with open("output/test/llama_output.txt", "w") as f:
     f.write(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
-print("Done.")
+print(f"Decoded in {time.time() - start_time} seconds\n\n")
+
+print("--------------------------------\n\n")
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+print("--------------------------------\n\n")
+
+print(f"Done. Total time: {time.time() - begin} seconds")
