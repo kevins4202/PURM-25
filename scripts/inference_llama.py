@@ -59,7 +59,7 @@ inputs = tokenizer.apply_chat_template(
 )
 
 if cuda_available:
-    inputs = inputs.to("cuda")
+    inputs = {k: v.to("cuda") for k, v in inputs.items()}
 
 print(f"Tokenized in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
