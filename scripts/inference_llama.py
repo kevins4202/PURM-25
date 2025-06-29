@@ -20,10 +20,6 @@ model = AutoModelForCausalLM.from_pretrained(
     model_id, torch_dtype=torch.bfloat16, device_map="auto"
 )
 
-# pipe = pipeline(
-#     "text-generation", model=model_id, use_auth_token=hf_token, trust_remote_code=True, device=0
-# )
-
 cuda_available = torch.cuda.is_available()
 
 if cuda_available:
@@ -44,16 +40,13 @@ with open(prompt_path, "r") as f:
 
 user_message = '"Mom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. In treatment for opioid use disorder, currently on methadone. Mother shared CPS involvement due to recent childline report indicating sexual abuse from father."'
 
-# result = pipe(system_prompt + "\n\n" + user_message)
-# print(result[0]["generated_text"])
-
 messages = [
     {"role": "system", "content": system_prompt},
     {"role": "user", "content": user_message},
 ]
 
 print("Tokenizing...")
-# inputs = tokenizer(system_prompt + user_message, return_tensors="pt")
+
 inputs = tokenizer.apply_chat_template(
     messages, return_tensors="pt", add_generation_prompt=True
 )
