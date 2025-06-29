@@ -6,5 +6,5 @@
 conda create --name purm python=3.13.1
 conda activate purm
 conda install --file requirements.txt 
-conda install conda-forge::pydantic services::mistral_common conda-forge::pillow conda-forge::transformers conda-forge::jsonschema conda-forge::sentencepiece conda-forge::tiktoken conda-forge::huggingface_hub conda-forge::accelerate
+conda install conda-forge::pydantic services::mistral_common conda-forge::pillow conda-forge::transformers conda-forge::jsonschema conda-forge::sentencepiece conda-forge::tiktoken conda-forge::huggingface_hub conda-forge::accelerate conda-forge::protobuf
 ```

@@ -49,7 +49,7 @@ messages = [
 print("Tokenizing...")
 
 inputs = tokenizer.apply_chat_template(
-    messages, return_tensors="pt", add_generation_prompt=True, return_dict=True
+    messages, return_tensors="pt", add_generation_prompt=True
 )
 
 if cuda_available:
