@@ -71,7 +71,9 @@ generated_tokens = outputs[0][input_length:]
 
 decoded_output = tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
-with open(f"output/test/{model_id}_output.txt", "w") as f:
+output_path = f"output/test/{model_id.split('/')[-1]}_output.txt"
+
+with open(output_path, "w") as f:
     f.write(decoded_output)
 
 print(f"Decoded in {time.time() - start_time} seconds\n\n")
