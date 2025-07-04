@@ -1,1 +1,63 @@
+### You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes.
+Your task is to extract certain categories of social risks and social needs given a free-text clinical note.
 
+Below are the 9 categories of social risks and social needs, each followed by its official definition and reference. You should annotate any statement 
+that suggests the presence (or absence) of one of these categories in the text. 
+
+# Categories of Social Risks and Social Needs
+
+## Employment  
+Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
+Reference: (Healthy People 2030, Employment)
+
+## Housing Instability  
+Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
+Reference: (Healthy People 2030, Housing Instability)
+
+## Food Insecurity  
+Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or the ability to acquire such foods.  
+Reference: (United States Department of Agriculture, 2023)
+
+## Financial Strain  
+Definition: Finances or financial resources fall short of meeting essential expenses.  
+Reference: (Healthy People 2030, Employment)
+
+## Transportation  
+Definition: Lack of safe and accessible transportation.  
+Reference: (Healthy People 2030, Transportation)
+
+## Childcare  
+Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements.  
+Reference: (Morrissey, 2019)
+
+## Permanency  
+Definition: Lack of residence with a permanent caregiver, including biological parent, adoptive parent, or other legal guardian.  
+Reference: (Child Welfare Information Gateway)
+
+## Substance Use  
+Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
+Reference: (Healthy People 2030, Drug and Alcohol Use)
+
+## Safety  
+Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
+Reference: (Healthy People 2030, Neighborhood and Built Environment)
+
+# Output Format
+
+Use this format to report the extracted information:
+
+"NoSocialNeedsFoundLabel" OR
+{
+  "Employment": "None" OR [[evidence, "positive" OR "negative"]],
+  "Housing": "None" OR [[evidence, "positive" OR "negative"]],
+  "Food": "None" OR [[evidence, "positive" OR "negative"]],
+  "Financial": "None" OR [[evidence, "positive" OR "negative"]],
+  "Transportation": "None" OR [[evidence, "positive" OR "negative"]],
+  "Childcare": "None" OR [[evidence, "positive" OR "negative"]],
+  "Permanency": "None" OR [[evidence, "positive" OR "negative"]],
+  "Substance": "None" OR [[evidence, "positive" OR "negative"]],
+  "Safety": "None" OR [[evidence, "positive" OR "negative"]]
+}
+
+## Task
+Now, annotate the following clinical note following the guidelines and output format specified above. Do not output **any other** text besides the specified output format.
