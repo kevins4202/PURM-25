@@ -1,0 +1,100 @@
+NOTE: Paste this prompt into LM Studio and delete all other categories besides the ones you want. 
+^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### You are an experienced social worker who has decades of experience writing free-text clinical notes outlining social risks and social needs. 
+Your task is to write free-text clinical note outlining social risks and social needs. 
+
+Here are the categories of social risks and social needs, followed by a short description. 
+
+# Employment: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
+- Parent/caregiver under/unemployment or other employment issues.
+
+# Housing Instability: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.
+- Homelessness, General Housing Instability, Need for temporary lodging, or other housing issues
+
+# Food Insecurity: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods. 
+- Lack of funds to pay for food or other food insecurity
+
+# Financial Strain: Finances or financial resources fall short of meeting essential expenses. 
+- Poverty, Lack of Insurance, Unable to pay or other financial difficulties
+
+# Transportation: Lack of safe and accessible transportation
+- Distance from hospital (+1hr/major stresses or barriers going to hospital), Lack of transportation, or other transportation issues
+
+# Childcare: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements 
+- Childcare as a barrier to being with hospitalized child, Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child, Need for childcare, or other childcare issues
+
+# Permanency: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian. 
+- In non-permanent placement, Non-permanent or permanent placement pending 
+
+# Substance Abuse: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
+- Drug use or Alcoholism 
+
+# Home Environment: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+- Home safety, Home accessibility, Intimate partner violence, Child abuse, or other issues with home environment
+
+# Community Environment: Risks, hazards, or trauma occurring in the surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+- Community safety, Community accessibility, Community violence
+
+Here are some examples:
+## Examples:
+Employment:
+Mother unemployed due to prolonged ICU admission. Mom had to leave employment due to childcare needs. dad is in jail 
+Other phrases: unemployment, suspended from work, Permanently/temporarily unable to perform work activities due to medical condition, low wage job  
+Negative example: Mom does not return to work after maternity leave to care for child.  
+
+Housing Instability:
+Patient/family currently in unstable living situation/no permanent housing. Family reports staying in a Motel until housing can be identified 
+Other phrases: homelessness, inadequate housing, evicted, live in a shelter, couch surfing, transient housing, frequent move 
+Negative example: Mother staying with grandmother after childbirth for support. 
+
+Food Insecurity:
+Family disclosed food insecurity. Goes to school food pantry for food assistance. Grandmother indicated difficulty accessing funds for food during ICU admission 
+Other phrases: needs food stamps, lost SNAP card, did not reapply in time for food stamps 
+
+Financial Strain:
+Family is a one income household and having difficulty paying for gas/tolls/utilities/medical bills. Patient is currently uninsured. Mother paying out of pocket for diapers and needs assistance setting up coverage through insurance. 
+Other phrases: extreme poverty, inadequate finances, insufficient welfare support, lack of economic independence, bankruptcy, unstable income, insufficient income for needs, inadequate health insurance 
+Negative example: Mom lost her job due to prolonged ICU admission but dad is employed and able to cover expenses.
+
+Transportation:
+SW inquired about mother awareness of the Medical Assistance Transportation Program, but mother reported benefit expired and needed a document to re-enroll. Family needs assistance in connecting with medical assistance transportation program (MATP) to off-set some of the costs associated with driving 3 hours for care. 
+Other phrases: does not have a car, does not have means on their own to mobilize, need help for mobilization, not able to drive 
+
+Childcare:
+Mom reports that she has to return to work on Monday but in need of childcare. She may have to leave child with elderly GM with 16 and 10 year old in the home. Needs assistance in accessing subsidized childcare. Mom will need assistance with childcare while in the hospital to deliver the baby. Dad wants to remain at bedside with patient, however cannot stay at the bedside after 9pm with siblings. 
+Other phrases: childcare, childcare, day care 
+Negative example: Patient’s siblings are staying with grandparents during hospitalization so the parents can remain at the bedside. 
+
+Permanency:
+child in foster care. permanency court case upcoming. DHS obtaining an order of protective custody. legal custody. kinship care. social hold pending DHS approval 
+Negative example: Who can provide consent for this patient? Mom and Dad 
+ 
+Substance Abuse:
+Recent DHS involvement due to substance abuse and incarceration of the father. Mother reports history of opiate use. Caregiver in treatment for opioid use disorder, currently on methadone. 
+Other phrases: alcohol, drug, marijuana, opioid, narcotic 
+Negative example: Parents state they drink beer with dinner on the weekends, with no adverse consequences reported.
+
+Home Environment:
+Child has grown out of his current car seat and the family needs financial assistance to get a new one. Family needs to ensure all weapons are safely secured and locked where child and siblings are not able to reach/access in any way. Child in need of an outside ramp for the back of the house where the bus picks her up. Mom also requested a roll in shower. Mother shared CPS involvement due to recent childline report indicating sexual abuse from father. Mother currently does not have custody of the boys due to concern for neglect/ malnutrition. 
+Other phrases: inadequate living space, inadequate house sanitation, CYS (Child and Youth Services), CPS (Child Protective Services), family requests a gun safe lock. 
+Negative example: “Guardianship not in place but is needed” 
+
+Community Environment:
+Father reports that child could not return to school due to issue with an inoperable elevator.
+Other phrases: unsafe neighborhood, dangerous neighborhood, lack of green space, lives next to freeway, high pollution 
+
+Now, generate many free-text clinical notes, separated by periods. Do not repeat examples.
