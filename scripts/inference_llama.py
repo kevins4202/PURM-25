@@ -1,5 +1,5 @@
 # Load model directly
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM
 import os
 import time
 import torch
@@ -33,7 +33,7 @@ else:
 print(f"Model and tokenizer loaded in {time.time() - start_time} seconds\n\n")
 start_time = time.time()
 
-prompt_path = "prompts/PURM25.txt"
+prompt_path = "prompts/prompt2.txt"
 
 with open(prompt_path, "r") as f:
     system_prompt = f.read()
