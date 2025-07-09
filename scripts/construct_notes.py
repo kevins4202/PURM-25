@@ -18,10 +18,15 @@ for cat in cats:
 
 # Number of notes to generate
 NUM_NOTES = 480
+counts = [4, 4, 4, 4, 4, 2, 1, 1, 1, 1]
 
 with open(os.path.join(DATA_DIR, 'generated_notes.txt'), 'w') as out_f:
     for _ in range(NUM_NOTES):
-        n_cats = random.randint(1, len(cats) - 1)
+        cats_w = []
+        for i, x in enumerate(counts):
+            cats_w = cats_w + [i+1] * x
+
+        n_cats = random.choice(cats_w)
         chosen_cats = random.sample(cats[:-1], n_cats)
         indices = [catstoi[cat] for cat in chosen_cats]
         sentences = [random.choice(cat_sentences[cat]) for cat in chosen_cats]

@@ -8,9 +8,9 @@ hf_token = os.getenv("HF_TOKEN")
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
-# model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 # model_id = "mistralai/Mistral-Small-3.1-24B-Instruct-2503"
-model_id = "mistralai/Mistral-7B-Instruct-v0.3"
+# model_id = "mistralai/Mistral-7B-Instruct-v0.3"
 
 begin = time.time()
 start_time = time.time()

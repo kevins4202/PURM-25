@@ -1,0 +1,21 @@
+{
+  "Employment": [
+    ["PatientCaregiver_Employment", "return to work on Monday", "positive"]
+  ],
+  "Housing": "None",
+  "Food": "None",
+  "Financial": "None",
+  "Transportation": "None",
+  "Childcare": [
+    ["ChildcareBarrierfromHospitalization", "may have to leave child with elderly GM", "positive"],
+    ["NeedofChildcare", "in need of childcare", "positive"]
+  ],
+  "Permanency": [
+    ["NonPermanentPlacement", "CPS involvement due to recent childline report", "positive"]
+  ],
+  "Substance": [
+    ["DrugUse", "in treatment for opioid use disorder", "positive"]
+  ],
+  "Home": "None",
+  "Community": "None"
+}
