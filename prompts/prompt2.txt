@@ -37,10 +37,8 @@ Reference: (Child Welfare Information Gateway)
 Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
 Reference: (Healthy People 2030, Drug and Alcohol Use)
 
-## Home Environment: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
-Reference: (Healthy People 2030, Neighborhood and Built Environment)
-
-## Community Environment: Risks, hazards, or trauma occurring in the surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+## Safety
+Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.
 Reference: (Healthy People 2030, Neighborhood and Built Environment)
 
 # Output Format
