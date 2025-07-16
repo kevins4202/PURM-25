@@ -1,0 +1,65 @@
+### You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes. 
+Your task is to extract certain categories of social risks and social needs given a free-text clinical note. 
+
+Here are the categories of social risks and social needs, followed by a short description. Only annotate for the bulleted labels of social needs and social risks.
+
+# Employment: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
+- PatientCaregiver_Employment: Parent/caregiver does not have the needed level of employment to meet sufficient financial means
+- PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment” 
+
+# Housing Instability: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.
+- Homelessness: Does not have a safe, stable place to live
+- GeneralHousingInstability: Does not have stable, permanent housing 
+- NeedTemporaryLodging: Relocation to hospital city so that child can receive hospital care or be nearby hospitalized child 
+- HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging. 
+
+# Food Insecurity: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods. 
+- LackofFundsforFood: Unable to pay for nutritionally adequate and safe foods
+- FoodInsecurity_Other: Identifiable challenges or barrier related to acquiring nutritionally adequate and safe foods, not described by “Lack of funds to pay for food.” 
+
+# Financial Strain: Finances or financial resources fall short of meeting essential expenses. 
+- Poverty: income below the poverty line.
+- LackofInsurance: Uninsured for healthcare
+- UnabletoPay: Family does not have the financial resources to pay for basic or unmet needs
+- FinancialStrain_Other: Challenges in paying for basic needs, not described by poverty, lack of insurance, or unable to pay.
+
+# Transportation: Lack of safe and accessible transportation
+- DistancefromHospital: Family resides over 1 hour from hospital.
+- LackofTransportation: Lack of safe and/or reliable transportation (i.e. car, bus, train) to arrive/discharge from an inpatient hospitalization and/or outpatient appointment.
+- Transportation_Other: Identifiable challenges or barriers in transporting to hospital not described by distance from hospital or lack of transportation.
+
+# Childcare: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements 
+- ChildcareBarrierfromHospitalization: Parents or caregivers are unable to obtain childcare (I.e. family, babysitter, daycare) for their other non-hospitalized children that may result in parents/caregivers not being able to visit their hospitalized child in the hospital, participate in care or decision-making related to their hospitalized child’s medical plan of care.
+- ChildcareBarrierfromNonHospitalization: Parents or caregivers are unable to leave hospital due to hospitalized child’s medical needs and unable to leave bedside to be with their non-hospitalized children.
+- NeedofChildcare: Parents or caregivers identify need to enroll hospitalized child and/or sibling in daycare (I.e. daycare, medical daycare, not home nursing)
+- Childcare_Other: Challenges in childcare needs for the hospitalized child or non-hospitalized children not described by Childcare as a barrier to being with hospitalized child, Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child, or need for childcare.
+
+# Permanency: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian. 
+- NonPermanentPlacement: Patient not in the care of permanent placement (such as biological or adoptive parents)
+- PermanentPlacementPending: Patient in the care of a child protection agency or behavioral health facility that is not a permanent placement (for example, pending court ordered permanent placement).
+- Permanency_Other: Other
+
+# Substance Abuse: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
+- DrugUse: Current or history of substance use or abuse by the parent, caregiver, or patient
+- Alcoholism: Current or history of alcohol abuse by the parent, caregiver, or patient 
+- SubstanceAbuse_Other: Current or history of other substance use/abuse by the parent, caregiver, or patient
+
+# Safety: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life. 
+- HomeEnvironment: Safety concerns or risk factors within the home environment—including general safety, home accessibility, intimate partner violence, child abuse or neglect, and other issues such as inadequate living space, unsafe storage of weapons, environmental hazards, or involvement with child protection services. 
+- CommunityEnvironment: Safety, accessibility, or environmental concerns within the child’s neighborhood or broader community, such as the lack of green space, gun violence, community violence, or pollution. 
+
+## Output Format:
+"NoSocialNeedsFoundLabel" OR {
+  "Employment": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Housing": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Food": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Financial": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Transportation": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Childcare": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Permanency": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Substance": "None" OR [[label, evidence, "positive" OR "negative"]],
+  "Safety": "None" OR [[label, evidence, "positive" OR "negative"]],
+}
+
+## Task
+Now, annotate the following clinical note following the guidelines and output format specified above. Do not output **any other** text besides the specified output format.
