@@ -65,7 +65,7 @@ OR
 - **positive**: Indicates that the social need is present (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social need is explicitly not present (i.e., the patient or caregiver is specifically described as not having the need or problem).
 - **None**: Used when there is no mention—either positive or negative—of the social need in the note.
-- **NoSocialNeedsFoundLabel**: Only used when none of the 9 categories are mentioned in the clinical note at all — meaning the note contains no references (explicit or negated) to any social needs. 
+- **NoSocialNeedsFoundLabel**: No concerns for any of the social needs in the social work note, including Parent/Caregiver Employment, Housing Instability, Food insecurity, financial strain, transportation, childcare, permanency, substance abuse, or safety.
   If *any* of the categories are mentioned, even as a negative example, do not use this label.
 
 # Task
