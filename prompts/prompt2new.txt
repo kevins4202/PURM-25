@@ -61,10 +61,14 @@ OR
 
 ## Output Elements
 
+## Output Elements
+
 - **evidence**: A direct quote or phrase from the clinical note that justifies the annotation.
 - **positive**: Indicates that the social need is present (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social need is explicitly not present (i.e., the patient or caregiver is specifically described as not having the need or problem).
 - **None**: Used when there is no mention—either positive or negative—of the social need in the note.
+- **NoSocialNeedsFoundLabel**: Only used when none of the 9 categories are mentioned in the clinical note at all — meaning the note contains no references (explicit or negated) to any social needs. 
+  If *any* of the categories are mentioned, even as a negative example, do not use this label.
 
 # Task
 Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
