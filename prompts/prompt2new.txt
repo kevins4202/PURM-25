@@ -69,4 +69,4 @@ OR
   If *any* of the categories are mentioned, even as a negative example, do not use this label.
 
 # Task
-Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
+Now, annotate the following clinical note following the guidelines and output format specified above. Do not output **any other** text besides the specified output format.
