@@ -7,39 +7,39 @@ Below are the 9 categories of social risks and social needs, each followed by it
 
 ## Employment  
 Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
-Reference: (Healthy People 2030, Employment)
+Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment 
 
 ## Housing Instability  
 Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
-Reference: (Healthy People 2030, Housing Instability)
+Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability 
 
 ## Food Insecurity  
 Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or the ability to acquire such foods.  
-Reference: (United States Department of Agriculture, 2023)
+Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. Www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/ 
 
 ## Financial Strain  
 Definition: Finances or financial resources fall short of meeting essential expenses.  
-Reference: (Healthy People 2030, Employment)
+Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment 
 
 ## Transportation  
 Definition: Lack of safe and accessible transportation.  
-Reference: (Healthy People 2030, Transportation)
+Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation 
 
 ## Childcare  
 Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements.  
-Reference: (Morrissey, 2019)
+Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221 
 
 ## Permanency  
 Definition: Lack of residence with a permanent caregiver, including biological parent, adoptive parent, or other legal guardian.  
-Reference: (Child Welfare Information Gateway)
+Source: Child Welfare Information Gateway. (n.d.) Permanency.  https://www.childwelfare.gov/topics/permanency/?top=116.  
 
 ## Substance Use  
 Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
-Reference: (Healthy People 2030, Drug and Alcohol Use)
+Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use 
 
 ## Safety  
 Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
-Reference: (Healthy People 2030, Neighborhood and Built Environment)
+Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
 
 # Output Format
 
