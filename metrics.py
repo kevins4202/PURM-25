@@ -1,49 +1,136 @@
 from collections import defaultdict
 
 def compute_metrics_per_label(preds, targets):
+    """
+    Compute metrics for multi-label multi-class classification
+    where each label can be: 1 (positive), -1 (negative), 0 (absent/not applicable)
+    
+    Args:
+        preds: List of prediction dictionaries {label: value} where value is 1, -1, or 0
+        targets: List of target dictionaries {label: value} where value is 1, -1, or 0
+    """
     # Initialize count dictionaries
     true_positives = defaultdict(int)
     false_positives = defaultdict(int)
     false_negatives = defaultdict(int)
-    label_set = set()
+    true_negatives = defaultdict(int)
+    absent_correct = defaultdict(int)
+    absent_incorrect = defaultdict(int)
+
+    # Get all unique labels
+    all_labels = set()
+    for pred in preds:
+        all_labels.update(pred.keys())
+    for target in targets:
+        all_labels.update(target.keys())
 
     for pred, target in zip(preds, targets):
-        pred_set = set(pred)
-        target_set = set(target)
-        
-        # Update label set
-        label_set.update(pred_set)
-        label_set.update(target_set)
+        # For each label, determine the classification
+        for label in all_labels:
+            pred_val = pred.get(label, 0)  # Default to absent if not in prediction
+            target_val = target.get(label, 0)  # Default to absent if not in target
+            
+            # Handle different scenarios
+            if target_val == 1:  # Target is positive
+                if pred_val == 1:
+                    true_positives[label] += 1
+                elif pred_val == -1:
+                    false_negatives[label] += 1
+                elif pred_val == 0:
+                    false_negatives[label] += 1  # Absent treated as wrong for positive target
+            
+            elif target_val == -1:  # Target is negative
+                if pred_val == -1:
+                    true_negatives[label] += 1
+                elif pred_val == 1:
+                    false_positives[label] += 1
+                elif pred_val == 0:
+                    false_positives[label] += 1  # Absent treated as wrong for negative target
+            
+            elif target_val == 0:  # Target is absent
+                if pred_val == 0:
+                    absent_correct[label] += 1
+                elif pred_val == 1:
+                    false_positives[label] += 1
+                elif pred_val == -1:
+                    false_negatives[label] += 1
 
-        for label in pred_set:
-            if label in target_set:
-                true_positives[label] += 1
-            else:
-                false_positives[label] += 1
-        for label in target_set:
-            if label not in pred_set:
-                false_negatives[label] += 1
-
-    # Calculate precision, recall, f1 for each label
+    # Calculate metrics for each label
     results = {}
-    for label in label_set:
+    for label in all_labels:
         tp = true_positives[label]
         fp = false_positives[label]
         fn = false_negatives[label]
+        tn = true_negatives[label]
+        ac = absent_correct[label]
+        ai = absent_incorrect[label]
 
+        # Standard binary metrics (treating 0 as "not applicable")
         precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
         recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
         f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+        
+        # Accuracy considering all three classes
+        total_samples = tp + fp + fn + tn + ac + ai
+        accuracy = (tp + tn + ac) / total_samples if total_samples > 0 else 0.0
+        
+        # Specificity
+        specificity = tn / (tn + fp) if (tn + fp) > 0 else 0.0
+        
+        # Absent accuracy (how well we predict absent cases)
+        absent_accuracy = ac / (ac + ai) if (ac + ai) > 0 else 0.0
 
         results[label] = {
             'precision': precision,
             'recall': recall,
-            'f1': f1
+            'f1': f1,
+            'accuracy': accuracy,
+            'specificity': specificity,
+            'absent_accuracy': absent_accuracy,
+            'tp': tp,
+            'fp': fp,
+            'fn': fn,
+            'tn': tn,
+            'absent_correct': ac,
+            'absent_incorrect': ai,
+            'total_samples': total_samples
         }
 
     return results
 
+def compute_macro_metrics(results):
+    """Compute macro-averaged metrics across all labels"""
+    macro_precision = sum(r['precision'] for r in results.values()) / len(results)
+    macro_recall = sum(r['recall'] for r in results.values()) / len(results)
+    macro_f1 = sum(r['f1'] for r in results.values()) / len(results)
+    macro_accuracy = sum(r['accuracy'] for r in results.values()) / len(results)
+    macro_absent_accuracy = sum(r['absent_accuracy'] for r in results.values()) / len(results)
+    
+    return {
+        'macro_precision': macro_precision,
+        'macro_recall': macro_recall,
+        'macro_f1': macro_f1,
+        'macro_accuracy': macro_accuracy,
+        'macro_absent_accuracy': macro_absent_accuracy
+    }
+
 if __name__ == "__main__":
-    preds = [[1, 2, 3], [1, 2, 4], [1, 2, 3], [1, 2, 4]]
-    targets = [[1, 2, 3], [1, 2, 4], [1, 2, 3], [1, 2, 4]]
-    print(compute_metrics_per_label(preds, targets))
+    # Example with multi-label multi-class data
+    preds = [
+        {1: 1, 2: -1, 3: 0},  # Label 1: positive, Label 2: negative, Label 3: absent
+        {1: -1, 2: 1, 3: 1},  # Label 1: negative, Label 2: positive, Label 3: positive
+        {1: 0, 2: 0, 3: -1},  # Label 1: absent, Label 2: absent, Label 3: negative
+    ]
+    targets = [
+        {1: 1, 2: -1, 3: 0},  # All correct
+        {1: 1, 2: 1, 3: 1},   # Label 1: wrong (predicted negative, should be positive)
+        {1: 0, 2: 0, 3: -1},  # All correct
+    ]
+    
+    results = compute_metrics_per_label(preds, targets)
+    print("Per-label metrics:")
+    for label, metrics in results.items():
+        print(f"Label {label}: {metrics}")
+    
+    macro_metrics = compute_macro_metrics(results)
+    print(f"\nMacro-averaged metrics: {macro_metrics}")
