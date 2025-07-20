@@ -68,7 +68,7 @@ Use this format to report the extracted information. In the list corresponding t
 # Task
 Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
 
-# Examples: 
+# Examples
 
 ## Example 1
 Input: 
