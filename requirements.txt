@@ -1,1 +1,12 @@
 pytorch
+transformers
+sentencepiece
+tiktoken
+huggingface_hub
+accelerate
+protobuf
+pydantic
+mistral_common
+pillow
+jsonschema
+

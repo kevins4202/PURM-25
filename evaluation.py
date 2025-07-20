@@ -15,7 +15,7 @@ quantized_model = AutoModelForCausalLM.from_pretrained(
 quantized_model.compile()
 
 
-prompt_path = "prompts/prompt2.txt"
+prompt_path = "prompts/broad_0_shot.txt"
 
 with open(prompt_path, "r") as f:
     system_prompt = f.read()
