@@ -1,0 +1,835 @@
+# You are an experienced social worker who has decades of experience identifying social determinants of health and social needs in free-text clinical notes.
+
+Your task is to extract certain categories of social determinants of health and identify if there is a social need given a free-text clinical note.
+
+Below are the 9 categories of social determinants of health, each followed by its official definition and source as well as its subcategories. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict. Do not annotate a category that is implied.
+
+If multiple subcategories (labels) for a category are present in the clinical note, you must include all that apply. Do not stop at the first matching label. Note that it is also possible for none of the categories to be present.
+
+# Categories of Social Risks and Social Needs
+
+## Employment  
+Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
+- PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment”  
+Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+
+## Housing Instability  
+Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
+- Homelessness: Does not have a safe, stable place to live  
+- GeneralHousingInstability: Does not have stable, permanent housing  
+- NeedTemporaryLodging: Relocation to hospital city so that child can receive hospital care or be nearby hospitalized child  
+- HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging  
+Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
+
+## Food Insecurity  
+Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods.  
+- LackofFundsforFood: Unable to pay for nutritionally adequate and safe foods  
+- FoodInsecurity_Other: Identifiable challenges or barrier related to acquiring nutritionally adequate and safe foods, not described by “Lack of funds to pay for food.”  
+Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/  
+
+## Financial Strain  
+Definition: Finances or financial resources fall short of meeting essential expenses.  
+- Poverty: Income below the poverty line  
+- LackofInsurance: Uninsured for healthcare  
+- UnabletoPay: Family does not have the financial resources to pay for basic or unmet needs  
+- FinancialStrain_Other: Challenges in paying for basic needs, not described by poverty, lack of insurance, or unable to pay  
+Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+
+## Transportation  
+Definition: Lack of safe and accessible transportation  
+- DistancefromHospital: Family resides over 1 hour from hospital  
+- LackofTransportation: Lack of safe and/or reliable transportation (i.e., car, bus, train) to arrive/discharge from an inpatient hospitalization and/or outpatient appointment  
+- Transportation_Other: Identifiable challenges or barriers in transporting to hospital not described by distance from hospital or lack of transportation  
+Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation  
+
+## Childcare  
+Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements  
+- ChildcareBarrierfromHospitalization: Parents/caregivers unable to obtain childcare for their other non-hospitalized children, affecting their ability to be with the hospitalized child  
+- ChildcareBarrierfromNonHospitalization: Parents/caregivers unable to leave the hospital due to hospitalized child’s needs, impacting care for non-hospitalized children  
+- NeedofChildcare: Parents/caregivers identify need to enroll child in daycare (e.g., daycare, medical daycare, not home nursing)  
+- Childcare_Other: Other childcare challenges not captured by the above  
+Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221  
+
+## Permanency  
+Definition: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian.  
+- NonPermanentPlacement: Patient not in the care of a permanent placement (e.g., biological or adoptive parents)  
+- PermanentPlacementPending: Patient in temporary care (e.g., child protection agency or behavioral health facility), awaiting court-ordered permanent placement  
+- Permanency_Other: Other  
+Source: Child Welfare Information Gateway. (n.d.) Permanency. https://www.childwelfare.gov/topics/permanency/?top=116  
+
+## Substance Abuse  
+Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
+- DrugUse: Current or past substance use/abuse by parent, caregiver, or patient  
+- Alcoholism: Current or past alcohol use/abuse by parent, caregiver, or patient  
+- SubstanceAbuse_Other: Other types of substance use/abuse  
+Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use  
+
+## Safety  
+Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
+- HomeSafety: Home safety 
+- HomeAccessibility: Home accessibility 
+- IntimatePartnerViolence: Intimate partner violence 
+- ChildAbuse: Child abuse 
+- HomeEnvironment_Other: Other
+- CommunitySafety: Community safety 
+- CommunityAccessibility: Community accessibility 
+- CommunityViolence: Community violence
+- CommunityEnvironment_Other: Other
+Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
+
+# Output Format
+
+Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there are none, then output an empty list for that category.
+
+{
+  "Employment": [[label, evidence, "positive" OR "negative"]],
+  "Housing": [[label, evidence, "positive" OR "negative"]],
+  "Food": [[label, evidence, "positive" OR "negative"]],
+  "Financial": [[label, evidence, "positive" OR "negative"]],
+  "Transportation": [[label, evidence, "positive" OR "negative"]],
+  "Childcare": [[label, evidence, "positive" OR "negative"]],
+  "Permanency": [[label, evidence, "positive" OR "negative"]],
+  "Substance": [[label, evidence, "positive" OR "negative"]],
+  "Safety": [[label, evidence, "positive" OR "negative"]]
+}
+
+# Output Elements
+
+- **label**: The subcategory that best matches the extracted information (e.g., LackofInsurance, DrugUse). 
+- **evidence**: A direct quote or phrase from the clinical note that justifies the annotation.
+- **positive**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
+- **negative**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
+
+# Task
+Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
+
+# Examples 
+
+## Example 1
+Input: 
+The Children's Hospital 
+of Philadelphia 
+
+
+
+SOCIAL WORK PROGRESS RECORD 
+
+
+
+
+
+
+
+PATIENT NAME: Baby Boy Ashley Peterson
+CHOP MRN#: 56934500
+DOB:  3/21/2023
+TODAY'S DATE:  4/11/2023
+TODAY'S TIME:  5:12 PM
+
+
+Problems: 
+Insurance
+Hospitalization 
+
+
+Progress: Unchanged
+
+
+Plan: SW r/o to FHCP with continued issues adding pt to insurance plan. FHCP advised family was referred in March and had instructed family to contact UHC to add pt. FHCP called with mom again today and were eventually sent to Monmouth County DHS and unable to reach a representative to discuss case. SW also r/o to contact in NJ DHS for potential assistance.
+
+
+Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending. Will f/u with medical team tomorrow.
+
+
+SW will continue to follow the family.
+
+
+
+
+Time Spent: 60 minutes
+
+
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Taylor Goldberg	
+4/11/2023	5:12 PM
+
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [],
+  "Financial": [["Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending.", "positive"]],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": []
+}
+
+## Example 2
+Input: 
+SOCIAL WORK CARE PLAN NOTE
+
+
+Problem: ADJUSTMENT
+Goal: Patient/family/caregiver progress in adjustment to illness/disability
+Outcome: Ongoing
+
+
+Progress:  Social worker attempted to meet with parents at bedside however parents were not present. Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request. 
+
+
+
+
+Plan: Social worker will continue to follow. 
+
+
+
+
+Time Spent: 15 minutes
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+
+
+Electronically signed:
+Alexandra M Pomar	
+3/9/2023	9:49 AM
+
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [[LackofInsurance, "Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request.", "positive"]],
+  "Childcare": [],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": []
+}
+
+## Example 3
+Input: 
+SOCIAL WORK CARE PLAN NOTE
+
+
+
+Problem: ADJUSTMENT
+Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
+Outcome: Ongoing
+
+
+
+Problem: RELATIONSHIPS/BEHAVIOR
+Goal: Patient/family/caregiver communication barriers will be addressed to provide appropriate care
+Outcome: Ongoing
+
+
+Progress:  SW received a phone call from mother today.  SW returned the phone call with Psychology on the phone.  Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.  Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.  SW attempted to address previous conflict between mom and SW/ appropriate use of communication however mom noted she had another call and conversation ended.  
+
+
+Plan: SW will continue to provide support during hospitalization.
+
+
+Time Spent: 60 minutes
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+
+Electronically signed:
+Lindsey K Kunkel, LCSW	
+11/15/2022	5:06 PM
+
+Ouput: 
+{
+  "Employment": [[PatientCaregiver_Unemployment, "Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.", "positive"]],
+  "Housing": [[HouseInstability_Other, "Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.", "positive"]],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": []
+}
+
+## Example 4
+Input: 
+
+Problem: ADJUSTMENT
+Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
+12/7/2022 1509 by Huber, Meredith Ann, MSW
+Outcome: Ongoing
+Flowsheets (Taken 12/7/2022 1509)
+Adjustment - Intervention - hospitalization: Assess patient/family/caregiver coping strategies
+12/7/2022 1326 by Huber, Meredith Ann, MSW
+Outcome: Ongoing
+Flowsheets (Taken 12/7/2022 1326)
+Adjustment - Intervention - hospitalization: Assess patient/family/caregiver coping strategies
+SOCIAL WORK CARE PLAN NOTE
+
+
+
+Progress:  
+SW met with mother at bedside with Uzbeck VRI interpreter. 
+Mother did not received check from Opens Doors Foundation, SW spoke to Lisa from Open Doors who stated they will mail out an additional check. 
+
+
+SW and mother discussed patient and sibling upcoming discharge in the next week or so. 
+Mother requested help with finding a pediatrician . SW to assist. 
+Mother in need of WIC and formula for patient. 
+Mother interested in home nursing visits and/or private duty nursing if patient is eligible. SW notified CM.
+
+
+SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.
+
+
+Mother requested SW help with SSI application. SW to assist. 
+
+
+SW ordered patient infant car seat to be delivered to the bedside today. 
+
+
+NIICU team and parents plan to meet tomorrow to discuss pending discharges in more detail.
+
+
+Plan: 
+SW to continue to follow and provide support/resources as needed 
+
+
+Time Spent: 90 minutes
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Meredith Ann Huber, MSW	
+12/7/2022	3:09 PM
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [
+    [FoodInsecurity_Other, "Mother in need of WIC and formula for patient.", "positive"],
+    [FoodInsecurity_Other, "SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.", "positive"]
+  ],
+  "Financial": [],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": [
+    [CommunitySafety, "SW ordered patient infant car seat to be delivered to the bedside today", "positive"]
+  ]
+}
+
+## Example 5 
+Input: 
+The Children's Hospital 
+of Philadelphia 
+
+
+
+SOCIAL WORK PROGRESS RECORD 
+
+
+PATIENT NAME: Baby Boy Jemyra Carter
+CHOP MRN#: 56934603
+DOB:  12/19/2022
+TODAY'S DATE:  2/17/2023
+TODAY'S TIME:  11:40 AM
+
+
+Problems: 
+Hospital discharge, Transportation and Other:  Daycare
+
+
+Progress: Improved
+
+
+Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.
+
+
+Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.
+
+
+Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.
+
+
+SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.
+
+
+Plan: SW will continue to follow.
+
+
+Time Spent: 60 minutes
+
+
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Stacey Keo, LSW	
+2/17/2023	11:40 AM
+
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [
+    [FoodInsecurity_Other, "Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.", "positive"]
+  ],
+  "Financial": [
+    [LackofInsurance, "SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.", "positive"]
+  ],
+  "Transportation": [
+    [Transportation_Other, "Problems: Hospital discharge, Transportation and Other:  Daycare", "positive"]
+  ],
+  "Childcare": [
+    [Childcare_Other, "Problems: Hospital discharge, Transportation and Other:  Daycare", "positive"],
+    [Childcare_Other, "Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.", "positive"]
+  ],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": [
+    [CommunitySafety, "Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.", "positive"]
+  ]
+}
+
+## Example 6
+Input: 
+					
+The Children's Hospital 
+of Philadelphia 
+
+
+
+  SOCIAL WORK NOTE 
+PATIENT/FAMILY ASSESSMENT 
+
+
+PATIENT NAME: Ava Barth
+CHOP MRN#: 56920517
+DOB:  9/23/2022
+
+
+Referral Information:  
+
+
+Referral Information 
+Date/Time 11/18/22  
+Admission/Appointment Date 11/18/22 
+Referral Date 11/19/22 
+Referral Source Social Work Initiated 
+Reason for Referral Hospitalization Assessment 
+Patient Location: ICU 
+Primary Service: Neonatal 
+Assessment Type Initial Assessment 
+
+
+
+
+Social Setting:
+
+
+Social Setting 
+Date/Time 11/18/22  
+Patient living situation: PARENT(S);CHILDREN IN THE HOME 
+Parent Information: Mother ( Emily) and Father ( Josh) live in Dover, DE. Mother is on maternity leave until January and Father works from home. Patient ( Ava ) is admitted from home with RSV, Ava was previouly in the NIICU and home for about one week. 
+Children in the home Information: patient has two older siblings 
+
+
+Custody/Consent Information:
+
+
+Custody/Consent Information 
+Date/Time 11/18/22  
+Custody documentation: NOT APPLICABLE 
+Who can provide consent for this patient? Mother and Father 
+Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
+Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
+
+
+
+
+Patient and Family/Caregiver Strengths and Stressors:
+
+
+Patient and Family/Caregivers Strengths and Stressors 
+Date/Time 11/18/22  
+Mental Health NO 
+Home Environment: NO 
+CPS Involvement NO 
+Housing instability NO 
+Food insecurity NO 
+Substance Abuse NO 
+Legal Issues NO 
+Patient and Family/Caregiver Strengths and Stressors: PARENT 
+Parent Strengths Parents are coping well at this time, parents are active and involved in patient care, parents plan to take turns staying with patient and siblings, parents receptive to SW support 
+Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home 
+Existing Community Services/Outside Supports: EARLY INTERVENTION;HOME HEALTH SERVICES 
+Home health services comment: Patient was receiving weight checks at home from a home care provider 
+Early Intervention comment: Patient was referred to Early Intervention Services 
+
+
+Assessment Summary:
+
+
+Resource Needs 
+Date/Time 11/18/22  
+Resource Needs Problem: LOCAL ACCOMODATIONS 
+Goal - Local Accommodations Parents live in DE and would like to stay locally with patient 
+Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email. 
+
+
+
+
+Adjustment: 
+Date/Time 11/18/22  
+Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
+Goal- Adjustment to Hospitalization Parents to continue to demonstrate positive coping techniques and become oriented to the CHOP NIICU 
+Intervention/Plan - Adjustment to Hospitalization SW to provide on going support/resources as needed 
+
+
+Relationships/Behavior 
+Date/Time 11/18/22  
+Relationships/Behavior Problems NONE IDENTIFIED 
+
+
+
+
+Professional Collaboration:
+
+
+Professional Collaboration: 
+Date/Time 11/18/22  
+Professional Collaboration PARENT/CAREGIVER 
+Time Spent (min) 30 min 
+Acuity  Level 2 
+
+
+
+Meredith Ann Huber, MSW
+2:55 PM
+11/18/2022
+
+Output: 
+{
+  "Employment": [
+    [PatientCaregiver_Unemployment, "Mother is on maternity leave until January and Father works from home.", "negative"]
+  ],
+  "Housing": [
+    [NeedTemporaryLodging, "Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in DE and would like to stay locally with patient Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email.", "positive"]
+  ],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [
+    [DistancefromHospital, "Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home", "positive"]
+  ],
+  "Childcare": [],
+  "Permanency": [
+    [NonPermanentPlacement, "Patient living situation: PARENT(S);CHILDREN IN THE HOME", "negative"]
+  ],
+  "Substance": [],
+  "Safety": []
+}
+
+
+## Example 7
+Input:
+ 
+The Children's Hospital 
+of Philadelphia 
+
+
+
+SOCIAL WORK NOTE 
+
+
+PATIENT NAME: Baby Girl Denise Dieterich
+CHOP MRN#: 56902082
+DOB:  9/22/2022
+TODAY'S DATE:  10/9/2022
+TODAY'S TIME: 12:17 PM
+
+
+Social work continues to follow this patient.  
+
+
+Additional Comments: Medical team reached out to SW to discuss DHS investigation. SW called DHS to request assigned caseworker information. SW was told that there is an active investigation due to pt testing positive for opiates. DHS explained that the assinged caseworker is Melissa Tyrell (267-331-1437).  Ms. Tyrell will not be in until Tuesday 10/ 11. Per DHS, if pt becomes medically cleared for discharge prior to Tuesday, they will have an on call caseworker asist in discharge planning. 
+
+
+Pt is not to be discharged without DHS approval of safety plan. 
+
+
+Time Spent: 30 minutes
+
+
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Rosemarie Giannopoulos	
+10/9/2022	12:17 PM
+
+
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [
+    [PermanentPlacementPending, "Pt is not to be discharged without DHS approval of safety plan.", "positive"]
+  ],
+  "Substance": [
+    [DrugUse, "SW was told that there is an active investigation due to pt testing positive for opiates.", "positive"]
+  ],
+  "Safety": []
+}
+
+## Example 8
+Input:
+
+ The Children's Hospital 
+of Philadelphia 
+
+
+SOCIAL WORK PROGRESS RECORD 
+
+
+
+
+PATIENT NAME: Ethan Krall
+CHOP MRN#: 56953882
+DOB:  12/26/2022
+TODAY'S DATE:  4/5/2023
+TODAY'S TIME:  2:35 PM
+
+
+Problems: 
+Visitation Plan
+
+
+Progress: 
+SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible.
+SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.
+
+
+SW was able to gain contact with bio mom at 2:48pm. Bio mom shared that she plans to travel down Saturday (4/8/23) to visit the patient along with bio dad. Bio mom is unsure of the time due to bio dad being her transportation and he works overnight. Their tentative plan is to come Saturday and stay at a local hotel into Sunday. They then plan to visit Sunday (4/9/2023) morning. Bio mom would like for SW to call tomorrow as she will have additional information in regard to timing.
+
+
+SW informed foster dad of this schedule and he was ok with the plan.
+
+
+Plan:
+SW will follow up with bio mom tomorrow on her tentative timing.
+SW will continue to provide support to patient and family while on the ITCU.
+
+
+Time Spent: 60 minutes
+
+
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Aisha Evans	
+4/5/2023	2:35 PM
+
+
+Output: 
+{
+  "Employment": [
+    [PatientCaregiver_Unemployment, "Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "negative"]
+  ],
+  "Housing": [
+    [NeedTemporaryLodging, "Their tentative plan is to come Saturday and stay at a local hotel into Sunday.", "positive"]
+  ],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [
+    [LackofTransportation, "Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "negative"]
+  ],
+  "Childcare": [],
+  "Permanency": [],
+  "Substance": [],
+  "Safety": [
+    [HomeEnvironment_Other, "SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible. SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.", "positive"]
+  ]
+}
+
+## Example 9
+Input: 
+					
+The Children's Hospital 
+of Philadelphia 
+
+
+SOCIAL WORK NOTE 
+PATIENT/FAMILY ASSESSMENT 
+
+
+PATIENT NAME: Baby Girl Karolina Walker
+CHOP MRN#: 56979300
+DOB:  4/5/2023
+
+
+Referral Information:  
+
+
+Referral Information 
+Date/Time 05/17/23  
+Admission/Appointment Date 05/15/23 
+Referral Date 05/16/23 
+Referral Source Social Work Initiated 
+Reason for Referral Hospitalization Assessment 
+Patient Location: ICU 
+Primary Service: Neonatal 
+Assessment Type Initial Assessment 
+
+
+
+
+Social Setting:
+
+
+Social Setting 
+Date/Time 05/17/23  
+Patient living situation: OTHER 
+Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents. 
+School Status OTHER 
+Other School Status Comment: n/a patient is an infant 
+
+
+
+
+Custody/Consent Information:
+
+
+Custody/Consent Information 
+Date/Time 05/17/23  
+Custody documentation: YES 
+Documentation scan dated: 5/16/2023 
+Custody  PHYSICAL CUSTODY;LEGAL CUSTODY 
+Physical Custody SOLE PHYSICAL CUSTODY 
+Sole Physical Custodian: York County Children and Youth 
+Legal Custody SOLE LEGAL CUSTODY 
+Sole Legal Custodian: York County Children and Youth 
+Who can provide consent for this patient? York County Children and Youth, contact assigned case worker Ashley Althoff ( 717-309-5324). After hours contact 717-846-8496 for consent. 
+Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
+Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
+
+
+
+
+Patient and Family/Caregiver Strengths and Stressors:
+
+
+Patient and Family/Caregivers Strengths and Stressors 
+Date/Time 05/17/23  
+Mental Health YES 
+Mental Health Comment: Patient's father disclosed mental health history, feels that he is coping adequately at this time. Mom has a history of mental health treatement and is still engagaged in treatment at this time. LSW will continue to follow and provide support where appropriate. 
+Home Environment: NOT ASSESSED 
+Home Environment not assessed comment: Not assessed at this time. LSW will continue to assess. 
+CPS Involvement YES 
+CPS involvment comment: York County CYS has legal and physical custody of the patient at this time. The assigned case worker is Ashley Althoff ( 717-309-5324). 
+Housing instability NO 
+Food insecurity NO 
+Substance Abuse NO 
+Legal Issues NO 
+Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
+Public assistance/SSI comment: The patient's mother has SNAP and WIC. 
+
+
+
+
+Assessment Summary:
+
+
+Resource Needs 
+Date/Time 05/17/23  
+Resource Needs Problem: OTHER (SEE COMMENT) 
+Goal - Other resource needs Engage with current CYS provider to ensure safe discharge 
+Intervention/Plan - Other resource needs LSW will continue to engage with York Country CYS to ensure safe discharge 
+
+
+
+
+Adjustment: 
+Date/Time 05/17/23  
+Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
+Goal- Adjustment to Hospitalization The patient's parents will adapt and cope with Skylar's hospitalization 
+Intervention/Plan - Adjustment to Hospitalization LSW will continue to provide make outreach and provide support to the patient's parents while Skylar is hospitalized 
+
+
+
+
+Relationships/Behavior 
+Date/Time 05/17/23  
+Relationships/Behavior Problems VISITATION CONCERNS 
+Goal - Visitation concerns Visitor restrictions will be implemented when identified 
+Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart. 
+
+
+
+
+Professional Collaboration:
+
+
+Professional Collaboration: 
+Date/Time 05/17/23  
+Professional Collaboration PARENT/CAREGIVER;CHILD PROTECTIVE SERVICES;FRONT LINE CLINICIAN;NURSING;SOCIAL WORK 
+Time Spent (min) 90 min 
+Acuity  Level 3 
+
+
+
+
+On 5/16/23 LSW spoke with Skylar's parents on the phone to introduce purple team social worker. The patient's parents were provided with the patient's care code and NICU phone number so that they can call for medical updates. The patient's parents asked thoughtful and appropriate questions about the patient's care. 
+
+
+LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision. LSW encouraged the parents to speak with the assigned case worker to discuss visitation. 
+
+
+No additional social work needs were identified at this time. 
+
+
+
+
+Catherine R Heidenreich, LSW
+9:55 AM
+5/17/2023
+
+Output: 
+{
+  "Employment": [],
+  "Housing": [],
+  "Food": [
+    [LackofFundsforFood, "Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: The patient's mother has SNAP and WIC.", "negative"]
+  ],
+  "Financial": [],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [
+    [PermanentPlacementPending, "Patient living situation: OTHER Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents.", "positive"],
+    [PermanentPlacementPending, "Custody  PHYSICAL CUSTODY;LEGAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: York County Children and Youth Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: York County Children and Youth", "positive"],
+    [PermanentPlacementPending, "CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time.", "positive"]
+  ],
+  "Substance": [],
+  "Safety": [
+    [HomeSafety, "CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time", "positive"],
+    [HomeEnvironment_Other, "Relationships/Behavior Problems VISITATION CONCERNS Goal - Visitation concerns Visitor restrictions will be implemented when identified Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart.", "positive"],
+    [HomeEnvironment_Other, "LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision", "positive"]
+  ]
+}
