@@ -1,7 +1,7 @@
 import json
 from dataloader import get_dataloaders
 from load_model import load_model_pipeline
-from metrics import compute_metrics_per_label
+from metrics import compute_metrics_per_label, compute_macro_metrics
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 torch.set_float32_matmul_precision('high')
@@ -23,15 +23,28 @@ with open(prompt_path, "r") as f:
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 def generate_output(user_message, print_output=False):
-    input_text = system_prompt + "\n\n" + user_message
+    input_text = system_prompt + "\n\n" + user_message + "\n\nAnnotation in specified JSON output format with NO ADDITIONAL NOTES OR TEXT, JUST THE JSON:"
+    
     input_ids = tokenizer(input_text, return_tensors="pt").to("cuda")
+    input_length = input_ids["input_ids"].shape[1]
 
     output = quantized_model.generate(**input_ids, max_new_tokens=96)
+    
+    generated_tokens = output[0][input_length:]
 
-    return tokenizer.decode(output[0], skip_special_tokens=True)
+    return tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
-def parse_output(pred):
+def parse_output(pred, granular=False):
     try:
+        assert isinstance(pred, str)
+        pred = pred.strip()
+        
+        i1 = pred.index('{')
+        i2 = pred.index('}')
+        
+        pred = pred[i1:i2+1]
+        print("\n\nJSON: --------------\n", pred.replace('\n', ''), "\n-----------")
+        
         dct = json.loads(pred)
 
         annotations = [0] * len(cat_to_labels)
@@ -39,13 +52,15 @@ def parse_output(pred):
         for cat in cat_to_labels.keys():
             if cat in dct:
                 assert isinstance(dct[cat], list)
-                assert all(isinstance(item, list) and len(item) == 3 and item[0] in cat_to_labels[cat] and item[2] in ["positive", "negative"] for item in dct[cat])
+                dct[cat] = [x for x in dct[cat] if len(x) > 0]
+                assert all(isinstance(item, list) and len(item) == 2 + int(granular) and (item[0] in cat_to_labels[cat] if granular else True) and item[-1] in ["positive", "negative"] for item in dct[cat])
 
                 if any(item[2] == "positive" for item in dct[cat]):
                     annotations[cat_to_i[cat]] = 1
                 elif any(item[2] == "negative" for item in dct[cat]):
                     annotations[cat_to_i[cat]] = -1
-
+        
+        print("successfull parsing")
         return annotations
     except:
         print(f"error converting to JSON {pred}")
@@ -115,33 +130,42 @@ dataloader = get_dataloaders(batch_size=1, split=False)
 
 preds = []
 targets = []
+broke = []
 
 for idx, batch in enumerate(dataloader):
+    if idx > 5:
+        break
+        
     print(f"batch {idx} of {len(dataloader)}")
     notes, labels = batch["note"], batch["labels"]
 
     for i in range(len(notes)):
-        print("NOTE: ", notes[i])
+        print("\n\nNOTE: ", notes[i][:20])
         output = generate_output(notes[i], print_output=False)
-        
-        print("OUTPUT AND LABELS: ", output, "\n\n", labels)
 
-        pred = parse_output(output["content"])
+        pred = parse_output(output)
         if pred is not None:
             preds.append(pred)
             targets.append(labels[i])
-            print(f"prediction: {pred} target: {[t.item() for t in labels]}")
+            print(f"prediction: {pred} target: {labels[i]}")
         else:
             print("invalid output")
-        # i -= 1
-    if idx > 0:
-        break
+            broke.append(idx)
 
 if len(preds) != len(targets):
     print("Lengths of preds and targets do not match:", len(preds), len(targets))
     exit()
 
+print("\n\nBroken inputs: ", len(broke), broke) 
+
 metrics = compute_metrics_per_label(preds, targets)
 print(metrics)
+
 with open("metrics.json", "w") as fp:
     json.dump(metrics, fp)
+    
+broad_metrics = compute_macro_metrics(preds, targets)
+print(metrics)
+
+with open("broad_metrics.json", "w") as fp:
+    json.dump(broad_metrics, fp)

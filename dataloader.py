@@ -33,11 +33,11 @@ def get_dataloaders(batch_size=16, split=False):
 
     DATA_DIR = os.path.join(os.getcwd(), 'data', 'chop')
 
-    labels = pd.read_csv(os.path.join(DATA_DIR, 'labels_cleaned.csv')).fillna('')
+    labels = pd.read_csv(os.path.join(DATA_DIR, 'labels_cleaned_with_notes.csv')).fillna('')
     
     
     labels = labels.set_index('file')
-    examples = [[k, v['cats']] for k, v in labels.to_dict(orient='index').items()]
+    examples = [[v['text'], v['cats']] for _, v in labels.to_dict(orient='index').items()]
     for i, [_, v] in enumerate(examples):
         labels_tmp = [0 for _ in range(9)]
 
@@ -76,9 +76,6 @@ def get_dataloaders(batch_size=16, split=False):
             print("Batch structure:")
             print(f"Notes: {len(batch['note'])} items")
             print(f"Labels: {len(batch['labels'])} tensors")
-            print(f"First label tensor shape: {batch['labels'][0].shape}")
-            print(f"First label tensor: {batch['labels'][0]}")
-            print(f"All label tensor shapes: {[label.shape for label in batch['labels']]}")
             break
         
         return dataloader

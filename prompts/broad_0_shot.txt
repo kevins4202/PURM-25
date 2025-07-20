@@ -65,5 +65,5 @@ Use this format to report the extracted information. In the list corresponding t
 - **positive**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
 
-# Task
-Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
+## TASK
+Now, annotate the following clinical note following the guidelines and output format specified above. You must format your entire output as a single JSON object, without any additional comments, explanations, or introductory text. Do not wrap the JSON in markdown code blocks.
