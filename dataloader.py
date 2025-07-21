@@ -29,6 +29,7 @@ def custom_collate_fn(batch):
     return {"note": notes, "labels": label_tensors}
 
 def get_dataloaders(batch_size=16, split=False):
+    print("Loading data")
     random.seed(42)
 
     DATA_DIR = os.path.join(os.getcwd(), 'data', 'chop')
@@ -71,12 +72,6 @@ def get_dataloaders(batch_size=16, split=False):
     else:
         dataset = SDOHDataset(examples)
         dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=custom_collate_fn)
-        
-        for batch in dataloader:
-            print("Batch structure:")
-            print(f"Notes: {len(batch['note'])} items")
-            print(f"Labels: {len(batch['labels'])} tensors")
-            break
         
         return dataloader
     

@@ -44,11 +44,17 @@ Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 203
 Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
 Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
 
+## TASK
+Now, annotate the following clinical note following the guidelines and output format specified above:
+
+{note}
+
 # Output Format
+You must format your entire output as a single JSON object, *without any additional comments, explanations, or introductory text.* Do not wrap the JSON in markdown code blocks.
 
 Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there are none, then output an empty list for that category.
 
-{
+{{
   "Employment": [[evidence, "positive" OR "negative"]],
   "Housing": [[evidence, "positive" OR "negative"]],
   "Food": [[evidence, "positive" OR "negative"]],
@@ -58,12 +64,11 @@ Use this format to report the extracted information. In the list corresponding t
   "Permanency": [[evidence, "positive" OR "negative"]],
   "Substance": [[evidence, "positive" OR "negative"]],
   "Safety": [[evidence, "positive" OR "negative"]]
-}
+}}
 
 # Output Elements
 - **evidence**: A direct quote or phrase from the clinical note that justifies the annotation.
 - **positive**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
 
-## TASK
-Now, annotate the following clinical note following the guidelines and output format specified above. You must format your entire output as a single JSON object, without any additional comments, explanations, or introductory text. Do not wrap the JSON in markdown code blocks.
+## Formatted JSON output:

@@ -12,7 +12,7 @@ from config import PROMPT_TEMPLATES, CATEGORY_MAPPING
 class PromptManager:
     """Manages prompt loading, formatting, and validation"""
     
-    def __init__(self, prompt_template_name: str = "broad_0_shot"):
+    def __init__(self, prompt_template_name: str):
         self.prompt_template_name = prompt_template_name
         self.prompt_path = PROMPT_TEMPLATES[prompt_template_name]["path"]
         self.system_prompt = self._load_prompt()
@@ -25,7 +25,7 @@ class PromptManager:
         with open(self.prompt_path, "r") as f:
             return f.read()
     
-    def format_prompt(self, user_message: str, include_instruction: bool = True) -> str:
+    def format_prompt(self, note: str) -> str:
         """
         Format the prompt with proper string formatting
         
@@ -36,10 +36,7 @@ class PromptManager:
         Returns:
             Formatted prompt string
         """
-        prompt = f"{self.system_prompt}\n\n{user_message}"
-        
-        if include_instruction:
-            prompt += "\n\nAnnotation in specified JSON output format with NO ADDITIONAL NOTES OR TEXT, JUST THE JSON:"
+        prompt = self.system_prompt.format(note=note)
         
         return prompt
     
@@ -90,6 +87,7 @@ class OutputParser:
         try:
             assert isinstance(pred, str)
             pred = pred.strip()
+            print(f"Parsing output: {chr(10)}{pred}{chr(10)}")
             
             # Extract JSON from response
             i1 = pred.index('{')
@@ -140,7 +138,7 @@ def create_evaluation_summary(preds: List[List[int]], targets: List[List[int]],
     Returns:
         Summary dictionary
     """
-    total_samples = len(targets)
+    total_samples = len(broken_indices) + len(preds)
     successful_samples = len(preds)
     failed_samples = len(broken_indices)
     

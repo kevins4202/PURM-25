@@ -7,33 +7,37 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 # Configuration
 torch.set_float32_matmul_precision("high")
-
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class ModelEvaluator:
-    def __init__(self, model_config=None, prompt_template_name="broad_0_shot"):
-        self.model_config = model_config or MODEL_CONFIG
-        self.prompt_manager = PromptManager(prompt_template_name)
+    def __init__(self, model_config, prompt):
+        print("Initializing model")
+        self.model_config = model_config
+        self.prompt_manager = PromptManager(prompt)
         self.output_parser = OutputParser(CATEGORY_MAPPING)
         self.model = None
         self.tokenizer = None
         self._load_model()
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
     def _load_model(self):
         """Load and configure the model"""
+        print("Loading and quantizing model")
         quantization_config = BitsAndBytesConfig(load_in_8bit=True)
         self.model = AutoModelForCausalLM.from_pretrained(
             self.model_config["model_id"],
             quantization_config=quantization_config,
-            device_map=self.device,
+            device_map=device,
         )
+        self.model.generation_config.pad_token_id = self.model.generation_config.eos_token_id[0]
+        
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
 
-    def generate_output(self, user_message):
+    def generate_output(self, note):
         """Generate model output for a given user message"""
-        input_text = self.prompt_manager.format_prompt(user_message)
+        print("Generating output...")
+        input_text = self.prompt_manager.format_prompt(note)
 
-        input_ids = self.tokenizer(input_text, return_tensors="pt").to(self.device)
+        input_ids = self.tokenizer(input_text, return_tensors="pt").to(device)
         input_length = input_ids["input_ids"].shape[1]
 
         output = self.model.generate(
@@ -45,22 +49,22 @@ class ModelEvaluator:
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
+        print("Starting evaluation")
         preds = []
         targets = []
         broken_indices = []
 
         for idx, batch in enumerate(dataloader):
-            if self.model_config["max_batches"] and idx >= self.model_config["max_batches"]:
+            if "max_batches" in self.model_config and idx >= self.model_config["max_batches"]:
                 break
 
-            print(f"batch {idx + 1} of {len(dataloader)}")
+            print(f"{chr(10)}batch {idx + 1} of {len(dataloader)}")
             notes, labels = batch["note"], batch["labels"]
 
             for i in range(len(notes)):
-                print(f"\n\nNOTE: {notes[i][:20]}...")
+                print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
                 output = self.generate_output(notes[i])
                 pred = self.output_parser.parse_output(output)
-                print(f"prediction: {pred} target: {labels[i]}")
 
                 if pred is not None:
                     preds.append(pred)
@@ -94,7 +98,7 @@ class ModelEvaluator:
         print("\nPer-label metrics:", metrics)
 
         # Compute macro metrics
-        broad_metrics = compute_macro_metrics(preds, targets)
+        broad_metrics = compute_macro_metrics(metrics)
         print("Macro metrics:", broad_metrics)
 
         # Save results
@@ -107,7 +111,7 @@ def main():
     """Main evaluation function"""
     # Initialize evaluator
     evaluator = ModelEvaluator(
-        model_config=MODEL_CONFIG, prompt_template_name="broad_0_shot"
+        model_config=MODEL_CONFIG, prompt="broad_0_shot"
     )
 
     # Load data

@@ -94,11 +94,11 @@ def compute_metrics_per_label(preds, targets):
 
 def compute_macro_metrics(results):
     """Compute macro-averaged metrics across all labels"""
-    macro_precision = sum(r['precision'] for r in results.values()) / len(results)
-    macro_recall = sum(r['recall'] for r in results.values()) / len(results)
-    macro_f1 = sum(r['f1'] for r in results.values()) / len(results)
-    macro_accuracy = sum(r['accuracy'] for r in results.values()) / len(results)
-    macro_absent_accuracy = sum(r['absent_accuracy'] for r in results.values()) / len(results)
+    macro_precision = sum(r['precision'] for r in results) / len(results)
+    macro_recall = sum(r['recall'] for r in results) / len(results)
+    macro_f1 = sum(r['f1'] for r in results) / len(results)
+    macro_accuracy = sum(r['accuracy'] for r in results) / len(results)
+    macro_absent_accuracy = sum(r['absent_accuracy'] for r in results) / len(results)
     
     return {
         'macro_precision': macro_precision,

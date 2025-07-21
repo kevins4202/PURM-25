@@ -7,7 +7,8 @@ Contains category definitions, model configurations, and other constants.
 MODEL_CONFIG = {
     "model_id": "meta-llama/Llama-3.1-8B-Instruct",
     "quantization": True,
-    "max_new_tokens": 96
+    "max_new_tokens": 256,
+    "max_batches": 5
 }
 
 # Category mapping for broad classification (output categories to internal categories)
