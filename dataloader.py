@@ -80,14 +80,3 @@ def get_dataloaders(batch_size=16, split=False):
         
         return dataloader
     
-if __name__ == "__main__":
-    dataloader = get_dataloaders(batch_size=16, split=False)
-
-    for batch in dataloader:
-        print("Batch structure:")
-        print(f"Notes: {len(batch['note'])} items")
-        print(f"Labels: {len(batch['labels'])} tensors")
-        print(f"First label tensor shape: {batch['labels'][0].shape}")
-        print(f"First label tensor: {batch['labels'][0]}")
-        print(f"All label tensor shapes: {[label.shape for label in batch['labels']]}")
-        break

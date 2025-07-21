@@ -1,60 +1,5 @@
 from collections import defaultdict
-
-cat_to_labels = {
-    "PatientCaregiver_Employment": [
-        "PatientCaregiver_Unemployment"
-    ],
-    "HousingInstability": [
-        "Homelessness",
-        "GeneralHousingInstability",
-        "NeedTemporaryLodging",
-        "HouseInstability_Other"
-    ],
-    "FoodInsecurity": [
-        "LackofFundsforFood",
-        "FoodInsecurity_Other"
-    ],
-    "FinancialStrain": [
-        "Poverty",
-        "LackofInsurance",
-        "UnabletoPay",
-        "FinancialStrain_Other"
-    ],
-    "Transportation": [
-        "DistancefromHospital",
-        "LackofTransportation",
-        "Transportation_Other"
-    ],
-    "Childcare": [
-        "ChildcareBarrierfromHospitalization",
-        "ChildcareBarrierfromNonHospitalization",
-        "NeedofChildcare",
-        "Childcare_Other"
-    ],
-    "SubstanceAbuse": [
-        "DrugUse",
-        "Alcoholism",
-        "SubstanceAbuse_Other"
-    ],
-    "Safety": [
-        # Home environment
-            "ChildAbuse",
-            "HomeSafety",
-            "HomeAccessibility",
-            "IntimatePartnerViolence",
-            "HomeEnvironment_Other",
-        # Community environment
-            "CommunitySafety",
-            "CommunityAccessibility",
-            "CommunityViolence",
-            "CommunityEnvironment_Other"
-        ],
-    "Permanency": [
-        "NonPermanentPlacement",
-        "PermanentPlacementPending",
-        "Permanency_Other"
-    ]
-}
+from config import CAT_TO_LABELS
 
 def compute_metrics_per_label(preds, targets):
     """
@@ -66,16 +11,16 @@ def compute_metrics_per_label(preds, targets):
         targets: List of target dictionaries {label: value} where value is 1, -1, or 0
     """
     # Initialize count dictionaries
-    true_positives = [0 for _ in range(len(cat_to_labels))]
-    false_positives = [0 for _ in range(len(cat_to_labels))]
-    false_negatives = [0 for _ in range(len(cat_to_labels))]
-    true_negatives = [0 for _ in range(len(cat_to_labels))]
-    absent_correct = [0 for _ in range(len(cat_to_labels))]
-    absent_incorrect = [0 for _ in range(len(cat_to_labels))]
+    true_positives = [0 for _ in range(len(CAT_TO_LABELS))]
+    false_positives = [0 for _ in range(len(CAT_TO_LABELS))]
+    false_negatives = [0 for _ in range(len(CAT_TO_LABELS))]
+    true_negatives = [0 for _ in range(len(CAT_TO_LABELS))]
+    absent_correct = [0 for _ in range(len(CAT_TO_LABELS))]
+    absent_incorrect = [0 for _ in range(len(CAT_TO_LABELS))]
 
     for pred, target in zip(preds, targets):
         # For each label, determine the classification
-        for label in range(len(cat_to_labels.keys())): 
+        for label in range(len(CAT_TO_LABELS.keys())): 
             pred_val = pred[label]  # Default to absent if not in prediction
             target_val = target[label]  # Default to absent if not in target
             
@@ -105,8 +50,8 @@ def compute_metrics_per_label(preds, targets):
                     false_negatives[label] += 1
 
     # Calculate metrics for each label
-    results = [0 for _ in range(len(cat_to_labels))]
-    for label in range(len(cat_to_labels.keys())):
+    results = [0 for _ in range(len(CAT_TO_LABELS))]
+    for label in range(len(CAT_TO_LABELS.keys())):
         tp = true_positives[label]
         fp = false_positives[label]
         fn = false_negatives[label]

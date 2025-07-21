@@ -1,171 +1,128 @@
-import json
 from dataloader import get_dataloaders
-from load_model import load_model_pipeline
 from metrics import compute_metrics_per_label, compute_macro_metrics
+from config import MODEL_CONFIG, CATEGORY_MAPPING, EVALUATION_CONFIG
+from utils import PromptManager, OutputParser, create_evaluation_summary, save_results
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-torch.set_float32_matmul_precision('high')
 
-# pipeline = load_model_pipeline("meta-llama/Llama-3.3-70B-Instruct")
-model_id = "meta-llama/Llama-3.1-8B-Instruct"
-quantization_config = BitsAndBytesConfig(load_in_8bit=True)
-quantized_model = AutoModelForCausalLM.from_pretrained(
-    model_id, quantization_config=quantization_config, device_map="auto"
-)
-#quantized_model.compile()
+# Configuration
+torch.set_float32_matmul_precision("high")
 
 
-prompt_path = "prompts/broad_0_shot.txt"
+class ModelEvaluator:
+    def __init__(self, model_config=None, prompt_template_name="broad_0_shot"):
+        self.model_config = model_config or MODEL_CONFIG
+        self.prompt_manager = PromptManager(prompt_template_name)
+        self.output_parser = OutputParser(CATEGORY_MAPPING)
+        self.model = None
+        self.tokenizer = None
+        self._load_model()
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
-with open(prompt_path, "r") as f:
-    system_prompt = f.read()
+    def _load_model(self):
+        """Load and configure the model"""
+        quantization_config = BitsAndBytesConfig(load_in_8bit=True)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_config["model_id"],
+            quantization_config=quantization_config,
+            device_map=self.device,
+        )
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
 
-tokenizer = AutoTokenizer.from_pretrained(model_id)
+    def generate_output(self, user_message):
+        """Generate model output for a given user message"""
+        input_text = self.prompt_manager.format_prompt(user_message)
 
-def generate_output(user_message, print_output=False):
-    input_text = system_prompt + "\n\n" + user_message + "\n\nAnnotation in specified JSON output format with NO ADDITIONAL NOTES OR TEXT, JUST THE JSON:"
-    
-    input_ids = tokenizer(input_text, return_tensors="pt").to("cuda")
-    input_length = input_ids["input_ids"].shape[1]
+        input_ids = self.tokenizer(input_text, return_tensors="pt").to(self.device)
+        input_length = input_ids["input_ids"].shape[1]
 
-    output = quantized_model.generate(**input_ids, max_new_tokens=96)
-    
-    generated_tokens = output[0][input_length:]
+        output = self.model.generate(
+            **input_ids, max_new_tokens=self.model_config["max_new_tokens"]
+        )
 
-    return tokenizer.decode(generated_tokens, skip_special_tokens=True)
+        generated_tokens = output[0][input_length:]
+        return self.tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
-def parse_output(pred, granular=False):
-    try:
-        assert isinstance(pred, str)
-        pred = pred.strip()
-        
-        i1 = pred.index('{')
-        i2 = pred.index('}')
-        
-        pred = pred[i1:i2+1]
-        print("\n\nJSON: --------------\n", pred.replace('\n', ''), "\n-----------")
-        
-        dct = json.loads(pred)
+    def evaluate(self, dataloader):
+        """Evaluate model on a batch of data"""
+        preds = []
+        targets = []
+        broken_indices = []
 
-        annotations = [0] * len(cat_to_labels)
+        for idx, batch in enumerate(dataloader):
+            if self.model_config["max_batches"] and idx >= self.model_config["max_batches"]:
+                break
 
-        for cat in cat_to_labels.keys():
-            if cat in dct:
-                assert isinstance(dct[cat], list)
-                dct[cat] = [x for x in dct[cat] if len(x) > 0]
-                assert all(isinstance(item, list) and len(item) == 2 + int(granular) and (item[0] in cat_to_labels[cat] if granular else True) and item[-1] in ["positive", "negative"] for item in dct[cat])
+            print(f"batch {idx + 1} of {len(dataloader)}")
+            notes, labels = batch["note"], batch["labels"]
 
-                if any(item[2] == "positive" for item in dct[cat]):
-                    annotations[cat_to_i[cat]] = 1
-                elif any(item[2] == "negative" for item in dct[cat]):
-                    annotations[cat_to_i[cat]] = -1
-        
-        print("successfull parsing")
-        return annotations
-    except:
-        print(f"error converting to JSON {pred}")
-        return None
+            for i in range(len(notes)):
+                print(f"\n\nNOTE: {notes[i][:20]}...")
+                output = self.generate_output(notes[i])
+                pred = self.output_parser.parse_output(output)
+                print(f"prediction: {pred} target: {labels[i]}")
 
-cat_to_labels = {
-    "PatientCaregiver_Employment": [
-        "PatientCaregiver_Unemployment"
-    ],
-    "HousingInstability": [
-        "Homelessness",
-        "GeneralHousingInstability",
-        "NeedTemporaryLodging",
-        "HouseInstability_Other"
-    ],
-    "FoodInsecurity": [
-        "LackofFundsforFood",
-        "FoodInsecurity_Other"
-    ],
-    "FinancialStrain": [
-        "Poverty",
-        "LackofInsurance",
-        "UnabletoPay",
-        "FinancialStrain_Other"
-    ],
-    "Transportation": [
-        "DistancefromHospital",
-        "LackofTransportation",
-        "Transportation_Other"
-    ],
-    "Childcare": [
-        "ChildcareBarrierfromHospitalization",
-        "ChildcareBarrierfromNonHospitalization",
-        "NeedofChildcare",
-        "Childcare_Other"
-    ],
-    "SubstanceAbuse": [
-        "DrugUse",
-        "Alcoholism",
-        "SubstanceAbuse_Other"
-    ],
-    "Safety": [
-        # Home environment
-            "ChildAbuse",
-            "HomeSafety",
-            "HomeAccessibility",
-            "IntimatePartnerViolence",
-            "HomeEnvironment_Other",
-        # Community environment
-            "CommunitySafety",
-            "CommunityAccessibility",
-            "CommunityViolence",
-            "CommunityEnvironment_Other"
-        ],
-    "Permanency": [
-        "NonPermanentPlacement",
-        "PermanentPlacementPending",
-        "Permanency_Other"
-    ]
-}
+                if pred is not None:
+                    preds.append(pred)
+                    targets.append(labels[i])
+                    print(f"prediction: {pred} target: {labels[i]}")
+                else:
+                    print("invalid output")
+                    broken_indices.append(idx)
 
-cat_to_i = {cat: i for i, cat in enumerate(list(cat_to_labels.keys()))}
+        return preds, targets, broken_indices
 
-model_labels = []
+    def compute_and_save_metrics(self, preds, targets, broken_indices, output_dir="."):
+        """Compute metrics and save results"""
+        if len(preds) != len(targets):
+            print(
+                f"Lengths of preds and targets do not match: {len(preds)} vs {len(targets)}"
+            )
+            return
 
-dataloader = get_dataloaders(batch_size=1, split=False)
+        # Create evaluation summary
+        summary = create_evaluation_summary(preds, targets, broken_indices)
+        print(f"\n\nEvaluation Summary:")
+        print(f"Total samples: {summary['total_samples']}")
+        print(f"Successful samples: {summary['successful_samples']}")
+        print(f"Failed samples: {summary['failed_samples']}")
+        print(f"Success rate: {summary['success_rate']:.2%}")
+        print(f"Broken indices: {summary['broken_indices']}")
 
-preds = []
-targets = []
-broke = []
+        # Compute per-label metrics
+        metrics = compute_metrics_per_label(preds, targets)
+        print("\nPer-label metrics:", metrics)
 
-for idx, batch in enumerate(dataloader):
-    if idx > 5:
-        break
-        
-    print(f"batch {idx} of {len(dataloader)}")
-    notes, labels = batch["note"], batch["labels"]
+        # Compute macro metrics
+        broad_metrics = compute_macro_metrics(preds, targets)
+        print("Macro metrics:", broad_metrics)
 
-    for i in range(len(notes)):
-        print("\n\nNOTE: ", notes[i][:20])
-        output = generate_output(notes[i], print_output=False)
+        # Save results
+        save_results(metrics, broad_metrics, summary, output_dir)
 
-        pred = parse_output(output)
-        if pred is not None:
-            preds.append(pred)
-            targets.append(labels[i])
-            print(f"prediction: {pred} target: {labels[i]}")
-        else:
-            print("invalid output")
-            broke.append(idx)
+        return metrics, broad_metrics, summary
 
-if len(preds) != len(targets):
-    print("Lengths of preds and targets do not match:", len(preds), len(targets))
-    exit()
 
-print("\n\nBroken inputs: ", len(broke), broke) 
+def main():
+    """Main evaluation function"""
+    # Initialize evaluator
+    evaluator = ModelEvaluator(
+        model_config=MODEL_CONFIG, prompt_template_name="broad_0_shot"
+    )
 
-metrics = compute_metrics_per_label(preds, targets)
-print(metrics)
+    # Load data
+    dataloader = get_dataloaders(
+        batch_size=EVALUATION_CONFIG["batch_size"], split=False
+    )
 
-with open("metrics.json", "w") as fp:
-    json.dump(metrics, fp)
-    
-broad_metrics = compute_macro_metrics(preds, targets)
-print(metrics)
+    # Evaluate model
+    preds, targets, broken_indices = evaluator.evaluate(
+        dataloader
+    )
 
-with open("broad_metrics.json", "w") as fp:
-    json.dump(broad_metrics, fp)
+    # Compute and save metrics
+    evaluator.compute_and_save_metrics(preds, targets, broken_indices)
+
+
+if __name__ == "__main__":
+    main()
