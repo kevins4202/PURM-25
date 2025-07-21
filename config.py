@@ -8,20 +8,6 @@ MODEL_CONFIG = {
     "model_id": "meta-llama/Llama-3.1-8B-Instruct",
     "quantization": True,
     "max_new_tokens": 256,
-    "max_batches": 5
-}
-
-# Category mapping for broad classification (output categories to internal categories)
-CATEGORY_MAPPING = {
-    "Employment": "PatientCaregiver_Employment",
-    "Housing": "HousingInstability", 
-    "Food": "FoodInsecurity",
-    "Financial": "FinancialStrain",
-    "Transportation": "Transportation",
-    "Childcare": "Childcare",
-    "Permanency": "Permanency",
-    "Substance": "SubstanceAbuse",
-    "Safety": "Safety"
 }
 
 # Detailed category definitions with subcategories
@@ -87,30 +73,7 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 # Evaluation settings
 EVALUATION_CONFIG = {
     "batch_size": 1,
-    "max_batches": 6,  # For testing, set to None for full evaluation
-    "prompt_path": "prompts/broad_0_shot.txt",
-    "output_files": {
-        "metrics": "metrics.json",
-        "broad_metrics": "broad_metrics.json"
-    }
+    "max_batches": 5,  # For testing, set to None for full evaluation
+    "broad": True,
+    "zero_shot": True
 }
-
-# Prompt templates
-PROMPT_TEMPLATES = {
-    "broad_0_shot": {
-        "path": "prompts/broad_0_shot.txt",
-        "description": "Broad classification with 0-shot learning"
-    },
-    "broad_1_shot": {
-        "path": "prompts/broad_1_shot.txt", 
-        "description": "Broad classification with 1-shot learning"
-    },
-    "granular_0_shot": {
-        "path": "prompts/granular_0_shot.txt",
-        "description": "Granular classification with 0-shot learning"
-    },
-    "granular_1_shot": {
-        "path": "prompts/granular_1_shot.txt",
-        "description": "Granular classification with 1-shot learning"
-    }
-} 

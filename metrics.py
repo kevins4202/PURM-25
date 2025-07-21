@@ -107,24 +107,3 @@ def compute_macro_metrics(results):
         'macro_accuracy': macro_accuracy,
         'macro_absent_accuracy': macro_absent_accuracy
     }
-
-if __name__ == "__main__":
-    # Example with multi-label multi-class data
-    preds = [
-        {1: 1, 2: -1, 3: 0},  # Label 1: positive, Label 2: negative, Label 3: absent
-        {1: -1, 2: 1, 3: 1},  # Label 1: negative, Label 2: positive, Label 3: positive
-        {1: 0, 2: 0, 3: -1},  # Label 1: absent, Label 2: absent, Label 3: negative
-    ]
-    targets = [
-        {1: 1, 2: -1, 3: 0},  # All correct
-        {1: 1, 2: 1, 3: 1},   # Label 1: wrong (predicted negative, should be positive)
-        {1: 0, 2: 0, 3: -1},  # All correct
-    ]
-    
-    results = compute_metrics_per_label(preds, targets)
-    print("Per-label metrics:")
-    for label, metrics in results.items():
-        print(f"Label {label}: {metrics}")
-    
-    macro_metrics = compute_macro_metrics(results)
-    print(f"\nMacro-averaged metrics: {macro_metrics}")

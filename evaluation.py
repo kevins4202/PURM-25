@@ -1,7 +1,14 @@
 from dataloader import get_dataloaders
 from metrics import compute_metrics_per_label, compute_macro_metrics
-from config import MODEL_CONFIG, CATEGORY_MAPPING, EVALUATION_CONFIG
-from utils import PromptManager, OutputParser, create_evaluation_summary, save_results
+from config import MODEL_CONFIG, EVALUATION_CONFIG
+from utils import (
+    create_evaluation_summary,
+    load_prompt,
+    save_results,
+    BroadOutputSchema,
+    GranularOutputSchema,
+)
+from outlines import Outline, models, generate
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
@@ -9,43 +16,56 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
+
 class ModelEvaluator:
-    def __init__(self, model_config, prompt):
+    def __init__(self, model_config, evaluation_config):
         print("Initializing model")
         self.model_config = model_config
-        self.prompt_manager = PromptManager(prompt)
-        self.output_parser = OutputParser(CATEGORY_MAPPING)
-        self.model = None
-        self.tokenizer = None
+        self.evaluation_config = evaluation_config
+        self.outlined_model = None
+        self.generator = None
         self._load_model()
 
     def _load_model(self):
         """Load and configure the model"""
         print("Loading and quantizing model")
         quantization_config = BitsAndBytesConfig(load_in_8bit=True)
-        self.model = AutoModelForCausalLM.from_pretrained(
+        model = AutoModelForCausalLM.from_pretrained(
             self.model_config["model_id"],
             quantization_config=quantization_config,
             device_map=device,
         )
-        self.model.generation_config.pad_token_id = self.model.generation_config.eos_token_id[0]
-        
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
+        model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
+        tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
+        # Wrap with outlines
+        self.outlined_model = models.transformers(model, tokenizer)
+
+        self.generator = generate.json(
+            self.outlined_model,
+            Outline(
+                BroadOutputSchema
+                if self.evaluation_config["broad"]
+                else GranularOutputSchema
+            ),
+        )
 
     def generate_output(self, note):
         """Generate model output for a given user message"""
         print("Generating output...")
-        input_text = self.prompt_manager.format_prompt(note)
-
-        input_ids = self.tokenizer(input_text, return_tensors="pt").to(device)
-        input_length = input_ids["input_ids"].shape[1]
-
-        output = self.model.generate(
-            **input_ids, max_new_tokens=self.model_config["max_new_tokens"]
-        )
-
-        generated_tokens = output[0][input_length:]
-        return self.tokenizer.decode(generated_tokens, skip_special_tokens=True)
+        # Use outlines to generate structured output
+        try:
+            structured = self.generator(
+                load_prompt(
+                    self.evaluation_config["broad"],
+                    self.evaluation_config["zero_shot"],
+                    note,
+                )
+            )
+            print("Structured output:", structured)
+        except Exception as e:
+            print("Failed to generate structured output:", e)
+            structured = None
+        return structured
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
@@ -55,23 +75,24 @@ class ModelEvaluator:
         broken_indices = []
 
         for idx, batch in enumerate(dataloader):
-            if "max_batches" in self.model_config and idx >= self.model_config["max_batches"]:
+            if (
+                "max_batches" in self.model_config
+                and idx >= self.model_config["max_batches"]
+            ):
                 break
 
-            print(f"{chr(10)}batch {idx + 1} of {len(dataloader)}")
+            print(f"\nbatch {idx + 1} of {len(dataloader)}")
             notes, labels = batch["note"], batch["labels"]
 
             for i in range(len(notes)):
                 print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
-                output = self.generate_output(notes[i])
-                pred = self.output_parser.parse_output(output)
-
-                if pred is not None:
-                    preds.append(pred)
+                pred = self.generate_output(notes[i])
+                try:
+                    preds.append(pred.dict())
                     targets.append(labels[i])
                     print(f"prediction: {pred} target: {labels[i]}")
-                else:
-                    print("invalid output")
+                except Exception as e:
+                    print(f"Error parsing output: {e} {pred}")
                     broken_indices.append(idx)
 
         return preds, targets, broken_indices
@@ -111,7 +132,7 @@ def main():
     """Main evaluation function"""
     # Initialize evaluator
     evaluator = ModelEvaluator(
-        model_config=MODEL_CONFIG, prompt="broad_0_shot"
+        model_config=MODEL_CONFIG, evaluation_config=EVALUATION_CONFIG
     )
 
     # Load data
@@ -120,9 +141,7 @@ def main():
     )
 
     # Evaluate model
-    preds, targets, broken_indices = evaluator.evaluate(
-        dataloader
-    )
+    preds, targets, broken_indices = evaluator.evaluate(dataloader)
 
     # Compute and save metrics
     evaluator.compute_and_save_metrics(preds, targets, broken_indices)
