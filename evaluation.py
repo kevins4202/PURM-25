@@ -4,11 +4,12 @@ from config import MODEL_CONFIG, EVALUATION_CONFIG
 from utils import (
     create_evaluation_summary,
     load_prompt,
+    get_annotations,
     save_results,
     BroadOutputSchema,
     GranularOutputSchema,
 )
-from outlines import Outline, models, generate
+import outlines
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
@@ -24,7 +25,12 @@ class ModelEvaluator:
         self.evaluation_config = evaluation_config
         self.outlined_model = None
         self.generator = None
+        self.output_schema = BroadOutputSchema if self.evaluation_config["broad"] else GranularOutputSchema
         self._load_model()
+        self.prompt = load_prompt(
+            self.evaluation_config["broad"],
+            self.evaluation_config["zero_shot"]
+        )
 
     def _load_model(self):
         """Load and configure the model"""
@@ -38,34 +44,24 @@ class ModelEvaluator:
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
         tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
         # Wrap with outlines
-        self.outlined_model = models.transformers(model, tokenizer)
-
-        self.generator = generate.json(
-            self.outlined_model,
-            Outline(
-                BroadOutputSchema
-                if self.evaluation_config["broad"]
-                else GranularOutputSchema
-            ),
-        )
+        self.outlined_model = outlines.from_transformers(model, tokenizer)
 
     def generate_output(self, note):
         """Generate model output for a given user message"""
-        print("Generating output...")
         # Use outlines to generate structured output
         try:
-            structured = self.generator(
-                load_prompt(
-                    self.evaluation_config["broad"],
-                    self.evaluation_config["zero_shot"],
-                    note,
-                )
+            structured = self.outlined_model(
+                self.prompt.format(note=note),
+                self.output_schema,
+                max_new_tokens=512
             )
-            print("Structured output:", structured)
+            
+            pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
+            print("Parsed structured output:", structured)
         except Exception as e:
-            print("Failed to generate structured output:", e)
-            structured = None
-        return structured
+            print("Failed to generate and parse structured output:", e)
+            pred = None
+        return pred
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
@@ -76,8 +72,8 @@ class ModelEvaluator:
 
         for idx, batch in enumerate(dataloader):
             if (
-                "max_batches" in self.model_config
-                and idx >= self.model_config["max_batches"]
+                self.evaluation_config["max_batches"]
+                and idx >= self.evaluation_config["max_batches"]
             ):
                 break
 
@@ -88,9 +84,9 @@ class ModelEvaluator:
                 print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
                 pred = self.generate_output(notes[i])
                 try:
-                    preds.append(pred.dict())
+                    preds.append(get_annotations(pred))
                     targets.append(labels[i])
-                    print(f"prediction: {pred} target: {labels[i]}")
+                    print(f"prediction: {preds[-1]} \ntarget: {labels[i].tolist()}")
                 except Exception as e:
                     print(f"Error parsing output: {e} {pred}")
                     broken_indices.append(idx)
@@ -123,7 +119,7 @@ class ModelEvaluator:
         print("Macro metrics:", broad_metrics)
 
         # Save results
-        save_results(metrics, broad_metrics, summary, output_dir)
+        save_results(metrics, broad_metrics)
 
         return metrics, broad_metrics, summary
 

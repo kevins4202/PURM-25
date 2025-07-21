@@ -78,10 +78,11 @@ Definition: Risks, hazards, or trauma occurring in the home or surrounding commu
 Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
 
 # Output Format
+You must format your entire output as a single JSON object, *without any additional comments, explanations, or introductory text.* Do not wrap the JSON in markdown code blocks.
 
-Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there are none, then output an empty list for that category.
+Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
 
-{
+{{
   "Employment": [[label, evidence, "positive" OR "negative"]],
   "Housing": [[label, evidence, "positive" OR "negative"]],
   "Food": [[label, evidence, "positive" OR "negative"]],
@@ -91,14 +92,16 @@ Use this format to report the extracted information. In the list corresponding t
   "Permanency": [[label, evidence, "positive" OR "negative"]],
   "Substance": [[label, evidence, "positive" OR "negative"]],
   "Safety": [[label, evidence, "positive" OR "negative"]]
-}
+}}
 
 # Output Elements
 
 - **label**: The subcategory that best matches the extracted information (e.g., LackofInsurance, DrugUse). 
-- **evidence**: A direct quote or phrase from the clinical note that justifies the annotation.
+- **evidence**: A non-empty quote from the clinical note that justifies the annotation.
 - **positive**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
 
-# Task
-Now, annotate the following clinical note following the guidelines and output format specified above. Do not output any other text besides the specified output format.
+## TASK
+Now, annotate the following clinical note following the guidelines and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. 
+
+{note}

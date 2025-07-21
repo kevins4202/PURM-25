@@ -7,7 +7,18 @@ Contains category definitions, model configurations, and other constants.
 MODEL_CONFIG = {
     "model_id": "meta-llama/Llama-3.1-8B-Instruct",
     "quantization": True,
-    "max_new_tokens": 256,
+}
+
+OUTPUT_TO_CAT = {
+    "Employment": "PatientCaregiver_Employment",
+    "Housing": "HousingInstability", 
+    "Food": "FoodInsecurity",
+    "Financial": "FinancialStrain",
+    "Transportation": "Transportation",
+    "Childcare": "Childcare",
+    "Permanency": "Permanency",
+    "SubstanceAbuse": "SubstanceAbuse",
+    "Safety": "Safety"
 }
 
 # Detailed category definitions with subcategories
@@ -74,6 +85,6 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 EVALUATION_CONFIG = {
     "batch_size": 1,
     "max_batches": 5,  # For testing, set to None for full evaluation
-    "broad": True,
+    "broad": False,
     "zero_shot": True
 }
