@@ -1,17 +1,14 @@
 from dataloader import get_dataloaders
-from metrics import compute_metrics_per_label, compute_macro_metrics
-from config import MODEL_CONFIG, EVALUATION_CONFIG
+from metrics import compute_metrics
+from config import MODEL_CONFIG, EVALUATION_CONFIG, BroadOutputSchema, GranularOutputSchema
 from utils import (
-    create_evaluation_summary,
     load_prompt,
     get_annotations,
-    save_results,
-    BroadOutputSchema,
-    GranularOutputSchema,
 )
 import outlines
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+import json
 
 # Configuration
 torch.set_float32_matmul_precision("high")
@@ -65,7 +62,6 @@ class ModelEvaluator:
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
-        print("Starting evaluation")
         preds = []
         targets = []
         broken_indices = []
@@ -77,7 +73,7 @@ class ModelEvaluator:
             ):
                 break
 
-            print(f"\nbatch {idx + 1} of {len(dataloader)}")
+            print(f"\nbatch {idx + 1} of {self.evaluation_config["max_batches"]}")
             notes, labels = batch["note"], batch["labels"]
 
             for i in range(len(notes)):
@@ -93,7 +89,7 @@ class ModelEvaluator:
 
         return preds, targets, broken_indices
 
-    def compute_and_save_metrics(self, preds, targets, broken_indices, output_dir="."):
+    def compute_and_save_metrics(self, preds, targets, broken_indices):
         """Compute metrics and save results"""
         if len(preds) != len(targets):
             print(
@@ -102,7 +98,20 @@ class ModelEvaluator:
             return
 
         # Create evaluation summary
-        summary = create_evaluation_summary(preds, targets, broken_indices)
+        total_samples = len(broken_indices) + len(preds)
+        successful_samples = len(preds)
+        failed_samples = len(broken_indices)
+
+        summary =  {
+            "total_samples": total_samples,
+            "successful_samples": successful_samples,
+            "failed_samples": failed_samples,
+            "success_rate": (
+                successful_samples / total_samples if total_samples > 0 else 0.0
+            ),
+            "broken_indices": broken_indices,
+        }
+        
         print(f"\n\nEvaluation Summary:")
         print(f"Total samples: {summary['total_samples']}")
         print(f"Successful samples: {summary['successful_samples']}")
@@ -111,17 +120,11 @@ class ModelEvaluator:
         print(f"Broken indices: {summary['broken_indices']}")
 
         # Compute per-label metrics
-        metrics = compute_metrics_per_label(preds, targets)
-        print("\nPer-label metrics:", metrics)
+        metrics = compute_metrics(preds, targets)
+        print("\nMetrics:", metrics)
 
-        # Compute macro metrics
-        broad_metrics = compute_macro_metrics(metrics)
-        print("Macro metrics:", broad_metrics)
-
-        # Save results
-        save_results(metrics, broad_metrics)
-
-        return metrics, broad_metrics, summary
+        with open("metrics.json", "w") as f:
+            json.dump(metrics, f, indent=2)
 
 
 def main():

@@ -63,8 +63,8 @@ Use this format to report the extracted information. In the list corresponding t
 
 # Output Elements
 - **evidence**: A non-empty quote from the clinical note that justifies the annotation.
-- **social need**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
-- **no social need**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
+- **social need**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
+- **no social need**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
 
 
 ## TASK

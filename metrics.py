@@ -1,7 +1,7 @@
 from collections import defaultdict
 from config import CAT_TO_LABELS
 
-def compute_metrics_per_label(preds, targets):
+def compute_metrics(preds, targets):
     """
     Compute per-class metrics for multi-label multi-class classification
     where each label can be one of: 1 (class A), -1 (class B), 0 (class C)
