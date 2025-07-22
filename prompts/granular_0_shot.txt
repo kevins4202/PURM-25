@@ -11,7 +11,6 @@ If multiple subcategories (labels) for a category are present in the clinical no
 ## Employment  
 Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
 - PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment” 
-
 Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
 
 ## Housing Instability  
