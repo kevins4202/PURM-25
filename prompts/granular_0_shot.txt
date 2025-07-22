@@ -2,85 +2,87 @@
 
 Your task is to extract certain categories of social determinants of health and identify if there is a social need given a free-text clinical note.
 
-Below are the 9 categories of social determinants of health, each followed by its official definition and source as well as its subcategories. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict. Do not annotate a category that is implied.
+Below are the 9 categories of social determinants of health, each followed by its official definition and source as well as its subcategories. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict; do not annotate a category that is implied.
 
 If multiple subcategories (labels) for a category are present in the clinical note, you must include all that apply. Do not stop at the first matching label. Note that it is also possible for none of the categories to be present.
 
-# Categories of Social Risks and Social Needs
-
+# 9 Categories of Social Risks and Social Needs
+The following provides a definition, subcategories, and a source of each social determinant of health.
 ## Employment  
-Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
-- PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment” 
-Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+- Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.   
+- Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+### PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment”
 
 ## Housing Instability  
-Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
-- Homelessness: Does not have a safe, stable place to live  
-- GeneralHousingInstability: Does not have stable, permanent housing  
-- NeedTemporaryLodging: Relocation to hospital city so that child can receive hospital care or be nearby hospitalized child  
-- HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging. 
-Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
+- Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
+- Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
+### Homelessness: Does not have a safe, stable place to live  
+### GeneralHousingInstability: Does not have stable, permanent housing  
+### NeedTemporaryLodging: Relocation to hospital city so that child can receive hospital care or be nearby hospitalized child 
+### HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging. 
+
 
 ## Food Insecurity  
-Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods.  
-- LackofFundsforFood: Unable to pay for nutritionally adequate and safe foods  
-- FoodInsecurity_Other: Identifiable challenges or barrier related to acquiring nutritionally adequate and safe foods, not described by “Lack of funds to pay for food.”  
-Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/  
-
+- Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods.
+- Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/
+### LackofFundsforFood: Unable to pay for nutritionally adequate and safe foods  
+### FoodInsecurity_Other: Identifiable challenges or barrier related to acquiring nutritionally adequate and safe foods, not described by “Lack of funds to pay for food.”  
+  
 ## Financial Strain  
-Definition: Finances or financial resources fall short of meeting essential expenses.  
-- Poverty: Income below the poverty line  
-- LackofInsurance: Uninsured for healthcare  
-- UnabletoPay: Family does not have the financial resources to pay for basic or unmet needs  
-- FinancialStrain_Other: Challenges in paying for basic needs, not described by poverty, lack of insurance, or unable to pay  
-Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+- Definition: Finances or financial resources fall short of meeting essential expenses.  
+- Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
+### Poverty: Income below the poverty line  
+### LackofInsurance: Uninsured for healthcare  
+### UnabletoPay: Family does not have the financial resources to pay for basic or unmet needs  
+### FinancialStrain_Other: Challenges in paying for basic needs, not described by poverty, lack of insurance, or unable to pay  
 
 ## Transportation  
-Definition: Lack of safe and accessible transportation  
-- DistancefromHospital: Family resides over 1 hour from hospital  
-- LackofTransportation: Lack of safe and/or reliable transportation (i.e., car, bus, train) to arrive/discharge from an inpatient hospitalization and/or outpatient appointment  
-- Transportation_Other: Identifiable challenges or barriers in transporting to hospital not described by distance from hospital or lack of transportation  
-Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation  
-
+- Definition: Lack of safe and accessible transportation
+- Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation 
+### DistancefromHospital: Family resides over 1 hour from hospital  
+### LackofTransportation: Lack of safe and/or reliable transportation (i.e., car, bus, train) to arrive/discharge from an inpatient hospitalization and/or outpatient appointment  
+### Transportation_Other: Identifiable challenges or barriers in transporting to hospital not described by distance from hospital or lack of transportation  
+ 
 ## Childcare  
-Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements  
-- ChildcareBarrierfromHospitalization: Parents/caregivers are unable to obtain childcare (I.e. family, babysitter, daycare) for their other non-hospitalized children that may result in parents/caregivers not being able to visit their hospitalized child in the hospital, participate in care, or decision-making related to their hospitalized child’s medical plan of care.
-- ChildcareBarrierfromNonHospitalization: Parents/caregivers are unable to leave hospital due to hospitalized child’s medical needs and unable to leave bedside to be with their non-hospitalized children. 
-- NeedofChildcare: Parents/caregivers identify need to enroll hospitalized child and/or sibling in daycare (I.e. daycare, medical daycare, not home nursing)
-- Childcare_Other: Challenges in childcare needs for the hospitalized child or non-hospitalized children not described by Childcare as a barrier to being with hospitalized child, Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child, or need for childcare.
-Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221  
+- Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements  
+- Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221  
+### ChildcareBarrierfromHospitalization: Parents/caregivers are unable to obtain childcare (I.e. family, babysitter, daycare) for their other non-hospitalized children that may result in parents/caregivers not being able to visit their hospitalized child in the hospital, participate in care, or decision-making related to their hospitalized child’s medical plan of care.
+### ChildcareBarrierfromNonHospitalization: Parents/caregivers are unable to leave hospital due to hospitalized child’s medical needs and unable to leave bedside to be with their non-hospitalized children. 
+### NeedofChildcare: Parents/caregivers identify need to enroll hospitalized child and/or sibling in daycare (I.e. daycare, medical daycare, not home nursing)
+### Childcare_Other: Challenges in childcare needs for the hospitalized child or non-hospitalized children not described by Childcare as a barrier to being with hospitalized child, Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child, or need for childcare.
 
 ## Permanency  
-Definition: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian.  
-- NonPermanentPlacement: Patient not in the care of permanent placement (such as biological or adoptive parents)
-- PermanentPlacementPending: Patient in the care of a child protection agency or behavioral health facility that is not a permanent placement (for example, pending court-ordered permanent placement). 
-- Permanency_Other: Lack of residence with a permanent caregiver including biological parent or adoptive parent not described by “non-permanent placement” or “non-permanent or permanent placement pending”  
-Source: Child Welfare Information Gateway. (n.d.) Permanency. https://www.childwelfare.gov/topics/permanency/?top=116  
+- Definition: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian. 
+- Source: Child Welfare Information Gateway. (n.d.) Permanency. https://www.childwelfare.gov/topics/permanency/?top=116  
+### NonPermanentPlacement: Patient not in the care of permanent placement (such as biological or adoptive parents)
+### PermanentPlacementPending: Patient in the care of a child protection agency or behavioral health facility that is not a permanent placement (for example, pending court-ordered permanent placement). 
+### Permanency_Other: Lack of residence with a permanent caregiver including biological parent or adoptive parent not described by “non-permanent placement” or “non-permanent or permanent placement pending”  
+
 
 ## Substance Abuse  
-Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
-- DrugUse: Current or past substance use/abuse by parent, caregiver, or patient  
-- Alcoholism: Current or past alcohol use/abuse by parent, caregiver, or patient  
-- SubstanceAbuse_Other: Current or past use/abuse of other types of substance use/abuse by parent, caregiver, or patient   
-Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use  
+- Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
+- Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use 
+### DrugUse: Current or past substance use/abuse by parent, caregiver, or patient  
+### Alcoholism: Current or past alcohol use/abuse by parent, caregiver, or patient  
+### SubstanceAbuse_Other: Current or past use/abuse of other types of substance use/abuse by parent, caregiver, or patient  
 
 ## Safety  
-Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
-- HomeSafety: Risks, hazards, or trauma occurring in the home that is not specifically an issue with Home Accessibility, intimate Partner Violence, or child abuse. This may include risks like lead paint, poor sanitary conditions, or other health hazards.
-- HomeAccessibility: Risks or hazards related to the child’s ability to move in and out or throughout the house, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access, lack of railings, lack of a car seat, etc.)
-- IntimatePartnerViolence: domestic abuse, dating abuse, or relationship abuse, involving a pattern of behaviors where one partner seeks to exert power and control over the other in an intimate relationship. physical harm, intimidation, manipulation, and coercion, forcing a partner to act against their will. This abuse can manifest as physical violence, threats, emotional manipulation, or financial control.
-- ChildAbuse: any act or failure to act (abuse or neglect) that results in serious physical injury, mental injury, or sexual abuse or exploitation of a child, as defined by pennsylvania state law  
-- HomeEnvironment_Other: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life, not described by Home Safety, Home Accessibility, Intimate Partner Violence, or Child Abuse.
-- CommunitySafety: Risks, hazards, or trauma occurring in the community that is not specifically an issue with community Accessibility or community Violence. This may include risks like lack of green space or pollution.
-- CommunityAccessibility: Risks or hazards related to the child’s ability to move throughout the community, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access to the child’s school or day care, lack of elevator in the child’s school or day care, etc.)
-- CommunityViolence: Acts of physical harm, such as shootings, stabbings, or physical assaults, that occur outside the home in the child’s surrounding neighborhood or community. 
-- CommunityEnvironment_Other: Safety, accessibility, or environmental concerns within the child’s neighborhood or broader community, such as the lack of green space, gun violence, community violence, or pollution, not defined by Community safety, Community Accessibility, or Community violence 
-Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
+- Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
+- Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
+### HomeSafety: Risks, hazards, or trauma occurring in the home that is not specifically an issue with Home Accessibility, intimate Partner Violence, or child abuse. This may include risks like lead paint, poor sanitary conditions, or other health hazards.
+### HomeAccessibility: Risks or hazards related to the child’s ability to move in and out or throughout the house, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access, lack of railings, lack of a car seat, etc.)
+### IntimatePartnerViolence: domestic abuse, dating abuse, or relationship abuse, involving a pattern of behaviors where one partner seeks to exert power and control over the other in an intimate relationship. physical harm, intimidation, manipulation, and coercion, forcing a partner to act against their will. This abuse can manifest as physical violence, threats, emotional manipulation, or financial control.
+### ChildAbuse: any act or failure to act (abuse or neglect) that results in serious physical injury, mental injury, or sexual abuse or exploitation of a child, as defined by Pennsylvania state law  
+### HomeEnvironment_Other: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life, not described by Home Safety, Home Accessibility, Intimate Partner Violence, or Child Abuse.
+### CommunitySafety: Risks, hazards, or trauma occurring in the community that is not specifically an issue with community Accessibility or community Violence. This may include risks like lack of green space or pollution.
+### CommunityAccessibility: Risks or hazards related to the child’s ability to move throughout the community, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access to the child’s school or day care, lack of elevator in the child’s school or day care, etc.)
+### CommunityViolence: Acts of physical harm, such as shootings, stabbings, or physical assaults, that occur outside the home in the child’s surrounding neighborhood or community. 
+### CommunityEnvironment_Other: Safety, accessibility, or environmental concerns within the child’s neighborhood or broader community, such as the lack of green space, gun violence, community violence, or pollution, not defined by Community safety, Community Accessibility, or Community violence 
 
 # Output Format
 You must format your entire output as a single JSON object, *without any additional comments, explanations, or introductory text.* Do not wrap the JSON in markdown code blocks.
 
-Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
+Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
 
 {{
   "Employment": [[label, evidence, "positive" OR "negative"]],
@@ -104,4 +106,5 @@ Use this format to report the extracted information. In the list corresponding t
 ## TASK
 Now, annotate the following clinical note following the guidelines and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. 
 
+# Input Note
 {note}
