@@ -83,15 +83,15 @@ You must format your entire output as a single JSON object, *without any additio
 Use this format to report the extracted information. In the list corresponding to each category be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
 
 {{
-  "Employment": [[label, evidence, "positive" OR "negative"]],
-  "Housing": [[label, evidence, "positive" OR "negative"]],
-  "Food": [[label, evidence, "positive" OR "negative"]],
-  "Financial": [[label, evidence, "positive" OR "negative"]],
-  "Transportation": [[label, evidence, "positive" OR "negative"]],
-  "Childcare": [[label, evidence, "positive" OR "negative"]],
-  "Permanency": [[label, evidence, "positive" OR "negative"]],
-  "Substance": [[label, evidence, "positive" OR "negative"]],
-  "Safety": [[label, evidence, "positive" OR "negative"]]
+  "Employment": [(label, evidence, "positive" OR "negative")],
+  "Housing": [(label, evidence, "positive" OR "negative")],
+  "Food": [(label, evidence, "positive" OR "negative")],
+  "Financial": [(label, evidence, "positive" OR "negative")],
+  "Transportation": [(label, evidence, "positive" OR "negative")],
+  "Childcare": [(label, evidence, "positive" OR "negative")],
+  "Permanency": [(label, evidence, "positive" OR "negative")],
+  "Substance": [(label, evidence, "positive" OR "negative")],
+  "Safety": [(label, evidence, "positive" OR "negative")]
 }}
 
 # Output Elements
@@ -101,7 +101,20 @@ Use this format to report the extracted information. In the list corresponding t
 - **positive**: Indicates that the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or problem).
 - **negative**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem).
 
+Here is an example output for reference: 
+{{
+    "Employment": [], 
+    "Housing": [("Homelessness", "blahblahblah", "negative")], 
+    "Food": [], 
+    "Financial": [], 
+    "Transportation": [], 
+    "Childcare": [], 
+    "Permanency": [], 
+    "SubstanceAbuse": [], 
+    "Safety": [] 
+}}
+
 ## TASK
-Now, annotate the following clinical note following the guidelines and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. 
+Now, annotate the following clinical note following the guidelines and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that label if the evidence is blank. 
 
 {note}

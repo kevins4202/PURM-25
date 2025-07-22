@@ -84,7 +84,7 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 # Evaluation settings
 EVALUATION_CONFIG = {
     "batch_size": 1,
-    "max_batches": 5,  # For testing, set to None for full evaluation
-    "broad": False,
+    "max_batches": 50,  # For testing, set to None for full evaluation
+    "broad": True,
     "zero_shot": True
 }
