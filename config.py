@@ -86,7 +86,7 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 # Evaluation settings
 EVALUATION_CONFIG = {
     "batch_size": 1,
-    "max_batches": 50,  # For testing, set to None for full evaluation
+    "max_batches": 3,  # For testing, set to None for full evaluation
     "broad": True,
     "zero_shot": True
 }
@@ -112,7 +112,7 @@ housing_labels = Literal[
     "NeedTemporaryLodging",
     "HouseInstability_Other",
 ]
-food_labels = Literal["LackofFundsforFood", "FoodInsecurity_Other"]
+food_labels = Literal[*CAT_TO_LABELS["FoodInsecurity"]]
 financial_labels = Literal[
     "Poverty", "LackofInsurance", "UnabletoPay", "FinancialStrain_Other"
 ]

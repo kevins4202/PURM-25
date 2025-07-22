@@ -28,6 +28,7 @@ class ModelEvaluator:
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
+        self.max_batches = self.evaluation_config["max_batches"]
 
     def _load_model(self):
         """Load and configure the model"""
@@ -68,12 +69,12 @@ class ModelEvaluator:
 
         for idx, batch in enumerate(dataloader):
             if (
-                self.evaluation_config["max_batches"]
-                and idx >= self.evaluation_config["max_batches"]
+                self.max_batches
+                and idx >= self.max_batches
             ):
                 break
 
-            print(f"\nbatch {idx + 1} of {self.evaluation_config["max_batches"]}")
+            print(f"\nbatch {idx + 1} of {self.max_batches}")
             notes, labels = batch["note"], batch["labels"]
 
             for i in range(len(notes)):
