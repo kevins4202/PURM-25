@@ -10,7 +10,7 @@ If multiple subcategories (labels) for a category are present in the clinical no
 
 ## Employment  
 Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
-- PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment”  
+- PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment” 
 Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
 
 ## Housing Instability  
@@ -18,7 +18,7 @@ Definition: Encompasses challenges like rent affordability, frequent moving, tem
 - Homelessness: Does not have a safe, stable place to live  
 - GeneralHousingInstability: Does not have stable, permanent housing  
 - NeedTemporaryLodging: Relocation to hospital city so that child can receive hospital care or be nearby hospitalized child  
-- HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging  
+- HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging. 
 Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
 
 ## Food Insecurity  
@@ -44,37 +44,37 @@ Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Hea
 
 ## Childcare  
 Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements  
-- ChildcareBarrierfromHospitalization: Parents/caregivers unable to obtain childcare for their other non-hospitalized children, affecting their ability to be with the hospitalized child  
-- ChildcareBarrierfromNonHospitalization: Parents/caregivers unable to leave the hospital due to hospitalized child’s needs, impacting care for non-hospitalized children  
-- NeedofChildcare: Parents/caregivers identify need to enroll child in daycare (e.g., daycare, medical daycare, not home nursing)  
-- Childcare_Other: Other childcare challenges not captured by the above  
+- ChildcareBarrierfromHospitalization: Parents/caregivers are unable to obtain childcare (I.e. family, babysitter, daycare) for their other non-hospitalized children that may result in parents/caregivers not being able to visit their hospitalized child in the hospital, participate in care, or decision-making related to their hospitalized child’s medical plan of care.
+- ChildcareBarrierfromNonHospitalization: Parents/caregivers are unable to leave hospital due to hospitalized child’s medical needs and unable to leave bedside to be with their non-hospitalized children. 
+- NeedofChildcare: Parents/caregivers identify need to enroll hospitalized child and/or sibling in daycare (I.e. daycare, medical daycare, not home nursing)
+- Childcare_Other: Challenges in childcare needs for the hospitalized child or non-hospitalized children not described by Childcare as a barrier to being with hospitalized child, Childcare as a barrier to being with non-hospitalized child because parents are staying with hospitalized child, or need for childcare.
 Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221  
 
 ## Permanency  
 Definition: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian.  
-- NonPermanentPlacement: Patient not in the care of a permanent placement (e.g., biological or adoptive parents)  
-- PermanentPlacementPending: Patient in temporary care (e.g., child protection agency or behavioral health facility), awaiting court-ordered permanent placement  
-- Permanency_Other: Other  
+- NonPermanentPlacement: Patient not in the care of permanent placement (such as biological or adoptive parents)
+- PermanentPlacementPending: Patient in the care of a child protection agency or behavioral health facility that is not a permanent placement (for example, pending court-ordered permanent placement). 
+- Permanency_Other: Lack of residence with a permanent caregiver including biological parent or adoptive parent not described by “non-permanent placement” or “non-permanent or permanent placement pending”  
 Source: Child Welfare Information Gateway. (n.d.) Permanency. https://www.childwelfare.gov/topics/permanency/?top=116  
 
 ## Substance Abuse  
 Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.  
 - DrugUse: Current or past substance use/abuse by parent, caregiver, or patient  
 - Alcoholism: Current or past alcohol use/abuse by parent, caregiver, or patient  
-- SubstanceAbuse_Other: Other types of substance use/abuse  
+- SubstanceAbuse_Other: Current or past use/abuse of other types of substance use/abuse by parent, caregiver, or patient   
 Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use  
 
 ## Safety  
 Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
-- HomeSafety: Home safety 
-- HomeAccessibility: Home accessibility 
-- IntimatePartnerViolence: Intimate partner violence 
-- ChildAbuse: Child abuse 
-- HomeEnvironment_Other: Other
-- CommunitySafety: Community safety 
-- CommunityAccessibility: Community accessibility 
-- CommunityViolence: Community violence
-- CommunityEnvironment_Other: Other
+- HomeSafety: Risks, hazards, or trauma occurring in the home that is not specifically an issue with Home Accessibility, intimate Partner Violence, or child abuse. This may include risks like lead paint, poor sanitary conditions, or other health hazards.
+- HomeAccessibility: Risks or hazards related to the child’s ability to move in and out or throughout the house, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access, lack of railings, lack of a car seat, etc.)
+- IntimatePartnerViolence: domestic abuse, dating abuse, or relationship abuse, involving a pattern of behaviors where one partner seeks to exert power and control over the other in an intimate relationship. physical harm, intimidation, manipulation, and coercion, forcing a partner to act against their will. This abuse can manifest as physical violence, threats, emotional manipulation, or financial control.
+- ChildAbuse: any act or failure to act (abuse or neglect) that results in serious physical injury, mental injury, or sexual abuse or exploitation of a child, as defined by pennsylvania state law  
+- HomeEnvironment_Other: Risks, hazards, or trauma occurring in the home, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life, not described by Home Safety, Home Accessibility, Intimate Partner Violence, or Child Abuse.
+- CommunitySafety: Risks, hazards, or trauma occurring in the community that is not specifically an issue with community Accessibility or community Violence. This may include risks like lack of green space or pollution.
+- CommunityAccessibility: Risks or hazards related to the child’s ability to move throughout the community, especially those that may occur as a result of disability (e.g., lack of ramps for wheel chair access to the child’s school or day care, lack of elevator in the child’s school or day care, etc.)
+- CommunityViolence: Acts of physical harm, such as shootings, stabbings, or physical assaults, that occur outside the home in the child’s surrounding neighborhood or community. 
+- CommunityEnvironment_Other: Safety, accessibility, or environmental concerns within the child’s neighborhood or broader community, such as the lack of green space, gun violence, community violence, or pollution, not defined by Community safety, Community Accessibility, or Community violence 
 Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
 
 # Output Format
