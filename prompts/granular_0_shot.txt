@@ -80,7 +80,7 @@ The following provides a definition, subcategories, and a source of each social 
 ### CommunityEnvironment_Other: Safety, accessibility, or environmental concerns within the child’s neighborhood or broader community, such as the lack of green space, gun violence, community violence, or pollution, not defined by Community safety, Community Accessibility, or Community violence 
 
 # Output Format
-You must format your entire output as a single JSON object, *without any additional comments, explanations, or introductory text.* Do not wrap the JSON in markdown code blocks.
+You must format your entire output as a single JSON object, **without any additional comments, explanations, or introductory text.** Do not wrap the JSON in markdown code blocks.
 
 Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
 
