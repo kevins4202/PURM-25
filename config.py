@@ -79,7 +79,7 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 EVALUATION_CONFIG = {
     "batch_size": 1,
     "max_batches": None,  # For testing, set to None for full evaluation
-    "broad": True,
+    "broad": False,
     "zero_shot": True,
 }
 

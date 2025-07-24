@@ -85,15 +85,15 @@ You must format your entire output as a single JSON object, **without any additi
 Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an *empty list* for that category.
 
 {{
-  "Employment": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Housing": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Food": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Financial": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Transportation": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Childcare": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Permanency": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Substance": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Safety": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "Employment": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Housing": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Food": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Financial": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Transportation": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Childcare": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Permanency": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Substance": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Safety": [] OR [(label, evidence, "social need" OR "no social need")],
 }}
 
 # Output Elements
@@ -107,7 +107,8 @@ Use this format to report the extracted information. In the list corresponding t
 # TASK
 Now, annotate the following clinical note following the guidelines and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. 
 
-# Examples 
+# Examples
+Here are some examples of notes and their corresponding annotations:
 
 ## Example 1
 Input: 

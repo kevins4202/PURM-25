@@ -1,13 +1,13 @@
-# You are an experienced social worker who has decades of experience identifying social determinants of health and social needs in free-text clinical notes.
+# You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes.
 
-Your task is to extract one or more categories of social determinants of health and identify if there is a social need given a free-text clinical note.
+Your task is to extract certain categories of social risks and identify if there is a social need given a free-text clinical note.
 
-Below are the 9 categories of social determinants of health, each followed by its official definition and source. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict; do not annotate a category that is implied.
+Below are the 9 categories of social risks, each followed by its official definition and source. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict; do not annotate a category that is implied.
 
 If multiple categories are present in the clinical note, you must include all that apply. Do not stop at the first matching category. Note that it is also possible for none of the categories to be present.
 
-# 9 Categories of Social Determinants of Health
-The following provides a definition and a source of each social determinant of health.
+# 9 Categories of Social Risks and Social Needs
+The following provides a definition and a source of each social risk.
 ## Employment  
 - Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
 - Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
@@ -63,17 +63,16 @@ Use this format to report the extracted information. In the list corresponding t
 
 # Output Elements
 - **evidence**: A non-empty quote from the clinical note that justifies the annotation.
-- **social need**: Indicates that the category of the social determinant of health is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
-- **no social need**: Indicates that the social determinant of health is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
+- **social need**: Indicates that the category of the social risks is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
+- **no social need**: Indicates that the social risks is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
 - **[]**: If there is no evidence for a category, then output an **empty list** for that category.
 
-# TASK
-Now, annotate the following clinical note following the Social Determinants of Health definitions and sources, and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that category if the evidence is blank. 
-
 # Examples
+Here are some examples of notes and their corresponding annotations:
 
 ## Example 1
-Input: 
+Input Note: 
+
 The Children's Hospital 
 of Philadelphia 
 
@@ -120,20 +119,22 @@ Taylor Goldberg
 
 
 Output: 
-{
+
+{{
   "Employment": [],
   "Housing": [],
   "Food": [],
-  "Financial": [["Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending.", "social need"]],
+  "Financial": [("Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending.", "social need")],
   "Transportation": [],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
   "Safety": []
-}
+}}
 
 ## Example 2
-Input: 
+Input Note: 
+
 SOCIAL WORK CARE PLAN NOTE
 
 
@@ -169,7 +170,7 @@ Output:
   "Housing": [],
   "Food": [],
   "Financial": [],
-  "Transportation": [["Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request.", "social need"]],
+  "Transportation": [("Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request.", "social need")],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
@@ -177,7 +178,8 @@ Output:
 }
 
 ## Example 3
-Input: 
+Input Note: 
+
 SOCIAL WORK CARE PLAN NOTE
 
 
@@ -214,8 +216,8 @@ Lindsey K Kunkel, LCSW
 
 Output: 
 {
-  "Employment": [["Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.", "social need"]],
-  "Housing": [["Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.", "social need"]],
+  "Employment": [("Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.", "social need")],
+  "Housing": [("Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.", "social need")],
   "Food": [],
   "Financial": [],
   "Transportation": [],
@@ -226,7 +228,7 @@ Output:
 }
 
 ## Example 4 
-Input: 
+Input Note: 
 
 Problem: ADJUSTMENT
 Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
@@ -282,17 +284,18 @@ Output:
 {
   "Employment": [],
   "Housing": [],
-  "Food": [["Mother in need of WIC and formula for patient.", "social need"], ["SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.", "social need"]],
+  "Food": [("Mother in need of WIC and formula for patient.", "social need"], ["SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.", "social need")],
   "Financial": [],
   "Transportation": [],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
-  "Safety": [["SW ordered patient infant car seat to be delivered to the bedside today", "social need"]]
+  "Safety": [("SW ordered patient infant car seat to be delivered to the bedside today", "social need")]
 }
 
 ## Example 5 
-Input: 
+Input Note: 
+
 The Children's Hospital 
 of Philadelphia 
 
@@ -346,17 +349,17 @@ Output:
 {
   "Employment": [],
   "Housing": [],
-  "Food": [["Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.", "social need"]],
-  "Financial": [["SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.", "social need"]],
-  "Transportation": [["Problems: Hospital discharge, Transportation and Other:  Daycare", "social need"]],
-  "Childcare": [["Problems: Hospital discharge, Transportation and Other:  Daycare", "positive"],["Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.", "social need"]],
+  "Food": [("Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.", "social need")],
+  "Financial": [("SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.", "social need")],
+  "Transportation": [("Problems: Hospital discharge, Transportation and Other:  Daycare", "social need")],
+  "Childcare": [("Problems: Hospital discharge, Transportation and Other:  Daycare", "positive"],["Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.", "social need")],
   "Permanency": [],
   "Substance": [],
-  "Safety": [["Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.", "social need"]]
+  "Safety": [("Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.", "social need")]
 }
 
 ## Example 6
-Input:
+Input Note:
 					
 The Children's Hospital 
 of Philadelphia 
@@ -480,20 +483,20 @@ Meredith Ann Huber, MSW
 
 Output: 
 {
-  "Employment": [["Mother is on maternity leave until January and Father works from home.", "no social need"]],
-  "Housing": [["Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in DE and would like to stay locally with patient Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email.", "social need"]],
+  "Employment": [("Mother is on maternity leave until January and Father works from home.", "no social need")],
+  "Housing": [("Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in DE and would like to stay locally with patient Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email.", "social need")],
   "Food": [],
   "Financial": [],
-  "Transportation": [["Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home", "social need"]],
+  "Transportation": [("Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home", "social need")],
   "Childcare": [],
-  "Permanency": [["Patient living situation: PARENT(S);CHILDREN IN THE HOME", "no social need"]],
+  "Permanency": [("Patient living situation: PARENT(S);CHILDREN IN THE HOME", "no social need")],
   "Substance": [],
   "Safety": []
 }
 
 
 ## Example 7
-Input:
+Input Note:
  
 The Children's Hospital 
 of Philadelphia 
@@ -542,13 +545,13 @@ Output:
   "Financial": [],
   "Transportation": [],
   "Childcare": [],
-  "Permanency": [["Pt is not to be discharged without DHS approval of safety plan.", "social need"]],
-  "Substance": [["SW was told that there is an active investigation due to pt testing positive for opiates.", "social need"]],
+  "Permanency": [("Pt is not to be discharged without DHS approval of safety plan.", "social need")],
+  "Substance": [("SW was told that there is an active investigation due to pt testing positive for opiates.", "social need")],
   "Safety": []
 }
 
 ## Example 8 
-Input:
+Input Note:
 
 The Children's Hospital 
 of Philadelphia 
@@ -598,19 +601,19 @@ Aisha Evans
 
 Output: 
 {
-  "Employment": [["Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need"]],
-  "Housing": [["Their tentative plan is to come Saturday and stay at a local hotel into Sunday.", "social need"]],
+  "Employment": [("Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need")],
+  "Housing": [("Their tentative plan is to come Saturday and stay at a local hotel into Sunday.", "social need")],
   "Food": [],
   "Financial": [],
-  "Transportation": [["Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need"]],
+  "Transportation": [("Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need")],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
-  "Safety": [["SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible. SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.", "social need"]]
+  "Safety": [("SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible. SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.", "social need")]
 }
 
 ## Example 9
-Input:
+Input Note:
 					
  The Children's Hospital 
 of Philadelphia 
@@ -753,18 +756,21 @@ Catherine R Heidenreich, LSW
 5/17/2023
 
 Output: 
-{
+{{
   "Employment": [],
   "Housing": [],
-  "Food": [["Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: The patient's mother has SNAP and WIC.", "no social need"]],
+  "Food": [("Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: The patient's mother has SNAP and WIC.", "no social need")],
   "Financial": [],
   "Transportation": [],
   "Childcare": [],
-  "Permanency": [["Patient living situation: OTHER Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents.", "social need"], ["Custody  PHYSICAL CUSTODY;LEGAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: York County Children and Youth Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: York County Children and Youth", "social need"],["CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time.", "social need"]],
+  "Permanency": [("Patient living situation: OTHER Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents.", "social need"], ["Custody  PHYSICAL CUSTODY;LEGAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: York County Children and Youth Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: York County Children and Youth", "social need"],["CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time.", "social need")],
   "Substance": [],
-  "Safety": [["CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time", "social need"],
-    ["Relationships/Behavior Problems VISITATION CONCERNS Goal - Visitation concerns Visitor restrictions will be implemented when identified Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart.", "social need"], ["LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision", "social need"]]
-}
+  "Safety": [("CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time", "social need"],
+    ["Relationships/Behavior Problems VISITATION CONCERNS Goal - Visitation concerns Visitor restrictions will be implemented when identified Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart.", "social need"], ["LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision", "social need")]
+}}
+
+# TASK
+Now, annotate the following clinical note following the Social Risks definitions and sources, and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that category if the evidence is blank. 
 
 # Input Note
 {note}
