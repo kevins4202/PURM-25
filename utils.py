@@ -3,37 +3,35 @@ Utility functions for the PURM evaluation system.
 Contains helper functions for prompt management, string formatting, and data processing.
 """
 
-import json
 import os
-from typing import Dict, List, Any, Tuple, Literal
-from pydantic import BaseModel
-from config import OUTPUT_TO_CAT, CAT_TO_LABELS, CAT_TO_I
+from typing import List, Tuple
+from config import OUTPUT_TO_CAT, CAT_TO_I
 import re
 
 def get_prompt_path(broad: bool, zero_shot: bool):
     if broad:
         if zero_shot:
-            return "prompts/broad_0_shot.txt"
+            return "broad_0_shot.txt"
         else:
-            return "prompts/broad_1_shot.txt"
+            return "broad_1_shot.txt"
     else:
         if zero_shot:
-            return "prompts/granular_0_shot.txt"
+            return "granular_0_shot.txt"
         else:
-            return "prompts/granular_1_shot.txt"
+            return "granular_1_shot.txt"
 
 
-def load_prompt(broad: bool, zero_shot: bool) -> str:
+def load_prompt(broad: bool, zero_shot: bool) -> Tuple[str, str]:
     """Load prompt from file"""
     prompt_path = get_prompt_path(broad, zero_shot)
     print("Using prompt: ", prompt_path)
-    if not os.path.exists(prompt_path):
+    if not os.path.exists(f"prompts/{prompt_path}"):
         raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
 
-    with open(prompt_path, "r") as f:
+    with open(f"prompts/{prompt_path}", "r") as f:
         prompt = f.read()
 
-    return prompt
+    return prompt_path, prompt
 
 def get_annotations(output_json) -> List:
     annotations = [0] * len(CAT_TO_I)

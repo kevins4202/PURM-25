@@ -9,6 +9,7 @@ import outlines
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import json
+import os
 
 # Configuration
 torch.set_float32_matmul_precision("high")
@@ -19,12 +20,13 @@ class ModelEvaluator:
     def __init__(self, model_config, evaluation_config):
         print("Initializing model")
         self.model_config = model_config
+        self.model_id = self.model_config["model_id"].split("/")[-1]
         self.evaluation_config = evaluation_config
         self.outlined_model = None
         self.generator = None
         self.output_schema = BroadOutputSchema if self.evaluation_config["broad"] else GranularOutputSchema
         self._load_model()
-        self.prompt = load_prompt(
+        self.prompt_path, self.prompt = load_prompt(
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
@@ -74,7 +76,7 @@ class ModelEvaluator:
             ):
                 break
 
-            print(f"\nbatch {idx + 1} of {self.max_batches}")
+            print(f"\nbatch {idx + 1} of {self.max_batches if self.max_batches else len(dataloader)}")
             notes, labels = batch["note"], batch["labels"]
 
             for i in range(len(notes)):
@@ -103,30 +105,28 @@ class ModelEvaluator:
         successful_samples = len(preds)
         failed_samples = len(broken_indices)
 
-        summary =  {
-            "total_samples": total_samples,
-            "successful_samples": successful_samples,
-            "failed_samples": failed_samples,
-            "success_rate": (
-                successful_samples / total_samples if total_samples > 0 else 0.0
-            ),
-            "broken_indices": broken_indices,
-        }
+        success_rate = successful_samples / total_samples if total_samples > 0 else 0.0
         
         print(f"\n\nEvaluation Summary:")
-        print(f"Total samples: {summary['total_samples']}")
-        print(f"Successful samples: {summary['successful_samples']}")
-        print(f"Failed samples: {summary['failed_samples']}")
-        print(f"Success rate: {summary['success_rate']:.2%}")
-        print(f"Broken indices: {summary['broken_indices']}")
+        print(f"Total samples: {total_samples}")
+        print(f"Successful samples: {successful_samples}")
+        print(f"Failed samples: {failed_samples}")
+        print(f"Success rate: {success_rate:.2%}")
+        print(f"Broken indices: {broken_indices}")
 
         # Compute per-label metrics
         metrics = compute_metrics(preds, targets)
         print("\nMetrics:", metrics)
 
-        with open("metrics.json", "w") as f:
-            json.dump(metrics, f, indent=2)
+        os.makedirs("results", exist_ok=True)
+        os.makedirs(f"results/{self.model_id}", exist_ok=True)
 
+        i = 0
+        while os.path.exists(f"results/{self.model_id}/{self.prompt_path}_{i}.json"):
+            i += 1
+
+        with open(f"results/{self.model_id}/{self.prompt_path}_{i}.json", "w") as f:
+            json.dump(metrics, f, indent=2)
 
 def main():
     """Main evaluation function"""

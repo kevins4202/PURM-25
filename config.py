@@ -2,7 +2,8 @@
 Configuration file for the PURM evaluation system.
 Contains category definitions, model configurations, and other constants.
 """
-from typing import Dict, List, Any, Tuple, Literal
+
+from typing import List, Tuple, Literal
 from pydantic import BaseModel
 
 # Model configuration
@@ -13,53 +14,44 @@ MODEL_CONFIG = {
 
 OUTPUT_TO_CAT = {
     "Employment": "PatientCaregiver_Employment",
-    "Housing": "HousingInstability", 
+    "Housing": "HousingInstability",
     "Food": "FoodInsecurity",
     "Financial": "FinancialStrain",
     "Transportation": "Transportation",
     "Childcare": "Childcare",
     "Permanency": "Permanency",
     "SubstanceAbuse": "SubstanceAbuse",
-    "Safety": "Safety"
+    "Safety": "Safety",
 }
 
 # Detailed category definitions with subcategories
 CAT_TO_LABELS = {
-    "PatientCaregiver_Employment": [
-        "PatientCaregiver_Unemployment"
-    ],
+    "PatientCaregiver_Employment": ["PatientCaregiver_Unemployment"],
     "HousingInstability": [
         "Homelessness",
         "GeneralHousingInstability",
         "NeedTemporaryLodging",
-        "HouseInstability_Other"
+        "HouseInstability_Other",
     ],
-    "FoodInsecurity": [
-        "LackofFundsforFood",
-        "FoodInsecurity_Other"
-    ],
+    "FoodInsecurity": ["LackofFundsforFood", "FoodInsecurity_Other"],
     "FinancialStrain": [
         "Poverty",
         "LackofInsurance",
         "UnabletoPay",
-        "FinancialStrain_Other"
+        "FinancialStrain_Other",
     ],
     "Transportation": [
         "DistancefromHospital",
         "LackofTransportation",
-        "Transportation_Other"
+        "Transportation_Other",
     ],
     "Childcare": [
         "ChildcareBarrierfromHospitalization",
         "ChildcareBarrierfromNonHospitalization",
         "NeedofChildcare",
-        "Childcare_Other"
+        "Childcare_Other",
     ],
-    "SubstanceAbuse": [
-        "DrugUse",
-        "Alcoholism",
-        "SubstanceAbuse_Other"
-    ],
+    "SubstanceAbuse": ["DrugUse", "Alcoholism", "SubstanceAbuse_Other"],
     "Safety": [
         # Home environment
         "ChildAbuse",
@@ -71,13 +63,13 @@ CAT_TO_LABELS = {
         "CommunitySafety",
         "CommunityAccessibility",
         "CommunityViolence",
-        "CommunityEnvironment_Other"
+        "CommunityEnvironment_Other",
     ],
     "Permanency": [
         "NonPermanentPlacement",
         "PermanentPlacementPending",
-        "Permanency_Other"
-    ]
+        "Permanency_Other",
+    ],
 }
 
 # Category to index mapping for evaluation
@@ -86,13 +78,14 @@ CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
 # Evaluation settings
 EVALUATION_CONFIG = {
     "batch_size": 1,
-    "max_batches": 3,  # For testing, set to None for full evaluation
+    "max_batches": None,  # For testing, set to None for full evaluation
     "broad": True,
-    "zero_shot": True
+    "zero_shot": True,
 }
 
 sentiment = Literal["social need", "no social need"]
 category_sentiment_broad = Tuple[str, sentiment]
+
 
 class BroadOutputSchema(BaseModel):
     Employment: List[category_sentiment_broad]
@@ -105,41 +98,16 @@ class BroadOutputSchema(BaseModel):
     SubstanceAbuse: List[category_sentiment_broad]
     Safety: List[category_sentiment_broad]
 
-employment_labels = Literal["PatientCaregiver_Unemployment"]
-housing_labels = Literal[
-    "Homelessness",
-    "GeneralHousingInstability",
-    "NeedTemporaryLodging",
-    "HouseInstability_Other",
-]
+employment_labels = Literal[*CAT_TO_LABELS["PatientCaregiver_Employment"]]
+housing_labels = Literal[*CAT_TO_LABELS["HousingInstability"]]
 food_labels = Literal[*CAT_TO_LABELS["FoodInsecurity"]]
-financial_labels = Literal[
-    "Poverty", "LackofInsurance", "UnabletoPay", "FinancialStrain_Other"
-]
-transportation_labels = Literal[
-    "DistancefromHospital", "LackofTransportation", "Transportation_Other"
-]
-childcare_labels = Literal[
-    "ChildcareBarrierfromHospitalization",
-    "ChildcareBarrierfromNonHospitalization",
-    "NeedofChildcare",
-    "Childcare_Other",
-]
-substance_labels = Literal["DrugUse", "Alcoholism", "SubstanceAbuse_Other"]
-safety_labels = Literal[
-    "ChildAbuse",
-    "HomeSafety",
-    "HomeAccessibility",
-    "IntimatePartnerViolence",
-    "HomeEnvironment_Other",
-    "CommunitySafety",
-    "CommunityAccessibility",
-    "CommunityViolence",
-    "CommunityEnvironment_Other",
-]
-permanency_labels = Literal[
-    "NonPermanentPlacement", "PermanentPlacementPending", "Permanency_Other"
-]
+financial_labels = Literal[*CAT_TO_LABELS["FinancialStrain"]]
+transportation_labels = Literal[*CAT_TO_LABELS["Transportation"]]
+childcare_labels = Literal[*CAT_TO_LABELS["Childcare"]]
+substance_labels = Literal[*CAT_TO_LABELS["SubstanceAbuse"]]
+safety_labels = Literal[*CAT_TO_LABELS["Safety"]]
+permanency_labels = Literal[*CAT_TO_LABELS["Permanency"]]
+
 
 class GranularOutputSchema(BaseModel):
     Employment: List[Tuple[employment_labels, str, sentiment]]
@@ -151,4 +119,3 @@ class GranularOutputSchema(BaseModel):
     Permanency: List[Tuple[permanency_labels, str, sentiment]]
     SubstanceAbuse: List[Tuple[substance_labels, str, sentiment]]
     Safety: List[Tuple[safety_labels, str, sentiment]]
-

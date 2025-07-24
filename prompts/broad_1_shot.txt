@@ -808,3 +808,6 @@ Output:
     ["LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision", "positive"]
   ]
 }
+
+# Input Note
+{note}
