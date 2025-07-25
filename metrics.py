@@ -1,91 +1,124 @@
-from collections import defaultdict
 from config import CAT_TO_LABELS
 
 def compute_metrics(preds, targets):
     """
-    Compute per-class metrics for multi-label multi-class classification
-    where each label can be one of: 1 (class A), -1 (class B), 0 (class C)
+    Computes:
+    1. Presence-vs-absence binary metrics (present = 1 or -1, absent = 0)
+    2. Stance (1 vs -1) metrics only for cases where target is present (non-zero)
 
     Args:
-        preds: List of prediction dictionaries {label_index: value (1, -1, 0)}
-        targets: List of target dictionaries {label_index: value (1, -1, 0)}
+        preds: List[Dict[int, int]] — each is a label->value mapping (1, -1, or 0)
+        targets: List[Dict[int, int]] — same structure
 
     Returns:
-        Dictionary with per-class, per-label metrics and macro-averaged metrics.
+        Dict containing:
+            - presence metrics per label
+            - stance metrics per label (only on present targets)
+            - global macro averages
     """
     NUM_LABELS = len(CAT_TO_LABELS)
-    CLASSES = [1, -1, 0]
-
-    # Initialize counts
-    metrics = {label: {c: defaultdict(int) for c in CLASSES} for label in range(NUM_LABELS)}
-
-    for pred, target in zip(preds, targets):
-        for label in range(NUM_LABELS):
+    
+    presence_results = {}
+    stance_results = {}
+    
+    presence_macro = {'precision': [], 'recall': [], 'f1': []}
+    stance_macro = {'precision': [], 'recall': [], 'f1': []}
+    
+    for label in range(NUM_LABELS):
+        # Counters for presence (binary)
+        tp_p, fp_p, fn_p = 0, 0, 0
+        
+        # Counters for stance (multi-class 1 vs -1)
+        tp_1, fp_1, fn_1 = 0, 0, 0
+        tp_neg1, fp_neg1, fn_neg1 = 0, 0, 0
+        
+        for pred, target in zip(preds, targets):
             p = pred[label]
             t = target[label]
 
-            for c in CLASSES:
-                if t == c and p == c:
-                    metrics[label][c]['tp'] += 1
-                elif t != c and p == c:
-                    metrics[label][c]['fp'] += 1
-                elif t == c and p != c:
-                    metrics[label][c]['fn'] += 1
-                else:
-                    metrics[label][c]['tn'] += 1  # You can collect it, but it's rarely used
+            # --- Presence metrics (present = 1 or -1)
+            target_present = t != 0
+            pred_present = p != 0
 
-    # Compute metrics
-    results = {}
-    global_macro = {'precision': [], 'recall': [], 'f1': []}
+            if target_present and pred_present:
+                tp_p += 1
+            elif not target_present and pred_present:
+                fp_p += 1
+            elif target_present and not pred_present:
+                fn_p += 1
+            # TN not needed for F1/precision/recall
 
-    for label in range(NUM_LABELS):
-        class_metrics = {}
-        label_macro = {'precision': 0.0, 'recall': 0.0, 'f1': 0.0}
+            # --- Stance metrics (only on present targets)
+            if t != 0:
+                if t == 1:
+                    if p == 1:
+                        tp_1 += 1
+                    else:
+                        fn_1 += 1
+                elif t == -1:
+                    if p == -1:
+                        tp_neg1 += 1
+                    else:
+                        fn_neg1 += 1
 
-        for c in CLASSES:
-            tp = metrics[label][c]['tp']
-            fp = metrics[label][c]['fp']
-            fn = metrics[label][c]['fn']
-            tn = metrics[label][c]['tn']
+                if p == 1 and t != 1:
+                    fp_1 += 1
+                elif p == -1 and t != -1:
+                    fp_neg1 += 1
 
-            precision = tp / (tp + fp) if (tp + fp) else 0.0
-            recall = tp / (tp + fn) if (tp + fn) else 0.0
-            f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
+        # --- Presence metrics
+        precision_p = tp_p / (tp_p + fp_p) if (tp_p + fp_p) else 0.0
+        recall_p = tp_p / (tp_p + fn_p) if (tp_p + fn_p) else 0.0
+        f1_p = 2 * precision_p * recall_p / (precision_p + recall_p) if (precision_p + recall_p) else 0.0
+        
+        presence_results[label] = {
+            'precision': precision_p,
+            'recall': recall_p,
+            'f1': f1_p,
+            'tp': tp_p,
+            'fp': fp_p,
+            'fn': fn_p,
+        }
+        presence_macro['precision'].append(precision_p)
+        presence_macro['recall'].append(recall_p)
+        presence_macro['f1'].append(f1_p)
 
-            class_metrics[c] = {
-                'precision': precision,
-                'recall': recall,
-                'f1': f1,
-                'tp': tp,
-                'fp': fp,
-                'fn': fn,
-                'tn': tn,
-            }
+        # --- Stance metrics
+        precision_1 = tp_1 / (tp_1 + fp_1) if (tp_1 + fp_1) else 0.0
+        recall_1 = tp_1 / (tp_1 + fn_1) if (tp_1 + fn_1) else 0.0
+        f1_1 = 2 * precision_1 * recall_1 / (precision_1 + recall_1) if (precision_1 + recall_1) else 0.0
 
-            # Accumulate for macro
-            label_macro['precision'] += precision
-            label_macro['recall'] += recall
-            label_macro['f1'] += f1
+        precision_neg1 = tp_neg1 / (tp_neg1 + fp_neg1) if (tp_neg1 + fp_neg1) else 0.0
+        recall_neg1 = tp_neg1 / (tp_neg1 + fn_neg1) if (tp_neg1 + fn_neg1) else 0.0
+        f1_neg1 = 2 * precision_neg1 * recall_neg1 / (precision_neg1 + recall_neg1) if (precision_neg1 + recall_neg1) else 0.0
 
-            global_macro['precision'].append(precision)
-            global_macro['recall'].append(recall)
-            global_macro['f1'].append(f1)
+        macro_prec = (precision_1 + precision_neg1) / 2
+        macro_rec = (recall_1 + recall_neg1) / 2
+        macro_f1 = (f1_1 + f1_neg1) / 2
 
-        # Average over the 3 classes for this label
-        for k in label_macro:
-            label_macro[k] /= len(CLASSES)
+        stance_results[label] = {
+            'class_1': {'precision': precision_1, 'recall': recall_1, 'f1': f1_1},
+            'class_-1': {'precision': precision_neg1, 'recall': recall_neg1, 'f1': f1_neg1},
+            'macro': {'precision': macro_prec, 'recall': macro_rec, 'f1': macro_f1},
+        }
 
-        class_metrics['macro'] = label_macro
-        results[label] = class_metrics
-
-    # Global macro across all labels and all classes
-    final_macro = {
-        'macro_precision': sum(global_macro['precision']) / len(global_macro['precision']),
-        'macro_recall': sum(global_macro['recall']) / len(global_macro['recall']),
-        'macro_f1': sum(global_macro['f1']) / len(global_macro['f1']),
-    }
+        stance_macro['precision'].append(macro_prec)
+        stance_macro['recall'].append(macro_rec)
+        stance_macro['f1'].append(macro_f1)
 
     return {
-        'per_label': results,
-        'global_macro': final_macro,
+        'presence_per_label': presence_results,
+        'stance_per_label': stance_results,
+        'macro_averages': {
+            'presence': {
+                'precision': sum(presence_macro['precision']) / NUM_LABELS,
+                'recall': sum(presence_macro['recall']) / NUM_LABELS,
+                'f1': sum(presence_macro['f1']) / NUM_LABELS,
+            },
+            'stance': {
+                'precision': sum(stance_macro['precision']) / NUM_LABELS,
+                'recall': sum(stance_macro['recall']) / NUM_LABELS,
+                'f1': sum(stance_macro['f1']) / NUM_LABELS,
+            }
+        }
     }
