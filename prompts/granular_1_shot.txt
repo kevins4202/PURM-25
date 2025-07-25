@@ -111,7 +111,7 @@ Now, annotate the following clinical note following the guidelines and output fo
 Here are some examples of notes and their corresponding annotations:
 
 ## Example 1
-Input: 
+Input Note: 
 
 SOCIAL WORK CARE PLAN NOTE
 
@@ -171,7 +171,7 @@ Output:
 
 
 ## Example 2
-Input: 
+Input Note: 
 SOCIAL WORK CARE PLAN NOTE
 
 
@@ -215,7 +215,7 @@ Output:
 }
 
 ## Example 3
-Input: 
+Input Note: 
 SOCIAL WORK CARE PLAN NOTE
 
 
@@ -260,7 +260,7 @@ Ouput:
 }
 
 ## Example 4
-Input: 
+Input Note: 
 
 Problem: ADJUSTMENT
 Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
@@ -325,7 +325,7 @@ Output:
 }
 
 ## Example 5 
-Input: 
+Input Note: 
 The Children's Hospital 
 of Philadelphia 
 
@@ -390,7 +390,7 @@ Output:
 }
 
 ## Example 6
-Input: 
+Input Note: 
 					
 The Children's Hospital 
 of Philadelphia 
@@ -521,7 +521,7 @@ Output:
 
 
 ## Example 7
-Input:
+Input Note:
  
 The Children's Hospital 
 of Philadelphia 
@@ -573,7 +573,7 @@ Output:
 }
 
 ## Example 8
-Input:
+Input Note:
 
  The Children's Hospital 
 of Philadelphia 
@@ -636,7 +636,7 @@ Output:
 }
 
 ## Example 9
-Input: 
+Input Note: 
 					
 The Children's Hospital 
 of Philadelphia 
