@@ -8,8 +8,16 @@ from pydantic import BaseModel
 
 # Model configuration
 MODEL_CONFIG = {
-    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "model_id": "mistralai/Mixtral-8x22B-Instruct-v0.1",
     "quantization": True,
+}
+
+# Evaluation settings
+EVALUATION_CONFIG = {
+    "batch_size": 1,
+    "max_batches": None,  # For testing, set to None for full evaluation
+    "broad": False,
+    "zero_shot": True,
 }
 
 OUTPUT_TO_CAT = {
@@ -74,14 +82,6 @@ CAT_TO_LABELS = {
 
 # Category to index mapping for evaluation
 CAT_TO_I = {cat: i for i, cat in enumerate(CAT_TO_LABELS.keys())}
-
-# Evaluation settings
-EVALUATION_CONFIG = {
-    "batch_size": 1,
-    "max_batches": None,  # For testing, set to None for full evaluation
-    "broad": False,
-    "zero_shot": True,
-}
 
 sentiment = Literal["social need", "no social need"]
 category_sentiment_broad = Tuple[str, sentiment]

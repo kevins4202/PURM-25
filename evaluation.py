@@ -18,7 +18,6 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class ModelEvaluator:
     def __init__(self, model_config, evaluation_config):
-        print("Initializing model")
         self.model_config = model_config
         self.model_id = self.model_config["model_id"].split("/")[-1]
         self.evaluation_config = evaluation_config
@@ -34,14 +33,14 @@ class ModelEvaluator:
 
     def _load_model(self):
         """Load and configure the model"""
-        print("Loading and quantizing model")
+        print("Loading and quantizing model ", self.model_id)
         quantization_config = BitsAndBytesConfig(load_in_8bit=True)
         model = AutoModelForCausalLM.from_pretrained(
             self.model_config["model_id"],
             quantization_config=quantization_config,
             device_map=device,
         )
-        model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
+        model.generation_config.pad_token_id = model.generation_config.eos_token_id
         tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
         # Wrap with outlines
         self.outlined_model = outlines.from_transformers(model, tokenizer)
