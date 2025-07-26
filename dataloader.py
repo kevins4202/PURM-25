@@ -3,6 +3,7 @@ import random
 from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 import torch
+from config import CAT_TO_LABELS
 
 class SDOHDataset(Dataset):
     def __init__(self, notes_and_labels):
@@ -36,11 +37,10 @@ def get_dataloaders(batch_size=16, split=False):
 
     labels = pd.read_csv(os.path.join(DATA_DIR, 'labels_cleaned_with_notes.csv')).fillna('')
     
-    
     labels = labels.set_index('file')
-    examples = [[v['text'], v['cats']] for _, v in labels.to_dict(orient='index').items()]
+    examples = [[v['text'], v['cats']] for k, v in labels.to_dict(orient='index').items()]
     for i, [_, v] in enumerate(examples):
-        labels_tmp = [0 for _ in range(9)]
+        labels_tmp = [0 for _ in range(len(CAT_TO_LABELS))]
 
         if v:
             for label in v.split(';'):
