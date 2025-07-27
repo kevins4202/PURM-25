@@ -63,14 +63,92 @@ Use this format to report the extracted information. In the list corresponding t
 
 # Output Elements
 - **evidence**: A non-empty quote from the clinical note that justifies the annotation.
-- **social need**: Indicates that the category of the social risks is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
-- **no social need**: Indicates that the social risks is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
+- **social need**: Indicates that the category of the social risk is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
+- **no social need**: Indicates that the social risk is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
 - **[]**: If there is no evidence for a category, then output an **empty list** for that category.
 
 # Examples
 Here are some examples of notes and their corresponding annotations:
 
-## Example 1
+## Example
+Input Note:
+
+ The Children's Hospital 
+of Philadelphia 
+
+
+
+SOCIAL WORK NOTE 
+
+
+
+
+
+PATIENT NAME: Epsilon Epsilon One Hundred And Fifty-Seven
+CHOP MRN#: 56984676
+DOB:  1/1/1901
+TODAY'S DATE:  4/28/2023
+TODAY'S TIME: 10:50 AM
+
+
+Social work continues to follow this patient.  
+
+
+Additional Comments: 
+Epic medical record reviewed; Trauma morning report discussion.
+
+
+SW received chat message from nursing regarding positive CRAFFT questionnaire; SW reviewed Flowsheets.
+
+
+SW met with patient at bedside; no family present and patient is agreeable with conversation.
+
+
+
+
+Patient reports vaping 7 times over past year.  Patient states he stopped vaping about a month ago, and declines any outpatient resource for substance misuse. 
+
+
+Patient denies smoking marijuana and  use of any other substances. Patient denies use of alcohol. 
+
+
+SW provided anticipatory guidance regarding substance misuse.
+
+
+Per discussion, patient denies any safety concerns in his mother's home and in the school environment.   Patient is active with playing basketball for Upper Darby HS, and is hopeful for a complete recovery so he can play next year. 
+
+
+SW informed patient that outpatient resources for supportive therapy will be provided to his mother, and encouraging patient to consider participation if/when scheduled for emotional recovery from trauma.   
+
+
+
+
+Time Spent: 60 minutes
+
+
+Acuity: Level 2 - Require information / education / recommendations / advance planning
+
+
+Electronically signed:
+Jennifer H Kovic, MSW, LCSW	
+4/28/2023	10:50 AM
+
+
+Output:
+
+{{
+  "Employment": [],
+  "Housing": [],
+  "Food": [],
+  "Financial": [],
+  "Transportation": [],
+  "Childcare": [],
+  "Permanency": [],
+  "SubstanceAbuse": [("Patient denies smoking marijuana and  use of any other substances.", "no social need"), ("Patient denies use of alcohol.", "no social need")],
+  "Safety": [("Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need"), ("Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need")]
+}}
+
+## Example
 Input Note: 
 
 SOCIAL WORK CARE PLAN NOTE
@@ -129,10 +207,18 @@ Output:
   "Safety": []
 }}
 
-## Example 2
+## Example
 Input Note: 
 
 SOCIAL WORK CARE PLAN NOTE
+
+
+Problem: RESOURCE NEEDS
+Goal: Patient/family/caregiver will have needed supports to maintain employment/income
+Outcome: Ongoing
+Goal: Patient will have adequate insurance coverage to obtain necessary medical care
+Outcome: Ongoing
+
 
 
 Problem: ADJUSTMENT
@@ -140,7 +226,8 @@ Goal: Patient/family/caregiver progress in adjustment to illness/disability
 Outcome: Ongoing
 
 
-Progress:  Social worker attempted to meet with parents at bedside however parents were not present. Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request. 
+
+Progress:  Social worker met with mother at bedside in the NICU. Mother expressed that she is coping well at this time. Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA. 
 
 
 
@@ -150,7 +237,7 @@ Plan: Social worker will continue to follow.
 
 
 
-Time Spent: 15 minutes
+Time Spent: 30 minutes
 Acuity: Level 2 - Require information / education / recommendations / advance planning
 
 
@@ -158,231 +245,53 @@ Acuity: Level 2 - Require information / education / recommendations / advance pl
 
 Electronically signed:
 Alexandra M Pomar	
-3/9/2023	9:49 AM
+4/4/2023	4:53 PM
+
 
 
 Output: 
-{
-  "Employment": [],
+{{
+  "Employment": [("Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"), ("Goal: Patient/family/caregiver will have needed supports to maintain employment/income", "no social need")],
   "Housing": [],
   "Food": [],
-  "Financial": [],
-  "Transportation": [("Left a voicemail for parents requesting a call back to assist with Greyhound transportation to Allentown today per parents' request.", "social need")],
-  "Childcare": [],
-  "Permanency": [],
-  "Substance": [],
-  "Safety": []
-}
-
-## Example 3
-Input Note: 
-
-SOCIAL WORK CARE PLAN NOTE
-
-
-
-
-Problem: ADJUSTMENT
-Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
-Outcome: Ongoing
-
-
-
-Problem: RELATIONSHIPS/BEHAVIOR
-Goal: Patient/family/caregiver communication barriers will be addressed to provide appropriate care
-Outcome: Ongoing
-
-
-Progress:  SW received a phone call from mother today.  SW returned the phone call with Psychology on the phone.  Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.  Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.  SW attempted to address previous conflict between mom and SW/ appropriate use of communication however mom noted she had another call and conversation ended.  
-
-
-Plan: SW will continue to provide support during hospitalization.
-
-
-Time Spent: 60 minutes
-Acuity: Level 2 - Require information / education / recommendations / advance planning
-
-
-
-
-
-
-Electronically signed:
-Lindsey K Kunkel, LCSW	
-11/15/2022	5:06 PM
-
-Output: 
-{
-  "Employment": [("Mom noted she was able to have her tooth pulled and also had a job interview today however they were too busy and she was going to follow up again tomorrow.", "social need")],
-  "Housing": [("Mom noted she called to inquire if SW had heard from Good Counsel Homes.  SW noted that they did return the call to SW however SW was unclear of mom's ability to communicate with SW appropriately at that time.  Mom noted that Good Counsel never called her directly as SW was informed.  SW advised mom to reach out to Good Counsel herself at this time.", "social need")],
-  "Food": [],
-  "Financial": [],
+  "Financial": [("Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"), ("Goal: Patient will have adequate insurance coverage to obtain necessary medical care", "no social need")],
   "Transportation": [],
   "Childcare": [],
-  "Permanency": [],
-  "Substance": [],
-  "Safety": []
-}
+  "SubstanceAbuse": [],
+  "Safety": [],
+  "Permanency": []
+}}
 
-## Example 4 
+## Example
 Input Note: 
 
-Problem: ADJUSTMENT
-Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
-12/7/2022 1509 by Huber, Meredith Ann, MSW
-Outcome: Ongoing
-Flowsheets (Taken 12/7/2022 1509)
-Adjustment - Intervention - hospitalization: Assess patient/family/caregiver coping strategies
-12/7/2022 1326 by Huber, Meredith Ann, MSW
-Outcome: Ongoing
-Flowsheets (Taken 12/7/2022 1326)
-Adjustment - Intervention - hospitalization: Assess patient/family/caregiver coping strategies
- SOCIAL WORK CARE PLAN NOTE
-
-
-
-
-Progress:  
-SW met with mother at bedside with Uzbeck VRI interpreter. 
-Mother did not received check from Opens Doors Foundation, SW spoke to Lisa from Open Doors who stated they will mail out an additional check. 
-
-
-SW and mother discussed patient and sibling upcoming discharge in the next week or so. 
-Mother requested help with finding a pediatrician . SW to assist. 
-Mother in need of WIC and formula for patient. 
-Mother interested in home nursing visits and/or private duty nursing if patient is eligible. SW notified CM.
-
-
-SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.
-
-
-Mother requested SW help with SSI application. SW to assist. 
-
-
-SW ordered patient infant car seat to be delivered to the bedside today. 
-
-
-NIICU team and parents plan to meet tomorrow to discuss pending discharges in more detail.
-
-
-Plan: 
-SW to continue to follow and provide support/resources as needed 
-
-
-Time Spent: 90 minutes
-Acuity: Level 2 - Require information / education / recommendations / advance planning
-
-
-Electronically signed:
-Meredith Ann Huber, MSW	
-12/7/2022	3:09 PM
-
-Output: 
-{
-  "Employment": [],
-  "Housing": [],
-  "Food": [("Mother in need of WIC and formula for patient.", "social need"], ["SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.", "social need")],
-  "Financial": [],
-  "Transportation": [],
-  "Childcare": [],
-  "Permanency": [],
-  "Substance": [],
-  "Safety": [("SW ordered patient infant car seat to be delivered to the bedside today", "social need")]
-}
-
-## Example 5 
-Input Note: 
-
-The Children's Hospital 
-of Philadelphia 
-
-
-
-SOCIAL WORK PROGRESS RECORD 
-
-
-
-PATIENT NAME: Baby Boy Jemyra Carter
-CHOP MRN#: 56934603
-DOB:  12/19/2022
-TODAY'S DATE:  2/17/2023
-TODAY'S TIME:  11:40 AM
-
-
-Problems: 
-Hospital discharge, Transportation and Other:  Daycare
-
-
-Progress: Improved
-
-
-Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.
-
-
-Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.
-
-
-Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.
-
-
-SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.
-
-
-Plan: SW will continue to follow.
-
-
-Time Spent: 60 minutes
-
-
-Acuity: Level 2 - Require information / education / recommendations / advance planning
-
-
-Electronically signed:
-Stacey Keo, LSW	
-2/17/2023	11:40 AM
-
-
-Output: 
-{
-  "Employment": [],
-  "Housing": [],
-  "Food": [("Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.", "social need")],
-  "Financial": [("SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.", "social need")],
-  "Transportation": [("Problems: Hospital discharge, Transportation and Other:  Daycare", "social need")],
-  "Childcare": [("Problems: Hospital discharge, Transportation and Other:  Daycare", "positive"],["Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.", "social need")],
-  "Permanency": [],
-  "Substance": [],
-  "Safety": [("Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.", "social need")]
-}
-
-## Example 6
-Input Note:
 					
-The Children's Hospital 
+ The Children's Hospital 
 of Philadelphia 
 
 
 
-SOCIAL WORK NOTE 
+  SOCIAL WORK NOTE 
 PATIENT/FAMILY ASSESSMENT 
 
 
-PATIENT NAME: Ava Barth
-CHOP MRN#: 56920517
-DOB:  9/23/2022
+PATIENT NAME: Nhoam Bernadel
+CHOP MRN#: 56934897
+DOB:  12/7/2022
 
 
 Referral Information:  
 
 
 Referral Information 
-Date/Time 11/18/22  
-Admission/Appointment Date 11/18/22 
-Referral Date 11/19/22 
+Date/Time 02/28/23 10:16 
+Admission/Appointment Date 02/21/23 
+Referral Date 02/21/23 
 Referral Source Social Work Initiated 
 Reason for Referral Hospitalization Assessment 
-Patient Location: ICU 
-Primary Service: Neonatal 
+Patient Location: Inpatient 
+Primary Service: Cardiology 
+Consulting Service: Otolaryngology;Pulmonary 
 Assessment Type Initial Assessment 
 
 
@@ -392,10 +301,11 @@ Social Setting:
 
 
 Social Setting 
-Date/Time 11/18/22  
-Patient living situation: PARENT(S);CHILDREN IN THE HOME 
-Parent Information: Mother ( Emily) and Father ( Josh) live in Dover, DE. Mother is on maternity leave until January and Father works from home. Patient ( Ava ) is admitted from home with RSV, Ava was previouly in the NIICU and home for about one week. 
-Children in the home Information: patient has two older siblings 
+Date/Time 02/28/23 10:16 
+Patient living situation: PARENT(S) 
+Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with his mother, Karine. Nhoam's cousin also lives in the home and supports the family with transport. There are 2 other tenants in other rooms in the home. Nhoam's father is involved but does not currently live with Nhoam and mom, he does live in the local area. Karine has a 13 y/o son that remains in Haiti. Karine is a refugee under Temporary Protected Status. Karine is unemployed and father, Kesnel, recently started working for Coca-cola. Karine receives monetary support from her aunt. 
+School Status OTHER 
+Other School Status Comment: N/A, infant 
 
 
 
@@ -404,9 +314,9 @@ Custody/Consent Information:
 
 
 Custody/Consent Information 
-Date/Time 11/18/22  
+Date/Time 02/28/23 10:16 
 Custody documentation: NOT APPLICABLE 
-Who can provide consent for this patient? Mother and Father 
+Who can provide consent for this patient? Parents, Karine Moise and Kesenel Bernadel. 
 Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
 Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
 
@@ -417,20 +327,21 @@ Patient and Family/Caregiver Strengths and Stressors:
 
 
 Patient and Family/Caregivers Strengths and Stressors 
-Date/Time 11/18/22  
+Date/Time 02/28/23 10:16 
 Mental Health NO 
 Home Environment: NO 
 CPS Involvement NO 
-Housing instability NO 
-Food insecurity NO 
+Housing instability YES 
+Housing instability comment: Per mom, the family pays month-to-month for their housing arrangement and does not have a formal lease. 
+Food insecurity YES 
+Food insecurity comment: Per mom, the family faces significant financial strain and has difficulty affording basic needs. 
 Substance Abuse NO 
 Legal Issues NO 
 Patient and Family/Caregiver Strengths and Stressors: PARENT 
-Parent Strengths Parents are coping well at this time, parents are active and involved in patient care, parents plan to take turns staying with patient and siblings, parents receptive to SW support 
-Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home 
-Existing Community Services/Outside Supports: EARLY INTERVENTION;HOME HEALTH SERVICES 
-Home health services comment: Patient was receiving weight checks at home from a home care provider 
-Early Intervention comment: Patient was referred to Early Intervention Services 
+Parent Strengths Good social support network, understanding of patient's illness, asks appropriate questions, open to assistance 
+Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital 
+Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
+Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI. 
 
 
 
@@ -439,25 +350,159 @@ Assessment Summary:
 
 
 Resource Needs 
-Date/Time 11/18/22  
-Resource Needs Problem: LOCAL ACCOMODATIONS 
-Goal - Local Accommodations Parents live in DE and would like to stay locally with patient 
-Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email. 
+Date/Time 02/28/23 10:16 
+Resource Needs Problem: HOUSEHOLD FINANCES;TRANSPORTATION;LOCAL ACCOMODATIONS 
+Goal - Household Finances SW will continue to support family in accessing appropriate financial resources 
+Intervention/Plan - Household Finances SW will assist mom in applying for SSI and connecting to local immigration agencies to provide access to eligible resources 
+Goal- Transportation SW confirmed with NJ Modivcare that pt is enrolled, will coach mom on how to use service 
+Intervention/Plan - Transportation T/b with NJ Modivcare to assist in enrolling pt in services for reliable transport for medical apts 
+Goal - Local Accommodations SW added mom to RMH waitlist and provided information on facility 
+Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan 
 
 
 
 
 Adjustment: 
-Date/Time 11/18/22  
+Date/Time 02/28/23 10:16 
 Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
-Goal- Adjustment to Hospitalization Parents to continue to demonstrate positive coping techniques and become oriented to the CHOP NIICU 
-Intervention/Plan - Adjustment to Hospitalization SW to provide on going support/resources as needed 
+Goal- Adjustment to Hospitalization SW will continue to support family in navigating hospitalization and communication with teams 
+Intervention/Plan - Adjustment to Hospitalization Provide access to family with language barrier to appropriate hospital communication and consistent clarification of understanding 
+
+
+
+Professional Collaboration:
+
+
+Professional Collaboration: 
+Date/Time 02/28/23 10:16 
+Professional Collaboration PARENT/CAREGIVER;FRONT LINE CLINICIAN;NURSING;SOCIAL WORK 
+Time Spent (min) 30 min 
+Acuity  Level 2 
+
+Taylor Goldberg
+10:35 AM
+2/28/2023
+
+
+Output: 
+{{
+  "Employment": [("Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "social need"), ("Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "no social need")],
+  "Housing": [("Housing instability YES Housing instability comment: Per mom, the family pays month-to-month for their housing arrangement and does not have a formal lease.", "social need"), ("Goal - Local Accommodations SW added mom to RMH waitlist and provided information on facility Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan", "social need")], 
+  "Food": [], 
+  "Financial": [("Karine receives monetary support from her aunt.", "social need"), ("Food insecurity YES Food insecurity comment: Per mom, the family faces significant financial strain and has difficulty affording basic needs.", "social need"), ("Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"), ("Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI.", "no social need"), ("Resource Needs Problem: HOUSEHOLD FINANCES;TRANSPORTATION;LOCAL ACCOMODATIONS Goal - Household Finances SW will continue to support family in accessing appropriate financial resources Intervention/Plan - Household Finances SW will assist mom in applying for SSI and connecting to local immigration agencies to provide access to eligible resources", "social need")], 
+  "Transportation": [("Nhoam's cousin also lives in the home and supports the family with transport.", "social need"), ("Karine has a 13 y/o son that remains in Haiti.", "social need"), ("Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"), ("Goal- Transportation SW confirmed with NJ Modivcare that pt is enrolled, will coach mom on how to use service Intervention/Plan - Transportation T/b with NJ Modivcare to assist in enrolling pt in services for reliable transport for medical apts", "social need")], 
+  "Childcare": [("Karine has a 13 y/o son that remains in Haiti.", "social need")], 
+  "Permanency": [("Patient living situation: PARENT(S) Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with his mother, Karine.", "no social need"), ("Nhoam's father is involved but does not currently live with Nhoam and mom, he does live in the local area.", "no social need")],
+  "SubstanceAbuse": [], 
+  "Safety": []
+}}
+
+## Example 
+Input Note: 
+					
+ The Children's Hospital 
+of Philadelphia 
+
+
+
+  SOCIAL WORK NOTE 
+PATIENT/FAMILY ASSESSMENT 
+
+
+PATIENT NAME: Majesty Kenneh
+CHOP MRN#: 56834484
+DOB:  4/22/2022
+
+
+Referral Information:  
+
+
+Referral Information 
+Date/Time 10/28/22  
+Admission/Appointment Date 10/22/22 
+Referral Date 10/24/22 
+Referral Source Social Work Initiated 
+Reason for Referral Hospitalization Assessment 
+Patient Location: ICU 
+Primary Service: Neonatal 
+Consulting Service: None 
+Assessment Type Initial Assessment 
+
+
+
+
+Social Setting:
+
+
+Social Setting 
+Date/Time 10/28/22  
+Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME 
+Parent Information: Majesty is mother's first child. Father has a 6 year old son from a previous relationship. Family lives in Swarthmore, PA (about 30 minutes from CHOP). Also living in the home is maternal aunt and Majesty's 8 year old and 13 year old cousins, who mother was caring for up until recently. Father is employed full time. Mother is working on a per diem basis at this time and has been able to take the time off that she needs from work. 
+Relative Information: Maternal aunt also resides in the home. 
+Children in the home Information: 4: Patient, 6 year old brother, 8 year old cousin and 13 year old cousin. 
+School Status OTHER 
+Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare. 
+
+
+
+
+Custody/Consent Information:
+
+
+Custody/Consent Information 
+Date/Time 10/28/22  
+Custody documentation: NOT APPLICABLE 
+Who can provide consent for this patient? Parents: Romel Diahn and Salio Kenneh. 
+Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
+Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
+
+
+
+
+Patient and Family/Caregiver Strengths and Stressors:
+
+
+Patient and Family/Caregivers Strengths and Stressors 
+Date/Time 10/28/22  
+Mental Health NO 
+Home Environment: NO 
+CPS Involvement NO 
+Housing instability NO 
+Food insecurity NO 
+Substance Abuse NO 
+Legal Issues NO 
+Patient and Family/Caregiver Strengths and Stressors: PARENT 
+Parent Strengths Mother is active in care and has a good understanding of the medical plan, is able to articulate her needs, appears to be coping well considering Majesty's unanticipated ICU-level hospitalization. 
+Parent Stressors Unanticipated ICU-level hospitalization. 
+Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
+Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan. Family is receiving SNAP benefits. Mother applied for CCS benefits but family was denied as they were over-income. Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness. 
+
+
+
+
+Assessment Summary:
+
+
+Resource Needs 
+Date/Time 10/28/22  
+Resource Needs Problem: CHILD CARE/DAY CARE 
+Goal - Child care/Day care Family will reapply for CCS benefits. 
+Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits. 
+
+
+
+
+Adjustment: 
+Date/Time 10/28/22  
+Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
+Goal- Adjustment to Hospitalization Family will be oriented to the CHOP NICU. 
+Intervention/Plan - Adjustment to Hospitalization Provided information about the role of the NICU social worker, NICU parent sleep rooms. 
 
 
 
 
 Relationships/Behavior 
-Date/Time 11/18/22  
+Date/Time 10/28/22  
 Relationships/Behavior Problems NONE IDENTIFIED 
 
 
@@ -467,122 +512,68 @@ Professional Collaboration:
 
 
 Professional Collaboration: 
-Date/Time 11/18/22  
-Professional Collaboration PARENT/CAREGIVER 
+Date/Time 10/28/22  
+Professional Collaboration PARENT/CAREGIVER;NURSING;SOCIAL WORK 
 Time Spent (min) 30 min 
 Acuity  Level 2 
 
 
+Social worker met with mother at bedside in the NICU. Mother shared that she has been staying overnight in the hospital most nights since Majesty's admission. Mother is coping as well as can be expected considering Majesty's unanticipated NICU hospitalization. No immediate social work needs identified. 
 
-Meredith Ann Huber, MSW
-2:55 PM
-11/18/2022
+
+Plan: Social worker will continue to follow. 
+
+
+Alexandra M Pomar
+4:33 PM
+10/28/2022
+
 
 Output: 
-{
-  "Employment": [("Mother is on maternity leave until January and Father works from home.", "no social need")],
-  "Housing": [("Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in DE and would like to stay locally with patient Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email.", "social need")],
-  "Food": [],
-  "Financial": [],
-  "Transportation": [("Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home", "social need")],
-  "Childcare": [],
-  "Permanency": [("Patient living situation: PARENT(S);CHILDREN IN THE HOME", "no social need")],
-  "Substance": [],
+{{
+  "Employment": [("Father is employed full time. Mother is working on a per diem basis at this time and has been able to take the time off that she needs from work.", "no social need"), ("Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness.", "social need")], 
+  "Housing": [], 
+  "Food": [("Family is receiving SNAP benefits.", "no social need")], 
+  "Financial": [("Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan.", "no social need")], 
+  "Transportation": [("Family lives in Swarthmore, PA (about 30 minutes from CHOP).", "no social need")], 
+  "Childcare": [("Resource Needs Problem: CHILD CARE/DAY CARE Goal - Child care/Day care Family will reapply for CCS benefits. Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits.", "no social need"), ("Mother applied for CCS benefits but family was denied as they were over-income.", "no social need"), ("Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare.", "no social need")], 
+  "Permanency": [("Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME", "no social need")], 
+  "SubstanceAbuse": [], 
   "Safety": []
-}
+}}
 
+## Example 
 
-## Example 7
-Input Note:
- 
-The Children's Hospital 
+ The Children's Hospital 
 of Philadelphia 
 
 
 
-SOCIAL WORK NOTE 
+   SOCIAL WORK PROGRESS RECORD 
 
 
-
-
-
-PATIENT NAME: Baby Girl Denise Dieterich
-CHOP MRN#: 56902082
-DOB:  9/22/2022
-TODAY'S DATE:  10/9/2022
-TODAY'S TIME: 12:17 PM
-
-
-Social work continues to follow this patient.  
-
-
-Additional Comments: Medical team reached out to SW to discuss DHS investigation. SW called DHS to request assigned caseworker information. SW was told that there is an active investigation due to pt testing positive for opiates. DHS explained that the assinged caseworker is Melissa Tyrell (267-331-1437).  Ms. Tyrell will not be in until Tuesday 10/ 11. Per DHS, if pt becomes medically cleared for discharge prior to Tuesday, they will have an on call caseworker asist in discharge planning. 
-
-
-Pt is not to be discharged without DHS approval of safety plan. 
-
-
-Time Spent: 30 minutes
-
-
-Acuity: Level 2 - Require information / education / recommendations / advance planning
-
-
-Electronically signed:
-Rosemarie Giannopoulos	
-10/9/2022	12:17 PM
-
-
-
-Output: 
-{
-  "Employment": [],
-  "Housing": [],
-  "Food": [],
-  "Financial": [],
-  "Transportation": [],
-  "Childcare": [],
-  "Permanency": [("Pt is not to be discharged without DHS approval of safety plan.", "social need")],
-  "Substance": [("SW was told that there is an active investigation due to pt testing positive for opiates.", "social need")],
-  "Safety": []
-}
-
-## Example 8 
-Input Note:
-
-The Children's Hospital 
-of Philadelphia 
-
-
-
-SOCIAL WORK PROGRESS RECORD 
-
-
-PATIENT NAME: Ethan Krall
-CHOP MRN#: 56953882
-DOB:  12/26/2022
-TODAY'S DATE:  4/5/2023
-TODAY'S TIME:  2:35 PM
+PATIENT NAME: Baby Boy Alexis Walkowitz
+CHOP MRN#: 56869565
+DOB:  7/21/2022
+TODAY'S DATE:  7/22/2022
+TODAY'S TIME:  4:42 PM
 
 
 Problems: 
-Visitation Plan
+Hospitalization 
+Substance abuse 
 
 
 Progress: 
-SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible.
-SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.
 
 
-SW was able to gain contact with bio mom at 2:48pm. Bio mom shared that she plans to travel down Saturday (4/8/23) to visit the patient along with bio dad. Bio mom is unsure of the time due to bio dad being her transportation and he works overnight. Their tentative plan is to come Saturday and stay at a local hotel into Sunday. They then plan to visit Sunday (4/9/2023) morning. Bio mom would like for SW to call tomorrow as she will have additional information in regard to timing.
+SW in communication with HUP SW LaTesha Kearney Beauford (215-279-1117) assigned to mother of the patient. HUP SW confirmed that there was a +UDS on 7/20 for methadone and fentanyl. Per HUP SW, mother disclosed heroin use within the last week. HUP SW confirmed that a report with DCPP will be filed by HUP SW today. SW relayed this information to the medical team. 
 
 
-SW informed foster dad of this schedule and he was ok with the plan.
+HUP SW later informed this SW that she was able to connect with mom for assessment and support. HUP SW notified mom that report was filed. HUP SW shared that mom was hoping to visit bedside soon, mom did not arrive while SW was present during the day. SW briefly met pt's maternal great-grandmother Paula Neff, who mom lives with in NJ. 
 
 
-Plan:
-SW will follow up with bio mom tomorrow on her tentative timing.
-SW will continue to provide support to patient and family while on the ITCU.
+Plan: SW will continue to follow and provide support. SW will collaborate with DCPP as needed. SW will continue to be available to the family and medical team. 
 
 
 Time Spent: 60 minutes
@@ -592,182 +583,24 @@ Acuity: Level 2 - Require information / education / recommendations / advance pl
 
 
 Electronically signed:
-Aisha Evans	
-4/5/2023	2:35 PM
-
-
-Output: 
-{
-  "Employment": [("Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need")],
-  "Housing": [("Their tentative plan is to come Saturday and stay at a local hotel into Sunday.", "social need")],
-  "Food": [],
-  "Financial": [],
-  "Transportation": [("Bio mom is unsure of the time due to bio dad being her transportation and he works overnight.", "no social need")],
-  "Childcare": [],
-  "Permanency": [],
-  "Substance": [],
-  "Safety": [("SW stopped by bedside while patient's foster dad was present and active in care. SW introduced SW and services and assessed for needs at the moment. Foster dad inquired whether the previous SW was able to get in touch with bio mom in regard to the visitation plan. Though foster parents are amenable to leaving bedside if the bio parents are visiting, they would like to make sure bio parents are planning to visit, as the foster parents would like to be present daily when possible. SW was able to obtain info from foster dad as to what times work best with their visitation and he shared that evenings work best. Often times 5pm-10pm or 6pm-10pm. Foster parents plan to both be present on Good Friday (4/7/23) all day. SW shared that if SW is able to get in touch with bio mom, SW will assess for times that work for bio parents to see what can possibly be worked out.", "social need")]
-}
-
-## Example 9
-Input Note:
-					
- The Children's Hospital 
-of Philadelphia 
-
-
-
-SOCIAL WORK NOTE 
-PATIENT/FAMILY ASSESSMENT 
-
-
-PATIENT NAME: Baby Girl Karolina Walker
-CHOP MRN#: 56979300
-DOB:  4/5/2023
-
-
-Referral Information:  
-
-
-Referral Information 
-Date/Time 05/17/23  
-Admission/Appointment Date 05/15/23 
-Referral Date 05/16/23 
-Referral Source Social Work Initiated 
-Reason for Referral Hospitalization Assessment 
-Patient Location: ICU 
-Primary Service: Neonatal 
-Assessment Type Initial Assessment 
-
-
-
-
-Social Setting:
-
-
-Social Setting 
-Date/Time 05/17/23  
-Patient living situation: OTHER 
-Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents. 
-School Status OTHER 
-Other School Status Comment: n/a patient is an infant 
-
-
-
-
-Custody/Consent Information:
-
-
-Custody/Consent Information 
-Date/Time 05/17/23  
-Custody documentation: YES 
-Documentation scan dated: 5/16/2023 
-Custody  PHYSICAL CUSTODY;LEGAL CUSTODY 
-Physical Custody SOLE PHYSICAL CUSTODY 
-Sole Physical Custodian: York County Children and Youth 
-Legal Custody SOLE LEGAL CUSTODY 
-Sole Legal Custodian: York County Children and Youth 
-Who can provide consent for this patient? York County Children and Youth, contact assigned case worker Ashley Althoff ( 717-309-5324). After hours contact 717-846-8496 for consent. 
-Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
-Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
-
-
-
-
-Patient and Family/Caregiver Strengths and Stressors:
-
-
-Patient and Family/Caregivers Strengths and Stressors 
-Date/Time 05/17/23  
-Mental Health YES 
-Mental Health Comment: Patient's father disclosed mental health history, feels that he is coping adequately at this time. Mom has a history of mental health treatement and is still engagaged in treatment at this time. LSW will continue to follow and provide support where appropriate. 
-Home Environment: NOT ASSESSED 
-Home Environment not assessed comment: Not assessed at this time. LSW will continue to assess. 
-CPS Involvement YES 
-CPS involvment comment: York County CYS has legal and physical custody of the patient at this time. The assigned case worker is Ashley Althoff ( 717-309-5324). 
-Housing instability NO 
-Food insecurity NO 
-Substance Abuse NO 
-Legal Issues NO 
-Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
-Public assistance/SSI comment: The patient's mother has SNAP and WIC. 
-
-
-
-
-Assessment Summary:
-
-
-Resource Needs 
-Date/Time 05/17/23  
-Resource Needs Problem: OTHER (SEE COMMENT) 
-Goal - Other resource needs Engage with current CYS provider to ensure safe discharge 
-Intervention/Plan - Other resource needs LSW will continue to engage with York Country CYS to ensure safe discharge 
-
-
-
-
-Adjustment: 
-Date/Time 05/17/23  
-Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
-Goal- Adjustment to Hospitalization The patient's parents will adapt and cope with Skylar's hospitalization 
-Intervention/Plan - Adjustment to Hospitalization LSW will continue to provide make outreach and provide support to the patient's parents while Skylar is hospitalized 
-
-
-
-
-Relationships/Behavior 
-Date/Time 05/17/23  
-Relationships/Behavior Problems VISITATION CONCERNS 
-Goal - Visitation concerns Visitor restrictions will be implemented when identified 
-Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart. 
-
-
-
-
-Professional Collaboration:
-
-
-Professional Collaboration: 
-Date/Time 05/17/23  
-Professional Collaboration PARENT/CAREGIVER;CHILD PROTECTIVE SERVICES;FRONT LINE CLINICIAN;NURSING;SOCIAL WORK 
-Time Spent (min) 90 min 
-Acuity  Level 3 
-
-
-
-
-On 5/16/23 LSW spoke with Skylar's parents on the phone to introduce purple team social worker. The patient's parents were provided with the patient's care code and NICU phone number so that they can call for medical updates. The patient's parents asked thoughtful and appropriate questions about the patient's care. 
-
-
-LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision. LSW encouraged the parents to speak with the assigned case worker to discuss visitation. 
-
-
-No additional social work needs were identified at this time. 
-
-
-
-
-Catherine R Heidenreich, LSW
-9:55 AM
-5/17/2023
+Melissa Greberman, LCSW
+7/22/2022	4:42 PM
 
 Output: 
 {{
-  "Employment": [],
-  "Housing": [],
-  "Food": [("Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: The patient's mother has SNAP and WIC.", "no social need")],
-  "Financial": [],
-  "Transportation": [],
-  "Childcare": [],
-  "Permanency": [("Patient living situation: OTHER Other Information: At this time York County CYS has legal and physical custody of the patient and is providing consent. Dispositition to be determined closer to discharge. Origional court determination was made in Lancaster County and transfered to York Country. LSW is awaiting updated court documents.", "social need"], ["Custody  PHYSICAL CUSTODY;LEGAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: York County Children and Youth Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: York County Children and Youth", "social need"],["CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time.", "social need")],
-  "Substance": [],
-  "Safety": [("CPS Involvement YES CPS involvment comment: York County CYS has legal and physical custody of the patient at this time", "social need"],
-    ["Relationships/Behavior Problems VISITATION CONCERNS Goal - Visitation concerns Visitor restrictions will be implemented when identified Intervention/Plan - Visitation concerns Per CYS, patient's parents and maternal grandparent must be supervised by CYS to visit. No visitation at this time. Visitors must be approved by CYS. Visitor restriction was placed in the patient's chart.", "social need"], ["LSW informed the parents that per CYS they are unable to visit the patient without CYS supervision", "social need")]
+  "Employment": [], 
+  "Housing": [], 
+  "Food": [], 
+  "Financial": [], 
+  "Transportation": [], 
+  "Childcare": [], 
+  "Permanency": [], 
+  "SubstanceAbuse": [("Substance abuse", "social need"), ("HUP SW confirmed that there was a +UDS on 7/20 for methadone and fentanyl. Per HUP SW, mother disclosed heroin use within the last week.", "social need")], 
+  "Safety": [("Plan: SW will continue to follow and provide support. SW will collaborate with DCPP as needed. SW will continue to be available to the family and medical team.", "social need"), ("HUP SW confirmed that a report with DCPP will be filed by HUP SW today. SW relayed this information to the medical team.", "social need")]
 }}
 
 # TASK
-Now, annotate the following clinical note following the Social Risks definitions and sources, and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that category if the evidence is blank. 
+Now, annotate the following clinical note following the guidelines, and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that category if the evidence is blank. 
 
 # Input Note
 {note}

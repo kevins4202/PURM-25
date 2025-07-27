@@ -1,4 +1,4 @@
-Ex1 has 3
+Ex1 has none
 Ex2 has 4
 Ex3 has 0 and 1
 ex4 has 2 and 7
@@ -8,69 +8,73 @@ Ex 7 has 6 8
 Ex 8 has 0- 1 4- 7 
 Ex 9 has 2- 7 8
 
-Input (792948743.txt): 
- The Children's Hospital 
-of Philadelphia 
+Files: 
+798507904.txt
+785000449.txt
+759204936.txt
+764214588.txt
+780009601.txt
+760088505.txt
+750813579.txt
+791681953.txt
+801224849.txt
+
+Input (798507904.txt): 
+SOCIAL WORK CARE PLAN NOTE
 
 
-
-   SOCIAL WORK PROGRESS RECORD 
-
-
-
-
-
-
-
-PATIENT NAME: Baby Boy Ashley Peterson
-CHOP MRN#: 56934500
-DOB:  3/21/2023
-TODAY'S DATE:  4/11/2023
-TODAY'S TIME:  5:12 PM
-
-
-Problems: 
-Insurance
-Hospitalization 
-
-
-Progress: Unchanged
-
-
-Plan: SW r/o to FHCP with continued issues adding pt to insurance plan. FHCP advised family was referred in March and had instructed family to contact UHC to add pt. FHCP called with mom again today and were eventually sent to Monmouth County DHS and unable to reach a representative to discuss case. SW also r/o to contact in NJ DHS for potential assistance.
-
-
-Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending. Will f/u with medical team tomorrow.
-
-
-SW will continue to follow the family.
+Problem: ADJUSTMENT
+Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
+Outcome: Ongoing
+Flowsheets (Taken 5/4/2023 1433)
+Adjustment - Intervention - hospitalization:
+ Assess patient/family/caregiver coping strategies
+ Assist patient/family/caregiver in problem-solving for hospitalization-related stressors
 
 
 
 
-Time Spent: 60 minutes
+
+Progress:  LSW spoke with patient parens via phone. Medical team provided satisfactory communication to patient parents this week per parents. Patient parents thanked medical team for continued partnership.
 
 
+LSW assessed patient and patient families emotional needs and none identified at this time. Patient mother planning to be present at the bedside tomorrow to support Brielle through planned transition to high flo.
+
+
+Patient father will be present at the bedside virtually tomorrow.
+
+
+Patient mother provided with requested letter for her employer. 
+
+
+
+
+Plan: 
+LSW will cont. To provide social and emotional therapeutic support to patient and patient family to promote a better understanding of their lived experience and address needs. LSW will cont. to provide necessary information to the rest of the interdisciplinary team in effort to provide holistic quality care. 
+
+
+Time Spent: 30 minutes
 Acuity: Level 2 - Require information / education / recommendations / advance planning
 
 
 Electronically signed:
-Taylor Goldberg	
-4/11/2023	5:12 PM
+Qadriyyah Major	
+5/4/2023	2:36 PM
 
 
 Output: 
-{
+
+{{
   "Employment": [],
   "Housing": [],
   "Food": [],
-  "Financial": [["Given ongoing barriers to insurance activation, SW, CM, and team discussing Rapid Response request as next step for successful discharge while insurance is pending.", "positive"]],
+  "Financial": [],
   "Transportation": [],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
   "Safety": []
-}
+}}
 
 Input (785000449.txt): 
 SOCIAL WORK CARE PLAN NOTE

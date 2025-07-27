@@ -26,7 +26,7 @@ def compute_metrics(preds, targets):
     
     for label in range(NUM_LABELS):
         # Counters for presence (binary)
-        tp_p, fp_p, fn_p = 0, 0, 0
+        tp_p, fp_p, fn_p, tn_p = 0, 0, 0, 0
         
         # Counters for stance (multi-class 1 vs -1)
         tp_1, fp_1, fn_1 = 0, 0, 0
@@ -46,7 +46,8 @@ def compute_metrics(preds, targets):
                 fp_p += 1
             elif target_present and not pred_present:
                 fn_p += 1
-            # TN not needed for F1/precision/recall
+            elif not target_present and not pred_present:
+                tn_p += 1
 
             # --- Stance metrics (only on present targets)
             if t != 0:
@@ -78,6 +79,7 @@ def compute_metrics(preds, targets):
             'tp': tp_p,
             'fp': fp_p,
             'fn': fn_p,
+            'tn': tn_p,
         }
         presence_macro['precision'].append(precision_p)
         presence_macro['recall'].append(recall_p)
@@ -106,6 +108,16 @@ def compute_metrics(preds, targets):
         stance_macro['recall'].append(macro_rec)
         stance_macro['f1'].append(macro_f1)
 
+    # Calculate overall totals across all categories
+    total_tp = sum(presence_results[cat]['tp'] for cat in presence_results.keys())
+    total_fp = sum(presence_results[cat]['fp'] for cat in presence_results.keys())
+    total_tn = sum(presence_results[cat]['tn'] for cat in presence_results.keys())
+    total_fn = sum(presence_results[cat]['fn'] for cat in presence_results.keys())
+    total_instances = total_tp + total_fp + total_tn + total_fn
+    
+    # Calculate overall accuracy
+    overall_accuracy = (total_tp + total_tn) / total_instances if total_instances > 0 else 0.0
+    
     return {
         'presence_per_label': presence_results,
         'stance_per_label': stance_results,
@@ -120,5 +132,13 @@ def compute_metrics(preds, targets):
                 'recall': sum(stance_macro['recall']) / NUM_LABELS,
                 'f1': sum(stance_macro['f1']) / NUM_LABELS,
             }
+        },
+        'overall_totals': {
+            'total_tp': total_tp,
+            'total_fp': total_fp,
+            'total_tn': total_tn,
+            'total_fn': total_fn,
+            'total_instances': total_instances,
+            'overall_accuracy': overall_accuracy
         }
     }
