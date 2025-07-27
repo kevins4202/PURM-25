@@ -8,7 +8,7 @@ from pydantic import BaseModel
 
 # Model configuration
 MODEL_CONFIG = {
-    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "model_id": "meta-llama/Llama-3.3-70B-Instruct",
     "quantization": True,
 }
 
