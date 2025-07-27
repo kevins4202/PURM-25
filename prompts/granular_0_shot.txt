@@ -93,7 +93,7 @@ Use this format to report the extracted information. In the list corresponding t
   "Childcare": [] OR [(label, evidence, "social need" OR "no social need")],
   "Permanency": [] OR [(label, evidence, "social need" OR "no social need")],
   "Substance": [] OR [(label, evidence, "social need" OR "no social need")],
-  "Safety": [] OR [(label, evidence, "social need" OR "no social need")],
+  "Safety": [] OR [(label, evidence, "social need" OR "no social need")]
 }}
 
 # Output Elements
