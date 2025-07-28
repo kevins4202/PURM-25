@@ -18,7 +18,8 @@ import json
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 1  # Default batch size
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 class ModelEvaluator:
     def __init__(self, model_id, evaluation_config):
