@@ -1,6 +1,6 @@
 from dataloader import get_dataloaders
 from metrics import compute_metrics
-from config import MODEL_CONFIG, EVALUATION_CONFIG, BroadOutputSchema, GranularOutputSchema
+from config import BroadOutputSchema, GranularOutputSchema
 from utils import (
     load_prompt,
     get_annotations,
@@ -17,16 +17,14 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
-model_id = MODEL_CONFIG["model_id"]
+
 output_path = f"results/{model_id.split('/')[-1]}.json"
 
-def load_model(model_config):
+def load_model(model_id):
     """Load and configure the vLLM model"""
-    model_id = model_config["model_id"].split("/")[-1]
-    print("Loading vLLM model ", model_id)
     
     llm = LLM(
-        model=model_config["model_id"],
+        model=model_id,
         trust_remote_code=True,
         tensor_parallel_size=1,
         gpu_memory_utilization=0.8,
@@ -72,7 +70,7 @@ def evaluate(llm, dataloader, evaluation_config, prompt, output_schema):
     preds = []
     targets = []
     broken_indices = []
-    max_batches = evaluation_config["max_batches"]
+    max_batches = None
 
     for idx, batch in enumerate(dataloader):
         if max_batches and idx >= max_batches:
@@ -142,21 +140,18 @@ def main():
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
-    evaluation_config = EVALUATION_CONFIG.copy()
-    if args.broad is not None:
-        evaluation_config["broad"] = args.broad
-    if args.zero_shot is not None:
-        evaluation_config["zero_shot"] = args.zero_shot
+    evaluation_config = {
+        "broad": args.broad,
+        "zero_shot": args.zero_shot
+    }
     
     # Create model config with command line overrides
-    model_config = MODEL_CONFIG.copy()
-    if args.model_id is not None:
-        model_config["model_id"] = args.model_id
+    model_id = args.model_id
     
     print(f"Using evaluation config: broad={evaluation_config['broad']}, zero_shot={evaluation_config['zero_shot']}")
     
     # Get model ID
-    model_id = model_config["model_id"].split("/")[-1]
+    output = model_id.split("/")[-1]
     
     # Determine output schema
     output_schema = BroadOutputSchema if evaluation_config["broad"] else GranularOutputSchema
@@ -168,7 +163,7 @@ def main():
     )
     
     # Load model
-    llm = load_model(model_config)
+    llm = load_model(model_id)
     
     # Load data
     dataloader = get_dataloaders(
