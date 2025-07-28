@@ -6,19 +6,7 @@ Contains category definitions, model configurations, and other constants.
 from typing import List, Tuple, Literal
 from pydantic import BaseModel
 
-# Model configuration
-MODEL_CONFIG = {
-    "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
-    "quantization": True,
-}
-
-# Evaluation settings
-EVALUATION_CONFIG = {
-    "batch_size": 1,
-    "max_batches": None,  # For testing, set to None for full evaluation
-    "broad": False,
-    "zero_shot": False,
-}
+BATCH_SIZE = 1
 
 OUTPUT_TO_CAT = {
     "Employment": "PatientCaregiver_Employment",

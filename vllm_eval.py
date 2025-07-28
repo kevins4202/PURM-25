@@ -136,9 +136,9 @@ def main():
     """Main evaluation function"""
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with vLLM using command line arguments')
-    parser.add_argument('--broad', type=bool, help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', type=bool, help='Use zero-shot evaluation (overwrites config)')
-    parser.add_argument('--model_id', type=str, help='Model ID (overwrites config)')
+    parser.add_argument('--broad', type=bool, required=True, help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', type=bool, required=True, help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides

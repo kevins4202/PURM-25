@@ -1,6 +1,6 @@
 from dataloader import get_dataloaders
 from metrics import compute_metrics
-from config import MODEL_CONFIG, EVALUATION_CONFIG, BroadOutputSchema, GranularOutputSchema
+from config import BroadOutputSchema, GranularOutputSchema
 from utils import (
     load_prompt,
     get_annotations,
@@ -18,9 +18,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 class ModelEvaluator:
-    def __init__(self, model_config, evaluation_config):
-        self.model_config = model_config
-        self.model_id = self.model_config["model_id"].split("/")[-1]
+    def __init__(self, model_id, evaluation_config):
+        self.model_id = model_id
+        self.output_dir = model_id.split("/")[-1]
         self.evaluation_config = evaluation_config
         self.outlined_model = None
         self.generator = None
@@ -30,19 +30,19 @@ class ModelEvaluator:
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
-        self.max_batches = self.evaluation_config["max_batches"]
+        self.max_batches = 5
 
     def _load_model(self):
         """Load and configure the model"""
-        print("Loading and quantizing model ", self.model_id)
+        print("Loading and quantizing model ", self.output_dir)
         quantization_config = BitsAndBytesConfig(load_in_8bit=True)
         model = AutoModelForCausalLM.from_pretrained(
-            self.model_config["model_id"],
+            self.model_id,
             quantization_config=quantization_config,
             device_map=device,
         )
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
-        tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
+        tokenizer = AutoTokenizer.from_pretrained(self.model_id)
         # Wrap with outlines
         self.outlined_model = outlines.from_transformers(model, tokenizer)
 
@@ -119,43 +119,37 @@ class ModelEvaluator:
         print("\nMetrics:", metrics)
 
         os.makedirs("results", exist_ok=True)
-        os.makedirs(f"results/{self.model_id}", exist_ok=True)
+        os.makedirs(f"results/{self.output_dir}", exist_ok=True)
 
         i = 0
-        while os.path.exists(f"results/{self.model_id}/{self.prompt_path}_{i}.json"):
+        while os.path.exists(f"results/{self.output_dir}/{self.prompt_path}_{i}.json"):
             i += 1
 
-        with open(f"results/{self.model_id}/{self.prompt_path}_{i}.json", "w") as f:
+        with open(f"results/{self.output_dir}/{self.prompt_path}_{i}.json", "w") as f:
             json.dump(metrics, f, indent=2)
 
 def main():
     """Main evaluation function"""
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
-    parser.add_argument('--broad', type=bool, help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', type=bool, help='Use zero-shot evaluation (overwrites config)')
-    parser.add_argument('--model_id', type=str, help='Model ID (overwrites config)')
+    parser.add_argument('--broad', type=bool, required=True, help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', type=bool, required=True, help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
-    evaluation_config = EVALUATION_CONFIG.copy()
-    if args.broad is not None:
-        evaluation_config["broad"] = args.broad
-    if args.zero_shot is not None:
-        evaluation_config["zero_shot"] = args.zero_shot
-    
-    # Create model config with command line overrides
-    model_config = MODEL_CONFIG.copy()
-    if args.model_id is not None:
-        model_config["model_id"] = args.model_id
+    evaluation_config = {
+        "broad": args.broad,
+        "zero_shot": args.zero_shot
+    }
     
     evaluator = ModelEvaluator(
-        model_config=model_config, evaluation_config=evaluation_config
+        model_id=args.model_id, evaluation_config=evaluation_config
     )
 
     # Load data
     dataloader = get_dataloaders(
-        batch_size=evaluation_config["batch_size"], split=False, zero_shot=evaluation_config["zero_shot"]
+        batch_size=BATCH_SIZE, split=False, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model
