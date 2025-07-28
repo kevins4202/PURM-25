@@ -181,20 +181,41 @@ class ModelEvaluator:
             json.dump(metrics, f, indent=2)
 
 def main():
-    """Main evaluation function"""
+    """Main evaluation function
+    
+    Usage examples:
+    # Broad evaluation, zero-shot, structured output
+    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct" --broad --zero_shot
+    
+    # Granular evaluation, few-shot, unstructured output
+    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct" --granular --few_shot --unstructured
+    
+    # Defaults: granular, zero-shot, structured
+    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct"
+    """
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
-    parser.add_argument('--broad', type=bool, required=True, help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', type=bool, required=True, help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--broad', action='store_true', help='Use broad evaluation')
+    parser.add_argument('--granular', action='store_true', help='Use granular evaluation (default if neither specified)')
+    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation')
+    parser.add_argument('--few_shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
-    parser.add_argument('--structured', type=bool, default=True, help='Use structured output (default: True)')
+    parser.add_argument('--structured', action='store_true', default=True, help='Use structured output (default: True)')
+    parser.add_argument('--unstructured', action='store_true', help='Use unstructured output (overrides structured)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
+    # Set defaults if neither option is specified
+    if not args.broad and not args.granular:
+        args.broad = True  # Default to broad if neither specified
+    
+    if not args.zero_shot and not args.few_shot:
+        args.zero_shot = True  # Default to zero-shot if neither specified
+    
     evaluation_config = {
-        "broad": args.broad,
-        "zero_shot": args.zero_shot,
-        "structured_output": args.structured  # Use structured output unless unstructured is specified
+        "broad": args.broad,  # True if --broad is used, False otherwise
+        "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
+        "structured_output": not args.unstructured  # Use structured unless --unstructured is specified
     }
     
     evaluator = ModelEvaluator(
