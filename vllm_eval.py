@@ -16,7 +16,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
-model_path = MODEL_CONFIG["model_path"]
+model_path = MODEL_CONFIG["model_id"]
 output_path = f"results/{model_path.split('/')[-1]}.json"
 
 def load_model(model_config):
