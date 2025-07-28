@@ -42,7 +42,11 @@ class ModelEvaluator:
             device_map=device,
         )
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
+<<<<<<< HEAD
+        tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
+=======
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+>>>>>>> 2db62a4e82fef497c7508f492456653e077f4191
         # Wrap with outlines
         self.outlined_model = outlines.from_transformers(model, tokenizer)
 

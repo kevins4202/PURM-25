@@ -6,7 +6,23 @@ Contains category definitions, model configurations, and other constants.
 from typing import List, Tuple, Literal
 from pydantic import BaseModel
 
+<<<<<<< HEAD
+# Model configuration
+MODEL_CONFIG = {
+    "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "quantization": True,
+}
+
+# Evaluation settings
+EVALUATION_CONFIG = {
+    "batch_size": 1,
+    "max_batches": None,  # For testing, set to None for full evaluation
+    "broad": True,
+    "zero_shot": True,
+}
+=======
 BATCH_SIZE = 1
+>>>>>>> 2db62a4e82fef497c7508f492456653e077f4191
 
 OUTPUT_TO_CAT = {
     "Employment": "PatientCaregiver_Employment",
