@@ -40,7 +40,7 @@ class ModelEvaluator:
             quantization_config=quantization_config,
             device_map=device,
         )
-        model.generation_config.pad_token_id = model.generation_config.eos_token_id
+        model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
         tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
         # Wrap with outlines
         self.outlined_model = outlines.from_transformers(model, tokenizer)
