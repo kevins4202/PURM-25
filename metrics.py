@@ -99,24 +99,87 @@ def compute_metrics(preds, targets):
         macro_f1 = (f1_1 + f1_neg1) / 2
 
         stance_results[label] = {
-            'class_1': {'precision': precision_1, 'recall': recall_1, 'f1': f1_1},
-            'class_-1': {'precision': precision_neg1, 'recall': recall_neg1, 'f1': f1_neg1},
-            'macro': {'precision': macro_prec, 'recall': macro_rec, 'f1': macro_f1},
+            'class_1': {
+                'precision': precision_1, 
+                'recall': recall_1, 
+                'f1': f1_1,
+                'tp': tp_1,
+                'fp': fp_1,
+                'fn': fn_1
+            },
+            'class_-1': {
+                'precision': precision_neg1, 
+                'recall': recall_neg1, 
+                'f1': f1_neg1,
+                'tp': tp_neg1,
+                'fp': fp_neg1,
+                'fn': fn_neg1
+            },
+            'macro': {
+                'precision': macro_prec, 
+                'recall': macro_rec, 
+                'f1': macro_f1,
+                'tp': tp_1 + tp_neg1,
+                'fp': fp_1 + fp_neg1,
+                'fn': fn_1 + fn_neg1
+            },
         }
 
         stance_macro['precision'].append(macro_prec)
         stance_macro['recall'].append(macro_rec)
         stance_macro['f1'].append(macro_f1)
 
-    # Calculate overall totals across all categories
-    total_tp = sum(presence_results[cat]['tp'] for cat in presence_results.keys())
-    total_fp = sum(presence_results[cat]['fp'] for cat in presence_results.keys())
-    total_tn = sum(presence_results[cat]['tn'] for cat in presence_results.keys())
-    total_fn = sum(presence_results[cat]['fn'] for cat in presence_results.keys())
-    total_instances = total_tp + total_fp + total_tn + total_fn
+    # Calculate macro totals for presence (sum across all categories)
+    macro_presence_tp = sum(presence_results[cat]['tp'] for cat in presence_results.keys())
+    macro_presence_fp = sum(presence_results[cat]['fp'] for cat in presence_results.keys())
+    macro_presence_tn = sum(presence_results[cat]['tn'] for cat in presence_results.keys())
+    macro_presence_fn = sum(presence_results[cat]['fn'] for cat in presence_results.keys())
+    macro_presence_instances = macro_presence_tp + macro_presence_fp + macro_presence_tn + macro_presence_fn
     
-    # Calculate overall accuracy
-    overall_accuracy = (total_tp + total_tn) / total_instances if total_instances > 0 else 0.0
+    # Calculate macro accuracy for presence
+    macro_presence_accuracy = (macro_presence_tp + macro_presence_tn) / macro_presence_instances if macro_presence_instances > 0 else 0.0
+    
+    # Calculate macro totals for stance (sum across all categories)
+    macro_stance_tp_1 = sum(stance_results[cat]['class_1']['tp'] for cat in stance_results.keys())
+    macro_stance_fp_1 = sum(stance_results[cat]['class_1']['fp'] for cat in stance_results.keys())
+    macro_stance_fn_1 = sum(stance_results[cat]['class_1']['fn'] for cat in stance_results.keys())
+    
+    macro_stance_tp_neg1 = sum(stance_results[cat]['class_-1']['tp'] for cat in stance_results.keys())
+    macro_stance_fp_neg1 = sum(stance_results[cat]['class_-1']['fp'] for cat in stance_results.keys())
+    macro_stance_fn_neg1 = sum(stance_results[cat]['class_-1']['fn'] for cat in stance_results.keys())
+    
+    macro_stance_tp = macro_stance_tp_1 + macro_stance_tp_neg1
+    macro_stance_fp = macro_stance_fp_1 + macro_stance_fp_neg1
+    macro_stance_fn = macro_stance_fn_1 + macro_stance_fn_neg1
+    macro_stance_instances = macro_stance_tp + macro_stance_fp + macro_stance_fn
+    
+    # Calculate overall totals (across all samples, not categories)
+    # This should be the sum of all individual sample predictions vs targets
+    overall_tp = 0
+    overall_fp = 0
+    overall_tn = 0
+    overall_fn = 0
+    
+    for pred, target in zip(preds, targets):
+        for label in range(NUM_LABELS):
+            p = pred[label]
+            t = target[label]
+            
+            # Presence metrics
+            target_present = t != 0
+            pred_present = p != 0
+            
+            if target_present and pred_present:
+                overall_tp += 1
+            elif not target_present and pred_present:
+                overall_fp += 1
+            elif target_present and not pred_present:
+                overall_fn += 1
+            elif not target_present and not pred_present:
+                overall_tn += 1
+    
+    overall_instances = overall_tp + overall_fp + overall_tn + overall_fn
+    overall_accuracy = (overall_tp + overall_tn) / overall_instances if overall_instances > 0 else 0.0
     
     return {
         'presence_per_label': presence_results,
@@ -126,19 +189,29 @@ def compute_metrics(preds, targets):
                 'precision': sum(presence_macro['precision']) / NUM_LABELS,
                 'recall': sum(presence_macro['recall']) / NUM_LABELS,
                 'f1': sum(presence_macro['f1']) / NUM_LABELS,
+                'tp': macro_presence_tp,
+                'fp': macro_presence_fp,
+                'tn': macro_presence_tn,
+                'fn': macro_presence_fn,
+                'total_instances': macro_presence_instances,
+                'accuracy': macro_presence_accuracy
             },
             'stance': {
                 'precision': sum(stance_macro['precision']) / NUM_LABELS,
                 'recall': sum(stance_macro['recall']) / NUM_LABELS,
                 'f1': sum(stance_macro['f1']) / NUM_LABELS,
+                'tp': macro_stance_tp,
+                'fp': macro_stance_fp,
+                'fn': macro_stance_fn,
+                'total_instances': macro_stance_instances,
             }
         },
         'overall_totals': {
-            'total_tp': total_tp,
-            'total_fp': total_fp,
-            'total_tn': total_tn,
-            'total_fn': total_fn,
-            'total_instances': total_instances,
+            'total_tp': overall_tp,
+            'total_fp': overall_fp,
+            'total_tn': overall_tn,
+            'total_fn': overall_fn,
+            'total_instances': overall_instances,
             'overall_accuracy': overall_accuracy
         }
     }
