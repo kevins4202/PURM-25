@@ -10,6 +10,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import json
 import os
+import argparse
 
 # Configuration
 torch.set_float32_matmul_precision("high")
@@ -129,14 +130,26 @@ class ModelEvaluator:
 
 def main():
     """Main evaluation function"""
-    # Initialize evaluator
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
+    parser.add_argument('--broad', action='store_true', help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation (overwrites config)')
+    args = parser.parse_args()
+    
+    # Create evaluation config with command line overrides
+    evaluation_config = EVALUATION_CONFIG.copy()
+    if args.broad is not None:
+        evaluation_config["broad"] = args.broad
+    if args.zero_shot is not None:
+        evaluation_config["zero_shot"] = args.zero_shot
+    
     evaluator = ModelEvaluator(
-        model_config=MODEL_CONFIG, evaluation_config=EVALUATION_CONFIG
+        model_config=MODEL_CONFIG, evaluation_config=evaluation_config
     )
 
     # Load data
     dataloader = get_dataloaders(
-        batch_size=EVALUATION_CONFIG["batch_size"], split=False, zero_shot=EVALUATION_CONFIG["zero_shot"]
+        batch_size=evaluation_config["batch_size"], split=False, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model
