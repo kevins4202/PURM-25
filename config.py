@@ -8,7 +8,7 @@ from pydantic import BaseModel
 
 # Model configuration
 MODEL_CONFIG = {
-    "model_id": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
     "quantization": True,
 }
 
@@ -17,7 +17,7 @@ EVALUATION_CONFIG = {
     "batch_size": 1,
     "max_batches": None,  # For testing, set to None for full evaluation
     "broad": False,
-    "zero_shot": True,
+    "zero_shot": False,
 }
 
 OUTPUT_TO_CAT = {
