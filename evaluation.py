@@ -132,8 +132,9 @@ def main():
     """Main evaluation function"""
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
-    parser.add_argument('--broad', action='store_true', help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--broad', type=bool, help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', type=bool, help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--model_id', type=str, help='Model ID (overwrites config)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -143,8 +144,13 @@ def main():
     if args.zero_shot is not None:
         evaluation_config["zero_shot"] = args.zero_shot
     
+    # Create model config with command line overrides
+    model_config = MODEL_CONFIG.copy()
+    if args.model_id is not None:
+        model_config["model_id"] = args.model_id
+    
     evaluator = ModelEvaluator(
-        model_config=MODEL_CONFIG, evaluation_config=evaluation_config
+        model_config=model_config, evaluation_config=evaluation_config
     )
 
     # Load data

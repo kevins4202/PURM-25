@@ -17,8 +17,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
-model_path = MODEL_CONFIG["model_id"]
-output_path = f"results/{model_path.split('/')[-1]}.json"
+model_id = MODEL_CONFIG["model_id"]
+output_path = f"results/{model_id.split('/')[-1]}.json"
 
 def load_model(model_config):
     """Load and configure the vLLM model"""
@@ -136,8 +136,9 @@ def main():
     """Main evaluation function"""
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with vLLM using command line arguments')
-    parser.add_argument('--broad', action='store_true', help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--broad', type=bool, help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', type=bool, help='Use zero-shot evaluation (overwrites config)')
+    parser.add_argument('--model_id', type=str, help='Model ID (overwrites config)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -147,10 +148,15 @@ def main():
     if args.zero_shot is not None:
         evaluation_config["zero_shot"] = args.zero_shot
     
+    # Create model config with command line overrides
+    model_config = MODEL_CONFIG.copy()
+    if args.model_id is not None:
+        model_config["model_id"] = args.model_id
+    
     print(f"Using evaluation config: broad={evaluation_config['broad']}, zero_shot={evaluation_config['zero_shot']}")
     
     # Get model ID
-    model_id = MODEL_CONFIG["model_id"].split("/")[-1]
+    model_id = model_config["model_id"].split("/")[-1]
     
     # Determine output schema
     output_schema = BroadOutputSchema if evaluation_config["broad"] else GranularOutputSchema
@@ -162,7 +168,7 @@ def main():
     )
     
     # Load model
-    llm = load_model(MODEL_CONFIG)
+    llm = load_model(model_config)
     
     # Load data
     dataloader = get_dataloaders(
