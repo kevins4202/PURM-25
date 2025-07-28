@@ -98,15 +98,15 @@ class BroadOutputSchema(BaseModel):
     SubstanceAbuse: List[category_sentiment_broad]
     Safety: List[category_sentiment_broad]
 
-employment_labels = Literal[*CAT_TO_LABELS["PatientCaregiver_Employment"]]
-housing_labels = Literal[*CAT_TO_LABELS["HousingInstability"]]
-food_labels = Literal[*CAT_TO_LABELS["FoodInsecurity"]]
-financial_labels = Literal[*CAT_TO_LABELS["FinancialStrain"]]
-transportation_labels = Literal[*CAT_TO_LABELS["Transportation"]]
-childcare_labels = Literal[*CAT_TO_LABELS["Childcare"]]
-substance_labels = Literal[*CAT_TO_LABELS["SubstanceAbuse"]]
-safety_labels = Literal[*CAT_TO_LABELS["Safety"]]
-permanency_labels = Literal[*CAT_TO_LABELS["Permanency"]]
+employment_labels = Literal["PatientCaregiver_Unemployment"]
+housing_labels = Literal["Homelessness", "GeneralHousingInstability", "NeedTemporaryLodging", "HouseInstability_Other"]
+food_labels = Literal["LackofFundsforFood", "FoodInsecurity_Other"]
+financial_labels = Literal["Poverty", "LackofInsurance", "UnabletoPay", "FinancialStrain_Other"]
+transportation_labels = Literal["DistancefromHospital", "LackofTransportation", "Transportation_Other"]
+childcare_labels = Literal["ChildcareBarrierfromHospitalization", "ChildcareBarrierfromNonHospitalization", "NeedofChildcare", "Childcare_Other"]
+substance_labels = Literal["DrugUse", "Alcoholism", "SubstanceAbuse_Other"]
+safety_labels = Literal["ChildAbuse", "HomeSafety", "HomeAccessibility", "IntimatePartnerViolence", "HomeEnvironment_Other", "CommunitySafety", "CommunityAccessibility", "CommunityViolence", "CommunityEnvironment_Other"]
+permanency_labels = Literal["NonPermanentPlacement", "PermanentPlacementPending", "Permanency_Other"]
 
 
 class GranularOutputSchema(BaseModel):
