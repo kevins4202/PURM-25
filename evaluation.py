@@ -11,10 +11,13 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import json
 import os
 import argparse
+import re   
+import json
 
 # Configuration
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
+BATCH_SIZE = 1  # Default batch size
 
 
 class ModelEvaluator:
@@ -42,29 +45,73 @@ class ModelEvaluator:
             device_map=device,
         )
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
-<<<<<<< HEAD
-        tokenizer = AutoTokenizer.from_pretrained(self.model_config["model_id"])
-=======
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
->>>>>>> 2db62a4e82fef497c7508f492456653e077f4191
-        # Wrap with outlines
+        
         self.outlined_model = outlines.from_transformers(model, tokenizer)
+        
+        self.generator = model
+        self.tokenizer = tokenizer
 
     def generate_output(self, note):
         """Generate model output for a given user message"""
-        # Use outlines to generate structured output
-        try:
-            structured = self.outlined_model(
-                self.prompt.format(note=note),
-                self.output_schema,
-                max_new_tokens=512
-            )
-            
-            pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
-            print("Parsed structured output:", structured)
-        except Exception as e:
-            print("Failed to generate and parse structured output:", e)
-            pred = None
+        if self.evaluation_config.get("structured_output", True):
+            # Use outlines to generate structured output
+            try:
+                structured = self.outlined_model(
+                    self.prompt.format(note=note),
+                    self.output_schema,
+                    max_new_tokens=512
+                )
+                
+                pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
+                print("Parsed structured output:", structured)
+            except Exception as e:
+                print("Failed to generate and parse structured output:", e)
+                pred = None
+        else:
+            # Generate unstructured output
+            try:
+                prompt = self.prompt.format(note=note)
+
+                inputs = self.tokenizer(
+                    prompt,
+                    return_tensors="pt",
+                    truncation=True,
+                    max_length=2048
+                ).to(device)
+                
+                with torch.no_grad():
+                    outputs = self.generator.generate(
+                        **inputs,
+                        max_new_tokens=512,
+                        do_sample=True,
+                        temperature=0.7,
+                        pad_token_id=self.generator.generation_config.eos_token_id[0]
+                    )
+                
+                generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+                # Extract the generated part (after the prompt)
+                generated_output = generated_text[len(prompt):].strip()
+                
+                # Find first left and right curly brace
+                json_match = re.search(r'\{.*?\}', generated_output, re.DOTALL)
+                
+                if json_match:
+                    json_text = json_match.group(0)
+                else:
+                    raise ValueError(f"No JSON content found in unstructured output: {generated_output[:100]}...")
+                if json_text:
+                    print(f"Found JSON content: {json_text[:100]}...")
+
+                    # Try to parse as JSON
+                    parsed_json = json.loads(json_text)
+                    print("Successfully parsed JSON")
+                    pred = parsed_json
+                    
+            except Exception as e:
+                print("Failed to generate output:", e)
+                pred = None
+                
         return pred
 
     def evaluate(self, dataloader):
@@ -139,17 +186,27 @@ def main():
     parser.add_argument('--broad', type=bool, required=True, help='Use broad evaluation (overwrites config)')
     parser.add_argument('--zero_shot', type=bool, required=True, help='Use zero-shot evaluation (overwrites config)')
     parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
+    parser.add_argument('--structured', type=bool, default=True, help='Use structured output (default: True)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
     evaluation_config = {
         "broad": args.broad,
-        "zero_shot": args.zero_shot
+        "zero_shot": args.zero_shot,
+        "structured_output": args.structured  # Use structured output unless unstructured is specified
     }
     
     evaluator = ModelEvaluator(
         model_id=args.model_id, evaluation_config=evaluation_config
     )
+    
+    # Print evaluation configuration
+    print(f"\nEvaluation Configuration:")
+    print(f"Model: {args.model_id}")
+    print(f"Broad evaluation: {evaluation_config['broad']}")
+    print(f"Zero-shot: {evaluation_config['zero_shot']}")
+    print(f"Structured output: {evaluation_config['structured_output']}")
+    print()
 
     # Load data
     dataloader = get_dataloaders(
