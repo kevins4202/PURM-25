@@ -10,6 +10,7 @@ import torch
 import json
 import os
 import re
+import argparse
 
 # Configuration
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -133,16 +134,31 @@ def compute_and_save_metrics(preds, targets, broken_indices, model_id, prompt_pa
 
 def main():
     """Main evaluation function"""
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Evaluate model with vLLM using command line arguments')
+    parser.add_argument('--broad', action='store_true', help='Use broad evaluation (overwrites config)')
+    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation (overwrites config)')
+    args = parser.parse_args()
+    
+    # Create evaluation config with command line overrides
+    evaluation_config = EVALUATION_CONFIG.copy()
+    if args.broad is not None:
+        evaluation_config["broad"] = args.broad
+    if args.zero_shot is not None:
+        evaluation_config["zero_shot"] = args.zero_shot
+    
+    print(f"Using evaluation config: broad={evaluation_config['broad']}, zero_shot={evaluation_config['zero_shot']}")
+    
     # Get model ID
     model_id = MODEL_CONFIG["model_id"].split("/")[-1]
     
     # Determine output schema
-    output_schema = BroadOutputSchema if EVALUATION_CONFIG["broad"] else GranularOutputSchema
+    output_schema = BroadOutputSchema if evaluation_config["broad"] else GranularOutputSchema
     
     # Load prompt
     prompt_path, prompt = load_prompt(
-        EVALUATION_CONFIG["broad"],
-        EVALUATION_CONFIG["zero_shot"]
+        evaluation_config["broad"],
+        evaluation_config["zero_shot"]
     )
     
     # Load model
@@ -150,11 +166,11 @@ def main():
     
     # Load data
     dataloader = get_dataloaders(
-        batch_size=EVALUATION_CONFIG["batch_size"], split=False
+        batch_size=evaluation_config["batch_size"], split=False
     )
 
     # Evaluate model
-    preds, targets, broken_indices = evaluate(llm, dataloader, EVALUATION_CONFIG, prompt, output_schema)
+    preds, targets, broken_indices = evaluate(llm, dataloader, evaluation_config, prompt, output_schema)
 
     # Compute and save metrics
     compute_and_save_metrics(preds, targets, broken_indices, model_id, prompt_path)
