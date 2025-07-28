@@ -200,6 +200,7 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
     ).fillna("")
 
     if not zero_shot:
+        print("getting rid of duplicates")
         labels = labels[~labels["file"].isin(DUPLICATE_FILES)]
 
     labels = labels.set_index("file")
