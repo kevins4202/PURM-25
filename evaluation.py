@@ -53,68 +53,80 @@ class ModelEvaluator:
         self.generator = model
         self.tokenizer = tokenizer
 
-    def generate_output(self, note):
+    def generate_structured_output(self, note):
         """Generate model output for a given user message"""
-        if self.evaluation_config.get("structured_output", True):
-            # Use outlines to generate structured output
-            try:
-                structured = self.outlined_model(
-                    self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples),
-                    self.output_schema,
-                    max_new_tokens=512
-                )
+        try:
+            structured = self.outlined_model(
+                self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples),
+                self.output_schema,
+                max_new_tokens=512
+            )
+            
+            pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
+            print("Parsed structured output:", structured)
+        except Exception as e:
+            print("Failed to generate and parse structured output:", e)
+            pred = None
                 
-                pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
-                print("Parsed structured output:", structured)
-            except Exception as e:
-                print("Failed to generate and parse structured output:", e)
-                pred = None
-        else:
-            # Generate unstructured output
-            try:
-                prompt = self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples)
+        return pred
 
-                inputs = self.tokenizer(
-                    prompt,
-                    return_tensors="pt",
-                    truncation=True,
-                    max_length=8192
-                ).to(device)
-                
-                with torch.no_grad():
-                    outputs = self.generator.generate(
-                        **inputs,
-                        max_new_tokens=1024,
-                        do_sample=True,
-                        temperature=0.1,
-                        pad_token_id=self.generator.generation_config.eos_token_id[0]
-                    )
-                
-                generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+    def generate_unstructured_output(self, notes):
+        """Generate model output for a batch of notes (for unstructured output)"""
+        # For unstructured output, process as batch
+        try:
+            # Create batch prompts
+            batch_prompts = []
+            for note in notes:
+                prompt = self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples)
+                batch_prompts.append(prompt)
+            
+            # Tokenize all prompts
+            inputs = self.tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                truncation=True,
+                max_length=8192,
+                padding=True
+            ).to(device)
+            
+            with torch.no_grad():
+                outputs = self.generator.generate(
+                    **inputs,
+                    max_new_tokens=1024,
+                    do_sample=True,
+                    temperature=0.1,
+                    pad_token_id=self.generator.generation_config.eos_token_id[0]
+                )
+            
+            # Decode all outputs
+            preds = []
+            for i, output in enumerate(outputs):
+                generated_text = self.tokenizer.decode(output, skip_special_tokens=True)
                 # Extract the generated part (after the prompt)
+                prompt = batch_prompts[i]
                 generated_output = generated_text[len(prompt):].strip()
-                print("OUTPUT: ", generated_output)
+                print(f"OUTPUT {i}: ", generated_output)
                 
-                # Find first left and right curly brace
+                # Find JSON content
                 json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
                 
                 if json_match:
                     json_text = json_match.group(0)
-                else:
-                    raise ValueError(f"No JSON content found")
-                if json_text:
-                    print("Parsing found JSON text", json_text.replace('\n', ''))
-
+                    print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
+                    
                     # Try to parse as JSON
                     parsed_json = json.loads(json_text)
-                    print("Successfully parsed JSON")
-                    pred = parsed_json
+                    print(f"Successfully parsed JSON {i}")
+                    preds.append(parsed_json)
+                else:
+                    print(f"No JSON content found for output {i}")
+                    preds.append(None)
                     
-            except Exception as e:
-                print("Failed to generate output:", e)
-                pred = None
+        except Exception as e:
+            print(f"Failed to generate batch output: {e}")
+            preds = [None] * len(notes)
                 
-        return pred
+        return preds
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
@@ -132,17 +144,32 @@ class ModelEvaluator:
             print(f"\nbatch {idx + 1} of {self.max_batches if self.max_batches else len(dataloader)}")
             notes, labels = batch["note"], batch["labels"]
 
-            for i in range(len(notes)):
-                print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
-                pred = self.generate_output(notes[i])
+            if self.evaluation_config["structured_output"]:
+                # Process batch
+                batch_preds = []
+                for note in notes:
+                    batch_preds.append(self.generate_structured_output(note))
+            else:
+                # Process batch
+                batch_preds = self.generate_unstructured_output(notes)
+            
+            # Process each prediction in the batch
+            for i, (pred, label) in enumerate(zip(batch_preds, labels)):
+                print(f"NOTE {i}: {notes[i][:50].replace(chr(10), '')}...")
                 try:
+                    if pred is None:
+                        print(f"Failed to generate output for sample {idx}_{i}")
+                        broken_indices.append(f"{idx}_{i}")
+                        continue
+                    
                     print("\n\nGetting annotations...")
-                    preds.append(get_annotations(pred))
-                    targets.append(labels[i])
-                    print(f"prediction: {preds[-1]} \ntarget: {labels[i].tolist()}")
+                    pred_annotations = get_annotations(pred)
+                    preds.append(pred_annotations)
+                    targets.append(label)
+                    print(f"prediction: {pred_annotations} \ntarget: {label.tolist()}")
                 except Exception as e:
                     print(f"Error parsing output: {e} {pred}")
-                    broken_indices.append(idx)
+                    broken_indices.append(f"{idx}_{i}")
 
         return preds, targets, broken_indices
 
@@ -187,21 +214,21 @@ def main():
     
     Usage examples:
     # Broad evaluation, zero-shot, structured output
-    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct" --broad --zero_shot
+    python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct" --broad --zero-shot
     
     # Granular evaluation, few-shot, unstructured output
-    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct" --granular --few_shot --unstructured
+    python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct" --granular --few-shot --unstructured
     
     # Defaults: granular, zero-shot, structured
-    python evaluation.py --model_id "meta-llama/Llama-3.3-70B-Instruct"
+    python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct"
     """
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
     parser.add_argument('--broad', action='store_true', help='Use broad evaluation')
     parser.add_argument('--granular', action='store_true', help='Use granular evaluation (default if neither specified)')
-    parser.add_argument('--zero_shot', action='store_true', help='Use zero-shot evaluation')
-    parser.add_argument('--few_shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
-    parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
+    parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
+    parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
+    parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
     parser.add_argument('--structured', action='store_true', default=True, help='Use structured output (default: True)')
     parser.add_argument('--unstructured', action='store_true', help='Use unstructured output (overrides structured)')
     args = parser.parse_args()
@@ -212,7 +239,7 @@ def main():
         args.broad = True  # Default to broad if neither specified
     
     if not args.zero_shot and not args.few_shot:
-        args.zero_shot = False  # Default to zero-shot if neither specified
+        args.zero_shot = False  # Default to few-shot if neither specified
     
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise

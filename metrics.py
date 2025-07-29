@@ -66,6 +66,10 @@ def compute_metrics(preds, targets):
         precision_p = tp_p / (tp_p + fp_p) if (tp_p + fp_p) else 0.0
         recall_p = tp_p / (tp_p + fn_p) if (tp_p + fn_p) else 0.0
         f1_p = 2 * precision_p * recall_p / (precision_p + recall_p) if (precision_p + recall_p) else 0.0
+
+        presence_total_instances = tp_p + fp_p + fn_p + tn_p
+        presence_correct = tp_p + tn_p
+        presence_accuracy = presence_correct / presence_total_instances if presence_total_instances > 0 else 0.0
         
         presence_results[label] = {
             'precision': precision_p,
@@ -75,6 +79,9 @@ def compute_metrics(preds, targets):
             'fp': fp_p,
             'fn': fn_p,
             'tn': tn_p,
+            'accuracy': presence_accuracy,
+            'correct': presence_correct,
+            'total_instances': presence_total_instances,
         }
         presence_macro['precision'].append(precision_p)
         presence_macro['recall'].append(recall_p)
@@ -94,13 +101,13 @@ def compute_metrics(preds, targets):
             'precision': stance_precision,
             'recall': stance_recall,
             'f1': stance_f1,
-            'accuracy': stance_accuracy,
             'tp': tp_stance,
             'fp': fp_stance,
             'fn': fn_stance,
             'tn': tn_stance,
+            'accuracy': stance_accuracy,
+            'correct': stance_correct,
             'total_instances': stance_total_instances,
-            'correct': stance_correct
         }
 
         stance_macro['precision'].append(stance_precision)
@@ -115,7 +122,8 @@ def compute_metrics(preds, targets):
     macro_presence_instances = macro_presence_tp + macro_presence_fp + macro_presence_tn + macro_presence_fn
     
     # Calculate macro accuracy for presence
-    macro_presence_accuracy = (macro_presence_tp + macro_presence_tn) / macro_presence_instances if macro_presence_instances > 0 else 0.0
+    macro_presence_correct = macro_presence_tp + macro_presence_tn
+    macro_presence_accuracy = macro_presence_correct / macro_presence_instances if macro_presence_instances > 0 else 0.0
     
     # Calculate macro totals for stance (sum across all categories)
     macro_stance_tp = sum(stance_results[cat]['tp'] for cat in stance_results.keys())
@@ -126,7 +134,8 @@ def compute_metrics(preds, targets):
     macro_stance_instances = macro_stance_tp + macro_stance_fp + macro_stance_fn + macro_stance_tn
     
     # Calculate macro accuracy for stance
-    macro_stance_accuracy = (macro_stance_tp + macro_stance_tn) / macro_stance_instances if macro_stance_instances > 0 else 0.0
+    macro_stance_correct = macro_stance_tp + macro_stance_tn
+    macro_stance_accuracy = macro_stance_correct / macro_stance_instances if macro_stance_instances > 0 else 0.0
     
     return {
         'presence_per_label': presence_results,
@@ -140,18 +149,21 @@ def compute_metrics(preds, targets):
                 'fp': macro_presence_fp,
                 'tn': macro_presence_tn,
                 'fn': macro_presence_fn,
+                'correct': macro_presence_correct,
                 'total_instances': macro_presence_instances,
-                'accuracy': macro_presence_accuracy
+                'accuracy': macro_presence_accuracy,
             },
             'stance': {
                 'precision': sum(stance_macro['precision']) / NUM_LABELS,
                 'recall': sum(stance_macro['recall']) / NUM_LABELS,
                 'f1': sum(stance_macro['f1']) / NUM_LABELS,
-                'accuracy': macro_stance_accuracy,
                 'tp': macro_stance_tp,
                 'fp': macro_stance_fp,
                 'fn': macro_stance_fn,
+                'tn': macro_stance_tn,
+                'correct': macro_stance_correct,
                 'total_instances': macro_stance_instances,
+                'accuracy': macro_stance_accuracy,
             }
         },
 
