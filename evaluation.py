@@ -18,7 +18,7 @@ import json
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 1  # Default batch size
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 class ModelEvaluator:
@@ -34,7 +34,7 @@ class ModelEvaluator:
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
-        self.max_batches = 5
+        self.max_batches = 500
 
     def _load_model(self):
         """Load and configure the model"""
@@ -86,23 +86,24 @@ class ModelEvaluator:
                         **inputs,
                         max_new_tokens=512,
                         do_sample=True,
-                        temperature=0.7,
+                        temperature=0.1,
                         pad_token_id=self.generator.generation_config.eos_token_id[0]
                     )
                 
                 generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
                 # Extract the generated part (after the prompt)
                 generated_output = generated_text[len(prompt):].strip()
+                print("OUTPUT: ", generated_output)
                 
                 # Find first left and right curly brace
-                json_match = re.search(r'\{.*?\}', generated_output, re.DOTALL)
+                json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"Housing"\s*:\s*\[.*?],\s*"Food"\s*:\s*\[.*?],\s*"Financial"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
                 
                 if json_match:
                     json_text = json_match.group(0)
                 else:
-                    raise ValueError(f"No JSON content found in unstructured output: {generated_output[:100]}...")
+                    raise ValueError(f"No JSON content found")
                 if json_text:
-                    print(f"Found JSON content: {json_text[:100]}...")
+                    print("Parsing found JSON text", json_text.replace('\n', ''))
 
                     # Try to parse as JSON
                     parsed_json = json.loads(json_text)
@@ -135,6 +136,7 @@ class ModelEvaluator:
                 print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
                 pred = self.generate_output(notes[i])
                 try:
+                    print("\n\nGetting annotations...")
                     preds.append(get_annotations(pred))
                     targets.append(labels[i])
                     print(f"prediction: {preds[-1]} \ntarget: {labels[i].tolist()}")

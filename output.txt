@@ -1,210 +1,71 @@
-INFO 07-28 13:26:10 [__init__.py:235] Automatically detected platform cuda.
-INFO 07-28 13:26:12 [api_server.py:1755] vLLM API server version 0.10.0
-INFO 07-28 13:26:12 [cli_args.py:261] non-default args: {'model': 'mistralai/Mistral-7B-Instruct-v0.3'}
-INFO 07-28 13:26:19 [config.py:1604] Using max model len 32768
-INFO 07-28 13:26:19 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=2048.
-/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/transformers_utils/tokenizer_group.py:24: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer-mode "mistral"` to ensure correct encoding and decoding.
-  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
-INFO 07-28 13:26:24 [__init__.py:235] Automatically detected platform cuda.
-INFO 07-28 13:26:26 [core.py:572] Waiting for init message from front-end.
-INFO 07-28 13:26:26 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='mistralai/Mistral-7B-Instruct-v0.3', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.3', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=mistralai/Mistral-7B-Instruct-v0.3, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
-INFO 07-28 13:26:27 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-WARNING 07-28 13:26:27 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-INFO 07-28 13:26:27 [gpu_model_runner.py:1843] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
-INFO 07-28 13:26:28 [gpu_model_runner.py:1875] Loading model from scratch...
-INFO 07-28 13:26:28 [cuda.py:290] Using Flash Attention backend on V1 engine.
-INFO 07-28 13:26:28 [weight_utils.py:296] Using model weights format ['*.safetensors']
-Loading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]
-Loading safetensors checkpoint shards:  33% Completed | 1/3 [00:00<00:01,  1.46it/s]
-Loading safetensors checkpoint shards:  67% Completed | 2/3 [00:01<00:00,  1.37it/s]
-Loading safetensors checkpoint shards: 100% Completed | 3/3 [00:02<00:00,  1.45it/s]
-Loading safetensors checkpoint shards: 100% Completed | 3/3 [00:02<00:00,  1.44it/s]
+Loading and quantizing model  Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.39s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.44s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.33s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.32s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.71s/it]
+Using prompt:  broad_0_shot.txt
 
-INFO 07-28 13:26:30 [default_loader.py:262] Loading weights took 2.13 seconds
-INFO 07-28 13:26:31 [gpu_model_runner.py:1892] Model loading took 13.5084 GiB and 2.580658 seconds
-INFO 07-28 13:26:37 [backends.py:530] Using cache directory: /home/songk1/.cache/vllm/torch_compile_cache/786d520b4a/rank_0_0/backbone for vLLM's torch.compile
-INFO 07-28 13:26:37 [backends.py:541] Dynamo bytecode transform time: 6.72 s
-ERROR 07-28 13:26:39 [core.py:632] EngineCore failed to start.
-ERROR 07-28 13:26:39 [core.py:632] Traceback (most recent call last):
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 623, in run_engine_core
-ERROR 07-28 13:26:39 [core.py:632]     engine_core = EngineCoreProc(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 441, in __init__
-ERROR 07-28 13:26:39 [core.py:632]     super().__init__(vllm_config, executor_class, log_stats,
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 86, in __init__
-ERROR 07-28 13:26:39 [core.py:632]     self._initialize_kv_caches(vllm_config)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 158, in _initialize_kv_caches
-ERROR 07-28 13:26:39 [core.py:632]     self.model_executor.determine_available_memory())
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/executor/abstract.py", line 76, in determine_available_memory
-ERROR 07-28 13:26:39 [core.py:632]     output = self.collective_rpc("determine_available_memory")
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
-ERROR 07-28 13:26:39 [core.py:632]     answer = run_method(self.driver_worker, method, args, kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/utils/__init__.py", line 2985, in run_method
-ERROR 07-28 13:26:39 [core.py:632]     return func(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-ERROR 07-28 13:26:39 [core.py:632]     return func(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_worker.py", line 233, in determine_available_memory
-ERROR 07-28 13:26:39 [core.py:632]     self.model_runner.profile_run()
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2416, in profile_run
-ERROR 07-28 13:26:39 [core.py:632]     = self._dummy_run(self.max_num_tokens, is_profile=True)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-ERROR 07-28 13:26:39 [core.py:632]     return func(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2168, in _dummy_run
-ERROR 07-28 13:26:39 [core.py:632]     outputs = model(
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-ERROR 07-28 13:26:39 [core.py:632]     return self._call_impl(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-ERROR 07-28 13:26:39 [core.py:632]     return forward_call(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/model_executor/models/llama.py", line 584, in forward
-ERROR 07-28 13:26:39 [core.py:632]     model_output = self.model(input_ids, positions, intermediate_tensors,
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/compilation/decorators.py", line 272, in __call__
-ERROR 07-28 13:26:39 [core.py:632]     output = self.compiled_callable(*args, **kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 663, in _fn
-ERROR 07-28 13:26:39 [core.py:632]     raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 760, in _compile_fx_inner
-ERROR 07-28 13:26:39 [core.py:632]     raise InductorError(e, currentframe()).with_traceback(
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 745, in _compile_fx_inner
-ERROR 07-28 13:26:39 [core.py:632]     mb_compiled_graph = fx_codegen_and_compile(
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1295, in fx_codegen_and_compile
-ERROR 07-28 13:26:39 [core.py:632]     return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1197, in codegen_and_compile
-ERROR 07-28 13:26:39 [core.py:632]     compiled_fn = graph.compile_to_module().call
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/graph.py", line 2083, in compile_to_module
-ERROR 07-28 13:26:39 [core.py:632]     return self._compile_to_module()
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/graph.py", line 2130, in _compile_to_module
-ERROR 07-28 13:26:39 [core.py:632]     mod = PyCodeCache.load_by_key_path(
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 2747, in load_by_key_path
-ERROR 07-28 13:26:39 [core.py:632]     mod = _reload_python_module(key, path)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 36, in _reload_python_module
-ERROR 07-28 13:26:39 [core.py:632]     exec(code, mod.__dict__, mod.__dict__)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/.cache/vllm/torch_compile_cache/786d520b4a/rank_0_0/inductor_cache/x7/cx76twmgsavqj2pfeuptbe4wmtu4bedvqpu3shqulhehsfaxx3vr.py", line 60, in <module>
-ERROR 07-28 13:26:39 [core.py:632]     triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0 = async_compile.triton('triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0', '''
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/async_compile.py", line 346, in triton
-ERROR 07-28 13:26:39 [core.py:632]     kernel.precompile(warm_cache_only=False)
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 277, in precompile
-ERROR 07-28 13:26:39 [core.py:632]     self._make_launchers()
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 434, in _make_launchers
-ERROR 07-28 13:26:39 [core.py:632]     launchers.append(result.make_launcher())
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 1091, in make_launcher
-ERROR 07-28 13:26:39 [core.py:632]     binary._init_handles()
-ERROR 07-28 13:26:39 [core.py:632]   File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/triton/compiler/compiler.py", line 408, in _init_handles
-ERROR 07-28 13:26:39 [core.py:632]     self.module, self.function, self.n_regs, self.n_spills = driver.active.utils.load_binary(
-ERROR 07-28 13:26:39 [core.py:632] torch._inductor.exc.InductorError: SystemError: PY_SSIZE_T_CLEAN macro must be defined for '#' formats
-ERROR 07-28 13:26:39 [core.py:632] 
-ERROR 07-28 13:26:39 [core.py:632] Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
-ERROR 07-28 13:26:39 [core.py:632] 
-Process EngineCore_0:
-Traceback (most recent call last):
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 636, in run_engine_core
-    raise e
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 623, in run_engine_core
-    engine_core = EngineCoreProc(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 441, in __init__
-    super().__init__(vllm_config, executor_class, log_stats,
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 86, in __init__
-    self._initialize_kv_caches(vllm_config)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 158, in _initialize_kv_caches
-    self.model_executor.determine_available_memory())
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/executor/abstract.py", line 76, in determine_available_memory
-    output = self.collective_rpc("determine_available_memory")
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
-    answer = run_method(self.driver_worker, method, args, kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/utils/__init__.py", line 2985, in run_method
-    return func(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-    return func(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_worker.py", line 233, in determine_available_memory
-    self.model_runner.profile_run()
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2416, in profile_run
-    = self._dummy_run(self.max_num_tokens, is_profile=True)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-    return func(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2168, in _dummy_run
-    outputs = model(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/model_executor/models/llama.py", line 584, in forward
-    model_output = self.model(input_ids, positions, intermediate_tensors,
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/compilation/decorators.py", line 272, in __call__
-    output = self.compiled_callable(*args, **kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 663, in _fn
-    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 760, in _compile_fx_inner
-    raise InductorError(e, currentframe()).with_traceback(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 745, in _compile_fx_inner
-    mb_compiled_graph = fx_codegen_and_compile(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1295, in fx_codegen_and_compile
-    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1197, in codegen_and_compile
-    compiled_fn = graph.compile_to_module().call
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/graph.py", line 2083, in compile_to_module
-    return self._compile_to_module()
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/graph.py", line 2130, in _compile_to_module
-    mod = PyCodeCache.load_by_key_path(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 2747, in load_by_key_path
-    mod = _reload_python_module(key, path)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 36, in _reload_python_module
-    exec(code, mod.__dict__, mod.__dict__)
-  File "/home/songk1/.cache/vllm/torch_compile_cache/786d520b4a/rank_0_0/inductor_cache/x7/cx76twmgsavqj2pfeuptbe4wmtu4bedvqpu3shqulhehsfaxx3vr.py", line 60, in <module>
-    triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0 = async_compile.triton('triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0', '''
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/async_compile.py", line 346, in triton
-    kernel.precompile(warm_cache_only=False)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 277, in precompile
-    self._make_launchers()
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 434, in _make_launchers
-    launchers.append(result.make_launcher())
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 1091, in make_launcher
-    binary._init_handles()
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/triton/compiler/compiler.py", line 408, in _init_handles
-    self.module, self.function, self.n_regs, self.n_spills = driver.active.utils.load_binary(
-torch._inductor.exc.InductorError: SystemError: PY_SSIZE_T_CLEAN macro must be defined for '#' formats
+Evaluation Configuration:
+Model: meta-llama/Llama-3.1-8B-Instruct
+Broad evaluation: True
+Zero-shot: True
+Structured output: False
 
-Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+Loading data
 
-[rank0]:[W728 13:26:40.113119701 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-Traceback (most recent call last):
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1856, in <module>
-    uvloop.run(run_server(args))
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
-    return loop.run_until_complete(wrapper())
-  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
-    return await main
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1791, in run_server
-    await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1811, in run_server_worker
-    async with build_async_engine_client(args, client_config) as engine_client:
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/contextlib.py", line 199, in __aenter__
-    return await anext(self.gen)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 158, in build_async_engine_client
-    async with build_async_engine_client_from_engine_args(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/contextlib.py", line 199, in __aenter__
-    return await anext(self.gen)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 194, in build_async_engine_client_from_engine_args
-    async_llm = AsyncLLM.from_vllm_config(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 163, in from_vllm_config
-    return cls(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 117, in __init__
-    self.engine_core = EngineCoreClient.make_async_mp_client(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 98, in make_async_mp_client
-    return AsyncMPClient(*client_args)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 677, in __init__
-    super().__init__(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 408, in __init__
-    with launch_core_engines(vllm_config, executor_class,
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/contextlib.py", line 142, in __exit__
-    next(self.gen)
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 697, in launch_core_engines
-    wait_for_engine_startup(
-  File "/home/songk1/miniconda3/envs/llm/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 750, in wait_for_engine_startup
-    raise RuntimeError("Engine core initialization failed. "
-RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+batch 1 of 5
+NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
+Parsing found JSON text {  "Employment": [["Patient mother provided with requested letter for her employer.", "social need"]],  "Housing": [],  "Food": [],  "Financial": [],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
+Successfully parsed JSON
+
+
+Getting annotations...
+prediction: [1, 0, 0, 0, 0, 0, 0, 0, 0] 
+target: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+batch 2 of 5
+NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
+Parsing found JSON text { "Employment": [], "Housing": [], "Food": [], "Financial": [], "Transportation": [], "Childcare": [], "Permanency": [], "SubstanceAbuse": [], "Safety": [] }
+Successfully parsed JSON
+
+
+Getting annotations...
+prediction: [0, 0, 0, 0, 0, 0, 0, 0, 0] 
+target: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+batch 3 of 5
+NOTE: The Children's Hospital of Philadelphia    SO...
+Parsing found JSON text {  "Employment": [],  "Housing": [],  "Food": [],  "Financial": [["Insurance", "social need"]],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
+Successfully parsed JSON
+
+
+Getting annotations...
+prediction: [0, 0, 0, 1, 0, 0, 0, 0, 0] 
+target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
+
+batch 4 of 5
+NOTE: Social Work Care Plan NotePatient's Name:  Yari...
+Parsing found JSON text { "Employment": [["Mom is currently employed and has a stable income.", "no social need"]], "Housing": [["Mom will be home until after the surgery to do what is needed to prepare and recover.", "no social need"]], "Food": [["Mom is able to provide for Yaribeth's needs.", "no social need"]], "Financial": [["Mom will be going to the human resources office tomorrow to do her taxes and obtain the W2 form needed for her SSI.", "no social need"]], "Transportation": [["Mom will be leaving the bedside around 5:30pm tonight when her ride is able to come get her.", "no social need"]], "Childcare": [["Maternal Aunt will be coming to the bedside tonight and will remain at the bedside with Yaribeth while Mom is unable to be here.", "no social need"]], "Permanency": [["Maternal Aunt will be coming to the bedside tonight and will remain at the bedside with Yaribeth while Mom is unable to be here.", "no social need"]], "SubstanceAbuse": [["SW and Mom discussed getting a cot for the bedside for Mom to sleep on at night.", "no social need"]], "Safety": [["SW and Mom discussed getting a cot for the bedside for Mom to sleep on at night.", "no social need"]] }
+Successfully parsed JSON
+
+
+Getting annotations...
+prediction: [-1, -1, -1, -1, -1, -1, -1, -1, -1] 
+target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
+
+batch 5 of 5
+NOTE: The Children's Hospital of Philadelphia    SO...
+Parsing found JSON text {  "Employment": [],  "Housing": [],  "Food": [],  "Financial": [["Financial assistance from Fred's Footsteps", "no social need"]],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
+Successfully parsed JSON
+
+
+Getting annotations...
+prediction: [0, 0, 0, -1, 0, 0, 0, 0, 0] 
+target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
+
+
+Evaluation Summary:
+Total samples: 5
+Successful samples: 5
+Failed samples: 0
+Success rate: 100.00%
+Broken indices: []
+
+Metrics: {'presence_per_label': {0: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 2, 'fn': 0, 'tn': 3}, 1: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 2: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 3: {'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'tp': 3, 'fp': 0, 'fn': 0, 'tn': 2}, 4: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 5: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 6: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 7: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 8: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}}, 'stance_per_label': {0: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 1: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 2: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 3: {'precision': 1.0, 'recall': 0.3333333333333333, 'f1': 0.5, 'accuracy': 0.3333333333333333, 'tp': 1, 'fp': 0, 'fn': 2, 'tn': 0, 'total_instances': 3, 'correct': 1}, 4: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 5: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 6: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 7: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 8: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}}, 'macro_averages': {'presence': {'precision': 0.1111111111111111, 'recall': 0.1111111111111111, 'f1': 0.1111111111111111, 'tp': 3, 'fp': 9, 'tn': 33, 'fn': 0, 'total_instances': 45, 'accuracy': 0.8}, 'stance': {'precision': 0.1111111111111111, 'recall': 0.037037037037037035, 'f1': 0.05555555555555555, 'accuracy': 0.3333333333333333, 'tp': 1, 'fp': 0, 'fn': 2, 'total_instances': 3}}}

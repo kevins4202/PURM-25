@@ -49,16 +49,18 @@ You must format your entire output as a single JSON object, **without any additi
 
 Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an **empty list** for that category.
 
+Output JSON:
+
 {{
-  "Employment": [] OR [(evidence, "social need" OR "no social need")],
-  "Housing": [] OR [(evidence, "social need" OR "no social need")],
-  "Food": [] OR [(evidence, "social need" OR "no social need")],
-  "Financial": [] OR [(evidence, "social need" OR "no social need")],
-  "Transportation": [] OR [(evidence, "social need" OR "no social need")],
-  "Childcare": [] OR [(evidence, "social need" OR "no social need")],
-  "Permanency": [] OR [(evidence, "social need" OR "no social need")],
-  "Substance": [] OR [(evidence, "social need" OR "no social need")],
-  "Safety": [] OR [(evidence, "social need" OR "no social need")]
+  "Employment": [] OR [[evidence, "social need" OR "no social need"]],
+  "Housing": [] OR [[evidence, "social need" OR "no social need"]],
+  "Food": [] OR [[evidence, "social need" OR "no social need"]],
+  "Financial": [] OR [[evidence, "social need" OR "no social need"]],
+  "Transportation": [] OR [[evidence, "social need" OR "no social need"]],
+  "Childcare": [] OR [[evidence, "social need" OR "no social need"]],
+  "Permanency": [] OR [[evidence, "social need" OR "no social need"]],
+  "SubstanceAbuse": [] OR [[evidence, "social need" OR "no social need"]],
+  "Safety": [] OR [[evidence, "social need" OR "no social need"]]
 }}
 
 # Output Elements
@@ -72,3 +74,6 @@ Now, annotate the following clinical note following the guidelines and output fo
 
 # Input Note
 {note}
+
+Output JSON: 
+

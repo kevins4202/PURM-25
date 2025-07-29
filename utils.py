@@ -38,6 +38,7 @@ def get_annotations(output_json) -> List:
 
     for output_cat, internal_cat in OUTPUT_TO_CAT.items():
         output_json[output_cat] = [x for x in output_json[output_cat] if len(re.sub(r'[^\w\s]', '', x[-2]).strip()) > 0]
+        
         # Determine annotation value
         if any(item[-1] == "social need" for item in output_json[output_cat]):
             # Find the index of the internal category
