@@ -8,30 +8,25 @@ from typing import List, Tuple
 from config import OUTPUT_TO_CAT, CAT_TO_I
 import re
 
-def get_prompt_path(broad: bool, zero_shot: bool):
-    if broad:
-        if zero_shot:
-            return "broad_0_shot.txt"
-        else:
-            return "broad_1_shot.txt"
-    else:
-        if zero_shot:
-            return "granular_0_shot.txt"
-        else:
-            return "granular_1_shot.txt"
-
-
 def load_prompt(broad: bool, zero_shot: bool) -> Tuple[str, str]:
     """Load prompt from file"""
-    prompt_path = get_prompt_path(broad, zero_shot)
+    prompt_path = "broad_0_shot.txt" if broad else "granular_0_shot.txt"
     print("Using prompt: ", prompt_path)
     if not os.path.exists(f"prompts/{prompt_path}"):
         raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
 
     with open(f"prompts/{prompt_path}", "r") as f:
         prompt = f.read()
+        
+    examples = ""
+    
+    if not zero_shot:
+        print("Adding shots...")
+        examples_path = "broad_shots.txt" if broad else "granular_shots.txt"
+        with open(f"prompts/{examples_path}", "r") as f:
+            examples = f.read()
 
-    return prompt_path, prompt
+    return prompt_path, prompt, examples
 
 def get_annotations(output_json) -> List:
     annotations = [0] * len(CAT_TO_I)

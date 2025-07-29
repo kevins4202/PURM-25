@@ -18,7 +18,7 @@ import json
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 1  # Default batch size
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 class ModelEvaluator:
@@ -30,11 +30,11 @@ class ModelEvaluator:
         self.generator = None
         self.output_schema = BroadOutputSchema if self.evaluation_config["broad"] else GranularOutputSchema
         self._load_model()
-        self.prompt_path, self.prompt = load_prompt(
+        self.prompt_path, self.prompt, self.examples = load_prompt(
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
-        self.max_batches = 500
+        self.max_batches = 5
 
     def _load_model(self):
         """Load and configure the model"""
@@ -59,7 +59,7 @@ class ModelEvaluator:
             # Use outlines to generate structured output
             try:
                 structured = self.outlined_model(
-                    self.prompt.format(note=note),
+                    self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples),
                     self.output_schema,
                     max_new_tokens=512
                 )
@@ -72,19 +72,19 @@ class ModelEvaluator:
         else:
             # Generate unstructured output
             try:
-                prompt = self.prompt.format(note=note)
+                prompt = self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples)
 
                 inputs = self.tokenizer(
                     prompt,
                     return_tensors="pt",
                     truncation=True,
-                    max_length=2048
+                    max_length=8192
                 ).to(device)
                 
                 with torch.no_grad():
                     outputs = self.generator.generate(
                         **inputs,
-                        max_new_tokens=512,
+                        max_new_tokens=1024,
                         do_sample=True,
                         temperature=0.1,
                         pad_token_id=self.generator.generation_config.eos_token_id[0]
@@ -96,7 +96,7 @@ class ModelEvaluator:
                 print("OUTPUT: ", generated_output)
                 
                 # Find first left and right curly brace
-                json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"Housing"\s*:\s*\[.*?],\s*"Food"\s*:\s*\[.*?],\s*"Financial"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
+                json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
                 
                 if json_match:
                     json_text = json_match.group(0)
@@ -212,7 +212,7 @@ def main():
         args.broad = True  # Default to broad if neither specified
     
     if not args.zero_shot and not args.few_shot:
-        args.zero_shot = True  # Default to zero-shot if neither specified
+        args.zero_shot = False  # Default to zero-shot if neither specified
     
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise

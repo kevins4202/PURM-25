@@ -8,9 +8,9 @@ from pydantic import BaseModel
 
 OUTPUT_TO_CAT = {
     "Employment": "PatientCaregiver_Employment",
-    "Housing": "HousingInstability",
-    "Food": "FoodInsecurity",
-    "Financial": "FinancialStrain",
+    "HousingInstability": "HousingInstability",
+    "FoodInsecurity": "FoodInsecurity",
+    "FinancialStrain": "FinancialStrain",
     "Transportation": "Transportation",
     "Childcare": "Childcare",
     "Permanency": "Permanency",

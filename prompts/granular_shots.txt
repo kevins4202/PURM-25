@@ -1,90 +1,18 @@
-# You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes.
-
-Your task is to extract certain categories of social risks and identify if there is a social need given a free-text clinical note.
-
-Below are the 9 categories of social risks, each followed by its official definition and source. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict; do not annotate a category that is implied.
-
-If multiple categories are present in the clinical note, you must include all that apply. Do not stop at the first matching category. Note that it is also possible for none of the categories to be present.
-
-# 9 Categories of Social Risks and Social Needs
-The following provides a definition and a source of each social risk.
-## Employment  
-- Definition: Pertains to individuals either working, actively seeking work, or facing underemployment due to inadequate income or lack of employment altogether, distinguishing from individuals who opt not to work while having sufficient financial means.  
-- Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
-
-## Housing Instability  
-- Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
-- Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
-
-## Food Insecurity  
-- Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods.  
-- Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/  
-
-## Financial Strain  
-- Definition: Finances or financial resources fall short of meeting essential expenses.  
-- Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
-
-## Transportation  
-- Definition: Lack of safe and accessible transportation  
-- Source: Healthy People 2030. (n.d.). Transportation - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/transportation  
-
-## Childcare  
-- Definition: Lack of or barriers for at least one parent or caregiver to care for their own child or supplement care with center-based care or non-parental home-based care arrangements  
-- Source: Morrissey, T. (2019). The Effects Of Early Care And Education On Children’s Health. Health Affairs. https://doi.org/10.1377/hpb20190325.519221  
-
-## Permanency  
-- Definition: Lack of residence with a permanent caregiver including biological parent, adoptive parent, or other legal guardian.  
-- Source: Child Welfare Information Gateway. (n.d.) Permanency. https://www.childwelfare.gov/topics/permanency/?top=116  
-
-## Substance Abuse  
-- Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks.
-- Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use  
-
-## Safety  
-- Definition: Risks, hazards, or trauma occurring in the home or surrounding community, including violence, unsafe air or water, or other health and safety issues that can negatively influence child health or quality of life.  
-- Source: Healthy People 2030. (n.d.). Neighborhood and Built Environment. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/neighborhood-and-built-environment  
-
-# Output Format
-You must format your entire output as a single JSON object, **without any additional comments, explanations, or introductory text.** Do not wrap the JSON in markdown code blocks.
-
-Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an **empty list** for that category.
-
-Output JSON:
-
-{{
-  "Employment": [] OR [[evidence, "social need" OR "no social need"]],
-  "Housing": [] OR [[evidence, "social need" OR "no social need"]],
-  "Food": [] OR [[evidence, "social need" OR "no social need"]],
-  "Financial": [] OR [[evidence, "social need" OR "no social need"]],
-  "Transportation": [] OR [[evidence, "social need" OR "no social need"]],
-  "Childcare": [] OR [[evidence, "social need" OR "no social need"]],
-  "Permanency": [] OR [[evidence, "social need" OR "no social need"]],
-  "Substance": [] OR [[evidence, "social need" OR "no social need"]],
-  "Safety": [] OR [[evidence, "social need" OR "no social need"]]
-}}
-
-# Output Elements
-- **evidence**: A non-empty quote from the clinical note that justifies the annotation.
-- **social need**: Indicates that the category of the social risk is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
-- **no social need**: Indicates that the social risk is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
-- **[]**: If there is no evidence for a category, then output an **empty list** for that category.
+# Examples
+Here are some examples of notes and their corresponding annotations:
 
 # Examples
 Here are some examples of notes and their corresponding annotations:
 
 ## Example
+
 Input Note:
 
+"""
  The Children's Hospital 
 of Philadelphia 
 
-
-
 SOCIAL WORK NOTE 
-
-
-
-
 
 PATIENT NAME: Epsilon Epsilon One Hundred And Fifty-Seven
 CHOP MRN#: 56984676
@@ -92,69 +20,57 @@ DOB:  1/1/1901
 TODAY'S DATE:  4/28/2023
 TODAY'S TIME: 10:50 AM
 
-
 Social work continues to follow this patient.  
-
 
 Additional Comments: 
 Epic medical record reviewed; Trauma morning report discussion.
 
-
 SW received chat message from nursing regarding positive CRAFFT questionnaire; SW reviewed Flowsheets.
-
 
 SW met with patient at bedside; no family present and patient is agreeable with conversation.
 
-
-
-
 Patient reports vaping 7 times over past year.  Patient states he stopped vaping about a month ago, and declines any outpatient resource for substance misuse. 
-
 
 Patient denies smoking marijuana and  use of any other substances. Patient denies use of alcohol. 
 
-
 SW provided anticipatory guidance regarding substance misuse.
-
 
 Per discussion, patient denies any safety concerns in his mother's home and in the school environment.   Patient is active with playing basketball for Upper Darby HS, and is hopeful for a complete recovery so he can play next year. 
 
-
 SW informed patient that outpatient resources for supportive therapy will be provided to his mother, and encouraging patient to consider participation if/when scheduled for emotional recovery from trauma.   
-
-
-
 
 Time Spent: 60 minutes
 
-
 Acuity: Level 2 - Require information / education / recommendations / advance planning
-
 
 Electronically signed:
 Jennifer H Kovic, MSW, LCSW	
 4/28/2023	10:50 AM
+"""
 
+Final output:
 
-Output JSON:
-
+<|begin_output|> 
 {{
   "Employment": [],
-  "Housing": [],
-  "Food": [],
-  "Financial": [],
+  "HousingInstability": [],
+  "FoodInsecurity": [],
+  "FinancialStrain": [],
   "Transportation": [],
   "Childcare": [],
   "Permanency": [],
-  "SubstanceAbuse": [["Patient denies smoking marijuana and  use of any other substances.", "no social need"], ("Patient denies use of alcohol.", "no social need"]],
-  "Safety": [["Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need"], ("Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need"]]
+  "SubstanceAbuse": [["DrugUse", "Patient denies smoking marijuana and  use of any other substances.", "no social need"], ["Alcoholism", "Patient denies use of alcohol.", "no social need"]],
+  "Safety": [["HomeSafety", "Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need"], ["CommunitySafety", "Per discussion, patient denies any safety concerns in his mother's home and in the school environment.", "no social need"]]
 }}
 
+<|end_output|>
+
 ## Example
+
 Input Note: 
 
+"""
 SOCIAL WORK CARE PLAN NOTE
-
 
 Problem: ADJUSTMENT
 Goal: Patient/family/caregiver receive supportive counseling and/or resource referrals to assist in adjustment to hospitalization
@@ -165,55 +81,43 @@ Adjustment - Intervention - hospitalization:
  Assist patient/family/caregiver in problem-solving for hospitalization-related stressors
 
 
-
-
-
 Progress:  LSW spoke with patient parens via phone. Medical team provided satisfactory communication to patient parents this week per parents. Patient parents thanked medical team for continued partnership.
-
-
 LSW assessed patient and patient families emotional needs and none identified at this time. Patient mother planning to be present at the bedside tomorrow to support Brielle through planned transition to high flo.
-
-
 Patient father will be present at the bedside virtually tomorrow.
-
-
 Patient mother provided with requested letter for her employer. 
-
-
-
 
 Plan: 
 LSW will cont. To provide social and emotional therapeutic support to patient and patient family to promote a better understanding of their lived experience and address needs. LSW will cont. to provide necessary information to the rest of the interdisciplinary team in effort to provide holistic quality care. 
-
-
 Time Spent: 30 minutes
 Acuity: Level 2 - Require information / education / recommendations / advance planning
-
 
 Electronically signed:
 Qadriyyah Major	
 5/4/2023	2:36 PM
+"""
 
+Final output:
 
-Output JSON: 
-
+<|begin_output|>
 {{
   "Employment": [],
-  "Housing": [],
-  "Food": [],
-  "Financial": [],
+  "HousingInstability": [],
+  "FoodInsecurity": [],
+  "FinancialStrain": [],
   "Transportation": [],
   "Childcare": [],
   "Permanency": [],
   "Substance": [],
   "Safety": []
 }}
+<|end_output|>
 
 ## Example
+
 Input Note: 
 
+"""
 SOCIAL WORK CARE PLAN NOTE
-
 
 Problem: RESOURCE NEEDS
 Goal: Patient/family/caregiver will have needed supports to maintain employment/income
@@ -221,70 +125,53 @@ Outcome: Ongoing
 Goal: Patient will have adequate insurance coverage to obtain necessary medical care
 Outcome: Ongoing
 
-
-
 Problem: ADJUSTMENT
 Goal: Patient/family/caregiver progress in adjustment to illness/disability
 Outcome: Ongoing
 
-
-
 Progress:  Social worker met with mother at bedside in the NICU. Mother expressed that she is coping well at this time. Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA. 
 
-
-
-
 Plan: Social worker will continue to follow. 
-
-
-
 
 Time Spent: 30 minutes
 Acuity: Level 2 - Require information / education / recommendations / advance planning
 
-
-
-
 Electronically signed:
 Alexandra M Pomar	
 4/4/2023	4:53 PM
+"""
 
+Final output:
 
-
-Output JSON: 
-
+<|begin_output|>
 {{
-  "Employment": [["Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"], ("Goal: Patient/family/caregiver will have needed supports to maintain employment/income", "no social need"]],
-  "Housing": [],
-  "Food": [],
-  "Financial": [["Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"], ("Goal: Patient will have adequate insurance coverage to obtain necessary medical care", "no social need"]],
+  "Employment": [["PatientCaregiver_Unemployment", "Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"], ["PatientCaregiver_Unemployment", "Goal: Patient/family/caregiver will have needed supports to maintain employment/income", "no social need"]],
+  "HousingInstability": [],
+  "FoodInsecurity": [],
+  "FinancialStrain": [["LackofInsurance", "Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA", "no social need"], ["LackofInsurance", "Goal: Patient will have adequate insurance coverage to obtain necessary medical care", "no social need"]],
   "Transportation": [],
   "Childcare": [],
   "SubstanceAbuse": [],
   "Safety": [],
   "Permanency": []
 }}
+<|end_output|>
 
 ## Example
 Input Note: 
 
-					
+""""				
  The Children's Hospital 
 of Philadelphia 
 
-
-
   SOCIAL WORK NOTE 
 PATIENT/FAMILY ASSESSMENT 
-
 
 PATIENT NAME: Nhoam Bernadel
 CHOP MRN#: 56934897
 DOB:  12/7/2022
 
-
 Referral Information:  
-
 
 Referral Information 
 Date/Time 02/28/23 10:16 
@@ -297,11 +184,7 @@ Primary Service: Cardiology
 Consulting Service: Otolaryngology;Pulmonary 
 Assessment Type Initial Assessment 
 
-
-
-
 Social Setting:
-
 
 Social Setting 
 Date/Time 02/28/23 10:16 
@@ -310,11 +193,7 @@ Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with
 School Status OTHER 
 Other School Status Comment: N/A, infant 
 
-
-
-
 Custody/Consent Information:
-
 
 Custody/Consent Information 
 Date/Time 02/28/23 10:16 
@@ -323,11 +202,7 @@ Who can provide consent for this patient? Parents, Karine Moise and Kesenel Bern
 Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
 Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
 
-
-
-
 Patient and Family/Caregiver Strengths and Stressors:
-
 
 Patient and Family/Caregivers Strengths and Stressors 
 Date/Time 02/28/23 10:16 
@@ -346,11 +221,7 @@ Parent Stressors Language barrier, temporary protected status, financial strain,
 Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
 Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI. 
 
-
-
-
 Assessment Summary:
-
 
 Resource Needs 
 Date/Time 02/28/23 10:16 
@@ -363,8 +234,6 @@ Goal - Local Accommodations SW added mom to RMH waitlist and provided informatio
 Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan 
 
 
-
-
 Adjustment: 
 Date/Time 02/28/23 10:16 
 Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
@@ -372,54 +241,50 @@ Goal- Adjustment to Hospitalization SW will continue to support family in naviga
 Intervention/Plan - Adjustment to Hospitalization Provide access to family with language barrier to appropriate hospital communication and consistent clarification of understanding 
 
 
-
 Professional Collaboration:
-
 
 Professional Collaboration: 
 Date/Time 02/28/23 10:16 
 Professional Collaboration PARENT/CAREGIVER;FRONT LINE CLINICIAN;NURSING;SOCIAL WORK 
 Time Spent (min) 30 min 
 Acuity  Level 2 
-
 Taylor Goldberg
 10:35 AM
 2/28/2023
+"""
 
+Final Output:
 
-Output JSON: 
-
+<|begin_output|>
 {{
-  "Employment": [["Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "social need"], ("Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "no social need"]],
-  "Housing": [["Housing instability YES Housing instability comment: Per mom, the family pays month-to-month for their housing arrangement and does not have a formal lease.", "social need"], ("Goal - Local Accommodations SW added mom to RMH waitlist and provided information on facility Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan", "social need"]], 
-  "Food": [], 
-  "Financial": [["Karine receives monetary support from her aunt.", "social need"], ("Food insecurity YES Food insecurity comment: Per mom, the family faces significant financial strain and has difficulty affording basic needs.", "social need"], ("Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"], ("Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI.", "no social need"], ("Resource Needs Problem: HOUSEHOLD FINANCES;TRANSPORTATION;LOCAL ACCOMODATIONS Goal - Household Finances SW will continue to support family in accessing appropriate financial resources Intervention/Plan - Household Finances SW will assist mom in applying for SSI and connecting to local immigration agencies to provide access to eligible resources", "social need"]], 
-  "Transportation": [["Nhoam's cousin also lives in the home and supports the family with transport.", "social need"], ("Karine has a 13 y/o son that remains in Haiti.", "social need"], ("Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"], ("Goal- Transportation SW confirmed with NJ Modivcare that pt is enrolled, will coach mom on how to use service Intervention/Plan - Transportation T/b with NJ Modivcare to assist in enrolling pt in services for reliable transport for medical apts", "social need"]], 
-  "Childcare": [["Karine has a 13 y/o son that remains in Haiti.", "social need"]], 
-  "Permanency": [["Patient living situation: PARENT(S] Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with his mother, Karine.", "no social need"], ("Nhoam's father is involved but does not currently live with Nhoam and mom, he does live in the local area.", "no social need"]],
+  "Employment": [["PatientCaregiver_Unemployment", "Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "social need"], ["PatientCaregiver_Unemployment", "Karine is unemployed and father, Kesnel, recently started working for Coca-cola.", "no social need"]],
+  "HousingInstability": [["GeneralHousingInstability", "Housing instability YES Housing instability comment: Per mom, the family pays month-to-month for their housing arrangement and does not have a formal lease.", "social need"], ["NeedTemporaryLodging", "Goal - Local Accommodations SW added mom to RMH waitlist and provided information on facility Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan", "social need"]], 
+  "FoodInsecurity": [], 
+  "FinancialStrain": [["FinancialStrain_Other", "Karine receives monetary support from her aunt.", "social need"], ["FinancialStrain_Other", "Food insecurity YES Food insecurity comment: Per mom, the family faces significant financial strain and has difficulty affording basic needs.", "social need"], ["FinancialStrain_Other", "Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"], ["LackofInsurance", "Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI.", "no social need"], ["FinancialStrain_Other", "Resource Needs Problem: HOUSEHOLD FINANCES;TRANSPORTATION;LOCAL ACCOMODATIONS Goal - Household Finances SW will continue to support family in accessing appropriate financial resources Intervention/Plan - Household Finances SW will assist mom in applying for SSI and connecting to local immigration agencies to provide access to eligible resources", "social need"]], 
+  "Transportation": [["LackofTransportation", "Nhoam's cousin also lives in the home and supports the family with transport.", "social need"], ["DistancefromHospital", "Karine has a 13 y/o son that remains in Haiti.", "social need"], ["DistancefromHospital", "Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital", "social need"], ["LackofTransportation", "Goal- Transportation SW confirmed with NJ Modivcare that pt is enrolled, will coach mom on how to use service Intervention/Plan - Transportation T/b with NJ Modivcare to assist in enrolling pt in services for reliable transport for medical apts", "social need"]], 
+  "Childcare": [["ChildcareBarrierfromNonHospitalization", "Karine has a 13 y/o son that remains in Haiti.", "social need"]], 
+  "Permanency": [["NonPermanentPlacement", "Patient living situation: PARENT[S] Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with his mother, Karine.", "no social need"], ["NonPermanentPlacement", "Nhoam's father is involved but does not currently live with Nhoam and mom, he does live in the local area.", "no social need"]],
   "SubstanceAbuse": [], 
   "Safety": []
 }}
+<|end_output|>
 
 ## Example 
+
 Input Note: 
-					
+
+"""
  The Children's Hospital 
 of Philadelphia 
 
-
-
   SOCIAL WORK NOTE 
 PATIENT/FAMILY ASSESSMENT 
-
 
 PATIENT NAME: Majesty Kenneh
 CHOP MRN#: 56834484
 DOB:  4/22/2022
 
-
 Referral Information:  
-
 
 Referral Information 
 Date/Time 10/28/22  
@@ -432,11 +297,7 @@ Primary Service: Neonatal
 Consulting Service: None 
 Assessment Type Initial Assessment 
 
-
-
-
 Social Setting:
-
 
 Social Setting 
 Date/Time 10/28/22  
@@ -447,11 +308,7 @@ Children in the home Information: 4: Patient, 6 year old brother, 8 year old cou
 School Status OTHER 
 Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare. 
 
-
-
-
 Custody/Consent Information:
-
 
 Custody/Consent Information 
 Date/Time 10/28/22  
@@ -460,11 +317,7 @@ Who can provide consent for this patient? Parents: Romel Diahn and Salio Kenneh.
 Is there a durable healthcare power of attorney, Advance Directive, or medical consent authorization in place? NO 
 Is Guardianship in place? NO, GUARDIANSHIP NOT NEEDED 
 
-
-
-
 Patient and Family/Caregiver Strengths and Stressors:
-
 
 Patient and Family/Caregivers Strengths and Stressors 
 Date/Time 10/28/22  
@@ -481,11 +334,7 @@ Parent Stressors Unanticipated ICU-level hospitalization.
 Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI 
 Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan. Family is receiving SNAP benefits. Mother applied for CCS benefits but family was denied as they were over-income. Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness. 
 
-
-
-
 Assessment Summary:
-
 
 Resource Needs 
 Date/Time 10/28/22  
@@ -493,27 +342,17 @@ Resource Needs Problem: CHILD CARE/DAY CARE
 Goal - Child care/Day care Family will reapply for CCS benefits. 
 Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits. 
 
-
-
-
 Adjustment: 
 Date/Time 10/28/22  
 Adjustment Problems ADJUSTMENT TO HOSPITALIZATION 
 Goal- Adjustment to Hospitalization Family will be oriented to the CHOP NICU. 
 Intervention/Plan - Adjustment to Hospitalization Provided information about the role of the NICU social worker, NICU parent sleep rooms. 
 
-
-
-
 Relationships/Behavior 
 Date/Time 10/28/22  
 Relationships/Behavior Problems NONE IDENTIFIED 
 
-
-
-
 Professional Collaboration:
-
 
 Professional Collaboration: 
 Date/Time 10/28/22  
@@ -521,41 +360,39 @@ Professional Collaboration PARENT/CAREGIVER;NURSING;SOCIAL WORK
 Time Spent (min) 30 min 
 Acuity  Level 2 
 
-
 Social worker met with mother at bedside in the NICU. Mother shared that she has been staying overnight in the hospital most nights since Majesty's admission. Mother is coping as well as can be expected considering Majesty's unanticipated NICU hospitalization. No immediate social work needs identified. 
 
-
 Plan: Social worker will continue to follow. 
-
 
 Alexandra M Pomar
 4:33 PM
 10/28/2022
+"""
 
+Final output: 
 
-Output JSON: 
-
+<|begin_output|>
 {{
-  "Employment": [["Father is employed full time. Mother is working on a per diem basis at this time and has been able to take the time off that she needs from work.", "no social need"], ("Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness.", "social need"]], 
-  "Housing": [], 
-  "Food": [["Family is receiving SNAP benefits.", "no social need"]], 
-  "Financial": [["Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan.", "no social need"]], 
-  "Transportation": [["Family lives in Swarthmore, PA (about 30 minutes from CHOP].", "no social need"]], 
-  "Childcare": [["Resource Needs Problem: CHILD CARE/DAY CARE Goal - Child care/Day care Family will reapply for CCS benefits. Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits.", "no social need"], ("Mother applied for CCS benefits but family was denied as they were over-income.", "no social need"], ("Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare.", "no social need"]], 
-  "Permanency": [["Patient living situation: PARENT(S];RELATIVE(S);CHILDREN IN THE HOME", "no social need"]], 
+  "Employment": [["PatientCaregiver_Unemployment", "Father is employed full time. Mother is working on a per diem basis at this time and has been able to take the time off that she needs from work.", "no social need"], ["PatientCaregiver_Unemployment", "Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness.", "social need"]], 
+  "HousingInstability": [], 
+  "FoodInsecurity": [["LackofFundsforFood", "Family is receiving SNAP benefits.", "no social need"]], 
+  "FinancialStrain": [["LackofInsurance", "Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan.", "no social need"]], 
+  "Transportation": [["DistancefromHospital", "Family lives in Swarthmore, PA [about 30 minutes from CHOP].", "no social need"]], 
+  "Childcare": [["NeedofChildcare", "Resource Needs Problem: CHILD CARE/DAY CARE Goal - Child care/Day care Family will reapply for CCS benefits. Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits.", "no social need"], ["NeedofChildcare", "Mother applied for CCS benefits but family was denied as they were over-income.", "no social need"], ["NeedofChildcare", "Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare.", "no social need"]], 
+  "Permanency": [["NonPermanentPlacement", "Patient living situation: PARENT[S];RELATIVE[S];CHILDREN IN THE HOME", "no social need"]], 
   "SubstanceAbuse": [], 
   "Safety": []
 }}
+<|end_output|>
 
 ## Example 
 
+"""
  The Children's Hospital 
 of Philadelphia 
 
 
-
    SOCIAL WORK PROGRESS RECORD 
-
 
 PATIENT NAME: Baby Boy Alexis Walkowitz
 CHOP MRN#: 56869565
@@ -563,50 +400,40 @@ DOB:  7/21/2022
 TODAY'S DATE:  7/22/2022
 TODAY'S TIME:  4:42 PM
 
-
 Problems: 
 Hospitalization 
 Substance abuse 
 
-
 Progress: 
-
 
 SW in communication with HUP SW LaTesha Kearney Beauford (215-279-1117) assigned to mother of the patient. HUP SW confirmed that there was a +UDS on 7/20 for methadone and fentanyl. Per HUP SW, mother disclosed heroin use within the last week. HUP SW confirmed that a report with DCPP will be filed by HUP SW today. SW relayed this information to the medical team. 
 
-
 HUP SW later informed this SW that she was able to connect with mom for assessment and support. HUP SW notified mom that report was filed. HUP SW shared that mom was hoping to visit bedside soon, mom did not arrive while SW was present during the day. SW briefly met pt's maternal great-grandmother Paula Neff, who mom lives with in NJ. 
-
 
 Plan: SW will continue to follow and provide support. SW will collaborate with DCPP as needed. SW will continue to be available to the family and medical team. 
 
-
 Time Spent: 60 minutes
 
-
 Acuity: Level 2 - Require information / education / recommendations / advance planning
-
 
 Electronically signed:
 Melissa Greberman, LCSW
 7/22/2022	4:42 PM
+"""
 
-Output JSON: 
+Final output: 
 
+<|begin_output|>
 {{
   "Employment": [], 
-  "Housing": [], 
-  "Food": [], 
-  "Financial": [], 
+  "HousingInstability": [], 
+  "FoodInsecurity": [], 
+  "FinancialStrain": [], 
   "Transportation": [], 
   "Childcare": [], 
   "Permanency": [], 
-  "SubstanceAbuse": [["Substance abuse", "social need"], ("HUP SW confirmed that there was a +UDS on 7/20 for methadone and fentanyl. Per HUP SW, mother disclosed heroin use within the last week.", "social need"]], 
-  "Safety": [["Plan: SW will continue to follow and provide support. SW will collaborate with DCPP as needed. SW will continue to be available to the family and medical team.", "social need"], ("HUP SW confirmed that a report with DCPP will be filed by HUP SW today. SW relayed this information to the medical team.", "social need"]]
+  "SubstanceAbuse": [["DrugUse", "Substance abuse", "social need"], ["DrugUse", "HUP SW confirmed that there was a +UDS on 7/20 for methadone and fentanyl. Per HUP SW, mother disclosed heroin use within the last week.", "social need"]], 
+  "Safety": [["HomeEnvironment_Other", "Plan: SW will continue to follow and provide support. SW will collaborate with DCPP as needed. SW will continue to be available to the family and medical team.", "social need"], ["HomeEnvironment_Other", "HUP SW confirmed that a report with DCPP will be filed by HUP SW today. SW relayed this information to the medical team.", "social need"]]
 }}
+<|end_output|>
 
-# TASK
-Now, annotate the following clinical note following the guidelines, and output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. Otherwise, do not include that category if the evidence is blank. 
-
-# Input Note
-{note}

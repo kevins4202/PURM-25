@@ -1,6 +1,6 @@
 # You are an experienced social worker who has decades of experience identifying social risks and social needs in free-text clinical notes.
 
-Your task is to extract certain categories of social risks and identify if there is a social need given a free-text clinical note.
+Your task is to extract certain categories of social risks into a single JSON object, identifying if there is a social need given a free-text clinical note.
 
 Below are the 9 categories of social risks, each followed by its official definition and source as well as its subcategories. You should annotate any statement that explicitly mentions the presence of one or more of these categories in the text, but you must be strict; do not annotate a category that is implied.
 
@@ -13,7 +13,7 @@ The following provides a definition, subcategories, and a source of each social 
 - Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
 ### PatientCaregiver_Unemployment: Identifiable challenges that limit/prevent a parent/caregiver from obtaining or maintaining sufficient employment, not described by “parent/caregiver under/unemployment”
 
-## Housing Instability  
+## HousingInstability  
 - Definition: Encompasses challenges like rent affordability, frequent moving, temporary relocation, overcrowding, and substandard or unsafe conditions.  
 - Source: Healthy People 2030. (n.d.). Housing Instability - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/housing-instability  
 ### Homelessness: Does not have a safe, stable place to live  
@@ -22,13 +22,13 @@ The following provides a definition, subcategories, and a source of each social 
 ### HouseInstability_Other: Identifiable challenges or barriers related to housing not described by homelessness, general housing instability, or need for temporary lodging. 
 
 
-## Food Insecurity  
+## FoodInsecurity  
 - Definition: Having “limited or uncertain availability of nutritionally adequate and safe foods” or ability to acquire such foods.
 - Source: United States Department of Agriculture. (2023, October 25). USDA ERS - Definitions of Food Security. www.ers.usda.gov. https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/
 ### LackofFundsforFood: Unable to pay for nutritionally adequate and safe foods  
 ### FoodInsecurity_Other: Identifiable challenges or barrier related to acquiring nutritionally adequate and safe foods, not described by “Lack of funds to pay for food.”  
   
-## Financial Strain  
+## FinancialStrain  
 - Definition: Finances or financial resources fall short of meeting essential expenses.  
 - Source: Healthy People 2030. (n.d.). Employment - Healthy People 2030. Health.gov. https://health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment  
 ### Poverty: Income below the poverty line  
@@ -59,7 +59,7 @@ The following provides a definition, subcategories, and a source of each social 
 ### Permanency_Other: Lack of residence with a permanent caregiver including biological parent or adoptive parent not described by “non-permanent placement” or “non-permanent or permanent placement pending”  
 
 
-## Substance Abuse  
+## SubstanceAbuse  
 - Definition: Use of substances to a degree that may be associated with impairment, safety concerns, or other risks. 
 - Source: Healthy People 2030. (n.d.). Drug and Alcohol Use - Healthy People 2030. Health.gov. https://health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use 
 ### DrugUse: Current or past substance use/abuse by parent, caregiver, or patient  
@@ -84,33 +84,39 @@ You must format your entire output as a single JSON object, **without any additi
 
 Use this format to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an **empty list** for that category.
 
-Output JSON:
-
-{{
-  "Employment": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Housing": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Food": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Financial": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Transportation": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Childcare": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Permanency": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "SubstanceAbuse": [] OR [[label, evidence, "social need" OR "no social need"]],
-  "Safety": [] OR [[label, evidence, "social need" OR "no social need"]]
-}}
-
 # Output Elements
-
 - **label**: The subcategory that best matches the extracted information (e.g., LackofInsurance, DrugUse). 
 - **evidence**: A non-empty quote from the clinical note that justifies the annotation.
 - **social need**: Indicates that the category of the social risk is present and there is a social need (i.e., the patient or caregiver is experiencing the need or receiving assistance regarding that need).
 - **no social need**: Indicates that the social risk is present but there is no social need (i.e., the patient or caregiver is specifically described as not having the need or problem). Note that this is different from the patient receiving help for a social need; rather, this label indicates they never had this social need in the first place. 
 - **[]**: If there is no evidence for a category, then output an **empty list** for that category.
 
+# Output JSON
+
+<|begin_output|>
+{{
+  "Employment": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "HousingInstability": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "FoodInsecurity": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "FinancialStrain": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "Transportation": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "Childcare": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "Permanency": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "SubstanceAbuse": [] OR [[label, evidence, "social need" OR "no social need"]],
+  "Safety": [] OR [[label, evidence, "social need" OR "no social need"]]
+}}
+<|end_output|>
+
+{examples}
+
 # TASK
-Now, annotate the following clinical note following the guidelines and JSON output format specified above. Remember to be strict and only add to the output when there is explicit evidence for a label or category. 
+Now, annotate the following clinical note, and only add to the output when there is explicit evidence for a label or category. You must output a single JSON object and nothing else, **without any additional comments, explanations, or introductory text.** Do not wrap the JSON in markdown code blocks.
 
-# Input Note
+# Input Note:
+
+"""
 {note}
+"""
 
-Output JSON:
+The final answer is:
 
