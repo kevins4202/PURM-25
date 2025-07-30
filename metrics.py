@@ -136,6 +136,31 @@ def compute_metrics(preds, targets):
     # Calculate macro accuracy for stance
     macro_stance_correct = macro_stance_tp + macro_stance_tn
     macro_stance_accuracy = macro_stance_correct / macro_stance_instances if macro_stance_instances > 0 else 0.0
+
+    social_needs_tp = 0
+    social_needs_fp = 0
+    social_needs_fn = 0
+    social_needs_tn = 0
+
+    for pred, target in zip(preds, targets):
+        no_social_needs = all(t == 0 for t in target)
+        pred_no_social_needs = all(p == 0 for p in pred)
+
+        if no_social_needs and pred_no_social_needs:
+            social_needs_tn += 1
+        elif no_social_needs and not pred_no_social_needs:
+            social_needs_fn += 1
+        elif not no_social_needs and pred_no_social_needs:
+            social_needs_fp += 1
+        elif not no_social_needs and not pred_no_social_needs:
+            social_needs_tp += 1
+
+    social_needs_instances = social_needs_tp + social_needs_fp + social_needs_fn + social_needs_tn
+    social_needs_correct = social_needs_tp + social_needs_tn
+    social_needs_accuracy = social_needs_correct / social_needs_instances if social_needs_instances > 0 else 0.0
+    social_needs_precision = social_needs_tp / (social_needs_tp + social_needs_fp) if (social_needs_tp + social_needs_fp) else 0.0
+    social_needs_recall = social_needs_tp / (social_needs_tp + social_needs_fn) if (social_needs_tp + social_needs_fn) else 0.0
+    social_needs_f1 = 2 * social_needs_precision * social_needs_recall / (social_needs_precision + social_needs_recall) if (social_needs_precision + social_needs_recall) else 0.0
     
     return {
         'presence_per_label': presence_results,
@@ -166,5 +191,16 @@ def compute_metrics(preds, targets):
                 'accuracy': macro_stance_accuracy,
             }
         },
-
+        'social_needs': {
+            'precision': social_needs_precision,
+            'recall': social_needs_recall,
+            'f1': social_needs_f1,
+            'tp': social_needs_tp,
+            'fp': social_needs_fp,
+            'fn': social_needs_fn,
+            'tn': social_needs_tn,
+            'correct': social_needs_correct,
+            'total_instances': social_needs_instances,
+            'accuracy': social_needs_accuracy,
+        }
     }
