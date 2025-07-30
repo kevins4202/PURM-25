@@ -52,7 +52,6 @@ The following provides a definition and a source of each social risk.
 
 Use the output format below to report the extracted information. In the list corresponding to each category, be sure to output all instances (if any) pertaining to that category in the note. If there is no evidence for a category, then output an **empty list** for that category.
 
-
 # Output JSON
 
 <|begin_output|>

@@ -1,0 +1,3 @@
+Metric,Precision,Recall,F1-Score,Accuracy
+Presence Detection,0.080,0.727,0.144,0.773
+Stance Classification,0.875,0.700,0.778,0.636

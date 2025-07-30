@@ -18,8 +18,6 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
-output_path = f"results/{model_id.split('/')[-1]}.json"
-
 def load_model(model_id):
     """Load and configure the vLLM model"""
     
@@ -49,12 +47,13 @@ def generate_output(llm, prompt, note, output_schema):
         generated_text = outputs[0].outputs[0].text.strip()
         
         # Try to extract JSON from the generated text
-        json_match = re.search(r'\{.*\}', generated_text, re.DOTALL)
+        json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
+                
         if json_match:
-            json_str = json_match.group()
+            json_text = json_match.group(0)
             # Parse and validate the JSON
-            pred = output_schema.model_validate_json(json_str).model_dump(mode="json")
-            print("Parsed structured output:", json_str)
+            pred = output_schema.model_validate_json(json_text).model_dump(mode="json")
+            print("Parsed structured output:", json_text)
             return pred
         else:
             print("No JSON found in generated text:", generated_text)
@@ -65,7 +64,7 @@ def generate_output(llm, prompt, note, output_schema):
         return None
 
 
-def evaluate(llm, dataloader, evaluation_config, prompt, output_schema):
+def evaluate(llm, dataloader, prompt, output_schema):
     """Evaluate model on a batch of data"""
     preds = []
     targets = []
@@ -133,16 +132,28 @@ def compute_and_save_metrics(preds, targets, broken_indices, model_id, prompt_pa
 def main():
     """Main evaluation function"""
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Evaluate model with vLLM using command line arguments')
-    parser.add_argument('--broad', type=bool, required=True, help='Use broad evaluation (overwrites config)')
-    parser.add_argument('--zero_shot', type=bool, required=True, help='Use zero-shot evaluation (overwrites config)')
-    parser.add_argument('--model_id', type=str, required=True, help='Model ID (overwrites config)')
+    parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
+    parser.add_argument('--broad', action='store_true', help='Use broad evaluation')
+    parser.add_argument('--granular', action='store_true', help='Use granular evaluation (default if neither specified)')
+    parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
+    parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
+    parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
+    parser.add_argument('--structured', action='store_true', default=True, help='Use structured output (default: True)')
+    parser.add_argument('--unstructured', action='store_true', help='Use unstructured output (overrides structured)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
+    # Set defaults if neither option is specified
+    if not args.broad and not args.granular:
+        args.broad = True  # Default to broad if neither specified
+    
+    if not args.zero_shot and not args.few_shot:
+        args.zero_shot = False  # Default to few-shot if neither specified
+    
     evaluation_config = {
-        "broad": args.broad,
-        "zero_shot": args.zero_shot
+        "broad": args.broad,  # True if --broad is used, False otherwise
+        "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
+        "structured_output": not args.unstructured  # Use structured unless --unstructured is specified
     }
     
     # Create model config with command line overrides
@@ -157,7 +168,7 @@ def main():
     output_schema = BroadOutputSchema if evaluation_config["broad"] else GranularOutputSchema
     
     # Load prompt
-    prompt_path, prompt = load_prompt(
+    prompt_path, prompt, examples = load_prompt(
         evaluation_config["broad"],
         evaluation_config["zero_shot"]
     )
@@ -175,7 +186,6 @@ def main():
 
     # Compute and save metrics
     compute_and_save_metrics(preds, targets, broken_indices, model_id, prompt_path)
-
 
 if __name__ == "__main__":
     main()

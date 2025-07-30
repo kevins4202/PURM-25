@@ -8,6 +8,7 @@ from utils import (
 import outlines
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+# from vllm import LLM, SamplingParams
 import json
 import os
 import argparse
@@ -17,7 +18,7 @@ import json
 # Configuration
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-BATCH_SIZE = 1  # Default batch size
+BATCH_SIZE = 8  # Default batch size
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
@@ -48,10 +49,26 @@ class ModelEvaluator:
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
         
-        self.outlined_model = outlines.from_transformers(model, tokenizer)
-        
-        self.generator = model
-        self.tokenizer = tokenizer
+        if self.evaluation_config["eval_type"] == "s":
+            self.outlined_model = outlines.from_transformers(model, tokenizer)
+        elif self.evaluation_config["eval_type"] == "us":
+            self.generator = model
+            self.tokenizer = tokenizer
+        # elif self.evaluation_config["eval_type"] == "vllm":
+        #     self.llm = LLM(
+        #         model=self.model_id,
+        #         trust_remote_code=True,
+        #         tensor_parallel_size=1,
+        #         gpu_memory_utilization=0.8,
+        #     )
+
+        #     self.sampling_params = SamplingParams(
+        #         temperature=0.0,
+        #         max_tokens=512,
+        #         stop=None
+        #     )
+        else:
+            raise ValueError(f"Invalid evaluation type: {self.evaluation_config['eval_type']}")
 
     def generate_structured_output(self, note):
         """Generate model output for a given user message"""
@@ -127,6 +144,17 @@ class ModelEvaluator:
             preds = [None] * len(notes)
                 
         return preds
+    
+    # def generate_vllm_output(self, notes):
+    #     """Generate model output for a batch of notes (for vllm output)"""
+    #     try:
+    #         batch_prompts = [self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples) for note in notes]
+    #         outputs = self.llm.generate(batch_prompts, self.sampling_params)
+    #         preds = [outputs[i].outputs[0].text.strip() for i in range(len(outputs))]
+    #     except Exception as e:
+    #         print(f"Failed to generate batch output: {e}")
+    #         preds = [None] * len(notes)
+    #     return preds
 
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
@@ -168,7 +196,7 @@ class ModelEvaluator:
                     targets.append(label)
                     print(f"prediction: {pred_annotations} \ntarget: {label.tolist()}")
                 except Exception as e:
-                    print(f"Error parsing output: {e} {pred}")
+                    print(f"Error getting annotations: {e} {pred}")
                     broken_indices.append(f"{idx}_{i}")
 
         return preds, targets, broken_indices
@@ -229,8 +257,7 @@ def main():
     parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
     parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
-    parser.add_argument('--structured', action='store_true', default=True, help='Use structured output (default: True)')
-    parser.add_argument('--unstructured', action='store_true', help='Use unstructured output (overrides structured)')
+    parser.add_argument('--eval-type', type=str, required=True, help='Evaluation type (structured or unstructured or vllm)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -244,7 +271,7 @@ def main():
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise
         "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
-        "structured_output": not args.unstructured  # Use structured unless --unstructured is specified
+        "eval_type": args.eval_type  # Use structured unless --unstructured is specified
     }
     
     evaluator = ModelEvaluator(

@@ -205,7 +205,7 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
 
     labels = labels.set_index("file")
     examples = [
-        [v["text"], v["cats"]] for k, v in labels.to_dict(orient="index").items()
+        [v["text"], v["cats"]] for _, v in labels.to_dict(orient="index").items()
     ]
     
     for i, [_, v] in enumerate(examples):
