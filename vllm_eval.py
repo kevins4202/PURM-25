@@ -14,6 +14,9 @@ from vllm_dataloader import get_dataloaders
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
+BATCH_SIZE = 4
+MAX_BATCHES = 1
+
 sampling_params = SamplingParams(
             temperature=0.0,
             max_tokens=1024,
@@ -71,7 +74,6 @@ def evaluate(llm, dataloader, prompt):
     preds = []
     targets = []
     broken_indices = []
-    max_batches = None
 
     for idx, batch in enumerate(dataloader):
         if max_batches and idx >= max_batches:
@@ -183,7 +185,7 @@ def main():
     
     # Load data
     dataloader = get_dataloaders(
-        batch_size=1, zero_shot=evaluation_config["zero_shot"]
+        batch_size=BATCH_SIZE, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model
