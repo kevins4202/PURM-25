@@ -54,19 +54,6 @@ class ModelEvaluator:
         elif self.evaluation_config["eval_type"] == "us":
             self.generator = model
             self.tokenizer = tokenizer
-        # elif self.evaluation_config["eval_type"] == "vllm":
-        #     self.llm = LLM(
-        #         model=self.model_id,
-        #         trust_remote_code=True,
-        #         tensor_parallel_size=1,
-        #         gpu_memory_utilization=0.8,
-        #     )
-
-        #     self.sampling_params = SamplingParams(
-        #         temperature=0.0,
-        #         max_tokens=512,
-        #         stop=None
-        #     )
         else:
             raise ValueError(f"Invalid evaluation type: {self.evaluation_config['eval_type']}")
 
@@ -145,17 +132,6 @@ class ModelEvaluator:
                 
         return preds
     
-    # def generate_vllm_output(self, notes):
-    #     """Generate model output for a batch of notes (for vllm output)"""
-    #     try:
-    #         batch_prompts = [self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples) for note in notes]
-    #         outputs = self.llm.generate(batch_prompts, self.sampling_params)
-    #         preds = [outputs[i].outputs[0].text.strip() for i in range(len(outputs))]
-    #     except Exception as e:
-    #         print(f"Failed to generate batch output: {e}")
-    #         preds = [None] * len(notes)
-    #     return preds
-
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
         preds = []
