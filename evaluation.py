@@ -18,7 +18,7 @@ import json
 # Configuration
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-BATCH_SIZE = 8  # Default batch size
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
@@ -234,6 +234,8 @@ def main():
     parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
     parser.add_argument('--eval-type', type=str, required=True, help='Evaluation type (structured or unstructured or vllm)')
+    parser.add_argument('--max-batches', type=int, default=1, help='Maximum number of batches to process (default: 5)')
+    parser.add_argument('--batch-size', type=int, default=16, help='Batch size for processing (default: 8)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -254,17 +256,22 @@ def main():
         model_id=args.model_id, evaluation_config=evaluation_config
     )
     
+    # Update max_batches from command line argument
+    evaluator.max_batches = args.max_batches
+    
     # Print evaluation configuration
     print(f"\nEvaluation Configuration:")
     print(f"Model: {args.model_id}")
     print(f"Broad evaluation: {evaluation_config['broad']}")
     print(f"Zero-shot: {evaluation_config['zero_shot']}")
     print(f"Structured output: {evaluation_config['structured_output']}")
+    print(f"Max batches: {args.max_batches}")
+    print(f"Batch size: {args.batch_size}")
     print()
 
     # Load data
     dataloader = get_dataloaders(
-        batch_size=BATCH_SIZE, split=False, zero_shot=evaluation_config["zero_shot"]
+        batch_size=args.batch_size, split=False, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model

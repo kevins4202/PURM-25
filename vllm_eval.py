@@ -1,5 +1,4 @@
 from metrics import compute_metrics
-from config import BroadOutputSchema, GranularOutputSchema
 from utils import (
     load_prompt,
     get_annotations,
@@ -14,7 +13,6 @@ from vllm_dataloader import get_dataloaders
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
-BATCH_SIZE = 4
 MAX_BATCHES = 1
 
 sampling_params = SamplingParams(
@@ -34,10 +32,10 @@ def load_model(model_id):
     )
     return llm
 
-def generate_output(llm, prompt, notes):
+def generate_output(llm, prompt, notes, examples):
     """Generate model output for a given user message using vLLM"""
     try:
-        prompts = [prompt.format(note=note) for note in notes]
+        prompts = [prompt.format(note=note.replace('\n\n', '\n'), examples=examples) for note in notes]
         # Generate output
         outputs = llm.generate(prompts, sampling_params)
         
@@ -69,20 +67,20 @@ def generate_output(llm, prompt, notes):
     return preds
 
 
-def evaluate(llm, dataloader, prompt):
+def evaluate(llm, dataloader, prompt, examples):
     """Evaluate model on a batch of data"""
     preds = []
     targets = []
     broken_indices = []
 
     for idx, batch in enumerate(dataloader):
-        if max_batches and idx >= max_batches:
+        if MAX_BATCHES and idx >= MAX_BATCHES:
             break
 
-        print(f"\nbatch {idx + 1} of {max_batches if max_batches else len(dataloader)}")
+        print(f"\nbatch {idx + 1} of {MAX_BATCHES if MAX_BATCHES else len(dataloader)}")
         notes, labels = batch["note"], batch["labels"]
 
-        batch_preds = generate_output(llm, prompt, [notes[0]])
+        batch_preds = generate_output(llm, prompt, notes, examples)
 
         for i, (pred, label) in enumerate(zip(batch_preds, labels)):
             print(f"NOTE {i}: {notes[i][:50].replace(chr(10), '')}...")
@@ -151,6 +149,8 @@ def main():
     parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
     parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
+    parser.add_argument('--max-batches', type=int, default=1, help='Maximum number of batches to process (default: 1)')
+    parser.add_argument('--batch-size', type=int, default=16, help='Batch size for processing (default: 16)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -170,6 +170,8 @@ def main():
     model_id = args.model_id
     
     print(f"Using evaluation config: broad={evaluation_config['broad']}, zero_shot={evaluation_config['zero_shot']}")
+    print(f"Max batches: {args.max_batches}")
+    print(f"Batch size: {args.batch_size}")
     
     # Get model ID
     output = model_id.split("/")[-1]
@@ -179,17 +181,19 @@ def main():
         evaluation_config["broad"],
         evaluation_config["zero_shot"]
     )
+
+    MAX_BATCHES = args.max_batches
     
     # Load model
     llm = load_model(model_id)
     
     # Load data
     dataloader = get_dataloaders(
-        batch_size=BATCH_SIZE, zero_shot=evaluation_config["zero_shot"]
+        batch_size=args.batch_size, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model
-    preds, targets, broken_indices = evaluate(llm, dataloader, prompt)
+    preds, targets, broken_indices = evaluate(llm, dataloader, prompt, examples)
 
     # Compute and save metrics
     compute_and_save_metrics(preds, targets, broken_indices, output, prompt_path)
