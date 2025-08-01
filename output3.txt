@@ -1,0 +1,17 @@
+Loading and quantizing model  Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.93s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.77s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:11<00:03,  3.66s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.53s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.98s/it]
+Loaded model
+Loaded tokenizer
+Using prompt:  broad_0_shot
+Adding shots...
+
+Evaluation Configuration:
+Model: meta-llama/Llama-3.1-8B-Instruct
+Broad evaluation: True
+Zero-shot: False
+Evaluation type: us
+Max batches: None
+Batch size: 16
+
+Loading data
+getting rid of duplicates

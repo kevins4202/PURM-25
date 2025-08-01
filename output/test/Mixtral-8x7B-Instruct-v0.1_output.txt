@@ -1,5 +1,0 @@
-{
-  "Employment": "[PatientCaregiver_Employment, Mom reports that she has to return to work on Monday but in need of childcare, positive]",
-  "Childcare": "[NeedofChildcare, Mom reports that she has to return to work on Monday but in need of childcare, positive]",
-  "Substance": "[SubstanceAbuse_Other, Mom is in treatment for opioid use disorder, currently on methadone, positive]"
-}
