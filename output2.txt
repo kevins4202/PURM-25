@@ -1,243 +1,142 @@
-Loading and quantizing model  Llama-3.1-8B-Instruct
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.21s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.10s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:09<00:03,  3.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.55s/it]
-Using prompt:  granular_0_shot.txt
-
-Evaluation Configuration:
-Model: meta-llama/Llama-3.1-8B-Instruct
-Broad evaluation: False
-Zero-shot: True
-Structured output: False
-
-Loading data
-
-batch 1 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 2 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 3 of 3456
-NOTE: The Children's Hospital of Philadelphia    SO...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 4 of 3456
-NOTE: Social Work Care Plan NotePatient's Name:  Yari...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 5 of 3456
-NOTE: The Children's Hospital of Philadelphia    SO...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 6 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENT...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 7 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: RESOURCE NEE...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 8 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 9 of 3456
-NOTE: The Children's Hospital of Philadelphia TRANSPLA...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 10 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 11 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENT...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 12 of 3456
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: RESOURCE NEE...
-Failed to generate output: No JSON content found in unstructured output: ...
-
-
-Getting annotations...
-Error parsing output: 'NoneType' object is not subscriptable None
-
-batch 13 of 3456
-NOTE: The Children's Hospital of Philadelphia    SO...
+INFO 07-29 13:49:16 [__init__.py:235] Automatically detected platform cuda.
+Using evaluation config: broad=True, zero_shot=True
+Using prompt:  broad_0_shot.txt
+INFO 07-29 13:49:24 [config.py:1604] Using max model len 32768
+INFO 07-29 13:49:24 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=8192.
+/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group.py:24: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer-mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 07-29 13:49:25 [core.py:572] Waiting for init message from front-end.
+INFO 07-29 13:49:25 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='mistralai/Mistral-7B-Instruct-v0.3', speculative_config=None, tokenizer='mistralai/Mistral-7B-Instruct-v0.3', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=mistralai/Mistral-7B-Instruct-v0.3, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+ERROR 07-29 13:49:26 [core.py:632] EngineCore failed to start.
+ERROR 07-29 13:49:26 [core.py:632] Traceback (most recent call last):
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 623, in run_engine_core
+ERROR 07-29 13:49:26 [core.py:632]     engine_core = EngineCoreProc(*args, **kwargs)
+ERROR 07-29 13:49:26 [core.py:632]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 441, in __init__
+ERROR 07-29 13:49:26 [core.py:632]     super().__init__(vllm_config, executor_class, log_stats,
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 77, in __init__
+ERROR 07-29 13:49:26 [core.py:632]     self.model_executor = executor_class(vllm_config)
+ERROR 07-29 13:49:26 [core.py:632]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 53, in __init__
+ERROR 07-29 13:49:26 [core.py:632]     self._init_executor()
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 47, in _init_executor
+ERROR 07-29 13:49:26 [core.py:632]     self.collective_rpc("init_worker", args=([kwargs], ))
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
+ERROR 07-29 13:49:26 [core.py:632]     answer = run_method(self.driver_worker, method, args, kwargs)
+ERROR 07-29 13:49:26 [core.py:632]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/utils/__init__.py", line 2985, in run_method
+ERROR 07-29 13:49:26 [core.py:632]     return func(*args, **kwargs)
+ERROR 07-29 13:49:26 [core.py:632]            ^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 556, in init_worker
+ERROR 07-29 13:49:26 [core.py:632]     worker_class = resolve_obj_by_qualname(
+ERROR 07-29 13:49:26 [core.py:632]                    ^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/utils/__init__.py", line 2539, in resolve_obj_by_qualname
+ERROR 07-29 13:49:26 [core.py:632]     module = importlib.import_module(module_name)
+ERROR 07-29 13:49:26 [core.py:632]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/importlib/__init__.py", line 126, in import_module
+ERROR 07-29 13:49:26 [core.py:632]     return _bootstrap._gcd_import(name[level:], package, level)
+ERROR 07-29 13:49:26 [core.py:632]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+ERROR 07-29 13:49:26 [core.py:632]   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 33, in <module>
+ERROR 07-29 13:49:26 [core.py:632]     from vllm.v1.worker.gpu_model_runner import GPUModelRunner
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py", line 67, in <module>
+ERROR 07-29 13:49:26 [core.py:632]     from vllm.v1.spec_decode.ngram_proposer import NgramProposer
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/spec_decode/ngram_proposer.py", line 6, in <module>
+ERROR 07-29 13:49:26 [core.py:632]     from numba import jit
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/numba/__init__.py", line 59, in <module>
+ERROR 07-29 13:49:26 [core.py:632]     _ensure_critical_deps()
+ERROR 07-29 13:49:26 [core.py:632]   File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/numba/__init__.py", line 45, in _ensure_critical_deps
+ERROR 07-29 13:49:26 [core.py:632]     raise ImportError(msg)
+ERROR 07-29 13:49:26 [core.py:632] ImportError: Numba needs NumPy 2.2 or less. Got NumPy 2.3.
+Process EngineCore_0:
 Traceback (most recent call last):
-  File "/home/songk1/Documents/PURM-25/evaluation.py", line 247, in <module>
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 636, in run_engine_core
+    raise e
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 623, in run_engine_core
+    engine_core = EngineCoreProc(*args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 441, in __init__
+    super().__init__(vllm_config, executor_class, log_stats,
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 77, in __init__
+    self.model_executor = executor_class(vllm_config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 53, in __init__
+    self._init_executor()
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 47, in _init_executor
+    self.collective_rpc("init_worker", args=([kwargs], ))
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
+    answer = run_method(self.driver_worker, method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/utils/__init__.py", line 2985, in run_method
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 556, in init_worker
+    worker_class = resolve_obj_by_qualname(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/utils/__init__.py", line 2539, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 33, in <module>
+    from vllm.v1.worker.gpu_model_runner import GPUModelRunner
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py", line 67, in <module>
+    from vllm.v1.spec_decode.ngram_proposer import NgramProposer
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/spec_decode/ngram_proposer.py", line 6, in <module>
+    from numba import jit
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/numba/__init__.py", line 59, in <module>
+    _ensure_critical_deps()
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/numba/__init__.py", line 45, in _ensure_critical_deps
+    raise ImportError(msg)
+ImportError: Numba needs NumPy 2.2 or less. Got NumPy 2.3.
+Traceback (most recent call last):
+  File "/home/songk1/Documents/PURM-25/vllm_eval.py", line 181, in <module>
     main()
-  File "/home/songk1/Documents/PURM-25/evaluation.py", line 240, in main
-    preds, targets, broken_indices = evaluator.evaluate(dataloader)
-                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/Documents/PURM-25/evaluation.py", line 136, in evaluate
-    pred = self.generate_output(notes[i])
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/Documents/PURM-25/evaluation.py", line 85, in generate_output
-    outputs = self.generator.generate(
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/generation/utils.py", line 2597, in generate
-    result = self._sample(
-             ^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/generation/utils.py", line 3560, in _sample
-    outputs = model_forward(**model_inputs, return_dict=True)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/utils/generic.py", line 969, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 688, in forward
-    outputs: BaseModelOutputWithPast = self.model(
-                                       ^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/utils/generic.py", line 969, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 453, in forward
-    layer_outputs = decoder_layer(
-                    ^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/modeling_layers.py", line 48, in __call__
-    return super().__call__(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 324, in forward
-    hidden_states = self.mlp(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 162, in forward
-    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-                                                                ^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/nn/modules.py", line 1004, in forward
-    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/autograd/_functions.py", line 369, in matmul
-    return MatMul8bitLt.apply(A, B, out, bias, state)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/autograd/function.py", line 575, in apply
-    return super().apply(*args, **kwargs)  # type: ignore[misc]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/autograd/_functions.py", line 218, in forward
-    output, subA = torch.ops.bitsandbytes.int8_mixed_scaled_mm(
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_ops.py", line 1158, in __call__
-    return self._op(*args, **(kwargs or {}))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_compile.py", line 51, in inner
-    return disable_fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 838, in _fn
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/library.py", line 719, in func_no_dynamo
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/backends/default/ops.py", line 62, in _
-    output = torch.ops.bitsandbytes.int8_scaled_mm.default(CA, CB, SCA, SCB, bias=bias, dtype=A.dtype)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_ops.py", line 756, in __call__
-    return self._op(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_compile.py", line 51, in inner
-    return disable_fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 838, in _fn
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/library.py", line 719, in func_no_dynamo
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/backends/default/ops.py", line 81, in _
-    return torch.ops.bitsandbytes.int8_mm_dequant.default(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_ops.py", line 756, in __call__
-    return self._op(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_compile.py", line 51, in inner
-    return disable_fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 838, in _fn
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/torch/library.py", line 719, in func_no_dynamo
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/backends/cuda/ops.py", line 117, in _
-    ptrA, ptrRowStats, ptrColStats, ptrOut, ptrBias, numRows, numCols, _get_tensor_stream(A)
-                                                                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/songk1/miniconda3/envs/purm/lib/python3.11/site-packages/bitsandbytes/functional.py", line 459, in _get_tensor_stream
-    return ct.c_void_p(torch._C._cuda_getCurrentRawStream(tensor.device.index))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
+  File "/home/songk1/Documents/PURM-25/vllm_eval.py", line 166, in main
+    llm = load_model(model_id)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/Documents/PURM-25/vllm_eval.py", line 26, in load_model
+    llm = LLM(
+          ^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 273, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 497, in from_engine_args
+    return engine_cls.from_vllm_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py", line 126, in from_vllm_config
+    return cls(vllm_config=vllm_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py", line 103, in __init__
+    self.engine_core = EngineCoreClient.make_client(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 77, in make_client
+    return SyncMPClient(vllm_config, executor_class, log_stats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 514, in __init__
+    super().__init__(
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 408, in __init__
+    with launch_core_engines(vllm_config, executor_class,
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 697, in launch_core_engines
+    wait_for_engine_startup(
+  File "/home/songk1/miniconda3/envs/vllm_env/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 750, in wait_for_engine_startup
+    raise RuntimeError("Engine core initialization failed. "
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

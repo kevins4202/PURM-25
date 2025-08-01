@@ -215,8 +215,6 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
             for label in v.split(";"):
                 labels_tmp[int(label[0])] = 1 if label[1] == "+" else -1
         examples[i][1] = labels_tmp
-    
-    examples = examples[:len(examples) - len(examples) % batch_size]
 
     if split:
         n = len(examples)
@@ -258,7 +256,7 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
     else:
         dataset = SDOHDataset(examples)
         dataloader = DataLoader(
-            dataset, batch_size=batch_size, shuffle=False, collate_fn=custom_collate_fn, num_workers=4
+            dataset, batch_size=batch_size, shuffle=False, collate_fn=custom_collate_fn, num_workers=1
         )
 
         return dataloader

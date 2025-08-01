@@ -143,16 +143,16 @@ def compute_metrics(preds, targets):
     social_needs_tn = 0
 
     for pred, target in zip(preds, targets):
-        no_social_needs = all(t == 0 for t in target)
-        pred_no_social_needs = all(p == 0 for p in pred)
+        social_needs = any(t != 0 for t in target)
+        pred_social_needs = any(p != 0 for p in pred)
 
-        if no_social_needs and pred_no_social_needs:
+        if social_needs and pred_social_needs:
             social_needs_tn += 1
-        elif no_social_needs and not pred_no_social_needs:
+        elif social_needs and not pred_social_needs:
             social_needs_fn += 1
-        elif not no_social_needs and pred_no_social_needs:
+        elif not social_needs and pred_social_needs:
             social_needs_fp += 1
-        elif not no_social_needs and not pred_no_social_needs:
+        elif not social_needs and not pred_social_needs:
             social_needs_tp += 1
 
     social_needs_instances = social_needs_tp + social_needs_fp + social_needs_fn + social_needs_tn

@@ -1,71 +1,12 @@
 Loading and quantizing model  Llama-3.1-8B-Instruct
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.39s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.44s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.33s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.32s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.71s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.47s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.57s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.60s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.47s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.87s/it]
 Using prompt:  broad_0_shot.txt
 
 Evaluation Configuration:
 Model: meta-llama/Llama-3.1-8B-Instruct
 Broad evaluation: True
 Zero-shot: True
-Structured output: False
+Evaluation type: us
+Loading data with batch size: 16
 
 Loading data
-
-batch 1 of 5
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Parsing found JSON text {  "Employment": [["Patient mother provided with requested letter for her employer.", "social need"]],  "Housing": [],  "Food": [],  "Financial": [],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
-Successfully parsed JSON
-
-
-Getting annotations...
-prediction: [1, 0, 0, 0, 0, 0, 0, 0, 0] 
-target: [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-batch 2 of 5
-NOTE: SOCIAL WORK CARE PLAN NOTEProblem: ADJUSTMENTG...
-Parsing found JSON text { "Employment": [], "Housing": [], "Food": [], "Financial": [], "Transportation": [], "Childcare": [], "Permanency": [], "SubstanceAbuse": [], "Safety": [] }
-Successfully parsed JSON
-
-
-Getting annotations...
-prediction: [0, 0, 0, 0, 0, 0, 0, 0, 0] 
-target: [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-batch 3 of 5
-NOTE: The Children's Hospital of Philadelphia    SO...
-Parsing found JSON text {  "Employment": [],  "Housing": [],  "Food": [],  "Financial": [["Insurance", "social need"]],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
-Successfully parsed JSON
-
-
-Getting annotations...
-prediction: [0, 0, 0, 1, 0, 0, 0, 0, 0] 
-target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
-
-batch 4 of 5
-NOTE: Social Work Care Plan NotePatient's Name:  Yari...
-Parsing found JSON text { "Employment": [["Mom is currently employed and has a stable income.", "no social need"]], "Housing": [["Mom will be home until after the surgery to do what is needed to prepare and recover.", "no social need"]], "Food": [["Mom is able to provide for Yaribeth's needs.", "no social need"]], "Financial": [["Mom will be going to the human resources office tomorrow to do her taxes and obtain the W2 form needed for her SSI.", "no social need"]], "Transportation": [["Mom will be leaving the bedside around 5:30pm tonight when her ride is able to come get her.", "no social need"]], "Childcare": [["Maternal Aunt will be coming to the bedside tonight and will remain at the bedside with Yaribeth while Mom is unable to be here.", "no social need"]], "Permanency": [["Maternal Aunt will be coming to the bedside tonight and will remain at the bedside with Yaribeth while Mom is unable to be here.", "no social need"]], "SubstanceAbuse": [["SW and Mom discussed getting a cot for the bedside for Mom to sleep on at night.", "no social need"]], "Safety": [["SW and Mom discussed getting a cot for the bedside for Mom to sleep on at night.", "no social need"]] }
-Successfully parsed JSON
-
-
-Getting annotations...
-prediction: [-1, -1, -1, -1, -1, -1, -1, -1, -1] 
-target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
-
-batch 5 of 5
-NOTE: The Children's Hospital of Philadelphia    SO...
-Parsing found JSON text {  "Employment": [],  "Housing": [],  "Food": [],  "Financial": [["Financial assistance from Fred's Footsteps", "no social need"]],  "Transportation": [],  "Childcare": [],  "Permanency": [],  "SubstanceAbuse": [],  "Safety": []}
-Successfully parsed JSON
-
-
-Getting annotations...
-prediction: [0, 0, 0, -1, 0, 0, 0, 0, 0] 
-target: [0, 0, 0, 1, 0, 0, 0, 0, 0]
-
-
-Evaluation Summary:
-Total samples: 5
-Successful samples: 5
-Failed samples: 0
-Success rate: 100.00%
-Broken indices: []
-
-Metrics: {'presence_per_label': {0: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 2, 'fn': 0, 'tn': 3}, 1: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 2: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 3: {'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'tp': 3, 'fp': 0, 'fn': 0, 'tn': 2}, 4: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 5: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 6: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 7: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}, 8: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 1, 'fn': 0, 'tn': 4}}, 'stance_per_label': {0: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 1: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 2: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 3: {'precision': 1.0, 'recall': 0.3333333333333333, 'f1': 0.5, 'accuracy': 0.3333333333333333, 'tp': 1, 'fp': 0, 'fn': 2, 'tn': 0, 'total_instances': 3, 'correct': 1}, 4: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 5: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 6: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 7: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}, 8: {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'accuracy': 0.0, 'tp': 0, 'fp': 0, 'fn': 0, 'tn': 0, 'total_instances': 0, 'correct': 0}}, 'macro_averages': {'presence': {'precision': 0.1111111111111111, 'recall': 0.1111111111111111, 'f1': 0.1111111111111111, 'tp': 3, 'fp': 9, 'tn': 33, 'fn': 0, 'total_instances': 45, 'accuracy': 0.8}, 'stance': {'precision': 0.1111111111111111, 'recall': 0.037037037037037035, 'f1': 0.05555555555555555, 'accuracy': 0.3333333333333333, 'tp': 1, 'fp': 0, 'fn': 2, 'total_instances': 3}}}

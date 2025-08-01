@@ -18,7 +18,10 @@ import json
 # Configuration
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
-BATCH_SIZE = 8  # Default batch size
+
+BATCH_SIZE = 16  # Default batch size
+MAX_BATCHES = None
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
@@ -35,7 +38,7 @@ class ModelEvaluator:
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
-        self.max_batches = 5
+        self.max_batches = MAX_BATCHES
 
     def _load_model(self):
         """Load and configure the model"""
@@ -48,6 +51,7 @@ class ModelEvaluator:
         )
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+        tokenizer.pad_token = tokenizer.eos_token
         
         if self.evaluation_config["eval_type"] == "s":
             self.outlined_model = outlines.from_transformers(model, tokenizer)
@@ -122,18 +126,18 @@ class ModelEvaluator:
                 # Extract the generated part (after the prompt)
                 prompt = batch_prompts[i]
                 generated_output = generated_text[len(prompt):].strip()
-                print(f"OUTPUT {i}: ", generated_output)
+                # print(f"OUTPUT {i}: ", generated_output)
                 
                 # Find JSON content
                 json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
                 
                 if json_match:
                     json_text = json_match.group(0)
-                    print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
+                    # print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
                     
                     # Try to parse as JSON
                     parsed_json = json.loads(json_text)
-                    print(f"Successfully parsed JSON {i}")
+                    # print(f"Successfully parsed JSON {i}")
                     preds.append(parsed_json)
                 else:
                     print(f"No JSON content found for output {i}")
@@ -172,29 +176,32 @@ class ModelEvaluator:
             print(f"\nbatch {idx + 1} of {self.max_batches if self.max_batches else len(dataloader)}")
             notes, labels = batch["note"], batch["labels"]
 
-            if self.evaluation_config["structured_output"]:
+            if self.evaluation_config["eval_type"] == 's':
                 # Process batch
                 batch_preds = []
                 for note in notes:
                     batch_preds.append(self.generate_structured_output(note))
-            else:
+            elif self.evaluation_config["eval_type"] == 'us':
                 # Process batch
                 batch_preds = self.generate_unstructured_output(notes)
+            else:
+                raise ValueError("Invalid eval type")
             
             # Process each prediction in the batch
             for i, (pred, label) in enumerate(zip(batch_preds, labels)):
-                print(f"NOTE {i}: {notes[i][:50].replace(chr(10), '')}...")
+                print(f"\nNOTE {i}: {notes[i][:50].replace(chr(10), '')}...\n")
                 try:
                     if pred is None:
                         print(f"Failed to generate output for sample {idx}_{i}")
                         broken_indices.append(f"{idx}_{i}")
                         continue
+                   
+                    print(pred)
                     
-                    print("\n\nGetting annotations...")
                     pred_annotations = get_annotations(pred)
                     preds.append(pred_annotations)
                     targets.append(label)
-                    print(f"prediction: {pred_annotations} \ntarget: {label.tolist()}")
+                    print(f"\nprediction: {pred_annotations} \ntarget: {label.tolist()}")
                 except Exception as e:
                     print(f"Error getting annotations: {e} {pred}")
                     broken_indices.append(f"{idx}_{i}")
@@ -216,16 +223,18 @@ class ModelEvaluator:
 
         success_rate = successful_samples / total_samples if total_samples > 0 else 0.0
         
+       
         print(f"\n\nEvaluation Summary:")
         print(f"Total samples: {total_samples}")
         print(f"Successful samples: {successful_samples}")
         print(f"Failed samples: {failed_samples}")
         print(f"Success rate: {success_rate:.2%}")
         print(f"Broken indices: {broken_indices}")
+        
 
         # Compute per-label metrics
         metrics = compute_metrics(preds, targets)
-        print("\nMetrics:", metrics)
+        # print("\nMetrics:", metrics)
 
         os.makedirs("results", exist_ok=True)
         os.makedirs(f"results/{self.output_dir}", exist_ok=True)
@@ -283,7 +292,8 @@ def main():
     print(f"Model: {args.model_id}")
     print(f"Broad evaluation: {evaluation_config['broad']}")
     print(f"Zero-shot: {evaluation_config['zero_shot']}")
-    print(f"Structured output: {evaluation_config['structured_output']}")
+    print(f"Evaluation type: {evaluation_config['eval_type']}")
+    print(f"Loading data with batch size: {BATCH_SIZE}")
     print()
 
     # Load data
