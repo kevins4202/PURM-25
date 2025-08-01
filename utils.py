@@ -10,6 +10,7 @@ import re
 
 def load_prompt(broad: bool, zero_shot: bool) -> Tuple[str, str]:
     """Load prompt from file"""
+
     prompt_path = ("broad" if broad else "granular") + "_0_shot.txt"
     print("Using prompt: ", prompt_path)
     if not os.path.exists(f"prompts/{prompt_path}"):

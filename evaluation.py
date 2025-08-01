@@ -19,9 +19,6 @@ import json
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-BATCH_SIZE = 16  # Default batch size
-MAX_BATCHES = None
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
@@ -58,19 +55,6 @@ class ModelEvaluator:
         elif self.evaluation_config["eval_type"] == "us":
             self.generator = model
             self.tokenizer = tokenizer
-        # elif self.evaluation_config["eval_type"] == "vllm":
-        #     self.llm = LLM(
-        #         model=self.model_id,
-        #         trust_remote_code=True,
-        #         tensor_parallel_size=1,
-        #         gpu_memory_utilization=0.8,
-        #     )
-
-        #     self.sampling_params = SamplingParams(
-        #         temperature=0.0,
-        #         max_tokens=512,
-        #         stop=None
-        #     )
         else:
             raise ValueError(f"Invalid evaluation type: {self.evaluation_config['eval_type']}")
 
@@ -149,17 +133,6 @@ class ModelEvaluator:
                 
         return preds
     
-    # def generate_vllm_output(self, notes):
-    #     """Generate model output for a batch of notes (for vllm output)"""
-    #     try:
-    #         batch_prompts = [self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples) for note in notes]
-    #         outputs = self.llm.generate(batch_prompts, self.sampling_params)
-    #         preds = [outputs[i].outputs[0].text.strip() for i in range(len(outputs))]
-    #     except Exception as e:
-    #         print(f"Failed to generate batch output: {e}")
-    #         preds = [None] * len(notes)
-    #     return preds
-
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
         preds = []
@@ -267,6 +240,8 @@ def main():
     parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
     parser.add_argument('--eval-type', type=str, required=True, help='Evaluation type (structured or unstructured or vllm)')
+    parser.add_argument('--max-batches', type=int, default=1, help='Maximum number of batches to process (default: 5)')
+    parser.add_argument('--batch-size', type=int, default=16, help='Batch size for processing (default: 8)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -287,18 +262,22 @@ def main():
         model_id=args.model_id, evaluation_config=evaluation_config
     )
     
+    # Update max_batches from command line argument
+    evaluator.max_batches = args.max_batches
+    
     # Print evaluation configuration
     print(f"\nEvaluation Configuration:")
     print(f"Model: {args.model_id}")
     print(f"Broad evaluation: {evaluation_config['broad']}")
     print(f"Zero-shot: {evaluation_config['zero_shot']}")
     print(f"Evaluation type: {evaluation_config['eval_type']}")
-    print(f"Loading data with batch size: {BATCH_SIZE}")
+    print(f"Max batches: {args.max_batches}")
+    print(f"Batch size: {args.batch_size}")
     print()
 
     # Load data
     dataloader = get_dataloaders(
-        batch_size=BATCH_SIZE, split=False, zero_shot=evaluation_config["zero_shot"]
+        batch_size=args.batch_size, split=False, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model

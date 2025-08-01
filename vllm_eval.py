@@ -1,22 +1,25 @@
-from dataloader import get_dataloaders
 from metrics import compute_metrics
-from config import BroadOutputSchema, GranularOutputSchema
 from utils import (
     load_prompt,
     get_annotations,
 )
 from vllm import LLM, SamplingParams
-import torch
 import json
 import os
 import re
 import argparse
+from vllm_dataloader import get_dataloaders
 
-# Configuration
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+
+MAX_BATCHES = 1
+
+sampling_params = SamplingParams(
+            temperature=0.0,
+            max_tokens=1024,
+            stop=None
+        )
 
 def load_model(model_id):
     """Load and configure the vLLM model"""
@@ -29,65 +32,73 @@ def load_model(model_id):
     )
     return llm
 
-def generate_output(llm, prompt, note, output_schema):
+def generate_output(llm, prompt, notes, examples):
     """Generate model output for a given user message using vLLM"""
     try:
-        # Format the prompt with the note
-        formatted_prompt = prompt.format(note=note)
-        
-        # Set sampling parameters
-        sampling_params = SamplingParams(
-            temperature=0.0,
-            max_tokens=512,
-            stop=None
-        )
-        
+        prompts = [prompt.format(note=note.replace('\n\n', '\n'), examples=examples) for note in notes]
         # Generate output
-        outputs = llm.generate([formatted_prompt], sampling_params)
-        generated_text = outputs[0].outputs[0].text.strip()
+        outputs = llm.generate(prompts, sampling_params)
         
-        # Try to extract JSON from the generated text
-        json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
+        # Decode all outputs
+        preds = []
+        for i, output in enumerate(outputs[0].outputs):
+            generated_output = output.text
+            print(f"OUTPUT {i}: ", generated_output)
+            
+            # Find JSON content
+            json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
+            
+            if json_match:
+                json_text = json_match.group(0)
+                print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
                 
-        if json_match:
-            json_text = json_match.group(0)
-            # Parse and validate the JSON
-            pred = output_schema.model_validate_json(json_text).model_dump(mode="json")
-            print("Parsed structured output:", json_text)
-            return pred
-        else:
-            print("No JSON found in generated text:", generated_text)
-            return None
+                # Try to parse as JSON
+                parsed_json = json.loads(json_text)
+                print(f"Successfully parsed JSON {i}")
+                preds.append(parsed_json)
+            else:
+                print(f"No JSON content found for output {i}")
+                preds.append(None)
             
     except Exception as e:
         print("Failed to generate and parse structured output:", e)
         return None
 
+    return preds
 
-def evaluate(llm, dataloader, prompt, output_schema):
+
+def evaluate(llm, dataloader, prompt, examples):
     """Evaluate model on a batch of data"""
     preds = []
     targets = []
     broken_indices = []
-    max_batches = None
 
     for idx, batch in enumerate(dataloader):
-        if max_batches and idx >= max_batches:
+        if MAX_BATCHES and idx >= MAX_BATCHES:
             break
 
-        print(f"\nbatch {idx + 1} of {max_batches if max_batches else len(dataloader)}")
+        print(f"\nbatch {idx + 1} of {MAX_BATCHES if MAX_BATCHES else len(dataloader)}")
         notes, labels = batch["note"], batch["labels"]
 
-        for i in range(len(notes)):
-            print(f"NOTE: {notes[i][:50].replace(chr(10), '')}...")
-            pred = generate_output(llm, prompt, notes[i], output_schema)
+        batch_preds = generate_output(llm, prompt, notes, examples)
+
+        for i, (pred, label) in enumerate(zip(batch_preds, labels)):
+            print(f"NOTE {i}: {notes[i][:50].replace(chr(10), '')}...")
             try:
-                preds.append(get_annotations(pred))
-                targets.append(labels[i])
-                print(f"prediction: {preds[-1]} \ntarget: {labels[i].tolist()}")
+                if pred is None:
+                    print(f"Failed to generate output for sample {idx}_{i}")
+                    broken_indices.append(f"{idx}_{i}")
+                    continue
+                
+                print("\n\nGetting annotations...")
+                pred_annotations = get_annotations(pred)
+                preds.append(pred_annotations)
+                targets.append(label)
+                print(f"prediction: {pred_annotations} \ntarget: {label}")
             except Exception as e:
                 print(f"Error parsing output: {e} {pred}")
-                broken_indices.append(idx)
+                broken_indices.append(f"{idx}_{i}")
+    
 
     return preds, targets, broken_indices
 
@@ -138,8 +149,8 @@ def main():
     parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
     parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
     parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
-    parser.add_argument('--structured', action='store_true', default=True, help='Use structured output (default: True)')
-    parser.add_argument('--unstructured', action='store_true', help='Use unstructured output (overrides structured)')
+    parser.add_argument('--max-batches', type=int, default=1, help='Maximum number of batches to process (default: 1)')
+    parser.add_argument('--batch-size', type=int, default=16, help='Batch size for processing (default: 16)')
     args = parser.parse_args()
     
     # Create evaluation config with command line overrides
@@ -153,39 +164,39 @@ def main():
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise
         "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
-        "structured_output": not args.unstructured  # Use structured unless --unstructured is specified
     }
     
     # Create model config with command line overrides
     model_id = args.model_id
     
     print(f"Using evaluation config: broad={evaluation_config['broad']}, zero_shot={evaluation_config['zero_shot']}")
+    print(f"Max batches: {args.max_batches}")
+    print(f"Batch size: {args.batch_size}")
     
     # Get model ID
     output = model_id.split("/")[-1]
-    
-    # Determine output schema
-    output_schema = BroadOutputSchema if evaluation_config["broad"] else GranularOutputSchema
     
     # Load prompt
     prompt_path, prompt, examples = load_prompt(
         evaluation_config["broad"],
         evaluation_config["zero_shot"]
     )
+
+    MAX_BATCHES = args.max_batches
     
     # Load model
     llm = load_model(model_id)
     
     # Load data
     dataloader = get_dataloaders(
-        batch_size=evaluation_config["batch_size"], split=False
+        batch_size=args.batch_size, zero_shot=evaluation_config["zero_shot"]
     )
 
     # Evaluate model
-    preds, targets, broken_indices = evaluate(llm, dataloader, evaluation_config, prompt, output_schema)
+    preds, targets, broken_indices = evaluate(llm, dataloader, prompt, examples)
 
     # Compute and save metrics
-    compute_and_save_metrics(preds, targets, broken_indices, model_id, prompt_path)
+    compute_and_save_metrics(preds, targets, broken_indices, output, prompt_path)
 
 if __name__ == "__main__":
     main()
