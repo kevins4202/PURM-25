@@ -180,13 +180,14 @@ class SDOHDataset(Dataset):
 
 def custom_collate_fn(batch):
     """Custom collate function to prevent automatic padding"""
-    notes = [item[0] for item in batch]
-    labels = [item[1] for item in batch]
+    filenames = [item[0] for item in batch]
+    notes = [item[1] for item in batch]
+    labels = [item[2] for item in batch]
 
     # Convert labels to tensors without padding
     label_tensors = [torch.tensor(label, dtype=torch.long) for label in labels]
 
-    return {"note": notes, "labels": label_tensors}
+    return {"filename": filenames, "note": notes, "label": label_tensors}
 
 
 def get_dataloaders(batch_size=16, split=False, zero_shot=True):
@@ -205,16 +206,16 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
 
     labels = labels.set_index("file")
     examples = [
-        [v["text"], v["cats"]] for _, v in labels.to_dict(orient="index").items()
+        [k, v["text"], v["cats"]] for k, v in labels.to_dict(orient="index").items()
     ]
     
-    for i, [_, v] in enumerate(examples):
+    for i, [_, _, v] in enumerate(examples):
         labels_tmp = [0 for _ in range(len(CAT_TO_LABELS))]
 
         if v:
             for label in v.split(";"):
                 labels_tmp[int(label[0])] = 1 if label[1] == "+" else -1
-        examples[i][1] = labels_tmp
+        examples[i][-1] = labels_tmp
 
     if split:
         n = len(examples)

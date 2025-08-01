@@ -8,11 +8,12 @@ from utils import (
 import outlines
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
 # from vllm import LLM, SamplingParams
 import json
 import os
 import argparse
-import re   
+import re
 import json
 
 # Configuration
@@ -22,6 +23,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
+
 class ModelEvaluator:
     def __init__(self, model_id, evaluation_config):
         self.model_id = model_id
@@ -29,11 +31,14 @@ class ModelEvaluator:
         self.evaluation_config = evaluation_config
         self.outlined_model = None
         self.generator = None
-        self.output_schema = BroadOutputSchema if self.evaluation_config["broad"] else GranularOutputSchema
+        self.output_schema = (
+            BroadOutputSchema
+            if self.evaluation_config["broad"]
+            else GranularOutputSchema
+        )
         self._load_model()
         self.prompt_path, self.prompt, self.examples = load_prompt(
-            self.evaluation_config["broad"],
-            self.evaluation_config["zero_shot"]
+            self.evaluation_config["broad"], self.evaluation_config["zero_shot"]
         )
 
     def _load_model(self):
@@ -49,147 +54,175 @@ class ModelEvaluator:
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
         tokenizer.pad_token = tokenizer.eos_token
-        
+
         print("Loaded tokenizer")
-        
+
         if self.evaluation_config["eval_type"] == "s":
             self.outlined_model = outlines.from_transformers(model, tokenizer)
         elif self.evaluation_config["eval_type"] == "us":
             self.generator = model
             self.tokenizer = tokenizer
         else:
-            raise ValueError(f"Invalid evaluation type: {self.evaluation_config['eval_type']}")
+            raise ValueError(
+                f"Invalid evaluation type: {self.evaluation_config['eval_type']}"
+            )
 
     def generate_structured_output(self, note):
         """Generate model output for a given user message"""
         try:
             structured = self.outlined_model(
-                self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples),
+                self.prompt.format(
+                    note=note.replace("\n\n", "\n"), examples=self.examples
+                ),
                 self.output_schema,
-                max_new_tokens=512
+                max_new_tokens=512,
             )
-            
-            pred = self.output_schema.model_validate_json(structured).model_dump(mode="json")
+
+            pred = self.output_schema.model_validate_json(structured).model_dump(
+                mode="json"
+            )
             print("Parsed structured output:", structured)
         except Exception as e:
             print("Failed to generate and parse structured output:", e)
             pred = None
-                
+
         return pred
 
     def generate_unstructured_output(self, notes):
         """Generate model output for a batch of notes (for unstructured output)"""
         # For unstructured output, process as batch
-        try:
-            # Create batch prompts
-            batch_prompts = []
-            for note in notes:
-                prompt = self.prompt.format(note=note.replace('\n\n', '\n'), examples=self.examples)
-                batch_prompts.append(prompt)
-            
-            # Tokenize all prompts
-            inputs = self.tokenizer(
-                batch_prompts,
-                return_tensors="pt",
-                truncation=True,
-                max_length=8192,
-                padding=True
-            ).to(device)
-            
-            with torch.no_grad():
-                outputs = self.generator.generate(
-                    **inputs,
-                    max_new_tokens=1024,
-                    do_sample=True,
-                    temperature=0.1,
-                    pad_token_id=self.generator.generation_config.eos_token_id[0]
-                )
-            
-            # Decode all outputs
-            preds = []
-            for i, output in enumerate(outputs):
-                generated_text = self.tokenizer.decode(output, skip_special_tokens=True)
-                # Extract the generated part (after the prompt)
-                prompt = batch_prompts[i]
-                generated_output = generated_text[len(prompt):].strip()
-                # print(f"OUTPUT {i}: ", generated_output)
-                
-                # Find JSON content
-                json_match = re.search(r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}', generated_output, re.DOTALL)
-                
-                if json_match:
-                    json_text = json_match.group(0)
-                    # print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
-                    
-                    # Try to parse as JSON
-                    try:
-                        parsed_json = json.loads(json_text)
-                        preds.append(parsed_json)
-                    except Exception as e:
-                        print(f"Failed to parse JSON {i}")
-                        preds.append(None)
+        # Create batch prompts
+        batch_prompts = []
+        for note in notes:
+            prompt = self.prompt.format(
+                note=note.replace("\n\n", "\n"), examples=self.examples
+            )
+            batch_prompts.append(prompt)
 
-                    
-                else:
-                    print(f"No JSON content found for output {i}")
-                    preds.append(None)
-                    
-        except Exception as e:
-            print(f"Failed to generate batch output: {e}")
-            return preds + [None] * (self.batch_size - len(preds))
-                
+        # Tokenize all prompts
+        inputs = self.tokenizer(
+            batch_prompts,
+            return_tensors="pt",
+            truncation=True,
+            max_length=8192,
+            padding=True,
+        ).to(device)
+
+        with torch.no_grad():
+            outputs = self.generator.generate(
+                **inputs,
+                max_new_tokens=1024,
+                do_sample=True,
+                temperature=0.1,
+                pad_token_id=self.generator.generation_config.eos_token_id[0],
+            )
+
+        # Decode all outputs
+        preds = []
+        for i, output in enumerate(outputs):
+            generated_text = self.tokenizer.decode(output, skip_special_tokens=True)
+            # Extract the generated part (after the prompt)
+            prompt = batch_prompts[i]
+            generated_output = generated_text[len(prompt) :].strip()
+            # print(f"OUTPUT {i}: ", generated_output)
+
+            # Find JSON content
+            json_match = re.search(
+                r'\{\s*"Employment"\s*:\s*\[.*?],\s*"HousingInstability"\s*:\s*\[.*?],\s*"FoodInsecurity"\s*:\s*\[.*?],\s*"FinancialStrain"\s*:\s*\[.*?],\s*"Transportation"\s*:\s*\[.*?],\s*"Childcare"\s*:\s*\[.*?],\s*"Permanency"\s*:\s*\[.*?],\s*"SubstanceAbuse"\s*:\s*\[.*?],\s*"Safety"\s*:\s*\[.*?]\s*\}',
+                generated_output,
+                re.DOTALL,
+            )
+
+            if json_match:
+                json_text = json_match.group(0)
+                # print(f"Parsing found JSON text {i}:", json_text.replace('\n', ''))
+
+                # Try to parse as JSON
+                try:
+                    parsed_json = json.loads(json_text)
+                    print(f"Successfully parsed JSON {i}")
+                except Exception as e:
+                    print(f"Failed to parse JSON {i}")
+                    parsed_json = None
+            else:
+                print(f"No JSON content found for output {i}")
+                parsed_json = None
+
+            preds.append(parsed_json)
+
         return preds
-    
+
     def evaluate(self, dataloader):
         """Evaluate model on a batch of data"""
         try:
-            preds = []
-            targets = []
-            broken_indices = []
+            with open(f"logs/{self.output_dir}/{self.file_name}.txt", "a") as f:
+                preds = []
+                targets = []
+                broken_indices = []
 
-            for idx, batch in enumerate(dataloader):
-                if (
-                    self.max_batches
-                    and idx >= self.max_batches
-                ):
-                    break
+                for idx, batch in enumerate(dataloader):
+                    if self.max_batches and idx >= self.max_batches:
+                        break
 
-                print(f"\nbatch {idx + 1} of {self.max_batches if self.max_batches else len(dataloader)}")
-                notes, labels = batch["note"], batch["labels"]
+                    print(
+                        f"\nbatch {idx + 1} of {self.max_batches if self.max_batches else len(dataloader)}"
+                    )
+                    filenames, notes, labels = (
+                        batch["filename"],
+                        batch["note"],
+                        batch["label"],
+                    )
 
-                if self.evaluation_config["eval_type"] == 's':
-                    # Process batch
-                    batch_preds = []
-                    for note in notes:
-                        batch_preds.append(self.generate_structured_output(note))
-                elif self.evaluation_config["eval_type"] == 'us':
-                    # Process batch
-                    batch_preds = self.generate_unstructured_output(notes)
-                else:
-                    raise ValueError("Invalid eval type")
-            
-                # Process each prediction in the batch
-                for i, (pred, label) in enumerate(zip(batch_preds, labels)):
-                    print(f"\nNOTE {i}: {notes[i][:50].replace(chr(10), '')}...\n")
-                    try:
-                        if pred is None:
-                            print(f"Failed to generate output for sample {idx}_{i}")
-                            broken_indices.append(f"{idx}_{i}")
-                            continue
-                   
-                        print(pred)
-                    
-                        pred_annotations = get_annotations(pred)
-                        preds.append(pred_annotations)
-                        targets.append(label)
-                        print(f"\nprediction: {pred_annotations} \ntarget: {label.tolist()}")
-                    except Exception as e:
-                        print(f"Error getting annotations: {e} {pred}")
-                        broken_indices.append(f"{idx}_{i}")
+                    if self.evaluation_config["eval_type"] == "s":
+                        # Process batch
+                        batch_preds = []
+                        for note in notes:
+                            batch_preds.append(self.generate_structured_output(note))
+                    elif self.evaluation_config["eval_type"] == "us":
+                        # Process batch
+                        batch_preds = self.generate_unstructured_output(notes)
+                    else:
+                        raise ValueError("Invalid eval type")
+
+                    assert (
+                        len(batch_preds) == len(filenames) == len(labels)
+                    ), "lengths of batch_preds, filenames, and labels do not match"
+
+                    # Process each prediction in the batch
+                    for i, (filename, pred, label) in enumerate(
+                        zip(filenames, batch_preds, labels)
+                    ):
+                        # print(f"\nNOTE {i}: {notes[i][:50].replace(chr(10), '')}...\n")
+                        try:
+                            if pred is None:
+                                print(
+                                    f"Failed to generate output for sample {idx}_{i}: {filename}"
+                                )
+                                broken_indices.append(f"{idx}_{i}: {filename}")
+                                f.write(f"{filename} \n\n failed to parse output\n\n\n")
+                                continue
+
+                            print(f"filename: {filename} \n output: {pred}")
+                            f.write(f"{filename} \n\n output: {pred}\n\n\n")
+
+                            pred_annotations = get_annotations(pred)
+                            preds.append(pred_annotations)
+                            targets.append(label)
+                            print(
+                                f"\nprediction: {pred_annotations} \ntarget: {label.tolist()}"
+                            )
+                            f.write(
+                                f"prediction: {pred_annotations} \ntarget: {label.tolist()}\n\n\n"
+                            )
+                        except Exception as e:
+                            print(f"Error getting annotations: {e} {pred}")
+                            broken_indices.append(f"{idx}_{i}: {filename}")
+                            f.write(f"{filename} \n\n failed to get annotations\n\n\n")
+
         except Exception as e:
             print("method failed, returning early")
             return preds, targets, broken_indices
-            
+
         return preds, targets, broken_indices
 
     def compute_and_save_metrics(self, preds, targets, broken_indices):
@@ -206,15 +239,13 @@ class ModelEvaluator:
         failed_samples = len(broken_indices)
 
         success_rate = successful_samples / total_samples if total_samples > 0 else 0.0
-        
-       
+
         print(f"\n\nEvaluation Summary:")
         print(f"Total samples: {total_samples}")
         print(f"Successful samples: {successful_samples}")
         print(f"Failed samples: {failed_samples}")
         print(f"Success rate: {success_rate:.2%}")
         print(f"Broken indices: {broken_indices}")
-        
 
         # Compute per-label metrics
         metrics = compute_metrics(preds, targets)
@@ -222,65 +253,95 @@ class ModelEvaluator:
 
         os.makedirs("results", exist_ok=True)
         os.makedirs(f"results/{self.output_dir}", exist_ok=True)
-        
-        file_name = self.prompt_path.split('_')[0] + "_" + str(1 - int(self.evaluation_config["zero_shot"]))+ "_shot"
 
         i = 0
-        while os.path.exists(f"results/{self.output_dir}/{file_name}_{i}.json"):
+        while os.path.exists(f"results/{self.output_dir}/{self.file_name}_{i}.json"):
             i += 1
-        
-        print(f"\n\nSaving metrics to: results/{self.output_dir}/{file_name}_{i}.json") 
-            
-        with open(f"results/{self.output_dir}/{file_name}_{i}.json", "w") as f:
+
+        print(
+            f"\n\nSaving metrics to: results/{self.output_dir}/{self.file_name}_{i}.json"
+        )
+
+        with open(f"results/{self.output_dir}/{self.file_name}_{i}.json", "w") as f:
             json.dump(metrics, f, indent=2)
+
 
 def main():
     """Main evaluation function
-    
+
     Usage examples:
     # Broad evaluation, zero-shot, structured output
     python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct" --broad --zero-shot
-    
+
     # Granular evaluation, few-shot, unstructured output
     python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct" --granular --few-shot --unstructured
-    
+
     # Defaults: granular, zero-shot, structured
     python evaluation.py --model-id "meta-llama/Llama-3.3-70B-Instruct"
     """
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Evaluate model with command line arguments')
-    parser.add_argument('--broad', action='store_true', help='Use broad evaluation')
-    parser.add_argument('--granular', action='store_true', help='Use granular evaluation (default if neither specified)')
-    parser.add_argument('--zero-shot', action='store_true', help='Use zero-shot evaluation')
-    parser.add_argument('--few-shot', action='store_true', help='Use few-shot evaluation (default if neither specified)')
-    parser.add_argument('--model-id', type=str, required=True, help='Model ID (overwrites config)')
-    parser.add_argument('--eval-type', type=str, required=True, help='Evaluation type (structured or unstructured or vllm)')
-    parser.add_argument('--max-batches', type=int, default=None, help='Maximum number of batches to process (default: 5)')
-    parser.add_argument('--batch-size', type=int, default=16, help='Batch size for processing (default: 8)')
+    parser = argparse.ArgumentParser(
+        description="Evaluate model with command line arguments"
+    )
+    parser.add_argument("--broad", action="store_true", help="Use broad evaluation")
+    parser.add_argument(
+        "--granular",
+        action="store_true",
+        help="Use granular evaluation (default if neither specified)",
+    )
+    parser.add_argument(
+        "--zero-shot", action="store_true", help="Use zero-shot evaluation"
+    )
+    parser.add_argument(
+        "--few-shot",
+        action="store_true",
+        help="Use few-shot evaluation (default if neither specified)",
+    )
+    parser.add_argument(
+        "--model-id", type=str, required=True, help="Model ID (overwrites config)"
+    )
+    parser.add_argument(
+        "--eval-type",
+        type=str,
+        required=True,
+        help="Evaluation type (structured or unstructured or vllm)",
+    )
+    parser.add_argument(
+        "--max-batches",
+        type=int,
+        default=None,
+        help="Maximum number of batches to process (default: 5)",
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=16,
+        help="Batch size for processing (default: 8)",
+    )
     args = parser.parse_args()
-    
+
     # Create evaluation config with command line overrides
     # Set defaults if neither option is specified
     if not args.broad and not args.granular:
         args.broad = True  # Default to broad if neither specified
-    
+
     if not args.zero_shot and not args.few_shot:
         args.zero_shot = False  # Default to few-shot if neither specified
-    
+
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise
         "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
-        "eval_type": args.eval_type  # Use structured unless --unstructured is specified
+        "eval_type": args.eval_type,  # Use structured unless --unstructured is specified
     }
-    
+
     evaluator = ModelEvaluator(
         model_id=args.model_id, evaluation_config=evaluation_config
     )
-    
+
     # Update max_batches from command line argument
     evaluator.max_batches = args.max_batches
     evaluator.batch_size = args.batch_size
-    
+
     # Print evaluation configuration
     print(f"\nEvaluation Configuration:")
     print(f"Model: {args.model_id}")
@@ -293,8 +354,23 @@ def main():
 
     # Load data
     dataloader = get_dataloaders(
-        batch_size=args.batch_size, split=False, zero_shot=evaluation_config["zero_shot"]
+        batch_size=args.batch_size,
+        split=False,
+        zero_shot=evaluation_config["zero_shot"],
     )
+
+    # Create logger file
+    os.makedirs(f"logs/{evaluator.output_dir}", exist_ok=True)
+    evaluator.file_name = (
+        evaluator.prompt_path.split("_")[0]
+        + "_"
+        + str(1 - int(evaluation_config["zero_shot"]))
+        + "_shot"
+    )
+
+    # clear the log file
+    with open(f"logs/{evaluator.output_dir}/{evaluator.file_name}.txt", "w") as f:
+        f.write("")
 
     # Evaluate model
     preds, targets, broken_indices = evaluator.evaluate(dataloader)
