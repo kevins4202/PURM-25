@@ -182,6 +182,7 @@ def main():
         evaluation_config["zero_shot"]
     )
 
+    global MAX_BATCHES
     MAX_BATCHES = args.max_batches
     
     # Load model

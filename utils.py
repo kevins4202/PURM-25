@@ -11,12 +11,12 @@ import re
 def load_prompt(broad: bool, zero_shot: bool) -> Tuple[str, str]:
     """Load prompt from file"""
 
-    prompt_path = ("broad" if broad else "granular") + "_0_shot.txt"
+    prompt_path = ("broad" if broad else "granular") + "_0_shot"
     print("Using prompt: ", prompt_path)
-    if not os.path.exists(f"prompts/{prompt_path}"):
-        raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
+    if not os.path.exists(f"prompts/{prompt_path}.txt"):
+        raise FileNotFoundError(f"Prompt file not found: {prompt_path}.txt")
 
-    with open(f"prompts/{prompt_path}", "r") as f:
+    with open(f"prompts/{prompt_path}.txt", "r") as f:
         prompt = f.read()
         
     examples = ""

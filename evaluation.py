@@ -35,7 +35,6 @@ class ModelEvaluator:
             self.evaluation_config["broad"],
             self.evaluation_config["zero_shot"]
         )
-        self.max_batches = MAX_BATCHES
 
     def _load_model(self):
         """Load and configure the model"""
