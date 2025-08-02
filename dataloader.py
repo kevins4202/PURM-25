@@ -215,7 +215,7 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
         if v:
             for label in v.split(";"):
                 labels_tmp[int(label[0])] = 1 if label[1] == "+" else -1
-        examples[i][-1] = labels_tmp
+        examples[i][2] = labels_tmp
 
     if split:
         n = len(examples)
