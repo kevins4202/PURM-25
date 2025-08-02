@@ -216,7 +216,7 @@ class SimpleDataLoader:
         
         self.current_idx = end_idx
         
-        return {"filename": batch_filenames, "note": batch_notes, "labels": batch_labels}
+        return {"filename": batch_filenames, "note": batch_notes, "label": batch_labels}
 
     def __len__(self):
         return (len(self.dataset) + self.batch_size - 1) // self.batch_size
