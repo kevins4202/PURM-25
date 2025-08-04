@@ -121,10 +121,10 @@ def evaluate(llm, dataloader, prompt, examples, log_dir, file_name):
                         preds.append(pred_annotations)
                         targets.append(label)
                         print(
-                            f"\nprediction: {pred_annotations} \ntarget: {label.tolist()}"
+                            f"\nprediction: {pred_annotations} \ntarget: {label}"
                         )
                         f.write(
-                            f"prediction: {pred_annotations} \ntarget: {label.tolist()}\n\n\n"
+                            f"prediction: {pred_annotations} \ntarget: {label}\n\n\n"
                         )
                     except Exception as e:
                         print(f"Error getting annotations: {e} {pred}")

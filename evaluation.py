@@ -20,7 +20,7 @@ import json
 torch.set_float32_matmul_precision("high")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 
@@ -48,7 +48,7 @@ class ModelEvaluator:
         model = AutoModelForCausalLM.from_pretrained(
             self.model_id,
             quantization_config=quantization_config,
-            device_map=device,
+            device_map="auto",
         )
         print("Loaded model")
         model.generation_config.pad_token_id = model.generation_config.eos_token_id[0]
@@ -57,38 +57,10 @@ class ModelEvaluator:
 
         print("Loaded tokenizer")
 
-        if self.evaluation_config["eval_type"] == "s":
-            self.outlined_model = outlines.from_transformers(model, tokenizer)
-        elif self.evaluation_config["eval_type"] == "us":
-            self.generator = model
-            self.tokenizer = tokenizer
-        else:
-            raise ValueError(
-                f"Invalid evaluation type: {self.evaluation_config['eval_type']}"
-            )
+        self.generator = model
+        self.tokenizer = tokenizer
 
-    def generate_structured_output(self, note):
-        """Generate model output for a given user message"""
-        try:
-            structured = self.outlined_model(
-                self.prompt.format(
-                    note=note.replace("\n\n", "\n"), examples=self.examples
-                ),
-                self.output_schema,
-                max_new_tokens=512,
-            )
-
-            pred = self.output_schema.model_validate_json(structured).model_dump(
-                mode="json"
-            )
-            print("Parsed structured output:", structured)
-        except Exception as e:
-            print("Failed to generate and parse structured output:", e)
-            pred = None
-
-        return pred
-
-    def generate_unstructured_output(self, notes):
+    def generate_output(self, notes):
         """Generate model output for a batch of notes (for unstructured output)"""
         # For unstructured output, process as batch
         # Create batch prompts
@@ -106,7 +78,7 @@ class ModelEvaluator:
             truncation=True,
             max_length=8192,
             padding=True,
-        ).to(device)
+        ).to(self.generator.device)
 
         with torch.no_grad():
             outputs = self.generator.generate(
@@ -173,16 +145,8 @@ class ModelEvaluator:
                         batch["label"],
                     )
 
-                    if self.evaluation_config["eval_type"] == "s":
-                        # Process batch
-                        batch_preds = []
-                        for note in notes:
-                            batch_preds.append(self.generate_structured_output(note))
-                    elif self.evaluation_config["eval_type"] == "us":
-                        # Process batch
-                        batch_preds = self.generate_unstructured_output(notes)
-                    else:
-                        raise ValueError("Invalid eval type")
+                    # Process batch
+                    batch_preds = self.generate_output(notes)
 
                     assert (
                         len(batch_preds) == len(filenames) == len(labels)
@@ -220,7 +184,7 @@ class ModelEvaluator:
                             f.write(f"{filename} \n\n failed to get annotations\n\n\n")
 
         except Exception as e:
-            print("method failed, returning early")
+            print("method failed, returning early", e)
             return preds, targets, broken_indices
 
         return preds, targets, broken_indices
@@ -300,12 +264,7 @@ def main():
     parser.add_argument(
         "--model-id", type=str, required=True, help="Model ID (overwrites config)"
     )
-    parser.add_argument(
-        "--eval-type",
-        type=str,
-        required=True,
-        help="Evaluation type (structured or unstructured or vllm)",
-    )
+    
     parser.add_argument(
         "--max-batches",
         type=int,
@@ -331,7 +290,6 @@ def main():
     evaluation_config = {
         "broad": args.broad,  # True if --broad is used, False otherwise
         "zero_shot": args.zero_shot,  # True if --zero_shot is used, False otherwise
-        "eval_type": args.eval_type,  # Use structured unless --unstructured is specified
     }
 
     evaluator = ModelEvaluator(
@@ -347,7 +305,6 @@ def main():
     print(f"Model: {args.model_id}")
     print(f"Broad evaluation: {evaluation_config['broad']}")
     print(f"Zero-shot: {evaluation_config['zero_shot']}")
-    print(f"Evaluation type: {evaluation_config['eval_type']}")
     print(f"Max batches: {args.max_batches}")
     print(f"Batch size: {args.batch_size}")
     print()

@@ -165,17 +165,20 @@ DUPLICATE_FILES = [
 
 class SDOHDataset(Dataset):
     def __init__(self, notes_and_labels):
+        self.filenames = []
         self.notes = []
         self.labels = []
+        
         for note_and_labels in notes_and_labels:
-            self.notes.append(note_and_labels[0])
-            self.labels.append(note_and_labels[1])
+            self.filenames.append(note_and_labels[0])
+            self.notes.append(note_and_labels[1])
+            self.labels.append(note_and_labels[2])
 
     def __len__(self):
         return len(self.notes)
 
     def __getitem__(self, idx):
-        return self.notes[idx], self.labels[idx]
+        return self.filenames[idx], self.notes[idx], self.labels[idx]
 
 
 def custom_collate_fn(batch):
@@ -215,7 +218,7 @@ def get_dataloaders(batch_size=16, split=False, zero_shot=True):
         if v:
             for label in v.split(";"):
                 labels_tmp[int(label[0])] = 1 if label[1] == "+" else -1
-        examples[i][-1] = labels_tmp
+        examples[i][2] = labels_tmp
 
     if split:
         n = len(examples)
