@@ -1,0 +1,2 @@
+model_prompt,precision,recall,f1
+Llama-3.3-70B-Instruct_granular_1_shot,0.4983585029546947,0.905727923627685,0.6429479034307497

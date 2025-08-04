@@ -166,15 +166,18 @@ class SDOHDataset:
     def __init__(self, notes_and_labels):
         self.notes = []
         self.labels = []
+        self.filenames = []
+
         for note_and_labels in notes_and_labels:
-            self.notes.append(note_and_labels[0])
-            self.labels.append(note_and_labels[1])
+            self.filenames.append(note_and_labels[0])
+            self.notes.append(note_and_labels[1])
+            self.labels.append(note_and_labels[2])
 
     def __len__(self):
         return len(self.notes)
 
     def __getitem__(self, idx):
-        return self.notes[idx], self.labels[idx]
+        return self.filenames[idx], self.notes[idx], self.labels[idx]
 
 
 class SimpleDataLoader:
@@ -198,6 +201,7 @@ class SimpleDataLoader:
         if self.current_idx >= len(self.dataset):
             raise StopIteration
         
+        batch_filenames = []
         batch_notes = []
         batch_labels = []
         
@@ -205,13 +209,14 @@ class SimpleDataLoader:
         end_idx = min(self.current_idx + self.batch_size, len(self.dataset))
         
         for i in range(self.current_idx, end_idx):
-            note, label = self.dataset[self.indexes[i]]
+            filename, note, label = self.dataset[self.indexes[i]]
+            batch_filenames.append(filename)
             batch_notes.append(note)
             batch_labels.append(label)
         
         self.current_idx = end_idx
         
-        return {"note": batch_notes, "labels": batch_labels}
+        return {"filename": batch_filenames, "note": batch_notes, "label": batch_labels}
 
     def __len__(self):
         return (len(self.dataset) + self.batch_size - 1) // self.batch_size
@@ -243,16 +248,16 @@ def get_dataloaders(batch_size=16, zero_shot=True):
 
     labels = labels.set_index("file")
     examples = [
-        [v["text"], v["cats"]] for _, v in labels.to_dict(orient="index").items()
+        [k, v["text"], v["cats"]] for k, v in labels.to_dict(orient="index").items()
     ]
     
-    for i, [_, v] in enumerate(examples):
+    for i, [_, _, v] in enumerate(examples):
         labels_tmp = [0 for _ in range(len(CAT_TO_LABELS))]
 
         if v:
             for label in v.split(";"):
                 labels_tmp[int(label[0])] = 1 if label[1] == "+" else -1
-        examples[i][1] = labels_tmp
+        examples[i][2] = labels_tmp
     
     # Remove incomplete batches to ensure consistent batch sizes
     examples = examples[:len(examples) - len(examples) % batch_size]
