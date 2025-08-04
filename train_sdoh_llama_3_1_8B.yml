@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: /mnt/isilon/llm_collaborative_deidentified/Llama3/Llama-3.1-8B-Instruct
+model_name_or_path: /mnt/isilon/llm_collaborative_deidentified/Llama3/Llama-3.3-70B-Instruct
 trust_remote_code: true
 quantization_bit: 4
 
@@ -13,8 +13,7 @@ lora_alpha: 32
 lora_target: q_proj,v_proj,o_proj  # or "all" if memory allows
 
 ### dataset
-#dataset_dir: llama31_8b_outputs/fold_4             # <- adjust per fold
-dataset_dir: outputs_train_full             # <- adjust per fold
+dataset_dir: data/chop/finetuning             # <- adjust per fold
 dataset: train
 #eval_dataset: val
 template: llama3
@@ -24,7 +23,7 @@ preprocessing_num_workers: 16
 dataloader_num_workers: 4
 
 ### output
-output_dir: outputs_train_full/model_llama31_8b
+output_dir: results/Llama-3.3-70B-Instruct
 logging_steps: 10
 save_steps: 100
 plot_loss: true
