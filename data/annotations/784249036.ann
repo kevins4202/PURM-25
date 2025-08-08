@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 188 466;471 784	SW relayed that the J Foundation approved to cover Mom's PECO Bill. SW relayed that a payment of $ was made on . SW relayed that there is a $ balance, which will be paid by the J Foundation on 4/3. SW advised that Mom call PECO and inform them of the scheduled payment in April. Mom asked about applying for Fred's Footsteps again and has been working on the application. SW and Mom to review this when mom comes to the bedside next. Mom relayed she plans to come this week, but is not sure what day yet. Mom will keep SW updated. Mom aware that the next application review is not until 4/18.
+A1	ResolutioninProgress T1
+T2	GeneralHousingInstability 893 1054	SW assessed for housing insecurity. Mom denied any housing insecurity and any need for housing resources at this time. Mom agreed to let SW know if this changes.
+A2	Negated T2
+T3	FinancialStrain_Other 1092 1173	SW will meet with Mom at the bedside to review the FF application and the ABAS 3.
+A3	ResolutioninProgress T3

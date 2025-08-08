@@ -1,0 +1,4 @@
+T1	LackofTransportation 442 584	Mother noted difficulty with transportation. Social worker offered to provide Septa passes to parents during their next visit to the hospital.
+T2	LackofInsurance 585 714	Mother plans to bring additional necessary documents for PA Compass application to provide to the Family Health Coverage Program.
+A1	ResolutioninProgress T2
+A2	ResolutioninProgress T1

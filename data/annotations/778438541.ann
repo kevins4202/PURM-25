@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 797 895	Patient mother and father provided with a letter for work as they anticipated Brielle`s extubation
+A1	Negated T1
+T2	FinancialStrain_Other 1710 1747	LSW submitted Opens Doors application
+A2	ResolutioninProgress T2

@@ -1,0 +1,13 @@
+T1	PatientCaregiver_Unemployment 745 829	Mom is not currently working, but it pursuiing IT certification in hopes of working.
+A1	ResolutioninProgress T1
+T2	IntimatePartnerViolence 1442 1463;1466 1510	Home Environment: YES Home Environment comment: Resources provided
+A2	ResolutioninProgress T2
+T3	LackofInsurance 1933 2012	Public assistance/SSI comment: Pt has NJ Medicaid and SSI (receiving $30/month)
+A3	Negated T3
+T4	NeedTemporaryLodging 2016 2114	Other existing community services/outside support comment: Mom is staying at Ronald McDonald House
+A4	Resolved T4
+T5	FinancialStrain_Other 2304 2525	Intervention/Plan - Household Finances Mom has no income and relies on family for financial support. Although staying at RMH, she sometimes purchases food and pays for public transportation and uber to go home once/month.
+T6	FinancialStrain_Other 2526 2644	SW discussed Colette Louise Foundation for assistance, informed mom of the website and completed the provider portion.
+A5	ResolutioninProgress T6
+T7	LackofTransportation 2761 2839	Intervention/Plan - Transportation Will discuss Logisticare prior to discharge
+A6	ResolutioninProgress T7

@@ -1,0 +1,6 @@
+T1	LackofTransportation 585 649;653 918	he family's car is currently broken down and in the repair shop. Due to no other options to transport Mom's belongings, SW received SW Leadership Sheronda Ball's approval to provide a Lyft from CHOP to Children's Specialized. SW spoke with Mom and she will ride in the Lyft with her belongings and follow Demarcus in the ambulance
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 925 982;985 1068;1070 1166	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft. Reason for Disbursement: Other hardship considerations: No other available resources or options.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1492 1549;1552 1640;1642 1718;1724 1744;1748 1867	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2. Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: SW approved additional resources due to financial strain from this extended admission. Pt should be discharged tomorrow
+A3	ResolutioninProgress T3

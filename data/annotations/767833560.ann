@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 608 644	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 723 855	Pt's father is incarcerated until March 2023, but is in regular communication with mom and has some released time when he can visit.
+T3	PatientCaregiver_Unemployment 856 973	Mom is a restaurant manager; she has used her FMLA and bonding time and is now applying for personal leave from work.
+A2	Negated T3
+T4	DistancefromHospital 2032 2067	Parent Stressors Distance from home
+T5	DistancefromHospital 667 722	Parent Information: Pt's mother lives in Atlantic City.
+T6	LackofTransportation 2070 2152;2155 2236	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI Transportation comment: Mom has a car, but usually uses the train to visit daily.
+A3	Negated T6
+T7	LackofInsurance 2239 2302	Public assistance/SSI comment: Pt has NJ Medicaid (Horizon NJ).
+A4	Negated T7
+T8	FinancialStrain_Other 2345 2453	Mom had covid rental assistance for the last 4 months. Mom has applied for a program for utility assistance.
+A5	ResolutioninProgress T8
+T9	FinancialStrain_Other 2522 2564;2567 2624;2627 3124	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom will be aware of resources. Intervention/Plan - Household Finances SW made mom aware of foundations that can assist if there is financial stress related to hospitalization. Mom is seeking further time off from work to visit daily; she has the cost of transportation to visit. SW made mom aware of rent assistance and possible fransportation assistance from foundations with their due dates, but mom will look into whether the rental assistance will continue through the covid program. SW will then make appropriate referrals.
+A6	ResolutioninProgress T9

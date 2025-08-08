@@ -1,0 +1,6 @@
+T1	ChildcareBarrierfromHospitalization 304 369	Parents are visiting from Vietnam and plan to stay until 3/11/23.
+A1	Resolved T1
+T2	NeedTemporaryLodging 370 501	Mom stated that they were able to extend their lease on the apartment in Philadelphia therefore they did not need RMH at this time.
+A2	Resolved T2
+T3	FinancialStrain_Other 553 668	Mom stated that she is still receiving a medical bill and will bring it with her tomorrow for SW to submit to FHCP.
+A3	ResolutioninProgress T3

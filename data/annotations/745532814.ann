@@ -1,0 +1,3 @@
+T1	PatientCaregiver_Unemployment 600 650	Mom is not working PICU SW approved Meal vouchers.
+T2	FinancialStrain_Other 600 650	Mom is not working PICU SW approved Meal vouchers.
+A1	ResolutioninProgress T2

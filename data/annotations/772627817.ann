@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 416 476	Mother continues to stay at RMDH with patient's grandmother.
+A1	Resolved T1
+T2	LackofInsurance 479 551	Mother to add patient to her insurance policy ( mother has NJ Medicaid).
+A2	ResolutioninProgress T2

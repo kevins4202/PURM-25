@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 465 584	SW met with Mom and Mom informed SW that herself and Dad are currently unemployed and have limited resources currently.
+T2	NeedTemporaryLodging 767 974	Dad informed SW that he have not received an e-mail from the RMD house for his background check. SW contacted the RMD house to make sure that the e-mail was sent and they confirmed they will resend it today.
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 465 584	SW met with Mom and Mom informed SW that herself and Dad are currently unemployed and have limited resources currently.
+T4	LackofTransportation 204 213;216 230;234 464	Problems: Transportation Progress: The medical team requested for Dad to receive transportation assistance to receive medical teaching prior to Olivia being discharge. Transportation assistance would also be needed at the time of discharge for the family.
+T5	LackofTransportation 585 766	SW informed Mom that we will send a transportation request and follow up with the family. SW spoke to Dad and he stated that he could arrange for a ride to the airport on Wednesday.
+A2	ResolutioninProgress T5

@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 2065 2181	Mom and dad work at walmart but are bedside finances are limited. PICU SW approved for meal vouchers for their stay.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 2065 2130	Mom and dad work at walmart but are bedside finances are limited.
+A2	Negated T2
+T3	NonPermanentPlacement 570 605;608 685	Patient living situation: PARENT(S) Parent Information: 2 parent family no other children Parents work at Walmart
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 608 685	Parent Information: 2 parent family no other children Parents work at Walmart
+A4	Negated T4

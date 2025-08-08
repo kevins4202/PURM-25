@@ -1,0 +1,5 @@
+T1	NeedTemporaryLodging 392 442	Elizabeth continues to visit daily from local RMH.
+A1	Resolved T1
+T2	PermanentPlacementPending 559 658	SW provided letter to confirm hospitalization for upcoming court date for ongoing adoption process.
+T3	FinancialStrain_Other 864 920	SW shared that MBA Opens Doors application was approved.
+A2	ResolutioninProgress T3

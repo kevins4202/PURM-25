@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 437 474	Family includes Mom, Dad, and Emilio.
+A1	Negated T1
+T2	DistancefromHospital 511 577	Family is from Abescon NJ, which is little over an hours from CHOP
+T3	NeedTemporaryLodging 580 653	Parents and MGM have checked into RMH and report to be comfortable there.
+A2	Resolved T3
+T4	LackofInsurance 655 707	Emilio has active insurance through NJ MA/Amerigroup
+A3	Negated T4

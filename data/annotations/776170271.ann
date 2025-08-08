@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 402 509	Both parents will be returning home for 4-5 days starting tomorrow 2/2 due to father's return to work date.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 807 945	Father anticipates visiting primarily on weekends, and that an aunt or grandparent will also travel in with mother while father is working
+A2	Negated T2
+T3	NeedTemporaryLodging 1356 1426	SW to connect with RMH SW in supporting family access to local lodging
+A3	ResolutioninProgress T3

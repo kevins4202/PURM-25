@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 557 613;616 696	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Elijah lives with his parents Amanda Hilsher and Shawn Gregg
+A1	Negated T1
+T2	FinancialStrain_Other 1921 2030	Transplant has been rescheduled many times which has contributed to a significant decrease in monthly income.
+T3	PatientCaregiver_Unemployment 2031 2156	Parents have taken off work or have utilitzed FMLA in anticipation of transplant that was then cancelled for various reasons.
+A2	Negated T3
+T4	FinancialStrain_Other 2158 2296	The family also live a distance from CHOP so transportation costs, etc also cotnribute to a decrease in monthly income and are a stressor.
+T5	DistancefromHospital 2158 2296	The family also live a distance from CHOP so transportation costs, etc also cotnribute to a decrease in monthly income and are a stressor.

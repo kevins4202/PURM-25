@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 557 592;595 731	Patient living situation: PARENT(S) Parent Information: Bentley is the first child to intact parents Tabitha and Eric who reside in Brigantine, NJ (over an hour from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 595 730	Parent Information: Bentley is the first child to intact parents Tabitha and Eric who reside in Brigantine, NJ (over an hour from CHOP)
+T3	PatientCaregiver_Unemployment 808 926	Eric works in Sales and is taking paid time off right now and will evaluate taking parental leave in the coming weeks.
+A2	Negated T3
+T4	NeedTemporaryLodging 1025 1133	Parents have checked into the Ronald McDonald House and plan to reside there while Brentley is hospitalized.
+A3	Resolved T4
+T5	DistancefromHospital 2469 2548	Parent Stressors Bentley's hospitalization, traumatic birth, far away from home
+T6	PatientCaregiver_Unemployment 3088 3129;3132 3250;3253 3349	Resource Needs Problem: EMPLOYMENT/INCOME Goal - Employment/income Parents will have the needed support to maintain employment while the patient is hospitalized Intervention/Plan - Employment/income LSW provided the patient's father with a letter of support
+A4	Negated T6

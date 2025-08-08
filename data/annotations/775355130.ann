@@ -1,0 +1,5 @@
+T1	PermanentPlacementPending 2018 2133	See previous note with information about report through Child Line. Team should get CYS approval prior to discharge
+T2	HomeEnvironment_Other 2018 2133	See previous note with information about report through Child Line. Team should get CYS approval prior to discharge
+T3	HomeEnvironment_Other 1461 1480;1483 1524	CPS Involvement YES CPS involvment comment: See previous note
+T4	NonPermanentPlacement 553 600;603 706	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Per mom, patient lives primarily with mom. Patient spends some time in home of dad.
+A1	Negated T4

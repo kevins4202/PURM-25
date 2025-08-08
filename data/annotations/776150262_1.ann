@@ -1,0 +1,15 @@
+T2	PatientCaregiver_Unemployment 1143 1232	Mom is on leave from her employer in medical billing and dad works in waterproofing homes
+A2	Negated T2
+T3	SubstanceAbuse_Other 2158 2177;2180 2273	Substance Abuse YES Substance Abuse comment: Mom noted hx however adequately supported/ no concerns at this time.
+A3	HistoryOf T3
+T1	NonPermanentPlacement 632 667	Patient living situation: PARENT(S)
+A1	Negated T1
+T4	DistancefromHospital 2357 2452	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A4	Negated T4
+T8	LackofTransportation 2357 2452	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A7	Negated T8
+T9	FinancialStrain_Other 2455 2555	Parent Stressors unexpected hospitalization, unknown prognosis, hospitalization, childcare, finances
+T5	LackofInsurance 2587 2654;2657 2765	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mom noted that Caleb is already added to her Health Partners PA MA insurance.
+A5	Negated T5
+T6	FinancialStrain_Other 2834 2876;2879 2973;2976 3052	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom noted staying the hospital due to emergent unexpected admission. Intervention/Plan - Household Finances SW provided 4 meal vouchers per need.
+A6	ResolutioninProgress T6

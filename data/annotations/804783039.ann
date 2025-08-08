@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 683 772	Mom asked if she could receive additional vouchers for the weekend. SW requested vouchers
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromHospitalization 774 848	Mom reported that she plans to stay at bedside until Tamera is discharged.
+A2	Negated T2

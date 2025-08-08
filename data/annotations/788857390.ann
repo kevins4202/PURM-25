@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 677 775	We discussed Colette Louise foundation for assistance with train tickets, since dad visits weekly;
+A1	ResolutioninProgress T1
+T2	LackofTransportation 677 775	We discussed Colette Louise foundation for assistance with train tickets, since dad visits weekly;
+A2	Negated T2

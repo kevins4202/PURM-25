@@ -1,0 +1,10 @@
+T1	IntimatePartnerViolence 561 761;766 956	Per RMH SW and RMH Family Support Services, mother disclosed IPV concerns. SW and RMH to partner in supporting the family in next steps. SW consulted with CHOP IPV Counselor regarding local resources. Mother contacted this SW directly by phone. SW provided mother with phone number for IPV counselor, and mother reached out directly and was provided with information for support and shelter.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 215 224;227 234;236 264;269 278;283 391;396 557	Problems: Housing Other:  Home environment/IPV Progress: SW was contacted by RMH Social Worker Liz Thul and Director of RMH Family Support Services Johanna Crocetto. Per RMH, father has breached guidelines that were communicated to him multiple times. Due to this reason, the family will be asked to leave the RMH at this time.
+T3	HomeEnvironment_Other 396 557	Per RMH, father has breached guidelines that were communicated to him multiple times. Due to this reason, the family will be asked to leave the RMH at this time.
+T4	IntimatePartnerViolence 236 264	Other:  Home environment/IPV
+A2	ResolutioninProgress T4
+T5	NeedTemporaryLodging 957 1165;1169 1291	Mother contacted Hosts for Hospitals, who shared that children are not eligible due to not being vaccinated for COVID. SW offered hotel information and to apply for financial assistance for a hotel or Airbnb. RMH assisting with hotel Friday night through Sunday night, and family to meet with SW on Monday to discuss ongoing plans.
+A3	ResolutioninProgress T5
+T6	FinancialStrain_Other 1076 1165	SW offered hotel information and to apply for financial assistance for a hotel or Airbnb.
+A4	ResolutioninProgress T6

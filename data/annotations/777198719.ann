@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 83 196	Mother shared that Fred's Footsteps payment was sent via mail on 1/30/23 and should arrive in 7-10 business days.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 794 851;854 942	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1202 1259;1262 1356	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 2
+A3	ResolutioninProgress T3

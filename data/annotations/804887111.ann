@@ -1,0 +1,8 @@
+T1	Transportation_Other 899 1011	Mother in agreement with referral. Mother requested Septa passes and meal vouchers, which social worker provided
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 899 1012	Mother in agreement with referral. Mother requested Septa passes and meal vouchers, which social worker provided.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1500 1557;1560 1662;1664 1911	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Tokens: 4. Reason for Disbursement: Other hardship considerations: Mother with no income. Meal vouchers provided to support mother visiting twins daily and Septa passes provided to enable mother to visit over the weekend when mother's bus pass is not active.
+A3	ResolutioninProgress T3
+T4	Transportation_Other 1743 1911	Meal vouchers provided to support mother visiting twins daily and Septa passes provided to enable mother to visit over the weekend when mother's bus pass is not active.
+A4	ResolutioninProgress T4

@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 647 689	Parents submitted Opens Doors application.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 595 642	Patient parent gained Lyft ride and thanked LSW
+A2	Resolved T2

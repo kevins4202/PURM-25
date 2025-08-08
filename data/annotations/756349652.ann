@@ -1,0 +1,8 @@
+T1	HomeSafety 207 216;219 316;320 781	Problems: Hospital discharge and Placement, custody/consent, Virginia CPS involvement and Bucks County CYS. Progress: Ongoing. This SW contacted VA CPS Intake, Breanna Miller, 757-719-6429, who reported that the plan for having the patient discharged to the Maternal Uncle, Sam Neitz and his wife, is still the most likely plan for disposition, however, VA CPS is waiting on the courtesy home visit to the Uncle's home by the Buck County CPS Social Worker, Ashley Foley, 267-227-2195, for clearance of the physical home setting and assessment of the Uncle and his wife.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 207 216;219 316;320 781	Problems: Hospital discharge and Placement, custody/consent, Virginia CPS involvement and Bucks County CYS. Progress: Ongoing. This SW contacted VA CPS Intake, Breanna Miller, 757-719-6429, who reported that the plan for having the patient discharged to the Maternal Uncle, Sam Neitz and his wife, is still the most likely plan for disposition, however, VA CPS is waiting on the courtesy home visit to the Uncle's home by the Buck County CPS Social Worker, Ashley Foley, 267-227-2195, for clearance of the physical home setting and assessment of the Uncle and his wife.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 880 1001	SW was informed that the Uncle and she have 2 young toddlers at home, she is a homemaker while the Uncle works full-time.
+A3	Negated T3
+T4	HomeSafety 1432 1666	This SW contacted the Bucks County CYS SW, Ms. Foley, who reported that she is planning to visit the Uncle and Aunt's home tomorrow around 3:30pm. Ms. Foley will communicate her impression of the Uncle's home and the family to VA CPS.
+A4	ResolutioninProgress T4

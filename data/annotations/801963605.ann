@@ -1,0 +1,27 @@
+T1	PatientCaregiver_Unemployment 951 1000	Mom works 8-4 M-F; dad works in construction 8-6.
+A1	Negated T1
+T2	NonPermanentPlacement 718 765	Patient living situation: PARENT(S);RELATIVE(S)
+A2	Negated T2
+T3	NeedTemporaryLodging 768 950	Parent Information: Parents are staying with family members in Philadelphia. They plan to stay locally after discharge, although mom reports they are trying to get their own housing.
+A3	Resolved T3
+T4	NeedTemporaryLodging 768 950	Parent Information: Parents are staying with family members in Philadelphia. They plan to stay locally after discharge, although mom reports they are trying to get their own housing.
+A4	ResolutioninProgress T4
+T5	ChildcareBarrierfromNonHospitalization 1001 1132	Parents have a 5 year old who is staying with family in Mexico; mom reports the goal is to bring him to live with them this summer.
+A5	ResolutioninProgress T5
+T6	NeedTemporaryLodging 1135 1210	Relative Information: Parents are living with pt's paternal aunt and uncle.
+A6	Resolved T6
+T7	LackofTransportation 2261 2362;2365 2423	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI;FOUNDATION SUPPORT Transportation comment: Parents use public transportation.
+A7	Negated T7
+T8	LackofInsurance 2426 2482	Public assistance/SSI comment: Pt has PA Medicaid (UHC);
+A8	Negated T8
+T9	LackofFundsforFood 2483 2540	mom applied for SSI in April, mom receives SNAP benefits.
+A9	Negated T9
+T10	FinancialStrain_Other 2543 2689	Foundation support comment: Family was approved for assistance with one month of rent (they pay rent to dad's brother and ODF paid their portion).
+A10	ResolutioninProgress T10
+T11	FinancialStrain_Other 2758 2808;2811 2947;2950 3077	Resource Needs Problem: HOUSEHOLD FINANCES;HOUSING Goal - Household Finances Patient's parents household fianances will support parents presence to participate in care and transition home Intervention/Plan - Household Finances SW discussed foundation assistance for transportation to visit and meals while visiting.
+A11	ResolutioninProgress T11
+T12	HouseInstability_Other 3080 3141;3144 3228	Goal - Housing Parents will have stable housing at discharge. Intervention/Plan- Housing Mom reports parents plan to move prior to pt's discharge.
+A12	ResolutioninProgress T12
+T13	PatientCaregiver_Unemployment 3894 3981	She plans to leave work to care for pt at discharge, however is worried about finances.
+A13	Negated T13
+T14	FinancialStrain_Other 3894 3981	She plans to leave work to care for pt at discharge, however is worried about finances.

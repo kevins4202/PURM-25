@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 423 570	Reason for Disbursement: Other hardship considerations: Multiple recent unexpected admisions, financial strain, parents report having exhausted PTO
+A1	Negated T1
+T2	FinancialStrain_Other 245 302;305 421;423 570	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 2. Reason for Disbursement: Other hardship considerations: Multiple recent unexpected admisions, financial strain, parents report having exhausted PTO
+A2	ResolutioninProgress T2

@@ -1,0 +1,5 @@
+T1	FoodInsecurity_Other 957 1003	Mother in need of WIC and formula for patient.
+T2	FoodInsecurity_Other 1118 1293	SW spoke to the NE WIC office, mother's WIC card is loaded already and she can purchase 30 cans of formula. Mother will need to bring in a WIC form once patient is discharged.
+A1	Resolved T2
+T3	CommunitySafety 1362 1433	SW ordered patient infant car seat to be delivered to the bedside today
+A2	Resolved T3

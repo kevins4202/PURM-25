@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 384 494	SW confirmed that mother successfully checked into RMH and has been able to navigate using shuttle to commute.
+A1	Resolved T1
+T2	FinancialStrain_Other 655 730	SW provided additional donated meal vouchers to assist through the weekend.
+A2	ResolutioninProgress T2

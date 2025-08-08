@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 307 408	Both parents continue to work full time and check into the RMD house on the weekends to be with Levi.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 307 408	Both parents continue to work full time and check into the RMD house on the weekends to be with Levi.
+A2	Negated T2

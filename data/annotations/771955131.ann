@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 1309 1399	LSW will provide letters for each parents to send to their employer regarding the meeting.
+A1	Negated T1
+T2	ChildcareBarrierfromHospitalization 1538 1631	Patient father visits during the evenings and patient mother visits during the day on weekday
+A2	Negated T2

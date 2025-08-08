@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 645 719	SW provided 1 gas card and 5 parking passes to assist with ongoing commute
+A1	ResolutioninProgress T1
+T2	LackofInsurance 724 829	Nico has been approved for NJMA through MLTSS, will switch from straight NJMA to Aetha Better Health 6/1.
+A2	Negated T2

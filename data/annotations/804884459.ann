@@ -1,0 +1,9 @@
+T1	FinancialStrain_Other 284 725	Mother inquired about financial assistance for train tickets for grandmother and patient's three great aunts to visit for support. Social worker relayed that SW emergency fund is only able to assist with transportation costs for parents. Social worker offered to explore other types of financial resource assistance the family may be eligible for to offset the cost of transportation for mother and/or family members to visit from Lancaster.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 522 725	Social worker offered to explore other types of financial resource assistance the family may be eligible for to offset the cost of transportation for mother and/or family members to visit from Lancaster.
+T3	FinancialStrain_Other 856 1156	Mother requested meal vouchers and parking vouchers as mother is staying at bedside throughout the day and often misses meals offered at Ronald McDonald House. Per previous notes, mother currently does not have any income to purchase meals in the cafeteria. Meal vouchers and parking passes provided.
+A2	ResolutioninProgress T3
+T4	NeedTemporaryLodging 856 1014	Mother requested meal vouchers and parking vouchers as mother is staying at bedside throughout the day and often misses meals offered at Ronald McDonald House
+A3	Resolved T4
+T5	FinancialStrain_Other 1753 1810;1813 1929	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 3.
+A4	ResolutioninProgress T5

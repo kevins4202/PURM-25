@@ -1,0 +1,7 @@
+T1	NeedTemporaryLodging 376 416	Parents continue to visit from local RMH
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 515 686	SW returned completed FMLA and FLI paperwork to paternal grandmother by secure email. Mom provided SW with her own FMLA and FLI paperwork today, which SW will assist with.
+A2	Negated T2
+T3	FinancialStrain_Other 953 1027	SW providing meal vouchers to assist with costs related to hospitalization
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 687 762	Dad expressed stress around needing to find a new job and managing finances

@@ -1,0 +1,6 @@
+T1	LackofInsurance 142 412	Progress:  LSW met with Dasher's mother at the bedside to answer questions about secondary medicaid. The patient's mother is scheduled to call the Change Center with FHC in the afternoon to request that the patient's secondary Medicaid is back dated to his date of birth
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 499 591	Dasher's mother is scheduled to begin work at Stanford Hospital at the beginning of October.
+A2	Negated T2
+T3	LackofInsurance 714 814	LSW explained the process of requesting a transfer and that it mainly depends on insurance approval.
+A3	Negated T3

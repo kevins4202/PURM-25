@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 331 408	SW provided mother with meal vouchers due to her lack of resources currently.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 438 729	Mother inquired about father coming to the hospital to visit on the weekends, but not having a mode of transportation. SW encouraged mom to speak with him to check if he is able to acquired a ride, and SW assured her he would check back in on Thursday this week to continue to problem solve.
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 1108 1188	Mom she continues to have a room at the RMH, which she reported has been helpful
+A3	Resolved T3
+T4	LackofInsurance 1286 1361	SW will also check back in FHCP for an update regarding obtaining insurance
+A4	ResolutioninProgress T4

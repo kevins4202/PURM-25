@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 246 303;306 421;423 481	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Pharmacy: 207.55 and Other: Lyft to airport. Reason for Disbursement: Medically necessary for discharge
+A1	ResolutioninProgress T1
+T2	LackofInsurance 589 637	Patient has active out of state insurance, MO MA
+A2	Resolved T2

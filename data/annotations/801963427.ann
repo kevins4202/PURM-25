@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 411 479	Levi's parents plan to visit this weekend and stay at the RMD house.
+A1	Resolved T1
+T2	FinancialStrain_Other 483 598	LSW will follow up with the patient's mother on Monday to assist in the completion of the Open's Doors application.
+A2	ResolutioninProgress T2

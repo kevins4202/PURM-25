@@ -1,0 +1,12 @@
+T1	NeedTemporaryLodging 615 817	Mother shared that the family was able to visit over the weekend and check in to Ronald McDonald House. Family had to check out to return home at the end of the weekend as Lance's sister attends school.
+A1	Resolved T1
+T2	LackofInsurance 818 961	Mother shared the she spoke with FHCP representative Rosemarie Padilla regarding applying for NJ Family Care (NJ Medical Assistance) for Lance.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 1440 1797	Mother shared that she is not yet cleared to drive. Father uses the family's sole vehicle for transportation to work. Family has limited financial resources for mother to take a Lyft or an Uber to the hospital and does not have friends or family in the area who can provide a ride to CHOP. Social worker arranged a round trip Lyft ride for mother on 6/1/23.
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 1558 1797	Family has limited financial resources for mother to take a Lyft or an Uber to the hospital and does not have friends or family in the area who can provide a ride to CHOP. Social worker arranged a round trip Lyft ride for mother on 6/1/23.
+A4	ResolutioninProgress T4
+T5	LackofTransportation 2745 2802;2805 2947;2949 3291	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): one round trip Lyft ride from home to the hospital. Reason for Disbursement: Other hardship considerations: Mother is currently unable to drive and father uses the family's vehicle for work. Mother has not received her NJ Disability payment. Family has limited financial resources to access a Lyft or Uber ride. Round trip Lyft ride arranged through Hospitality for 6/1/23 per mother's request.
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 2745 2802;2805 2947;2949 3291	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): one round trip Lyft ride from home to the hospital. Reason for Disbursement: Other hardship considerations: Mother is currently unable to drive and father uses the family's vehicle for work. Mother has not received her NJ Disability payment. Family has limited financial resources to access a Lyft or Uber ride. Round trip Lyft ride arranged through Hospitality for 6/1/23 per mother's request.
+A6	ResolutioninProgress T6

@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 574 630;633 720	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt lives with mom, Christie, in Wildwood, NJ (1.5 hours from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 633 720	Parent Information: Pt lives with mom, Christie, in Wildwood, NJ (1.5 hours from CHOP).
+T3	PatientCaregiver_Unemployment 721 761	Mom works seasonally, jobs change often.
+A2	Negated T3
+T4	PatientCaregiver_Unemployment 762 790	Pt's father is incarcerated.
+T5	FinancialStrain_Other 1950 2020	Parent Stressors Single parent, limited family support, limited income
+T6	LackofFundsforFood 2023 2090;2093 2183	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Per mom, pt receives SSI and family receives SNAP benefits.
+A3	Negated T6
+T7	FinancialStrain_Other 2252 2294;2297 2379;2382 2532	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances SW will continue to assess and provide financial support Intervention/Plan - Household Finances Discuss Open Doors grant with family, provide concrete resources as needed, identify other applicable resources
+A4	ResolutioninProgress T7

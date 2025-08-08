@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 538 639	Mother plans to return to work next week and the family is maintaining their room at RMH at this time
+A1	Negated T1
+T2	NeedTemporaryLodging 538 640	Mother plans to return to work next week and the family is maintaining their room at RMH at this time.
+A2	Resolved T2
+T3	FinancialStrain_Other 713 887	Mother is amenable to an application to MBA Opens Doors Foundation to request financial support and we will begin working on it. SW initiated request via online portal today.
+A3	ResolutioninProgress T3

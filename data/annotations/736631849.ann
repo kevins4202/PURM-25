@@ -1,0 +1,13 @@
+T1	LackofTransportation 2082 2187	Parent Strengths can articulate needs, adequate family support, understands illness, car, open to support
+A1	Negated T1
+T2	FinancialStrain_Other 2190 2274	Parent Stressors mental health, trauma, hospitalization, patient diagnosis, finances
+T3	LackofInsurance 2773 2853;2856 2914	Goal - Insurance Mom is still in process of adding baby to their BCBS insurance. Intervention/Plan - Insurance SW will continue to support.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 2545 2597;2600 2700;2703 2769	Resource Needs Problem: HOUSEHOLD FINANCES;INSURANCE Goal - Household Finances Parents continue to cope with leave from work issues with payment process. Intervention/Plan - Household Finances SW will continue to support
+A3	ResolutioninProgress T4
+T5	PatientCaregiver_Unemployment 2600 2700	Goal - Household Finances Parents continue to cope with leave from work issues with payment process.
+A4	Negated T5
+T6	NonPermanentPlacement 598 633;636 714	Patient living situation: PARENT(S) Parent Information: Mom and dad live in Merchantsville, NJ with their 4yo son.
+A5	Negated T6
+T7	PatientCaregiver_Unemployment 977 1035	Mom works in quality insurance and dad is a legal analyst.
+A6	Negated T7

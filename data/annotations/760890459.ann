@@ -1,0 +1,9 @@
+T1	PatientCaregiver_Unemployment 770 802	Mother is currently not working.
+T2	PatientCaregiver_Unemployment 803 898	Father is working and will reach out for social work assistance with FMLA paperwork, if needed.
+A1	Negated T2
+T3	LackofInsurance 899 962	Mother plans to add Rain to her PA Medical Assistance insurance
+A2	ResolutioninProgress T3
+T4	LackofFundsforFood 964 1003	Family is also receiving SNAP benefits.
+A3	Negated T4
+T5	NonPermanentPlacement 695 739	Mother shared that Rain is her fourth child.
+A4	Negated T5

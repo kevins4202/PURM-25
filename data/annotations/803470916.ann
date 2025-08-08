@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 631 699;702 879	Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME Parent Information: Ivan and his twin brother (Gael) will live with their mother, Jeidi, and their 1 year old brother at their maternal grandmother's home in South Philadelphia.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 946 1004	Mother is currently not working and is enrolled in school.
+T3	FoodInsecurity_Other 1940 1959;1962 2151	Food insecurity YES Food insecurity comment: Family is receiving SNAP benefits. Mother and older brother are receiving WIC benefits. A WIC referral will be provided at discharge for WIC benefits for the twins.
+A2	ResolutioninProgress T3
+T4	LackofFundsforFood 2549 2622;2625 2685	Existing Community Services/Outside Supports: OTHER;PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother is connected with WIC.
+A3	Negated T4
+T5	LackofInsurance 2686 2733	Twins have been added to PA Medical Assistance.
+A4	Negated T5
+T6	LackofFundsforFood 3264 3318;3321 3443	Goal - Access to food Family will have access to food. Intervention/Plan - Access to food Family is receiving SNAP benefits. Mother and older brother are receiving WIC benefits.
+A5	Negated T6
+T7	LackofTransportation 3507 3588;3591 3866	Goal- Transportation Mother will have transportation to the hospital on weekends. Intervention/Plan - Transportation Mother has a Septa bus pass that is active Monday through Friday. Mother appreciated Septa passes for transportation assistance to the hospital on Saturdays and Sundays. Septa passes provided on 5/25/23 (documented in twin brother's chart).
+A6	ResolutioninProgress T7

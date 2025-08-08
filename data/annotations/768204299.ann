@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 574 630	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 686 723	Family lives locally in Philadelphia.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 724 818	Tania is employed by the School District of Philadelphia and Mario is self-employed as a barbe
+A3	Negated T3
+T4	LackofTransportation 1817 1993	Parent Strengths Good social support especially from pt's grandparents, parents demonstrate strong understanding of Kasyn's ongoing care needs, access to car for transportation
+A4	Negated T4
+T5	LackofInsurance 2395 2450	Public assistance/SSI comment: Secondary insurance/PAMA
+A5	Negated T5

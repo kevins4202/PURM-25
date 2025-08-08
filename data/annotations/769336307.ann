@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 601 648;651 943;946 1097;1100 1211;1218 1246;1250 1277;1280 1298;1302 1328;1331 1365;1368 1407;1410 1448;1451 1658;1661 1693;1696 1738;1741 1969	Patient living situation: PARENT(S);FOSTER CARE Parent Information: Mother (Jemyra) lives at Vantage House a recovery home where she has been for the past 5 months. Patient is her 5th child. FOB is unknown. Lancaster CYS has custody of patient at this time and is the medical consenting party. Mother is active and involved in patient care. Agency Contact: CYS Social Worker Olivia Jones at: 717-606-5206   For after hours and weekends please contact Lancaster County On call at: 717-293-7724 Foster family contact: Patients grandmother is the identified foster parent when patient is ready for discharge Custody/Consent Information: Custody/Consent Information Date/Time 01/03/23 Custody documentation: YES Documentation scan dated: 12/31/22 Custody  LEGAL CUSTODY;PHYSICAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: Lancaseter County  For consent M-F 9am-5pm contact social worker Olivia Jones at: 717-606-5206   For after hours and weekends please contact Lancaster County On call at: 717-293-7724 Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: Lancaster County CYS Who can provide consent for this patient? Lancaster County CYS - For consent M-F 9am-5pm contact social worker Olivia Jones at: 717-606-5206   For after hours and weekends please contact Lancaster County On call at: 717-293-7724
+T2	SubstanceAbuse_Other 2347 2459	CPS involvment comment: Lancaster County CYS involved due to maternal substance use and previous CYS involvement
+T3	HomeSafety 2325 2344;2347 2459	CPS Involvement YES CPS involvment comment: Lancaster County CYS involved due to maternal substance use and previous CYS involvement
+T4	SubstanceAbuse_Other 2654 2673;2676 2756	Substance Abuse YES Substance Abuse comment: Mother with hx of substance use, mother now in recovery
+A1	ResolutioninProgress T4
+T5	SubstanceAbuse_Other 2840 3066	Parent Strengths mother is active and involved in patient care, mother is in recovery , mother is open and receptive to SW support, mother is compliant with her program and working with CYS, mother is coping well at this time.
+A2	ResolutioninProgress T5
+T6	HomeSafety 2840 3066	Parent Strengths mother is active and involved in patient care, mother is in recovery , mother is open and receptive to SW support, mother is compliant with her program and working with CYS, mother is coping well at this time.
+A3	ResolutioninProgress T6
+T7	HomeSafety 3069 3208	Parent Stressors patient's illness, CYS involvement, distance from home, mother with previous loss of a child ( 4 years ago ) and trauma hx
+T8	DistancefromHospital 3069 3208	Parent Stressors patient's illness, CYS involvement, distance from home, mother with previous loss of a child ( 4 years ago ) and trauma hx
+T9	LackofInsurance 3211 3278;3281 3335	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA medicaid
+A4	Negated T9
+T10	NeedTemporaryLodging 3582 3641	Mother is not eligble to stay at RMDH due to CYS involvemen
+T11	FoodInsecurity_Other 3404 3442;3445 3580	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Mother lives at Vantage House where her meals are provide and mother does not have access to food in Philadelphia
+T12	FoodInsecurity_Other 3645 3719	Intervention/Plan - Access to food SW to provide mother with meal vouchers
+A5	ResolutioninProgress T12
+T13	NonPermanentPlacement 4553 4688	SW spoke to Olivia Jones Lancaster County CYS SW to provide medical update. CYS continues to be the medical decision maker for patient.
+T14	FinancialStrain_Other 5341 5398;5401 5489;5491 5567	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A6	ResolutioninProgress T14

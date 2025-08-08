@@ -1,0 +1,9 @@
+T1	FinancialStrain_Other 810 975	Mother plans to follow up with father to obtain the supporting documents for the family's application to the Opens Doors Foundation for one month of rent assistance.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1593 1650;1653 1789	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gift Cards: Two $50.00 NICU Social Work Fund gift cards approved.
+A2	ResolutioninProgress T2
+T3	DistancefromHospital 1918 2006	Additional comments:  Parents travel 3 hours each way to visit the baby in the hospital.
+T4	LackofTransportation 2007 2137	Family spends $80 per visit between gas, tolls and parking costs. Limited financial resources to cover the cost of transportation.
+A3	Negated T4
+T5	FinancialStrain_Other 2007 2234	Family spends $80 per visit between gas, tolls and parking costs. Limited financial resources to cover the cost of transportation. Gift cards provided to reduce transportation cost barriers to visiting the baby in the hospital.
+A4	ResolutioninProgress T5

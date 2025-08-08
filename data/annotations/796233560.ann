@@ -1,0 +1,12 @@
+T1	LackofTransportation 2100 2207	Father in agreement though in need of transportation assistance. SW approved transportation as noted below.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 2340 2555	Father reports that he does not have good phone service at his work location, also reported recent difficulty getting through with CHOP Speaks Your Language last two days, was able to utilize successfully last week.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 2665 2717	Father works until 3:30p, also with break from 12-1p
+A3	Negated T3
+T4	GeneralHousingInstability 2722 2730;2733 3027;3030 3245	Housing: SW also assessed housing status further. Father confirmed that they currently reside with family (paternal grandmother, paternal aunt, and cousin) and that pt and father share a room. Father shared that the family will need to re-locate in July because the owner sold the residence they are in. Father hopeful to find affordable housing for himself, pt, and paternal grandmother in near future. SW discussed connecting with a program to assist with multiple needs, father amenable and appreciative of referral.
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 5064 5121;5124 5231;5237 5432	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): Round-trip Lyft. Additional comments:  Father reports transportation needs to be able to visit during the week, limited resources. Teams requesting to meet with father. SW approved round-trip Lyft transportation.
+A5	ResolutioninProgress T5
+T6	LackofTransportation 5237 5432	Additional comments:  Father reports transportation needs to be able to visit during the week, limited resources. Teams requesting to meet with father. SW approved round-trip Lyft transportation.
+A6	ResolutioninProgress T6

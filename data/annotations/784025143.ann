@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 639 675	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 698 744	Parent Information: Parents are both employed.
+A2	Negated T2
+T3	HomeEnvironment_Other 1431 1450;1453 1522	CPS Involvement YES CPS involvment comment: OSH filled- DCP&P- Sherrie Lopez-609-579-8060

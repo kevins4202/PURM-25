@@ -1,0 +1,32 @@
+T1	NonPermanentPlacement 562 618;621 800	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Patient lives with his mother and siblings in West Philadelphia (approximately 3 miles from hospital. Father lives in Willmington, DE and is actively involved.
+A1	Negated T1
+T2	DistancefromHospital 621 800	Parent Information: Patient lives with his mother and siblings in West Philadelphia (approximately 3 miles from hospital. Father lives in Willmington, DE and is actively involved.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 801 824	Mother and Father work.
+A3	Negated T3
+T4	LackofTransportation 893 910	Mother has a car.
+A4	Negated T4
+T5	NeedofChildcare 1055 1103	Patient attends daycare while mother/father work
+A5	Negated T5
+T6	PatientCaregiver_Unemployment 1055 1103	Patient attends daycare while mother/father work
+A6	Negated T6
+T7	DrugUse 1869 1888;1891 1990	Substance Abuse YES Substance Abuse comment: Father has hx of drug abuse and is attended naloxone medication management
+A7	ResolutioninProgress T7
+T8	PatientCaregiver_Unemployment 2289 2302	missing work.
+A8	Negated T8
+T9	DistancefromHospital 2873 2997	Mother lives withing 3 miles of hospital and is not eligible for additional vouchers due to over 20 already being allocated.
+A9	Negated T9
+T10	FoodInsecurity_Other 2998 3049	Father declined need for food insecurity resources.
+A10	Negated T10
+T11	FinancialStrain_Other 2429 2471;2474 2578;2581 2997	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Family will be able to afford rent/utilites while patient is admitted to CHOP. Intervention/Plan - Household Finances Father expressed financial concerns and requested meal vouchers. Father lives in wilmington, DE and has been staying overnight with patient at bedside. SW provided 1 voucher/day to father and discussed meal vouchers are not meant as long term solution. Mother lives withing 3 miles of hospital and is not eligible for additional vouchers due to over 20 already being allocated.
+A11	ResolutioninProgress T11
+T12	FinancialStrain_Other 3050 3205	SW discussed possible utility/rental assistance through local foundation. Father confirmed interest and discussed plan to coordinate with patient's mother.
+A12	ResolutioninProgress T12
+T13	LackofTransportation 3537 3658	Family denies any barriers regarding transportation to appointments or financial concerns regarding patient's medication.
+A13	Negated T13
+T14	UnabletoPay 3537 3658	Family denies any barriers regarding transportation to appointments or financial concerns regarding patient's medication.
+A14	Negated T14
+T15	FinancialStrain_Other 3659 3808	SW approved 5 additional meal vouchers for father and discussed providing 1/day. Father is aware meal vouchers are not meant as a long term solution.
+A15	ResolutioninProgress T15
+T16	PatientCaregiver_Unemployment 3809 3938	Mother is not eligible for additional meal vouchers as she has returned to work and is not staying with patient at bedside daily.
+A16	Negated T16

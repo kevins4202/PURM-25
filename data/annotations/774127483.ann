@@ -1,0 +1,6 @@
+T1	LackofInsurance 341 493	SW met with father today, who shared that family has initiated an application with Tennessee MA waiver, and that documents from hospital were requested.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 569 646	Family continues to visit daily from local apartment also with pt's siblings.
+A2	Negated T2
+T3	FinancialStrain_Other 736 801	SW notified family that MBA Opens Doors application was approved.
+A3	ResolutioninProgress T3

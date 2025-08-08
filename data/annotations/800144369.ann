@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 290 432	SW informed mom that she got her e-mail and unfortunately they do not qualify for that foundation as neither of them are working at this time.
+T2	FinancialStrain_Other 290 535	SW informed mom that she got her e-mail and unfortunately they do not qualify for that foundation as neither of them are working at this time. SW stated that she is still looking for financial help and will let her know as soon as she finds one.
+A1	ResolutioninProgress T2
+T3	LackofInsurance 536 796	Mom also reported that she is still having issues and coming up against a lot of barriers with adding patient to her insurance. SW made a referral to FHCP to see if there is anything they can help assist mom with getting patient added as he is now 30 days old.
+A2	ResolutioninProgress T3

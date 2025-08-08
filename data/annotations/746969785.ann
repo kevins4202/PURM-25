@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 570 605;608 707	Patient living situation: PARENT(S) Parent Information: Kyrain was born to intact parents Tyara and Dallas who reside in Lancaster, PA.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 708 919	Dallas is employed as an operator at a factory and he has returned to work. Dallas plans to take two weeks off once Kyrain is discharged. Tyara works as a server at a restaurant and is currently on unpaid leave.
+A2	Negated T2
+T3	LackofTransportation 920 1085	The parents do not have a family car and will use the train to visit CHOP. The parent's have friends and family who are willing and able to give them rides if needed
+T4	DrugUse 1891 1910;1913 2037	Substance Abuse YES Substance Abuse comment: Tyara and Dallas have a history of drug use and they have been sober for 2 and 1 years respectively
+A4	Resolved T4
+T5	DistancefromHospital 2298 2393	Parent Stressors Kyrain's hospitalization, being over an hour from the hospital, transportation
+A3	ResolutioninProgress T3
+T6	LackofTransportation 2298 2393	Parent Stressors Kyrain's hospitalization, being over an hour from the hospital, transportation
+T7	LackofFundsforFood 2396 2463;2466 2578	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: WIC, the patient's mother was provided information on applying for SSI for Kyrain
+A5	ResolutioninProgress T7
+T8	LackofTransportation 2652 2690;2693 2812;2815 2894	Resource Needs Problem: TRANSPORTATION Goal- Transportation The patient's parents will have adequate transportation to support participation in patient's care Intervention/Plan - Transportation LSW will provide resources where appropriate
+A6	ResolutioninProgress T8

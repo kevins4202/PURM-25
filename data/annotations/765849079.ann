@@ -1,0 +1,10 @@
+T1	ChildcareBarrierfromHospitalization 437 539	Mother would like to visit more but relies on patient's father for transportation and works full time.
+T2	LackofTransportation 437 538	Mother would like to visit more but relies on patient's father for transportation and works full time
+T3	PatientCaregiver_Unemployment 437 538	Mother would like to visit more but relies on patient's father for transportation and works full time
+A1	Negated T3
+T4	DistancefromHospital 541 666	Mother open to transfer to a hospital closer to home when patient is medically stable  and no longer requires CHOP specialist
+A2	ResolutioninProgress T4
+T5	FinancialStrain_Other 1055 1137	Family was approved for a gas card from Harp's Hope and SW approved parking passes
+A3	ResolutioninProgress T5
+T6	FinancialStrain_Other 1694 1751;1754 1849;1851 1927	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A4	ResolutioninProgress T6

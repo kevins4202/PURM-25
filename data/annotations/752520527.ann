@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 353 558;562 619;622 710;712 788;792 812;816 964;968 1049	SW assessed for financial resources. SW discussed ODF, which Mom was eager to apply for. SW will provide a Spanish application at the bedside. SW approved additional concrete resources as documented below. Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: SW approved resources for Mom and Dad while they are at the bedside through the SWEF due to limited financial resources. SW will reassess as needed. Plan: SW will continue to follow. SW will assist the family with applying for ODF
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1281 1304;1306 1439;1441 1457	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A2	ResolutioninProgress T2
+T3	FoodInsecurity_Other 1459 1537;1539 1555	Goal: Patient will have ongoing access to food to support health and wellbeing Outcome: Ongoing
+A3	ResolutioninProgress T3

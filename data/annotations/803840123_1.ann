@@ -1,0 +1,18 @@
+T1	CommunityViolence 463 789	Dad does not know how the GSW occurred but provides information that Owen's friends had access to a gun at their apartment complex and Owen was shot. It is not clear the circumstances of the GSW but Dad provides additional history in which local Police are involved in locating 2 of the friends that Owen was with at the time.
+T2	NonPermanentPlacement 894 985	Dad reports that Owen lives between Dad and Mom's home, where Step Dad (John) also resides.
+A1	Negated T2
+T4	SubstanceAbuse_Other 1388 1472	Dad denies any concern that this was related to gang involvement or substance abuse.
+A2	Negated T4
+T3	CommunityViolence 1203 1322	Dad reports that the neighborhood is "rough" and shootings have been on the increase within their small town community.
+T5	CommunitySafety 1323 1472	However, Dad denies any safety issues within their neighborhood. Dad denies any concern that this was related to gang involvement or substance abuse.
+A3	Negated T5
+T6	CommunityViolence 1473 1573	Dad reports that Owen has been in trouble with law enforcement for minor crimes related to fighting.
+T7	HomeSafety 1578 1666	Dad denies any previous CPS or other legal involvement, Dad denies violence in the home.
+A4	Negated T7
+T8	SubstanceAbuse_Other 1667 1726	Dad denies any history of mental health or substance abuse.
+A5	Negated T8
+T9	NeedTemporaryLodging 1914 1978	Step Dad plans to go back and forth and Mom is currently at RMH.
+A6	Resolved T9
+T10	FinancialStrain_Other 2043 2153	SW approves meal vouchers for today due to parents coming directly from OSH and being far from access to home.
+A7	ResolutioninProgress T10
+T11	DistancefromHospital 2043 2153	SW approves meal vouchers for today due to parents coming directly from OSH and being far from access to home.

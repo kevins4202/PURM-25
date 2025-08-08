@@ -1,0 +1,49 @@
+T1	PatientCaregiver_Unemployment 742 864	Mom is unemployed, but is set up with the PPP program that allows her to get paid for care for Jenna when nurses call out.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 742 864	Mom is unemployed, but is set up with the PPP program that allows her to get paid for care for Jenna when nurses call out.
+A2	Resolved T2
+T3	PatientCaregiver_Unemployment 865 907	Dad works in Environment services at CHOP.
+T4	PatientCaregiver_Unemployment 865 906	Dad works in Environment services at CHOP
+A4	Negated T4
+A3	Negated T3
+T19	LackofTransportation 3285 3323	Resource Needs Problem: TRANSPORTATION
+T20	LackofTransportation 3285 3323	Resource Needs Problem: TRANSPORTATION
+T21	LackofTransportation 3326 3408	Goal- Transportation Pt will have access to transportation to medical appointments
+A15	ResolutioninProgress T21
+T22	LackofTransportation 3326 3408	Goal- Transportation Pt will have access to transportation to medical appointments
+A16	ResolutioninProgress T22
+T23	LackofTransportation 3412 3587	Intervention/Plan - Transportation SW will reach out to OP SW Stan Jones to touch base on anything additional IP SW can do the support the family's barriers to transportation.
+A17	ResolutioninProgress T23
+T24	LackofTransportation 3412 3586	Intervention/Plan - Transportation SW will reach out to OP SW Stan Jones to touch base on anything additional IP SW can do the support the family's barriers to transportation
+A18	ResolutioninProgress T24
+T25	FinancialStrain_Other 4451 4637	SW discussed that an October mortgage statement is needed for her ODF application. Mom agreed to send to PICU SW who applied on behalf of the family. Mom is hopeful they will be approved
+A19	ResolutioninProgress T25
+T26	FinancialStrain_Other 4451 4637	SW discussed that an October mortgage statement is needed for her ODF application. Mom agreed to send to PICU SW who applied on behalf of the family. Mom is hopeful they will be approved
+A20	ResolutioninProgress T26
+T27	FinancialStrain_Other 4643 4816	Mom asked about whether Fred's Footsteps would consider the family for additional funding since they received funding from them many years ago. SW offered to look into this.
+A21	ResolutioninProgress T27
+T28	FinancialStrain_Other 4643 4815	Mom asked about whether Fred's Footsteps would consider the family for additional funding since they received funding from them many years ago. SW offered to look into this
+A22	ResolutioninProgress T28
+T29	FinancialStrain_Other 4821 5056	Mom shared that they had SSI for Jenna when she was younger, but no longer get it, due to receiving letters that they owe money back to SSI that they were given. Mom expressed that this was more stressful than beneficial to the family.
+T30	FinancialStrain_Other 4821 5056	Mom shared that they had SSI for Jenna when she was younger, but no longer get it, due to receiving letters that they owe money back to SSI that they were given. Mom expressed that this was more stressful than beneficial to the family.
+T31	LackofTransportation 5260 5687	Discharge transportation will be through ModivCare if Jenna is discharged during the week. If she is discharged on the weekend, ambulance transport will be needed since ModivCare does not provide rides on the weekends. SW will call in the discharge ride on the day of discharge. Mom discussed ongoing barriers with transportation and that SW Jones has been supportive in helping her look into it, although there is no solution.
+A23	ResolutioninProgress T31
+T32	LackofTransportation 5260 5687	Discharge transportation will be through ModivCare if Jenna is discharged during the week. If she is discharged on the weekend, ambulance transport will be needed since ModivCare does not provide rides on the weekends. SW will call in the discharge ride on the day of discharge. Mom discussed ongoing barriers with transportation and that SW Jones has been supportive in helping her look into it, although there is no solution.
+A24	ResolutioninProgress T32
+T37	NonPermanentPlacement 636 692;695 740	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt lives with Mom and Dad
+A29	Negated T37
+T33	PatientCaregiver_Unemployment 742 864	Mom is unemployed, but is set up with the PPP program that allows her to get paid for care for Jenna when nurses call out.
+T34	PatientCaregiver_Unemployment 865 906	Dad works in Environment services at CHOP
+A25	Negated T34
+T35	LackofTransportation 2104 2303;2306 2477	Parent Stressors ongoing transportation issues with ModivCare that has resulted in missed appointments. Mom feels that this may have impacted Jenna's need to be admitted due to inconsistent follow up Existing Community Services/Outside Supports: RELIGIOUS/SPIRITUAL;HOME HEALTH SERVICES;REHABILITATION SERVICES;TRANSPORTATION;BEHAVIORAL HEALTH SERVICES;FOUNDATION SUPPORT
+T5	LackofTransportation 2104 2303;2306 2477	Parent Stressors ongoing transportation issues with ModivCare that has resulted in missed appointments. Mom feels that this may have impacted Jenna's need to be admitted due to inconsistent follow up Existing Community Services/Outside Supports: RELIGIOUS/SPIRITUAL;HOME HEALTH SERVICES;REHABILITATION SERVICES;TRANSPORTATION;BEHAVIORAL HEALTH SERVICES;FOUNDATION SUPPORT
+T6	LackofTransportation 2763 2999	Transportation comment: Family's wheelchair van has broken down. Mom would like to get a new one, but do not have the financial resources to do so. Family has been utilizing ModivCare (Tricare company) for transportation to appointments
+A5	ResolutioninProgress T6
+T17	UnabletoPay 2763 3000;3003 3211	Transportation comment: Family's wheelchair van has broken down. Mom would like to get a new one, but do not have the financial resources to do so. Family has been utilizing ModivCare (Tricare company) for transportation to appointments. Foundation support comment: PICU SW applied the family to ODF for a month of mortgage in December. Previous Fred's Footsteps recipient many years ago, Mom is curious if they woud be eligible for more funding.
+T18	LackofTransportation 3285 3323;3326 3409;3412 3587	Resource Needs Problem: TRANSPORTATION Goal- Transportation Pt will have access to transportation to medical appointments. Intervention/Plan - Transportation SW will reach out to OP SW Stan Jones to touch base on anything additional IP SW can do the support the family's barriers to transportation.
+A6	ResolutioninProgress T18
+T7	LackofInsurance 5057 5114	Mom also denied having MLTSS because they do not qualify.
+A9	Negated T7
+T8	UnabletoPay 4451 4638;4643 4816;4821 5055	SW discussed that an October mortgage statement is needed for her ODF application. Mom agreed to send to PICU SW who applied on behalf of the family. Mom is hopeful they will be approved. Mom asked about whether Fred's Footsteps would consider the family for additional funding since they received funding from them many years ago. SW offered to look into this. Mom shared that they had SSI for Jenna when she was younger, but no longer get it, due to receiving letters that they owe money back to SSI that they were given. Mom expressed that this was more stressful than beneficial to the family
+T9	LackofTransportation 5260 5687	Discharge transportation will be through ModivCare if Jenna is discharged during the week. If she is discharged on the weekend, ambulance transport will be needed since ModivCare does not provide rides on the weekends. SW will call in the discharge ride on the day of discharge. Mom discussed ongoing barriers with transportation and that SW Jones has been supportive in helping her look into it, although there is no solution.
+A7	ResolutioninProgress T9

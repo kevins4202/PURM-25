@@ -1,0 +1,27 @@
+T1	NonPermanentPlacement 514 549;552 613	Patient living situation: PARENT(S) Parent Information: Ezra has two parents, Lista and Lovemore.
+A1	Negated T1
+T2	DistancefromHospital 723 751	Parents live in Woodlyn, PA.
+T3	PatientCaregiver_Unemployment 753 788	Mom reports that dad works odd jobs
+A2	Negated T3
+T4	PatientCaregiver_Unemployment 791 944	Mom reports that she was a caregiver but that she stopped working in her 5th month of pregnancy becasue she could no longer lift heavy items or patients.
+A3	Negated T2
+T5	LackofFundsforFood 1573 1768	Parent Strengths Ask for help when needed-mom inquired about WIC and SNAP benefits, parents live locally to CHOP and have transportation, Mom reports that Ezra's condition is better than expected
+A4	ResolutioninProgress T5
+T6	DistancefromHospital 1573 1768	Parent Strengths Ask for help when needed-mom inquired about WIC and SNAP benefits, parents live locally to CHOP and have transportation, Mom reports that Ezra's condition is better than expected
+A5	Negated T6
+T7	LackofTransportation 1573 1768	Parent Strengths Ask for help when needed-mom inquired about WIC and SNAP benefits, parents live locally to CHOP and have transportation, Mom reports that Ezra's condition is better than expected
+A6	Negated T7
+T8	PatientCaregiver_Unemployment 1771 1880	Parent Stressors Mom not currently able to work, high costs such as CHOP parking, limited support for parents
+T9	FinancialStrain_Other 1771 1880	Parent Stressors Mom not currently able to work, high costs such as CHOP parking, limited support for parents
+T10	LackofFundsforFood 2079 2209	Mom reports that she had a WIC appointment earlier today and inquried about applying for SNAP benefits, which SW will assist with.
+A7	ResolutioninProgress T10
+T11	FinancialStrain_Other 2009 2077	Intervention/Plan - Household Finances Family only has dad's income.
+T12	FinancialStrain_Other 2211 2307	Mom reported that parking costs have been a struggle and SW provided 3 CHOP NICU parking passes.
+A8	ResolutioninProgress T12
+T13	LackofInsurance 2346 2421	Intervention/Plan - Insurance Mom reports that she added Ezra to insurance.
+A9	Negated T13
+T14	LackofFundsforFood 2910 3061	Mom reported that she had a WIC appointment earlier in the day and inquired about applying for SNAP benefits.  SW will assist mom in applying for SNAP.
+A10	ResolutioninProgress T14
+T15	PatientCaregiver_Unemployment 3063 3177	Mom reported that she has been unable to work for months due to her pregnancy and requested assistance if possible
+T16	FinancialStrain_Other 3063 3275	Mom reported that she has been unable to work for months due to her pregnancy and requested assistance if possible.  SW provided mom with 3 CHOP NICU parking passes and will provide additional resources as needed
+A11	ResolutioninProgress T16

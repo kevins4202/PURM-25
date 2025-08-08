@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 619 654;657 837	Patient living situation: PARENT(S) Parent Information: Makai's parents, Victoria Goodwin and Wayne Thomas, live together in Bensalem, PA (about 45 minutes from CHOP) with Makai's 9 year old and 19 year old siblings.
+A1	Negated T1
+T2	DistancefromHospital 657 837	Parent Information: Makai's parents, Victoria Goodwin and Wayne Thomas, live together in Bensalem, PA (about 45 minutes from CHOP) with Makai's 9 year old and 19 year old siblings.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 923 1112	Mother is currently on maternity leave from her job. Father is continuing to work and his employer has been supportive if he needs to take time off from work while Makai is in the hospital.
+A3	Negated T3
+T4	DrugUse 2007 2026;2029 2134	Substance Abuse YES Substance Abuse comment: Mother reports history of THC use and has prescription card. Not currently using
+A4	HistoryOf T4
+T5	DistancefromHospital 2350 2485	Parent Stressors Prematurity, unanticipated ICU-level hospitalization, transfer to CHOP which is almost an hour from the family's home.
+T6	LackofInsurance 2607 2640;2643 2702;2705 2798	Resource Needs Problem: INSURANCE Goal - Insurance Makai will be added to parents' insurance. Intervention/Plan - Insurance Social worker will offer assistance with the process as needed.
+A5	ResolutioninProgress T6

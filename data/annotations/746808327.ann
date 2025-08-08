@@ -1,0 +1,4 @@
+T1	NonPermanentPlacement 611 646;649 742	Patient living situation: PARENT(S) Parent Information: Patient resides with mother and father, who do not live in the same home.
+A1	Negated T1
+T2	HomeEnvironment_Other 2987 3157	Honesty Johnson is a 2 year old female (DOB: 11/2/2020) with no chronic medical conditions, presenting to the CHOP trauma bay, transferred from an OSH after a dog attack.
+T3	HomeEnvironment_Other 3606 3840	Mother and North East Philadelphia Detective, Thomas Walsh (badge 9178, 215-686-3154) presented back to the the trauma bay. Detective Walsh requested a private room to speak with mother. SW directed mother and Detective Walsh to ED 5.

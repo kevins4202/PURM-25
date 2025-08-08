@@ -1,0 +1,13 @@
+T1	PatientCaregiver_Unemployment 715 742	Both parents are unemployed
+T2	PatientCaregiver_Unemployment 744 792	Father is  interviewing for a new job this week.
+A1	ResolutioninProgress T2
+T3	NonPermanentPlacement 529 585	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T3
+T4	NeedofChildcare 1589 1793	Parent Strengths parents are coping well at this time, parents are active and involved in patient care, mother is breastfeeding/pumping, patient's aunt is helping to care for siblings during the admission
+A3	Negated T4
+T5	LackofInsurance 1868 1935;1938 2047	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother is active with PA MA, mother called to add patient to her policy today.
+A4	ResolutioninProgress T5
+T6	LackofFundsforFood 2048 2105	Mother receives SNAP benefits and will follow up with WIC
+A5	Negated T6
+T7	FinancialStrain_Other 2174 2212;2215 2296;2299 2361	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Parents are staying at bedside. Parents with limited income Intervention/Plan - Access to food SW to provide meal vouchers
+A6	ResolutioninProgress T7

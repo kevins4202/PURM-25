@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 587 623	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	DistancefromHospital 733 804	Other Information: Mother reportd she has a daughter who lives in Peru.
+A2	SubjectIsNotPatient T2
+T3	HomeEnvironment_Other 1444 1463;1466 1546	CPS Involvement YES CPS involvment comment: DCPP Passaic Central Office- Emilie Asjana- 201-787-9688
+T4	FinancialStrain_Other 1705 1748;1751 1878;1881 1978	Resource Needs Problem: OTHER (SEE COMMENT) Goal - Other resource needs Mother will pick up vouchers to help offset some of the costs associated with being in the hospital Intervention/Plan - Other resource needs SW will provide meal vouchers due to financial hardship.
+A3	ResolutioninProgress T4
+T5	HomeEnvironment_Other 2599 2646	Mother reported she has an open case with DCPP.
+T6	DistancefromHospital 2736 2809	Mother has a second child who is living in Peru with that child's father.
+A4	SubjectIsNotPatient T6
+T7	HomeEnvironment_Other 2814 3027	Writer spoke to Emilie Asjana (DCPP- Passaic Central Office- 201-787-9688). She reported the case was opened for "medical management," at the OSH. The case worker needs to be informed if there are discharge plans.

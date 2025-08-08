@@ -1,0 +1,13 @@
+T1	HomeEnvironment_Other 1502 1537;1540 1615	Protective Services Involvement YES CPS involvment comment: History of CPS involvement; none current per mother
+A1	HistoryOf T1
+T2	NonPermanentPlacement 705 761	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T2
+T3	HomeEnvironment_Other 1678 1694;1697 1798	Legal Issues YES Legal Issues comment: Mother denies history; current investigation due to events leading to admission
+T4	LackofInsurance 2130 2197;2200 2249	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Medicaid insurance
+A3	Negated T4
+T5	ChildAbuse 2970 3043;3046 3166	Relationships/Behavior Problem(s) SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time.
+A4	Negated T5
+T6	HomeSafety 2318 2376;2379 2464	Resource Needs Problem(s) SAFE/ACCESSIBLE HOME ENVIRONMENT Intervention/Plan - Safe/Accessible home environment  Mother denies firearm ownership
+A5	Negated T6
+T7	NonPermanentPlacement 3614 3790	Mother, Cheryl Reaves, adopted patient years ago and provides all consents.  Adbour lives at home with mother and three siblings (14 yo brother, 14 yo sister and 16 yo sister).
+A6	Negated T7

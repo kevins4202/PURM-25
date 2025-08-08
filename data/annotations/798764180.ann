@@ -1,0 +1,6 @@
+T1	LackofTransportation 861 970	Mother requested Septa passes for transportation assistance during the weekend, which social worker provided.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1508 1565;1568 1664;1666 1775;1782 1994	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 4 Septa passes. . Reason for Disbursement: Other hardship considerations: Limited financial resources to purchase Septa passes. Additional comments:  Mother does not have income to purchase Septa passes on the weekends. Mother's weekly Septa pass is only valid on weekdays. Septa passes provided to assist with transportation to visit Gael.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 1928 1994	Septa passes provided to assist with transportation to visit Gael.
+A3	ResolutioninProgress T3

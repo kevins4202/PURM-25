@@ -1,0 +1,4 @@
+T1	DistancefromHospital 444 515	Family is from Haddon Township NJ, which is about 30 minutes from CHOP.
+A1	Negated T1
+T2	LackofInsurance 569 634	Crew has active insurance with Mom's employer, Horizon BCBS of NJ
+A2	Negated T2

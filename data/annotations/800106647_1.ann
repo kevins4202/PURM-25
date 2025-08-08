@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 566 622	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	HomeSafety 1265 1283;1286 1419	PS Involvement YES CPS involvment comment: Previous involvment. Case closed. Case worker is still involved and provides resources for families as needed
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 2732 2815	Mom informed SW Dad is currently employed and she she stays home to care for Tamera
+A3	Negated T3

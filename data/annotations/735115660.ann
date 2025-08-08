@@ -1,0 +1,12 @@
+T1	HomeEnvironment_Other 1612 1631;1634 1726	CPS Involvement YES CPS involvment comment: history of CPS involvement several years ago; no current involvement
+A1	HistoryOf T1
+T3	SubstanceAbuse_Other 1775 1794;1797 1899	Substance Abuse YES Substance Abuse comment: Father has history of substance abuse and reports 'being clean for 13 years';
+A3	HistoryOf T3
+T4	DrugUse 1900 1950	mother suspects Arian and brothers smoke marijuana
+A4	Speculation T4
+T5	LackofInsurance 2233 2300;2303 2352	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: medicaid insurance
+A5	Negated T5
+T6	ChildAbuse 2625 2696;2699 2819	Relationships/Behavior Problems SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect THere are no SW concerns for child abuse and neglect identified at this time.
+A6	Negated T6
+T2	NonPermanentPlacement 676 732	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T2

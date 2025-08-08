@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 530 694	They discussed other stressors outside of the NICU, including financial resource stressors and searching for housing in Philadelphia where they plan to relocate to.
+T2	FinancialStrain_Other 737 856	SW intern informed parents of financial assistance granted by Harp's Hope in the form of 2 gift cards for food and gas.
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 1475 1532;1535 1623	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4.
+A2	ResolutioninProgress T3

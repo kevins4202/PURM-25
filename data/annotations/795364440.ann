@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 643 678	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 739 851	Patient's father works for a church and is able to work remotely and mom is an L&D nurse and has 12 weeks leave.
+A2	Negated T2
+T3	GeneralHousingInstability 852 940	Parents recently bought a house but plan to stay at the RMH until patient is discharged.
+A3	Negated T3
+T4	NeedTemporaryLodging 852 940	Parents recently bought a house but plan to stay at the RMH until patient is discharged.
+T5	LackofInsurance 1792 1825;1828 1880;1883 1977	Resource Needs Problem: INSURANCE Goal - Insurance Patient will have active insurance. Intervention/Plan - Insurance Parents are in the process of adding patient to their insurance.
+A4	ResolutioninProgress T5

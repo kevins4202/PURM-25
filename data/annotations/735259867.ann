@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 720 778	Family checked into RMH and report being comfortable there
+A1	Resolved T1
+T2	FinancialStrain_Other 781 836	SW provided six meal vouchers to help supplement income
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1327 1384;1387 1475	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A3	ResolutioninProgress T3

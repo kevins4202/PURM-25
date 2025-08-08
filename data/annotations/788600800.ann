@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 598 633	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 1022 1061	Mom is a homemaker and dad is a roofer.
+A2	Negated T2
+T3	DistancefromHospital 1935 2060	Parent Stressors distance from hospital, unable to access cell phone/ cars relies on drivers/ landlines, previous still birth
+T4	LackofTransportation 1935 2060	Parent Stressors distance from hospital, unable to access cell phone/ cars relies on drivers/ landlines, previous still birth
+T5	LackofInsurance 2283 2371;2374 2411;2414 2502	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS;TRANSPORTATION;OTHER (SEE COMMENT) Goal - Insurance Parents are self pay Intervention/Plan - Insurance SW will connect parents with FHCP for insurance agreement.
+A3	ResolutioninProgress T5
+T6	LackofTransportation 2505 2561;2564 2622	Goal- Transportation Parents are not able to drive a car Intervention/Plan - Transportation Parents rely on drivers
+T7	NeedTemporaryLodging 2703 2807	Intervention/Plan- Local Accommodations SW provided parents with RMH resource for ongoing accomodations.

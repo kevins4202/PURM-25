@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 643 679	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 702 786	Parent Information: Mother and father are both employed, insured and live together..
+A2	Negated T2
+T3	LackofTransportation 1624 1716	Parent Strengths Mother has support from her mother (MGM), access to a car and has insurance
+A3	Negated T3
+T4	LackofInsurance 1624 1716	Parent Strengths Mother has support from her mother (MGM), access to a car and has insurance
+A4	Negated T4
+T5	FinancialStrain_Other 1904 1942;1945 2068	Resource Needs Problem: ACCESS TO FOOD Intervention/Plan - Access to food Writer will provide resources to offset some of the costs associated with the admission.
+A5	ResolutioninProgress T5
+T6	LackofInsurance 702 786	Parent Information: Mother and father are both employed, insured and live together..
+A6	Negated T6

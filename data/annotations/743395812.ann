@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 599 639	Family continues to stay at Gift of Life
+A1	Resolved T1
+T2	FinancialStrain_Other 237 275	Meal voucher and Parking pass provided
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 641 699	SW provided meal vouchers and parking pass for the weekend
+A3	ResolutioninProgress T3

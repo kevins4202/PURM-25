@@ -1,0 +1,26 @@
+T1	NonPermanentPlacement 579 635;638 701	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt lives with Mom in Montgomery County, PA.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 702 732	Mom works part-time as a cook.
+A2	Negated T2
+T3	HomeEnvironment_Other 1832 1853;1856 1956	Home Environment: YES Home Environment comment: History of positive home environment screen. Mom reports no current needs.
+A3	HistoryOf T3
+T4	ChildAbuse 1959 1978;1981 2172	CPS Involvement YES CPS involvment comment: Mom shared that she filed a report to Montgomery County CYS in 2021 for concerns for abuse and neglect with Dad. Mom reports that the case was closed with no concerns.
+A4	Speculation T4
+A5	HistoryOf T4
+T5	FoodInsecurity_Other 2200 2219;2222 2303	Food insecurity YES Food insecurity comment: Mom is connected with local food pantries (Mann Street).
+A6	ResolutioninProgress T5
+T6	UnabletoPay 3188 3306	Mom reports that she often goes to her Mosque when she has a late bill she cannot pay and they assist her financially.
+A7	ResolutioninProgress T6
+T7	HomeAccessibility 3348 3462	Yaseen has a carseat, which Mom reports is now very small and he needs a new one, but still uable in the meantime.
+T8	LackofTransportation 3310 3347	ransportation comment: Mom has a car.
+A8	Negated T8
+T9	HomeAccessibility 3663 3725	DME comment: Pt has a wheelchair, activity chair, and carseat.
+A9	Negated T9
+T10	FinancialStrain_Other 3728 3960	Other existing community services/outside support comment: Mom is connected with Montgomery County Community Connections, who are assisting her with applying for SNAP and Cash Assistance. Mom utilizes Mann Street for food resources.
+A10	ResolutioninProgress T10
+T11	FoodInsecurity_Other 3728 3960	Other existing community services/outside support comment: Mom is connected with Montgomery County Community Connections, who are assisting her with applying for SNAP and Cash Assistance. Mom utilizes Mann Street for food resources.
+A11	ResolutioninProgress T11
+T12	HomeAccessibility 4029 4103;4106 4194;4197 4475	Resource Needs Problem: EMPLOYMENT/INCOME;SAFE/ACCESSIBLE HOME ENVIRONMENT Goal - Safe/Accessible home environment Yaseen will have an accessible home environment. Intervention/Plan - Safe/Accessible home environment  SW discussed that SW will look into insurance resources for getting the family a wheelchair ramp and stair lift. Mom currently carries Yaseen in and out of the home, and bathes him in the sink due to bathroom being upstairs.
+A12	ResolutioninProgress T12
+T13	HomeAccessibility 5427 5817;5822 5866	Mom asked SW questions regarding a new car seat (Yaseen got his when he was 3 years old and it is too small), activity chair, and mattress for Yaseen's hospital bed. SW discussed Adaptive Equipment Clinic for the car seat and activity chair, which SW discussed will be done outpatient. SW agreed to relay this appt need to CCRN. SW offered to relay mattress for hospital bed question to CM. SW will work on home accessibility with Mom.
+A13	ResolutioninProgress T13

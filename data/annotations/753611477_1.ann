@@ -1,0 +1,17 @@
+T1	NonPermanentPlacement 642 677;680 805	Patient living situation: PARENT(S) Parent Information: Ah'sani will live with her mother, Kiyana, in Atlantic City, NJ (about an hour and 15 minutes from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 680 805	Parent Information: Ah'sani will live with her mother, Kiyana, in Atlantic City, NJ (about an hour and 15 minutes from CHOP).
+T3	DistancefromHospital 2119 2329	Parent Stressors Unanticipated ICU-level hospitalization, history of a prior loss, history of a child who was hospitalized in the NICU and the associated emotional triggers, mother lives over an hour from CHOP.
+T4	LackofInsurance 2332 2399;2402 2501	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother has already added Ah'sani to her Horizon NJ Health insurance.
+A2	Negated T4
+T5	FinancialStrain_Other 2502 2544	Mother is receiving SNAP and WIC benefits.
+A3	Negated T5
+T6	FinancialStrain_Other 2613 2671;2674 2775;2778 2909	Resource Needs Problem: LOCAL ACCOMODATIONS;ACCESS TO FOOD Goal - Access to food Family will have access to food while Ah'sani is hospitalized in the CHOP NICU. Intervention/Plan - Access to food Meal vouchers provided as mother has limited income at the moment and is over an hour from home.
+T7	NeedTemporaryLodging 2912 3024;3027 3322	Goal - Local Accommodations Family will have information about local accommodations and NICU parent sleep rooms. Intervention/Plan- Local Accommodations Mother is familiar with the NICU parent sleep room request process. Provided information about Ronald McDonald House. Mother is interested in checking in to Ronald McDonald House on Saturday 10/22/22. Social worker submitted Ronald McDonald House referral
+A4	ResolutioninProgress T7
+T8	DistancefromHospital 2779 2909	ntervention/Plan - Access to food Meal vouchers provided as mother has limited income at the moment and is over an hour from home.
+T9	NeedTemporaryLodging 4957 5053	Referral made to the Ronald McDonald House on Chestnut Street for a desired check-in of 10/22/22
+A5	ResolutioninProgress T9
+T10	FinancialStrain_Other 5053 5144	. Meal vouchers provided as mother is far from home and there is financial resource strain.
+T11	DistancefromHospital 5055 5144	Meal vouchers provided as mother is far from home and there is financial resource strain.
+T12	FinancialStrain_Other 5549 5606;5609 5696	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4

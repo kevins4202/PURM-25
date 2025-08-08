@@ -1,0 +1,30 @@
+T1	ChildcareBarrierfromHospitalization 947 1069	Mom acknowledged in ability to visit baby has been hard as she has never touched, held, or kissed her baby since delivery.
+T2	PatientCaregiver_Unemployment 1072 1121	Mom is receiving TANF and dad works for the city.
+A1	Negated T2
+T3	NonPermanentPlacement 614 649;652 811	Patient living situation: PARENT(S) Parent Information: Mom currently pregnant, living in housing provided by DCP&P in Burlington County, NJ and caring for her 5yo son to a previous relationship.
+A2	Negated T3
+T4	IntimatePartnerViolence 1960 1981;1984 2032	Home Environment: YES Home Environment comment: SW provided resources.
+A3	ResolutioninProgress T4
+T5	GeneralHousingInstability 2129 2152;2155 2235	Housing instability YES Housing instability comment: Mom is currently in a hotel room provided by DCP&P.
+A4	ResolutioninProgress T5
+T6	GeneralHousingInstability 652 811	Parent Information: Mom currently pregnant, living in housing provided by DCP&P in Burlington County, NJ and caring for her 5yo son to a previous relationship.
+A5	ResolutioninProgress T6
+T7	IntimatePartnerViolence 2473 2715	Parent Stressors current pregnancy without access to prenatal care/ phsychiatric support, limited family supports, home environment, housing, hospitalization, never having held/ touched patient, finances, in process of getting access to a car
+T8	GeneralHousingInstability 2473 2715	Parent Stressors current pregnancy without access to prenatal care/ phsychiatric support, limited family supports, home environment, housing, hospitalization, never having held/ touched patient, finances, in process of getting access to a car
+T9	ChildcareBarrierfromHospitalization 2473 2715	Parent Stressors current pregnancy without access to prenatal care/ phsychiatric support, limited family supports, home environment, housing, hospitalization, never having held/ touched patient, finances, in process of getting access to a car
+T10	FinancialStrain_Other 2473 2715	Parent Stressors current pregnancy without access to prenatal care/ phsychiatric support, limited family supports, home environment, housing, hospitalization, never having held/ touched patient, finances, in process of getting access to a car
+T11	LackofTransportation 2473 2715	Parent Stressors current pregnancy without access to prenatal care/ phsychiatric support, limited family supports, home environment, housing, hospitalization, never having held/ touched patient, finances, in process of getting access to a car
+A6	ResolutioninProgress T11
+T12	IntimatePartnerViolence 3286 3349;3352 3427	Goal - Safe/Accessible home environment Home Environment needs. Intervention/Plan - Safe/Accessible home environment  SW provided resources
+A7	ResolutioninProgress T12
+T13	GeneralHousingInstability 3430 3495;3498 3563	Goal - Housing Mom is currently living in hotel provided by DCP&P Intervention/Plan- Housing SW will continue to support with DCP&P
+A8	ResolutioninProgress T13
+T14	LackofInsurance 3567 3725;3728 3796	Goal - Insurance Mom noted she has never been able to add baby to Horizon Health NJ MA even though patient is 4 months old.  She also has not applied for SSI. Intervention/Plan - Insurance SW will continue to support with DCP&P
+A9	ResolutioninProgress T14
+T15	LackofTransportation 3800 3884;3887 3960	Goal- Transportation Mom noted she is currently planning on getting a car this week. Intervention/Plan - Transportation SW will continue to support with DCP&P
+A10	ResolutioninProgress T15
+T16	ChildcareBarrierfromHospitalization 4076 4209	Goal- Adjustment to Hospitalization Mom continues to cope with ongoing hospitalization and fact she has never touched/ held her baby.
+T17	LackofTransportation 5058 5225	SW also updated DCP&P with mom's pregnancy and need/ request for assistance in accessing prenatal care/ transportation as well as patient without access to NJ MA/ SSI.
+A11	ResolutioninProgress T17
+T18	FinancialStrain_Other 5058 5225	SW also updated DCP&P with mom's pregnancy and need/ request for assistance in accessing prenatal care/ transportation as well as patient without access to NJ MA/ SSI.
+A12	ResolutioninProgress T18

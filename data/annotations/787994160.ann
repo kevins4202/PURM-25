@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 495 637	Social worker provided information about Harp's Hope for Uber transportation assistance. Made a referral to Harp's Hope for an Uber gift card.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 495 637	Social worker provided information about Harp's Hope for Uber transportation assistance. Made a referral to Harp's Hope for an Uber gift card.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1287 1344;1347 1435	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A3	ResolutioninProgress T3

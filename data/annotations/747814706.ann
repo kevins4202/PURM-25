@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 556 603	Patient living situation: PARENT(S);RELATIVE(S)
+A1	Negated T1
+T2	DistancefromHospital 1693 1779	Parent Stressors Financial burden of hospital admission nearly 2 hours away from home.
+T3	PatientCaregiver_Unemployment 1780 1806	Father recently unemployed
+T4	LackofInsurance 1810 1877;1880 1922	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: NJ Medicaid
+A2	Negated T4
+T5	NeedTemporaryLodging 2244 2335;2338 2494	Goal - Local Accommodations Locate long term lodging for parents during patient's admission Intervention/Plan- Local Accommodations Provided Ronald McDonald contact information and list of local hotels that provide discounted rate for CHOP families
+A3	ResolutioninProgress T5
+T6	DistancefromHospital 3112 3231	Parents are from NJ and report it takes them approximately 2 hours (with traffic) to go back and forth to the hospital.
+T7	NeedTemporaryLodging 3232 3490	Parents also expressed wanting to be close by due to Alayna's critical state. SW provided contact for Ronald McDonald House and explained the process of applying to stay there. SW also provided a list of hotels that provide discounted rates for CHOP families
+A4	ResolutioninProgress T7
+T8	PatientCaregiver_Unemployment 3492 3611	Mother reports she works full time but is expecting to have to be off for an extended period due to hospital admission.
+A5	Negated T8
+T9	PatientCaregiver_Unemployment 3612 3675	Father reports he very recently lost his job and is unemployed.
+T10	FinancialStrain_Other 3676 4095	Mother and father shared there have been financial stressors associated with the admission due to not being able to quickly go home for something to eat. SW offered meal vouchers to aid with the stressor of having to purchase meals while at the hospital. Grandparents report they are able to help assist with financial barriers when they can, but feel the parents would benefit from SW support when they are not present
+A6	ResolutioninProgress T10
+T11	FinancialStrain_Other 1991 2049;2052 2147;2150 2241	Resource Needs Problem: LOCAL ACCOMODATIONS;ACCESS TO FOOD Goal - Access to food Assistance needed in financially accessing food while patient is admitted Intervention/Plan - Access to food Meal vouchers to be provided as deemed appropriate by SW
+A7	ResolutioninProgress T11

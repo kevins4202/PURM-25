@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 899 969	Mom is a financial technician and dad is works in tech at a univerity.
+A1	Negated T1
+T2	DistancefromHospital 1745 1841	Parent Strengths can articulate needs, adequate family support, understands illness, car, local,
+A2	Negated T2
+T3	LackofTransportation 1745 1840	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A3	Negated T3
+T4	LackofInsurance 2027 2060;2063 2140	Resource Needs Problem: INSURANCE Goal - Insurance Mom noted that baby is covered by their Aetna POS insurance.
+A4	Negated T4

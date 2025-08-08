@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 593 628	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 631 743	Parent Information: Keanna Price and Michael Mendez, couple lives in Sayreville, NJ approx. 1.5 hours from CHOP.
+T3	PatientCaregiver_Unemployment 745 839	Kenna is currenlty unemployed, Michael is employed as an Operations Supervisor for ABD Freight
+T4	PatientCaregiver_Unemployment 745 839	Kenna is currenlty unemployed, Michael is employed as an Operations Supervisor for ABD Freight
+A2	Negated T4
+T5	NeedTemporaryLodging 2296 2339;2342 2443;2446 2543	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family will access appropriate resources to meet needs for local lodging. Intervention/Plan- Local Accommodations Fetal Heart SW assisted family in checking into local RMH
+A3	Resolved T5

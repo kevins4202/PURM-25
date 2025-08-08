@@ -1,0 +1,8 @@
+T2	FinancialStrain_Other 393 481;483 573	Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Other hardship considerations: Limited income, extended admission
+A2	ResolutioninProgress T2
+T3	HomeEnvironment_Other 979 1104	Family is involved with Philadelphia DHS, with their disposition/safety plan recommendation being discharge to Father's care.
+T4	NonPermanentPlacement 979 1104	Family is involved with Philadelphia DHS, with their disposition/safety plan recommendation being discharge to Father's care.
+A3	Negated T4
+T1	FinancialStrain_Other 1879 1902;1904 2037;2039 2055	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A1	ResolutioninProgress T1
+T5	HomeEnvironment_Other 2208 2231;2233 2355;2357 2373	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs Outcome: Ongoing

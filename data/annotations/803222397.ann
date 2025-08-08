@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 761 799	Mother is continuing to attend school.
+T2	LackofTransportation 1007 1095	Provided Septa passes to support mother with transportation needs to visit this weekend.
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 1643 1700;1703 1784;1786 1951	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 4. Reason for Disbursement: Other hardship considerations: Mother with no income. Septa passes provided to assist with transportation needs during the upcoming weekend.
+A2	ResolutioninProgress T3
+T4	Transportation_Other 1865 1951	Septa passes provided to assist with transportation needs during the upcoming weekend.
+A3	ResolutioninProgress T4

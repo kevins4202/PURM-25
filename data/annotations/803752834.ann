@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 272 316	SW discussed providing two vouchers per day.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 974 1031;1034 1122;1124 1328	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Critical medical status-not feasible to leave hospital at present and Other hardship considerations: parents unable to leave bedside due to infection precautions/financial strain.
+A2	ResolutioninProgress T2

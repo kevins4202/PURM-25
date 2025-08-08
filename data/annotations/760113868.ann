@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 629 664;667 825	Patient living situation: PARENT(S) Parent Information: Rhodes is the first child born to his intact parents, Brianna and Tate, who live together in Farmingdale, NJ (about 90 minutes from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 667 825	Parent Information: Rhodes is the first child born to his intact parents, Brianna and Tate, who live together in Farmingdale, NJ (about 90 minutes from CHOP).
+T3	PatientCaregiver_Unemployment 826 1036	Father works in construction and is currently taking unpaid time off from work. Mother runs a pet sitting business and also works for a property management company. She is also taking unpaid time off from work.
+A2	Negated T3
+T5	PatientCaregiver_Unemployment 2746 2850;2853 3103	Goal - Employment/income Parents will have information to apply for NJ Disability and Paid Family Leave. Intervention/Plan - Employment/income Social worker provided information about the NJ Disability and Paid Family Leave programs. Parents plan to apply. Social worker emailed parents a link to the online applications. Will provide assistance as needed
+A4	Negated T5
+T4	FinancialStrain_Other 2307 2367;2370 2433;2436 2743;2746 2850;2853 3104	Resource Needs Problem: EMPLOYMENT/INCOME;HOUSEHOLD FINANCES Goal - Household Finances Rhodes will have active SSI benefits. Intervention/Plan - Household Finances Parents planned to begin the SSI application process when Rhodes was hospitalized at St. Peter's and have not yet begun the application process. Social worker provided information about the application process and offered to support parents with the process as needed. Goal - Employment/income Parents will have information to apply for NJ Disability and Paid Family Leave. Intervention/Plan - Employment/income Social worker provided information about the NJ Disability and Paid Family Leave programs. Parents plan to apply. Social worker emailed parents a link to the online applications. Will provide assistance as needed.
+A3	ResolutioninProgress T4
+T6	NeedTemporaryLodging 4337 4422	Parents are checking in to the Ronald McDonald House on Chestnut Street this evening.
+A5	Resolved T6
+T7	LackofInsurance 4423 4531	Mother has Horizon NJ Health NJ Medical Assistance insurance and has already added Rhodes to this insurance.
+A6	Negated T7

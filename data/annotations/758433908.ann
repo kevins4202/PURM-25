@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 248 305;308 396	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 473 516	Does not have transportation to return home
+T3	FinancialStrain_Other 518 572	Mal vouchers provided due to financial resource strain
+A2	ResolutioninProgress T3

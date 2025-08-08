@@ -1,0 +1,4 @@
+T1	LackofInsurance 267 571	Mom reported questions about adding Bradley to commercial insurance and applying for secondary Medicaid.  SW briefly discussed process and emailed dad additional information as requested.  Mom reported that her commercial insurance is through her job as a nurse practitioner in a private practice setting
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 456 572	Mom reported that her commercial insurance is through her job as a nurse practitioner in a private practice setting.
+A2	Negated T2

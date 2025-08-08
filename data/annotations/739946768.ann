@@ -1,0 +1,12 @@
+T1	DistancefromHospital 2126 2222	Parent Stressors insurance, maternal family dynamics, distance from hospital, access to supports
+T2	LackofTransportation 2011 2123	Parent Strengths can articulate needs, adequate paternal family support, understands illness, car, yoga practice
+A1	Negated T2
+T3	NonPermanentPlacement 645 680;683 745	Patient living situation: PARENT(S) Parent Information: Mom and dad live together in Cape May, NJ.
+A2	Negated T3
+T4	DistancefromHospital 683 745	Parent Information: Mom and dad live together in Cape May, NJ.
+T5	PatientCaregiver_Unemployment 899 963	Mom is currently doing the books for dad's landscaping business.
+A3	Negated T5
+T6	LackofInsurance 2225 2292;2295 2429	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mom noted adding baby to her Aetna Better Health NJ MA insurance however issues with billing currently.
+A4	ResolutioninProgress T6
+T7	LackofInsurance 2534 2654;2657 2740	Goal - Insurance Mom noted adding baby to her Aetna Better Health NJ MA insurance however issues with billing currently. Intervention/Plan - Insurance SW will work with case management to provide support.
+A5	ResolutioninProgress T7

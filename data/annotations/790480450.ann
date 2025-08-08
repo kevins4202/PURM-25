@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1817 1874;1877 1961;1967 2136	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gas Cards: 1. Additional comments:  Patient's father needed assistance returning home to Trenton, NJ. LSW provided the patient's father with a gift card to assist with transportation.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 2055 2136	LSW provided the patient's father with a gift card to assist with transportation.
+A2	Negated T2

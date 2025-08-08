@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 635 670;673 730	Patient living situation: PARENT(S) Parent Information: This is parents first child together.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 731 899	Mom just graduated from her residency and is supposed to start her fellowship in November of this year. Patient's father is a corrections officer and has some time off.
+A2	Negated T2
+T3	LackofTransportation 900 971	At this time, parents are currently traveling back and forth from home.
+A3	Negated T3
+T4	LackofInsurance 1704 1759;1762 1814;1817 1917	Resource Needs Problem(s) INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Patient will have active insurance. Intervention/Plan - Insurance Patient's father is in the process of adding patient to his insurance.
+A4	ResolutioninProgress T4
+T5	NeedTemporaryLodging 1920 1968;1971 2095	Goal - Local Accommodations Local Acoommodations Intervention/Plan- Local Accommodations Parents were give information about RMH and will let SW know if they are interested.

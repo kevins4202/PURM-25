@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 550 1005	Mother inquired about financial assistance for parking costs due to financial resource strain from Camari's unforeseen and anticipated lengthy NICU hospitalization. Social worker offered parking passes and discussed financial assistance resources that the family may be eligible for in the future. Provided information about Project Sweet Peas and emailed mother link to the online application. Also emailed mother a link to the NJ Disability application.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1538 1595;1598 1693	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 3.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 30 53;55 188;190 206	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A3	ResolutioninProgress T3

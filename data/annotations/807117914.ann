@@ -1,0 +1,7 @@
+T1	DistancefromHospital 520 612	The adoptive parents are driving from Texas and will be in the Philadelphia area by tonight.
+T2	LackofTransportation 520 612	The adoptive parents are driving from Texas and will be in the Philadelphia area by tonight.
+A1	Negated T2
+T3	PermanentPlacementPending 251 612	Progress:  The patient's biological parents have been working with Lifeline Children's Services and planned to put the patient up for adoption. LSW spoke with the adoption agency social worker, Mary Kemp (470-869-1979), who has been working with the patient's parents. The adoptive parents are driving from Texas and will be in the Philadelphia area by tonight.
+A2	ResolutioninProgress T3
+T4	PermanentPlacementPending 1058 1257	At this time, the birth parents are responsible for providing consent. Once the patient is three days old, the adoption agency will provide documentation identifying the responsible consenting party.
+A3	ResolutioninProgress T4

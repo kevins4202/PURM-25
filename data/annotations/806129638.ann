@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 685 720	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 723 833	Parent Information: Father:  Julien Saintfort       Mother, Iltania Joseph-Saintfort currently lives in Haiti.
+T3	LackofInsurance 1561 1614	Parent Stressors child's injury; no medical insurance
+T4	HomeSafety 1683 1751;1754 1934	Resource Needs Problem(s) INSURANCE;SAFE/ACCESSIBLE HOME ENVIRONMENT Intervention/Plan - Safe/Accessible home environment  Father reports firearm ownership; SW will identify process to access gun lock for father (see below note for further details).
+A2	ResolutioninProgress T4
+T5	LackofInsurance 1937 2044;2047 2203	Goal - Insurance Father will cooperate with FHCP coordinator, in an effort to complete medicaid application Intervention/Plan - Insurance SW will collaborate with FHCP coordinator, RN Casemanager, medical teams and father regarding status with medicaid application
+A3	ResolutioninProgress T5
+T6	ChildAbuse 2763 2836;2839 2955	Relationships/Behavior Problem(s) SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are currently no SW concerns for child abuse and neglect identified
+A4	Negated T6
+T7	NonPermanentPlacement 3425 3485	ather states that Juliano resides in the home with him only;
+A5	ResolutioninProgress T7
+T8	HomeSafety 4201 4413	Father states firearm ownership.  Father states he keeps firearm in his drawer while keeping the charger with ammunition elsewhere.  SW discussed gun locks, and father is interested in this resource if available.
+A6	ResolutioninProgress T8
+T9	LackofInsurance 4477 4657	SW discussed child's self pay status.  Explained FHCP to father, and encouraged his active pursuance of medicaid application with the guidance and assistance from FHCP coordinator.
+A7	ResolutioninProgress T9

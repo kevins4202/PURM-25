@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 600 656;659 764	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: "Yadi" resides with her mother Hadi Hernandez in Willow Street, PA (Lancaster County)
+A1	Negated T1
+T2	FinancialStrain_Other 1869 1931	Parent Stressors Yadi's procedure and PICU admission, finances
+T3	LackofInsurance 2190 2250	Public assistance/SSI comment: Food Stamps, SSI, PA Medicaid
+A2	Negated T3
+T4	LackofFundsforFood 2190 2250	Public assistance/SSI comment: Food Stamps, SSI, PA Medicaid
+A3	Negated T4
+T5	ChildcareBarrierfromHospitalization 3546 3609	Mother reports plan to be at bedside for duration of admission.
+A4	Negated T5

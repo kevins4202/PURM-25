@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 615 650;653 745	Patient living situation: PARENT(S) Parent Information: Pt lives in Exton, PA with father Miguel Jimenez and mother Isle Herrera
+A1	Negated T1
+T2	FinancialStrain_Other 1772 1848	Parent Strengths Robust support, dual income house hold, financial stability
+A2	Negated T2
+T3	LackofInsurance 1997 2050;2053 2121;2124 2264	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Enroll patient in PH-95 secondary insurance program Intervention/Plan - Insurance SW assisted in explaining PH-95 program and provided necessary medical documentation including PA 1960 and LOM
+A3	Negated T3
+T4	NeedTemporaryLodging 2268 2365;2368 2490	Goal - Local Accommodations Support parents in identifying affordable accomodations local to CHOP Intervention/Plan- Local Accommodations SW has referred parents to RMH Philadelphia and assist with coordination as needed
+A4	ResolutioninProgress T4

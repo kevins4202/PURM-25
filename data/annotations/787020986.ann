@@ -1,0 +1,10 @@
+T1	NeedTemporaryLodging 2699 2915	LSW provided CRC resource card and RMHP contact information for patient mother to register for lodging. Patient mother and grandmother staying at hotel for the night and plan to utilize the sleep room tomorrow night.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 542 577	Patient living situation: PARENT(S)
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 3200 3340	Patient father works FT in construction and patient mother currently on FMLA- patient mother to inform SW if any support with FMLA required.
+A3	Negated T3
+T4	LackofFundsforFood 3341 3385	Patient mother to reapply for SNAP benefits.
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 3386 3480	LSW to email patient mother information to apply for Pa Medicaid, SSI and Colette Louise Fund.
+A5	ResolutioninProgress T5

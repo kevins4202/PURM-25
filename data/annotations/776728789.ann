@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 633 668;671 728	Patient living situation: PARENT(S) Parent Information: This is parents first child together.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 729 782	Patient's father is in the union and is back to work.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 783 881	Patient's mother was in school to be a vet tech but has taken some time off since patient's birth.
+T4	DistancefromHospital 1469 1537	Parent Stressors Adjusting to being in a new hospital far from home.
+T5	LackofInsurance 1674 1727;1730 1756;1759 1848	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Insurance Intervention/Plan - Insurance Patient has acitve insurance as well at secondary medicaid.
+A3	Negated T5
+T6	NeedTemporaryLodging 1851 1899;1902 2025	Goal - Local Accommodations local accomodations. Intervention/Plan- Local Accommodations Mom was able to get into RMH and plans to remain there until patient is discharged.
+A4	Resolved T6

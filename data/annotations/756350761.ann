@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 546 581;584 677	Patient living situation: PARENT(S) Parent Information: Kody resides with his mother, Anastasia, and maternal aunt in Camden, NJ.
+A1	Negated T1
+T2	HomeEnvironment_Other 678 733	Per PFA, Anastasia has physcial custody of the patient.
+T3	HomeEnvironment_Other 1324 1345;1348 1407;1410 1429;1432 1510	Home Environment: YES Home Environment comment: +, LSW made appropriate referrals CPS Involvement YES CPS involvment comment: DCPP case worker's name is Erin Sutton (609-915-7698).
+T4	HomeSafety 1511 1609	LSW spoke with the case worker who stated there are no concerns for discharge to patient's mother.
+A2	Negated T4
+T5	HomeEnvironment_Other 1679 1695;1698 1802	Legal Issues YES Legal Issues comment: Active PFA noting that father must stay away from the patient and patient's mother
+T6	HomeEnvironment_Other 2056 2100;2103 2200;2203 2296	Parent Stressors Kody's hospitalization, PFA Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;CHILDREN AND YOUTH AGENCY/CUA Children and youth agency/CUA comment: DCPP case worker's name is Erin Sutton (609-915-7698).
+T7	HomeSafety 2297 2363	LSW spoke with the case worker who reported no discharge concerns.
+A3	Negated T7
+T8	LackofFundsforFood 2366 2409	Public assistance/SSI comment: WIC and SNAP
+A4	Negated T8
+T9	FinancialStrain_Other 2478 2516;2519 2632;2635 2772	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food The patient's mother will have access to food while staying at the bedside with the patient Intervention/Plan - Access to food Patient's mother is eligible for concrete resources and LSW will provide meal vouchers as appropriate.
+A5	ResolutioninProgress T9
+T10	HomeEnvironment_Other 3149 3200;3203 3348	Relationships/Behavior Problems VISITATION CONCERNS Intervention/Plan - Visitation concerns Per PFA, visitor restriction has been placed restricting the patient's father from visiting the hospital.
+A6	ResolutioninProgress T10
+T11	FinancialStrain_Other 3796 3853;3856 3944	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2.
+A7	ResolutioninProgress T11

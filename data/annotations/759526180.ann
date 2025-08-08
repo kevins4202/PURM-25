@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 626 661	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	HomeEnvironment_Other 1673 1692;1695 1762	CPS Involvement YES CPS involvment comment: There has been CPS involvement in the past.
+A2	HistoryOf T2
+T3	ChildAbuse 1763 1911	This AW filed a report because of a non-confirmatory UDS done at HUP on patient, which was positive for PCP. SW informed mother the report was made.
+T4	DrugUse 1960 1979;1982 2093	Substance Abuse YES Substance Abuse comment: Mother has a history of substance use. Mother is currently in active treatment at NET.
+A3	HistoryOf T4
+A4	ResolutioninProgress T4
+T5	LackofFundsforFood 2382 2455;2458 2498	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;OTHER Public assistance/SSI comment: SNAP, WIC
+A5	Negated T5
+T6	FinancialStrain_Other 2501 2641	Other existing community services/outside support comment: Mother is connected to MOMobile, they have been providing her concrete resources.
+A6	ResolutioninProgress T6
+T7	DrugUse 2642 2697	Mother is in treatment at NET for substance use issues.
+A7	ResolutioninProgress T7
+T8	LackofInsurance 2766 2817;2820 2883;2886 2989	Resource Needs Problem: INSURANCE;EMPLOYMENT/INCOME Goal - Insurance Patient is currently on his mother's coverage. Intervention/Plan - Insurance Mother will notify her insurance and request patient has his own coverage
+A8	Negated T8
+T9	PatientCaregiver_Unemployment 2992 3049	Goal - Employment/income Mother is not currently working.
+T10	PatientCaregiver_Unemployment 3050 3119	In the past she has worked as a home health aide and in food service.
+A9	Negated T10
+A10	HistoryOf T10

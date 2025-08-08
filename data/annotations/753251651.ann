@@ -1,0 +1,4 @@
+T2	PatientCaregiver_Unemployment 593 713	Mother is currently incarcerated at Atlantic County Detention Center and can be reached via Warden Kelly (609-909-7440).
+T3	NonPermanentPlacement 766 937	Patient's disposition plan is medical facility placement at Voorhees Pediatric Facility. Case Management aware and coordinating with Voorhees regarding potential transfer.
+A1	ResolutioninProgress T3
+T1	NonPermanentPlacement 237 460;464 541	Patient is in the custody of the NJ Department of Child Protection and Permanency (DCPP). SW spoke with DCPP Caseworker Megan Parker (609-947-4656) to provide an update regarding Giselle and review psychosocial information. Parents maintain parental rights and continue to provide consent for patient.

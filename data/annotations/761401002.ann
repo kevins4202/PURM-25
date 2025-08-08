@@ -1,0 +1,4 @@
+T1	HomeEnvironment_Other 1180 1406	The patient's parents shared that CYS has a safety plan in place and that the patient's mother needs to be supervised while with Hunter. It is the parents understanding that the patient's father cannot provide the supervision.
+T2	NonPermanentPlacement 1806 1852	The patient is to be discharged to the father.
+A1	Negated T2
+T3	HomeEnvironment_Other 32 55;57 179;181 197;199 233;235 315;318 411;414 504	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs Outcome: Ongoing Flowsheets (Taken 11/25/2022 1633) Resource Needs - Intervention - Coordinate between medical team & CPS providers: Engage current CPS providers in care planning and establishing safe plans for transition home Collaborate with CPS providers to determine if any visitor restrictions should be enforced

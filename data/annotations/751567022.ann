@@ -1,0 +1,8 @@
+T1	LackofInsurance 701 838	Father shared that parents have not submitted the Compass application for secondary PA Medical Assistance for Jack yet and plan to do so.
+A1	Negated T1
+T2	FinancialStrain_Other 839 1083	Social worker provided information about the Opens Doors Foundation application for one month of mortgage assistance. Father in agreement with referral. Social worker emailed parents a link to the Opens Doors Foundation application on 10/12/22.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 30 53;55 188;190 206	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A3	ResolutioninProgress T3
+T4	LackofInsurance 208 292;294 310	Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing
+A4	Negated T4

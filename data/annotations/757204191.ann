@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 701 777	Father is working full time and Mother plans to return to work December 1st.
+A1	Negated T1
+T2	LackofInsurance 1726 1793;1796 1844	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Patient has PA MA
+A2	Negated T2
+T3	NeedTemporaryLodging 1918 1961;1964 2063;2066 2181	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in Harrisburg and would like to stay locally with patient. Intervention/Plan- Local Accommodations SW referred family to RMDH . SW provied information about NIICU sleep rooms
+A3	ResolutioninProgress T3
+T4	DistancefromHospital 1964 2063	Goal - Local Accommodations Parents live in Harrisburg and would like to stay locally with patient.

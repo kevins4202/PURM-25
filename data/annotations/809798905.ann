@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 555 590;593 728	Patient living situation: PARENT(S) Parent Information: Emelia was born to intact parents Madison and Kyle who reside in Burlington, NJ about 45 minutes from the hospital.
+A1	Negated T1
+T2	DistancefromHospital 593 728	Parent Information: Emelia was born to intact parents Madison and Kyle who reside in Burlington, NJ about 45 minutes from the hospital.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 729 825	Madison works as a daycare as an infant teacher and plans to take 8 to 10 weeks of unpaid leave.
+A3	Negated T3
+T4	FinancialStrain_Other 826 915	The patient's parents prepared financially beforehand for Madision to be on unpaid leave.
+A4	Negated T4
+T5	PatientCaregiver_Unemployment 916 977	Kyle is a Carpenter and qualifies for NJ state parental leave
+A5	Negated T5
+T6	LackofInsurance 2348 2403;2406 2497;2500 2756	Resource Needs Problem(s) INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance The patient will have health insurance to cover all necessary medical care Intervention/Plan - Insurance LSW referred the patient's parent to FHC for assistance applying for NJ Mediciad for Emelia. The patient's mother is a dependent on her parents' health insurance therefore the patient will need her own health insurance policy.
+A6	ResolutioninProgress T6
+T7	NeedTemporaryLodging 3008 3084	At this time, parents would like to remain at home as it is more comfortable
+A7	Negated T7

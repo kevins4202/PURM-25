@@ -1,0 +1,5 @@
+T1	NeedTemporaryLodging 278 371	SW provided mom with link to request room form RMH and explained visitation current on policy
+A1	ResolutioninProgress T1
+T2	LackofTransportation 183 273	Mom reports family car is currently not working but should be fixed soon (next day or so).
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 79 182	Mom was inquiring about visitation with four year old sibling and places to stay close to the hospital.

@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 592 648	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 700 788	Carissa is employed as a travel adult cardiac ICU RN and Scott is employed as a laborer.
+A2	Negated T2
+T3	DistancefromHospital 789 842	Family lives in Leighton, PA about 2 hours from CHOP.
+T4	DistancefromHospital 1770 1877	Parent Stressors Complex fetal dx, changes in delivery plan/location, distance from CHOP, unpaid work leave
+T5	PatientCaregiver_Unemployment 1770 1877	Parent Stressors Complex fetal dx, changes in delivery plan/location, distance from CHOP, unpaid work leave
+A3	Negated T5
+T6	LackofInsurance 1999 2070;2073 2198	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS;EMPLOYMENT/INCOME Goal - Insurance Family will add newborn to primary insurance and successfully apply for secondary insurance/MA through PH95.
+A4	ResolutioninProgress T6
+T7	NeedTemporaryLodging 2531 2637;2640 2762	Goal - Local Accommodations Family will access available resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations SW assisted with adding family to RMH-Chestnut St waitlist, family has checked in.
+A5	Resolved T7
+T8	PatientCaregiver_Unemployment 2279 2421	Goal - Employment/income Family will connect with relevant programs or foundations to support financial stability while mother is not working.
+A6	Negated T8

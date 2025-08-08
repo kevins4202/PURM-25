@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 477 519	LSW left meal vouchers at bedside for mom.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1066 1123;1126 1214	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 7.
+A2	ResolutioninProgress T2

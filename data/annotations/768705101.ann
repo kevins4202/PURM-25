@@ -1,0 +1,4 @@
+T1	NonPermanentPlacement 427 507	Patient to be discharged to dad, due to mom lacking stable housing at this time.
+A1	Negated T1
+T2	GeneralHousingInstability 427 507	Patient to be discharged to dad, due to mom lacking stable housing at this time.
+T3	HomeEnvironment_Other 334 426	Social worker spoke with CUA worker by phone. Per CUA worker, no known change in dispo plan.

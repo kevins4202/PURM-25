@@ -1,0 +1,4 @@
+T1	PermanentPlacementPending 237 303	Progress: Patient medically stable and awaiting bed in a facility.
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromHospitalization 304 398	Parents are back in the States for a week to visit with patient and clean out their apartment.
+A2	Resolved T2

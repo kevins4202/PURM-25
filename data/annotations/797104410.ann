@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 184 207;209 342;344 360;364 642	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing Progress:  SW checked in with mom who noted family was coping adequately at this time with exception of financial struggle due to mom searching for employment at this time.  SW provided 4 meal vouchers, 3 parking passes, and 1 Harp's Hope card for weekend support/ ongoing need.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 364 536	Progress:  SW checked in with mom who noted family was coping adequately at this time with exception of financial struggle due to mom searching for employment at this time.

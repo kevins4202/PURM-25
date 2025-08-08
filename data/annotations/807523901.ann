@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 504 554	She will be able to check into RMH this afternoon.
+A1	Resolved T1
+T2	FinancialStrain_Other 556 900	SW provided six meal vouchers to Mom and told her moving forward that six vouchers would be given per week.  Mom has link to complete Opens Doors application for rental support.  SW welcomed family to contact him if additional support/resources are needed.  SW will continue to work with family to assess and provide support/resources as needed
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1333 1390;1393 1481	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A3	ResolutioninProgress T3

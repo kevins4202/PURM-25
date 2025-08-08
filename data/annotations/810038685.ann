@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 1444 1501;1504 1592	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A1	ResolutioninProgress T1
+T2	HomeAccessibility 516 679	Parents shared they plan to do their 12 hour stay Thursday and will then return home to bring their car seat back, as they forgot to bring it during their travels.
+A2	Negated T2
+T3	FinancialStrain_Other 805 812;814 846	UPDATE: Parents requested meal vouchers.
+A3	ResolutioninProgress T3

@@ -1,0 +1,8 @@
+T1	LackofInsurance 1056 1135	Patient's mother requested assistance submitting medicaid documentation to FHC.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 1240 1382	On 7/20/2022 LSW met with patient's mother at the bedside to assist mother in submitting documentation to FHC for Gisselle's health insurance.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 1682 1791	On 7/21/2022, at the request of the patient's mother, LSW emailed the medicaid documentation directly to FHC.
+A3	ResolutioninProgress T3
+T4	LackofInsurance 32 55;57 141;143 159;161 194;196 247;250 321;324 465	Problem: RESOURCE NEEDS Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing Flowsheets (Taken 7/21/2022 0937) Resource Needs - Intervention - Insurance coverage: Assist with obtaining documentation necessary for required applications Provide patient/family/caregiver with information to apply for needed benefits including referral to Family Health Coverage Program as needed
+A4	ResolutioninProgress T4

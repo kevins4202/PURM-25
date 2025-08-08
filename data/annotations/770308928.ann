@@ -1,0 +1,4 @@
+T1	LackofTransportation 1295 1357	Patient parents travel to the hospital often to visit Brielle.
+A1	Negated T1
+T2	FinancialStrain_Other 1033 1090;1093 1180	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4
+A2	ResolutioninProgress T2

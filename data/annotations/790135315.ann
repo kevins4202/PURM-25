@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 603 638	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	FinancialStrain_Other 1987 2028;2031 2155;2158 2296	Resource Needs Problem: EMPLOYMENT/INCOME Goal - Employment/income Patient family to gain concrete ressources to support decrease of income related to hospitlization. Intervention/Plan - Employment/income LSW to provide patient family with concrete resources and community reosurces that they may utilize.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 3030 3106	Patient father is Chick Fila Manager and works every day from 12 PM to 9 PM.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 3147 3225	Patient mother currently unable to work and gains support from patient father.
+T5	LackofInsurance 3513 3613	Patient mother plans to f/u with SSI for patient and gain support with secondary Medicaid as needed.
+A4	Negated T5

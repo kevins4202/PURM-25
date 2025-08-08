@@ -1,0 +1,11 @@
+T1	FinancialStrain_Other 140 163;165 243;245 261;263 381;383 399;404 749	Problem: RESOURCE NEEDS Goal: Patient will have ongoing access to food to support health and wellbeing Outcome: Ongoing Goal: Patient will have adequate transportation resources to access needed medical care and return to home environment Outcome: Ongoing Progress:  Social worker met with mother at bedside in the NICU. Mother is coping well at this time. She will be going to Lancaster during the day tomorrow. Social worker arranged for a Lyft ride through the Center for Families for transportation from CHOP to 30th Street Station. Meal vouchers provided as mother is unable to return home daily.
+A1	ResolutioninProgress T1
+T2	Transportation_Other 263 381;383 399	Goal: Patient will have adequate transportation resources to access needed medical care and return to home environment Outcome: Ongoing
+A2	ResolutioninProgress T2
+T3	Transportation_Other 561 684	Social worker arranged for a Lyft ride through the Center for Families for transportation from CHOP to 30th Street Station.
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 1234 1291;1294 1491;1497 1652	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Cab Vouchers (#'s): one round trip Lyft ride scheduled for 1/26/23 from CHOP Main to 30th Street Station. Additional comments:  Resources provided due to financial resource strain and as mother remains present at the hospital and lives over two hours from CHOP.
+A4	ResolutioninProgress T4
+T5	Transportation_Other 1234 1291;1294 1491;1497 1651	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Cab Vouchers (#'s): one round trip Lyft ride scheduled for 1/26/23 from CHOP Main to 30th Street Station. Additional comments:  Resources provided due to financial resource strain and as mother remains present at the hospital and lives over two hours from CHOP
+A5	ResolutioninProgress T5
+T6	DistancefromHospital 1497 1651	Additional comments:  Resources provided due to financial resource strain and as mother remains present at the hospital and lives over two hours from CHOP

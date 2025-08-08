@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 574 651	Mom reports that dad recently got a job and they are working opposite shifts.
+A1	Negated T1
+T2	FinancialStrain_Other 211 573	Progress:  SW called mom to check in. She did not complete the ODF application for rent assistance, but SW explained that it can be completed for the May 10 deadline for future help. We discussed the Colette Louise application for uber credit assistance. Mom is interested and will complete it by the end of day 4/19, as applications will close then for a month.
+A2	ResolutioninProgress T2

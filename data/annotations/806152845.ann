@@ -1,0 +1,4 @@
+T1	LackofTransportation 387 485	A round trip Lyft ride was requested to address transportation barriers and facilitate visitation.
+A1	Resolved T1
+T2	FinancialStrain_Other 1112 1169;1172 1260;1266 1359	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3. Additional comments:  A needs assessment was completed prior to providing concrete resources.
+A2	ResolutioninProgress T2

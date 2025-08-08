@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 531 566	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 569 610	Parent Information: Mother is unemployed.
+T3	LackofFundsforFood 1219 1238;1241 1301	Food insecurity YES Food insecurity comment: Mother reported she applied for EBT
+A2	ResolutioninProgress T3
+T4	LackofFundsforFood 1460 1531	Parent Stressors Transportation, SSI, EBT, homecare, and her own health
+T5	FinancialStrain_Other 1831 1873;1876 2015	Resource Needs Problem: HOUSEHOLD FINANCES Intervention/Plan - Household Finances Writer will continue meeting with mother to assess different avenues to help the family financially.
+A3	ResolutioninProgress T5

@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 559 594	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	NonPermanentPlacement 559 594	Patient living situation: PARENT(S)
+A2	Negated T2
+T3	HomeSafety 2365 2482	Pt was riding his bike and doing a trick when he fell and landed on his head. Per mother he was not wearing a helmet.
+A3	Negated T3
+T4	HomeSafety 2365 2482	Pt was riding his bike and doing a trick when he fell and landed on his head. Per mother he was not wearing a helmet.
+A4	Negated T4
+T5	NonPermanentPlacement 559 594	Patient living situation: PARENT(S)
+A5	Negated T5

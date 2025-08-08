@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 439 540;544 632;634 723	SW re-assessed concrete resource eligibility and approved as follows. Plan to re-assess on Tues 11/1. Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 8. Reason for Disbursement: Other hardship considerations: Limited income,extended admission
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 983 1006;1008 1141;1143 1159	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A2	ResolutioninProgress T2

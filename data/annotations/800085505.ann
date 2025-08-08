@@ -1,0 +1,5 @@
+T1	ChildcareBarrierfromNonHospitalization 473 669	Mother also has taken some partial days at home to help care for Madison's siblings. SW has discussed potential check in to RMH, mother expressed preference to commute to manage care for siblings.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 411 472	Father has returned to FL and mother has been visiting daily.
+T3	FinancialStrain_Other 1406 1463;1466 1582;1588 1757	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6 and Parking Passes (#'s): 5. Additional comments:  SW approved 6 meal vouchers from SW fund and provided 5 parking passes from cardiac fund to assist with costs related to prolonged hospitalization.
+A2	ResolutioninProgress T3

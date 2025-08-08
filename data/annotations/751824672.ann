@@ -1,0 +1,4 @@
+T1	NonPermanentPlacement 592 648;651 729	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Zachary lives with his parents in Atco, NJ (Camden County)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 731 788	mother works remotely for FDA and father works as foreman
+A2	Negated T2

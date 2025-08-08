@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1369 1426;1429 1510;1516 1536;1540 1553	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 2. Additional comments: SEPTA passes.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 1369 1426;1429 1510;1516 1536;1540 1553	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 2. Additional comments: SEPTA passes.
+A2	ResolutioninProgress T2

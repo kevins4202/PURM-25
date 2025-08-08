@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 590 646	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 693 761	Diana is employed in sales. Daniel is self-employed in construction.
+A2	Negated T2
+T3	DistancefromHospital 762 805	The family resides in Knoxville, Tennessee.
+T4	NeedTemporaryLodging 808 886	Children in the home Information: 4yo Victor and 2yo Vincent, currently at RMH
+A3	Resolved T4
+T5	HomeEnvironment_Other 1601 1622;1625 1724	Home Environment: YES Home Environment comment: +Home environment concerns, resources provided by fetal psychosocial team
+A4	ResolutioninProgress T5
+T6	DistancefromHospital 2032 2146	Parent Stressors Complex fetal diagnosis and changes in delivery plan and re-location from TN are major stressors.
+T7	NeedTemporaryLodging 2268 2311;2314 2410;2413 2566	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family will access resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations Family has checked into local RMH, also briefly in Airbnb. Family received lodging resources from Fetal Heart SW.
+A5	ResolutioninProgress T7

@@ -1,0 +1,6 @@
+T1	PermanentPlacementPending 592 639;642 840;843 962	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: At this time, it is unclear what living situation upon discharge.LSW working with patient father and care partners to gain more information about where patient will discharge to. Relative Information: Patient maternal uncle from Kentucky who is considered a care provider and may be a home support.
+A1	ResolutioninProgress T1
+T2	HomeEnvironment_Other 1619 1638;1641 1704	CPS Involvement YES CPS involvment comment: CUA involved and LSW assessing farther.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 2121 2154;2157 2256;2259 2364	Resource Needs Problem: INSURANCE Goal - Insurance Patient father is to complete patients Medicaid /SSI application with LSW support. Intervention/Plan - Insurance LSW to cont. to offer patient father support in applying for Medicaid/ SSI.
+A3	ResolutioninProgress T3

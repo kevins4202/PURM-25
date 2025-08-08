@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 723 759	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	LackofTransportation 1821 1922;1925 1968	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI;EARLY INTERVENTION Transportation comment: Does have a vehicle
+T3	LackofFundsforFood 1971 2075	Public assistance/SSI comment: Receives SNAP benefits, medicaid and mom has applied for SSI for pateint.
+A2	Negated T3
+T4	LackofInsurance 1971 2075	Public assistance/SSI comment: Receives SNAP benefits, medicaid and mom has applied for SSI for pateint.
+A3	Negated T4
+T5	LackofTransportation 2241 2279;2282 2363;2366 2436	Resource Needs Problem: TRANSPORTATION Goal- Transportation Complete referral for transportion to CHOP visits from home. Intervention/Plan - Transportation SW educated mom on services offered
+A4	ResolutioninProgress T5
+T6	PatientCaregiver_Unemployment 2439 2540;2543 2666	Goal - Employment/income Dad will apply for FMLA. He will discuss this with his manager/HR department Intervention/Plan - Employment/income SW educated the family on FMLA and provided contact information for forms to be sent.
+A5	Negated T6
+T7	NeedTemporaryLodging 2669 2710;2713 2936	Goal - Local Accommodations RMH if needed Intervention/Plan- Local Accommodations SW provided mom with contact information for RMh and how to request a room. Mom did not think this was going to be necessary if the discharge date was sooner than originally expected.
+A6	Speculation T7

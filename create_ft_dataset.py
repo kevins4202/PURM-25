@@ -5,9 +5,9 @@ from utils import load_prompt
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
 # === SETTINGS ===
-PROCESSED_DIR = "data/chop/finetuning/granular"
-NOTES_DIR = "data/chop/combined/notes"
-OUTPUT_DIR = "data/chop/finetuning"
+PROCESSED_DIR = "data/finetuning/granular"
+NOTES_DIR = "data/notes"
+OUTPUT_DIR = "data/finetuning"
 
 # Create output directory
 os.makedirs(OUTPUT_DIR, exist_ok=True)

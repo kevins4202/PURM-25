@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 439 563;565 643	LSW provided patient mother with updated on Fred`s Footsteps application (submitted by May 3rd deadline). Awaiting approval. Patient mother emailed Opens Doors application and to complete and inform LSW.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 904 961;964 1071	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft Ride ordered for 5/8/23.
+A2	Resolved T2
+T3	FinancialStrain_Other 1073 1173;1177 1197;1203 1284;1286 1330	Patient and patient family approved for (4) gift cards to facilitate families connection to A`ahzir. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment. Patient eligible for reassessment on 5/10/23
+A3	ResolutioninProgress T3

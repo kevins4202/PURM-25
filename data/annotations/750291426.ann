@@ -1,0 +1,5 @@
+T1	GeneralHousingInstability 263 398	Dad shared that they are currently at the hospital in Boston and getting connected with a social worker who will help them find a home.
+A1	ResolutioninProgress T1
+T2	GeneralHousingInstability 898 951	The family is currently in Boston looking for a home.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 952 1011	Follow ups and insurance will need to be set up accordingly

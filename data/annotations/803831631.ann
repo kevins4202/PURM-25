@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 416 458	Mom is currently staying at the RMD house.
+A1	Resolved T1
+T2	FinancialStrain_Other 329 415	Mom asked if she could receive meal vouchers today because she plans to be at bedside.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 607 652	SW requested for Mom to receive meal vouchers
+A3	ResolutioninProgress T3

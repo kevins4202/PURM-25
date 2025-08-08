@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 482 540	SW provided mother with financial assistance applications.
+T2	HouseInstability_Other 373 479	SW spoke to RMDH who stated they should be able to check mother in today, they will call her with details.
+A1	ResolutioninProgress T2
+A2	ResolutioninProgress T1

@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 567 615	Family remains at RMH and are comfortable there.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 725 755	Dad has returned home to work.
+A2	Negated T2

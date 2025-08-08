@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 633 668;671 737	Patient living situation: PARENT(S) Parent Information: Pt will live with her parents in Conshohocken.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 738 936	Mom is a nail technician and has been seeing a few clients since birth; she will not get maternity leave. Dad gets 2 weeks of paternity leave, but is saving it until pt comes home from the hospital.
+A2	Negated T2
+T3	LackofTransportation 2089 2171;2174 2212	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI Transportation comment: Mom has a car.
+A3	Negated T3
+T4	FinancialStrain_Other 2215 2271	Public assistance/SSI comment: Pts has PA Medicaid (KF).
+A4	Negated T4
+T5	FoodInsecurity_Other 2582 2636;2639 2841	Goal - Access to food Mom will know how to access WIC. Intervention/Plan - Access to food SW informed mom she should be eligible for WIC as she is breastfeeding/pumping. Will e-mail mom information. Will also send her the website to apply for SNAP benefits.
+A5	ResolutioninProgress T5

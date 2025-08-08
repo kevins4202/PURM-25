@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1136 1193;1196 1284	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 488 588	Provided meal vouchers and a donated snack bag due to limited financial resources to purchase meals.
+A2	ResolutioninProgress T2

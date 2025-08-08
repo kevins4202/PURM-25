@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1475 1532;1535 1620;1626 1798	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gift Cards: 1. Additional comments:  LSW completed a needs assessment prior to providing concrete resources. Concrete resources are to assist with transportation to and from the hospital.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 1720 1798	Concrete resources are to assist with transportation to and from the hospital.
+A2	Negated T2

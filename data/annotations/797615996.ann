@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 286 430	The patient's mother has returned to work during the week and reported that this has been helpful for coping with Leo's ongoing hospitalization.
+A1	Negated T1
+T2	FinancialStrain_Other 916 973;976 1064;1070 1228	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments:  LSW completed a needs assessment prior to providing concrete resources. Patient's parents are working on a long term plan for resources.
+A2	ResolutioninProgress T2

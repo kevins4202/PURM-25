@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 652 687;690 850	Patient living situation: PARENT(S) Parent Information: Isabella is the first child born to her intact parents, Raisa and Victor, who live separately in Lancaster County (about 2 hours from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 690 850	Parent Information: Isabella is the first child born to her intact parents, Raisa and Victor, who live separately in Lancaster County (about 2 hours from CHOP).
+T3	PatientCaregiver_Unemployment 851 900	Mother has returned to work at her job in retail.
+A2	Negated T3
+T4	DistancefromHospital 1940 2027	Parent Stressors Prolonged ICU-level hospitalization, family lives two hours from CHOP.
+T5	LackofInsurance 2173 2240	She has PA Medical Assistance in place through Amerihealth Caritas.
+A3	Negated T5
+T6	LackofFundsforFood 2241 2265	Mother is receiving WIC.
+A4	Negated T6
+T7	FinancialStrain_Other 2266 2404;2407 2632	Mother applied for SNAP benefits but application was denied. Social worker encouraged mother to reapply for SNAP benefits based on income. Other existing community services/outside support comment: Family was approved for financial assistance from Project Sweet Peas and the Colette Louise Tisdahl Foundation with assistance from HUP social worker Taylor Hemphill.
+A5	ResolutioninProgress T7
+T8	FinancialStrain_Other 2701 2739;2742 2795;2798 2976	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Family will have SNAP benefits. Intervention/Plan - Access to food Encouraged mother to reapply for SNAP benefits on the PA Compass website. Social worker offered to assist with reapplication process as needed.
+A6	ResolutioninProgress T8
+T9	LackofFundsforFood 2701 2739;2742 2795;2798 2975	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Family will have SNAP benefits. Intervention/Plan - Access to food Encouraged mother to reapply for SNAP benefits on the PA Compass website. Social worker offered to assist with reapplication process as needed
+A7	ResolutioninProgress T9

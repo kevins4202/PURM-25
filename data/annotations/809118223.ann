@@ -1,0 +1,6 @@
+T1	LackofTransportation 416 525	SW approved Septa passes for mother , she is able to pick them up at the Welcome desk when she arrives today.
+A1	Resolved T1
+T2	FinancialStrain_Other 416 525	SW approved Septa passes for mother , she is able to pick them up at the Welcome desk when she arrives today.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1140 1197;1200 1281;1283 1359	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A3	ResolutioninProgress T3

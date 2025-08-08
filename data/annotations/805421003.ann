@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 204 213;216 224;226 241;246 264;268 330	Problems: Finances Hospitalization Progress: Improved Plan: Covering SW provided 2 parking passes to family for d/c.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 763 820;823 918;920 1004	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 2. Reason for Disbursement: Other hardship considerations: limited resources, discharge
+A2	ResolutioninProgress T2

@@ -1,0 +1,4 @@
+T1	LackofInsurance 352 432	Parents has questions about secondary medicaid which this SW was able to answer.
+A1	Negated T1
+T2	NeedTemporaryLodging 433 512	This is parents first child together and they are currently staying at the RMH.
+A2	Resolved T2

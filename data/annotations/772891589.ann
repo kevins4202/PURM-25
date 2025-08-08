@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 561 629;632 673	Patient living situation: PARENT(S);CHILDREN IN THE HOME;RELATIVE(S) Parent Information: Mom is Brenda Mendez.
+A1	Negated T1
+T2	DistancefromHospital 790 850	Brenda lives in Pheonixville, PA, about 45 minutes from CHOP
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 853 920	Brenda is unemployed and relies on extended family for basic needs.
+T4	LackofTransportation 1007 1063	Brenda will need assistance with transporation services.
+T5	NeedTemporaryLodging 1065 1088	She has checked in RMH.
+A3	Resolved T5
+T6	PatientCaregiver_Unemployment 2432 2476	She is unemployed and has limited resources.
+T7	FinancialStrain_Other 2432 2475	She is unemployed and has limited resources
+T8	ChildcareBarrierfromNonHospitalization 2478 2550	She had to relocate to Philadelphia and be away from her older daughter.
+T9	LackofInsurance 2940 3016;3019 3133	Goal - Insurance Baby will have active insurance coverage prior to dicharge. Intervention/Plan - Insurance SW will refer family to FHCP for assisance in applying for insurance coverage/PA MA.
+A4	ResolutioninProgress T9
+T10	NeedTemporaryLodging 3136 3222;3225 3325	Goal - Local Accommodations Mom will have a safe place to stay during hospitalization. Intervention/Plan- Local Accommodations SW referred Mom to RMH and she was able to check in 1/18/23.
+A5	Resolved T10

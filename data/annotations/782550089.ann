@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 596 652;655 724	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Lily is Martha and Eugene's first child together.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 725 807	Martha (Mother) is retired from the army and is currently unemployed at this time.
+T3	PatientCaregiver_Unemployment 808 896	Eugene (Father) is a retired marine and is currently working as a diesel truck mechanic.
+A2	Negated T3
+T4	DistancefromHospital 897 1014	Parents currently live together in New Tripoli, PA. (2.5 hr drive) but are working on relocating to Philadelphia, PA.
+T5	DrugUse 1916 1935;1938 2026	CPS Involvement YES CPS involvment comment: CYS case was open due to maternal substance use. Case is closed.
+A3	HistoryOf T5
+T6	HomeEnvironment_Other 1916 1935;1938 2076	CPS Involvement YES CPS involvment comment: CYS case was open due to maternal substance use. Case is closed. CYS recommended opening case closer to discharge.
+T7	DrugUse 2193 2212;2215 2280	Substance Abuse YES Substance Abuse comment: Mother has a history of substance abuse.
+A4	HistoryOf T7
+T8	DistancefromHospital 2606 2715	Parent Stressors Parents stressors include Lily's diagnosis and hospitalization as well as living so far away
+T9	NeedTemporaryLodging 2784 2827;2830 2920	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents are not eligble for Ronald McDonald house at this time
+T10	NeedTemporaryLodging 3231 3410	Intervention/Plan - Adjustment to Hospitalization SW intern provided information regarding social work role, N/IICU sleep rooms, Ronald McDonald house, and limited visitory policy
+T11	NeedTemporaryLodging 4230 4438	Parents expressed interest in local accommodations in Philadelphia during the interim as they wait to move. SW intern will provide a list of nearby hotels and provide a referral to Host for Hospitals lodging.
+A5	ResolutioninProgress T11
+T12	FinancialStrain_Other 4439 4524	SW intern will also provide parents with Harp's Hope information for a gas gift card.
+A6	ResolutioninProgress T12

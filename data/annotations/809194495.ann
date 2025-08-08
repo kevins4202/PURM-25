@@ -1,0 +1,13 @@
+T1	SubstanceAbuse_Other 1880 1899;1902 1995	Substance Abuse YES Substance Abuse comment: Mom noted both parents are sober 6+ years and have adequate support.
+A1	HistoryOf T1
+T2	NonPermanentPlacement 596 631;634 711	Patient living situation: PARENT(S) Parent Information: Mom and dad live in Hamilton, NJ with their 3yo daughter.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 907 992	Mom is a sirector of nursing for a recovery center in Medford.  Dad works for Amtrak.
+A3	Negated T3
+T4	LackofTransportation 2079 2208	Parent Strengths can articulate needs, adequate family support, understands illness, car, insurance, access to therapy/ treatment
+A4	Negated T4
+T5	LackofInsurance 2079 2208	Parent Strengths can articulate needs, adequate family support, understands illness, car, insurance, access to therapy/ treatment
+A5	Negated T5
+T6	ChildcareBarrierfromHospitalization 2211 2273	Parent Stressors mental health hx, twins at seperate hospitals
+T7	LackofInsurance 2276 2343;2346 2503	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mom noted that twins are already added to their Aetna insurance as well as she applied through Capitol Health SSI application.
+A6	Negated T7

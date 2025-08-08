@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 211 350	Progress:  SW met with pt's mother at bedside earlier this week to assist with completing the Colette Louise follow up for uber gift cards.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 406 491	Mom reports she did choose an HMO (Americhoice) and did bring the card to Admissions.
+A2	Negated T2

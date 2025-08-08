@@ -1,0 +1,6 @@
+T1	HomeAccessibility 1937 2063	Mom also shared that she plans to call the DME company CM provided her after hanging up with SW to inquire about the mattress.
+A1	ResolutioninProgress T1
+T2	HomeAccessibility 2758 2957	SW asked if Mom would like to restart the process of getting a stair lift and ramp for the family home. Mom expressed that she would like to wait another 2 or so weeks prior to starting this process.
+A2	ResolutioninProgress T2
+T3	HomeAccessibility 4487 4510;4512 4612;4614 4630	Problem: RESOURCE NEEDS Goal: Patient will transition to safe/accessible home environment supportive of patient health needs Outcome: Ongoing
+A3	ResolutioninProgress T3

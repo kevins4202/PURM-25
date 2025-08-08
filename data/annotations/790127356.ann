@@ -1,0 +1,4 @@
+T1	LackofTransportation 339 416	SW printed location and public transportation directions and left at bedside.
+A1	Negated T1
+T2	FinancialStrain_Other 418 477	- Mom received the replacement meal vouchers last Saturday.
+A2	ResolutioninProgress T2

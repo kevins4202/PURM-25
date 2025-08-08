@@ -1,0 +1,4 @@
+T1	LackofFundsforFood 1597 1842	SW informed mother that per last discussion, she was to obtain her food stamps today.  SW encouraging mother to utilize her food stamps to purchase food items to prepare at home as she lives local, and bring meals to bedside when she is present.
+A1	Negated T1
+T2	HomeEnvironment_Other 396 716	SW discussed update per discussions with Nurse Leadership yesterday afternoon and earlier this morning, whereby the current visitor restriction will be modified to allow four siblings to visit Tank at bedside during the scheduled days/time of Monday through Friday from 9:00am until 4:00pm and to begin on Monday 6/12/23
+A2	ResolutioninProgress T2

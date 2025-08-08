@@ -1,0 +1,6 @@
+T1	Homelessness 226 363	Mom reports that she has spoken with the director at Good Counsel and they are willing to accept her back at time of patient's discharge.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 364 589	SW encouraged mom to see if they would be willing to let mom use their address now so she can work on getting patient's insurance switched back to NJ instead of PA so there will not be any complications at time of discharged.
+A2	Negated T2
+T3	NeedTemporaryLodging 590 722	On Thursday mom had a slight cough and sounded congested and this SW encouraged mom to take a break from bedside and go rest at RMH.
+A3	Resolved T3

@@ -1,0 +1,4 @@
+T1	LackofTransportation 245 302;305 409;415 584	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Other: lyft. Additional comments:  Social worker facilitated Lyft ride due to mom reporting that she is unprepared for admission, and had left needed items at home. Financial strain.
+A1	Resolved T1
+T2	FinancialStrain_Other 245 302;305 409;415 584	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Other: lyft. Additional comments:  Social worker facilitated Lyft ride due to mom reporting that she is unprepared for admission, and had left needed items at home. Financial strain.
+A2	ResolutioninProgress T2

@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 564 599;602 735	Patient living situation: PARENT(S) Parent Information: Jaxson was born to intact parents Ashley and Patrick who reside in Williamstown, NJ (about 30 minutes from CHOP).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 736 912	Partick works as an Accountant at Comcast and he has paid leave until March 2023. Ashley works as an Occupational Therapist at a school district and is currently on paid leave.
+A2	Negated T2
+T3	DistancefromHospital 2193 2266	Parent Stressors Jaxson's unexpected hospitalization, being far from home
+T4	NeedTemporaryLodging 2393 2436;2439 2553;2556 2692	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Patient's parents will have access to local accomidations whiel Jaxson is hospitalized Intervention/Plan- Local Accommodations LSW provided patient's parents with information on RMD. The parents are considering this option.

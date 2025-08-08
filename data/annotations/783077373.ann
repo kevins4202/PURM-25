@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 559 615	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 618 731	Parent Information: Mother (Sarah ) and Father (Matthew) are married and live in Manahawkin, NJ ( 1 1/2 drive ) .
+T3	PatientCaregiver_Unemployment 732 850	Both parents are teachers, mother is on maternity leave and father plans to take his paternity leave after the summer.
+A2	Negated T3
+T4	NeedTemporaryLodging 2393 2436;2439 2569;2572 2675	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations parents are interested in staying locally on the weekends or when patient's sibling is off from school Intervention/Plan- Local Accommodations SW provided parents with information about RMDH and sleep rooms

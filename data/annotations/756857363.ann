@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 730 792;795 906	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER Parent Information: Kataleyah lives with mother in north Philadelphia (on maternity leave, works in healthcare)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 795 906	Parent Information: Kataleyah lives with mother in north Philadelphia (on maternity leave, works in healthcare)
+A2	Negated T2
+T3	HomeSafety 1841 1860;1863 2032	CPS Involvement YES CPS involvment comment: mother reports DHS support related to custody and care of 12 year old currently living in her household (the child of her friend who passed away)
+A3	Negated T3
+T4	LackofInsurance 3613 3767	Sent referral to FHCP for assistance with PA Medicaid coverage. Mother reports having difficulty with adding patient but believes it is now being resolved
+A4	ResolutioninProgress T4
+T5	LackofInsurance 2597 2630;2633 2697;2700 2775	Resource Needs Problem: INSURANCE Goal - Insurance Identify and establish designated Medicaid plan Intervention/Plan - Insurance Discussed with Case Manager, referred to FHCP
+A5	ResolutioninProgress T5
+T6	LackofFundsforFood 2309 2382;2385 2445	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;OTHER Public assistance/SSI comment: Food Stamps, WIC, PA Medicaid
+A6	Negated T6
+T7	LackofInsurance 3769 3921	Mother reports having Health Partners along with her older daughters (23 years and 12 years) and her oldest daughter's children (2 years and 10 months).
+A7	Negated T7

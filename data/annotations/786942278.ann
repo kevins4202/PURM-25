@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 468 571	LSW provided CRC resource card and RMHP contact information for patient mother to register for lodging.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 818 875;878 966	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A2	ResolutioninProgress T2

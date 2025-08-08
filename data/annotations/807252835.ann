@@ -1,0 +1,9 @@
+T1	PatientCaregiver_Unemployment 958 1056	Parents are pursuing US work permits, mother worked as a school social worker and father at a bank
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 784 819;822 905	Patient living situation: PARENT(S) Parent Information: Aiden lives with his mother and father in Reading, Berks County
+A2	Negated T2
+T3	NeedofChildcare 1081 1135	Other School Status Comment: attends a daycare program
+A3	Negated T3
+T4	LackofInsurance 1996 2108	Parent Stressors Aiden's work-up and admission, insurance, loss of Aiden's two siblings in Zimbabwe, immigration
+T5	LackofInsurance 2476 2526;2529 2573;2576 2672	Resource Needs Problem(s) INSURANCE;ACCESS TO FOOD Goal - Insurance Establish coverage for care Intervention/Plan - Insurance Referred to FHCP by prior unit SW, Coordinator is Christina Grasty
+A4	ResolutioninProgress T5

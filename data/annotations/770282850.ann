@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 465 502	SW provided mother with meal vouchers
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 887 944;947 1035;1037 1113	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A2	ResolutioninProgress T2

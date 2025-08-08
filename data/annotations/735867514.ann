@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 616 672;675 829	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Cole lives with his married parents in Bristol (Bucks County); mother works as a bartender and father is working in storage management
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 675 829	Parent Information: Cole lives with his married parents in Bristol (Bucks County); mother works as a bartender and father is working in storage management
+A2	Negated T2
+T3	LackofInsurance 2105 2159	Public assistance/SSI comment: Keystone First Medicaid
+A3	Negated T3

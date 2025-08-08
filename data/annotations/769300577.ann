@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 630 671;674 757	Patient living situation: PARENT(S);OTHER Parent Information: King resides with his mother Tennille in southwest Philadelphia
+A1	Negated T1
+T2	DistancefromHospital 674 757	Parent Information: King resides with his mother Tennille in southwest Philadelphia
+A2	Negated T2
+T3	SubstanceAbuse_Other 1721 1740;1743 1866	Substance Abuse YES Substance Abuse comment: mother reports father has a history of substance abuse and is not actively involved in King's care
+A3	HistoryOf T3
+T4	FinancialStrain_Other 2054 2139	Parent Stressors King's illness and PICU admission, recent death of an aunt, finances
+T5	LackofFundsforFood 2404 2521	Public assistance/SSI comment: Medicaid, subsidized housing, mother reports recently applying for Food Stamps and SSI
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 2404 2520	Public assistance/SSI comment: Medicaid, subsidized housing, mother reports recently applying for Food Stamps and SS
+A5	ResolutioninProgress T6

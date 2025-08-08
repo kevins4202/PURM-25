@@ -1,0 +1,12 @@
+T1	SubstanceAbuse_Other 1809 1828;1831 1967	Substance Abuse YES Substance Abuse comment: Both parents have hx however been sober over 5 years and involved in supporting the community via sober living.
+A1	HistoryOf T1
+T2	NonPermanentPlacement 596 631	Patient living situation: PARENT(S)
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 874 962	Mom works remotely with data and runs sober living and dad manages several PT companies.
+A3	Negated T3
+T4	LackofTransportation 2051 2197	Parent Strengths can articulate needs, adequate family support, understands illness, car, community support, comprehensive mental health treatment
+A4	Negated T4
+T5	DistancefromHospital 2200 2316	Parent Stressors distance from hospital, childcare, balancing mental health needs while coping with hospitalization.
+T6	Childcare_Other 2200 2316	Parent Stressors distance from hospital, childcare, balancing mental health needs while coping with hospitalization.
+T7	LackofInsurance 2438 2471;2474 2587	Resource Needs Problem: INSURANCE Goal - Insurance Parents noted that baby is covered by BCBS however parents had not applied for SSI for baby yet.
+A5	Negated T7

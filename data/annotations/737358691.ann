@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 653 709	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 838 866	Father is currently working.
+A2	Negated T2
+T3	LackofInsurance 2465 2531	Twins have PA Medical Assistance insurance through Keystone First.
+A3	Negated T3
+T4	LackofTransportation 2993 3082;3085 3226	Goal- Transportation Family will have access to transportation to travel to the hospital. Intervention/Plan - Transportation Parents were utilizing HUP shuttle. Social worker will assist with alternative transportation arrangements
+A4	ResolutioninProgress T4

@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 594 650	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 752 835	Mother stopped working during her pregnancy, Father works full time as a machinist.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 752 835	Mother stopped working during her pregnancy, Father works full time as a machinist.
+T4	DrugUse 1695 1714;1717 1848	Substance Abuse YES Substance Abuse comment: Mother in methadone program, CYS involved due to plan of safe care law- CYS SW is Jamie Closs 609-341-6326
+A3	ResolutioninProgress T4
+T5	FinancialStrain_Other 2101 2147	Parent Stressors finances , distance from home
+T6	DistancefromHospital 2101 2147	Parent Stressors finances , distance from home
+T7	LackofInsurance 2150 2217;2220 2312	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother had NJ family care, mother added patient to her policy
+A4	Negated T7
+T8	LackofTransportation 2381 2421;2424 2577	Resource Needs Problem(s) TRANSPORTATION Goal- Transportation mother expressed financial hardship related to travel costs and not being able to visit patient due to cost of parking/gas/tolls/etc
+A5	Negated T8
+T9	DistancefromHospital 2381 2421;2424 2577	Resource Needs Problem(s) TRANSPORTATION Goal- Transportation mother expressed financial hardship related to travel costs and not being able to visit patient due to cost of parking/gas/tolls/etc
+T10	FinancialStrain_Other 2381 2421;2424 2577;2580 2659	Resource Needs Problem(s) TRANSPORTATION Goal- Transportation mother expressed financial hardship related to travel costs and not being able to visit patient due to cost of parking/gas/tolls/etc Intervention/Plan - Transportation SW provided parking passes and meal vouchers
+A6	ResolutioninProgress T10
+T11	FinancialStrain_Other 3504 3561;3564 3680;3682 3758	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 1. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A7	ResolutioninProgress T11

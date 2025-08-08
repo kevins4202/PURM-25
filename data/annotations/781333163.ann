@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 321 414	Family continues to visit regularly from RMH and also commuting home for dad's work schedule.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 321 666	Family continues to visit regularly from RMH and also commuting home for dad's work schedule. Dad shared that he adjusted his work schedule to be able to be present at hospital more often; plans to be visit at least Mondays-Wednesdays, sometimes also Thursdays and/or one day on weekend. Mom may also visit with other family when dad is working.
+A2	Negated T2
+T3	NeedTemporaryLodging 667 737	SW spoke with RMH SW Liz Thul to confirm family's room and visitation.
+A3	Resolved T3

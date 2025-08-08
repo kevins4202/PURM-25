@@ -1,0 +1,13 @@
+T1	FinancialStrain_Other 302 360	Patient's mother asked regarding additional meal vouchers.
+T2	DistancefromHospital 361 427	Family lives in Cape May Court House, NJ (over an hour from CHOP).
+T3	PatientCaregiver_Unemployment 428 479	Family taking off from work due to hospitalization.
+A1	Negated T3
+T4	FinancialStrain_Other 480 623	SW confirmed and discussed providing 2/day and where to retreive. Mother confirmed understanding and expressed appreciation for the assistance.
+A2	ResolutioninProgress T4
+T5	FinancialStrain_Other 624 687	Family declined any additional financial concerns at this time.
+A3	Negated T5
+T6	FinancialStrain_Other 1331 1388;1391 1480;1482 1620	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Reason for Disbursement: Other hardship considerations: live over hour from hospital, financial strain due to missing work/hospitalization
+A4	ResolutioninProgress T6
+T7	DistancefromHospital 1482 1620	Reason for Disbursement: Other hardship considerations: live over hour from hospital, financial strain due to missing work/hospitalization
+T8	PatientCaregiver_Unemployment 1482 1620	Reason for Disbursement: Other hardship considerations: live over hour from hospital, financial strain due to missing work/hospitalization
+A5	Negated T8

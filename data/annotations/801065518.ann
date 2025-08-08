@@ -1,0 +1,7 @@
+T1	FinancialStrain_Other 610 683	Mother expressing financial strain with child's emergent hospitalization.
+T2	FinancialStrain_Other 685 793	SW briefly discussed Fred's Footsteps Foundation, and will review application process in detail on Thursday.
+A1	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 512 608	Mother sharing that she works at McDonald's as cashier, and does not get paid while not at work.
+A2	Negated T3
+T4	FinancialStrain_Other 1056 1113;1116 1204;1210 1230;1232 1371	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional Comments: Due to expressed financial strain with emergent critical care admission and  loss of income, SW approving four meal vouchers for this week.
+A3	ResolutioninProgress T4

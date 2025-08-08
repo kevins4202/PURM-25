@@ -1,0 +1,15 @@
+T1	LackofInsurance 764 819	Mother to add patient ot her medicaid insurance policy.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 538 594;597 763	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Mother (Farrah)  and Father ( Antonio) live separetly in Allentown, PA. Mother lives with patient's older siblings and their maternal grandmother.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 1550 1610;1613 1813	Patient and Family/Caregiver Strengths and Stressors: PARENT Parent Strengths Mother and Father are coping as well as can be expected at this time, Mother is receptive to SW support and learning from the medical , Mother is pumping, Father is working full time.
+A3	Negated T3
+T4	ChildcareBarrierfromHospitalization 1816 1925	Parent Stressors Mother's COVID status and inability to visit with patient, patient's NIICU admission and dx.
+T5	LackofInsurance 1928 1995;1998 2096	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother with active medicaid and plans to add patient to her policy.
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 2200 2262;2265 2332;2335 2417	Resource Needs Problem: LOCAL ACCOMODATIONS;HOUSEHOLD FINANCES Goal - Household Finances Parents with limited income at this time. Intervention/Plan - Household Finances SW to explore financial resources as needed
+A5	ResolutioninProgress T6
+T7	NeedTemporaryLodging 2420 2588;2591 2707	Goal - Local Accommodations Mother scheduled for discharge from SDU on Wednesday, SDU SW is assistng mother with hotel stay so she can drop off breast milk to patient . Intervention/Plan- Local Accommodations SW to refer to RMDH for when she is cleared to come back into the hospital .
+A6	ResolutioninProgress T7
+T8	ChildcareBarrierfromHospitalization 2750 2799;2802 2927	Adjustment Problems ADJUSTMENT TO HOSPITALIZATION Goal- Adjustment to Hospitalization Mother unable to visit patient since she is COVID positive and still admitted to the SDU.
+T9	HomeEnvironment_Other 3134 3198;3201 3340;3343 3446	Relationships/Behavior Problems CONFLICT WITHIN PATIENT'S FAMILY Goal - Conflict within patient's Family An unapproved visitor named Kimberely Martinez,  tried to visit mother and patient in the hospital. Intervention/Plan- Conflict within patient's Family Visitor Restriction in place for Kimberley Martinez

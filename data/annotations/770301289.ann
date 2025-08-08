@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 88 146	SW notified by CM that mother is requesting meal vouchers.
+T2	FinancialStrain_Other 262 381	Patient's mother approved for 10 meal vouchers on 1/3/23. SW confirmed that vouchers were retrieved on 1/3/23 with PFS.
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 504 584	SW completed redcap for mother to retrieve additional vouchers on Sunday 1/8/23.
+A2	ResolutioninProgress T3
+T4	DistancefromHospital 1046 1164	Reason for Disbursement: Other hardship considerations: financial hardship, family does not live close to the hospital
+T5	FinancialStrain_Other 834 891;894 954;956 1044;1046 1164;1170 1369	Patient screened today for concrete resource eligibility: Patient is NOT eligible for concrete resources at this time. Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Other hardship considerations: financial hardship, family does not live close to the hospital Additional comments: Mother not eligible for additional vouchers at this time, mother is eligible for additional vouchers 1/8/23.  SW completed redcap for mother to retrieve 6 meal voucher on 1/8/23.
+A3	ResolutioninProgress T5

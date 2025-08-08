@@ -1,0 +1,7 @@
+T1	ChildcareBarrierfromNonHospitalization 552 678	SW informed family of meeting and mom confirmed that she will be in attendance, but dad will be back home with their children.
+T2	LackofTransportation 679 833	Dad is in need of transportation home today from the hospital with the children. SW was able to obtain approval for this one ride back home via Lyft/Uber.
+A1	Resolved T2
+T3	LackofTransportation 1059 1112	SW will request one time ride back home via Uber/Lyft
+A2	Resolved T3
+T4	LackofTransportation 1631 1688;1691 1779;1785 1805;1809 1850	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Uber/Lyft. Additional comments: One time approval for dad ride back home.
+A3	Resolved T4

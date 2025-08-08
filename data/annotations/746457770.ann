@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 626 682;685 876	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Ezra is the fourth child born to his intact parents, Stacy and Derick, who live together in Pleasantville, NJ with Ezra's 5 year old, 11 year ols and 19 year old siblings.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 877 912	Parents have both returned to work.
+A2	Negated T2
+T3	LackofFundsforFood 1780 1799;1802 1881	Food insecurity YES Food insecurity comment: Family is in the process of applying for WIC benefits.
+A3	ResolutioninProgress T3
+T4	LackofFundsforFood 2776 2808	Mother applied for WIC benefits.
+A4	ResolutioninProgress T4
+T5	LackofInsurance 2987 3091	Parents have added Ezra to their employer-sponsored Horizon Blue Cross Blue Shield of NJ insurance plan.
+A5	Negated T5
+T6	LackofFundsforFood 3160 3218;3221 3273;3276 3398	Resource Needs Problem: ACCESS TO FOOD;OTHER (SEE COMMENT) Goal - Access to food Family will have WIC benefits. Intervention/Plan - Access to food Social worker will provide a letter of support for mother's in-process WIC application.
+A6	ResolutioninProgress T6
+T7	HomeAccessibility 3401 3514;3517 3810	Goal - Other resource needs Family will have funding to purchase an additional car seat for their second vehicle. Intervention/Plan - Other resource needs Parents have a car seat for Ezra. Mother inquired about receiving an additional car seat for the family's second vehicle. Social worker informed mother that the hospital is not able to provide a second car seat for families who already have a car seat.
+A7	Negated T7
+T8	FinancialStrain_Other 3811 4180	Discussed applying for financial assistance to offset the costs associated with Ezra's lengthy initial NICU stay so that parents can spend on a second car seat or other baby care necessities. Mother in agreement with referral to the Colette Louise Tisdahl Foundation. Social worker will submit referral for financial assistance to the Colette Louise Tisdahl Foundation.
+A8	ResolutioninProgress T8
+T9	LackofFundsforFood 5105 5143	WIC letter of support left at bedside.
+A9	ResolutioninProgress T9
+T10	FinancialStrain_Other 5144 5232	Application submitted to the Colette Louise Tisdahl Foundation for financial assistance.
+A10	ResolutioninProgress T10

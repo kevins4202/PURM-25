@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 382 467	Shulem lives with his parents and three siblings (ages 11, 7, and 1) in Brooklyn, NY.
+A1	Negated T1
+T2	DistancefromHospital 382 467	Shulem lives with his parents and three siblings (ages 11, 7, and 1) in Brooklyn, NY.
+T3	NeedTemporaryLodging 490 611	Mother had questions around local lodging, SW e-mailed mother information about Philadelphia RMH and local hotel options.
+A2	ResolutioninProgress T3

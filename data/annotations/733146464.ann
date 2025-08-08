@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 967 1021	Mother has not been able to work since Leilani's birth
+T2	PatientCaregiver_Unemployment 1024 1048	Father is a truck driver
+A1	Negated T2
+T3	NeedTemporaryLodging 1218 1386	Mother is currently on the waitlist for local housing at the Ronald McDonald House.  When she gets in there, she may consider having her 3 yo come on weekends to visit.
+A2	ResolutioninProgress T3

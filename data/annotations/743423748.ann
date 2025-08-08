@@ -1,0 +1,3 @@
+T1	PermanentPlacementPending 208 532	Progress: SW received a call from DHS caseworker Adrienne Redguard (215-683-6641) who stated that a safety plan is being put into place at time of discharge. Patient can be discharged to parents but MGM Shanadala Cue (215-651-9076) must be present. If MGM is not present, DHS worker stated that patient cannot be discharged.
+A1	ResolutioninProgress T1
+T2	HomeSafety 208 365	Progress: SW received a call from DHS caseworker Adrienne Redguard (215-683-6641) who stated that a safety plan is being put into place at time of discharge.

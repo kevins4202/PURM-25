@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 637 693;696 837	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Shaveaha lives with her mother and 13 year old and 18 year old siblings in Trenton, NJ (a little over an hour from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 696 837	Parent Information: Shaveaha lives with her mother and 13 year old and 18 year old siblings in Trenton, NJ (a little over an hour from CHOP).
+T3	PatientCaregiver_Unemployment 862 894	Mother is currently not working.
+T4	DistancefromHospital 2030 2291	Parent Stressors Unanticipated readmission to the NICU, family lives over an hour from CHOP, mother does not drive and relies on friends/family members for rides to the hospital, balancing visiting Shavaeha in the hospital and caring for older siblings at home.
+T5	LackofTransportation 2030 2291	Parent Stressors Unanticipated readmission to the NICU, family lives over an hour from CHOP, mother does not drive and relies on friends/family members for rides to the hospital, balancing visiting Shavaeha in the hospital and caring for older siblings at home.
+T6	LackofInsurance 2294 2361;2364 2449	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother has added Shavaeha Horizon NJ Health insurance.
+A2	Negated T6
+T7	FinancialStrain_Other 2655 2711;2714 2826;2829 3037	Resource Needs Problem: EMPLOYMENT/INCOME;TRANSPORTATION Goal- Transportation Family will have financial assistance to offset the cost of transportation to the hospital. Intervention/Plan - Transportation Social worker provided information about Harp's Hope for Wawa gift card to offset the cost of gas expenses. Mother in agreement with referral, which social worker submitted.
+A3	ResolutioninProgress T7
+T8	FinancialStrain_Other 4706 4845	Discussed referral to Harp's Hope. Will also provide parking vouchers and will request a NICU gift card to offset the cost of gas expenses.
+A4	ResolutioninProgress T8

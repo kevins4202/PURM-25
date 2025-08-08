@@ -1,0 +1,6 @@
+T1	LackofInsurance 424 613	Parents had questions about the patient's insurance and WIC benefits. LSW answered all questions identified and assured parents that they did not need to apply for Medicaid in Pennsylvania.
+A1	Negated T1
+T2	LackofFundsforFood 424 493	Parents had questions about the patient's insurance and WIC benefits.
+A2	Negated T2
+T3	NeedTemporaryLodging 614 651	The parents are staying at RMD house.
+A3	Resolved T3

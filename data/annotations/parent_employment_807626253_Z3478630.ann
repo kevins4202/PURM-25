@@ -1,0 +1,12 @@
+T1	PatientCaregiver_Unemployment 596 697	Father visited Nico this past Monday which is typically when father is off of work and able to visit.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 596 696	Father visited Nico this past Monday which is typically when father is off of work and able to visit
+A2	Negated T2
+T3	ChildcareBarrierfromHospitalization 438 532	Patient`s mother continues to visit each day and hold Nico to support bonding and development.
+A3	Negated T3
+T4	ChildcareBarrierfromHospitalization 438 532	Patient`s mother continues to visit each day and hold Nico to support bonding and development.
+A4	Negated T4
+T5	ChildcareBarrierfromHospitalization 438 532	Patient`s mother continues to visit each day and hold Nico to support bonding and development.
+A5	Negated T5
+T6	PatientCaregiver_Unemployment 596 697	Father visited Nico this past Monday which is typically when father is off of work and able to visit.
+A6	Negated T6

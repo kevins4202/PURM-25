@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 657 692;695 811	Patient living situation: PARENT(S) Parent Information: Jeremiah and his mother are currently living with maternal grandmother in northeast Philadelphia
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 814 888	mother works full-time as a teacher at Head Start and father works as a DJ
+A2	Negated T2
+T3	IntimatePartnerViolence 1667 1688;1691 1795	Home Environment: YES Home Environment comment: positive screen, resources provided and referral made with mother's permission
+A3	ResolutioninProgress T3
+T4	LackofInsurance 2236 2296	Public assistance/SSI comment: Food Stamps, WIC, PA Medicaid
+A4	Negated T4
+T5	LackofFundsforFood 2236 2296	Public assistance/SSI comment: Food Stamps, WIC, PA Medicaid
+A5	Negated T5
+T6	PermanentPlacementPending 3599 3697	Mother reports she and father are scheduled to go to court at the end of March related to custody.

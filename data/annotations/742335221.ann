@@ -1,0 +1,10 @@
+T1	PatientCaregiver_Unemployment 726 797	Imonie is currently unemployed but is actively looking for employement.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 559 615;618 725	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: The patient's mother resides in South Philadelphia with Roman's grandmother and sister.
+A2	Negated T2
+T3	SubstanceAbuse_Other 1643 1662;1665 1741	Substance Abuse YES Substance Abuse comment: Patient's mother is actively enagaged in treatment.
+A3	ResolutioninProgress T3
+T4	LackofFundsforFood 2025 2092;2095 2135	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: WIC, SNAP
+A4	Negated T4
+T5	FinancialStrain_Other 2204 2246;2249 2360;2363 2468	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Patient's parents household finances will support the parents presence at the bedside Intervention/Plan - Household Finances LSW will refer patient's mother to appropriate community resources
+A5	ResolutioninProgress T5

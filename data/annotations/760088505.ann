@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 679 749	Mother is on maternity leave until January and Father works from home.
+A1	Negated T1
+T2	NonPermanentPlacement 546 602	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T2
+T3	DistancefromHospital 1839 1914	Parent Stressors patient's admisson to CHOP  and RSV dx, distance from home
+T4	NeedTemporaryLodging 2255 2298;2301 2391;2394 2582	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents live in DE and would like to stay locally with patient Intervention/Plan- Local Accommodations SW made referral to RMDH, house is full today, parents may be able to check in this weekend, SW provided mother with list of local hotels via email.
+A3	ResolutioninProgress T4

@@ -1,0 +1,9 @@
+T1	LackofTransportation 257 314;317 421;427 698	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): One-way Lyft. Additional comments:  Family travelled to CHOP via Modivcare with outpatient SW assistance (SW Sue White). Father reports need to travel home for child care, attempted to obtain ride however unable to. SW approved a one-way Lyft home for father through emergency SW fund.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 257 314;317 421;427 812;814 922	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): One-way Lyft. Additional comments:  Family travelled to CHOP via Modivcare with outpatient SW assistance (SW Sue White). Father reports need to travel home for child care, attempted to obtain ride however unable to. SW approved a one-way Lyft home for father through emergency SW fund. Father plans to remain home for duration of admission to care for pt's siblings while mother remains at CHOP/RMH. SW also provided 6 guest meal vouchers from recent donation and provided guest room service menu in Spanish.
+A2	ResolutioninProgress T2
+T3	NeedofChildcare 534 628	Father reports need to travel home for child care, attempted to obtain ride however unable to.
+T4	ChildcareBarrierfromNonHospitalization 699 812	Father plans to remain home for duration of admission to care for pt's siblings while mother remains at CHOP/RMH.
+A3	ResolutioninProgress T4
+T5	NeedTemporaryLodging 699 812	Father plans to remain home for duration of admission to care for pt's siblings while mother remains at CHOP/RMH.
+A4	Resolved T5

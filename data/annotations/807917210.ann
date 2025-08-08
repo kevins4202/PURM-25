@@ -1,0 +1,19 @@
+T1	NonPermanentPlacement 495 563	Patient living situation: PARENT(S);CHILDREN IN THE HOME;RELATIVE(S)
+A1	Negated T1
+T3	LackofTransportation 2601 2728	Parent Stressors Transportation stessors, returning to the PICU and overall concerned by relapse, being away from home hospital
+T4	LackofTransportation 2797 2837;2840 2888;2891 3022	Resource Needs Problem(s) TRANSPORTATION Goal- Transportation Awaiting car to be repaired Intervention/Plan - Transportation LSW to assist with transportation as needed, Mom also has support from children/family who drive
+A3	ResolutioninProgress T4
+T6	FinancialStrain_Other 5202 5277	Mom has support from outside oncology foundations for meal voucher support.
+A5	ResolutioninProgress T6
+T7	PatientCaregiver_Unemployment 5331 5426	Mom's work has been very understanding and she is able to continue working remotely at bedside.
+A6	Negated T7
+T2	IntimatePartnerViolence 1657 1673;1676 1800	Legal Issues YES Legal Issues comment: Mom has PFA against Bio Dad (Larry Kirk) and will be providing updated documentation upon return home.
+A2	Resolved T2
+T8	HomeSafety 1801 1851	Naimlynne and all siblings are also listed on PFA.
+A7	Resolved T8
+T9	CommunitySafety 1932 1974	Bio Dad has been restricted from visiting.
+A8	Resolved T9
+T5	IntimatePartnerViolence 4678 4792	Mom has full custody and a PFA order against Bio Dad (all children including Naimlynne are listed on PFA as well).
+A4	Resolved T5
+T10	HomeSafety 4678 4792	Mom has full custody and a PFA order against Bio Dad (all children including Naimlynne are listed on PFA as well).
+A9	Resolved T10

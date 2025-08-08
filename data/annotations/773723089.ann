@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 371 447	Mom unsure if she will return to work; she was to return to work last month.
+T2	FinancialStrain_Other 448 571;574 661	MGM asked about any financial assistance available due to mom not working. We discussed some options and SW will follow up. We also discussed SSI; SW unsure if pt will qualify, but will send mom the information.
+A1	ResolutioninProgress T2
+T3	LackofFundsforFood 664 731	Pt gets formula from WIC; SW offered to fax form to the WIC office.
+A2	Negated T3

@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 613 648;651 801	Patient living situation: PARENT(S) Parent Information: Everett is the first child born to his intact parents, Adam and Gina, who live together in Sparta, NJ (about 2.5 hours from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 651 801	Parent Information: Everett is the first child born to his intact parents, Adam and Gina, who live together in Sparta, NJ (about 2.5 hours from CHOP).
+T3	PatientCaregiver_Unemployment 802 926	Parents are both employed (mother is a pharmacist and father works for CISCO) and are both currently taking parental leaves.
+A2	Negated T3
+T4	DistancefromHospital 1960 2069	Parent Stressors Prolonged ICU-level hospitalization, transfer to CHOP which is 2.5 hours from family's home.
+T5	LackofInsurance 2191 2244;2247 2331;2334 2565	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Everett will have SSI and secondary NJ Medical Assistance in place. Intervention/Plan - Insurance Social worker provided information about SSI and the path to obtaining secondary NJ Medical Assistance, which Everett would be eligible for during his hospitalization only. Parents would like to apply.
+A3	Negated T5
+T6	NeedTemporaryLodging 2642 2709;2712 2979	Goal - Local Accommodations Parents will have local accommodations. Intervention/Plan- Local Accommodations Provided information about NICU parent sleep rooms and the request process/availability. Provided information about Ronald McDonald House Chestnut Street. Added parents to the RMH Chestnut Street waiting list per their request.
+A4	ResolutioninProgress T6
+T7	NeedTemporaryLodging 2191 2244	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS

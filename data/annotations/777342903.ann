@@ -1,0 +1,22 @@
+T1	DistancefromHospital 670 727	Parents live in Philadelphia PA, close proximity to CHOP.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 729 761	Melissa is currently unemployed.
+T3	PatientCaregiver_Unemployment 763 796	James works as a delivery driver.
+A2	Negated T3
+T4	NeedTemporaryLodging 1620 1641;1644 1735	Home Environment: YES Home Environment comment: Parents recently obtained their own apartment in NE Philadelphia.
+A3	Negated T4
+T5	DrugUse 1879 1898;1901 2092	Substance Abuse YES Substance Abuse comment: Paretns have a history of substance abuse and are currently in a methadone maintenance program.  They are at AMHA in Philadelphia.  Therpaist is Robin. ROI is on file
+A4	HistoryOf T5
+A5	ResolutioninProgress T5
+T6	HomeSafety 1738 1757;1760 1829	CPS Involvement YES CPS involvment comment: ChildLine call was placed on 2/3/23 by SDU SW
+T7	PermanentPlacementPending 2096 2112;2115 2224	Legal Issues YES Legal Issues comment: Couple is currently in NJ family court proceedings to regain custody of 9 year old son.
+T8	DrugUse 2723 2792;2795 2969	Existing Community Services/Outside Supports: REHABILITATION SERVICES Rehabilitation services comment: Parents are followed at AMHA (addiction Medicine and Health Advocates) in Philadelphia for rehabilitation/treatment program.  ROI is on file.
+A6	ResolutioninProgress T8
+T9	DrugUse 5085 5159	All children has been removed Melissa's custody due to history of drug use
+A7	HistoryOf T9
+T10	PatientCaregiver_Unemployment 5286 5324	Melissa is unemployed due to back pain
+T11	PatientCaregiver_Unemployment 5325 5356	and James is a delivery driver.
+A8	Negated T11
+T12	DrugUse 5424 5513	They are currently both in a methadone maintenance program located in Philadelphia; AMHA.
+A9	HistoryOf T12
+A10	ResolutioninProgress T12

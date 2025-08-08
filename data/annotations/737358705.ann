@@ -1,0 +1,10 @@
+T1	ChildcareBarrierfromHospitalization 2007 2132	Parent Stressors Prolonged ICU-level hospitalization, balancing visiting twins in the hospital and caring for sibling at home
+T2	ChildcareBarrierfromNonHospitalization 2007 2132	Parent Stressors Prolonged ICU-level hospitalization, balancing visiting twins in the hospital and caring for sibling at home
+T4	PatientCaregiver_Unemployment 811 839	Father is currently working.
+A2	Negated T4
+T5	LackofInsurance 2439 2504	Twins have PA Medical Assistance insurance through Keystone First
+A3	Negated T5
+T6	LackofTransportation 2967 3056;3059 3201	Goal- Transportation Family will have access to transportation to travel to the hospital. Intervention/Plan - Transportation Parents were utilizing HUP shuttle. Social worker will assist with alternative transportation arrangements.
+A4	ResolutioninProgress T6
+T3	NonPermanentPlacement 626 682	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T3

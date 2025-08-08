@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 516 599	Meal vouchers provided due to unforeseen admission and limited financial resources.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1076 1133;1136 1224	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2.
+A2	ResolutioninProgress T2

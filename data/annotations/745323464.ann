@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 622 657;660 799	Patient living situation: PARENT(S) Parent Information: Ny'robi is the first child born to her intact parents, Nyasia West and Robert Hyman, who live together in Philadelphia.
+A1	Negated T1
+T2	LackofInsurance 2011 2078;2081 2171	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Ny'robi has Keystone First PA Medical Assistance insurance.
+A2	Negated T2
+T3	LackofFundsforFood 2207 2257	Ny'robi is eligible for WIC benefits at discharge.
+A3	ResolutioninProgress T3

@@ -1,0 +1,13 @@
+T1	LackofInsurance 333 472	SW checked in with mom and she shared that she has not heard any additional information from her insurance in regard to the transportation.
+A1	Negated T1
+T2	LackofTransportation 333 472	SW checked in with mom and she shared that she has not heard any additional information from her insurance in regard to the transportation.
+T3	LackofInsurance 536 585	Mom shared she will follow up with her insurance.
+A2	Negated T3
+T4	FinancialStrain_Other 589 1040	Mom also inquired about financial assitance. As SW had mentioned some of resources such as Open Doors and the Colette Louise Tisdahl foundation, mom shared she has already received assistance from those programs. Family does not qualify for Fred's Footsteps as the family is not in the service area for the foundation. SW shared she will look into additional financial assistance programs to assist family and will let mom know when one is identified.
+A3	ResolutioninProgress T4
+T5	LackofInsurance 1119 1212	Mom called the insurance company and they shared they did not receive the fax from 5/18/2023.
+A4	Negated T5
+T6	LackofInsurance 1321 1387	Mom shared she will call the insurance company again and follow up
+A5	Negated T6
+T7	LackofTransportation 213 222;225 239	Problems: Transportation
+T8	FinancialStrain_Other 241 261	Financial Assistance

@@ -1,0 +1,10 @@
+T1	Transportation_Other 218 227;230 284	Problems: Hospital discharge, Transportation and Other:  Daycare
+T2	Childcare_Other 218 227;230 284	Problems: Hospital discharge, Transportation and Other:  Daycare
+T3	CommunitySafety 310 433	Car seat ordered to bedside and CHOP Injury Prevention Coordinator notified to do education with family prior to discharge.
+A1	Resolved T3
+T4	Childcare_Other 437 532	Mother is interested in Wonder Kids Medical Daycare' Lancaster location. Case Management aware.
+A2	ResolutioninProgress T4
+T5	FoodInsecurity_Other 536 877	Mother attempted to schedule a WIC appointment post-discharge, but was told there are no appointments until March. SW requested MD contact WIC and request an expedited appoiintment: COMMUNITY ACTION PARTNERSHIP OF LANCASTER CO WIC PROGRAM (717-509-3686). Per Mother, Vantage House is also willing/able to help with formula access, if needed.
+A3	ResolutioninProgress T5
+T6	LackofInsurance 881 1112	SW provided Mother with the phone numbers for PA Statewide Customer Service Center (1-877-395-8930) and PA Compass HELPLINE (1-800-692-7462) to change patient's address and request updates to patient's insurance/ACCESS information.
+A4	ResolutioninProgress T6

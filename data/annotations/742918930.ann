@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 723 960	SW discussed available supports and MGF noted he has been paying $16 for parking to bring mom as well as the cost of gas for 2 hour car ride both ways.  SW provided MGF with a Harps Hope card for gas assistance as well as 1 parking pass.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 723 960	SW discussed available supports and MGF noted he has been paying $16 for parking to bring mom as well as the cost of gas for 2 hour car ride both ways.  SW provided MGF with a Harps Hope card for gas assistance as well as 1 parking pass.
+A2	Negated T2
+T3	HomeEnvironment_Other 1110 1234	Mom was aware she is not able to have a parent badge as for the visitor restriction in place requiring her to be supervised.

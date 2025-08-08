@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 362 421	His father maybe able to drive him down after work tonight.
+A1	Negated T1
+T2	LackofTransportation 362 421	His father maybe able to drive him down after work tonight.
+A2	ResolutioninProgress T2

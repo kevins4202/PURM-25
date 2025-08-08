@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 588 635;638 725	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Rebekah lives with her mother in Bridgeton, NJ (Cumberland County);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 726 749	mother works as cashier
+A2	Negated T2
+T3	FinancialStrain_Other 1931 2074	Parent Stressors Rebekah's current ICU hospitalization and recent COVID exposure, death of maternal grandmother in 2021, work absence, finances
+T4	LackofInsurance 2313 2360	Public assistance/SSI comment: NJ Medicaid, SSI
+A3	Negated T4
+T5	FinancialStrain_Other 2557 2595;2598 2648;2651 2817	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Caregiver meal tray delivery Intervention/Plan - Access to food SW Leadership and Food Services aware of STR admission for caregiver meal tray distribution, no meal vouchers required for ordering
+A4	ResolutioninProgress T5

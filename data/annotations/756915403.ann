@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 637 684;687 792	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Camari will live with her mother, Inez, in Somerdale, NJ (about 25 minutes from CHOP)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 848 893	Mother is currently taking leave from her job
+A2	Negated T2
+T3	LackofInsurance 2287 2368	Mother has added Camari to her Horizon NJ Health NJ Medical Assistance insurance.
+A3	Negated T3
+T4	LackofFundsforFood 2369 2489	Mother applied for SNAP benefits earlier this week and is waiting for a determination. Mother is receiving WIC benefits.
+A4	ResolutioninProgress T4

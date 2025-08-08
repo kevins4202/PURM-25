@@ -1,0 +1,12 @@
+T1	NeedTemporaryLodging 581 679	Social worker also provided parents with a paper copy of a list of local hotels per their request.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 506 580	Parents are planning to return to Allentown via Greyhound bus later today.
+A2	Negated T2
+T3	HomeSafety 739 780	Parents have a stroller and crib at home.
+A3	Negated T3
+T4	HomeAccessibility 781 935	Mother inquired about financial assistance to purchase a car seat. Social worker relayed that family will be eligible for an infant car seat at discharge.
+A4	ResolutioninProgress T4
+T5	FoodInsecurity_Other 936 1086	Social worker provided information about WIC and noted that social worker will make a referral to WIC closer to discharge for assistance with formula.
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 1757 1814;1817 1905;1911 2033	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3. Additional comments:  Family is currently without income and has limited resources to purchase meals while at the hospital
+A6	ResolutioninProgress T6

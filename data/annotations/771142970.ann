@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 402 532	Reason for Disbursement: Other hardship considerations: financial hardship due to extended admission/missing work to be at bedside
+A1	Negated T1
+T2	FinancialStrain_Other 251 308;311 400;402 532	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Reason for Disbursement: Other hardship considerations: financial hardship due to extended admission/missing work to be at bedside
+A2	ResolutioninProgress T2

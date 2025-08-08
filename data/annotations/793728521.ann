@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 588 644	Patient living situation: CHILDREN IN THE HOME;PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 647 697	Parent Information: MOB is currently incarcerated.
+T3	NonPermanentPlacement 770 863	CYS continues to maintain involvement however dad recently obtain consenting rights for baby.
+A2	Negated T3
+T4	HomeEnvironment_Other 1726 1745;1748 1834	CPS Involvement YES CPS involvment comment: CYS Case worker (M-F Daytime), Allessandra Lieman 484-635-0602
+T5	DrugUse 1883 1902;1905 1979	Substance Abuse YES Substance Abuse comment: Patient exposed to  multiple substances in utero.
+T6	PatientCaregiver_Unemployment 1981 2011	Mother currently incarcerated.
+T7	HomeEnvironment_Other 2013 2034	FOB and CYS involved.
+T8	PatientCaregiver_Unemployment 2037 2053;2056 2107	Legal Issues YES Legal Issues comment: Mother currently incarcerated
+T9	DrugUse 2373 2492	Parent Stressors Mother's substance use, patient's premature birth and illness, CYS involvement, distance from hospital
+T10	HomeEnvironment_Other 2373 2492	Parent Stressors Mother's substance use, patient's premature birth and illness, CYS involvement, distance from hospital
+T11	DistancefromHospital 2373 2492	Parent Stressors Mother's substance use, patient's premature birth and illness, CYS involvement, distance from hospital
+T12	DistancefromHospital 698 768	FOB, Victor Garza lives in Chester County, PA with his other children.
+T13	LackofInsurance 2495 2562;2565 2613	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA MA
+A3	Negated T13

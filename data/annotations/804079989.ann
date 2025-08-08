@@ -1,0 +1,5 @@
+T1	DistancefromHospital 402 506	Mother reports father is currently working and caring for the children in Utica, NY (6 hours from CHOP).
+T2	PatientCaregiver_Unemployment 402 506	Mother reports father is currently working and caring for the children in Utica, NY (6 hours from CHOP).
+A1	Negated T2
+T3	NeedofChildcare 402 506	Mother reports father is currently working and caring for the children in Utica, NY (6 hours from CHOP).
+A2	Negated T3

@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 536 571;574 677	Patient living situation: PARENT(S) Parent Information: Patient lives with biological mother full time. Biological father lives seperately.
+A1	Negated T1
+T2	DistancefromHospital 1626 1703	Parent Stressors Parents and patient siblings (8, 4,1,) live over 2 hrs away.
+T3	PatientCaregiver_Unemployment 1753 1797	Parent's identify work associated stressors.
+A2	Negated T3
+T4	LackofInsurance 2218 2324;2327 2428	Goal - Insurance Patient's parent will obtain primary medicaid insurance for patient, effective October 1. Intervention/Plan - Insurance Patient's parents established insurance to become effective Oct. 1 2022
+A3	ResolutioninProgress T4
+T5	PatientCaregiver_Unemployment 2431 2710;2713 2887	Goal - Employment/income Patient's mother currently on unpaid maternity leave but will not qualify for additional leave as of Nov. 1. Patient's father on unpaid FMLA (documentation submitted and confirmed by OSH SW). Parents to maintain employment and income to meet basic needs. Intervention/Plan - Employment/income LSW to support parents in necessary employment documentation and discuss financial assessment eligibility given loss of income due to dx
+A4	Negated T5
+T6	FinancialStrain_Other 2050 2215	Intervention/Plan - Household Finances LSW to assess parent financial need and eligibility criteria for financial support as it pertains to loss of income due to dx.
+T7	FinancialStrain_Other 2713 2888	Intervention/Plan - Employment/income LSW to support parents in necessary employment documentation and discuss financial assessment eligibility given loss of income due to dx.
+T8	NeedTemporaryLodging 3141 3231	LSW provided resources on local lodging options, including directions to register for RMH.
+A5	ResolutioninProgress T8
+T9	FinancialStrain_Other 3452 3594	Family eligible for concrete resources, including: parking passes and meal vouchers. Please see concrete resource note for additional details.
+A6	ResolutioninProgress T9

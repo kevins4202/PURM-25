@@ -1,0 +1,8 @@
+T1	LackofInsurance 987 1030	Insurance: Alexis provided NJMA ID#72454177
+A1	Negated T1
+T2	LackofTransportation 1406 1516	Maternal great-grandmother drives and mother is familiar with how to utilize NJ Logisitcare/Modivcare services
+A2	Negated T2
+T3	HomeSafety 1654 1750	SW discussed with DCPP caseworker that Alexis expressed interest to this SW in parenting classes
+T4	FinancialStrain_Other 1851 1995	Benefits (WIC, SSI): Alexis receives WIC, case manager aware for WIC paperwork. SW provided additional information and website for SSI benefits.
+A3	Negated T4
+T5	HomeSafety 2000 2401;2403 2782	DCPP: SW met with DCPP Caseworker Lisa today, who visited pt at bedside. DCPP Caseworker also spoke with bedside RN for general updates. SW shared that Alexis and Paula have been visiting together daily this week. DCPP Caseworker confirmed plan for discharge home with Alexis and Paula after successful completion of discharge teaching, and Alexis will be required to be supervised with Aiden at home. SW also discussed father's involvement with DCPP. Per nursing, father (Derek) has called in for updates. Per DCPP, father lives ~2 hours from where Alexis resides. Per both DCPP and father (discussed earlier in hospitalization), father is facing legal issues which would impact ability to be primarily involved at this time. SW to call father to check in as discharge approaches.

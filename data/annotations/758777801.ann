@@ -1,0 +1,13 @@
+T1	FinancialStrain_Other 38 222	Progress:  SW received consult from FLOC (A. Koutsoubis) regarding mom requesting meal vouchers. SW called patient's mother regarding meal vouchers. Per mom, previous SW was providing.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 273 327	Patient's father is involved and currently unemployed.
+T3	PatientCaregiver_Unemployment 328 391	Patient's mother discussed just starting back at work recently.
+A2	Negated T3
+T4	LackofFundsforFood 392 432	Mom confirmed she receives SNAP and WIC.
+A3	Negated T4
+T5	UnabletoPay 435 779	SW asked regarding any financial concerns/past due bills. Mom report family owes nearly $1000 on a gas bill. Mom declined any shut off notice. SW confirmed and discussed leaving utility assistance resources at bedside. SW notified patient's mother to contact SW should family receive a shut off notice. Patient's mother confirmed understanding.
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 780 1091	SW discussed leaving meal vouchers at bedside and encouraged patient's mother to reach out to SW directly regarding refills or should any other needs arise. Patient's mother confirmed understanding and confirmed understandings. Mother comes in the afternoons and confirmed she really only needs one voucher/day.
+A5	ResolutioninProgress T6
+T7	FinancialStrain_Other 1319 1376;1379 1467;1469 1556;1562 1696;1702 1866	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 7. Reason for Disbursement: Other hardship considerations: financial hardship/unemployment Additional comments:  SW completed redcap and retrieved vouchers and left at bedside. Patient's mother to contact SW regarding refill. Plan: SW will continue to follow and reassess needs throughout admission to 9 South. Social Work supports will be offered as appropriate throughout hospitalization.
+A6	ResolutioninProgress T7

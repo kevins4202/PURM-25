@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 504 602	Also relayed to mother that self-employed individuals are not eligible to apply for NJ Disability.
+A1	Negated T1
+T2	FinancialStrain_Other 706 790	Provided two $25.00 NICU SW Fund Visa gift cards to offset the cost of gas expenses.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1263 1320;1323 1457	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gift Cards: Two $25.00 NICU SW Fund gift cards left at bedside.
+A3	ResolutioninProgress T3

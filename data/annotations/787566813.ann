@@ -1,0 +1,11 @@
+T1	HomeSafety 2116 2172;2175 2354	Resource Needs Problem: SAFE/ACCESSIBLE HOME ENVIRONMENT Intervention/Plan - Safe/Accessible home environment  Father reports guns in the home and states they are secured in locked gun cabinet; father states children do not have access.
+A1	Resolved T1
+T2	NonPermanentPlacement 693 749	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T2
+T3	ChildAbuse 2813 2884;2887 3007	Relationships/Behavior Problems SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time.
+A3	Negated T3
+T4	LackofInsurance 3343 3418	SW discussed FHCP and Medicaid as an option for possible medical insurance;
+T5	FinancialStrain_Other 3419 3514	father declines and states the Amish Community will be assisting with hospital costs and needs.
+A4	ResolutioninProgress T5
+T6	LackofTransportation 3620 3660	Father takes the train to and from home.
+A5	Negated T6

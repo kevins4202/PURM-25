@@ -1,0 +1,16 @@
+T1	GeneralHousingInstability 1934 1957;1960 2042	Housing instability YES Housing instability comment: CUA to support parents in securing housing stability.
+A1	ResolutioninProgress T1
+T2	HomeEnvironment_Other 884 1104	Relative Information: Maternal aunt, Melissa Keys, has been identified by DHS as the caregiver for pt at discharge.Pt's twin (Sufyan) currently lives with her. She has an 11 year old as well. MGM assists when aunt works.
+T3	PermanentPlacementPending 884 1104	Relative Information: Maternal aunt, Melissa Keys, has been identified by DHS as the caregiver for pt at discharge.Pt's twin (Sufyan) currently lives with her. She has an 11 year old as well. MGM assists when aunt works.
+T4	GeneralHousingInstability 2330 2370	Parents are movitivated to find housing.
+A2	ResolutioninProgress T4
+T5	LackofTransportation 2598 2680;2683 2757	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;TRANSPORTATION Transportation comment: Parents use public transportation to visit bedside
+A3	Negated T5
+T6	LackofInsurance 2761 2860	Public assistance/SSI comment: Pt has PA Medicaid (KF) and receives SSI ($30/month while admitted).
+A4	Negated T6
+T7	LackofFundsforFood 2861 2900	Mom reports they receive SNAP benefits.
+A5	Negated T7
+T8	GeneralHousingInstability 2996 3091;3094 3210	Goal - Housing Patient parents ae to secure suitable housing to be in ordinance with CUA goals. Intervention/Plan- Housing CUA worker, Ms. Shonse Hawkins to support patient and patient family gain stable housing.
+A6	ResolutioninProgress T8
+T9	GeneralHousingInstability 792 881	They are participating in a housing program and mom participates in a MH program 3x/week.
+A7	ResolutioninProgress T9

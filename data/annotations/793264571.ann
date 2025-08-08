@@ -1,0 +1,34 @@
+T1	PatientCaregiver_Unemployment 904 1007	Mom was recently laid off from her employer and applied for unemployement and dad is a delivery driver.
+T2	PatientCaregiver_Unemployment 904 1007	Mom was recently laid off from her employer and applied for unemployement and dad is a delivery driver.
+A1	Negated T2
+T3	NonPermanentPlacement 598 666;669 733	Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME Parent Information: Mom and dad live in Bridgeport, PA with PGM.
+A2	Negated T3
+T4	HomeEnvironment_Other 2058 2073;2077 2211	CPS Involvement CPS involvment comment: Montgomery County CYS Case Worker: Nasia Harmon- 484-864-0228/ Safety plan in place/ uploaded to media manager
+T5	GeneralHousingInstability 2214 2233	Housing instability
+T6	FoodInsecurity_Other 2237 2252	Food insecurity
+T7	SubstanceAbuse_Other 2256 2271;2275 2452	Substance Abuse Substance Abuse comment: Both mom and dad have current use and trying to access support.  Mom noted she is actively trying to access intensive outpatient treatment at Gaudenzia.
+A3	ResolutioninProgress T7
+T8	SubstanceAbuse_Other 2597 2750	Parent Strengths can articulate needs, adequate family support, compliant/ forthcoming with substance abuse treatment and need for assistance, car, local
+A4	ResolutioninProgress T8
+T9	LackofTransportation 2597 2749	Parent Strengths can articulate needs, adequate family support, compliant/ forthcoming with substance abuse treatment and need for assistance, car, loca
+A5	Negated T9
+T10	DistancefromHospital 2597 2750	Parent Strengths can articulate needs, adequate family support, compliant/ forthcoming with substance abuse treatment and need for assistance, car, local
+A6	Negated T10
+T12	LackofInsurance 2753 2984	Parent Stressors CYS involvement, visitor restriction (parents are not allowed to be alone with patient and other kids in the home/ require supervison), mom and baby without insurance, access to addiction treatment, hospitalization
+T13	SubstanceAbuse_Other 2753 2984	Parent Stressors CYS involvement, visitor restriction (parents are not allowed to be alone with patient and other kids in the home/ require supervison), mom and baby without insurance, access to addiction treatment, hospitalization
+T11	HomeEnvironment_Other 2753 2984;2987 3062	Parent Stressors CYS involvement, visitor restriction (parents are not allowed to be alone with patient and other kids in the home/ require supervison), mom and baby without insurance, access to addiction treatment, hospitalization Existing Community Services/Outside Supports: CHILDREN AND YOUTH AGENCY/CUA
+T14	HomeEnvironment_Other 3234 3318;3321 3652;3655 3770	Resource Needs Problem: INSURANCE;EMPLOYMENT/INCOME;SAFE/ACCESSIBLE HOME ENVIRONMENT Goal - Safe/Accessible home environment Both mom and dad are both struggling with substance abuse with CYS involvement.  They are both actively trying to initiate treatment through Gaudenzia (not started yet).  Currently parents have to be supervised by an appropriate adult to be around their other children and baby at this time. Intervention/Plan - Safe/Accessible home environment  SW will continue to work with CYS to support parents/ family.
+T15	SubstanceAbuse_Other 3321 3530	Goal - Safe/Accessible home environment Both mom and dad are both struggling with substance abuse with CYS involvement.  They are both actively trying to initiate treatment through Gaudenzia (not started yet).
+T16	PatientCaregiver_Unemployment 3773 3863	Goal - Insurance Mom is currently without insurance as she was laid off from her employer.
+T17	LackofInsurance 3773 3990	Goal - Insurance Mom is currently without insurance as she was laid off from her employer.  Mom is actively working on trying to access her own insurance for substance abuse treatment as well as add baby to insurance.
+A7	ResolutioninProgress T17
+T18	LackofInsurance 3992 4047	Dad currently has UHCCP and so does their 11yo as well.
+A8	Negated T18
+T19	LackofInsurance 4049 4114	Mom noted she would try to have dad reach out to add baby to plan
+A9	ResolutioninProgress T19
+T20	PatientCaregiver_Unemployment 4177 4256	Goal - Employment/income Mom is currently unemployed/ applied for unemployment.
+T21	HomeEnvironment_Other 4731 4776;4779 4941;4944 5025	Relationships/Behavior Problems SUBSTANCE USE Goal - Substance use Parents are actively transparent about current substance use and actively attempting to access treatment, insurance, and compliance with CYS. Intervention/Plan- Substance use SW will continue to support and partner with CYS
+T22	SubstanceAbuse_Other 4779 4941	Goal - Substance use Parents are actively transparent about current substance use and actively attempting to access treatment, insurance, and compliance with CYS.
+A10	ResolutioninProgress T22
+T23	LackofInsurance 4779 4941	Goal - Substance use Parents are actively transparent about current substance use and actively attempting to access treatment, insurance, and compliance with CYS.
+A11	ResolutioninProgress T23

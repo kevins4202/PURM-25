@@ -1,0 +1,18 @@
+T1	LackofInsurance 2618 2635	Maryland Medicaid
+A1	Negated T1
+T2	NonPermanentPlacement 617 654	Patient living situation: FOSTER CARE
+T3	NonPermanentPlacement 823 900	He lives with foster mother, her husband Brad, their two children in Maryland
+T4	NonPermanentPlacement 617 654	Patient living situation: FOSTER CARE
+T5	NonPermanentPlacement 823 900	He lives with foster mother, her husband Brad, their two children in Maryland
+T6	NonPermanentPlacement 1321 1488	Per 11/17/22 permanency planning review hearing order he is committed to the custody of DSS pending further dispositional review and the next court hearing is 4/20/23.
+T7	LackofInsurance 2587 2635	Public assistance/SSI comment: Maryland Medicaid
+A2	Negated T7
+T9	NonPermanentPlacement 1321 1487	Per 11/17/22 permanency planning review hearing order he is committed to the custody of DSS pending further dispositional review and the next court hearing is 4/20/23
+A3	ResolutioninProgress T9
+A4	ResolutioninProgress T6
+T10	NonPermanentPlacement 617 654	Patient living situation: FOSTER CARE
+T11	NonPermanentPlacement 617 654;657 753;756 900	Patient living situation: FOSTER CARE Agency Contact: Baltimore County Department of Social Services (DSS): Temi Kolawole 443-980-1682 Foster family contact: Foster mother is Jennifer Cox 410-340-2540. He lives with foster mother, her husband Brad, their two children in Maryland
+T12	NonPermanentPlacement 1321 1488	Per 11/17/22 permanency planning review hearing order he is committed to the custody of DSS pending further dispositional review and the next court hearing is 4/20/23.
+T13	SubstanceAbuse_Other 1916 1935;1938 2044	Substance Abuse YES Substance Abuse comment: refer to 2/2/23 documentation scan and 2/21/23 outpatient plastic surgery SW note
+T14	LackofInsurance 2587 2635	Public assistance/SSI comment: Maryland Medicaid
+A5	Negated T14

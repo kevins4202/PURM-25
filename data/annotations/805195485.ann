@@ -1,0 +1,4 @@
+T1	LackofInsurance 202 367	SW submitted Yaseen's Birth Certificate, SS card, and Medicaid ID card to Dina Scarci, Montgomery County IDS Intake Coordinator (Dina.Scarci@montgomerycountypa.gov).
+A1	Negated T1
+T2	FinancialStrain_Other 835 1110	Resource Needs - Intervention - In-home services: Assess patient's insurance status/waiver eligibility (provide patient/family/caregiver with information to apply for needed benefits including referral to Family Health Coverage Program as needed  OR relevant waiver programs)
+A2	ResolutioninProgress T2

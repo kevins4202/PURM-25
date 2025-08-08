@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 636 692;695 769	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt's parents live in Pine Hill, NJ (30 min from CHOP).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 770 1056	Mom is works overnights for Amazon; she is in the middle of 8 weeks of maternity leave and then plans to apply for bonding time. Pt's father started a new job at Target in Sep 2022 and took a one month leave, which has now been extended to 1/18; he is not eligible for FMLA at this time
+A2	Negated T2
+T3	LackofTransportation 2076 2158;2161 2204	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI Transportation comment: Parents have a car.
+A3	Negated T3
+T4	FinancialStrain_Other 2207 2330	Public assistance/SSI comment: Mom has an SSI appt on 2/8/23. Mom just applied for SNAP benefits due to decrease in income.
+A4	ResolutioninProgress T4
+T5	FoodInsecurity_Other 2269 2330	Mom just applied for SNAP benefits due to decrease in income.
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 2399 2441;2444 2501;2504 2824	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom will be aware of resources. Intervention/Plan - Household Finances Mom was paid for some of her maternity leave; dad is not being paid for his current leave; parents also have the expense of gas, tolls and parking. Family is not in need of assistance through ODF, but SW discussed Colette Louise Foundation for gas cards. SW showed mom the website.
+A6	ResolutioninProgress T6
+T7	FinancialStrain_Other 3016 3162	ntervention/Plan - Adjustment to Hospitalization SW educated mom on unit amenities (family lounge, vouchers for room service) and offered support.
+A7	ResolutioninProgress T7

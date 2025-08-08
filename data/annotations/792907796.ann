@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 589 645;648 836	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 648 836	Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 1924 2066	Parent Stressors Zoe's illness and ICU admissions as well as complex medical care needs, parents report exhausting their PTO and leave options
+A3	Negated T3
+T4	LackofTransportation 2297 2360	Transportation comment: eligible for MATP mileage reimbursement
+A4	Negated T4
+T5	FinancialStrain_Other 2297 2360	Transportation comment: eligible for MATP mileage reimbursement
+A5	ResolutioninProgress T5
+T6	LackofInsurance 2363 2488	Public assistance/SSI comment: NJ Medicaid, MLTSS evaluation took place and mom reports she was told eligibility will be soon
+A6	Negated T6
+T7	FinancialStrain_Other 2566 2636	Foundation support comment: MBA Opens Doors Foundations May 2022 grant
+A7	ResolutioninProgress T7
+T8	LackofInsurance 2731 2829	Other existing community services/outside support comment: Horizon BCBS of NJ, PCP: Dr. Williamson
+A8	Negated T8
+T9	FinancialStrain_Other 3546 3755	Once eligible again mother expresses interest in completing another MBA Opens Doors Foundation grant application. Anticipate eligibility to apply in May 2023 for a June 2023 grant based on application history.
+A9	ResolutioninProgress T9

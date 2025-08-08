@@ -1,0 +1,165 @@
+TRANSPLANT SOCIAL WORK ASSESSMENT 
+Assessment Date 12/6/2022 Assessment Type Initial Assessment 
+Assessment done in conjunction with psychology No Organ type: Heart 
+PATIENT INFORMATION 
+Name  Logan Woodring DOB  5/18/2010 
+MRN  56919109 Preferred Language English
+
+
+
+Address  305 Greenwood St
+Mont Alto PA 17237
+ Phone 717-446-7967 (home) 
+
+
+
+Email Address  No e-mail address on record
+ Family present at evaluation: Mom and Stepfather 
+FAMILY AND HOME ENVIRONMENT 
+Household Composition 
+Name Relationship Age Occupation/Employer 
+***    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Parents marital status:  {marital status2:36435} 
+Guardianship/Custody 
+Primary Custody: {BH LEGAL CUSTODY:65620}
+Visitation Guidelines: {none other:36436}
+Custody/Court Order: {none other:36436}
+Medical/Legal Decisions: {BH LEGAL CUSTODY:65620}
+Child Welfare involvement: {child welfare:36437} 
+Religious Background: *** Citizenship:  {Citizenship:36438} 
+Comments  *** 
+SUPPORT 
+Support System includes: *** 
+Who will be child's primary caregiver?  *** 
+Who will be responsible for bringing patient to clinic visits? *** 
+Who will be responsible for administering medication?  *** 
+Transportation:  {transportation:78275} 
+Comments: *** 
+HEALTH AND DEVELOPMENT 
+Child's primary diagnosis?   *** 
+Significant pre-natal, birth, or neonatal information:  *** 
+Developmental Milestones: {BH DEVELOPMENT MILESTONES:65543} 
+Relevant Family Health History: *** 
+Home Nursing/Health Aide Services: ?{Yes/No:13980} Agency/Schedule ***  
+How do you manage your child's medication now? {medmanage:36439} 
+History of medication adherence: *** 
+Child's understanding of disease and transplant process: {infoneeds:36440} 
+Family's understanding of disease and transplant process: {infoneeds:36440} 
+Concerns for Transplant: ***
+Do you want to move forward with transplant if your child is eligible?  ***
+Comments: ***
+
+
+
+MENTAL HEALTH/SUBSTANCE ABUSE 
+Family hx mental health diagnosis: ***
+Family hx seeing counselor/therapist: ***
+Family hx substance abuse/misuse: ***
+Comments: ***
+
+
+
+EDUCATION HISTORY 
+School *** Grade *** 
+School-based services 
+{BH Transplant School Services:22298} Attendance: ***
+Comments: *** 
+INSURANCE/FINANCIAL INFORMATION 
+Income {income sources:36441}
+ Insurance Coverage for Transplant Primary *** Secondary ***
+Secondary MA eligible? {Yes/No:13980}
+Medicare eligible? {Yes/No:13980} 
+Family plan to pay out-of-pocket expenses (housing, transportation): *** FMLA plan/eligibility: *** 
+Employment concerns: *** Comments *** 
+EMOTIONAL/PSYCHOSOCIAL PROFILE 
+Coping ability and strategies: *** 
+Child's hobbies/interests: *** 
+Child's temperament/personality: *** 
+Family and patient's adjustment to chronic illness: *** 
+Additional family stressors: *** 
+Family strengths *** 
+Family challenges *** 
+Comments: *** 
+ADDITIONAL PROBLEMS IDENTIFIED (High-risk assessment): 
+
+
+{high risk:36442}
+
+
+
+IMPRESSIONS/RECOMMENDATIONS 
+***
+
+
+Based on the information provided in this evaluation, there are no significant psychosocial contraindications to transplant. 
+PLAN/RECOMMENDATIONS 
+*** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Social worker Acuity and Time Spent
+
+
+Level 2 - Require information / education / recommendations / advance planning
+
+
+90 minutes
+
+
+
+

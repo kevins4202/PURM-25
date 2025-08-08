@@ -1,0 +1,8 @@
+T1	ChildcareBarrierfromHospitalization 411 503	Family continues to visit daily typically alternating at bedside and home with pt's brother.
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromNonHospitalization 411 503	Family continues to visit daily typically alternating at bedside and home with pt's brother.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 806 869	Family does not have nursing benefit through primary insurance.
+A3	Negated T3
+T4	FinancialStrain_Other 873 991	SW provided 1 gas card and 5 parking passes from cardiac fund to assist with ongoing costs related to hospitalization.
+A4	ResolutioninProgress T4

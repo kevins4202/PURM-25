@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 2848 2918	Patient`s mother works FT at Airbnb and patient`s father manages home.
+A1	Negated T1
+T2	NonPermanentPlacement 592 627	Patient living situation: PARENT(S)
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 2992 3047	Mother on FMLA and will return to work early September.
+A3	Negated T3

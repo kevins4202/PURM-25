@@ -1,0 +1,13 @@
+T1	DistancefromHospital 460 533	Family is from East Islip NY, which is over three hours from CHOP by car.
+T2	NonPermanentPlacement 535 616	Family includes Mom, Dad, three older children (2, 3, 4 1/2), and baby boy (Owen)
+A1	Negated T2
+T3	PatientCaregiver_Unemployment 619 676	Mom is a librarian/teacher and Dad is a stay at home dad.
+A2	Negated T3
+T4	LackofInsurance 678 745	Baby will be added to Mom's private insurance through her employer.
+A3	ResolutioninProgress T4
+T5	NeedTemporaryLodging 747 777	Parents have checked into RMH.
+A4	Resolved T5
+T6	NeedTemporaryLodging 941 1037	Family has checked into RMH and would like a large room/large bed for siblings when they arrive.
+A5	Resolved T6
+T7	FinancialStrain_Other 1234 1387	Family spoke about concerns around finances during Owen's admission.   SW spoke about MBA Opens Doors and family agreed to apply for mortgage assistance.
+A6	ResolutioninProgress T7

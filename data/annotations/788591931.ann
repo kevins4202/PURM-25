@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 449 567	SW discussed staying at bedside, in sleep rooms and RMH.  SW provided information about RMH and how to request a room.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 569 630	SW offered to assist with transportation resources if needed.
+A2	ResolutioninProgress T2

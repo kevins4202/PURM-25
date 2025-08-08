@@ -1,0 +1,8 @@
+T2	ChildcareBarrierfromNonHospitalization 1172 1381	She expressed feelings of guilt for not being able to be here at CHOP more with Yaseen knowing he does better with her present - she is a single caregiver and also has to care for other other children at home.
+T3	PermanentPlacementPending 1000 1170	She has been wondering if there are any medical or long term care facilities that he could be at safely that are closer to home where they could spend more time with him.
+T4	DistancefromHospital 1000 1170	She has been wondering if there are any medical or long term care facilities that he could be at safely that are closer to home where they could spend more time with him.
+T1	ChildcareBarrierfromHospitalization 1000 1381	She has been wondering if there are any medical or long term care facilities that he could be at safely that are closer to home where they could spend more time with him.  She expressed feelings of guilt for not being able to be here at CHOP more with Yaseen knowing he does better with her present - she is a single caregiver and also has to care for other other children at home.
+T5	DistancefromHospital 1789 1940	Complex care team will identify if there are any other medical facilities that could care for Yaseen closer to home as we continue these conversations.
+A1	ResolutioninProgress T5
+T6	PermanentPlacementPending 1789 1940	Complex care team will identify if there are any other medical facilities that could care for Yaseen closer to home as we continue these conversations.
+A2	ResolutioninProgress T6

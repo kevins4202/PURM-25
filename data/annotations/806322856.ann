@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 259 316;319 421;423 499;505 525;531 659	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Tokens: 4. Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: Mother has no income and twins in NIICU- SW left septa passes and meal vouchers at bedside so mother can visit over the weekend.
+T2	LackofTransportation 531 659	Mother has no income and twins in NIICU- SW left septa passes and meal vouchers at bedside so mother can visit over the weekend.
+A1	ResolutioninProgress T2

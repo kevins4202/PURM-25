@@ -1,0 +1,4 @@
+T1	LackofInsurance 73 130	SW was informed that Mom insurace application is pending.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 182 431	I called and spoke to mom on Friday and she was stating that she received a letter stating that the NJMA application was pending.  Then she stated that all the information on the application did not go through so she has to resubmit the application.
+A2	ResolutioninProgress T2

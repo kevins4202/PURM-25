@@ -1,0 +1,27 @@
+T1	NeedTemporaryLodging 324 596	SW consulted by bedside RN, met with mother at bedside to follow up on RMH. SW confirmed family is able to check into local RMH today and family was contacted by RMH Family Services. SW provided anticipatory guidance around check-in process and available amenities at RMH.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 324 596	SW consulted by bedside RN, met with mother at bedside to follow up on RMH. SW confirmed family is able to check into local RMH today and family was contacted by RMH Family Services. SW provided anticipatory guidance around check-in process and available amenities at RMH.
+A2	ResolutioninProgress T2
+T5	PatientCaregiver_Unemployment 797 901	Father is employed, though has missed significant work time related to appointments and hospitalizations
+A5	Negated T5
+T6	PatientCaregiver_Unemployment 667 795	Mother reports she was previously employed part-time but lost job early in COVID and has not been working since having Guinevere
+T7	PatientCaregiver_Unemployment 667 796	Mother reports she was previously employed part-time but lost job early in COVID and has not been working since having Guinevere.
+A6	HistoryOf T7
+A7	HistoryOf T6
+T8	PatientCaregiver_Unemployment 797 902	Father is employed, though has missed significant work time related to appointments and hospitalizations.
+A8	Negated T8
+T9	LackofInsurance 1112 1238	SW verified that secondary insurance/PAMA Keystone First is active per mother's request, is listed in the chart ID# 201135177.
+A9	Negated T9
+T10	LackofInsurance 1112 1237	SW verified that secondary insurance/PAMA Keystone First is active per mother's request, is listed in the chart ID# 201135177
+A10	Negated T10
+T11	NeedTemporaryLodging 324 596	SW consulted by bedside RN, met with mother at bedside to follow up on RMH. SW confirmed family is able to check into local RMH today and family was contacted by RMH Family Services. SW provided anticipatory guidance around check-in process and available amenities at RMH.
+A11	ResolutioninProgress T11
+T3	FinancialStrain_Other 977 1107	SW discussed applying for MBA Opens Doors mortgage assistance, family interested, SW will follow up and assist family in applying.
+A3	ResolutioninProgress T3
+T4	PatientCaregiver_Unemployment 667 796	Mother reports she was previously employed part-time but lost job early in COVID and has not been working since having Guinevere.
+A4	HistoryOf T4
+T12	PatientCaregiver_Unemployment 797 902	Father is employed, though has missed significant work time related to appointments and hospitalizations.
+A12	Negated T12
+T13	FinancialStrain_Other 600 1107	SW assessed for additional SW needs including financial resources. Mother reports she was previously employed part-time but lost job early in COVID and has not been working since having Guinevere. Father is employed, though has missed significant work time related to appointments and hospitalizations. Mother reports that family is experiencing some overall financial strain. SW discussed applying for MBA Opens Doors mortgage assistance, family interested, SW will follow up and assist family in applying.
+T14	LackofInsurance 1112 1238	SW verified that secondary insurance/PAMA Keystone First is active per mother's request, is listed in the chart ID# 201135177.
+A13	Negated T14

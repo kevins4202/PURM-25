@@ -1,0 +1,24 @@
+T1	NonPermanentPlacement 665 721;724 851	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Hunter is the fourth child born to his intact parents, Clint and Erica, who live together in Aloha, Oregon.
+A1	Negated T1
+T2	DistancefromHospital 724 851	Parent Information: Hunter is the fourth child born to his intact parents, Clint and Erica, who live together in Aloha, Oregon.
+T3	PatientCaregiver_Unemployment 912 1018	Mother is a stay at home parent. Father is currently on unpaid leave from his job as a local truck driver.
+A2	Negated T3
+T4	LackofFundsforFood 2092 2111;2114 2386	Food insecurity YES Food insecurity comment: Family moved about 3 weesk ago to a new residence. The family is approved for SNAP benefits. Parents are in the process of having their SNAP benefits changed to their new address. At this time, the familis is currently not receiving SNAP benefits.
+A3	ResolutioninProgress T4
+T5	DistancefromHospital 2694 2901	Parent Stressors Critical illness, prolonged NICU hospitalization, transfer to CHOP, siblings and mother are currently home in Oregon, financial resource strain due to father being on unpaid leave from work.
+T6	FinancialStrain_Other 2694 2901	Parent Stressors Critical illness, prolonged NICU hospitalization, transfer to CHOP, siblings and mother are currently home in Oregon, financial resource strain due to father being on unpaid leave from work.
+T7	PatientCaregiver_Unemployment 2694 2901	Parent Stressors Critical illness, prolonged NICU hospitalization, transfer to CHOP, siblings and mother are currently home in Oregon, financial resource strain due to father being on unpaid leave from work.
+A4	Negated T7
+T8	LackofInsurance 3119 3223	Hunter has Care Oregon insurance (Oregon Medicaid) and parents have a flex fund through Oregon Medicaid.
+A5	Negated T8
+T9	LackofFundsforFood 2904 2971;2974 3118	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is eligible for SNAP benefits. Family is working have have SNAP benefits transferred to their new address.
+A6	ResolutioninProgress T9
+T10	FinancialStrain_Other 3292 3349;3352 3474;3477 3808	Resource Needs Problem: HOUSEHOLD FINANCES;ACCESS TO FOOD Goal - Household Finances Family will have financial assistance to support themselves during Hunter's prolonged NICU stay. Intervention/Plan - Household Finances Provided information about SSI and the SSI application process. Father plans to apply. Will email father SSI application instructions. Provided information about the Colette Louise Tisdahl Foundation and the Opens Doors Foundation for financial assistance. Father in agreement with referrals.
+A7	ResolutioninProgress T10
+T11	LackofFundsforFood 3875 3941;3944 4129	Goal - Access to food Family will have their SNAP benefits resume. Intervention/Plan - Access to food Family is approved for SNAP benefits. Parents are working to have their benefits transferred to their new home address (family moved three weeks ago).
+A8	ResolutioninProgress T11
+T12	HomeSafety 5816 6061	Father shared that the family has a history of Oregon DHS involvement several years ago wherein Hunter's older siblings were removed from parents' care for about one year. Father reports that the family was reunified about a year and a half ago.
+A9	HistoryOf T12
+A10	SubjectIsNotPatient T12
+T13	NeedTemporaryLodging 6062 6134	Father is currently staying at Ronald McDonald House on Chestnut Street.
+A11	Resolved T13

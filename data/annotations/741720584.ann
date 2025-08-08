@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 723 779;782 860	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Jzarai lives with her mother in Allentown (Lehigh County);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 861 891	mother works full-time for QVC
+A2	Negated T2
+T3	NeedofChildcare 1025 1098	Other School Status Comment: attends daycare, enjoying summer programming
+A3	Negated T3
+T4	LackofFundsforFood 2183 2256;2259 2314	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;OTHER Public assistance/SSI comment: PA Medicaid, Food Stamps
+A4	Negated T4
+T5	LackofInsurance 2183 2256;2259 2314	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;OTHER Public assistance/SSI comment: PA Medicaid, Food Stamps
+A5	Negated T5
+T6	PatientCaregiver_Unemployment 2485 2526;2529 2588;2591 2808	Resource Needs Problem: EMPLOYMENT/INCOME Goal - Employment/income Establish approved leave from work Intervention/Plan - Employment/income Mother reports she is in the process of completing paperwork and will keep the team informed of any needs, SW provided a letter confirming admission to mother today at her request
+A6	Negated T6

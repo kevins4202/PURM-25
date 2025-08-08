@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 342 509;514 611	Mom shared that the man who had lived upstairs in their apartment and helped with rent passed away last week. Mom will be looking for someone else to occupy that room. ODF approved a May rental grant for the family. Check will be sent directly to the family's home.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1336 1359;1361 1494	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home
+A2	ResolutioninProgress T2

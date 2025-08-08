@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 1033 1393	SW also assisted with drafting a letter for assistance with cooling/electricity costs per family request. Family has been self-sufficient and resourceful in exploring resources/programs that may be able to offer assistance during this time, especially with unpaid missed work time. SW providing weekly concrete resource assistance to support with travel costs.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1944 2001;2004 2092;2098 2169	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Additional comments:  Prolonged hospitalization and strained resources.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 1139 1314	Family has been self-sufficient and resourceful in exploring resources/programs that may be able to offer assistance during this time, especially with unpaid missed work time.
+A3	Negated T3

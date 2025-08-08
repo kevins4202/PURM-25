@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 245 302;305 421;423 561	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 2. Reason for Disbursement: Other hardship considerations: Emergent admission, multiple hospitalizations in 2023, income loss (exhausted PTO)
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 423 561	Reason for Disbursement: Other hardship considerations: Emergent admission, multiple hospitalizations in 2023, income loss (exhausted PTO)
+A2	Negated T2

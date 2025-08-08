@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 285 381;384 415	Mother approved for financial assistance via Collette Louis for $750 towards rental assistance.e SW informed mother of approval.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 419 487;490 642	SW contacted Anya Allen from FHCP for status on patient's insurance. Mother to send in patient's footprints/proof  of birth to NJ Family Care for approval. Application is still pending. CLS assisted with footprints today.
+A2	ResolutioninProgress T2

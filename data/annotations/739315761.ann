@@ -1,0 +1,23 @@
+T1	PatientCaregiver_Unemployment 653 691	Jorgeni Peralta mother 22 Not employed
+T2	PatientCaregiver_Unemployment 779 866	Steven Castillo-lives in separate household father 26 Truck driver-currently unemployed
+T3	LackofTransportation 1801 1831	Transportation:  their own car
+A1	Negated T3
+T4	PatientCaregiver_Unemployment 4266 4323	Employment concerns: Dad has been out of work for 1 month
+T5	PatientCaregiver_Unemployment 4632 4698	dditional family stressors: Finances- Dad is currently not working
+T6	FinancialStrain_Other 4631 4698	Additional family stressors: Finances- Dad is currently not working
+T7	ChildcareBarrierfromNonHospitalization 4764 4940	Family challenges:new diagnosis, caring for a baby with chronic illness,complex decision making, long hospital course, limited resources, caring for another small child at home
+T8	FinancialStrain_Other 4764 4940	Family challenges:new diagnosis, caring for a baby with chronic illness,complex decision making, long hospital course, limited resources, caring for another small child at home
+T9	PatientCaregiver_Unemployment 5531 5646	Mom is currently unemployed.Dad drives a truck but stated that he has been unable to work since patient became ill.
+T10	LackofInsurance 5648 5684	Patient has active health insurance.
+A2	Negated T10
+T11	FinancialStrain_Other 6629 6822	Dad  identified finances as an any additional stressor. Dad stated that he helps to support the family financially and he has been unable to work due to being at the bedside to support patient.
+T12	LackofInsurance 4051 4097	Insurance Coverage for Transplant Primary PAMA
+A3	Negated T12
+T13	NeedofChildcare 1433 1521	Mom's sister lives locally and is a support for Mom. She provides childcare for 3yo son.
+A4	Negated T13
+T14	DistancefromHospital 5330 5409	Family is from Allentown,PA, approximately 1hr &30 mins away from the hospital.
+T15	NonPermanentPlacement 5410 5463	Patient lives at home with Mom and 3year old brother.
+A5	Negated T15
+T16	NeedofChildcare 5742 5841	Mom 's sister helps care for 3yo sibling but extended maternal family is in the Dominican Republic.
+A6	Negated T16
+T17	PatientCaregiver_Unemployment 6685 6822	Dad stated that he helps to support the family financially and he has been unable to work due to being at the bedside to support patient.

@@ -1,0 +1,19 @@
+T1	NonPermanentPlacement 599 655	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 658 907	Parent Information: Mother- Yanci Carrera Corado (20yo) resides with her sister in Bound Brook, NJ approx 1.5 hrs from CHOP. Father- Kelman Josue Alvisurez-Ibarra lives in Michigan due to work obligations (construction) but visits with family often.
+T3	PatientCaregiver_Unemployment 783 907	Father- Kelman Josue Alvisurez-Ibarra lives in Michigan due to work obligations (construction) but visits with family often.
+A2	Negated T3
+T4	DistancefromHospital 1970 2188	Parent Stressors Adjustment to fetal diagnosis and hospitalization, limited support system, father residing in another state, family was planning to move to Indiana prior to receiving fetal diagnosis and treatment plan
+T5	LackofTransportation 1797 1967	Parent Strengths Mother's sister is a strong support, father able to travel in for all fetal appts and will arrive again on Friday, family is open to psychosocial support
+A3	Negated T5
+T6	LackofInsurance 2310 2380;2383 2437;2440 2565	Resource Needs Problem(s) LOCAL ACCOMODATIONS;INSURANCE;TRANSPORTATION Goal - Insurance Family will obtain NJMA for the baby. Intervention/Plan - Insurance Family worked with FHCP prenatally and mother currently has CHOP Financial Assistance in place.
+A4	ResolutioninProgress T6
+T8	LackofTransportation 2764 2880	Intervention/Plan - Transportation Father has car, mother does not have access to a car when father is out of state.
+A6	Negated T8
+T9	LackofTransportation 2764 2880	Intervention/Plan - Transportation Father has car, mother does not have access to a car when father is out of state.
+T7	LackofTransportation 2623 2761	Goal- Transportation Family will access available resources to assist with transportation including Modivcare for outpatient appointments.
+A5	ResolutioninProgress T7
+T10	LackofTransportation 2881 3009	Fetal Heart SW assisted with Lyft via Cardiac Fund for some prenatal needs. Mother to utilize RMH shuttle while staying locally.
+A7	ResolutioninProgress T10
+T11	NeedTemporaryLodging 2957 3009	Mother to utilize RMH shuttle while staying locally.
+A8	Resolved T11

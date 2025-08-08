@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 633 668;671 716	Patient living situation: PARENT(S) Parent Information: This is mom's 10th child.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 787 813	Mom is a stay at home mom.
+A2	Negated T2
+T3	DistancefromHospital 861 919	Mom lives locally and plans to visit as often as possible.
+A3	Negated T3
+T4	DistancefromHospital 1519 1597	Parent Strengths Mom lives locally and is a great advocate for what she needs.
+A4	Negated T4
+T5	LackofInsurance 1866 1929;1932 1983;1986 2088	Resource Needs Problem: INSURANCE;TRANSPORTATION;ACCESS TO FOOD Goal - Insurance Patient will have active insurance Intervention/Plan - Insurance Patient's mother is in the process of adding patient to their insurance.
+A5	ResolutioninProgress T5
+T6	FoodInsecurity_Other 2091 2127;2130 2256	Goal - Access to food Access to food Intervention/Plan - Access to food SW provided mom with resource connects card which list local food banks and food resources.
+A6	ResolutioninProgress T6
+T7	LackofTransportation 2259 2294;2297 2460	Goal- Transportation Transportation Intervention/Plan - Transportation SW encouraged mom to reach out to Medicaid transportation to see if they will be willing to transport her to visit with patient.

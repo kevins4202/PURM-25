@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 216 225;228 259	Problems: Finances and Hospital discharge
+T2	FinancialStrain_Other 391 497	Provided gas gift card assistance donated from local pediatric oncology foundation as need was identified.
+A1	ResolutioninProgress T2
+T3	LackofFundsforFood 501 604	Clarified Mom's WIC status, which Mom identified she has called WIC but has yet to connect with office.
+A2	ResolutioninProgress T3

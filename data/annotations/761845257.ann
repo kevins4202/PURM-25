@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 551 607;610 744	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Hunter was born to intact parents James and Cassandra who reside in Souderton, PA (about an hour away from CHOP) .
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 745 798	James has his own buisness and works as a contractor.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 799 884	Cassandra is currently unemployed and plans to return to work in the next few months.
+A3	ResolutioninProgress T3
+T4	HomeEnvironment_Other 1744 1763;1766 2054	CPS Involvement YES CPS involvment comment: Montgomery CYS has implemented a safety plan and require that the patient is discharged to the father. CYS Supervisor Heather Josey (610-724-6511) and the assigned CYS case worker Josh Searle (215-620-0067) asked to be called prior to the patient being discharged.
+T5	NonPermanentPlacement 1766 1892	CPS involvment comment: Montgomery CYS has implemented a safety plan and require that the patient is discharged to the father.
+A4	Negated T5
+T6	LackofFundsforFood 2430 2497;2500 2540	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: SNAP, WIC
+A5	Negated T6
+T7	HomeEnvironment_Other 3385 3858	LSW spoke with CYS supervisor Heather Josey (610-724-6511) on the phone to assess potential discharge needs. Heather Josey reiterated that Hunter's mother can be at the bedside without supervision while the patient is hospitalized as long as her behavior is appropriate. CYS supervisor stated that the patient is to be discharged to the father. CYS should be notified prior to the patient's discharge. Contact CYS supervisor Heather Josey and CYS case worker (267-620-0067)
+T8	NonPermanentPlacement 3656 3729	CYS supervisor stated that the patient is to be discharged to the father.
+A6	Negated T8

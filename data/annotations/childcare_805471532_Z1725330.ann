@@ -1,0 +1,30 @@
+T1	Permanency_Other 736 848	Parent Information: Paige is living with her mom Latoya in Bensalem (Bucks County), mother is on maternity leave
+A1	Negated T1
+T2	Permanency_Other 736 848	Parent Information: Paige is living with her mom Latoya in Bensalem (Bucks County), mother is on maternity leave
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 820 848	mother is on maternity leave
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 820 848	mother is on maternity leave
+A4	Negated T4
+T7	LackofInsurance 1891 2035	Parent Stressors Paige's ICU admission and complex care needs, insurance, mother's husband (Paige's stepfather) passed away within the last year
+T8	LackofInsurance 1891 2035	Parent Stressors Paige's ICU admission and complex care needs, insurance, mother's husband (Paige's stepfather) passed away within the last year
+T5	LackofTransportation 1784 1888	Parent Strengths easily engages, voices proactive questions, has own vehicle, reports advocacy for Paige
+A5	Negated T5
+T6	LackofTransportation 1784 1888	Parent Strengths easily engages, voices proactive questions, has own vehicle, reports advocacy for Paige
+A6	Negated T6
+T9	LackofInsurance 2297 2367	Public assistance/SSI comment: Keystone First Medicaid recently lapsed
+T10	LackofInsurance 2297 2367	Public assistance/SSI comment: Keystone First Medicaid recently lapsed
+T11	LackofInsurance 2548 2583;2586 2645;2648 2761	Resource Needs Problem(s) INSURANCE Goal - Insurance Reinstate Keystone First Medicaid coverage Intervention/Plan - Insurance SW discussed with mother and Case Manager, and made referral to FHCP for assistance
+A7	ResolutioninProgress T11
+T12	LackofInsurance 2548 2583;2586 2645;2648 2761	Resource Needs Problem(s) INSURANCE Goal - Insurance Reinstate Keystone First Medicaid coverage Intervention/Plan - Insurance SW discussed with mother and Case Manager, and made referral to FHCP for assistance
+A8	ResolutioninProgress T12
+T13	NonPermanentPlacement 677 733;736 848	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Paige is living with her mom Latoya in Bensalem (Bucks County), mother is on maternity leave
+A9	Negated T13
+T14	PatientCaregiver_Unemployment 736 848	Parent Information: Paige is living with her mom Latoya in Bensalem (Bucks County), mother is on maternity leave
+A10	Negated T14
+T15	LackofTransportation 1784 1888	Parent Strengths easily engages, voices proactive questions, has own vehicle, reports advocacy for Paige
+A11	Negated T15
+T16	LackofInsurance 1891 2035	Parent Stressors Paige's ICU admission and complex care needs, insurance, mother's husband (Paige's stepfather) passed away within the last year
+T17	LackofInsurance 2297 2367	Public assistance/SSI comment: Keystone First Medicaid recently lapsed
+T18	LackofInsurance 2548 2583;2586 2645;2648 2761	Resource Needs Problem(s) INSURANCE Goal - Insurance Reinstate Keystone First Medicaid coverage Intervention/Plan - Insurance SW discussed with mother and Case Manager, and made referral to FHCP for assistance
+A12	ResolutioninProgress T18

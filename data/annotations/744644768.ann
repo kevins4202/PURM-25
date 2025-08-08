@@ -1,0 +1,12 @@
+T1	PatientCaregiver_Unemployment 846 904	Mom is not working and dad is a student at Penn Law school
+T2	FoodInsecurity_Other 1558 1577;1580 1788	Food insecurity YES Food insecurity comment: Mom noted that twin had run out of formula for twin who has been home.  SW advised mom to reach out to PCP and SW will assist with FHCP to assess for PA MA for twins and access to WIC
+A1	ResolutioninProgress T2
+T3	DistancefromHospital 685 738	Mom and dad live in walking distance of the hospital.
+A2	Negated T3
+T4	LackofInsurance 2230 2263;2266 2371	Resource Needs Problem: INSURANCE Goal - Insurance SW spoke with mom who noted that twins are added to dad's Aetna PPO  through his school;
+A3	Negated T4
+T5	PatientCaregiver_Unemployment 2372 2451	however mom noted twins have not access PA MA and both parents are not working.
+T6	FinancialStrain_Other 2454 2576	Intervention/Plan - Insurance SW referred to FHCP for support and will continue to provide support during hospitalization.
+A4	ResolutioninProgress T6
+T7	FoodInsecurity_Other 1986 2108	Parent Stressors finances, hospitalization, formula access for twin at home, insurance/ WIC access, family support, no car
+T8	FinancialStrain_Other 1986 2108	Parent Stressors finances, hospitalization, formula access for twin at home, insurance/ WIC access, family support, no car

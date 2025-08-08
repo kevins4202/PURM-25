@@ -1,0 +1,37 @@
+T1	PatientCaregiver_Unemployment 795 823	Dad does not currently work.
+T2	NonPermanentPlacement 646 702;705 765	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt lives with Mom and Dad in Newark, NJ.
+A1	Negated T2
+T3	PatientCaregiver_Unemployment 766 794	Mom works at Newark Airport.
+A2	Negated T3
+T4	ChildcareBarrierfromNonHospitalization 2112 2263	Parent Stressors Demarcus' accident, his new medical needs and baseline and what the future will hold, being away from her kids, limited local support.
+T5	LackofTransportation 2477 2518	Transportation comment: Family has a car.
+A3	Negated T5
+T6	LackofTransportation 2519 2548	Car is currently broken down.
+T7	LackofFundsforFood 2551 2743	Public assistance/SSI comment: Mom receives SNAP benefits- she currently receives $98/month, but reached out this month to add her children to her account, so is hopeful she will receive more.
+A4	Negated T7
+T8	PatientCaregiver_Unemployment 2791 2880	Mom is currently getting Unemployment benefits ($200/month) due to being on job furlough.
+A5	Negated T8
+T9	FinancialStrain_Other 2791 2880	Mom is currently getting Unemployment benefits ($200/month) due to being on job furlough.
+A6	ResolutioninProgress T9
+T10	FinancialStrain_Other 2954 3037;3040 3137;3140 3231	Resource Needs Problem: HOUSING;HOUSEHOLD FINANCES;ACCESS TO FOOD;EMPLOYMENT/INCOME Goal - Household Finances Family will have support with household finances during this admission. Intervention/Plan - Household Finances SW discussed applying for rental assistance with Mom
+A7	ResolutioninProgress T10
+T11	HouseInstability_Other 3235 3340;3343 3451	Goal - Housing Family will have access to Philadephia resources to potentially relocate here through PHA. Intervention/Plan- Housing SW will research local resources and applying for public housing in Philadelphia.
+A8	ResolutioninProgress T11
+T12	FoodInsecurity_Other 3454 3530;3533 3627	Goal - Access to food Family will have access to food during this admission. Intervention/Plan - Access to food SW will continue to approve meal vouchers through the SWEF.
+A9	ResolutioninProgress T12
+T13	FinancialStrain_Other 3454 3530;3533 3627	Goal - Access to food Family will have access to food during this admission. Intervention/Plan - Access to food SW will continue to approve meal vouchers through the SWEF.
+A10	ResolutioninProgress T13
+T14	HouseInstability_Other 4849 5060	Mom shared that she is interested in moving to Philadelphia and would like support with applying for Public Housing here. SW offered to look into resources to assist Mom with getting connected to Public Housing.
+A11	ResolutioninProgress T14
+T15	ChildcareBarrierfromHospitalization 5065 5221	Mom shared that she is remaining at the bedside 24/7, which has been challenging to be away from her other children, but she does not want to leave Demarcus
+T16	ChildcareBarrierfromNonHospitalization 5065 5222	Mom shared that she is remaining at the bedside 24/7, which has been challenging to be away from her other children, but she does not want to leave Demarcus.
+T17	LackofTransportation 5315 5446	Mom shared that the family car is currently broken down, which has made it challenging for Mom and/or Dad to travel back and forth.
+T19	FinancialStrain_Other 6670 6811	Plan: SW to look into housing resources and support resources for the family. SW will submit J Foundation application once lease is obtained.
+A13	ResolutioninProgress T19
+T20	HouseInstability_Other 6670 6747	Plan: SW to look into housing resources and support resources for the family.
+A14	ResolutioninProgress T20
+T18	FinancialStrain_Other 6306 6420;6425 6511	SW and Mom completed the J Foundation application. SW will submit once Mom obtains a copy of their lease from Dad. SW encouraged Mom to give herself grace and time in adjusting to Demarcus's new needs.
+A12	ResolutioninProgress T18
+T21	FinancialStrain_Other 6052 6150	SW discussed applying for foundation financial assistance to help with financial stressors instead
+A15	ResolutioninProgress T21
+T22	FinancialStrain_Other 6152 6301	Mom again became tearful and shared about the family's financial struggles, especially with rent over the past few months Demarcus has been admitted.

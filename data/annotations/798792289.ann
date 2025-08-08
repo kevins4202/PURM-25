@@ -1,0 +1,10 @@
+T1	NeedTemporaryLodging 419 518	Family continues to visit regularly either from RMH or commuting from home and are active in cares.
+A1	Resolved T1
+T2	ChildcareBarrierfromHospitalization 419 518	Family continues to visit regularly either from RMH or commuting from home and are active in cares.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 649 784	SW discussed applying for benefits such as SNAP; family did not previously qualify when both parents are working, they may now qualify.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 649 784	SW discussed applying for benefits such as SNAP; family did not previously qualify when both parents are working, they may now qualify.
+T5	FinancialStrain_Other 600 1081;1084 1176	Family has expressed ongoing financial concerns. SW discussed applying for benefits such as SNAP; family did not previously qualify when both parents are working, they may now qualify. Family working on this process. SW discussed connecting with the Community Affairs and Resource Center (CARC) that may be able to assist with applications for programs including LIHEAP. Family agreed to referral, SW spoke with program director Ana who will have CARC reach out to family directly. SW applied for 1 month rental assistance through Brett Boyer Foundation, which was approved.
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 215 224;227 235	Problems: Finances

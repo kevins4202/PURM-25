@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 505 533	She remain at RMH with twin.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 535 587	Dad continues to work and visits when he is able to.
+A2	Negated T2

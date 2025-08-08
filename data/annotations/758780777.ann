@@ -1,0 +1,18 @@
+T2	PatientCaregiver_Unemployment 1179 1290	Mother stated that she then had a orientation from 1pm-3pm at a hotel for a new position at the Newark Airport.
+A2	Negated T2
+T3	HomeSafety 1634 1957	Mother stated that patient went to sleep around 9-9:20PM in his bassinet that is in her room. Mother stated that she has a king size bed and patient sleeps in a bassinet that is close to her bed. Mother stated that she put patient to sleep on his side and she stated that she laid a blanket on patient as she normally does.
+A3	Negated T3
+T4	NonPermanentPlacement 3154 3609	Patient currently resides at home with Mother (age 27), Father (age 37), and brother (age 1). Mother stated that she has a 7yr old son from a previous relationship and he primarily resides with his Father. Mother stated that her 7y old visits her home on the weekend. Mother stated that Father has three other children (ages 14, 13, and 12) and they reside with their Mother. Mother stated that Father's other children will sometimes visit on the weekend.
+A4	Negated T4
+T5	HomeEnvironment_Other 3610 4105	Mother does report a previous history with Child Protective Services for herself and her now 7yr old son. Mother stated that she grew up in foster care as a child and she is familiar with how the system works. Mother stated that when she was previously residing in a shelter (5 years ago) with her now 7yr old son, she got into a fight with someone in the shelter and someone called DCPP. Mother stated that the case was opened and quickly closed. Mother denied any additional history with DCPP.
+A5	HistoryOf T5
+T6	Homelessness 3820 3998	Mother stated that when she was previously residing in a shelter (5 years ago) with her now 7yr old son, she got into a fight with someone in the shelter and someone called DCPP.
+A6	HistoryOf T6
+T7	SubstanceAbuse_Other 4164 4244	Mother denied that she or Father have a substance abuse or mental health history
+A7	Negated T7
+T8	IntimatePartnerViolence 4246 4307	Mother denied any concerns for domestic violence in the home.
+A8	Negated T8
+T9	PatientCaregiver_Unemployment 4308 4534	Mother and Father are both employed. Mother works at Newark Airport and she works from 3:30am-1:30pm. Father works at Forman Mills and he works from 2pm-11pm. Mother stated that Father also has his own business detailing cars.
+A9	Negated T9
+T10	NeedofChildcare 4535 4607	Patient does not attend daycare and Mother and Father are patient's only
+A10	Negated T10

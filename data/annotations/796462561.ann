@@ -1,0 +1,19 @@
+T1	Permanency_Other 608 646	Patient living situation: FOSTER CARE;
+T2	HomeEnvironment_Other 780 897	Agency Contact: Guardianship completed through Bradford County Children and Youth Services; not involved at this time
+A1	HistoryOf T2
+T3	NonPermanentPlacement 900 1047	Foster family contact: Elizabeth Talada has guardianship of the patient as of 12/19/2022; contact number is 570-867-1660; can provide all consents.
+A2	Negated T3
+T4	NonPermanentPlacement 1272 1298;1301 1403;1406 1445;1448 1486;1489 1539;1542 1574;1577 1624;1627 1694	Custody documentation: YES Documentation scan dated: Guardianship paperwork from Bradford County Children & Youth uploaded 2/2/23 Custody  PHYSICAL CUSTODY;LEGAL CUSTODY Physical Custody SOLE PHYSICAL CUSTODY Sole Physical Custodian: Guardian Elizabeth Talada Legal Custody SOLE LEGAL CUSTODY Sole Legal Custodian: Guardian Elizabeth Talada Who can provide consent for this patient? Guardian Elizabeth Talada
+A3	Negated T4
+T5	HomeEnvironment_Other 2685 2782;2785 2903	Existing Community Services/Outside Supports: CHILDREN AND YOUTH AGENCY/CUA;PUBLIC ASSISTANCE/SSI Children and youth agency/CUA comment: Bradford County Children & Youth Services previously involved- not at this time
+A4	HistoryOf T5
+T6	LackofInsurance 2906 2960	Public assistance/SSI comment: PAMA, WIC, SSI approved
+A5	Negated T6
+T7	LackofFundsforFood 2906 2960	Public assistance/SSI comment: PAMA, WIC, SSI approved
+A6	Negated T7
+T8	NeedTemporaryLodging 3029 3072;3075 3174;3177 3254	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family will access available resources to meet needs for local lodging. Intervention/Plan- Local Accommodations Elizabeth has checked into local RMH.
+A7	Resolved T8
+T9	NonPermanentPlacement 3971 4145	Guardianship of pt has been given to Elizabeth Talada, is permitted to sign for all medical and educational needs, and apply for any assistance the child may be eligible for.
+A8	Negated T9
+T10	NeedTemporaryLodging 4499 4606	SW confirmed Elizabeth was able to obtain room at RMH today and also brought personal belongings from home.
+A9	Resolved T10

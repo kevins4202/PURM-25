@@ -1,0 +1,35 @@
+T1	NonPermanentPlacement 613 669;672 884	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Erik is the fourth child born to his intact parents, Prisca and Frederico, who live with Erik's 7 year old, 12 year old and 15 year old siblings in Norristown, PA (about 35 minutes from CHOP).
+A1	Negated T1
+T3	PatientCaregiver_Unemployment 885 962	Mother is a stay-at-home parent. Father is employed and is currently working.
+A3	Negated T3
+T4	ChildcareBarrierfromHospitalization 2156 2362	Parent Stressors Unanticipated ICU-level hospitalization, balancing caring for siblings at home and visiting Erik in the hospital, family lives over 30 minutes from CHOP and has transportation difficulties.
+T5	ChildcareBarrierfromNonHospitalization 2156 2362	Parent Stressors Unanticipated ICU-level hospitalization, balancing caring for siblings at home and visiting Erik in the hospital, family lives over 30 minutes from CHOP and has transportation difficulties.
+T2	DistancefromHospital 2156 2362	Parent Stressors Unanticipated ICU-level hospitalization, balancing caring for siblings at home and visiting Erik in the hospital, family lives over 30 minutes from CHOP and has transportation difficulties.
+T6	Transportation_Other 2156 2362	Parent Stressors Unanticipated ICU-level hospitalization, balancing caring for siblings at home and visiting Erik in the hospital, family lives over 30 minutes from CHOP and has transportation difficulties.
+T7	LackofInsurance 2365 2432;2435 2537	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother has submitted an application for PA Medical Assistance for Erik.
+A2	ResolutioninProgress T7
+T8	LackofFundsforFood 2538 2607	Family is receiving SNAP benefits and is connected with WIC benefits.
+A4	Negated T8
+T9	LackofInsurance 2681 2744;2747 2808;2811 3114	Resource Needs Problem: TRANSPORTATION;INSURANCE;ACCESS TO FOOD Goal - Insurance Erik will be added to PA Medical Assistance. Intervention/Plan - Insurance Mother submitted a PA Medical Assistance application for Erik after birth. She is still waiting to receive his insurance card in the mail. Mother noted that the County Assistance Office requested a copy of Erik's Social Security card, which the family has not yet received.
+A5	ResolutioninProgress T9
+T10	LackofFundsforFood 3212 3315;3318 3395	Goal - Access to food Family will have access to food during Erik's unanticipated NICU hospitalization. Intervention/Plan - Access to food Family is receiving SNAP and WIC benefits.
+A6	Negated T10
+T11	LackofTransportation 3447 3530	Mother has been staying at bedside and does not have transportation to return home.
+T12	FoodInsecurity_Other 3531 3614	Meal vouchers provided to assist with access to food during Erik's hospitalization.
+A7	ResolutioninProgress T12
+T13	LackofTransportation 3617 3727	Goal- Transportation Family will have transportation home from the hospital once Erik is stable for discharge.
+A8	ResolutioninProgress T13
+T14	LackofTransportation 3846 4015	Mother noted that she and Erik will need assistance with transportation home to Norristown once Erik is stable for discharge as family does not have a vehicle or a ride.
+T15	ChildcareBarrierfromNonHospitalization 4852 5023	Mother shared stressors related to childcare for Erik's older siblings as mother has been present at the hospital with Erik and father is the sole household income earner.
+T16	PatientCaregiver_Unemployment 4852 5023	Mother shared stressors related to childcare for Erik's older siblings as mother has been present at the hospital with Erik and father is the sole household income earner.
+A9	Negated T16
+T17	FinancialStrain_Other 5591 5648;5651 5739;5741 5817	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A10	ResolutioninProgress T17
+T18	ChildcareBarrierfromHospitalization 5877 5906	Mother is staying at bedside.
+A11	Negated T18
+T19	LackofTransportation 5907 5981	Parents do not have a vehicle for transportation to and from the hospital.
+T20	ChildcareBarrierfromNonHospitalization 5982 6049	Father is at home with siblings and unable to come to the hospital.
+A12	Negated T20
+T21	FinancialStrain_Other 6050 6144	Family has limited financial resources and was not able to plan for this unforeseen admission.
+T22	FoodInsecurity_Other 6145 6234	Meal vouchers provided so that family may have access to food while Erik is hospitalized.
+A13	ResolutioninProgress T22

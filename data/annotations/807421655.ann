@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 619 654;657 723	Patient living situation: PARENT(S) Parent Information: Yaribeth lives with her mother in Trenton, NJ.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 724 860	Mom had previously worked (for 23 years), but her job got interrupted during COVID. Mom has been unable to work since due to her health.
+T3	GeneralHousingInstability 1542 1560;1563 1778	Housing Access YES Housing instability comment: Mom is looking to move due to ongoing issues with mice in her home and needing a more appropriate space for her and Yaribeth. Mom is actively looking, PICU SW provided housing resources.
+A2	ResolutioninProgress T3
+T4	LackofTransportation 2452 2544	Transportation comment: Mother relies on friends to drive her back and forth to the hospital
+T5	NonPermanentPlacement 5523 5573	Yaribeth lives at home with her mother in Trenton.
+A3	Negated T5
+T6	GeneralHousingInstability 5575 5667	Yoland has been working to find new housing as their have been issues with mice in her home.
+A4	ResolutioninProgress T6
+T7	LackofTransportation 5846 5918	She relies on others for rides home and to her own medical appointments.

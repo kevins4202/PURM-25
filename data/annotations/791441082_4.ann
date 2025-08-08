@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 55 141	Goal: Patient/family/caregiver will have needed supports to maintain employment/income
+A1	Negated T1
+T2	LackofInsurance 161 245	Goal: Patient will have adequate insurance coverage to obtain necessary medical care
+T3	LackofInsurance 507 650	Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA.
+T4	PatientCaregiver_Unemployment 507 650	Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA.
+A4	Negated T4
+A2	Negated T2
+A3	Negated T3

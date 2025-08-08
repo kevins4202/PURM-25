@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 555 590;593 730	Patient living situation: PARENT(S) Parent Information: Lives primarily with father Jack and stepmother Christine in Bethlehem, PA. Spends some time at mother's house in DE.
+A1	Negated T1
+T2	HomeEnvironment_Other 1211 1230;1233 1451	CPS Involvement YES CPS involvment comment: Per dad, 16-year-old sister self-reported to local CPS office as was not comfortable living in father's home. Sister now lives exclusively with mother. Patient personally has had no involvement.
+T3	NonPermanentPlacement 2325 2412	Pt lives primarily with father and stepmother and 14-year-old brother in Bethlehem, PA.
+A2	Negated T3
+T4	HomeEnvironment_Other 2443 2755	Per above, father disclosed that pt's 16-year-old sister was previously DHS involved but pt was not included in this report. SW called Northampton CYS and spoke with Stephanie to confirm no concerns re: discharge home with dad. Stephanie reported no open cases since 2017 and no c/f discharge home to dad's house
+T5	HomeSafety 2568 2669	SW called Northampton CYS and spoke with Stephanie to confirm no concerns re: discharge home with dad
+A3	Negated T5

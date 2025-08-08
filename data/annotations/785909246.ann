@@ -1,0 +1,6 @@
+T1	LackofInsurance 330 529	Mother inquired about applying for secondary medicaid for patient. SW emailed mother information on how to apply and will follow up with a LOMN and PA 1960 form for her to upload with her application
+A1	Negated T1
+T2	FinancialStrain_Other 535 759;764 807	Mother and Father unsure of how long patient will be admitted to the hospital and requested assistance with financial resources since they are both self-employed. SW encouraged parents to apply to the Opens Doors Foundation. SW sent over link to application via email.
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 811 875	Mother and Father were able to check into RMDH over the weekend.
+A3	Resolved T3

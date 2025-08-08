@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 592 627;630 769	Patient living situation: PARENT(S) Parent Information: Patient lives with both her parents mom- Heather and dad Cory ( Union Glazer) and younger four month old sister Noelle.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 2619 2715	Goal - Insurance Dad will continue to be employeed so his primary insurance will stay effective.
+A2	Negated T2
+T3	LackofInsurance 2619 2767	Goal - Insurance Dad will continue to be employeed so his primary insurance will stay effective. Family will apply for secondary medical assistance.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 3304 3499	Goal - Employment/income Family will continue to be employeed throughout treatment, mom mentioned that she was planing on leaving her job at the school district, and dad is employeed via a Union.
+A4	Negated T4
+T5	FinancialStrain_Other 5042 5099;5102 5271	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: Family was provided 7 meal vouchers- eligible for addtional meal vouchers on 4-16..
+A5	ResolutioninProgress T5

@@ -1,0 +1,11 @@
+T1	PermanentPlacementPending 313 461	Mom asked SW questions about the LTCF. Mom wanted to be assured that having Yaribeth go to a LTCF would not mean the state of NJ has custody of her.
+T2	LackofTransportation 495 687	Mom also expressed concerns that because Yaribeth cannot talk, she wants to be sure that she is getting good care there, especially if she can't visit every day due to transportation barriers.
+T3	PermanentPlacementPending 688 826	Mom expressed that at this time, she is strongly considering doing a LTCF for a few months, while she gets better and her vision improves.
+T4	UnabletoPay 2140 2345	Mom is unable to afford a taxi to go and see her. Due to the emergent situation and no available financial resources, SW approved a Lyft ride for Mom to go to the hospital in Trenton to be with her sister.
+T5	LackofTransportation 2140 2345	Mom is unable to afford a taxi to go and see her. Due to the emergent situation and no available financial resources, SW approved a Lyft ride for Mom to go to the hospital in Trenton to be with her sister.
+A2	ResolutioninProgress T5
+T6	UnabletoPay 2350 2407;2410 2504;2506 2644	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Round Trip Lyft. Reason for Disbursement: Other hardship considerations: Family Member emergent admission to the hospital, no available financial resources
+T7	LackofTransportation 2350 2407;2410 2504;2506 2644	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Round Trip Lyft. Reason for Disbursement: Other hardship considerations: Family Member emergent admission to the hospital, no available financial resources
+A1	ResolutioninProgress T7
+T8	PatientCaregiver_Unemployment 3645 3668;3670 3756;3758 3774	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have needed supports to maintain employment/income Outcome: Ongoing
+A3	Negated T8

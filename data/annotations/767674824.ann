@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 248 406	Relayed that a $50 Amex or Visa gift card will be available to parents at the Welcome Desk/Center for Families for pick up to offset the cost of gas expenses.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 248 406	Relayed that a $50 Amex or Visa gift card will be available to parents at the Welcome Desk/Center for Families for pick up to offset the cost of gas expenses.
+A2	Negated T2
+T3	FinancialStrain_Other 965 1022;1025 1148	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gift Cards: one $50 Visa/Amex/Mastercard gift  card.
+A3	ResolutioninProgress T3

@@ -1,0 +1,14 @@
+T4	LackofInsurance 3013 3160;3163 3338	Goal - Insurance Parents will add Pius to father's United Healthcare employer-sponsored insurance or will apply for PA Medical Assistance for Pius. Intervention/Plan - Insurance Parents are interested in applying for PA Medical Assistance for Pius and family is financially eligible to add a child to PA Medical Assistance.
+T5	PatientCaregiver_Unemployment 895 922	Father is a postal carrier.
+A4	Negated T5
+T6	FinancialStrain_Other 923 1002	He is currently taking vacation time and will not have any paid parental leave.
+T7	PatientCaregiver_Unemployment 1003 1081	Mother was not working during her pregnancy and will be a stay-at-home parent.
+A5	Negated T7
+T1	NonPermanentPlacement 704 739;742 894	Patient living situation: PARENT(S) Parent Information: Pius is the first child born to his intact parents, Alexa and Jeff, who live together in Levittown, PA (about 40 minutes from CHOP).
+A1	Negated T1
+T2	FinancialStrain_Other 2160 2322	Parent Stressors Unanticipated ICU-level hospitalization, ongoing work-up, family lives 40 minutes from CHOP, financial resource strain related to hospitalization
+T8	NeedTemporaryLodging 3834 3912;3915 4164	Goal - Local Accommodations Family will have local accommodation arrangements. Intervention/Plan- Local Accommodations Provided information about the NICU parent sleep room request process. Social worker submitted a referral to the Ronald McDonald House Chestnut Street for parent on 7/15/22. Parents remain on the waiting list.
+A6	ResolutioninProgress T8
+T3	FinancialStrain_Other 2527 2617;2620 2741;2744 3010	Resource Needs Problem: HOUSEHOLD FINANCES;INSURANCE;LOCAL ACCOMODATIONS;EMPLOYMENT/INCOME Goal - Household Finances Family will have financial support to be able to sustain themselves while Pius is hospitalized. Intervention/Plan - Household Finances Social worker provided information about the Opens Doors Foundation for one month of rent assistance to offset the costs associated with Pius's NICU hospitalization. Will complete application with parents once Pius is eligible.
+A2	ResolutioninProgress T3
+A3	ResolutioninProgress T4

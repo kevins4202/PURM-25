@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 393 475	SW provided mom with Harp's Hope card to assist with ongoing transportation costs.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 393 475	SW provided mom with Harp's Hope card to assist with ongoing transportation costs.
+A2	Negated T2
+T3	HomeAccessibility 665 819	Mom reported that she and dad do not yet have a crib or bassinet for Melody and that she plans to go to Walmart before Melody's discharge to purchase one.
+A3	ResolutioninProgress T3
+T4	LackofFundsforFood 957 1053	Mom reported that she has WIC and plans to call to set up appointment when Melody is discharged.
+A4	Negated T4

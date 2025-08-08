@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1367 1424;1427 1543	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6 and Parking Passes (#'s): 5.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 630 754	Mom shared that she spoke with her insurance company regarding nursing benefits and has discussed this with case management.
+A2	Negated T2

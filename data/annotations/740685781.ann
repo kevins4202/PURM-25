@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 667 723;726 902	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Esther will live with her parents, Marie and Jean, and her twin sister and 8 year old brother in Atlantic City, NJ (about an hour and 15 minutes from CHOP).
+A1	Negated T1
+T3	ChildcareBarrierfromNonHospitalization 2934 3020	parents balancing visiting patient in the hospital and caring for two siblings at home
+T4	ChildcareBarrierfromHospitalization 2934 3020	parents balancing visiting patient in the hospital and caring for two siblings at home
+T5	LackofInsurance 3266 3333;3336 3407	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Esther is added to NJ Medical Assistance
+A2	Negated T5
+T6	HomeEnvironment_Other 2025 2044;2047 2115	CPS Involvement YES CPS involvment comment: NJ DCP&P is providing services toteh family.
+T2	LackofFundsforFood 2331 2350;2353 2555	Food insecurity YES Food insecurity comment: Parents requesting assistance applying for SNAP benefits. Patient will also be eligible for WIC benefits upon discharge. Social worker will assist parents with SNAP application.
+A3	ResolutioninProgress T2
+T7	LackofTransportation 3022 3094	parents do not have their own vehicle and rely on public transportation;
+T8	LackofFundsforFood 3201 3263	parents requesting assistance with applying for SNAP benefits.
+A4	ResolutioninProgress T8
+T9	LackofFundsforFood 3904 3974;3977 4138	Goal - Access to food Family will have SNAP and WIC benefits in place. Intervention/Plan - Access to food Family is eligible for SNAP benefits and and WIC benefits. Social worker will assist family with applying for these resources.
+A5	ResolutioninProgress T9
+T10	LackofTransportation 4240 4424	Intervention/Plan - Transportation Social worker offered to assist with arranging a ride through Greyhound or NJ Transit for parents from Atlantic City to Philadelphia to visit Esther.
+A6	ResolutioninProgress T10
+T11	NeedofChildcare 4425 4571	Parents plan to discuss child care arrangements and will follow up with social worker about identifying a day to visit likely this coming weekend.
+A7	ResolutioninProgress T11

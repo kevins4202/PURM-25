@@ -1,0 +1,9 @@
+T1	LackofTransportation 280 514	SW thoroughly provided information about the transportation plan. Dad confirmed he received the train tickets from DCPP. SW provided Dad with SW phone number to call when their train arrives and SW will activate the Lyft ride to CHOP.
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromNonHospitalization 693 803	Dad confirmed that both him and Mom are coming this weekend, as a cousin agreed to watch their other children.
+A2	Negated T2
+T3	CommunitySafety 804 875	Dad confirmed they will bring the car seat when they come this weekend.
+A3	Negated T3
+T4	UnabletoPay 1467 1627	Dad expressed that they cannot afford to pay their rent. Dad shared that they have friends who had helped them pay rent previously, but they can no longer help.
+T5	FinancialStrain_Other 1310 1466	Dad expressed that he needs to move to Boston because he can no longer stay in NJ due to NJ not providing any social service support and help to the family.
+T6	HomeEnvironment_Other 1001 1229	SW then called DCPP (Eirini Otaegui, 609-626-3288) to confirm these details. DCPP shared with SW that Dad told her yesterday that the family will be moving to Boston on 10/4. Dad would not provide any additional details to DCPP.

@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 549 584	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 711 739	Parents are both unemployed.
+T3	LackofInsurance 1688 1755;1758 1898	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA MA, parents do NOT recieve food stamps or WIC- SW to provide information on how to access both
+A2	Negated T3
+T4	FoodInsecurity_Other 1688 1755;1758 1898	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA MA, parents do NOT recieve food stamps or WIC- SW to provide information on how to access both
+A3	ResolutioninProgress T4
+T5	PatientCaregiver_Unemployment 2008 2126	Goal - Access to food parents are staying at bedside or in sleep rooms, parents are both umeployed and have no income,
+T7	FoodInsecurity_Other 1967 2005;2008 2126;2129 2275	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food parents are staying at bedside or in sleep rooms, parents are both umeployed and have no income, Intervention/Plan - Access to food SW to provide meal vouchers to parents while staying at bedside.SW to connect parents with WIC and SNAP program
+A5	ResolutioninProgress T7
+T6	FinancialStrain_Other 1967 2005;2008 2126;2129 2275	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food parents are staying at bedside or in sleep rooms, parents are both umeployed and have no income, Intervention/Plan - Access to food SW to provide meal vouchers to parents while staying at bedside.SW to connect parents with WIC and SNAP program
+A4	ResolutioninProgress T6
+T8	FinancialStrain_Other 3100 3157;3160 3248;3250 3326	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A6	ResolutioninProgress T8

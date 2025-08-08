@@ -1,0 +1,5 @@
+T1	DistancefromHospital 395 451	Family continues to visit regularly from local apartment
+A1	Negated T1
+T2	DistancefromHospital 848 953	Father is currently home in TN until approx 2/7, where Vader's siblings will stay with their grandmother.
+T3	NeedTemporaryLodging 395 452	Family continues to visit regularly from local apartment.
+A2	Resolved T3

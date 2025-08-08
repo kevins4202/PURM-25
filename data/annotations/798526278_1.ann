@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 609 656;659 799	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Pt lives at home in Collegeville, PA with bio mom (Lindsey Lovett) and bio dad (Michael Longo). Pt/parents are together.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 800 976	Pt/mom is self employed as a hair salon owner. Pt/dad is a machine operator for Globus Medical. SW to provide pt/dad with a work letter and assist with FMLA, per pt/dad request
+A2	Negated T2
+T3	LackofInsurance 2551 2618;2621 2733	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: SW explained and  provided pt/parents with secondary PAMA and SSI resource guides
+A3	ResolutioninProgress T3
+A8	Negated T3
+T4	LackofTransportation 2802 2840;2843 2905;2908 3082	Resource Needs Problem: TRANSPORTATION Goal- Transportation Pt/mom has a vehicle, but pt/dad does not Intervention/Plan - Transportation SW explained transportation resources should pt/dad have to accompany pt to/from scheduled onco appts with no additional supports available
+A4	Negated T4
+T5	FinancialStrain_Other 4201 4402	SW briefly discussed how team will continue to support pt/family through work, finances, and logistical needs. SW provided pt/parents with SW contact information, MFF meal vouchers, and parking passes.
+A5	ResolutioninProgress T5

@@ -1,0 +1,5 @@
+T1	LackofInsurance 498 640	Parents started the application for secondary PA Medical Assistance through PH95 on the PA Compass website and are planning to submit it soon.
+A1	Negated T1
+T2	FinancialStrain_Other 779 883	Social worker provided a Harp's Hope card to offset the cost of gas expenses for travel to the hospital.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 884 1013	Family's application for financial assistance to the Colette Louise Tisdahl Foundation for financial assistance was not approved.

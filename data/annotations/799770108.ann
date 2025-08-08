@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 241 298;301 389;391 467;473 493;499 651	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2. Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: Mother went to the ER this morning and did not eat at RMDH. Mother to return to CHOP after ER visit to be with patient. SW left meal vouchers at bedside
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 499 558	Mother went to the ER this morning and did not eat at RMDH.
+A2	Resolved T2

@@ -1,0 +1,10 @@
+T1	FinancialStrain_Other 431 708;711 842	As SW was leaving, father asked if family could have additional vouchers. SW confirmed and discussed need to check the chart and would get back to family. Family has already been allocated 20+ meal vouchers during this admission and family lives within 5 miles of the hospital. SW met with family. SW provided one meal voucher and discussed family already being allocated over 20 meal vouchers this admission.
+T2	DistancefromHospital 586 708	Family has already been allocated 20+ meal vouchers during this admission and family lives within 5 miles of the hospital.
+A2	Negated T2
+A1	Resolved T1
+T3	FinancialStrain_Other 1003 1156	Patient's father seemed frustrated and SW was apologetic and asked if family has any financial concerns regarding rental/untility bills. Mother declined.
+A3	Negated T3
+T4	DistancefromHospital 1711 1834	Additional comments:  Family lives with in 5 miles of hospital and has already received 20+ vouchers during this admission.
+A4	Negated T4
+T5	FinancialStrain_Other 1711 1833	Additional comments:  Family lives with in 5 miles of hospital and has already received 20+ vouchers during this admission
+A5	Resolved T5

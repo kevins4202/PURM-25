@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 255 312;315 396;402 422;426 467	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 8. Additional comments: Transportation home and back via the bus.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 402 422;426 467	Additional comments: Transportation home and back via the bus.
+A2	ResolutioninProgress T2

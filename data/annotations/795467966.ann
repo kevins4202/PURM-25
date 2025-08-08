@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 585 620;623 758	Patient living situation: PARENT(S) Parent Information: Zahan was born to intact parents Anum and Fawad who reside in Breinigville, PA (over an hour and a half from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 623 758	Parent Information: Zahan was born to intact parents Anum and Fawad who reside in Breinigville, PA (over an hour and a half from CHOP).
+T3	PatientCaregiver_Unemployment 759 904	Anum is employed part time as a nurse and work on weekends. Fawad works at a University and has continued to work during Zahan's hospitalization.
+A2	Negated T3
+T4	DistancefromHospital 2029 2114	Parent Stressors Zahan's hospitalization and trasnfer to CHOP which is far from home.
+T5	LackofInsurance 2461 2514;2517 2612;2615 2703	Resource Needs Problem: LOCAL ACCOMODATIONS;INSURANCE Goal - Insurance Patient will have adequate insurance coverage to obtain necessary medical care Intervention/Plan - Insurance LSW provided education on applying for secondary mediciad.
+A3	Negated T5
+T6	NeedTemporaryLodging 2890 3011;3014 3212	Goal - Local Accommodations Patient's parents will have access to local accomidations while Zahan is hospitalized at CHOP Intervention/Plan- Local Accommodations LSW provided the patient's parents with information on staying at Ronald McDonald House. The patient's parents and brother stayed at a local hotel last night.
+A4	ResolutioninProgress T6

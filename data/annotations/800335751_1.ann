@@ -1,0 +1,5 @@
+T1	LackofTransportation 222 231;234 281	Problems: Finances, Hospital discharge and Transportation
+T2	FinancialStrain_Other 222 231;234 281	Problems: Finances, Hospital discharge and Transportation
+T3	LackofTransportation 439 647	Mother stated that her car is being repaired and she is worried that it will not be ready in time for Isaiah's discharge. Mother requested SW assistance with transportation to/from the hospital for discharge.
+T4	LackofTransportation 804 1164;1168 1469	It is possible that Mother's car will be repaired by that time. However, SW pre-approved one-way Lyft/Uber transportation to the hospital for Mother, if needed on Mon 5/15. Covering Social Worker Emily Baumley to approve ride home if discharge is confirmed for that day. SW transportation assistance was discussed with and approved by SW Manager Sheronda Ball. SW provided information to Mother regarding Montgomery County Medical Assistance Transportation Program (MATP): https://www.suburbantransit.org/medical-assistance. This resource can be utilized for van service or mileage reimbursement for future outpatient appointments and future hospital discharges.
+A1	ResolutioninProgress T4

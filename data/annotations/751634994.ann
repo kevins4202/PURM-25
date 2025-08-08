@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 563 619	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	HomeEnvironment_Other 1249 1268;1271 1428	CPS Involvement YES CPS involvment comment: CPS involved due to maternal substance use - mom attnedsa a program for medication managment  DHS SW is Melissa Tyrell (267)-331-1437
+T3	DrugUse 1249 1268;1271 1428	CPS Involvement YES CPS involvment comment: CPS involved due to maternal substance use - mom attnedsa a program for medication managment  DHS SW is Melissa Tyrell (267)-331-1437
+A2	ResolutioninProgress T3
+T4	DrugUse 1477 1496;1499 1549	Substance Abuse YES Substance Abuse comment: Mother prescribed subutex
+A3	ResolutioninProgress T4
+T5	LackofInsurance 1884 1951;1954 2002	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA MA
+A4	Negated T5
+T6	HomeEnvironment_Other 1819 1881	Parent Stressors Patient's hosptial admission, CYS involvement
+T7	PermanentPlacementPending 2541 2585	Patient will need CYS clearance prior to d/c
+T8	FinancialStrain_Other 2851 2908;2911 3024;3026 3102	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Other: septa passes . Reason for Disbursement: Unforseen/emergent admission-no available resources
+A5	ResolutioninProgress T8

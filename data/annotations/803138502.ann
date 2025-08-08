@@ -1,0 +1,12 @@
+T2	FinancialStrain_Other 489 701	Mom also shared she is in need of meal vouchers since she is unsure of the discharge time and would like to obtain some food. SW shared she will also put that request in and mom is aware of where to pick them up.
+A2	ResolutioninProgress T2
+T1	LackofTransportation 214 223;226 260;264 273;275 485	Problems: Discharge Planning- Transportation Progress: SW called mom to assess for needs prior to discharge. Mom shared she is in need of transportation home in which SW shared she will request Uber/Lyft and informed mom on where to obtain the ride once discharged.
+A1	Resolved T1
+T3	LackofTransportation 786 839	SW will request ride for discharge and meal vouchers.
+A3	Resolved T3
+T4	FinancialStrain_Other 786 839	SW will request ride for discharge and meal vouchers.
+A4	ResolutioninProgress T4
+T5	LackofTransportation 1349 1406;1409 1518;1524 1544;1548 1591	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Other: Uber/Lyft. Additional comments: Provided to assist with discharge planning.
+A5	Resolved T5
+T6	FinancialStrain_Other 1349 1406;1409 1518	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Other: Uber/Lyft.
+A6	ResolutioninProgress T6

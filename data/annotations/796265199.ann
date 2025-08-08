@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 362 481	Mom reports she was recently fired due to taking time off for this admission, but is working with HR so she can return.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 482 640	Parents also obtained a car since last admission and sometimes drive to visit vs taking the train although, for one person traveling, the cost is almost equal
+A2	Negated T2
+T3	FinancialStrain_Other 642 802	Addressed utility concern on screener; mom reports her bill is high, but she is on a payment plan. SW offered to have possible other resources sent; mom agreed.
+A3	ResolutioninProgress T3

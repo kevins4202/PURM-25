@@ -1,0 +1,3 @@
+T1	DrugUse 478 538	Patient has an open CYS case due to maternal substance use .
+T2	HomeSafety 539 584	Patient will need CYS clearance prior to d/c.
+T3	PermanentPlacementPending 539 584	Patient will need CYS clearance prior to d/c.

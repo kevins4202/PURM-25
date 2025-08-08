@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 616 649	Mother has checked into the RMDH.
+A1	Resolved T1
+T2	FoodInsecurity_Other 650 805	Mother concerned about having access to food . SW gave mother some meal vouchers to use over the weekend as she gets into a routine with meals at the RMDH.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 697 804	SW gave mother some meal vouchers to use over the weekend as she gets into a routine with meals at the RMDH
+A3	ResolutioninProgress T3

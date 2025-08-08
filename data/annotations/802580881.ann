@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 859 966	Father states he and his wife would come to CHOP in the evening following their work days to visit patient.
+A1	Negated T1
+T2	FinancialStrain_Other 2144 2201;2204 2292;2298 2318;2322 2461	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments: SW approving total of four meal vouchers for the week for mother due to her ongoing loss of income with unplanned extended hospitalization.
+A2	ResolutioninProgress T2

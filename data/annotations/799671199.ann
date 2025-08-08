@@ -1,0 +1,30 @@
+T1	PatientCaregiver_Unemployment 3223 3277	Mom is currently unemployed and Dad is a truck driver.
+T2	PatientCaregiver_Unemployment 3223 3277	Mom is currently unemployed and Dad is a truck driver.
+A1	Negated T2
+T3	NeedofChildcare 3278 3377	Mom reports that King attends day care 5 times per week at Buz Academy but was not there yesterday.
+A2	Negated T3
+T4	DrugUse 3483 3583	Mom endorses marijuana use but denies any illicit substance usage for her, Dad or for Maternal Aunt.
+T5	DrugUse 3483 3583	Mom endorses marijuana use but denies any illicit substance usage for her, Dad or for Maternal Aunt.
+A3	Negated T5
+T6	Homelessness 3584 3664	Mom reports a prior DHS case due to homelessness when her older son was younger.
+A4	HistoryOf T6
+T7	HomeSafety 3739 3852	Mom denies any violence in her home or concern for safety. Mom denies any known violence in Maternal Aunt's home.
+A5	Negated T7
+T8	HomeSafety 3857 3956	A childline report was filed in the ED as a near fatality and will be assigned to Philadelphia DHS.
+T9	PatientCaregiver_Unemployment 3665 3738	Mom reports that King's father has previous incarceration many years ago.
+A6	HistoryOf T9
+T10	PermanentPlacementPending 4056 4106	Patient not to be discharged without DHS approval.
+T11	NeedofChildcare 4207 4238	Education: Buz Academy day care
+A7	Negated T11
+T12	NonPermanentPlacement 4315 4339	Parent/Caretaker: mother
+A8	Negated T12
+T13	PatientCaregiver_Unemployment 4411 4477	Employment: yes (indicate) Mom between jobs, Dad is a truck driver
+T14	PatientCaregiver_Unemployment 4411 4477	Employment: yes (indicate) Mom between jobs, Dad is a truck driver
+A9	Negated T14
+T15	GeneralHousingInstability 4479 4523	Living/Home environment: independent housing
+A10	Negated T15
+T16	IntimatePartnerViolence 4869 4910	IVP/family violence/domestic violence: No
+A11	Negated T16
+T17	SubstanceAbuse_Other 5054 5073	Substance abuse: No
+A12	Negated T17
+T18	PermanentPlacementPending 5612 5701	Special Instructions for staff:  patient can not be discharged without SCAN/DHS approval)

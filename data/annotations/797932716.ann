@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 601 636	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 709 803	Natalie lives with her parents and 2 siblings in Oxford, PA approximately 1.5 hours from CHOP.
+T3	PatientCaregiver_Unemployment 927 1016	Natalie is employed as a teacher's aide and Ramiro is employed as a chef in a restaurant.
+A2	Negated T3
+T4	LackofInsurance 2131 2198;2201 2241	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: PAMA, WIC
+A3	Negated T4
+T5	LackofFundsforFood 2131 2198;2201 2241	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: PAMA, WIC
+A4	Negated T5
+T6	NeedTemporaryLodging 2315 2358;2361 2467;2470 2545	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family will access available resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations Family has checked into RMH-Camden.
+A5	Resolved T6
+T7	ChildcareBarrierfromHospitalization 3441 3494	Family has been visiting daily from local RMH-Camden.
+A6	Negated T7
+T8	LackofInsurance 3496 3574	SW answered questions about adding newborn to insurance (PAMA Keystone First).
+A7	ResolutioninProgress T8

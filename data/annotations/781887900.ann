@@ -1,0 +1,12 @@
+T1	LackofInsurance 672 942	Mom was able to confirm parents share the cell phone number in the chart, confirmed that Liliana has her own AmeriHealth PA MA insurance coverage, and that parents will struggle with transportation/ finances and therefore put themselves on the list for Philadelphia RMH.
+A1	Negated T1
+T2	Transportation_Other 672 942	Mom was able to confirm parents share the cell phone number in the chart, confirmed that Liliana has her own AmeriHealth PA MA insurance coverage, and that parents will struggle with transportation/ finances and therefore put themselves on the list for Philadelphia RMH.
+T3	FinancialStrain_Other 672 942	Mom was able to confirm parents share the cell phone number in the chart, confirmed that Liliana has her own AmeriHealth PA MA insurance coverage, and that parents will struggle with transportation/ finances and therefore put themselves on the list for Philadelphia RMH.
+T4	NeedTemporaryLodging 672 1302	Mom was able to confirm parents share the cell phone number in the chart, confirmed that Liliana has her own AmeriHealth PA MA insurance coverage, and that parents will struggle with transportation/ finances and therefore put themselves on the list for Philadelphia RMH.  Philadelphia RMH confirmed with SW that they informed parents today (2/24/23) that they would not be eligible to stay at the home due to failed background check.  SW was unable to speak with parents directly after this was confirmed with parents.  Parents had noted they would have significant difficulty visiting baby at CHOP without ability to stay at RMH.
+T5	DrugUse 1470 1664	SW was also able to speak to Janice Malick, Lehigh Valley Cedar Crest social worker who informed that OSH completed CYS report based on mom's OSH positive UDS screen along with mental health hx.
+T7	GeneralHousingInstability 1957 2055	Mr. Rivas was able to confirm that parents currently have adequate housing and that FOB has a car.
+A3	Negated T7
+T8	LackofTransportation 1957 2055	Mr. Rivas was able to confirm that parents currently have adequate housing and that FOB has a car.
+A4	Negated T8
+T6	HomeEnvironment_Other 1666 1955	SW spoke with Gabriel Rivas, Lehigh Valley CYS caseworker who confirmed involvement however the case was closed due to concern for baby's critical status and reaching 60 days in the hospital.  Mr. Rivas noted that SW would need to create a new report/ referral closer to time of discharge.
+A2	ResolutioninProgress T6

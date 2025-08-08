@@ -1,0 +1,19 @@
+T1	NonPermanentPlacement 567 602;605 747	Patient living situation: PARENT(S) Parent Information: Gisselle was born to intact parents Maribel and Guadalupe who reside in South Philadelphia with Gisselle's aunt and uncle.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 943 1012	Guadalupe works in construction and Maribel is currently not working.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 943 1012	Guadalupe works in construction and Maribel is currently not working.
+T4	LackofTransportation 1013 1103	Patient's parents do not have a famile vehicle and will take public transporation to CHOP.
+T5	DistancefromHospital 858 942	The patient's mother has a five year old son who is living in Mexico with relatives.
+A3	SubjectIsNotPatient T5
+T6	GeneralHousingInstability 1829 1852;1855 1994	Housing instability YES Housing instability comment: Patient's parents identified that the father's work can be inconsistent causing financial strain on the family
+T8	FoodInsecurity_Other 1997 2016;2019 2113	Food insecurity YES Food insecurity comment: Patient's father's work can be inconsistenct causing financial strain
+T7	FinancialStrain_Other 1829 1852;1855 1994;1997 2016;2019 2113	Housing instability YES Housing instability comment: Patient's parents identified that the father's work can be inconsistent causing financial strain on the family Food insecurity YES Food insecurity comment: Patient's father's work can be inconsistenct causing financial strain
+T9	FinancialStrain_Other 2389 2518	Parent Stressors Gisselle's unexpected NICU admission, patient does not have health insurance at this time, financial instability
+T10	LackofInsurance 2389 2518	Parent Stressors Gisselle's unexpected NICU admission, patient does not have health insurance at this time, financial instability
+T11	FinancialStrain_Other 2640 2692;2695 2831;2834 2975	Resource Needs Problem: INSURANCE;HOUSEHOLD FINANCES Goal - Household Finances Patient's parents household fianances will support parents presence to participate in care and transition home Intervention/Plan - Household Finances LSW will explore financial resouces to support parent's presence at the bedside and transition to home
+A4	ResolutioninProgress T11
+T12	LackofInsurance 2978 3062;3065 3183	Goal - Insurance Patient will have health insurance to support her health care needs Intervention/Plan - Insurance LSW referred the patient's parents to FHC for assistance with their medicaid application
+A5	ResolutioninProgress T12
+T13	UnabletoPay 3964 4021;4024 4138;4140 4339	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 298033,298034,298035,298036. Reason for Disbursement: Unforseen/emergent admission-no available resources and Other hardship considerations: Patient's parents did not have the financial resources to purchase food at the hospital
+A6	ResolutioninProgress T13

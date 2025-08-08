@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 749 956	SW assessed for immediate needs, mother requesting continued meal voucher support. SW approved four vouchers and demonstrated how to order meal from bedside alongside Spanish interpreter, Juan-Pablo #700274.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1275 1332;1335 1423;1425 1497	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Other hardship considerations: limited finances
+A2	ResolutioninProgress T2

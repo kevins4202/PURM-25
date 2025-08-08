@@ -1,0 +1,9 @@
+T1	DrugUse 1617 1636;1639 1828	Substance Abuse YES Substance Abuse comment: Tah'Jana has reported to SDU care team the use of cannabinoids (marijuana) to assist with pregnancy induced morning sickness and sleep deprivation during pregnancy.
+T3	PatientCaregiver_Unemployment 795 858	Mom has completed high school and is employed as a hairstylist.
+A2	Negated T3
+T2	NonPermanentPlacement 569 616;619 771	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Parents are Tah'Jana Davis-Spaddy and Ikeem Twymon.  Parents live separately.  Mom lives in Philadelphia PA with her Mom and sister.
+A1	Negated T2
+T4	LackofInsurance 2351 2384;2387 2542;2545 2645	Resource Needs Problem: INSURANCE Goal - Insurance Family will work with FHCP to apply for insurane coverage for the baby.  Insurance coverage will hopefully be obtained prior to discharge. Intervention/Plan - Insurance SW has referred family to FHCP for assistance with insurance concerns.
+A3	ResolutioninProgress T4
+T5	LackofInsurance 3839 3920	Family was referred to FHCP for help in applying for insurance coverage for baby.
+A4	ResolutioninProgress T5

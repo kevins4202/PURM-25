@@ -1,0 +1,7 @@
+T1	Transportation_Other 468 550	Mom continues to take the train to and from CHOP since they do not have a vehicle.
+T3	FinancialStrain_Other 866 970	Mom stated that she spoke with Keystone First and they are going to assist her with the SSI application.
+A2	ResolutioninProgress T3
+T4	NeedofChildcare 551 859	Mom asked about being a paid caregiver for Sidney since she would prefer not to send her to medical daycare. Discussed that PA does not typically pay parents to care for their children under the age of 18. Mom intends to call Keystone for a case manager and she can discuss this further with her case manager
+A3	ResolutioninProgress T4
+T2	LackofInsurance 866 970	Mom stated that she spoke with Keystone First and they are going to assist her with the SSI application.
+A1	Negated T2

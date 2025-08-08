@@ -1,0 +1,10 @@
+T2	DistancefromHospital 591 663	Parent Information: Mother ( Jazmin) and Father (Jason) live in Maryland
+T3	HomeSafety 1278 1297;1300 1467	CPS Involvement YES CPS involvment comment: CYS involved due to maternal substance use . Dominque McCaskill is the assigned case worker 484-986-3575. CYS needs to clear parents before d/c
+A2	ResolutioninProgress T3
+T4	SubstanceAbuse_Other 1278 1297;1300 1467	CPS Involvement YES CPS involvment comment: CYS involved due to maternal substance use . Dominque McCaskill is the assigned case worker 484-986-3575. CYS needs to clear parents before d/c
+T5	SubstanceAbuse_Other 1618 1806	Parent Strengths mother receptive to support and getting into treatment, mother and father have needed baby items at home, mother and father coping as well as can be expected at this time.
+A3	ResolutioninProgress T5
+T6	HomeSafety 1618 1806;1809 1882	Parent Strengths mother receptive to support and getting into treatment, mother and father have needed baby items at home, mother and father coping as well as can be expected at this time. Parent Stressors patient's admission to the hosptial, dx, CYS involvement
+A4	ResolutioninProgress T6
+T1	NonPermanentPlacement 532 588	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1

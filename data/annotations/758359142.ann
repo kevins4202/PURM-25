@@ -1,0 +1,4 @@
+T1	LackofInsurance 930 1122	The patient's mother received notice that the Medicaid application completed at the OSH was denied. LSW made a referral to FHC to assist the patient's parents in applying for insurance for Leo
+A1	ResolutioninProgress T1
+T2	LackofInsurance 368 419;422 455;458 599	Resource Needs - Intervention - Insurance coverage: Assess patient's insurance status Provide patient/family/caregiver with information to apply for needed benefits including referral to Family Health Coverage Program as needed
+A2	ResolutioninProgress T2

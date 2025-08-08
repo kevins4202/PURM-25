@@ -1,0 +1,44 @@
+T1	Permanency_Other 646 708	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER
+T2	Permanency_Other 646 708	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER
+A1	Negated T2
+A2	Negated T1
+T3	DistancefromHospital 929 987	Ava resides in Zuni, VA with her parents and older sister.
+T4	DistancefromHospital 929 987	Ava resides in Zuni, VA with her parents and older sister.
+T5	PatientCaregiver_Unemployment 988 1037	Both parents report to be unemployed at this time
+T6	PatientCaregiver_Unemployment 988 1038	Both parents report to be unemployed at this time.
+T7	Permanency_Other 929 986	Ava resides in Zuni, VA with her parents and older sister
+A3	Negated T7
+T8	Permanency_Other 929 987	Ava resides in Zuni, VA with her parents and older sister.
+A4	Negated T8
+T9	FinancialStrain_Other 2007 2161;2164 2231;2234 2342	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: VA Medicaid, SNAP (939.00), TANF (577.00), SSI will go into effect in January
+T10	FinancialStrain_Other 2007 2161;2164 2231;2234 2342	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: VA Medicaid, SNAP (939.00), TANF (577.00), SSI will go into effect in January
+A5	ResolutioninProgress T10
+A6	ResolutioninProgress T9
+T11	DistancefromHospital 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T12	DistancefromHospital 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T13	PatientCaregiver_Unemployment 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T14	PatientCaregiver_Unemployment 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T15	ChildcareBarrierfromHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T16	ChildcareBarrierfromHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T17	ChildcareBarrierfromNonHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T18	ChildcareBarrierfromNonHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T19	NeedTemporaryLodging 2411 2454;2457 2507;2510 2658	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Identify local lodging Intervention/Plan- Local Accommodations SW to assist parents in requesting a room at RMH upon thier return to Philadelphia within the next two weeks
+A7	ResolutioninProgress T19
+T20	NeedTemporaryLodging 2411 2454;2457 2507;2510 2658	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Identify local lodging Intervention/Plan- Local Accommodations SW to assist parents in requesting a room at RMH upon thier return to Philadelphia within the next two weeks
+A8	ResolutioninProgress T20
+T21	NonPermanentPlacement 646 708	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER
+A9	Negated T21
+T22	DistancefromHospital 910 987	Other Information: Ava resides in Zuni, VA with her parents and older sister.
+T23	NonPermanentPlacement 910 986	Other Information: Ava resides in Zuni, VA with her parents and older sister
+A10	Negated T23
+T24	PatientCaregiver_Unemployment 988 1038	Both parents report to be unemployed at this time.
+T25	DistancefromHospital 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T26	PatientCaregiver_Unemployment 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T27	FinancialStrain_Other 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T28	ChildcareBarrierfromHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T29	ChildcareBarrierfromNonHospitalization 2007 2161	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission
+T30	FinancialStrain_Other 2007 2161;2164 2231;2234 2342	Parent Stressors Employment status, out of state residence, balancing bedside presence with household obligations, finances, potential length of admission Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: VA Medicaid, SNAP (939.00), TANF (577.00), SSI will go into effect in January
+T31	LackofInsurance 2234 2342	Public assistance/SSI comment: VA Medicaid, SNAP (939.00), TANF (577.00), SSI will go into effect in January
+A11	Negated T31
+T32	NeedTemporaryLodging 2411 2454;2457 2507;2510 2658	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Identify local lodging Intervention/Plan- Local Accommodations SW to assist parents in requesting a room at RMH upon thier return to Philadelphia within the next two weeks
+A12	ResolutioninProgress T32

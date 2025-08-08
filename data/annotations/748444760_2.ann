@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 617 679;682 767	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER Parent Information: Erickson lives with his parents in Blackwood, NJ (Camden County);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 768 816	father owns a trophy company and works from home
+A2	Negated T2
+T3	GeneralHousingInstability 1753 1862	Parent Strengths easily engages, asks appropriate questions, reports housing stability and financial security
+A3	Negated T3
+T4	FinancialStrain_Other 1753 1862	Parent Strengths easily engages, asks appropriate questions, reports housing stability and financial security
+A4	Negated T4
+T5	LackofInsurance 2175 2224	Public assistance/SSI comment: MLTSS, NJ Medicaid
+A5	Negated T5
+T6	ChildcareBarrierfromHospitalization 3467 3571	Mother reports plan to remain at bedside with patient while father is at home with their older children.

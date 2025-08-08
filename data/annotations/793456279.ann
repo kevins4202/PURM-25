@@ -1,0 +1,5 @@
+T1	LackofInsurance 162 302	Maternal Aunt informed SW that Mom received a call from her insurance this morning that she will need to pay $2000 up front for the surgery.
+A1	Negated T1
+T2	UnabletoPay 303 398	Mom was very upset and overwhelmed, as she needs this surgery tomorrow and does not have $2000.
+T3	FinancialStrain_Other 467 573	The surgery is now fully covered with no out of pocket cost. Mom expressed tremendous relief and gratitude
+A2	Resolved T3

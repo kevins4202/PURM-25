@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 242 299;302 406;408 484	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Other: Lyft. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A1	ResolutioninProgress T1
+T2	Transportation_Other 658 1135	SW and Dad discussed discharge transportation options for today. Dad's coworker is no longer available to drive them home. NJ ModivCare will not be an option due to family completing final education at 4:30pm, so discharge will be after 5pm. SW consulted SW Manager Sheronda Ball, who approved SW approval of a discharge Lyft in order to expedite a safe inpatient discharge. Redcaps Form completed. SW informed the family of how to order the Lyft when pt is ready for discharge
+A2	ResolutioninProgress T2

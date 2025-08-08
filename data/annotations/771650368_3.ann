@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 538 973	Updated parents that application was submitted to the Colette Louise Tisdahl Foundation for financial assistance as previously discussed with parents. Provided parents with Septa bus passes for transportation assistance. Parents noted they plan to use Septa bus passes and will not use the Uber gift card from Harp's Hope per their preference. Social worker will follow up to notify Harp's Hope. CHOP Financial Assistance was approved.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 689 758	Provided parents with Septa bus passes for transportation assistance.
+A2	Resolved T2
+T3	LackofInsurance 974 1226	PA Compass application for PA Medical Assistance insurance for Ingrid is still pending. Social worker will continue to reach out to Family Health Coverage Program representative Cynthia McKie for any updates regarding PA Medical Assistance application.
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 1760 1817;1820 2005	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 10. Septa bus passes provided through the Center for Families. Social Work Emergency Fund RedCap completed
+A4	ResolutioninProgress T4

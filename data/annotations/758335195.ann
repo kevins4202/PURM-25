@@ -1,0 +1,26 @@
+T1	NonPermanentPlacement 506 542	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 673 689	Father works FT.
+A2	Negated T2
+T3	LackofTransportation 690 726	Family has access to private vehicle
+A3	Negated T3
+T4	ChildcareBarrierfromHospitalization 729 855	Relative Information: Parents report family live close and are currently watching patient's sister while brothers are admitted
+A4	Negated T4
+T5	DrugUse 1789 1808;1811 1938	Substance Abuse YES Substance Abuse comment: Father reports history of substance abuse. Father reports just getting out of rehab and has a sponsor.
+A5	HistoryOf T5
+A6	ResolutioninProgress T5
+T6	DistancefromHospital 2296 2329	Being far from home and daughter.
+T7	DistancefromHospital 619 672	Parents live with three children in Dickson City, PA.
+T8	PatientCaregiver_Unemployment 2330 2342	Missing work
+A7	Negated T8
+T9	LackofTransportation 2345 2404	Public assistance/SSI comment: Family receives snap and MA.
+A8	Negated T9
+T10	LackofFundsforFood 2345 2404	Public assistance/SSI comment: Family receives snap and MA.
+A9	Negated T10
+T11	NonPermanentPlacement 3154 3242	Patient lives with mother, father, twin brother and 5 yo old sister in Dickson City, PA.
+A10	Negated T11
+T12	DistancefromHospital 3154 3242	Patient lives with mother, father, twin brother and 5 yo old sister in Dickson City, PA.
+T13	PatientCaregiver_Unemployment 3244 3373	SW asked regarding financial concerns and father declined any at this time but confirmed he is the only one working at this time.
+A11	Negated T13
+T14	UnabletoPay 3374 3505	SW asked if family was behind on any bills. Dad reports rent and discussed plan for Catholic Social services in scranton to assist.
+A12	ResolutioninProgress T14

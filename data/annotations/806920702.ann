@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 436 574	SW called CUA worker Baby Rucker (626-421-3782) to discuss difficulty with reaching mom to obtain consent for Childway Pediatric Facility.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 792 895	Plan: Patient accepted to Childway. SW waiting to obtain consents from mother with assistance from CUA.
+A2	ResolutioninProgress T2
+T3	HomeEnvironment_Other 436 653;656 787;792 895	SW called CUA worker Baby Rucker (626-421-3782) to discuss difficulty with reaching mom to obtain consent for Childway Pediatric Facility. Various team members have tried to contact mom and there has been no response. CUA reports they will pick up consents for transfer on Tuesday and make attempts to locate mom in the community to review and sign. Plan: Patient accepted to Childway. SW waiting to obtain consents from mother with assistance from CUA.

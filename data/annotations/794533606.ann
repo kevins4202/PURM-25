@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 858 1101	Patient's mother was provided with information on applying for the Opens Doors grant to address financial stressors of Camden's ongoing hospitalization. LSW provided the application and further instructions via e-mail following the phone call.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 253 276;278 411;413 429	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A2	ResolutioninProgress T2

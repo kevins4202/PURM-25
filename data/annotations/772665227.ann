@@ -1,0 +1,23 @@
+T1	NonPermanentPlacement 666 702	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	NonPermanentPlacement 972 1038	Other Information: Makayla resides in Oxford, PA with her parents.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 1039 1178	Both parents deny employment at this time; father is a retired Army Veteran while mother is out of work to tend to Makayla's medical needs.
+T4	PatientCaregiver_Unemployment 1082 1178	father is a retired Army Veteran while mother is out of work to tend to Makayla's medical needs.
+A3	Negated T4
+A4	HistoryOf T4
+T5	ChildAbuse 2025 2044;2047 2398	CPS Involvement YES CPS involvment comment: Parents disclosed that an allegation of abuse was reported by Makayla education facility in August of 2022, post noticing what appeared to be cigarette burns on her arms. CYS completed a full investigation and closed the case as the allegations were unfounded. Parents further report the marks came from her chair when seizing.
+A5	Speculation T5
+A6	HistoryOf T5
+T6	GeneralHousingInstability 2401 2424;2427 2620	Housing instability YES Housing instability comment: Parents are actively dealing with housing instability as a result of their local borough informing them of a "60 days to quit" notice, due to living accommodations.
+T7	HomeSafety 2621 2923	The Diaz family has lived in their one-bedroom apartment for three years, post the recent inspection, they were notified that sleeping accommodations (Makayla in the bedroom and parents in the living room) was not authorized, which has resulted in being required to vacate the premises by February 9th.
+T8	GeneralHousingInstability 2924 3106	In the event that they refuse to relocate, an eviction notice will be filled with the courts. Parents are actively working with a local community resource agency to identify housing.
+A7	ResolutioninProgress T8
+T9	FinancialStrain_Other 3367 3455	Parent Stressors Financial strain, unknown length of hospitaization, housing instability
+T10	GeneralHousingInstability 3367 3455	Parent Stressors Financial strain, unknown length of hospitaization, housing instability
+T11	GeneralHousingInstability 3745 3776;3779 3834;3837 3940	Resource Needs Problem: HOUSING Goal - Housing Identify housing prior to eviction court Intervention/Plan- Housing Continue woring with the local communicy agency to identify adequate housing
+A8	ResolutioninProgress T11
+T12	FinancialStrain_Other 5003 5060;5063 5217;5219 5348	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 12 (2 per parents per day through 1/20) and Parking Passes (#'s): 1. Reason for Disbursement: Other hardship considerations: limited resources, saving funds to cover housing, both parties unemployed
+A9	ResolutioninProgress T12
+T13	PatientCaregiver_Unemployment 5219 5348	Reason for Disbursement: Other hardship considerations: limited resources, saving funds to cover housing, both parties unemployed
+T14	GeneralHousingInstability 5219 5348	Reason for Disbursement: Other hardship considerations: limited resources, saving funds to cover housing, both parties unemployed

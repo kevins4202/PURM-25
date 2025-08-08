@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 246 303;306 395;397 521;527 738	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Reason for Disbursement: Other hardship considerations: over hr from home, financial strain due to missing work/unpaid leave Additional comments: SW met with mother at bedside who confirmed needing additional vouchers. Patient currently on LTM/mother cannot leave bedside. SW completed redcap and coordinated to have vouchers delivered.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 397 521	Reason for Disbursement: Other hardship considerations: over hr from home, financial strain due to missing work/unpaid leave

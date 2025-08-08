@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 551 586;589 784	Patient living situation: PARENT(S) Parent Information: Mother ( Kaimynn) and Father ( Jahkir) live in Bridgeport, PA.  Patient lives with mother and patient's maternal grandmother , Father lives with patient's paternal grandmother
+A1	Negated T1
+T2	DistancefromHospital 1756 1806	Parent Stressors distance from home, patient's RSV
+T3	LackofInsurance 1898 1967	Public assistance/SSI comment: Patient is active with Keystone First.
+A2	Negated T3
+T4	DistancefromHospital 589 671	Parent Information: Mother ( Kaimynn) and Father ( Jahkir) live in Bridgeport, PA.
+T5	FinancialStrain_Other 2217 2255;2258 2427;2430 2550	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Parents staying at bedside, parents unable to stay at RMDH due to age, parents without access to a kitchen during admission and have limited income Intervention/Plan - Access to food SW to provide conconcrete resources as needed. SW provided parents with meal vouchers
+A3	ResolutioninProgress T5
+T6	NeedTemporaryLodging 2258 2427	Goal - Access to food Parents staying at bedside, parents unable to stay at RMDH due to age, parents without access to a kitchen during admission and have limited income
+T7	FoodInsecurity_Other 2217 2255;2258 2427	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Parents staying at bedside, parents unable to stay at RMDH due to age, parents without access to a kitchen during admission and have limited income
+T8	FinancialStrain_Other 3191 3248;3251 3339;3341 3417	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A4	ResolutioninProgress T8

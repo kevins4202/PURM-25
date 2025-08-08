@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 310 325	mom back at RMH
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 327 361	Dad visits when he is off of work.
+A2	Negated T2

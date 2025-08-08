@@ -1,0 +1,3 @@
+T1	Transportation_Other 30 53;55 173;175 191	Problem: RESOURCE NEEDS Goal: Patient will have adequate transportation resources to access needed medical care and return to home environment Outcome: Ongoing
+T2	LackofTransportation 895 952;955 1037	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 12.
+A1	ResolutioninProgress T2

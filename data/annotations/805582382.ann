@@ -1,0 +1,15 @@
+T1	DistancefromHospital 442 511	Family is from Paterson NJ, which is over two hours from CHOP by car.
+T2	NonPermanentPlacement 513 550	Family includes Mom, Dad, and Farrow.
+A1	Negated T2
+T3	PatientCaregiver_Unemployment 623 681	Mom is currently unemployed and Dad is employed as a cook.
+T4	PatientCaregiver_Unemployment 623 681	Mom is currently unemployed and Dad is employed as a cook.
+A2	Negated T4
+T5	LackofInsurance 683 740	Farrow has active insurance with NJ MA/Horizon NJ Health.
+A3	Negated T5
+T6	ChildcareBarrierfromHospitalization 742 802	Mom plans on staying bedside while Dad remains home to work.
+T7	ChildcareBarrierfromHospitalization 742 802	Mom plans on staying bedside while Dad remains home to work.
+A4	Negated T7
+T8	LackofTransportation 804 1004	Family is without a car and transportation might be needed.  SW spoke with Mom about reimbursing a friend/family member if transportation is provided by them.  Lyft/Ubers are reserved for emergencies.
+A5	ResolutioninProgress T8
+T9	NeedTemporaryLodging 1005 1059	Family has been placed on wait list for a room at RMH.
+A6	ResolutioninProgress T9

@@ -1,0 +1,12 @@
+T1	DrugUse 1707 1726;1729 1838	Substance Abuse YES Substance Abuse comment: Mother reports recently found out that Tysheer has been vaping and smoking marijuana
+T2	NonPermanentPlacement 701 763	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER
+A1	Negated T2
+T3	HomeEnvironment_Other 1841 1857;1860 1958	Legal Issues YES Legal Issues comment: Police involvement due to nature of events leading to youth's victimization.
+T4	LackofInsurance 2294 2361;2364 2413	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: medicaid insurance
+A2	Negated T4
+T5	HomeSafety 2482 2538;2541 2626	Resource Needs Problem: SAFE/ACCESSIBLE HOME ENVIRONMENT Intervention/Plan - Safe/Accessible home environment  Mother denies firearm ownership
+A3	Negated T5
+T6	ChildAbuse 3524 3595;3598 3718	Relationships/Behavior Problems SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time.
+A4	Negated T6
+T7	PatientCaregiver_Unemployment 4317 4404	Mother is employed full time, however declines need for note of admission at this time.
+A5	Negated T7

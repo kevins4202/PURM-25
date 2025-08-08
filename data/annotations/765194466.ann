@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 553 645	Grandmom inquired about meal and parking vouchers and SW shared she will put in the request.
+A1	ResolutioninProgress T1
+T2	HomeSafety 483 552	They also shared that aunt's house was inspected and approved by DHS.
+A2	Resolved T2
+T3	FinancialStrain_Other 1228 1285;1288 1404	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 4.
+A3	ResolutioninProgress T3

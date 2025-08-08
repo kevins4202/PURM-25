@@ -1,0 +1,17 @@
+T1	NonPermanentPlacement 622 658	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 681 740	Parent Information: Father is a student at Penn Law School.
+T3	NeedTemporaryLodging 1457 1478;1481 1606	Home Environment: YES Home Environment comment: Family is from Vietnam, here temporarily for father's school;  May be looking for another apartment
+T4	DistancefromHospital 1457 1478;1481 1606	Home Environment: YES Home Environment comment: Family is from Vietnam, here temporarily for father's school;  May be looking for another apartment
+T5	DistancefromHospital 742 808	Family is from Vietnam, here on a student visa for dad's schooling
+A2	Resolved T3
+T6	DistancefromHospital 2021 2064	Distance from their home/family in Vietnam;
+T7	FinancialStrain_Other 2267 2296;2300 2434;2437 2508	Intervention/Plan - Insurance Goal - Immigration/visa Father is on a student visa,needing assistance with requesting extension/new visa to be able to care for Carey Intervention/Plan - Immigration/visa PACT SW will provide documentation
+A3	ResolutioninProgress T7
+T8	HomeAccessibility 4085 4434	Ultimately, Carey's parents would want to take her home to Vietnam.  They recognize that this may not be possible in the short and/or long term.  They are unsure if they could take her home while she is needing ventilator support given the differences of resources in Vietnam. They also express that PT/OT/SLP is not available in their home country.
+T9	DistancefromHospital 4085 4152	Ultimately, Carey's parents would want to take her home to Vietnam.
+T10	NeedTemporaryLodging 4535 4673	They are considering whether they would be able to take Carey home locally in Philadelphia and are considering finding a larger apartment.
+A4	Resolved T10
+T11	NonPermanentPlacement 4675 4767	They would also like to tour several facilities to see if this would be an option for Carey.
+A5	Unsure T11
+T12	PatientCaregiver_Unemployment 4771 4812	Carey's father is in law School at Upenn.

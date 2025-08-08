@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 615 650	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 1015 1056	Mom is in orientation and also an artist.
+A2	Negated T2
+T3	DrugUse 1791 1810;1813 1923	CPS Involvement YES CPS involvment comment: Brandy Bell, DCF Social worker 609-626-3203 due to mom's canabis use during pregnancy.
+T4	HomeEnvironment_Other 1925 1959	Ms. Bell noted plan to close case.
+A3	ResolutioninProgress T4
+T5	GeneralHousingInstability 1962 1985;1988 2144	Housing instability YES Housing instability comment: Mom noted desire for housing opportunies closer to time of discharge.  SW will continue to work with DCF for any opportunities.
+A4	ResolutioninProgress T5
+T6	DistancefromHospital 2357 2460	Parent Stressors finances, distance from hospital, transportation, local accomodations, hospitalization
+T7	NeedTemporaryLodging 2357 2460	Parent Stressors finances, distance from hospital, transportation, local accomodations, hospitalization
+T8	DistancefromHospital 653 789	Parent Information: Mom (25yo) lives with MGM (second caregiver) in Atlantic City, NJ with maternal aunt (20yo) and maternal aunt's 4yo.
+T9	FinancialStrain_Other 2582 2669;2672 2776;2779 2876	Resource Needs Problem: HOUSEHOLD FINANCES;INSURANCE;LOCAL ACCOMODATIONS;TRANSPORTATION Goal - Household Finances Mom is currently on leave as well as grandma.  with limited financial supports Intervention/Plan - Household Finances SW will continue to provide support during hospitalization
+T10	PatientCaregiver_Unemployment 2672 2743	Goal - Household Finances Mom is currently on leave as well as grandma.
+A5	Negated T10
+T11	LackofInsurance 2879 2963;2966 3046	Goal - Insurance Mom is still in process of adding baby to her Horizon Health NJ MA. Intervention/Plan - Insurance SW will continue to support during hospitalization
+A6	ResolutioninProgress T11
+T12	LackofTransportation 3049 3142;3145 3238	Goal- Transportation Mom and MGM do not have a car.  Family reliant on public transportation. Intervention/Plan - Transportation SW will continue to provide support during hospitalization
+T13	NeedTemporaryLodging 3241 3342;3345 3460	Goal - Local Accommodations Mom and MGM hopeful to stay at RMH Philadelphia.  Family awaiting a room. Intervention/Plan- Local Accommodations SW will continue to work with RMH to provide support during hospitalizaiton
+A7	ResolutioninProgress T13

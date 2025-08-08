@@ -1,0 +1,5 @@
+T1	SubstanceAbuse_Other 340 501	Mother (Alexis) reached out to this SW yesterday and today to share plan of checking into inpatient treatment at John Brooks Recovery Center in Mays Landing, NJ.
+A1	ResolutioninProgress T1
+T2	HomeEnvironment_Other 810 922	SW notified DCPP caseworker of this update and confirmed that Alexis is permitted to provide this authorization.
+T3	SubstanceAbuse_Other 284 321	Behavioral health and Substance abuse
+A2	ResolutioninProgress T3

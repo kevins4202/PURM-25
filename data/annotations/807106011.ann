@@ -1,0 +1,4 @@
+T1	NonPermanentPlacement 854 965	--At time of discharge, CYS will take custody and make medical decisions, and will place Messiah with his aunt.
+A1	ResolutioninProgress T1
+T2	HomeSafety 967 1058	--CYS cleared aunt's home on 5/22, SW confirmed background checks have been updated on 6/6.
+A2	Resolved T2

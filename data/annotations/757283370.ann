@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 548 639	Father noted that he is unable to come in for discharge education due to his work schedule.
+A1	Negated T1
+T2	LackofTransportation 1217 1412	Mother requested assistance with transportation to the hospital this evening and tomorrow. Social worker arranged a round trip Lyft ride through the Center for Families for pick up at 6 PM today.
+T3	FinancialStrain_Other 1217 1412	Mother requested assistance with transportation to the hospital this evening and tomorrow. Social worker arranged a round trip Lyft ride through the Center for Families for pick up at 6 PM today.
+T4	FinancialStrain_Other 1987 2044;2047 2194;2200 2431	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Cab Vouchers (#'s): One round trip Lyft ride from home to the main hospital. Additional comments:  No other transportation, limited financial resources. Pick up arranged for 6 PM. Provided mother with instructions on how to request a will call return ride home when she is ready to leave the hospital tonight

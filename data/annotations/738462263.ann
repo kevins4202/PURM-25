@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 710 784;787 855	Patient living situation: RELATIVE(S);PARENT(S);CHILDREN IN THE HOME;OTHER Parent Information: Jasmin primarily resides with MGM: Bonnie Bettis
+A1	Negated T1
+T2	NonPermanentPlacement 979 1050	Other Information: Jasmin spends time with her mother, Desiree Delnero;
+A2	Negated T2
+T3	NonPermanentPlacement 1204 1280;1283 1359	Custody documentation: REPORT OF CUSTODY ORDER BUT NOT PROVIDED AT THIS TIME Comment Mother reports that she and MGM (Bonnie Bettis) share legal custody;
+A3	Negated T3
+T4	DistancefromHospital 2725 2793;2796 2945	Adjustment Problems ADJUSTMENT TO HOSPITALIZATION;EXPOSURE TO TRAUMA Goal- Adjustment to Hospitalization Paitent and family will demonstrate effective adjustment and coping with hospitalization, and distance from home.
+T5	ChildAbuse 3398 3469;3472 3592	Relationships/Behavior Problems NONE IDENTIFIED;SUSPECTED ABUSE/NEGLECT ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time.
+A4	Negated T5
+T6	NonPermanentPlacement 5267 5374	Mother maintains that she and MGM share legal custody, however Jasmin primarily resides in the home of MGM.
+A5	Negated T6
+T7	NonPermanentPlacement 5491 5553	Mother states Jasmin frequents her home often, and stays over.
+A6	Negated T7
+T8	CommunityEnvironment_Other 4277 4354	Mother states she was told they slipped and skidded and hit a telephone pole.

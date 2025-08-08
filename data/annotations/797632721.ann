@@ -1,0 +1,4 @@
+T1	LackofTransportation 770 842	She has to wait for her check in order to get transportation to bedside.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 770 922	She has to wait for her check in order to get transportation to bedside. (Mom reports she did not complete Colette Louise application for Uber credits).
+A2	ResolutioninProgress T2

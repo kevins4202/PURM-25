@@ -1,0 +1,4 @@
+T1	NeedofChildcare 622 855	She noted that parents have access to child care support once Thanyaa is discharged, however they are waiting to better understand what Thanyaa's care needs will be following discharge to determine how to use their child care support
+A1	ResolutioninProgress T1
+T2	LackofInsurance 280 581	Progress:  Social worker met with parents at bedside in the NICU. Parent shared that they have not yet received follow up regarding Thanyaa's secondary PA Medical Assistance application status. Social worker reviewed PA Compass portal with mother and confirmed that the application is still in process
+A2	Negated T2

@@ -1,0 +1,9 @@
+T1	FinancialStrain_Other 1858 2008	Parent Stressors Prolonged ICU-level hospitalization, financial resource strain as a result of Conor's lengthy and unanticipated NICU hospitalization.
+T2	NonPermanentPlacement 639 686	Patient living situation: PARENT(S);RELATIVE(S)
+A1	Negated T2
+T3	FinancialStrain_Other 2130 2172;2175 2361;2364 2900	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Conor will have SSI benefits. Parents will have financial assistance to offset the costs associated with Conor's lengthy and unanticipated NICU hospitalization. Intervention/Plan - Household Finances Provided parents with instructions on the SSI application process. Parents plan to apply. Submitted a request for gas card assistance to Harp's Hope for a Wawa gift card to offset the cost of gas expenses. Provided information about the Opens Doors Foundation. Mother would like to apply. Parents pay rent/utilities to maternal grandmother. Social worker will follow up with parents to complete the Opens Doors Foundation application and obtain supporting documents for the June application cycle.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 4218 4295	Social worker will assist parents with an Opens Doors Foundation application.
+A3	ResolutioninProgress T4
+T5	HomeEnvironment_Other 4296 4498	Received sign-out from Bryn Mawr NICU social worker, Danielle Heher, who reports that a PA Child Line notification was made after Conor's birth regarding mother's prescribed medications. Cleared by CYS.
+A4	Resolved T5

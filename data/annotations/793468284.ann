@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 577 665	SW intern provided parents with 4 meal vouchers, 1 parking pass and a $25 gas gift card.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1212 1269;1272 1378;1380 1474	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Gift Cards: 1. Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 1
+A2	ResolutioninProgress T2

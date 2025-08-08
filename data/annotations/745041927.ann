@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 556 612;615 658	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Patient lives with mom;
+A1	Negated T1
+T2	HomeEnvironment_Other 2085 2202	Social worker was informed after conversation with mom that NJ DCPP&P is currently involved due to an outside report.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 659 706	mom currently does not work outside of the home
+A3	Negated T3

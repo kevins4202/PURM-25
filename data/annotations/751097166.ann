@@ -1,0 +1,5 @@
+T1	NeedTemporaryLodging 384 436	Both parents continue to visit daily from local RMH.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 836 974	Dad shared that an additional stressor is his current unemployment and concern about ability to apply for jobs during the hospitalization.
+T3	PatientCaregiver_Unemployment 1522 1629	SW also assisted mom with navigating FMLA and NJ FLI paperwork and necessary forms were signed by CICU FLC.
+A2	Negated T3

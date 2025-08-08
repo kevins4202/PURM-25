@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 268 376	Family has limited financial resources to purchase meals in the cafeteria during Rayyan's unexpected illness
+T2	FinancialStrain_Other 447 497	Meal vouchers provided for use through the weekend
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 984 1041;1044 1132;1134 1325	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Other hardship considerations: Family is not receiving WIC or SNAP benefits. Mother has been staying at bedside. Provided 4 meal vouchers for use through the weekend.
+A2	ResolutioninProgress T3
+T4	FoodInsecurity_Other 1134 1235	Reason for Disbursement: Other hardship considerations: Family is not receiving WIC or SNAP benefits.

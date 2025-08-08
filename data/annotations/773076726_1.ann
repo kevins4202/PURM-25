@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 310 369	Parents are staying at RMH and visiting throughout the day.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 370 510	Mom is using sick time from work, then maternity leave. Dad is using vacation time, but would like FMLA forms filled out prior to discharge;
+A2	Negated T2

@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 735 755	Mother is unemployed
+T2	PatientCaregiver_Unemployment 760 782	Father works full time
+A1	Negated T2
+T3	LackofInsurance 2105 2172;2175 2229	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA medicaid
+A2	Negated T3
+T4	PatientCaregiver_Unemployment 2303 2360;2363 2438	Resource Needs Problem: NONE IDENTIFIED;EMPLOYMENT/INCOME Goal - Employment/income Mother recently lost her job and is now unemployed
+T5	FinancialStrain_Other 2441 2580	Intervention/Plan - Employment/income SW to provide concrete resources during hosptial admission and explore additional financial resources
+A3	ResolutioninProgress T5

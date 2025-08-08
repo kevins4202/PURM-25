@@ -1,0 +1,6 @@
+T1	LackofTransportation 452 575	Mother will be returning to school on 4/14/23. Mother requested Septa passes to assist with transportation to the hospital.
+A1	ResolutioninProgress T1
+T2	UnabletoPay 1200 1257;1260 1341;1343 1458	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 5. Reason for Disbursement: Other hardship considerations: Mother is a student and does not currently have any income.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 1200 1257;1260 1341;1343 1754	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 5. Reason for Disbursement: Other hardship considerations: Mother is a student and does not currently have any income. Her Septa pass provided through the school district provides rides Monday through Friday, however no rides this week due to a break during school. Mother does not have alternative transportation to the hospital to visit Gael. Septa passes provided for the remainder of the week and this weekend.
+A3	ResolutioninProgress T3

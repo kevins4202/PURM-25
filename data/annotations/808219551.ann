@@ -1,0 +1,4 @@
+T1	DrugUse 363 496;500 593	SW met with patient at bedside earlier this morning to discuss his negative CRAFFT questionnaire, yet his positive UDS for marijuana. Patient states he smoked marijuana one time 'awhile ago' and denies ongoing use of marijuana.
+A1	HistoryOf T1
+T2	SubstanceAbuse_Other 599 670	Patient denies use of alcohol, vaping, edibles and any other substance.
+A2	Negated T2

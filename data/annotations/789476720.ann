@@ -1,0 +1,5 @@
+T1	LackofInsurance 646 783	"Baby is a dependent of a dependent and Mom (Tah’Jana) was working with FHCP/Rosemarie Paddilla to apply for insurance coverage for baby.
+A1	ResolutioninProgress T1
+T2	DrugUse 785 893	A ChildLine call was placed on Thursday 3/23/23 due to Mom’s substance abuse/marijuana use during pregnancy.
+T3	HomeSafety 785 1043	A ChildLine call was placed on Thursday 3/23/23 due to Mom’s substance abuse/marijuana use during pregnancy.  ChildLine call was placed by Lucia Figueroa, SDU SW.  Lucia reported to me that child can still be discharge home as DHS starts their investigation"
+A2	ResolutioninProgress T3

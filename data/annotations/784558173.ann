@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 675 731;734 875	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Tristin lives with his married parents in Bainbridge, PA (Lancaster County); father works as a cook, is currently on FMLA
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 734 875	Parent Information: Tristin lives with his married parents in Bainbridge, PA (Lancaster County); father works as a cook, is currently on FMLA
+A2	Negated T2
+T3	FinancialStrain_Other 1847 1913	Parent Stressors Tristin's procedures and PICU admission, finances
+T4	LackofTransportation 2070 2133	Transportation comment: eligible for MATP mileage reimbursement
+A3	Negated T4
+T5	FinancialStrain_Other 2070 2133	Transportation comment: eligible for MATP mileage reimbursement
+A4	ResolutioninProgress T5
+T6	LackofInsurance 2136 2175	Public assistance/SSI comment: Medicaid
+A5	Negated T6
+T7	NeedTemporaryLodging 2348 2391;2394 2456;2459 2640	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Maintain local lodging arrangement Intervention/Plan- Local Accommodations SW remains available for support, family currently has a room at Camden Ronald McDonald House and are on the waiting list for Philly location
+A6	Resolved T7

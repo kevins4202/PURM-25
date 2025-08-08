@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 603 659;662 850	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 662 850	Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A2	Negated T2
+T3	LackofTransportation 2226 2289	Transportation comment: eligible for MATP mileage reimbursement
+A3	Negated T3
+T4	FinancialStrain_Other 2226 2289	Transportation comment: eligible for MATP mileage reimbursement
+A4	ResolutioninProgress T4
+T5	LackofInsurance 2292 2417	Public assistance/SSI comment: NJ Medicaid, MLTSS evaluation took place and mom reports she was told eligibility will be soon
+A5	Negated T5
+T6	LackofInsurance 2587 2685	Other existing community services/outside support comment: Horizon BCBS of NJ, PCP: Dr. Williamson
+A6	Negated T6

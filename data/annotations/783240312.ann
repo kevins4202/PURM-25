@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 108 191	Progress: Dad called SW this morning and asked questions about the ODF application.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 315 384	SW will submit ODF application when Dad completes the parent portion.
+A2	ResolutioninProgress T2

@@ -1,0 +1,22 @@
+T1	NeedTemporaryLodging 328 432	Plan: Covering SW consulted to assist newly admitted family with lodging and navigating hospitalization.
+T2	NonPermanentPlacement 433 488	Mom reports that pt lives with parents in Paterson, NJ.
+A1	Negated T2
+T3	DistancefromHospital 433 488	Mom reports that pt lives with parents in Paterson, NJ.
+T4	PatientCaregiver_Unemployment 677 793	Mom is not working currently, formerly worked in cell phone sales but stopped once pt was born. Dad works as a cook.
+A2	Negated T4
+T5	NeedTemporaryLodging 798 921	Mom plans to stay locally and requested assistance with RMH room request, SW put in request for tomorrow, 6/6 through 6/19.
+A3	ResolutioninProgress T5
+T6	PatientCaregiver_Unemployment 922 977	Dad will periodically visit when able to take off work.
+A4	Negated T6
+T7	LackofTransportation 978 1231	Family does not have private vehicle and dad will need to take several forms to public transit to travel to CHOP, SW advised to discuss transportation concerns with primary SW for potential additional supports. Pt is plugged into modivcare for f/u apts.
+A5	ResolutioninProgress T7
+T8	DistancefromHospital 978 1188	Family does not have private vehicle and dad will need to take several forms to public transit to travel to CHOP, SW advised to discuss transportation concerns with primary SW for potential additional supports.
+T9	FinancialStrain_Other 1236 1314	Mom expressed financial concerns, SW advised primary SW may be able to assist.
+T10	FinancialStrain_Other 1406 1449	SW provided toiletrees and 6 meal vouchers.
+A6	ResolutioninProgress T10
+T11	FinancialStrain_Other 1894 1951;1954 2042;2044 2240	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Unforseen/emergent admission-no available resources, Critical medical status-not feasible to leave hospital at present and Other hardship considerations: limited resources
+A7	ResolutioninProgress T11
+T12	FinancialStrain_Other 210 219;222 249	Problems: Finances and Transportation
+A8	ResolutioninProgress T12
+T13	LackofTransportation 210 219;222 249	Problems: Finances and Transportation
+A9	ResolutioninProgress T13

@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 647 708	Leo's mother has returned to work and is working night shift.
+A1	Negated T1
+T2	FinancialStrain_Other 916 973;976 1061	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gift Cards: 1.
+A2	ResolutioninProgress T2

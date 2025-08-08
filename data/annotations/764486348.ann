@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 254 311;314 401	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft ride
+A1	ResolutioninProgress T1
+T2	LackofTransportation 254 311;314 401	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft ride

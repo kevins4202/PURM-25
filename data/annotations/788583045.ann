@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 360 406	SW provided weekly parking passes and gas card
+A1	ResolutioninProgress T1
+T3	FinancialStrain_Other 440 536	Family is working on completing Open doors grant application for additional financial resources.
+A2	ResolutioninProgress T3
+T5	FinancialStrain_Other 1045 1102;1105 1219;1221 1322	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Gas Cards: $50 and Parking Passes (#'s): 5. Reason for Disbursement: Other hardship considerations: prolonged admission, frequent hospital travel
+A3	ResolutioninProgress T5

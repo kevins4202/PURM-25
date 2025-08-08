@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 683 1073	Mother shared that she was contacted by her insurance regarding a program related to CHD that offers supports including reimbursement for some travel costs and case management. SW provided concrete resource assistance from cardiac fund (1 gas card 5 parking passes) to assist during time prior to knowledge of this program. SW will discuss MBA Opens Doors also to assist around missed work.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 683 859	Mother shared that she was contacted by her insurance regarding a program related to CHD that offers supports including reimbursement for some travel costs and case management.
+A2	Negated T2
+T3	LackofInsurance 1076 1201	Family has not yet initiated application for secondary insurance, SW encouraged to start and offered guidance on the process.
+A3	Negated T3

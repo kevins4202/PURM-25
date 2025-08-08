@@ -1,0 +1,8 @@
+T1	DistancefromHospital 593 653	The family lives in Lehighton, PA approx 1.5 hours from CHOP
+T2	NonPermanentPlacement 508 590	Parents are Carissa and Scott Gillespie, they also have a 6yo daughter named Molly
+A1	Negated T2
+T3	NeedTemporaryLodging 655 689	Family has checked into local RMH.
+A2	Resolved T3
+T4	PatientCaregiver_Unemployment 690 778	Carissa is employed as a travel adult cardiac ICU RN and Scott is employed as a laborer.
+A3	Negated T4
+T5	FinancialStrain_Other 951 1065	SW provided 2 guest meal vouchers and provided instructions on how to order meals and purchase more in the future.

@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 280 359	She will likely quit her job in anticipation of being pt's full time caregiver.
+A1	Negated T1
+T2	FinancialStrain_Other 360 430	SW reminded her of foundation assistance available for help with rent.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 431 784	SW provided mom with directions for how to take public transportation to bedside (although it would take an hour), Logisticare phone # (encouraged her to register pt, as she may be able to get rides to appts). and Community Resource Connects information. (Mom reports she sometimes borrow's grandmother's car, gets rides or takes Uber for twin's appts).
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 941 1021	Mom asked about meal vouchers; SW provided 3 (one for tonight, 2 for wknd stay).
+A4	ResolutioninProgress T4

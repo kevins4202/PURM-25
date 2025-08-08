@@ -1,0 +1,8 @@
+T1	LackofInsurance 778 932	Confirmed with the Philadelphia Change Center that the twins have been added to PA Medical Assistance. Mother plans to enroll the twins in Keystone First.
+A1	ResolutioninProgress T1
+T2	LackofFundsforFood 1078 1341	Mother had a WIC appointment. We discussed that the twins will receive a WIC referral form at discharge to receive formula from WIC. Social worker will follow up to provide maternal grandmother with food assistance resources given recent changes to SNAP benefits.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 2056 2113;2116 2204;2206 2365	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Other hardship considerations: Meal vouchers provided due to limited financial resources for mother to purchase food in the cafeteria.
+A3	ResolutioninProgress T3
+T4	LackofInsurance 149 172;174 258;260 276	Problem: RESOURCE NEEDS Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing
+A4	ResolutioninProgress T4

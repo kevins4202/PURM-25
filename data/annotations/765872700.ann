@@ -1,0 +1,11 @@
+T3	DistancefromHospital 802 907	Parents noted wanting to go back to Geisinger ASAP due to all around stressors and distance from supports
+T4	PatientCaregiver_Unemployment 910 958	Both mom and dad work for Penn State university.
+A2	Negated T4
+T5	LackofTransportation 1763 1861	Parent Strengths can articulate needs, adequate family support, understands illness, access to car
+A3	Negated T5
+T6	DistancefromHospital 1864 1951	Parent Stressors distance from hospital, length of hospitalization, local accomodations
+T8	NeedTemporaryLodging 2073 2116;2119 2260;2263 2395	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Parents are currently staying at the Sheraton and were unaware of potential timeline for hospitalization at CHOP. Intervention/Plan- Local Accommodations SW provided information for RMH Philadelphia and will continue to provide support as needed.
+T1	NonPermanentPlacement 593 628	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	NeedTemporaryLodging 1864 1951	Parent Stressors distance from hospital, length of hospitalization, local accomodations
+A4	ResolutioninProgress T8

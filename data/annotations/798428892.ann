@@ -1,0 +1,4 @@
+T1	LackofInsurance 778 825	Baby has active insurance and EPIC was updated.
+A1	Negated T1
+T2	NeedTemporaryLodging 827 876	Family will remain at RMH until discharge occurs.
+A2	Resolved T2

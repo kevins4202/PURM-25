@@ -1,0 +1,22 @@
+T1	NonPermanentPlacement 568 604	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	DistancefromHospital 680 734	Family resides in Bellmawr, NJ about 20 min from CHOP.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 735 799	Both parents are employed as teachers, not working at this time.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 1909 2011	Parent Stressors Multiple hospitalizations, missed work time, balancing care of Nico and young sibling
+A4	Negated T4
+T5	LackofInsurance 2014 2100;2103 2252	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;FOUNDATION SUPPORT Public assistance/SSI comment: Recently received approval through MLTSS- initially straight NJMA then will switch to Aetna Better Health starting 6/1
+A5	Negated T5
+T6	FinancialStrain_Other 2255 2373	Foundation support comment: MBA Opens Doors, Victoria Ciara Foundation (help with medication co-pay), Fred's Footsteps
+A6	ResolutioninProgress T6
+T7	FinancialStrain_Other 2442 2501;2504 2636;2639 2738	Resource Needs Problem: IN-HOME SERVICES;HOUSEHOLD FINANCES Goal - Household Finances Family will connect with available resources to support maintaining financial stability while not working. Intervention/Plan - Household Finances SW has connected the family with foundations for assistance.
+A7	ResolutioninProgress T7
+T8	LackofInsurance 2861 2959	Intervention/Plan- In-Home Services SW has assisted with MLTSS application process, just approved.
+A8	Negated T8
+T9	LackofInsurance 3811 3927	Family informed SW that MLTSS was approved, currently straight NJ MA then will switch to Aetna Better Health on 6/1.
+A9	Negated T9
+T10	LackofInsurance 3980 4158	Family also working with advocate from father's insurance to attempt to appeal lack of home nursing benefit through primary insurance (Aetna), has not been approved at this time.
+A10	Negated T10
+T11	FinancialStrain_Other 4160 4307	Family was approved for mortgage assistance through Fred's Footsteps. SW provided meal vouchers to offset costs related to unexpected re-admission.
+A11	ResolutioninProgress T11

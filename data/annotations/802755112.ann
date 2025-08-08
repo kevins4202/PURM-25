@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 437 525	Patient and patient family awarded by Fred`s Footsteps and LSW informed patient parents.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1193 1250;1253 1369	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 2.
+A2	ResolutioninProgress T2

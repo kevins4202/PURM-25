@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 645 701	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 787 935	Mom is on leave from work as a nurses aide, however she has not received her Disability. Father has returned to work as a bus driver for NJ Transit.
+A2	Negated T2
+T3	FinancialStrain_Other 2083 2253	Parent Stressors Transfer to CHOP, mom can't drive independently yet since pt's birth, financial resource strain related to mother's NJ Disability claim which was denied.
+T4	Transportation_Other 2083 2253	Parent Stressors Transfer to CHOP, mom can't drive independently yet since pt's birth, financial resource strain related to mother's NJ Disability claim which was denied.
+T5	FinancialStrain_Other 2256 2326;2329 2439	Existing Community Services/Outside Supports: FOUNDATION SUPPORT;OTHER Foundation support comment: NICU SW applied for one month of rental assistance through Opens Doors Foundation.
+A3	ResolutioninProgress T5
+T6	LackofInsurance 2967 3032;3035 3346	Goal - Insurance Lance will have NJ Medical Assistance insurance. Intervention/Plan - Insurance Lance is currently covered under his father's employer-sponsored Horizon Blue Cross Blue Shield of NJ insurance plan. Mother applied online through NJ Family Care for NJ Medical Assistance, however the application was not approved. The family is income-eligible for NJ Family Care.
+A4	Negated T6
+T7	LackofFundsforFood 3578 3642;3645 3720	Goal - Access to food Lance will have WIC benefits at discharge. Intervention/Plan - Access to food Mom knows where the local WIC office is.
+A5	ResolutioninProgress T7

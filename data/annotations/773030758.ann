@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 657 704;707 782	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Mother: Margaret May. Messiah is mother's second child.
+A1	Negated T1
+T2	HomeEnvironment_Other 2147 2166;2169 2227	CPS Involvement YES CPS involvment comment: Open case with Luzerne County CYS.
+T3	DrugUse 2327 2346;2349 2463	Substance Abuse YES Substance Abuse comment: Mother with a history of substance use. Mother reports she is not currently in treatment.
+A2	HistoryOf T3
+T4	HomeEnvironment_Other 3073 3170;3173 3238	Existing Community Services/Outside Supports: CHILDREN AND YOUTH AGENCY/CUA;PUBLIC ASSISTANCE/SSI Children and youth agency/CUA comment: Luzerne County CYS worker:
+T5	LackofInsurance 3272 3384	Public assistance/SSI comment: Messiah has been added to PA Medical Assistance Amerihealth Caritas PA insurance.
+A3	Negated T5

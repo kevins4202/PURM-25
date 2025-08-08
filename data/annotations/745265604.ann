@@ -1,0 +1,5 @@
+T1	ChildcareBarrierfromHospitalization 471 572	Dad shared mom would be able to visit on a weekend due to childcare conflicts with patient's siblings
+T2	LackofTransportation 342 470	Parents are interested in visiting patient and are currently working with DCP&P to secure transportation resources for the trip.
+A1	ResolutioninProgress T2
+T3	HomeEnvironment_Other 342 470	Parents are interested in visiting patient and are currently working with DCP&P to secure transportation resources for the trip.
+A2	ResolutioninProgress T3

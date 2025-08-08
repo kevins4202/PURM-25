@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 397 482	She started process of obtaining OPC, but was informed DHS needed to come to bedside.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 659 820	DHS worker, Kiyana Grimes (267-461-0494), received OPC to discharge pt to aunt, Melissa Keys, and will plan to drive pt and aunt to aunt's home for a home visit.
+A2	Resolved T2
+T3	HomeSafety 659 820	DHS worker, Kiyana Grimes (267-461-0494), received OPC to discharge pt to aunt, Melissa Keys, and will plan to drive pt and aunt to aunt's home for a home visit.
+A3	ResolutioninProgress T3
+T4	HomeEnvironment_Other 32 55;57 179	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs

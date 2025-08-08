@@ -1,0 +1,6 @@
+T1	DrugUse 440 751	Care team members had concerns with Dad's behaviors when speaking with him.  SW spoke with parents regarind this and Dad reported that he is prescribed Subutex.  He is currently in substance abuse treatment program and is provided with monthly prescriptions of Subutx.  He reports that this can make him drowsy.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 946 1038	SW provided family with three donated $10 gift cards to the cafeteria to help with finances.
+A2	ResolutioninProgress T2
+T3	DrugUse 283 298	Substance abuse
+A3	ResolutioninProgress T3

@@ -1,0 +1,22 @@
+T1	NonPermanentPlacement 586 622	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	DistancefromHospital 743 797	Family resides in Jackson, NJ approx 1.5 hr from CHOP.
+T3	NonPermanentPlacement 928 1016	Other Information: Patient and family live with Dalia Vega and her husband (Host Family)
+A2	Negated T3
+T4	FoodInsecurity_Other 1676 1695;1698 2227	Food insecurity YES Food insecurity comment: Per outpatient SW assessment-- Family would like information on food resources local to their area. SW assessment of current food insecurity: family has adequate food in the home, but will need additional assistance as they have not applied for cash or food stamp benefits. The Children's Emergency Medical Fund of New Jersey is working with the family to assist with additional food resources as able. SW will follow up with family as well for referral to local community resources for Ocean County, NJ.
+A3	ResolutioninProgress T4
+T5	HomeAccessibility 3367 3507	Referral completed to Children's Emergency Medical Fund of NJ for car seat and additional concrete resource needs such as clothing, diapers.
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 3082 3139;3142 3264;3267 3366	Resource Needs Problem: TRANSPORTATION;HOUSEHOLD FINANCES Goal - Household Finances Family will connect with available community resource referrals for support with concrete needs. Intervention/Plan - Household Finances Family receiving much support from Outpatient Cardiology SW.
+A5	ResolutioninProgress T6
+T7	LackofTransportation 3510 3588;3591 3703	Goal- Transportation Family will utilize Modivcare for transportation support. Intervention/Plan - Transportation SW will assist as needed. SW to coordinate discharge transport via Modivcare.
+A6	ResolutioninProgress T7
+T8	LackofTransportation 4744 4839	SW assisted with walking family to main front desk to assist with obtaining father's ride home.
+A7	ResolutioninProgress T8
+T9	NeedTemporaryLodging 4903 4963	SW answered family's questions about the unit and about RMH.
+T10	FinancialStrain_Other 4968 5132	SW to explore connecting with Community Affairs and Resource Center (CARC) for additional concrete resource assistance and support with applying for state benefits.
+A8	ResolutioninProgress T10
+T11	LackofInsurance 5133 5170	Genesis has active NJMA at this time.
+A9	Negated T11
+T12	LackofTransportation 5171 5277	Family has connected with NJ Modivcare transportation, SW to coordinate discharge transport via Modivcare.
+A10	ResolutioninProgress T12

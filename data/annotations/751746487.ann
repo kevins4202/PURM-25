@@ -1,0 +1,19 @@
+T1	LackofTransportation 130 243	Progress: CFF confirmed that Dad successfully got onto the Lyft this morning to the Boston Greyhound Bus Station.
+A1	Resolved T1
+T2	LackofInsurance 714 1235	Through further conversation, SW discovered that this FA appointment will be the apply the family for Masshealth (Massuchusetts Medicaid). SW discussed that while this will be needed, we will need to set the family up more immediately with Charity Care, as they will be uninsured awaiting the transfer to NJ MA to MA MA. BMC FA discussed that they do not do Charity Care, and that SW will need to call BMC Pediatrics Department (617-414-5086) and request to speak with a SW there to complete the Charity Care Application.
+A2	ResolutioninProgress T2
+T3	HomeEnvironment_Other 1387 1525	SW received call from DCPP caseworker (609-626-3200) who informed SW that she is going to put in a request to transfer the case to Boston.
+T4	LackofTransportation 1806 1891	SW discussed that SW will be approved a Lyft ride from the Greyhound Station to CHOP.
+A3	Resolved T4
+T5	LackofTransportation 2158 2215;2218 2322;2324 2402;2406 2426;2430 2538	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3 and Other: Lyft. Reason for Disbursement: Other hardship considerations: No Financial Resources Additional comments: SW approved Lyft ride for the family from Philadelphia Greyhound Station to CHOP when Dad arrives at 5:15pm.
+A4	Resolved T5
+T6	FinancialStrain_Other 2158 2215;2218 2322;2324 2402	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3 and Other: Lyft. Reason for Disbursement: Other hardship considerations: No Financial Resources
+A5	ResolutioninProgress T6
+T7	FinancialStrain_Other 2789 2877	SW also approved meal vouchers for today and tomorrow for Dad when he is at the bedside.
+A6	ResolutioninProgress T7
+T8	LackofTransportation 3598 3653	SW to approve Lyft from from Greyhound Station to CHOP.
+A7	Resolved T8
+T9	LackofInsurance 3094 3226;3228 3317;3319 3429	SW to get in touch with BMC SW (Pediatrics: 617-414-5086) regarding setting up Charity Care for Esther (SW awaiting BMC SW callback) [ ] Dad to register himself with BMC, so he can apply for Financial Assistance for Esther [ ] SW to schedule an appointment with BMC Financial Assistance (617-414-5155) once Dad is registered with BMC
+A8	ResolutioninProgress T9
+T10	LackofInsurance 3654 4006	SW will speak with BMC SW regarding getting the family set up with Charity Care. SW will inform Dad that he will need to register himself with BMC. SW will then help Dad schedule an appointment with BMC MA next week. MD working on setting up PCP appointment with the understanding that FA Appointment is in place and hopefully Charity Care applied for.
+A9	ResolutioninProgress T10

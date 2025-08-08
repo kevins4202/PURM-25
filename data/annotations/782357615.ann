@@ -1,0 +1,8 @@
+T1	NeedTemporaryLodging 492 658	SW discussed CICU environment and need for alternative lodging as pt would likely be roomed in pod, mom agreed to RMH Philadelphia referral which was completed by SW.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 832 1327	Mom confirmed she was contacted by AFAHO via case worker Leyitha, inquired re: transport to office to p/u diapers, SW advised we could not provide this transport but referred to Maker's Place Diaper Depot in Trenton for supplies closer to home. SW also called Modivcare of NJ and confirmed pt is already enrolled in services, can contact for d/c ride and upcoming OP visits. Provided mom with contact information, states she has supports who can help her navigate arranging for rides in English.
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 208 217;220 278	Problems: Finances, Housing, Language differences and Transportation
+A3	ResolutioninProgress T3
+T4	LackofTransportation 208 217;220 278	Problems: Finances, Housing, Language differences and Transportation
+A4	ResolutioninProgress T4

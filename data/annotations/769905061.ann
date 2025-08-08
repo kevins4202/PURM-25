@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 268 434	Parents checked in to Ronald McDonald House on Chestnut Street. They are planning to continue staying there with Scarlet while Scarlet's twin sister remains admitted.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 435 578	Mother is planning to contact her employer to add the twins to her employer-sponsored Horizon Blue Cross Blue Shield of NJ insurance this week.
+A2	Negated T2
+T3	LackofInsurance 435 578	Mother is planning to contact her employer to add the twins to her employer-sponsored Horizon Blue Cross Blue Shield of NJ insurance this week.
+A3	ResolutioninProgress T3

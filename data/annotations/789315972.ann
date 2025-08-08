@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 650 685;688 845	Patient living situation: PARENT(S) Parent Information: Reagan is the first child born to her intact parents, Bernadette and John, who live together in Norwood, PA (about 25 minutes from CHOP).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 846 1144	Parents are both employed. Father is taking time off until 3/29 and will take an additional week once Raegan is discharged. Social worker provided father with information about FMLA in the event he would like to apply. Mother is on maternity leave until June. She plans to return to work part-time.
+T3	LackofInsurance 2357 2445;2448 2602;2605 2810	Resource Needs Problem: INSURANCE;CHILD CARE/DAY CARE;EMPLOYMENT/INCOME;IMMIGRATION/VISA Goal - Insurance Raegan will be added to father's employer-sponsored Personal Choice insurance and will have secondary PA Medical Assistance through PH95. Intervention/Plan - Insurance Parents plan to add Raegan to their insurance. Provided information about secondary PA Medical Assistance through the PH95 Special Needs Category. Parents would like to apply.
+A2	ResolutioninProgress T3
+T4	PatientCaregiver_Unemployment 2949 3022;3025 3226	Goal - Employment/income Father will have information about FMLA options. Intervention/Plan - Employment/income Social worker provided father with information about FMLA in the event he would like to apply for additional time off. Father plans to follow up with his employer.
+A3	Negated T4
+T5	NeedofChildcare 3484 3561;3564 3647	Goal - Child care/Day care Parents will have local medical daycare referrals. Intervention/Plan- Child care/Day care Parents are interested in daycare referrals.
+A4	ResolutioninProgress T5
+T6	LackofTransportation 4805 4938	Parents plan to commute to and from the hospital from their home in Delaware County now that mother has been discharged from the SDU.
+A5	Negated T6
+A6	Negated T2
+T7	NeedTemporaryLodging 4805 4938	Parents plan to commute to and from the hospital from their home in Delaware County now that mother has been discharged from the SDU.
+A7	Negated T7

@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 34 57;59 192;194 210;219 402	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing Progress:  Confirmed that mom received $310 in gift cards to purchase a monthly train pass. She requested the rest of the award from Colette Louise to be paid toward her utility bill.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 219 310	Progress:  Confirmed that mom received $310 in gift cards to purchase a monthly train pass.
+A2	ResolutioninProgress T2

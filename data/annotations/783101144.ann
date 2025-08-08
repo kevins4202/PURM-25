@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 394 536	Mother reports intention to complete MBA Opens Doors Foundation application but likely needs to take a trip home to obtain necessary paperwork
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 296 355	Mother engaged in a work call so our conversation was brief
+A2	Negated T2

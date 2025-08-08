@@ -1,0 +1,19 @@
+T1	NonPermanentPlacement 583 624;627 714	Patient living situation: PARENT(S);OTHER Parent Information: Fatima is the first child of Sukhrob Ibatova and Aliaksandra Skorb.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 715 750	Father (Sukhrob) is a truck driver.
+A2	Negated T2
+T3	HomeEnvironment_Other 891 1140	Other Information: Per DHS safety plan, when Father is away from home for work, Father has arranged for Fatima to stay in the care of Alla Shovenko (a family friend), her husband and their 3 year old toddler. Father cares for Fatima when he is home.
+A3	ResolutioninProgress T3
+T4	HomeEnvironment_Other 1862 1881;1884 2060	CPS Involvement YES CPS involvment comment: Philadelphia DHS has been involved since birth and the case is still currently open. DHS Worker: Chante Waller (215) 834-7380. DHS safety plan in place.
+A4	ResolutioninProgress T4
+T5	DrugUse 2109 2128;2131 2242	Substance Abuse YES Substance Abuse comment: Per DHS, Mother with a history of substance use. Mother is not currently in treatment.
+A5	HistoryOf T5
+T6	HomeEnvironment_Other 3600 3652;3655 3730;3733 3957	Relationships/Behavior Problems CUSTODY/GUARDIANSHIP Goal - Custody/Guardianshiop DHS will provide clarity regarding disposition Intervention/Plan - Custody/Guardianship Per DHS safety plan, patient should be discharged to Father. If Father is not available at the time of discharge, with Father's permission, patient can be discharged to Alla Shovenko.
+A6	ResolutioninProgress T6
+T7	HomeEnvironment_Other 4307 4371	Case currently remains open with DHS. A safety plan is in place.
+A7	ResolutioninProgress T7
+T8	HomeSafety 4372 4432	Per DHS worker, DHS has been unable to assess Mother's home.
+T9	PatientCaregiver_Unemployment 4690 4851	Father also provided permission for Fatima to be discharged to family friend, Alla Shovenko, if father is traveling for work when Fatima is stable for discharge.
+A8	Negated T9
+T10	NonPermanentPlacement 4690 4851	Father also provided permission for Fatima to be discharged to family friend, Alla Shovenko, if father is traveling for work when Fatima is stable for discharge.
+A9	Negated T10

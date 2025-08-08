@@ -1,0 +1,5 @@
+T1	DistancefromHospital 320 411	Mom reported that the family has decided to return to Vietnam at the beginning of February.
+T2	DistancefromHospital 826 932	Family's plan is to visit patient every 1-2 months until they are able to make a more permanent residency.
+A1	ResolutioninProgress T2
+T3	HomeAccessibility 933 1061	Mom stated that they cannot take patient to Vietnam at this time as she feels she won't be safely cared for in a hospital there.
+T4	NonPermanentPlacement 1103 1156	The current plan for patient is transfer to facility.

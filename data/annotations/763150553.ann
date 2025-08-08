@@ -1,0 +1,13 @@
+T1	PatientCaregiver_Unemployment 798 869	Mom works in drug and alcohol counseling and dad also works in recovery
+A1	Negated T1
+T2	IntimatePartnerViolence 1592 1613;1616 1660	Home Environment: YES Home Environment comment: Resources provided
+A2	ResolutioninProgress T2
+T3	DistancefromHospital 1832 1927	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A3	Negated T3
+T4	LackofTransportation 1832 1926	Parent Strengths can articulate needs, adequate family support, understands illness, car, loca
+A4	Negated T4
+T5	LackofInsurance 2141 2174;2177 2325;2328 2395	Resource Needs Problem: INSURANCE Goal - Insurance Mom noted she is in process of adding baby to her own secondary PA MA as mom has Keystone HP East but unable to afford to add baby. Intervention/Plan - Insurance SW will continue to support as needed
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 2177 2324	Goal - Insurance Mom noted she is in process of adding baby to her own secondary PA MA as mom has Keystone HP East but unable to afford to add baby
+T7	NonPermanentPlacement 591 626;629 796	Patient living situation: PARENT(S) Parent Information: Mom and dad live seperately in NE Philadelphia.  Baby is their first born at HUP due to moms complications with Lupus and baby's fetal heart block.
+A6	Negated T7

@@ -1,0 +1,8 @@
+T1	DistancefromHospital 457 606	Mother talked about experiences and care team at Lehigh Valley, and shared how challenging it is to be admitted at a hospital further away from home.
+T2	FinancialStrain_Other 787 878	Mother reports receiving multiple guest meal vouchers from an external oncology foundation.
+A1	ResolutioninProgress T2
+T3	NonPermanentPlacement 912 1082	Patient lives with mother, stepfather, two siblings, aunt, and two cousins (mother reports having custody of her niece and nephew) in Walnutport, PA (Northampton County).
+A2	Negated T3
+T4	DistancefromHospital 912 1082	Patient lives with mother, stepfather, two siblings, aunt, and two cousins (mother reports having custody of her niece and nephew) in Walnutport, PA (Northampton County).
+T5	PatientCaregiver_Unemployment 1083 1140	Mother denies having any work related needs at this time.
+A3	Negated T5

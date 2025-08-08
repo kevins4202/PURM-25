@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 727 784;787 903;909 929;933 1014;1016 1061	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 3. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment. Patient eligible for reassessment on 4/28/23.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 440 475	Concrete needs assessment complete.
+A2	ResolutioninProgress T2

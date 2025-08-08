@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 597 632;635 723	Patient living situation: PARENT(S) Parent Information: Leo was born to parents Kimara and Victor who reside in Trenton, NJ.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 724 835	The patient's father is currently employed in Waste Management and the patient's mother is currently unemployed
+T3	PatientCaregiver_Unemployment 724 836	The patient's father is currently employed in Waste Management and the patient's mother is currently unemployed.
+A2	Negated T3
+T4	NeedTemporaryLodging 837 899	The patient's parents are ineligible to stay at the RMD house.
+T5	LackofFundsforFood 1608 1627;1630 1769	Food insecurity YES Food insecurity comment: Patient's mother shared that she has limited resources to obtain food. Parents are eligible for concrete resources
+A3	ResolutioninProgress T5
+T6	LackofFundsforFood 2705 2754;2757 2867;2870 2961	Adjustment Problems ADJUSTMENT TO HOSPITALIZATION Goal- Adjustment to Hospitalization Patient's parents will continue to cope and adapt to Leo's hospitalization Intervention/Plan - Adjustment to Hospitalization LSW will provide support where appropriat
+A4	ResolutioninProgress T6
+T7	FinancialStrain_Other 4230 4287;4290 4395	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6 and Gift Cards: 4
+A5	ResolutioninProgress T7

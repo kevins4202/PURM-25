@@ -1,0 +1,10 @@
+T1	PatientCaregiver_Unemployment 416 478	Dad plans on returning home tomorrow (6/14) to return to work.
+A1	Negated T1
+T2	LackofTransportation 480 628	Family asked for assistance in getting Dad to Gray Hound bus station tomorrow afternoon.  Trip was approved and placed into Red Caps for the family.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 630 705	SW also spoke about MBA Opens Doors program and family would like to apply.
+A3	ResolutioninProgress T3
+T4	LackofTransportation 1674 1731;1734 1821	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft Ride
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 1674 1731;1734 1821	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft Ride
+A5	ResolutioninProgress T5

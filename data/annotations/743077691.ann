@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 690 767	Nestor is a Minister and Diana is a stay at home mom with their 3yo daughter.
+A1	Negated T1
+T2	DistancefromHospital 636 689	Family lives in East Windsor, NJ about 1hr from CHOP.
+T3	LackofInsurance 768 858	SW discussed adding the patient to insurance, mom aware of the process and will follow up.
+A2	ResolutioninProgress T3
+T4	NeedTemporaryLodging 859 953	Family discussing checking into RMH, SW provided phone number for family to reach out as well.
+A3	ResolutioninProgress T4

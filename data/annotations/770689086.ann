@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 339 379	Family has been visiting from local RMH.
+A1	Resolved T1
+T2	LackofInsurance 380 495	SW discussed adding newborn to insurance and answered questions about the process. Mom plans to contact NJMA today.
+A2	ResolutioninProgress T2

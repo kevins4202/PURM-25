@@ -1,0 +1,9 @@
+T1	FinancialStrain_Other 750 794	SW provided meal vouchers and parking passes
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 589 638	SW provided patient's father with letter for work
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 712 746	Father taking unpaid time off work
+A3	Negated T3
+T4	FinancialStrain_Other 645 711	Parents with no income at this time and have no left the hospital.
+T5	FinancialStrain_Other 1319 1376;1379 1495;1497 1573	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 2. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A4	ResolutioninProgress T5

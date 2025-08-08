@@ -1,0 +1,5 @@
+T2	CommunityEnvironment_Other 1926 2163	Assessment Summary: 7yo F presents to trauma bay secondary to a MVC involving mother, mother's boyfriend, and twin sister. Mother reports she was operating the vehicle when they were hit head on by another vehicle while turning a corner.
+T3	CommunitySafety 2164 2244	Mother reports that both children were back seat passengers and were restrained.
+A2	Negated T3
+T1	NonPermanentPlacement 667 703	Patient living situation: PARENT(S);
+A1	Negated T1

@@ -1,0 +1,12 @@
+T1	LackofInsurance 1125 1256	CM - will arrange supplies with an in network provider, so no cost to parents, Parents will get training and need to practice care.
+A1	Negated T1
+T2	GeneralHousingInstability 1350 1494	Mom confirmed that parents plan to move out of aunt/uncle's home prior to discharge and plan to stay in Philadelphia for the foreseeable future.
+A2	ResolutioninProgress T2
+T3	DistancefromHospital 1834 1900	Parents do not have a plan yet to go to Mexico to visit their son.
+A3	SubjectIsNotPatient T3
+T4	GeneralHousingInstability 1901 2043	She reports they have located 2 options of apartments, but neither are large and she asked about the necessary size of the bedroom for the pt.
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 2138 2223	Also took dictation from mom for Colette Louise application and will complete online.
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 252 275;277 410;412 428	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A6	ResolutioninProgress T6

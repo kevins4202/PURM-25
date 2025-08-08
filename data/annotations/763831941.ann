@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 644 682	Parent Information: Mother is employed
+A1	Negated T1
+T2	FinancialStrain_Other 2158 2321	Writer and mother spoke about some of the current hardships that surround the hospital admission. Writer is assisting mother in applying for Open Doors Foundation.
+A2	ResolutioninProgress T2
+T3	NonPermanentPlacement 585 641	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A3	Negated T3

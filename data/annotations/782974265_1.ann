@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 247 375	SW and Dad discussed the high, accruing costs of transportation from Newark, NJ to CHOP that Dad has experienced this admission.
+T2	LackofTransportation 376 432	Dad takes the train from Newark, NJ to Philadelphia, PA.
+A1	Negated T2
+T3	FinancialStrain_Other 433 623	SW offered assisting the family with applying for one month of rental assistance through ODF to help offset the costs of transportation this admission. Dad in agreement with applying to ODF.
+A2	ResolutioninProgress T3

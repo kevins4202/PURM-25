@@ -1,0 +1,6 @@
+T1	LackofInsurance 685 756	Additional comments:  Pt currently has out of state medical assistance;
+A1	Negated T1
+T2	FinancialStrain_Other 246 303;306 619;621 679;685 956	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Pharmacy: Lancets- 30 days; Alcohol Prep Pad- 30 days; Syringes- 30 days; Gvoke- Qty 1; Ketone Test Strips- 30 day; One Touch Test Strips- 30 day; Insulin Glargine- 1 vial; Precision Test Strip- qty:60; Precision Meter- Qty 1= TOTAL $1211.78. Reason for Disbursement: Medically necessary for discharge Additional comments:  Pt currently has out of state medical assistance; therefore, unable to fill medications at CHOP pharmacy. SW approval with approval from SW manager under Diabetes Hope for Families Fund. All medications are necessary to ensure safe discharge for pt.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 957 1016	Pt was referred to FHCP to assist with change of insurance.
+A3	Negated T3

@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 578 613;616 769	Patient living situation: PARENT(S) Parent Information: Mom and dad live in Mount Airy and will be moving to Yeadon in the next 2 weeks.  Lia is their first child born at Abington Hospital.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 948 1004	Mom works in sales and dad is an independent contracter.
+A2	Negated T2
+T3	LackofTransportation 1774 1869	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A3	Negated T3
+T4	LackofInsurance 1927 1994;1997 2071	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Lia is already added to UPMC for you PA MA.
+A4	Negated T4
+T5	FinancialStrain_Other 2140 2182;2185 2337;2340 2496	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom noted that family was used to paying $20 a month for parking at Abington and family will need assistance with the parking. Intervention/Plan - Household Finances SW provided mom with 5 parking passes per need at this time and started financial applications for long term support.
+A5	ResolutioninProgress T5
+T6	DistancefromHospital 1774 1869	Parent Strengths can articulate needs, adequate family support, understands illness, car, local
+A6	Negated T6
+T7	FinancialStrain_Other 1872 1924	Parent Stressors length of hospitalization, finances

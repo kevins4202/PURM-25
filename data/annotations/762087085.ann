@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1640 1697;1700 1816;1822 1842;1846 1922	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 1. Additional comments: LSW assessed for patient and patient parents need for resources and provided
+T2	PatientCaregiver_Unemployment 1201 1384	Patient mother discussed her adjustment to working while having to navigate pumping-patient mother continues to adjust and seek support from LSW and other hospital supports as needed.
+A1	Negated T2
+A2	ResolutioninProgress T1

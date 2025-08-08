@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 601 657	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 660 779	Parent Information: Seronda (Mother) is currently on maternity leave from Wal-Mart and Anthony (Father) works at Fedex.
+A2	Negated T2
+T3	DistancefromHospital 780 838	Parents live together in Lancaster, PA (1 hr 30 min drive)
+T4	ChildcareBarrierfromNonHospitalization 1913 2097	Parent Stressors Parent stressors include Zakiyyah's RSV contraction and subsquent hospitalization, as well as being away from home and from her 5 and 3 year old children and finances.
+T5	FinancialStrain_Other 1913 2097	Parent Stressors Parent stressors include Zakiyyah's RSV contraction and subsquent hospitalization, as well as being away from home and from her 5 and 3 year old children and finances.
+T6	FinancialStrain_Other 2224 2262;2265 2327;2330 2399	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Mother is eligble for concrete resources Intervention/Plan - Access to food SW Intern to provide meal vouchers
+A3	ResolutioninProgress T6
+T8	FinancialStrain_Other 3197 3254;3257 3345	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4.
+A5	ResolutioninProgress T8
+T9	DistancefromHospital 1913 2097	Parent Stressors Parent stressors include Zakiyyah's RSV contraction and subsquent hospitalization, as well as being away from home and from her 5 and 3 year old children and finances.
+T7	NeedTemporaryLodging 2665 2873	Intervention/Plan - Adjustment to Hospitalization SW Intern provided information about the Ronald McDonald House, sleep rooms, concrete resources, and offer any emotional support or other resources if needed.
+A4	ResolutioninProgress T7
+T10	FinancialStrain_Other 2665 2873	Intervention/Plan - Adjustment to Hospitalization SW Intern provided information about the Ronald McDonald House, sleep rooms, concrete resources, and offer any emotional support or other resources if needed.
+A6	ResolutioninProgress T10

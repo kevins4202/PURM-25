@@ -1,0 +1,29 @@
+T1	NonPermanentPlacement 610 663;666 732	Patient living situation: PARENT(S);RELATIVE(S);OTHER Parent Information: Yaribeth lives with her mother in Trenton, NJ.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 733 869	Mom had previously worked (for 23 years), but her job got interrupted during COVID. Mom has been unable to work since due to her health.
+T3	GeneralHousingInstability 1627 1650;1653 1868	Housing instability YES Housing instability comment: Mom is looking to move due to ongoing issues with mice in her home and needing a more appropriate space for her and Yaribeth. Mom is actively looking, PICU SW provided housing resources.
+A2	ResolutioninProgress T3
+T4	LackofFundsforFood 1871 1890;1893 2248	Food insecurity YES Food insecurity comment: Mom applied for EBT and got one payment, and has not received anything since then. Mom attempted to go to the CAO today, but they advised her that she needed to complete a form, but she was unable to complete this without assistance and they denied her assistance. SW to troubleshoot this with Mom. Mom has limited access to food.
+T5	GeneralHousingInstability 2758 2878	Parent Stressors Mom's health, current housing situation, signficant financial strain, getting access to public benefits
+T6	FinancialStrain_Other 2758 2878	Parent Stressors Mom's health, current housing situation, signficant financial strain, getting access to public benefits
+T7	LackofTransportation 2881 2963;2966 3082	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;TRANSPORTATION Transportation comment: Mom does not drive. Mom's niece does not live nearby, but drives Mom places she needs to go.
+A3	ResolutioninProgress T7
+T8	FinancialStrain_Other 3365 3448;3451 3544;3547 3834	Resource Needs Problem: HOUSEHOLD FINANCES;ACCESS TO FOOD;EMPLOYMENT/INCOME;HOUSING Goal - Household Finances Family will receive support with household finances this admission. Intervention/Plan - Household Finances SW will continue to assess and explore avenues to assist the family financially this admission. SW to apply to ODF, as Mom confirmed she has a landlord and access to the needed documentation for the application. SW to look into other organizations,
+A4	ResolutioninProgress T8
+T9	GeneralHousingInstability 3837 3910;3913 4094	Goal - Housing Family will have needed supports to identify safe housing. Intervention/Plan- Housing PICU SW provided housing resources. Mom is actively looking for housing and will keep SW updated with progress and if any additional resources are needed.
+A5	ResolutioninProgress T9
+T10	FoodInsecurity_Other 4097 4170;4173 4388	Goal - Access to food Mom will have access to food during this admission. Intervention/Plan - Access to food SW will continue to reassess for concrete resources during this admission. SW to assist Mom with obtaining SNAP benefits and will provide information regarding local food pantries.
+A6	ResolutioninProgress T10
+T11	FinancialStrain_Other 4391 4479;4482 4616	Goal - Employment/income Mom will have the needed supports to apply for SSI for herself. Intervention/Plan - Employment/income SW will provide Mom with support in applying for SSI so that the family can have monthly income.
+A7	ResolutioninProgress T11
+T12	FinancialStrain_Other 5416 6053	Mom shared her ongoing challenges with getting public benefits- SSI for herself and SNAP. Mom shared that she went to the CAO today and was told that she needs to complete a W2 form in order to complete the application. Mom requested assistance with completing the form due to her visual disabilities, but was denied assistance. Mom shared that they offered to email her the form, but she didn't have access to a computer or printer. SW offered for Mom to provide this SW email address and SW can print off the application and assist Mom with completing it. Mom in agreement with this plan and will return to the CAO and keep SW updated.
+A8	ResolutioninProgress T12
+T13	HomeAccessibility 6160 6364	Mom then discussed that while the home has two floors, they both stay in the living room on the first floor due to not being able to carry Yaribeth up the stairs, and for Mom to utilize the steps herself.
+T14	FinancialStrain_Other 6704 6829	Mom also clarified that she has a landlord and pays $1,025/month in rent. SW discussed ODF and Mom is interested in applying.
+A9	ResolutioninProgress T14
+T15	UnabletoPay 6993 7039	Mom confirmed she has already paid April rent.
+A10	Negated T15
+T16	FinancialStrain_Other 7040 7074	The rental grant would be for May.
+A11	ResolutioninProgress T16
+T17	GeneralHousingInstability 7078 7384	Mom looking into identifying new housing due to ongoing issues with mice and wanting a more appropriate space for her and Yaribeth. Mom confirmed that her landlord is aware and active in supporting the pest issue and has another exterminator coming out today, but the problem has been persistent over time.
+A12	ResolutioninProgress T17

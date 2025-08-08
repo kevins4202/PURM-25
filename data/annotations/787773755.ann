@@ -1,0 +1,26 @@
+T1	NonPermanentPlacement 676 732	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 791 889	Mom is currently working for Qdoba in Bryn Mawr, over 40 hrs/week. Pt's father is in between jobs.
+A2	Negated T2
+T3	LackofFundsforFood 1748 1767;1770 1954	Food insecurity YES Food insecurity comment: Mom reports that SNAP benefits aren't always enough because she uses them to buy formula instead of registering for WIC. SW encouraged mom to register for WIC.
+T4	PatientCaregiver_Unemployment 2111 2192	Parent Strengths Mom wants to be kept up to date via phone; full time employment.
+A3	Negated T4
+T5	PatientCaregiver_Unemployment 2195 2316	Parent Stressors Lengthy hospitalization, working many hours to support family so can't visit bedside,lack of own vehicle
+A4	Negated T5
+T6	ChildcareBarrierfromHospitalization 2195 2316	Parent Stressors Lengthy hospitalization, working many hours to support family so can't visit bedside,lack of own vehicle
+T7	LackofTransportation 2195 2316	Parent Stressors Lengthy hospitalization, working many hours to support family so can't visit bedside,lack of own vehicle
+T8	LackofTransportation 2319 2401;2404 2528	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;TRANSPORTATION Transportation comment: Parents sometimes borrow grandmother's car for outpt appts or they use Uber. Mom aware of Modivcare.
+T9	LackofInsurance 2531 2685	Public assistance/SSI comment: Pt has PA Medicaid (Keystone First), pt receives SSI ($30/month while admitted), family receives SNAP benefits ($900/month)
+A5	Negated T9
+T10	LackofFundsforFood 2531 2685	Public assistance/SSI comment: Pt has PA Medicaid (Keystone First), pt receives SSI ($30/month while admitted), family receives SNAP benefits ($900/month)
+A6	Negated T10
+T11	PatientCaregiver_Unemployment 2924 3075	Intervention/Plan - Household Finances Mom reports she is working extra hours to support the family and cannot visit bedside as much as she would like.
+A7	Negated T11
+T12	ChildcareBarrierfromHospitalization 2924 3075	Intervention/Plan - Household Finances Mom reports she is working extra hours to support the family and cannot visit bedside as much as she would like.
+T13	LackofTransportation 3076 3151	Parents take uber to visit bedside as they bring the siblings when they do.
+T14	PatientCaregiver_Unemployment 3152 3294	SW discussed Colette Louise foundation for uber credits and ODF to assist with rent, so mom can work fewer hours and visit bedside more often.
+A8	Negated T14
+T15	ChildcareBarrierfromHospitalization 3152 3294	SW discussed Colette Louise foundation for uber credits and ODF to assist with rent, so mom can work fewer hours and visit bedside more often.
+A9	ResolutioninProgress T15
+T16	FinancialStrain_Other 3152 3294	SW discussed Colette Louise foundation for uber credits and ODF to assist with rent, so mom can work fewer hours and visit bedside more often.
+A10	ResolutioninProgress T16

@@ -1,0 +1,7 @@
+T1	LackofFundsforFood 468 534	Mom reports she completed SNAP application and has been contacted.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 535 628	She reports she completed the parent portion of the Colette Louise application for gas cards.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 664 710	Mom reports she completed the ODF application.
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 205 228;230 363;365 381	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing

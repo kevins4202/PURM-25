@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 738 771	2 parking passes left at bedside.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1030 1087;1090 1185;1191 1211;1215 1296	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 2. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment.
+A2	ResolutioninProgress T2

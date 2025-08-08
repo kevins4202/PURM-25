@@ -1,0 +1,5 @@
+T1	FinancialStrain_Other 242 299;302 390;396 524	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Additional comments:  Initial assessment complete and approved for 6 vouchers until Trauma SW returns for re-assessment of needs
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 526 622	Family lives in Luzerne County and Mother is at ronald mcdonald house for ongoing resource needs
+T3	NeedTemporaryLodging 526 622	Family lives in Luzerne County and Mother is at ronald mcdonald house for ongoing resource needs
+A2	Resolved T3

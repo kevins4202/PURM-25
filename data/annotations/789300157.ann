@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 510 570	Vader lives at home with his mother, father, and 2 siblings.
+A1	Negated T1
+T2	ChildcareBarrierfromHospitalization 571 645	Mother is at home with siblings currently while father is in Philadelphia.
+A2	Negated T2
+T3	ChildcareBarrierfromNonHospitalization 571 645	Mother is at home with siblings currently while father is in Philadelphia.
+A3	Negated T3
+T4	LackofTransportation 646 743	Father travelled with Vader to CHOP, does not have car locally, will discuss transportation home.

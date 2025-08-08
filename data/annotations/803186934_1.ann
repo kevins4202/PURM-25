@@ -1,0 +1,14 @@
+T1	LackofTransportation 299 470	SW stopped by bedside while mom was present and utilized spanish interpreter 703664 to check in with mom and provide ModivCare ride information for scheduled appointments.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 607 787	Mom also shared her concerns of not leaving bedside to go to RMH and to go get food downstairs as she does not want to leave her daughter alone as the patient cries and misses her.
+A2	Resolved T2
+T3	FinancialStrain_Other 788 1015	Mom wants to remain present as much as she can to be with the patient. SW shared that she will provide mom with meal vouchers so that she can order food bedside and not have to leave. Mom said she would appreciate the vouchers.
+A3	ResolutioninProgress T3
+T4	FoodInsecurity_Other 1019 1154	Mom also shared that the patient's dad has reached out to the local community resource that was provided yesterday to assist with food.
+A4	ResolutioninProgress T4
+T5	LackofTransportation 1334 1477	SW also told mom that though the discharge date has tentatively changed, she will still be able to receive assistance with transportation home.
+A5	ResolutioninProgress T5
+T6	FinancialStrain_Other 1544 1549;1552 1582	Plan: SW will provide meal vouchers.
+A6	ResolutioninProgress T6
+T7	FinancialStrain_Other 2098 2155;2158 2246	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A7	ResolutioninProgress T7

@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 585 620;623 682	Patient living situation: PARENT(S) Parent Information: Bruna lives with her mother and father.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 683 727	Mother reported she does not currently work.
+T3	PatientCaregiver_Unemployment 728 793	Father current is employed. Mother reports he picks berries in NJ
+A2	Negated T3

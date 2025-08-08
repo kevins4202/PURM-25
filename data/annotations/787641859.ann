@@ -1,0 +1,19 @@
+T1	DistancefromHospital 451 536	Per mom, pt lives in Bolivar, MO with mom, 18 and 16 y/o sisters, and sister's child.
+T2	NonPermanentPlacement 451 536	Per mom, pt lives in Bolivar, MO with mom, 18 and 16 y/o sisters, and sister's child.
+A1	Negated T2
+T3	DrugUse 572 691	Pt's father has hx of IVDU and is currently incarcerated following long history of violence toward mother and siblings.
+A2	HistoryOf T3
+T4	PatientCaregiver_Unemployment 572 691	Pt's father has hx of IVDU and is currently incarcerated following long history of violence toward mother and siblings.
+T5	IntimatePartnerViolence 572 691	Pt's father has hx of IVDU and is currently incarcerated following long history of violence toward mother and siblings.
+A3	HistoryOf T5
+T6	ChildAbuse 572 691	Pt's father has hx of IVDU and is currently incarcerated following long history of violence toward mother and siblings.
+A4	HistoryOf T6
+T7	ChildAbuse 850 922	He is not to have any contact with pt d/t history of child sexual abuse.
+A5	HistoryOf T7
+T8	DistancefromHospital 1022 1142	Tommie is currently in Springfield, MO and resides in Arkansas, very unlikely he will arrive physically in Philadelphia.
+A6	SubjectIsNotPatient T8
+T9	PatientCaregiver_Unemployment 1365 1457	Mom is currently unemployed, SW provided 6 meal vouchers to offset costs of hospitalization.
+T10	FinancialStrain_Other 1365 1457	Mom is currently unemployed, SW provided 6 meal vouchers to offset costs of hospitalization.
+A7	ResolutioninProgress T10
+T11	FinancialStrain_Other 1972 2029;2032 2120;2122 2195	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Other hardship considerations: limited resources
+A8	ResolutioninProgress T11

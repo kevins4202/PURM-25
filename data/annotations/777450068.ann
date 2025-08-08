@@ -1,0 +1,4 @@
+T1	DistancefromHospital 272 369	Progress: Parents are currently home in Vietnam whole patient is awaiting a bed in a PA facility.
+T2	NonPermanentPlacement 272 369	Progress: Parents are currently home in Vietnam whole patient is awaiting a bed in a PA facility.
+A1	ResolutioninProgress T2
+T3	DistancefromHospital 440 495	Parents plan to return to the US in few weeks to visit.

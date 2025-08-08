@@ -1,0 +1,7 @@
+T1	UnabletoPay 562 699	Mom reports her current rent is paid beyond the end of Jan, but she is not sure if it is for the whole month of Feb or half of the month;
+A1	Negated T1
+T2	FinancialStrain_Other 838 1037	She has a gift card from the NICU with a $90 credit for Lyft to be able to visit. SW informed mom of another foundation that may be able to assist, but suggested we wait to find out the medical plan.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 838 919	She has a gift card from the NICU with a $90 credit for Lyft to be able to visit.
+A3	ResolutioninProgress T3
+T4	HomeEnvironment_Other 211 446	Progress:  SW was unable to reach pt's mother on mobile phone, so called CYS worker, Alex Chip. Provided medical update (MRI tonight, which will determine plan). He provided alternate phone # for mom, which SW was able to reach her on.

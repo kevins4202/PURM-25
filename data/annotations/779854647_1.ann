@@ -1,0 +1,6 @@
+T1	LackofInsurance 30 53;55 139;141 157	Problem: RESOURCE NEEDS Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 400 556	SW clarified that RMH had been the one calling mom which mom was unsure who was calling.  SW re-explained SW support both at RMH and CHOP and collaboration.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 558 706	SW also called dad with mom to address ongoing issue of patient not being insured.  SW reiterated that FHCP needed documents to complete application
+A3	ResolutioninProgress T3

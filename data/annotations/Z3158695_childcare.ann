@@ -1,0 +1,66 @@
+T1	NeedTemporaryLodging 864 917	Family currently staying at RMH during this admission
+A1	Resolved T1
+T2	NeedTemporaryLodging 864 917	Family currently staying at RMH during this admission
+A2	Resolved T2
+T6	PatientCaregiver_Unemployment 744 768	Patient's mother is SAHM
+A6	Negated T6
+T7	PatientCaregiver_Unemployment 2159 2180	Father is employed FT
+A7	Negated T7
+T8	PatientCaregiver_Unemployment 2159 2180	Father is employed FT
+A8	Negated T8
+T9	PatientCaregiver_Unemployment 2537 2550	missing work,
+A9	Negated T9
+T10	PatientCaregiver_Unemployment 2537 2549	missing work
+A10	Negated T10
+T13	NeedTemporaryLodging 3762 3797	Family currently has a room at RMH.
+A13	Resolved T13
+T14	NeedTemporaryLodging 3762 3796	Family currently has a room at RMH
+A14	Resolved T14
+T19	PatientCaregiver_Unemployment 4397 4438	Father is currently employed FT with IRS.
+A11	Negated T19
+T20	PatientCaregiver_Unemployment 4397 4437	Father is currently employed FT with IRS
+A12	Negated T20
+T21	LackofTransportation 4473 4505	Family has two private vehicles.
+A15	Negated T21
+T22	LackofTransportation 4473 4505	Family has two private vehicles.
+A16	Negated T22
+T25	LackofInsurance 4506 4528	Patient has active MA.
+A19	Negated T25
+T26	LackofInsurance 4506 4527	Patient has active MA
+A20	Negated T26
+T27	LackofTransportation 2416 2449	Family has access to private car.
+A21	Negated T27
+T29	PatientCaregiver_Unemployment 770 801	Patient's father works for IRS.
+A23	Negated T29
+T30	LackofTransportation 831 862	Family has two private vehicles
+A24	Negated T30
+T33	LackofInsurance 2690 2714	patient has secondary MA
+A25	Negated T33
+T35	ChildcareBarrierfromHospitalization 2182 2264	Patient's mother and father are at bedside and regularly involved in patient care.
+A26	Negated T35
+T36	ChildcareBarrierfromHospitalization 2182 2263	Patient's mother and father are at bedside and regularly involved in patient care
+A27	Negated T36
+T38	Childcare_Other 2551 2586	being apart from patient's siblings
+#9	AnnotatorNotes T38	*Needs new childcare code*
+T37	Childcare_Other 2551 2586	being apart from patient's siblings
+#8	AnnotatorNotes T37	New childcare code
+T31	NeedofChildcare 1243 1375	Per mother, patient does not currently attend daycare. Parents in the process of requesting approval for medical daycare for Phoenix
+T11	NeedofChildcare 2829 2961;2964 3102	Goal - Child care/Day care LOMN along with information from patient's PCP will be sufficient to approve patient for medical daycare. Intervention/Plan- Child care/Day care SW coordinated with FLOC and patient's parents regarding LOMN for patient to attend medical daycare
+T12	NeedofChildcare 3845 3939	Parents coordinated with SW regarding LOMN and other needs for medical daycare to be approved.
+#1	AnnotatorNotes T12	SW in progress
+T15	NeedofChildcare 3798 3844	Family requesting medical daycare for patient.
+T16	NeedofChildcare 1243 1375	Per mother, patient does not currently attend daycare. Parents in the process of requesting approval for medical daycare for Phoenix
+T17	NeedofChildcare 2829 2960	Goal - Child care/Day care LOMN along with information from patient's PCP will be sufficient to approve patient for medical daycare
+T18	NeedofChildcare 2964 3102	Intervention/Plan- Child care/Day care SW coordinated with FLOC and patient's parents regarding LOMN for patient to attend medical daycare
+T23	NeedofChildcare 3798 3842	Family requesting medical daycare for patien
+T24	NeedofChildcare 3845 3938	Parents coordinated with SW regarding LOMN and other needs for medical daycare to be approved
+T41	LackofTransportation 2416 2449	Family has access to private car.
+A30	Negated T41
+T42	LackofTransportation 831 862	Family has two private vehicles
+A31	Negated T42
+T43	LackofInsurance 2690 2714	patient has secondary MA
+A32	Negated T43
+T32	NonPermanentPlacement 577 645;648 743	Patient living situation: PARENT(S);CHILDREN IN THE HOME;RELATIVE(S) Parent Information: Patient lives at home with mom, dad and three brothers in Williamsport, PA.
+A17	Negated T32
+T3	PatientCaregiver_Unemployment 744 830	Patient's mother is SAHM. Patient's father works for IRS. Father is approved for FMLA.
+A3	Negated T3

@@ -1,0 +1,13 @@
+T2	ChildcareBarrierfromHospitalization 851 881	Mother remains admitted to HUP
+T4	DrugUse 1641 1660;1663 1762	CPS Involvement YES CPS involvment comment: DHS investigation active due to maternal substance use and history with DHS
+T8	LackofInsurance 2453 2546	Public assistance/SSI comment: Mother has PA MA, Mother to add patient to her insurance  plan
+T10	HomeSafety 3527 3588	DHS case is open, family will need DHS clearance prior to d/c
+T11	PermanentPlacementPending 3527 3588	DHS case is open, family will need DHS clearance prior to d/c
+A2	ResolutioninProgress T8
+T1	NonPermanentPlacement 566 622	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T7	HomeSafety 1641 1660;1663 1762	CPS Involvement YES CPS involvment comment: DHS investigation active due to maternal substance use and history with DHS
+T5	DrugUse 1790 1809;1812 1931;1934 1994;1997 2160	Substance Abuse YES Substance Abuse comment: Mother + for PCP in May per HUP SW, Mother attends Consortium for medicaition management daily Patient and Family/Caregiver Strengths and Stressors: PARENT Parent Strengths mother enrolled in D&A treatment, mother and father are coping as well as can be expected at this time, mother and father are receptive to support
+A3	ResolutioninProgress T5
+T3	HomeSafety 2163 2243	Parent Stressors patient's guarded prognosis and NIICU admisison, DHS involvment
+T6	ChildcareBarrierfromHospitalization 3380 3411	Mother remains admitted to HUP.

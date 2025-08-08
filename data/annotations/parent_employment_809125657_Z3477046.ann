@@ -1,0 +1,38 @@
+T1	NonPermanentPlacement 535 570	Patient living situation: PARENT(S)
+A1	Negated T1
+T3	NonPermanentPlacement 535 570	Patient living situation: PARENT(S)
+A3	Negated T3
+T2	PatientCaregiver_Unemployment 1830 1873;1876 1996;1999 2125	Resource Needs Problem(s) EMPLOYMENT/INCOME Goal - Employment/income Parents to gain required support from Social Worker with any documentation for their employers. Intervention/Plan - Employment/income LSW to provide letters and/or complete any medical forms for FMLA that parents may need.
+A2	Negated T2
+T4	NeedTemporaryLodging 2688 2794	Parents do not need local accommodations as they are comfortable traveling back and forth from Roxborough.
+A4	Negated T4
+T5	PatientCaregiver_Unemployment 1830 1873;1876 1996;1999 2125	Resource Needs Problem(s) EMPLOYMENT/INCOME Goal - Employment/income Parents to gain required support from Social Worker with any documentation for their employers. Intervention/Plan - Employment/income LSW to provide letters and/or complete any medical forms for FMLA that parents may need.
+A5	Negated T5
+T6	PatientCaregiver_Unemployment 2797 2933;2935 3158	Parens both are employed-mom is on FMLA and has recently ended her 3 month leave. Mom works at Pennsylvania hospital. Dad works as well. Dad has taken a short leave and wont return until after July 4th. Both of parents employers have been understanding.Parents made aware that they may receive support for LSW with any letters or any FMLA documentation needed.
+A6	Negated T6
+T7	NeedTemporaryLodging 2688 2793	Parents do not need local accommodations as they are comfortable traveling back and forth from Roxborough
+A7	Negated T7
+T8	PatientCaregiver_Unemployment 2797 2933;2935 3158	Parens both are employed-mom is on FMLA and has recently ended her 3 month leave. Mom works at Pennsylvania hospital. Dad works as well. Dad has taken a short leave and wont return until after July 4th. Both of parents employers have been understanding.Parents made aware that they may receive support for LSW with any letters or any FMLA documentation needed.
+A8	Negated T8
+T11	PatientCaregiver_Unemployment 3447 3583	Parents outlined a goal of returning to Pennsylvania hospital as mother works there and it is more convenient from a family perspective.
+A11	Negated T11
+A12	Speculation T11
+T12	PatientCaregiver_Unemployment 3447 3583	Parents outlined a goal of returning to Pennsylvania hospital as mother works there and it is more convenient from a family perspective.
+A13	Negated T12
+A14	Speculation T12
+T13	NonPermanentPlacement 535 570	Patient living situation: PARENT(S)
+A15	Negated T13
+T14	PatientCaregiver_Unemployment 1830 1873;1876 1996;1999 2125	Resource Needs Problem(s) EMPLOYMENT/INCOME Goal - Employment/income Parents to gain required support from Social Worker with any documentation for their employers. Intervention/Plan - Employment/income LSW to provide letters and/or complete any medical forms for FMLA that parents may need.
+A16	Negated T14
+T15	NeedTemporaryLodging 2688 2793	Parents do not need local accommodations as they are comfortable traveling back and forth from Roxborough
+A17	Negated T15
+T16	DistancefromHospital 2688 2794	Parents do not need local accommodations as they are comfortable traveling back and forth from Roxborough.
+A18	Negated T16
+T17	PatientCaregiver_Unemployment 2797 2933;2935 3158	Parens both are employed-mom is on FMLA and has recently ended her 3 month leave. Mom works at Pennsylvania hospital. Dad works as well. Dad has taken a short leave and wont return until after July 4th. Both of parents employers have been understanding.Parents made aware that they may receive support for LSW with any letters or any FMLA documentation needed.
+A19	Negated T17
+T18	LackofInsurance 3220 3296	LSW to send secondary Medicaid application information to parents via email.
+A20	Negated T18
+T10	PatientCaregiver_Unemployment 3447 3583	Parents outlined a goal of returning to Pennsylvania hospital as mother works there and it is more convenient from a family perspective.
+A10	Negated T10
+T9	LackofInsurance 3220 3296	LSW to send secondary Medicaid application information to parents via email.
+A9	Negated T9

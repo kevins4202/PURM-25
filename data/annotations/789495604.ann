@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 623 658	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 723 792	Mom works as a HHA, varying hours. Dad is a truck driver and travels.
+A2	Negated T2
+T3	ChildcareBarrierfromHospitalization 1754 1807	Parent Strengths Mom visits bedside daily; employment
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 1754 1807	Parent Strengths Mom visits bedside daily; employment
+A4	Negated T4
+T5	LackofTransportation 1911 1993;1996 2034	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;TRANSPORTATION Transportation comment: Mom has a car.
+A5	Negated T5
+T6	LackofInsurance 2037 2093	Public assistance/SSI comment: Pt has PA  Medicaid (HP);
+A6	Negated T6
+T7	FoodInsecurity_Other 2137 2242	Mom reports she didn't qualify for SNAP when she applied, but plans to apply again with pt added to case.
+A7	ResolutioninProgress T7
+T8	LackofFundsforFood 2275 2312	She reports pt is registered for WIC.
+A8	Negated T8
+T9	FinancialStrain_Other 2386 2428;2431 2488;2491 2789	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom will be aware of resources. Intervention/Plan - Household Finances Mom paying for gas and parking since admission and, although it is not a stressor yet, SW offered gas card assistance through Colette Louise Foundation. Mom also would like to take some time off work at pt's discharge, so SW discussed ODF to assist wtih rent.
+A9	ResolutioninProgress T9

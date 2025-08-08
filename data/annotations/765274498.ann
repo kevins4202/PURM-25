@@ -1,0 +1,17 @@
+T1	NonPermanentPlacement 589 624;627 736	Patient living situation: PARENT(S) Parent Information: Mom lives at Mother's Home shelter in Darby, PA where baby is planned to be discharged to
+A1	Negated T1
+T2	Homelessness 627 737	Parent Information: Mom lives at Mother's Home shelter in Darby, PA where baby is planned to be discharged to.
+T3	GeneralHousingInstability 808 884	Mom noted housing became difficult due to prior maternal family difficulties
+T4	PatientCaregiver_Unemployment 887 924	Mom and dad currently aren't working.
+T5	Homelessness 1582 1605;1608 1728	Housing instability YES Housing instability comment: Mom is currently living at Mother's Home shelter in Darby, PA (address on file for patient)
+T6	LackofInsurance 2196 2247;2250 2319;2322 2379	Resource Needs Problem: INSURANCE;EMPLOYMENT/INCOME Goal - Insurance Mom is still in process if adding baby to her PA MA. Intervention/Plan - Insurance SW will continue to support
+A4	ResolutioninProgress T6
+T7	PatientCaregiver_Unemployment 2383 2485;2488 2583	Goal - Employment/income Parents both currently are unemployed however coping adequately at this time. Intervention/Plan - Employment/income SW will continue to support/ provide assistance as needed
+T8	LackofTransportation 1855 1936	Parent Strengths can articulate needs, local, access to transportation assistance
+A5	Negated T8
+T9	DistancefromHospital 1855 1936	Parent Strengths can articulate needs, local, access to transportation assistance
+A6	Negated T9
+T10	FinancialStrain_Other 1939 2002	Parent Stressors housing, finances, employment, hospitalization
+A3	ResolutioninProgress T5
+A7	ResolutioninProgress T2
+T11	PatientCaregiver_Unemployment 1939 2002	Parent Stressors housing, finances, employment, hospitalization

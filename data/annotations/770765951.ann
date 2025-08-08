@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 945 1045	Other Information: Patient is currently in CYS custody. CYS social worker Megan Kromer: 570-628-1050
+T2	NonPermanentPlacement 589 621	Patient living situation: OTHER;
+T3	HomeEnvironment_Other 2038 2057;2060 2166	CPS Involvement YES CPS involvment comment: Patient is currently in CYS custody. CYS social worker Megan Kromer: 570-628-1050.
+T4	NonPermanentPlacement 2038 2057;2060 2166	CPS Involvement YES CPS involvment comment: Patient is currently in CYS custody. CYS social worker Megan Kromer: 570-628-1050.
+T5	HomeEnvironment_Other 3243 3351;3354 3495;3498 3547	SW intern spoke with Schuylkill CYS social worker Megan Kromer. VPA and medical consent forms were obtained. Medical consent can be given by guardian ad litem James Conville. SW intern attempted to reach Mother via phone but phone was out of service. Parents are able to visit and receive information

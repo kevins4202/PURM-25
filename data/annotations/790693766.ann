@@ -1,0 +1,5 @@
+T1	LackofTransportation 536 601	Patient's Mom inquired about assistance with transportation home.
+T2	LackofTransportation 721 861	SW confirmed Unit SW documented passes can be utilized on weekends to assist with transportation to/from hospital during patient's admission
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 602 720	SW contacted Center for Families who confirmed patient had an available 2 Septa tokens approved by Unit SW on 3/20/23.
+A2	ResolutioninProgress T3

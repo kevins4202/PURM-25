@@ -1,0 +1,6 @@
+T1	LackofInsurance 204 227;229 313;315 331;333 367;369 420;423 564;567 638	Problem: RESOURCE NEEDS Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing Flowsheets (Taken 11/10/2022 0856) Resource Needs - Intervention - Insurance coverage: Provide patient/family/caregiver with information to apply for needed benefits including referral to Family Health Coverage Program as needed Assist with obtaining documentation necessary for required applications
+A1	ResolutioninProgress T1
+T2	LackofInsurance 748 835	Akmal provided LSW with the remaining documents needed for Umar's medicaid application.
+A2	ResolutioninProgress T2
+T4	LackofInsurance 1556 1604	LSW forwarded all documentation received to FHC.
+A4	ResolutioninProgress T4

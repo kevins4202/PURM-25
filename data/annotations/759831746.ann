@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 194 218;222 389	Meal voucher provided(2) Additional Comments: This SW has approved 2 vouchers for the mother today and she can receive 2 additional vouchers this weekend when she plans to stay Saturday night.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 390 526	SW will assess for further needs for transportation assistance back to Trenton, NJ if the mother cannot access resources to return home.
+A2	ResolutioninProgress T2

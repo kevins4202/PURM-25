@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 30 242	Progress:  SW intern was informed by Hosts for Hospitals case worker that Mother is ineligible to stay at Hosts for Hospitals. SW intern e-mailed parents over a list of nearby hotels as another possible resource.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 772 829;832 920	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2.
+A2	ResolutioninProgress T2

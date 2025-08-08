@@ -1,0 +1,20 @@
+T3	PatientCaregiver_Unemployment 1008 1270	Both parents report employment; mother works for Cross Point United Methodist Church while father is employed with Penn State College of Medicine. SW provided both parents with a letter verifying current admission at their request due to anticipated work absence
+A2	Negated T3
+T4	HomeSafety 2758 2777;2780 3430	CPS Involvement YES CPS involvment comment: Jayvon was adopted by Michael and Mary Cote on June 14th, 2016 through Cumberland County Children & Youth Services. Per mother’s report, CYS became involved again during May of 2022 at the request of parents due to Jayvon's unsafe behaviors within the home and towards himself. Please note that there were no concerns for parental maltreatment or neglect. Once removed from the residence, Jayvon was placed at Kids Peace in Allentown, PA from June 23rd, 2022 to July 20th, 2022 before being transferred to Gemma Residential Treatment Facility. Cumberland County CYS closed the case in July of 2022 post Jayvon’s RTF placement.
+A3	HistoryOf T4
+T5	PatientCaregiver_Unemployment 3581 3739	Parent Strengths Intact family, employed with stable income and adequate resources, active in care needs, easily engaged, supportive at bedside, knowledgeable
+A4	Negated T5
+T6	FinancialStrain_Other 3581 3739	Parent Strengths Intact family, employed with stable income and adequate resources, active in care needs, easily engaged, supportive at bedside, knowledgeable
+A5	Negated T6
+T8	ChildcareBarrierfromHospitalization 3742 3983	Parent Stressors Jayvon's emergent hospitalization due to negligent care while at Gemma Services, medical status while hospitalized, balancing bedside presence with household obligations, unknown length of admission, placement post discharge
+T9	ChildcareBarrierfromNonHospitalization 3742 3983	Parent Stressors Jayvon's emergent hospitalization due to negligent care while at Gemma Services, medical status while hospitalized, balancing bedside presence with household obligations, unknown length of admission, placement post discharge
+T10	LackofInsurance 4123 4165	Public assistance/SSI comment: PA Medicaid
+A6	Negated T10
+T2	FinancialStrain_Other 4168 4261	Other existing community services/outside support comment: Cumberland County Adoption Stipend
+A7	Negated T2
+T11	PermanentPlacementPending 1274 1424	Facility Contact: Jayvon presently resides at Gemma Residential Facility, located at 512 West Township Line Road, Plymouth Meeting, Pennsylvania 19462
+T12	PermanentPlacementPending 1487 1732	Grade Comment: Due to Jayvon being admitted to an RTF, he will either attend Montgomery County IU or Martin Luther School in the fall, which is located on the campus of Gemma Services. He will be in the 4th grade for the 2022-2023 academic year.
+T13	PermanentPlacementPending 713 739	RESIDENTIAL FACILITY;OTHER
+T1	NonPermanentPlacement 656 713	Patient living situation: PARENT(S);CHILDREN IN THE HOME;
+A1	Negated T1
+T7	PermanentPlacementPending 3742 3983	Parent Stressors Jayvon's emergent hospitalization due to negligent care while at Gemma Services, medical status while hospitalized, balancing bedside presence with household obligations, unknown length of admission, placement post discharge

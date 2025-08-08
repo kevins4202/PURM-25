@@ -1,0 +1,8 @@
+T1	LackofInsurance 2267 2320;2323 2434	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Family will add newborn to primary insurance and apply for secondary insurance/MA through PH95
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 596 631;634 716	Patient living situation: PARENT(S) Parent Information: Elizabeth and Kevin Gloviak. Family lives in West Chester, PA.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 717 779	Elizabeth is employed as a business analyst and Kevin is a CPA
+A3	Negated T3
+T4	NeedTemporaryLodging 2496 2602;2605 2835	Goal - Local Accommodations Family will access available resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations SW reviewed options. Prenatal re-location not required due to distance, though distance is eligible for RMH. Family interested in RMH, SW placed family on waitlist for 3/5 per family request
+A4	ResolutioninProgress T4

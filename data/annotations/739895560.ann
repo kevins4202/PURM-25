@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 661 696;699 797	Patient living situation: PARENT(S) Parent Information: Clover splits time between her parents' respective homes in Atlantic City, NJ;
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 798 893	father works weekends for GMCS Security and mother is working as train station security officer
+A2	Negated T2
+T3	DrugUse 1690 1708;1711 1941	CPS Involvement NO CPS involvment comment: mother reports own historical Percocet use with a transition to Methadone and resultant report to NJ DCPP when Clover was born, mother says DCPP was involved for ~1 month and that case has been closed since
+A3	HistoryOf T3
+T4	LackofInsurance 2215 2288;2291 2348	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;OTHER Public assistance/SSI comment: Horizon NJ Health Medicaid
+A4	Negated T4

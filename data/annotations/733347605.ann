@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 751 820	Submitted a referral to the Ronald McDonald House on Chestnut Street.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 556 671	Pius is the first child born to his intact parents who live together in Levittown, PA (about 45 minutes from CHOP).
+A2	Negated T2

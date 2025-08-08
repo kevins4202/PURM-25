@@ -1,0 +1,5 @@
+T1	DrugUse 923 1052	Per chart review, Alexis is currently in methadone treatment for opioid use disorder and has a history of anxiety and depression.
+T2	SubstanceAbuse_Other 1053 1158	Derek reports he has a history of substance use and is currently engaged in services for ongoing support.
+A2	HistoryOf T2
+T3	ChildcareBarrierfromHospitalization 773 865	Derek reported that he will be visiting today then will be unable to visit for another week.
+A1	ResolutioninProgress T1

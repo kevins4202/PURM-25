@@ -1,0 +1,4 @@
+T1	PermanentPlacementPending 365 405	- CYS had custody and provides consents.
+T2	PermanentPlacementPending 566 668	- Current discharge plan is to MGM, but will revisit closer to discharge when medical needs are known.
+A1	ResolutioninProgress T2
+T3	LackofInsurance 672 857	SW inquired about insurance; worker reports that a different dept manages insurance, but SW asked her to verify that pt has been added so discharge needs can be addressed without delay.

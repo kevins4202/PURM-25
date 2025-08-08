@@ -1,0 +1,15 @@
+T1	NeedTemporaryLodging 775 838	Parents are currently staying at RMH while baby is in hospital.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 632 667;670 773	Patient living situation: PARENT(S) Parent Information: Mom and dad (Hatian-Creole speaking only) lives in Magnolia, DE with their 3yo son.
+A2	Negated T2
+T3	DistancefromHospital 670 773	Parent Information: Mom and dad (Hatian-Creole speaking only) lives in Magnolia, DE with their 3yo son.
+T4	PatientCaregiver_Unemployment 955 972	Mom is unemployed
+T5	PatientCaregiver_Unemployment 977 1001	dad works in sanitation.
+A3	Negated T5
+T6	FinancialStrain_Other 2272 2485	Goal - Household Finances Parents continue to cope with lack of income.  Dad works when he is able in sanitation.  Mom noted family will need assistance with pack n play and car seat as well as other baby supplies
+T7	LackofInsurance 2600 2701;2704 2781	Goal - Insurance FHCP is assisting mom with obtaining insurance for baby as baby is without coverage. Intervention/Plan - Insurance SW will continue to work with FHCP for coverage
+A4	ResolutioninProgress T7
+T8	LackofTransportation 2784 2924	Goal- Transportation Parents do not have access to family/ friends locally/ access to their own car/ finances to get to and from DE reguarly
+T9	FinancialStrain_Other 2784 2924	Goal- Transportation Parents do not have access to family/ friends locally/ access to their own car/ finances to get to and from DE reguarly
+T10	NeedofChildcare 3154 3302;3305 3439	Goal - Child care/Day care Parents do not have access to childcare for 3yo sibling.  3yo sibling is with parents at RMH and visits daily at bedside. Intervention/Plan- Child care/Day care SW will continue to support during hospitalization and work with Childlife for ongoing support.
+A5	ResolutioninProgress T10

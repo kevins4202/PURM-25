@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 213 363	The patient's mother will return to work on Monday and the parents will visit on the weekend due to their work schedule and distance from the hospital
+T2	DistancefromHospital 213 364	The patient's mother will return to work on Monday and the parents will visit on the weekend due to their work schedule and distance from the hospital.
+T3	FinancialStrain_Other 369 479	LSW provided patient's mother with guidance on applying for Colette Louise grant and will follow up next week.
+A1	ResolutioninProgress T3

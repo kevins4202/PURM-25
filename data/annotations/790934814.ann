@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 212 357	SW intern applied on behalf of parents to Harp's Hope for financial assistance for transportation. SW intern provided parents with meal vouchers.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1041 1098;1101 1189	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4.
+A2	ResolutioninProgress T2

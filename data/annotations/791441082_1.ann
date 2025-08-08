@@ -1,0 +1,8 @@
+T1	LackofInsurance 507 650	Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA.
+T2	PatientCaregiver_Unemployment 507 650	Emailed mother instructions on the secondary PA Medical Assistance application process through PH95 and emailed parents information about FMLA.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 55 141	Goal: Patient/family/caregiver will have needed supports to maintain employment/income
+A3	Negated T3
+T4	LackofInsurance 161 245	Goal: Patient will have adequate insurance coverage to obtain necessary medical care
+A4	Negated T4
+A5	Negated T1

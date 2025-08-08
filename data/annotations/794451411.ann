@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 390 719	Parents expressed financial hardship and the cost of rent, bills and expenses with having a child in the hospital. With parents consent, writer is exploring other grants and programs that could help alleviate some of the financial burden. Writer will assist the family with applying for Fred's Footsteps. The deadline is May 3rd.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 219 228;231 239	Problems: Finances
+A2	ResolutioninProgress T2

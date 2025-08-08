@@ -1,0 +1,19 @@
+T1	NonPermanentPlacement 665 700;703 897	Patient living situation: PARENT(S) Parent Information: Alaiyah is the second child born to her intact parents, Maddeline and Ricki, who live together with Alaiyah's 3 year old sister in Fleetwood, PA (about 90 minutes from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 703 897	Parent Information: Alaiyah is the second child born to her intact parents, Maddeline and Ricki, who live together with Alaiyah's 3 year old sister in Fleetwood, PA (about 90 minutes from CHOP).
+T3	PatientCaregiver_Unemployment 898 1058	Mother is a stay-at-home parent. Father works for a solar panel company. He does not have paid parental leave through his employer and has had to return to work
+A2	Negated T3
+T4	DistancefromHospital 2110 2364	Parent Stressors Unanticipated ICU hospitalization, transfer to CHOP (90 minutes from the family's home) due to a need for a higher level of care, father has had to return to work, balancing visiting Alaiyah in the hospital and caring for Adelyn at home.
+T5	PatientCaregiver_Unemployment 2110 2364	Parent Stressors Unanticipated ICU hospitalization, transfer to CHOP (90 minutes from the family's home) due to a need for a higher level of care, father has had to return to work, balancing visiting Alaiyah in the hospital and caring for Adelyn at home.
+A3	Negated T5
+T6	ChildcareBarrierfromHospitalization 2110 2364	Parent Stressors Unanticipated ICU hospitalization, transfer to CHOP (90 minutes from the family's home) due to a need for a higher level of care, father has had to return to work, balancing visiting Alaiyah in the hospital and caring for Adelyn at home.
+T7	ChildcareBarrierfromNonHospitalization 2110 2364	Parent Stressors Unanticipated ICU hospitalization, transfer to CHOP (90 minutes from the family's home) due to a need for a higher level of care, father has had to return to work, balancing visiting Alaiyah in the hospital and caring for Adelyn at home.
+T8	LackofInsurance 2367 2434;2437 2550	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents have added Alaiyah to their PA Medical Assistance Amerihealth Caritas plan
+A4	Negated T8
+T9	FinancialStrain_Other 2552 2594	Family is receiving SNAP and WIC benefits.
+A5	Negated T9
+T10	NeedTemporaryLodging 2709 2793;2796 3007	Goal - Local Accommodations Family will have information about local accommodations. Intervention/Plan- Local Accommodations Social worker provided information about the Ronald McDonald House on Chestnut Street. Parents in agreement with referral. Submitted room request to Ronald McDonald House.
+A6	ResolutioninProgress T10
+T11	NeedTemporaryLodging 4134 4235	Mother shared that family would be interested in staying at Ronald McDonald House. Referral submitted
+A7	ResolutioninProgress T11
+T12	FinancialStrain_Other 4238 4446	ocial worker will continue to assess for financial strain related to this hospitalization given that father will need to continue working and traveling home to Berks County and will offer support accordingly.

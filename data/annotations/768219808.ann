@@ -1,0 +1,10 @@
+T2	DistancefromHospital 731 943	Parent Information: Viola is the third child born to her intact parents, Kelly and Abraham, who live together in Quarryville, PA (about 2 hours from CHOP), with Viola's 11 year old brother and 10 year old sister.
+T1	NonPermanentPlacement 672 728;731 943	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Viola is the third child born to her intact parents, Kelly and Abraham, who live together in Quarryville, PA (about 2 hours from CHOP), with Viola's 11 year old brother and 10 year old sister.
+A1	Negated T1
+T3	PatientCaregiver_Unemployment 944 1056	Mother was previously working as a medic and is currently a stay-at-home parent. Father is a software architect.
+A2	Negated T3
+T4	DistancefromHospital 2261 2337	Parent Stressors ICU-level hospitalization, family lives two hours from CHOP
+T5	LackofInsurance 2460 2493;2496 2601;2604 2906	Resource Needs Problem: INSURANCE Goal - Insurance Viola will be added to parents' insurance and will have secondary PA Medical Assistance. Intervention/Plan - Insurance Parents will add Viola to their insurance. Provided information about secondary PA Medical Assistance through PH95. Will provide parents with information on the application process as well as a letter of medical necessity and a PA MA 586 form to include in the application
+A3	ResolutioninProgress T5
+T6	LackofTransportation 3974 4035	Parents are planning travel from home to CHOP to visit Viola.
+A4	Negated T6

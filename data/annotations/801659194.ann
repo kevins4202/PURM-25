@@ -1,0 +1,4 @@
+T1	PermanentPlacementPending 1244 1275;1277 1349;1352 1463;1465 1532;1534 1634	Custody/consent/discharge plan: --Mother continues to have full custody and makes all medical decisions. --At time of discharge, CYS will take custody and make medical decisions, and will place Messiah with his aunt. --Mother in agreement with this plan per prior discussions with SW. --Updated home clearance for aunt with CYS scheduled for 5/22, previously cleared just needs update.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 1638 1718	Aunt continues to visit daily from local RMH also intermittently returning home.
+A2	Resolved T2

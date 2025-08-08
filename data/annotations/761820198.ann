@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 627 683;686 831	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Callie will live with her parents, Caprial and Christian, and her two older brothers (ages 3 and 6) in Southwest Philadelphia
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 833 941	Mother is on 12 weeks of unpaid maternity leave from her job in PSR at Einstein. Father has his own business
+A2	Negated T2
+T3	LackofFundsforFood 2141 2208;2211 2469	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is receiving SNAP benefits. Parents are planning to add Callie to PA Medical Assistance. Parents have information about WIC enrollment once Callie is stable for discharge. Will provide family with a PA WIC referral form.
+A3	Negated T3
+T4	LackofInsurance 2141 2208;2211 2469	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is receiving SNAP benefits. Parents are planning to add Callie to PA Medical Assistance. Parents have information about WIC enrollment once Callie is stable for discharge. Will provide family with a PA WIC referral form.
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 2141 2208;2211 2468	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is receiving SNAP benefits. Parents are planning to add Callie to PA Medical Assistance. Parents have information about WIC enrollment once Callie is stable for discharge. Will provide family with a PA WIC referral form
+A5	ResolutioninProgress T5
+T6	LackofInsurance 2538 2571;2574 2637;2640 2928	Resource Needs Problem: INSURANCE Goal - Insurance Callie will be added to PA Medical Assistance. Intervention/Plan - Insurance Callie is currently covered under mother's Aetna insurance for the first 30 days of life. Parents plan to add Callie to PA Medical Assistance. Social worker provided mother with the PA Change Center phone number to call to add Callie to PA Medical Assistance
+A6	ResolutioninProgress T6
+T7	FinancialStrain_Other 3880 4001	Discussed referral to Harp's Hope for assistance with an Uber gift card for transportation assistance. Will make referral
+A7	ResolutioninProgress T7

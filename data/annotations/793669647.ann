@@ -1,0 +1,5 @@
+T1	LackofTransportation 462 656	SW met with Ms. Eitenne to inquire about transportation to check for barriers to and from future outpatient appointments. Ms. Eitenne expressed that she would need assistance with transportation
+T2	LackofTransportation 658 913	SW called Modiv Care Delaware (information listed below) and patient qualifies for transportation to and from the hospital. Rides will need to be scheduled 3 business days in advance. SW will inform Ms. Eitenne on how to schedule rides in the near future.
+A1	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 1029 1127	Ms. Eitenne stated that her husband is working and able to financially support a larger apartment.
+A2	Negated T3

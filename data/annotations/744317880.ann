@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 937 1114	SW assessed fr immediate needs; mother requesting continued support with neal vouchers. SW approved four meal voucher to be delivered to bedside through the center for families.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 296 474	SW met with mother while patient slept for a supportive check-in. Mother requesting assistance with identifying a childcare plan for Jzarai as she is preparing to return to work.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 718 792	Through continued conversation, mother disclosed that she works overnight.
+A3	Negated T3
+T4	FinancialStrain_Other 1463 1520;1523 1611;1613 1739	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Other hardship considerations: extended hospitalization, mother out of work due to emergent admission
+A4	ResolutioninProgress T4

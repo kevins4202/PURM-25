@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 259 316;319 446;448 583	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: One-way Lyft/Uber transport for Monday 5/15/2023. Reason for Disbursement: Medically necessary for discharge and Other hardship considerations: Limited income, transportation challenges
+A1	ResolutioninProgress T1
+T2	LackofTransportation 319 446;448 583	Patient is eligible and Social Work provided the following resources:  Other: One-way Lyft/Uber transport for Monday 5/15/2023. Reason for Disbursement: Medically necessary for discharge and Other hardship considerations: Limited income, transportation challenges
+A2	ResolutioninProgress T2

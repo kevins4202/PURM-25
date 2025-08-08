@@ -1,0 +1,4 @@
+T1	LackofInsurance 2243 2276;2279 2330;2333 2460	Resource Needs Problem: INSURANCE Goal - Insurance Parents are to apply for Medicaid. Intervention/Plan - Insurance LSW to send patient parents PA Medicaid application and provide neccessary medical documentation.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 589 624;627 717	Patient living situation: PARENT(S) Parent Information: Patient will reside with mother and father upon discharge from NI/ICU.
+A2	Negated T2

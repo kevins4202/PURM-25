@@ -1,0 +1,7 @@
+T1	FinancialStrain_Other 421 508	She picked up the  gift card and loaded it into the Uber app, but was unable to use it.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 421 557;561 814	She picked up the  gift card and loaded it into the Uber app, but was unable to use it. SW approved a ride home due to time constraints. SW spoke with CYS worker, Alex Chip (484-724-0336); provided update and asked if he can assist with transportation at discharge. He reports he can bring family to CHOP for discharge tomorrow, will plan to arrive around 11 am. SW asked him to update mom.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 34 57;59 177;179 195	Problem: RESOURCE NEEDS Goal: Patient will have adequate transportation resources to access needed medical care and return to home environment Outcome: Ongoing
+A3	ResolutioninProgress T3
+T4	HomeEnvironment_Other 200 223;225 347;349 365	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs Outcome: Ongoing

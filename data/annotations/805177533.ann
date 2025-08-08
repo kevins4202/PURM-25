@@ -1,0 +1,19 @@
+T1	IntimatePartnerViolence 1536 1557;1560 1742	Home Environment: YES Home Environment comment: Father denies any current IPV, however states a history of violatile verbal conflict with mother whereby father reports he is the recipient of verbal abuse.
+T2	HomeEnvironment_Other 1745 1780;1783 1940	Protective Services Involvement YES CPS involvment comment: Father reports Luzerne County CYS involvement 'but it is not with me as a concern'; CYS caseworker, Megan Donovan 570-826-8710 x 2804
+T3	NonPermanentPlacement 694 735;738 852	Patient living situation: PARENT(S);OTHER Parent Information: Father, Owen Brown, states Owen spends time at both his home and mother's, Sara Chicallo, home
+A1	Negated T3
+T4	DrugUse 1984 2003;2006 2199	Substance Abuse YES Substance Abuse comment: Father reports he has a history of polysubstance abuse, has been sober for almost 5 years (July 22), and denies any current substance use other than smoking cigarettes.
+A2	HistoryOf T4
+T5	HomeEnvironment_Other 2202 2218;2221 2413	Legal Issues YES Legal Issues comment: Father reports a history of involvement, however none current for himself.  Law enforcement involvement due to nature of events leading to child's critical care admission
+T6	PatientCaregiver_Unemployment 2576 2595	supportive employer
+A3	Negated T6
+T7	HomeEnvironment_Other 2665 2730	criminal investigation and lack of communication from detectives;
+T8	HomeSafety 2821 2879;2882 3103	Resource Needs Problem(s) SAFE/ACCESSIBLE HOME ENVIRONMENT Intervention/Plan - Safe/Accessible home environment  Father reports he owns firearms that are locked in safety box at PGF's home; father also reports that Owen owns a firearms that is secured in a gun safe at PGF's home.
+T9	HomeEnvironment_Other 4142 4346	Goal - Suspected abuse/neglect Luzerne County CYS caseworker, Megan Donovan 570-826-8710 x 2804, contacted SW to inform of new allegation reported on 5/30/23.  Per CYS, they have been involved since 2017.
+T10	NonPermanentPlacement 4710 4780	Father states that Owen shares time at both mother and father's homes.
+A4	Negated T10
+T11	PatientCaregiver_Unemployment 4966 5069	Father is employed full time as a machine mechanic, and is currently using vacation time with employer.
+A5	Negated T11
+T12	DrugUse 5073 5216	Per above assessment, father reports a history of polysubstance abuse.  Father denies any current substance use, other than smoking cigarettes.
+A6	HistoryOf T12
+T13	HomeEnvironment_Other 6277 6577	Father expressing his concerns with the criminal investigation process, and how no investigative officer has outreached him to date.  SW encouraging father to contact the authorities directly for any updates or need to provide any information pertinent to his concerns and the criminal investigation.

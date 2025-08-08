@@ -1,0 +1,25 @@
+T1	HomeEnvironment_Other 2275 2294;2297 2573	CPS Involvement YES CPS involvment comment: Previous- not current. Madison was previously removed from mother's care ~6yrs ago and placed  in the care of her biological father. Returned to mother's care in 3/2022 and continues to reside with mother and step-father. Parents report shared custody.
+A1	HistoryOf T1
+T2	NonPermanentPlacement 595 657	Patient living situation: PARENT(S);OTHER;CHILDREN IN THE HOME
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 778 845	Jayde is employed as a waitress and Sean is employed as a lab tech.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 988 1016	Robert owns his own business
+A4	Negated T4
+T5	DistancefromHospital 745 777	Family lives in Selinsgrove, PA.
+T6	DistancefromHospital 927 987	Other Information: Father- Robert Clarke resides in Florida.
+T7	FinancialStrain_Other 3204 3266;3269 3406;3409 3578	Resource Needs Problem: HOUSEHOLD FINANCES;LOCAL ACCOMODATIONS Goal - Household Finances Family will connect with available resources to maintain financial stability during unexpected hospitalization. Intervention/Plan - Household Finances SW will connect family with resources and provide concrete resource assistance as appropriate. Meal and parking vouchers provided.
+A5	ResolutioninProgress T7
+T8	NeedTemporaryLodging 3827 3874	SW reviewed RMH and local hotels with discount.
+A6	ResolutioninProgress T8
+T9	NonPermanentPlacement 4642 4762	Madison resides with her mother (Jayde), step-father (Sean), and 2 brothers in Selinsgrove, PA nearly 3 hours from CHOP.
+A7	Negated T9
+T10	DistancefromHospital 4642 4762	Madison resides with her mother (Jayde), step-father (Sean), and 2 brothers in Selinsgrove, PA nearly 3 hours from CHOP.
+T11	PatientCaregiver_Unemployment 4763 4923	Jayde shared that she recently obtained a new job as a waitress at Longhorn Steakhouse 2 weeks prior to hospital stay, does not have FMLA benefits at this time.
+A8	Negated T11
+T12	HomeEnvironment_Other 5025 5354	SW assessed prior history of child protection involvement. Jayde shared that Madison was previously removed from her care due to DV in the home (not with bio father or current step-father). Jayde shared that she had psychological difficulties following removal of Madison, leading to psychiatric hospitalization and substance use
+T13	IntimatePartnerViolence 5084 5214	Jayde shared that Madison was previously removed from her care due to DV in the home (not with bio father or current step-father).
+A9	HistoryOf T13
+A10	HistoryOf T12
+T14	SubstanceAbuse_Other 5215 5463	Jayde shared that she had psychological difficulties following removal of Madison, leading to psychiatric hospitalization and substance use. Jayde reports that she has been sober for 5 years and has much improvement in her mental health and coping.
+A11	HistoryOf T14

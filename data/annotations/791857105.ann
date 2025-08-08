@@ -1,0 +1,6 @@
+T1	PermanentPlacementPending 924 1020	Denise confirmed that CYS plans to take custody at discharge and have Messiah go home with aunt.
+A1	ResolutioninProgress T1
+T2	PermanentPlacementPending 1117 1385	Denise shared that she can start moving forward with steps related to kinship or foster care including clearance of the home; aunt shared that her home and children were already cleared with a prior CYS caseworker named Trish. Denise agreed to look into this with CYS.
+A2	ResolutioninProgress T2
+T3	LackofInsurance 1815 1926	CYS Caseworker asked if Messiah has insurance, SW explained that Messiah does have active PAMA listed in chart.
+A3	Negated T3

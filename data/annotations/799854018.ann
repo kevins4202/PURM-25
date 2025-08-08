@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 436 470	Opens Doors application submitted.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 830 887;890 985;991 1011;1017 1098;1100 1144	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 2. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment. Patient eligible for reassessment on 5/11/23
+A2	ResolutioninProgress T2

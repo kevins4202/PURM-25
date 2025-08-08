@@ -1,0 +1,10 @@
+T1	FinancialStrain_Other 110 457;462 560;564 716	Progress: SW called and spoke with the family's landlord, Mateo Nicolosi (917-216-6031), and discussed what is needed for ODF application. Landlord very willing to assist and provided his email address for SW to email what is needed and him to provide (mnicolosi133@gmail.com). Landlord replied to SW email and provided a statement needed for ODF. SW completed ODF application. SW will submit on Monday when Mom provided a copy of a utility bill. SW met with Mom at the bedside later in the day. SW relayed the above and reminded Mom to grab a utility bill from her house tomorrow. Mom in agreement.
+A1	ResolutioninProgress T1
+T2	HomeAccessibility 1835 2021	The family's home has 3 steps leading up to it. SW asked if Mom would be interested in a ramp. Mom was not aware that this was an option. SW will look into options for a ramp with NJ MA.
+T3	LackofInsurance 1973 2021	SW will look into options for a ramp with NJ MA.
+A2	Negated T3
+A3	ResolutioninProgress T2
+T4	FinancialStrain_Other 2098 2186	Mom confirmed she has meal vouchers for the weekend and has no other needs at this time.
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 3211 3234;3236 3369;3371 3387	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A5	ResolutioninProgress T5

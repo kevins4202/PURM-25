@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 588 644	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 694 747	Family lives in Tamaqua, PA approx 2 hours from CHOP.
+T3	PatientCaregiver_Unemployment 748 849	Jessica is employed as a manager for a day care center and Robert is an area supervisor for Colonial.
+A2	Negated T3
+T4	NeedTemporaryLodging 1747 1790;1793 1899;1902 2270	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family will access available resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations Per Fetal Heart SW and RMH guidelines, family is not eligible for RMH-Chestnut St at this time. Family has obtained local hotel for brief period and requested financial assistance. Fetal Heart SW also contacting RMH-Camden to verify if family can check in there. SW contacted Jack of Hearts-PA for a referral, awaiting response.
+A3	ResolutioninProgress T4
+T5	NeedTemporaryLodging 3371 3436	Family staying at Holiday Inn-Cherry Hill last night and tonight.
+A4	Resolved T5

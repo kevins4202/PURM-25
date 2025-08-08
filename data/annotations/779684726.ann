@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 351 522	SW explained to mom the Ronald McDonald House process. Mom reported she was interested in that possibility. SW made a phone referral for the family after this interaction.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 832 935	SW provided mother with meal vouchers to help and defray some of he cost of an expensive hospital stay.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1543 1600;1603 1691;1693 1769	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 8. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A3	ResolutioninProgress T3

@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 454 593	. Mother is unsure when she will return to work and whether she may need to change to part-time employment while caring for Raegan at home.
+A1	Negated T1
+T2	LackofInsurance 594 913	Mother shared that Raegan was approved for secondary PA Medical Assistance through PH95. Parents elected Keystone First HMO. They are waiting for Raegan's Keystone First card to arrive in the mail. Social worker emailed photos of Raegan's PA Medical Assistance and IBC Personal Choice PPO insurance cards to Admissions.
+A2	Negated T2
+T3	ChildcareBarrierfromHospitalization 914 1021	Social worker offered to provide a letter of support for maternal grandmother's visa application next week.

@@ -1,0 +1,4 @@
+T1	LackofTransportation 510 614	SW has been asked to arrange transportation for the patients father and siblings to return home tonight.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 257 314;317 425	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Transportation Lyft Ride Home.
+A2	ResolutioninProgress T2

@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 701 778	Patient's mother is going to be a stay at home mom and dad works as a driver.
+A1	Negated T1
+T2	DistancefromHospital 779 853	Parents live over an hour away but prefer to commute to visit with patient
+T3	NeedTemporaryLodging 855 935	SW went over RMH and sleep rooms if parents ever become interested in the future
+T4	LackofInsurance 1636 1669;1672 1724;1727 1831	Resource Needs Problem: INSURANCE Goal - Insurance Patient will have active insurance. Intervention/Plan - Insurance SW encouraged mom to begin the process of adding patient to her insurance.
+A2	ResolutioninProgress T4
+T5	NonPermanentPlacement 605 640;643 700	Patient living situation: PARENT(S) Parent Information: This is parents first child together.
+A3	Negated T5

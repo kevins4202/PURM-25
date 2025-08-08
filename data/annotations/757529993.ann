@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 678 757	Patient mother now employed and will update LSW with schedule as she learns it.
+A1	Negated T1
+T2	FinancialStrain_Other 1003 1101	LSW and patient mother discussed Colette Louise and LSW completed medical provider form as needed.
+A2	ResolutioninProgress T2

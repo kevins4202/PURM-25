@@ -1,0 +1,9 @@
+T1	FinancialStrain_Other 248 305;308 396;402 572	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments:  Mother is staying at bedside to support patient. Does not have transportation to return home. Mal vouchers provided due to financial resource strain
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 248 305;308 396;402 573	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments:  Mother is staying at bedside to support patient. Does not have transportation to return home. Mal vouchers provided due to financial resource strain.
+A2	ResolutioninProgress T2
+T3	LackofTransportation 473 517	Does not have transportation to return home.
+T4	LackofTransportation 473 516	Does not have transportation to return home
+T5	FinancialStrain_Other 248 305;308 396;402 573	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments:  Mother is staying at bedside to support patient. Does not have transportation to return home. Mal vouchers provided due to financial resource strain.
+A3	ResolutioninProgress T5
+T6	LackofTransportation 473 517	Does not have transportation to return home.

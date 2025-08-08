@@ -1,0 +1,10 @@
+T1	HomeEnvironment_Other 615 845	Denise shared that she has started the paperwork for kinship/foster care placement with aunt, does not change current custody status. SW relayed this to aunt, who verbalized understanding. Denise plans to visit this Thursday 6/29.
+T2	NonPermanentPlacement 615 748	Denise shared that she has started the paperwork for kinship/foster care placement with aunt, does not change current custody status.
+A1	ResolutioninProgress T2
+T3	HomeEnvironment_Other 1081 1267	SW shared that if Margaret is interested in completing any paperwork or changes with custody through CYS, Margaret can contact CYS caseworker directly. Margaret verbalized understanding.
+T4	NonPermanentPlacement 1391 1510	--At time of discharge, CYS will take custody and make medical decisions, and will place Messiah with his aunt (Joyce).
+A2	ResolutioninProgress T4
+T5	HomeSafety 1512 1603	--CYS cleared aunt's home on 5/22, SW confirmed background checks have been updated on 6/6.
+A3	Resolved T5
+T6	NonPermanentPlacement 1604 1700	Per discussion with CYS on 6/26, paperwork has been initiated for kinship/foster care placement.
+A4	ResolutioninProgress T6

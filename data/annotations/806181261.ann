@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 652 687	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 875 931	Dad works for a transport company and mom is unemployed.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 875 931	Dad works for a transport company and mom is unemployed.
+T4	FinancialStrain_Other 1810 1876	Parent Stressors finances, distance from hospital, hospitalization
+T5	DistancefromHospital 1810 1876	Parent Stressors finances, distance from hospital, hospitalization
+T6	FinancialStrain_Other 1945 2017;2020 2122;2125 2201	Resource Needs Problem(s) INSURANCE;EMPLOYMENT/INCOME;HOUSEHOLD FINANCES Goal - Household Finances Parents noted that with toll and food they have been struggling financially. Intervention/Plan - Household Finances SW provided 4 meal vouchers per need.
+A3	ResolutioninProgress T6
+T7	LackofTransportation 1945 2017;2020 2122	Resource Needs Problem(s) INSURANCE;EMPLOYMENT/INCOME;HOUSEHOLD FINANCES Goal - Household Finances Parents noted that with toll and food they have been struggling financially.
+A4	Negated T7
+T8	LackofInsurance 2204 2312	Goal - Insurance Mom noted that baby is covered by UHCCP NJ MA however mom has not applied for SSI for baby.
+A5	Negated T8
+T9	PatientCaregiver_Unemployment 2402 2472	Goal - Employment/income Dad noted he needed a letter for his employer
+A6	Negated T9

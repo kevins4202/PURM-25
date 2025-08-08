@@ -1,0 +1,21 @@
+T1	DistancefromHospital 1002 1111	Other Information: Juan resides roughly 2 1/2 hours away in Franklin, NJ with his parents and three siblings.
+T2	PatientCaregiver_Unemployment 1112 1206	Father reports employment with Doordash while mother is studying to become a medical assistant
+A1	Negated T2
+T3	PatientCaregiver_Unemployment 1112 1207	Father reports employment with Doordash while mother is studying to become a medical assistant.
+T4	HomeEnvironment_Other 1882 1901;1904 2123	CPS Involvement YES CPS involvment comment: Parents report previous DCPP involvement due to CHOP employees having suspicions of abandonment. The case as investigated, unfounded and closed. No current DCPP involvement reported at this time.
+A2	HistoryOf T4
+T5	FinancialStrain_Other 2675 2870	Parent Stressors Language barrier, financial status, very limited family support, distance from home and other children, current insurance barriers, identifying local accommodations independently
+T6	DistancefromHospital 2675 2870	Parent Stressors Language barrier, financial status, very limited family support, distance from home and other children, current insurance barriers, identifying local accommodations independently
+T7	NeedTemporaryLodging 2675 2870	Parent Stressors Language barrier, financial status, very limited family support, distance from home and other children, current insurance barriers, identifying local accommodations independently
+A3	ResolutioninProgress T7
+T8	LackofInsurance 3512 3697	Per FHCP, "because Juan is already insured and CHOP is currently non participating with any of NJMA MCO’s, the patient would not be eligible for consideration under Financial Assistance
+A4	Negated T8
+T9	LackofInsurance 2873 2940;2943 2986	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: NJ Medicaid.
+A5	Negated T9
+T10	NeedTemporaryLodging 4323 4487;4490 4769	Goal - Local Accommodations Parents requesting assistance with covering the financial obligation for local hotels as they have no child care support in Franklin, NJ Intervention/Plan- Local Accommodations SW connected parents with the family service representative at RMH Chestnut Street location to begin the room request process. RMH is willing to accommodate one parent and the three children, allowing parents to alternate bedside presence.
+A6	ResolutioninProgress T10
+T11	ChildcareBarrierfromNonHospitalization 4323 4487	Goal - Local Accommodations Parents requesting assistance with covering the financial obligation for local hotels as they have no child care support in Franklin, NJ
+T12	FinancialStrain_Other 6201 6258;6261 6349;6351 6423	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Reason for Disbursement: Other hardship considerations: Financial strain
+A7	ResolutioninProgress T12
+T13	NonPermanentPlacement 745 802	Patient living situation: PARENT(S);CHILDREN IN THE HOME;
+A8	Negated T13

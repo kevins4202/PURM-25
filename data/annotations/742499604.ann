@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 560 595	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 832 861	Father is employed  full time
+A2	Negated T2
+T3	LackofInsurance 1991 2024;2027 2082;2085 2142	Resource Needs Problem: INSURANCE Goal - Insurance Patient and siblings to have insurance Intervention/Plan - Insurance SW referred parents to FHCP
+A3	ResolutioninProgress T3

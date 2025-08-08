@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 949 1006;1009 1097;1099 1157;1163 1216	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Pharmacy: 130.56. Reason for Disbursement: Medically necessary for discharge Additional comments:  5 day bridge supply, PA pending
+A1	ResolutioninProgress T1
+T2	LackofInsurance 1163 1216	Additional comments:  5 day bridge supply, PA pending
+A2	Negated T2
+T3	LackofInsurance 297 482	Plan: SW was requested to cover 5 day supply of aldactone, PA will take 48 business hours, likely not ready until Monday per CM. SW approved coverage of bridge supply while awaiting PA.
+A3	Negated T3
+T4	FinancialStrain_Other 297 482	Plan: SW was requested to cover 5 day supply of aldactone, PA will take 48 business hours, likely not ready until Monday per CM. SW approved coverage of bridge supply while awaiting PA.
+A4	ResolutioninProgress T4

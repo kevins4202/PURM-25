@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 113 197	SW notified patient's father that she called in additional meal vouchers downstairs.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 669 789	Patient's father reports his father (patient's paternal GF) has been helping him pay his rent while patient is admitted.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1069 1126;1129 1218;1220 1358	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Reason for Disbursement: Other hardship considerations: financial strain due to extended hospitalization and missing work to be at bedside
+A3	ResolutioninProgress T3

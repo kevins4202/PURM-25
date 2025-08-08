@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 593 628;631 696	Patient living situation: PARENT(S) Parent Information: Mom and dad live just outside NYC in north NJ
+A1	Negated T1
+T2	DistancefromHospital 631 697	Parent Information: Mom and dad live just outside NYC in north NJ.
+T3	NeedTemporaryLodging 796 863	Mom noted that dad was checking out of RMH where they were staying.
+T4	PatientCaregiver_Unemployment 865 941	Mom is a forensic scientist for law enforcement and dad is a police officer.
+A3	Negated T4
+T5	LackofTransportation 1717 1837	Parent Strengths can articulate needs, adequate family support, understands illness, car, patient being discharged today
+A4	Negated T5
+A2	Resolved T3
+T6	LackofInsurance 2018 2051;2054 2139;2142 2209	Resource Needs Problem: INSURANCE Goal - Insurance Parents are still in process of adding baby to their BCBS insurance. Intervention/Plan - Insurance SW will continue to support as needed
+A5	ResolutioninProgress T6

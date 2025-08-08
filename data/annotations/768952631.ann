@@ -1,0 +1,9 @@
+T1	SubstanceAbuse_Other 443 537	Mother stated she has been updating Vantage House about her status and the status of the baby.
+T2	SubstanceAbuse_Other 539 784	Mother and SW made a plan to contact CYS and Vantage together on Tuesday to discuss if mother can temporarily relocate to  Philadelphia while patient is in the NIICU. Mother has been living at Vantage for 5 months and has found it to be helpful.
+A1	ResolutioninProgress T2
+A2	ResolutioninProgress T1
+T3	NeedTemporaryLodging 539 705	Mother and SW made a plan to contact CYS and Vantage together on Tuesday to discuss if mother can temporarily relocate to  Philadelphia while patient is in the NIICU.
+T4	NonPermanentPlacement 856 886	Patient is mother's 5th child.
+A3	Negated T4
+T5	FinancialStrain_Other 986 1012	SW provided meal vouchers.
+A4	ResolutioninProgress T5

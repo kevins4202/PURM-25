@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 402 433	Mother to request room at RMDH.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 437 516;519 570;574 637;642 713	Mother to complete Opens Doors Foundation application for financial assistance. SW emailed mother link to Colette Louis Foundation. SW applied for Harp's Hope on behalf of parents for a gas card. SW provided mother with meal vouchers (6) until she can check into RMDH
+A2	ResolutioninProgress T2

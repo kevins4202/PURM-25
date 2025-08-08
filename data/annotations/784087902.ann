@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 209 218;221 230;232 261	Problems: Insurance Hospitalization and Treatment
+T2	FinancialStrain_Other 384 461	Family had appropriate follow up questions regarding Medicaid, SSI, and FMLA.
+T3	PatientCaregiver_Unemployment 384 461	Family had appropriate follow up questions regarding Medicaid, SSI, and FMLA.
+A1	Negated T3
+T4	FinancialStrain_Other 524 622	Plan: Social worker will e-mail family Medicaid website/application, and SSI information to apply.
+A2	ResolutioninProgress T4

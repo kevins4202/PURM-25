@@ -1,0 +1,6 @@
+T1	HouseInstability_Other 281 469	Progress:  SW met with mom today as mom was agreeable to sign auth to release form for SW calling CYS to assess for better housing opportunities that will be safe for discharge of patient.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 471 584	Mom also noted that she successfully added the baby to her Geisinger PA MA plan and plans to call FHCP to update.
+A2	Resolved T2
+T3	LackofInsurance 175 259	Goal: Patient will have adequate insurance coverage to obtain necessary medical care
+A3	Resolved T3

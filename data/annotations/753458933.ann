@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 550 585;588 708	Patient living situation: PARENT(S) Parent Information: Patient mother is Mariam Fofana and father is Abraham Mulbah. Patient will be discharged to parents.
+A1	Negated T1
+T2	Transportation_Other 1740 1778;1781 1913;1916 2026	Resource Needs Problem: TRANSPORTATION Goal- Transportation Patient parents will continue to utilize hospital and external reosurces to support with transportation issues. Intervention/Plan - Transportation Patient parents and LSW collaborating to support with transportation issues
+A2	ResolutioninProgress T2
+T3	Transportation_Other 2643 2737	Plan: LSW and patient mother plan to collaboration in effort to address transportation issues.
+T4	FinancialStrain_Other 2738 2806	LSW to send Colette Louise application and other concrete resources.
+A3	ResolutioninProgress T4

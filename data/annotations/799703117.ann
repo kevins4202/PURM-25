@@ -1,0 +1,10 @@
+T1	FinancialStrain_Other 2585 2703	Foundation support comment: MBA Opens Doors Foundations May 2022 grant, awaiting determination of May 2023 application
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 598 654;657 845	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 657 845	Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County), father works full-time as an electrician and mother is working part-time as dental hygienist
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 1943 2085	Parent Stressors Zoe's illness and ICU admissions as well as complex medical care needs, parents report exhausting their PTO and leave options
+A4	Negated T4
+T5	LackofInsurance 2798 2896	Other existing community services/outside support comment: Horizon BCBS of NJ, PCP: Dr. Williamson
+A5	Negated T5

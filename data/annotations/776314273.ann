@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 482 570	Mom will return to RMH and pans on spending some time there before coming bedside again.
+A1	Resolved T1
+T2	Transportation_Other 634 711	SW did contact SW at HUP and asked for transportation for Mom after discharge
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 809 898	SW also contacted RMH to let them know Mom will be returning to the house this afternoon.
+A3	Resolved T3

@@ -1,0 +1,4 @@
+T1	LackofTransportation 675 733	Mom will be utilizing MGF for transportation as Dad works.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 675 733	Mom will be utilizing MGF for transportation as Dad works.
+A2	Negated T2

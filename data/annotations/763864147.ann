@@ -1,0 +1,7 @@
+T2	LackofInsurance 945 1045	SW also reminded family to add newborn to NJMA Horizon NJ Health, and will provide support as needed
+A1	ResolutioninProgress T2
+T1	LackofTransportation 551 861	Mom shared that transportation has been a challenge, as mom does not drive and dad will be returning to work, and the family is having issues with their car. Mom shared that she has been utilizing a taxi which has been very costly to the family. SW talked through options including public transportation/PATCO.
+T3	PatientCaregiver_Unemployment 551 707	Mom shared that transportation has been a challenge, as mom does not drive and dad will be returning to work, and the family is having issues with their car
+A2	Negated T3
+T4	FinancialStrain_Other 709 943	Mom shared that she has been utilizing a taxi which has been very costly to the family. SW talked through options including public transportation/PATCO. SW reviewed available limited financial resources to assist with associated costs
+A3	ResolutioninProgress T1

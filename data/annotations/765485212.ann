@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 111 349	Progress: SW spoke with Lisa from ODF who confirmed that the mortgage payment was sent to the mortgage company and the check has been cashed. Lisa from ODF sent SW the payment receipt to provide the mortgage company with proof of payment.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1567 1590;1592 1725;1727 1743	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A2	ResolutioninProgress T2

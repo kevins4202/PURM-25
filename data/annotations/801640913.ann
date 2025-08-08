@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 595 651	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 735 807	Rachel is employed as a teacher, Ryan is employed as a paraprofessional.
+A2	Negated T2
+T3	LackofInsurance 2280 2333;2336 2444;2447 2502	Resource Needs Problem: LOCAL ACCOMODATIONS;INSURANCE Goal - Insurance Family will add newborn to primary insurance and explore eligibilty for secondary MA in DE. Intervention/Plan - Insurance SW will assist as needed.
+A3	ResolutioninProgress T3
+T4	NeedTemporaryLodging 2505 2611;2614 2710	Goal - Local Accommodations Family will access available resources to meet needs for local accommodations. Intervention/Plan- Local Accommodations SW assisted with moving up RMH check in date for family.
+A4	Resolved T4

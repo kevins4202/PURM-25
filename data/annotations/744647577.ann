@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 976 1003	Mom is currently unemployed
+T2	GeneralHousingInstability 1796 1819;1822 1984	Housing instability YES Housing instability comment: Mom currently has access to housing through Good Counsel in Riverside, NJ and they will assist with mom and baby for future planning.
+A1	ResolutioninProgress T2
+T3	LackofInsurance 2597 2650;2653 2790;2793 2850	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Mom is currently a dependent of dependent and working to add baby to her Horizon NJ Health which mom also has access to. Intervention/Plan - Insurance SW will cotinue to support.
+A2	ResolutioninProgress T3
+T4	DistancefromHospital 2853 2964	Goal - Local Accommodations Mom is currently staying at Good Counsel Homes which is 2 hours away from hospital.
+T5	NeedTemporaryLodging 2853 2996;2999 3118	Goal - Local Accommodations Mom is currently staying at Good Counsel Homes which is 2 hours away from hospital.  Mom is also interested in RMH. Intervention/Plan- Local Accommodations SW provided mom with information and will continue to provide support as needed
+A3	ResolutioninProgress T5

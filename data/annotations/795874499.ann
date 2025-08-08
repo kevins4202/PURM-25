@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 625 698	Pt resides with her mother, step-father, and two brothers ages 13 and 10.
+A1	Negated T1
+T2	DistancefromHospital 782 838	Family lives in Selinsgrove, PA about 3 hours from CHOP.
+T3	PatientCaregiver_Unemployment 839 906	Jayde is employed as a waitress and Sean is employed as a lab tech.
+A2	Negated T3
+T4	DistancefromHospital 1056 1205	Bio father (Robert Clark) resides in Florida and travelled to Philadelphia due to pt's critical condition, initial plan is to stay for approx 1 week.
+T5	PatientCaregiver_Unemployment 1206 1250	Robert shared that he owns his own business.
+A3	Negated T5
+T6	DistancefromHospital 1254 1372	Pt was previously residing in Florida with her bio father for 6 years, has been residing with bio mother since 3/2022.
+T7	HomeEnvironment_Other 1531 1573	Family denied ongoing DHS/CYS involvement.
+A4	Negated T7

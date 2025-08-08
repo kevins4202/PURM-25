@@ -1,0 +1,5 @@
+T1	Transportation_Other 207 216;219 289	Problems: Hospital discharge, Language differences, Nutrition and Transportation
+T2	LackofTransportation 382 636	SW discussed transport needs expressed to CM coordinator and reminded mom of modivcare benefit. SW advised would schedule rides for post-d/c visits, and mom would need to arrange rides moving forward, can do so with help of pt's uncle who speaks English.
+A1	ResolutioninProgress T2
+T3	LackofFundsforFood 637 761	SW inquired re: WIC, mom showed SW app on her phone and confirmed she is already connected and knows how to access services.
+A2	Resolved T3

@@ -1,0 +1,17 @@
+T2	PatientCaregiver_Unemployment 957 1102	Father is employed full time. Mother is working on a per diem basis at this time and has been able to take the time off that she needs from work.
+A2	Negated T2
+T5	LackofFundsforFood 2662 2695	Family is receiving SNAP benefits
+A5	Negated T5
+T9	NeedofChildcare 2960 3003;3006 3070;3073 3247	Resource Needs Problem: CHILD CARE/DAY CARE Goal - Child care/Day care Family will reapply for CCS benefits. Intervention/Plan- Child care/Day care Mother has the application and is planning to resubmit the application to determine whether the family is now eligible for CCS benefits
+A7	Negated T9
+T7	PatientCaregiver_Unemployment 2777 2890	Social worker encouraged mother to reapply now that she has been unable to work recently due to Majesty's illness
+T1	NonPermanentPlacement 578 646	Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME
+A1	Negated T1
+T4	LackofInsurance 2472 2539;2542 2660	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents have added Majesty to their Keystone First PA Medical Assistance insurance plan
+A4	Negated T4
+T8	NeedofChildcare 2697 2775	Mother applied for CCS benefits but family was denied as they were over-income
+A6	Negated T8
+T11	DistancefromHospital 760 820	Family lives in Swarthmore, PA (about 30 minutes from CHOP).
+A10	Negated T11
+T3	NeedofChildcare 1279 1298;1301 1460	School Status OTHER Other School Status Comment: Patient is in daycare. Mother to follow up with social worker if she requires a letter of support to provide to Majesty's daycare.
+A3	Negated T3

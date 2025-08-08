@@ -1,0 +1,5 @@
+T1	LackofTransportation 801 906	SW provided mother with resources yesterday 4/17, Mother with no income and no transportation home today.
+T2	FinancialStrain_Other 1078 1176	SW to apply for Harp's Hope gift card and explore additional community resources to support family
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 500 557;560 693;695 771;777 797;801 906	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Cab Vouchers (#'s): 1 lyft ride one way . Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: SW provided mother with resources yesterday 4/17, Mother with no income and no transportation home today.
+A2	ResolutioninProgress T3

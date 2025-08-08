@@ -1,0 +1,5 @@
+T1	NeedTemporaryLodging 405 565	SW confirmed that Joyce was able to check back into local RMH. Joyce plans to stay there for the upcoming weeks, with intermittent return home for appointments.
+A1	Resolved T1
+T2	HomeEnvironment_Other 633 662	CYS continues to be involved.
+T3	NonPermanentPlacement 717 752	Pt will be discharged home to aunt.
+A2	ResolutioninProgress T3

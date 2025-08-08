@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 407 478	Family continues to visit daily from local RMH and are active in cares.
+A1	Resolved T1
+T2	DistancefromHospital 644 786	SW provided letter of support for family's home in AZ per family's request, as family is requesting an extension on deadline for construction.
+T3	FinancialStrain_Other 1494 1551;1554 1642	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6.
+A2	ResolutioninProgress T3
+T4	PatientCaregiver_Unemployment 1648 1703	Additional comments:  Parents not working at this time.

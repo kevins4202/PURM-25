@@ -1,0 +1,17 @@
+T1	NonPermanentPlacement 661 696;699 761	Patient living situation: PARENT(S) Parent Information: Parents ive in Howell NJ (1 hr from CHOP).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 762 937	Mom is a school teacher and off from work until Sep (currently on unpaid leave after taking maternity leave). Dad is using his paternity time and retuns to work in early July.
+A2	Negated T2
+T3	DistancefromHospital 699 761	Parent Information: Parents ive in Howell NJ (1 hr from CHOP).
+T4	NeedTemporaryLodging 938 964	Parents are staying at RMH
+A3	Resolved T4
+T5	LackofTransportation 1924 2025;2028 2071	Existing Community Services/Outside Supports: FOUNDATION SUPPORT;PUBLIC ASSISTANCE/SSI;TRANSPORTATION Transportation comment: Parents have a car.
+A4	Negated T5
+T6	FinancialStrain_Other 2074 2254;2257 2454	Public assistance/SSI comment: Pt approved for SSI (receiving $30/month during admission); pt should now receive NJ MA (mom reports she sent SSI approval letter to them last week). Foundation support comment: Family approved fo payment of one month of mortgage (May 2023), 2 Harps Hope gift cards and applied to Michael's Feat (received support through them when pt was at OSH).
+A5	ResolutioninProgress T6
+T7	FinancialStrain_Other 2631 2979	Intervention/Plan - Household Finances Mom reports some ongoing financial stress related to her not working, as well as increased cost of gas and tolls with dad travelling back and forth to bedside. SW explained the Colette Louise Foundation, however unsure if family will qualify. Mom also reports she applied to Michael's Feat; SW will follow up.
+A6	ResolutioninProgress T7
+T8	PatientCaregiver_Unemployment 3739 3765	Mom is off work until Sep;
+A7	Negated T8
+T9	ChildcareBarrierfromHospitalization 3766 3807	grandparents will care for pt afterwards.
+A8	Negated T9

@@ -1,0 +1,4 @@
+T1	HomeSafety 371 508	SW received message from mother noting that family will need assistance with a car seat. SW to approve car seat when ready for discharge.
+A1	ResolutioninProgress T1
+T2	LackofInsurance 223 232;235 244;246 261;266 275;280 367	Problems: Insurance Hospitalization Progress: SW sent completed LOMN to CHOP FHCP Coordinator Rosemarie Padilla for NJMA application.
+A2	ResolutioninProgress T2

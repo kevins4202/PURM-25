@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 613 648	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 651 735	Parent Information: Parents live together in Sparta, NJ (about 2.5 hours from CHOP).
+T3	PatientCaregiver_Unemployment 736 848	Pt's mother is a pharmacist and on paid maternity leave until Nov. Pt's father is working remotely from bedside.
+A2	Negated T3
+T4	NeedTemporaryLodging 849 886	Parents are currently staying at RMH.
+A3	Resolved T4
+T5	DistancefromHospital 1914 2013	Parent Stressors Prolonged hospitalization, transfer to CHOP which is 2.5 hours from family's home.
+T6	NeedTemporaryLodging 2070 2164	Other existing community services/outside support comment: Parents are staying locally at RMH.
+A4	Resolved T6
+T7	LackofInsurance 2233 2286;2289 2373;2376 2686	Resource Needs Problem: INSURANCE;OTHER (SEE COMMENT) Goal - Insurance Everett will have SSI and secondary NJ Medical Assistance in place. Intervention/Plan - Insurance SW spoke to pt's mother about SSI and secondary NJ MA; explained the process of applying and how pt would qualify for NJ MA. SW provided the phone # and encouraged parents to apply because, even if pt is only eligilbe for NJ MA while admitted, this could help with hospital bills.
+A5	Negated T7
+T8	FinancialStrain_Other 2769 2830;2833 3215	Goal - Other resource needs Parents will have EI information. Intervention/Plan - Other resource needs Parents expressed concern over possible cost of EI services after discharge, having done some research. SW explained likely scenario, but will contact county SCHS to see if more detailed information can be provided. SW also explained financial resources if it does become a burden, such as foundation assistance or Catastrophic Illness Fun..

@@ -1,0 +1,3 @@
+T1	NonPermanentPlacement 544 658	Patient is clear to go home with parents, CYS just wanted to know date of discharge to continue following at home.
+A1	Negated T1
+T2	HomeEnvironment_Other 544 658;662 837	Patient is clear to go home with parents, CYS just wanted to know date of discharge to continue following at home. UPDATE: Delco CYS Supervisor, Laura Kelly, contacted SW via phone at 11:09am. SW informed Kelly of today's discharge and Kelly shared that parents are still clear on their end

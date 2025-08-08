@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 274 283;287 493	Progress: SW spoke to Ronald McDonald House SW Carrie. RMDH is willing to make an exception (age of parents  and milage) for parents to stay, however they do not have a room at this time. Parents remain on wait list.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 591 650;652 790	SW emailed grandmother  And mother Opens Doors application. Patient's extended family members and friends have donated meal vouchers to parents. Parents are eligible for concrete resources if needed
+A2	ResolutioninProgress T2

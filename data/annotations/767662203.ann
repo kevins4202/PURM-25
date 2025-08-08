@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 757 917	Patient mother coping appropriately as per LSW`s assessment. Patient mother`s work schedule will be changing and she will plan to visit Ny`robi more frequently.
+A1	Negated T1
+T2	ChildcareBarrierfromHospitalization 757 917	Patient mother coping appropriately as per LSW`s assessment. Patient mother`s work schedule will be changing and she will plan to visit Ny`robi more frequently.
+A2	ResolutioninProgress T2

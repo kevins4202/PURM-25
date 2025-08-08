@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 573 629	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 697 760	Family is from Piscataway NJ, about two hours from CHOP by car.
+T3	PatientCaregiver_Unemployment 762 824	Lissette is a school teacher and John is a team lead operator.
+A2	Negated T3
+T4	NeedTemporaryLodging 1969 2024	Had to relocate from home and currently staying in RMH.
+A3	Resolved T4
+T5	NeedTemporaryLodging 2151 2194;2197 2288	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Family has checked into RMH and report to be comfortable there.
+A4	ResolutioninProgress T5
+T6	DistancefromHospital 3602 3667	Family is from Piscataway NJ, which is about two hours from CHOP.
+T7	NonPermanentPlacement 3669 3730	Family included Mom, Dad, big sister Layla (2), and baby boy.
+A5	Negated T7
+T8	PatientCaregiver_Unemployment 3807 3901	Both parents are employed.  Baby will be added to Mom's insurance policy through her employer.
+A6	Negated T8
+T9	LackofInsurance 3835 3901	Baby will be added to Mom's insurance policy through her employer.
+A7	ResolutioninProgress T9
+T10	NeedTemporaryLodging 4092 4156	Family has checked in to RMH and report being comfortable there.
+A8	Resolved T10

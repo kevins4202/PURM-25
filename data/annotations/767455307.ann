@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 559 594	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	HomeEnvironment_Other 1360 1379;1382 1506	CPS Involvement YES CPS involvment comment: Mom denies a history of CYS involvement. LSW informed mom a child line report will be filed tonight.
+T3	PatientCaregiver_Unemployment 3041 3087	Mom states that she and dad were both at work.
+A2	Negated T3
+T4	HomeSafety 3088 3705	Mom reports that she after received a call from her father telling her to return to the home as fast as possible that patient shot himself. Mom reports that patient shot himself with a pellet gun and that her father owns real guns but they are kept locked up. LSW called Franconia Township police and spoke with Corporal Ed Hall who reports that when officers arrived at the home the patient was alert and stated he was trying to kill himself. Corporal Hall reports that patient used a .22 caliber revolver with one round in it to shoot himself and that a large vault with firearms was found in the basement unlocked.

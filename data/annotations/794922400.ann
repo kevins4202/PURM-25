@@ -1,0 +1,10 @@
+T1	DistancefromHospital 714 791	Family lives in Washington Twp NJ, which is about an hour and half from CHOP.
+T2	PatientCaregiver_Unemployment 793 848	Laura is employed at Chubb and Drew is a cabinet maker.
+A1	Negated T2
+T3	NeedTemporaryLodging 2193 2250	Goal - Local Accommodations Parents have checked into RMH
+A2	Resolved T3
+T4	DistancefromHospital 3472 3547	Family is from Washington Twp NJ, which is about an hour and half from CHOP
+T5	NonPermanentPlacement 3550 3614	Family includes Mom, Dad, three year old daughter, and baby boy.
+A3	Negated T5
+T6	PatientCaregiver_Unemployment 3616 3641	Both parents are employed
+A4	Negated T6

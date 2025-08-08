@@ -1,0 +1,4 @@
+T1	ChildcareBarrierfromNonHospitalization 1171 1564	Mother shared that she will need to reach out to her child care provider for parents' almost 2 year old daughter to determine whether parents will be able to stay longer than 6 hours on 10/28 in the evening. Social worker relayed that parents will need to complete a second 6 hour stay and asked that parents coordinate a time for child care to arrange this and follow up with the medical team
+A1	ResolutioninProgress T1
+T2	NeedofChildcare 1921 2094	Mother verbalized understanding of the plan and will follow up to determine a second 6 hour stay date once parents are able to coordinate child care for their older daughter
+A2	ResolutioninProgress T2

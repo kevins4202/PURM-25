@@ -1,0 +1,5 @@
+T1	DistancefromHospital 299 363	Both parents work full time and live far away from the hospital.
+T2	PatientCaregiver_Unemployment 299 363	Both parents work full time and live far away from the hospital.
+A1	Negated T2
+T3	FinancialStrain_Other 443 521	Levi's mother would like to apply for the Open's Doors grant next grant cycle.
+A2	ResolutioninProgress T3

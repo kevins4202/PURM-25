@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 592 648	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 707 736	Family lives in Allentown, PA
+T3	DrugUse 1668 1687;1690 1748	Substance Abuse YES Substance Abuse comment: Childline report made due to +THC
+T4	HomeSafety 1691 1748	ubstance Abuse comment: Childline report made due to +THC
+T5	NeedTemporaryLodging 2572 2713	ntervention/Plan- Local Accommodations Family not eligible for RMH at this time. SW discussed CICU sleep rooms and local hotel with discount.
+A2	ResolutioninProgress T5
+T6	DrugUse 3791 3868	Initial report filed by outside hospital due to +THC in drug screen at birth.
+T7	HomeSafety 3990 4117	Jared shared that CYS will remain involved for ongoing services at this time. SW to continue to update CYS on status of patient
+T8	NonPermanentPlacement 4120 4195	Mother and father (Anita and Ajay) have full custody and consenting rights.
+A3	Negated T8
+T9	NeedTemporaryLodging 4199 4542	SW discussed local accommodations. SW discussed that family is unfortunately not eligible for RMH at this time. SW discussed CICU sleep rooms and local hotels with discount, provided information. SW requested CICU sleep room for mother as she will arrive in the evening. SW explained how to request sleep room and that they are not guaranteed.
+A4	ResolutioninProgress T9

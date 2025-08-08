@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 622 678	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 681 789	Parent Information: Parens (both spanish speaking only) live in Plainfield NJ (1 hour and 30 min from CHOP).
+T3	PatientCaregiver_Unemployment 790 902	Mom reports she cleans houses part time and dad works in construction (leaves home at 7 am and returns at 6 pm).
+A2	Negated T3
+T5	DistancefromHospital 1870 1934	Parent Stressors Lengthy hospitalization, distance from hospital
+T6	LackofTransportation 2165 2209	Transportation comment: Parents have 2 cars.
+A4	Negated T6
+T7	LackofInsurance 2212 2327	Public assistance/SSI comment: Pt has NJ Medicaid (Horizon NJ), receives SSI ($30/month) and is registered for WIC.
+A5	Negated T7
+T8	LackofFundsforFood 2212 2327	Public assistance/SSI comment: Pt has NJ Medicaid (Horizon NJ), receives SSI ($30/month) and is registered for WIC.
+A6	Negated T8
+T9	FinancialStrain_Other 2426 2478;2481 2542;2545 2773	Resource Needs Problem: INSURANCE;HOUSEHOLD FINANCES Goal - Household Finances Parents will be aware of resources. Intervention/Plan - Household Finances Parents visit daily and have the cost of gas, tolls and parking,which has added up. SW discussed Colette Louise Foundation and Opens Doors Foundation and will assist with applying for both.
+A7	ResolutioninProgress T9
+T10	ChildcareBarrierfromHospitalization 2545 2667	Intervention/Plan - Household Finances Parents visit daily and have the cost of gas, tolls and parking,which has added up.
+A8	Negated T10
+T11	LackofTransportation 2545 2667	Intervention/Plan - Household Finances Parents visit daily and have the cost of gas, tolls and parking,which has added up.
+A9	Negated T11
+T12	ChildcareBarrierfromHospitalization 3028 3117	ntervention/Plan - Adjustment to Hospitalization Parents visit daily, but in the evening.
+A10	Negated T12

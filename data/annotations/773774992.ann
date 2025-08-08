@@ -1,0 +1,20 @@
+T1	NonPermanentPlacement 630 686;689 810	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Antonio lives with his mother, Lastayesha Waller, and three of his older brothers in Upper Darby, PA.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 811 844	Mother's employment not assessed.
+A2	Unsure T2
+T3	HomeEnvironment_Other 1700 1719;1722 1781	CPS Involvement YES CPS involvment comment: Open case with Delaware County CYS.
+T4	FinancialStrain_Other 2144 2344	Parent Stressors Unanticipated ICU-level hospitalization, Antonio's older brother passed away at CHOP in October 2022, limited social support in the area, financial and transportation resource strain.
+T5	LackofTransportation 2144 2344	Parent Stressors Unanticipated ICU-level hospitalization, Antonio's older brother passed away at CHOP in October 2022, limited social support in the area, financial and transportation resource strain.
+T6	HomeEnvironment_Other 2347 2444;2447 2513	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI;CHILDREN AND YOUTH AGENCY/CUA Children and youth agency/CUA comment: Delaware County CYS worker:
+T7	LackofFundsforFood 2542 2607	Public assistance/SSI comment: Family is receiving SNAP benefits.
+A3	Negated T7
+T8	LackofInsurance 2608 2695	Antonio has been added to PA Medical Assistance United Healthcare Community Plan of PA.
+A4	Negated T8
+T9	LackofTransportation 2764 2802;2805 2874;2877 3017	Resource Needs Problem: TRANSPORTATION Goal- Transportation Family will have transportation to the hospital. Intervention/Plan - Transportation Social worker will explore available transportation options through foundations for Lyft/Uber gift cards.
+A5	ResolutioninProgress T9
+T10	DistancefromHospital 4125 4229	Mother shared that the family will be moving to Ohio at the end of January (family's lease ends 2/1/23).
+T11	LackofTransportation 4439 4632	Mother shared that she does not have transportation to the hospital and limited funds for public transportation or rideshare. Social worker offered to explore transportation assistance options.
+A6	ResolutioninProgress T11
+T12	FinancialStrain_Other 4439 4564	Mother shared that she does not have transportation to the hospital and limited funds for public transportation or rideshare.
+T13	HomeEnvironment_Other 4844 4953	CYS worker also inquired about transfer to a hospital in Ohio as family will be moving at the end of January.
+T14	DistancefromHospital 4844 4953	CYS worker also inquired about transfer to a hospital in Ohio as family will be moving at the end of January.

@@ -1,0 +1,6 @@
+T1	LackofInsurance 459 530	Primary insurance unfortunately does not have home nursing/PDN benefit.
+A1	Negated T1
+T2	FinancialStrain_Other 286 458	SW working with family and outside agencies to assist with MLTSS application process, which would assist with home nursing/PDN benefit and access to Medicaid/NJMA for Nico.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1431 1600	SW providing weekly concrete resource assistance to support with travel costs. SW also referred family to Fred's Footsteps for additional support, working on application
+A3	ResolutioninProgress T3

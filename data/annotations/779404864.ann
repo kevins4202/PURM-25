@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 2524 2543;2546 2623	CPS Involvement YES CPS involvment comment: CYS has custody of Serenity for all medical decisions
+T2	HomeEnvironment_Other 2524 2543;2546 2623	CPS Involvement YES CPS involvment comment: CYS has custody of Serenity for all medical decisions
+T3	NonPermanentPlacement 2950 2969;2972 3066	Substance Abuse YES Substance Abuse comment: Patient exposed to  multiple substances in utero, CYS now has custody
+T4	DrugUse 2950 2969;2972 3066	Substance Abuse YES Substance Abuse comment: Patient exposed to  multiple substances in utero, CYS now has custody
+T5	DrugUse 3406 3501	Parent Stressors Mother's substance use, patient's premature birth and illness, CYS involvement
+T6	HomeEnvironment_Other 3406 3501	Parent Stressors Mother's substance use, patient's premature birth and illness, CYS involvement
+T7	LackofInsurance 3504 3571;3574 3622	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has PA MA
+A1	Negated T7
+T8	HomeEnvironment_Other 593 649;652 935	Patient living situation: CHILDREN IN THE HOME;PARENT(S) Parent Information: Joanna  Mongiello ( mother) lives in Chester County, PA.  Per CYS she must have supervised visits at the hosptial. She is able to recieve medical updates.   Victor Garza ( Patient's father ) lives in Chester County, PA . There are no restrictions in place for him
+T9	NonPermanentPlacement 593 648	Patient living situation: CHILDREN IN THE HOME;PARENT(S
+A2	Negated T9

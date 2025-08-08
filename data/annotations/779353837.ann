@@ -1,0 +1,5 @@
+T1	HomeEnvironment_Other 598 664	Lancaster County CYS Caseworker Olivia Jones (717-606-5206) aware.
+T2	SubstanceAbuse_Other 489 593	Goal discharge is Tuesday 2/21. Mother stated Vantage House staff will pick them up at time of discharge
+A1	ResolutioninProgress T2
+T3	PermanentPlacementPending 489 594	Goal discharge is Tuesday 2/21. Mother stated Vantage House staff will pick them up at time of discharge.
+A2	ResolutioninProgress T3

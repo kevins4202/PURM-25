@@ -1,0 +1,26 @@
+T1	PatientCaregiver_Unemployment 761 848	father works as a cook and mother reports having a job interview scheduled for tomorrow
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 761 848	father works as a cook and mother reports having a job interview scheduled for tomorrow
+A2	ResolutioninProgress T2
+T3	NonPermanentPlacement 612 665;668 760	Patient living situation: PARENT(S);RELATIVE(S);OTHER Parent Information: Ismary's mother and father are living in Bethlehem (Northampton County);
+A3	Negated T3
+T4	IntimatePartnerViolence 1707 1737;1740 1861	Home Environment: NOT ASSESSED Home Environment comment: per chart review has historically received external community resource information and referral
+A4	HistoryOf T4
+T5	HomeEnvironment_Other 1986 2005;2008 2276	CPS Involvement YES CPS involvment comment: per chart review and discussion with father - CY47 filed 2/8/23 during admission, Northampton County CYS worker Cheryl Stoppiello 484-523-2547, was cleared for discharge to home with parents. Father says he believes case was going to be closed.
+T6	NonPermanentPlacement 2008 2223	CPS involvment comment: per chart review and discussion with father - CY47 filed 2/8/23 during admission, Northampton County CYS worker Cheryl Stoppiello 484-523-2547, was cleared for discharge to home with parents.
+A5	Negated T6
+T7	HouseInstability_Other 2279 2301;2304 2415	Housing instability NO Housing instability comment: per chart review has historically received external community resource information
+A6	HistoryOf T7
+T8	HouseInstability_Other 2725 2834	Parent Stressors Ismary's recent admissions, transfer for continued work-up and assessment, housing, finances
+T9	FinancialStrain_Other 2725 2834	Parent Stressors Ismary's recent admissions, transfer for continued work-up and assessment, housing, finances
+T10	HomeEnvironment_Other 2943 3226	Children and youth agency/CUA comment: per chart review and discussion with father - CY47 filed 2/8/23 during admission, Northampton County CYS worker Cheryl Stoppiello 484-523-2547, was cleared for discharge to home with parents. Father says he believes case was going to be closed.
+T11	NonPermanentPlacement 2943 3173	Children and youth agency/CUA comment: per chart review and discussion with father - CY47 filed 2/8/23 during admission, Northampton County CYS worker Cheryl Stoppiello 484-523-2547, was cleared for discharge to home with parents.
+A7	Negated T11
+T12	LackofFundsforFood 3229 3273	Public assistance/SSI comment: WIC, Medicaid
+A8	Negated T12
+T13	LackofInsurance 3229 3273	Public assistance/SSI comment: WIC, Medicaid
+A9	Negated T13
+T14	NeedTemporaryLodging 4208 4337	Provided parents with information about Philadelphia RMH, local hotels, available unit/hospital resources, and Resource Connects.
+A10	ResolutioninProgress T14
+T15	PatientCaregiver_Unemployment 4565 4682	Parents report returning home today related to work responsibilities, mother states she has a job interview tomorrow.
+A11	ResolutioninProgress T15

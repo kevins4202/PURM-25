@@ -1,0 +1,15 @@
+T2	PatientCaregiver_Unemployment 771 855	Mother is on maternity leave from her job as an MA, Father works full time at Lowes.
+A2	Negated T2
+T3	LackofInsurance 856 931	Patient to be added to mother's insurance. Mother active with UHMC Medicaid
+A3	Negated T3
+T4	DistancefromHospital 1847 1956	Parent Stressors patient's dx and NIICU admission, distance from home, first child , recovering from delivery
+T6	NeedTemporaryLodging 2262 2357	Goal - Local Accommodations Mother admitted to the SDU and may need to check into RMDH at d/c .
+A5	ResolutioninProgress T6
+T7	NeedTemporaryLodging 2358 2411	Father is staying locally with his parents in a hotel
+A6	Negated T7
+T1	NonPermanentPlacement 611 646	Patient living situation: PARENT(S)
+A1	Negated T1
+T5	LackofInsurance 1959 2026;2029 2142	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: mother active with PA MA, mother to add patient to policy. Patient eligble for SSI
+A4	ResolutioninProgress T5
+T8	NeedTemporaryLodging 2524 2606	SDU SW referred mother to RMDH, they are willing to make an exception for her age.
+A7	ResolutioninProgress T8

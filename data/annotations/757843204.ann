@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 591 626	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	FoodInsecurity_Other 1487 1506;1509 1661	Food insecurity YES Food insecurity comment: Per NICU SW, patient's mother shared that she has limited resources to obtain food. Parents are eligible for concrete resources
+A2	ResolutioninProgress T2
+T3	FoodInsecurity_Other 2275 2313;2316 2435;2438 2558	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Patient's parents will have ongoing access to food resources during the patient's hospitalization Intervention/Plan - Access to food Parents are elligible for concrete resources and LSW will provide them as appropriate
+A3	ResolutioninProgress T3

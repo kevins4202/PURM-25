@@ -1,0 +1,7 @@
+T1	LackofTransportation 167 289	Parents requested SEPTA passes to begin job searching in Philadelphia. SW intern provided parents with 4 SEPTA day passes.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 167 364	Parents requested SEPTA passes to begin job searching in Philadelphia. SW intern provided parents with 4 SEPTA day passes. SW intern provided parents with 3 meal vouchers as a well as a snack pack.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 167 237	Parents requested SEPTA passes to begin job searching in Philadelphia.
+T4	FinancialStrain_Other 954 1011;1014 1102;1106 1163;1166 1247	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3. Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Tokens: 4.
+A3	ResolutioninProgress T4

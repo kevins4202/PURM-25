@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 640 872	Lucas's mom has now gotten a hotel room so that she can rest since arriving from Seattle at 7 am yesterday. The family is also working through the process of adding Lucas and his mom to the Ronald McDonald House room that they have.
+A1	Resolved T1
+T2	DistancefromHospital 640 747	Lucas's mom has now gotten a hotel room so that she can rest since arriving from Seattle at 7 am yesterday.
+T3	LackofInsurance 1365 1623	Chrissy and I spoke about insurance for Riley. She will be working to add him on to her Washington State medicaid plan. Chrissy also carries insurance through her dad. It is unlikely that she can add the baby to that plan. He would not be eligible for PA MA.
+A2	ResolutioninProgress T3
+T4	DistancefromHospital 1412 1484	She will be working to add him on to her Washington State medicaid plan.

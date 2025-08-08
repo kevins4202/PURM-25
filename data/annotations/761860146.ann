@@ -1,0 +1,10 @@
+T1	PatientCaregiver_Unemployment 714 748	Father (Sukhrob) is a truck driver
+A1	Negated T1
+T2	HomeSafety 1779 1798;1801 1967	CPS Involvement YES CPS involvment comment: Philadelphia DHS has been involved in Fatima's care since birth and the case is still currently open. DHS Worker: Chante Waller (215) 834-7380
+A2	ResolutioninProgress T2
+T3	NonPermanentPlacement 582 623;626 713	Patient living situation: PARENT(S);OTHER Parent Information: Fatima is the first child of Sukhrob Ibatova and Aliaksandra Skorb.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 885 1087	Other Information: Due to Father being away from home for work, Father has arranged for Fatima to currently stay in the care of Alla Shovenko (a family friend), her husband and their 3 year old toddler.
+A4	Negated T4
+T5	NeedTemporaryLodging 885 1087	Other Information: Due to Father being away from home for work, Father has arranged for Fatima to currently stay in the care of Alla Shovenko (a family friend), her husband and their 3 year old toddler.
+A5	Resolved T5

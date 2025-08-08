@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 257 314;317 404;410 430;434 550;552 604	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Pharmacy: 35.35. Additional comments: SW paid for 14 day supply of 4 medications to cover anticipated insurance gap when pt moves to Ohio after discharge. (Amlodipene, Omeprazole, Vitamin D, Ferrous sulfate)
+A1	ResolutioninProgress T1
+T2	LackofInsurance 434 550	SW paid for 14 day supply of 4 medications to cover anticipated insurance gap when pt moves to Ohio after discharge.

@@ -1,0 +1,4 @@
+T1	LackofTransportation 688 785	Parents do not have a car so a facility that is accessible by public transportation is preferred.
+T2	HouseInstability_Other 405 490	Due to current housing situation, parents are not able to take patient directly home.
+T3	PermanentPlacementPending 491 687	The team discussed transitional care center with family. Parents were encouraged to train and learn patient's care as long as he is inpatient so that they could be ready if housing comes together.
+A1	ResolutioninProgress T3

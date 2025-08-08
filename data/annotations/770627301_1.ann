@@ -1,0 +1,5 @@
+T1	NonPermanentPlacement 574 624;627 655	Patient living situation: SKILLED NURSING FACILITY Facility contact: pediamanor
+T2	PatientCaregiver_Unemployment 1968 2040	Grandmother is a licence therapist but in transition and money is tight.
+A1	Negated T2
+T3	FinancialStrain_Other 1968 2092	Grandmother is a licence therapist but in transition and money is tight.  PICU SW approved meal vouchers for this admission.
+A2	ResolutioninProgress T3

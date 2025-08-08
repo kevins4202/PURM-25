@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 0 26;32 55;57 190;192 208;219 423	SOCIAL WORK CARE PLAN NOTE Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing Progress:  Family approved for $500 in assistance from the Colette Louise Foundation. SW called mom at her request to explain how to obtain; she plans to use award toward PGW, car insurance and gas cards.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 360 423	she plans to use award toward PGW, car insurance and gas cards.
+A2	Negated T2

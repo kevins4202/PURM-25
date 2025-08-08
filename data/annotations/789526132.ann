@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 623 664	Patient living situation: PARENT(S);OTHER
+A1	Negated T1
+T2	ChildcareBarrierfromHospitalization 1675 1755	Patient Strengths Patient has familial supports present at the bedside each day.
+A2	Negated T2
+T3	NeedTemporaryLodging 1829 1872;1875 1992;1995 2120	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Patient family will gain accommodations to stay local while patient remains hospitalized. Intervention/Plan- Local Accommodations SW provided information to request accomadaitons through RMHP-patient family on list.
+A3	ResolutioninProgress T3
+T4	NeedTemporaryLodging 2686 2725	-Patient family on waiting list at RMHP
+A4	ResolutioninProgress T4
+T5	PatientCaregiver_Unemployment 3075 3169	-Patient mother not working currently, patient maternal grandmother works at insurance company
+T6	FinancialStrain_Other 3748 3805;3808 3896;3902 3922;3926 4049	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment. Patient eligible for reassessment 3/28/23
+A5	ResolutioninProgress T6

@@ -1,0 +1,4 @@
+T1	DistancefromHospital 406 543	Parents are traveling back and forth to CHOP from home, parents meet distance requirements for RMDH - SW provided information about RMDH.
+T2	NeedTemporaryLodging 406 543	Parents are traveling back and forth to CHOP from home, parents meet distance requirements for RMDH - SW provided information about RMDH.
+T3	LackofInsurance 549 623	Patient and twin are eligible for secondary insurance through PA Medicaid.
+A1	Negated T3

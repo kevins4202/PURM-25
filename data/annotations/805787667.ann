@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 736 820	To address financial stressors, LSW referred the patient's mother to Colette Louise.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 821 914	LSW reached out to the Ronald McDonald house to request additional assistance for the family.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 203 226;228 361;363 379	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A3	ResolutioninProgress T3

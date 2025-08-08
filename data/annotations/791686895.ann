@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 285 364	Mother unable to receive NJ Family Leave because she works in PA and not in NJ.
+A1	Negated T1
+T2	FinancialStrain_Other 367 477;480 526	SW submitted Opens Doors application on parents behalf and sent mother a link to the Colette Louis Foundation. SW applied for a gas card through Harp's Hope.
+A2	ResolutioninProgress T2

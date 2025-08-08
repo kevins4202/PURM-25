@@ -1,0 +1,5 @@
+T1	NeedTemporaryLodging 1222 1378	Local accomodation continue to be discussed as Mom is not eligible for RMH due to her age and no support has been identified to be with Mom during her stay.
+T2	FinancialStrain_Other 1424 1490	SW provided addiitonal meal vouchers to help family with finances.
+A1	ResolutioninProgress T2
+T3	FinancialStrain_Other 211 220;223 243	Problems: Finances and Housing
+T4	NeedTemporaryLodging 211 220;223 243	Problems: Finances and Housing

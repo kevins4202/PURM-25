@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 246 303;306 409;411 500;506 761	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft ride upon discharge. Reason for Disbursement: Other hardship considerations: Lack of financial/family supports Additional comments:  Pt was transported to CHOP via ambulance at time of admission. Pt/pts mother has limited financial/family supports and unable to secure transportation home upon discharge. LSW approved lyft ride home for pt/pts mother upon discharge.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 591 761	Pt/pts mother has limited financial/family supports and unable to secure transportation home upon discharge. LSW approved lyft ride home for pt/pts mother upon discharge.
+A2	ResolutioninProgress T2
+T3	HomeAccessibility 762 912	LSW informed bedside RN that pt will need car seat to ensure safe transportation home. RN confirmed submitted request to materials for car seat for pt
+A3	ResolutioninProgress T3

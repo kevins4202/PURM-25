@@ -1,0 +1,28 @@
+T1	NonPermanentPlacement 612 668;671 806	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Parents are not together but both are legal guardians for Yaseen.  Yaseen lives with his mother in Harleysville PA.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 808 897	Mother works remotely.  Father works full time and is currently living in North Carolina.
+A2	Negated T2
+T3	DistancefromHospital 832 897	Father works full time and is currently living in North Carolina.
+T4	IntimatePartnerViolence 2018 2039;2042 2170	Home Environment: YES Home Environment comment: Previous SW documentation of History of positive home environment screen. Mom reports no current needs
+A3	HistoryOf T4
+T5	ChildAbuse 2174 2193;2196 2387	CPS Involvement YES CPS involvment comment: Mom shared that she filed a report to Montgomery County CYS in 2021 for concerns for abuse and neglect with Dad. Mom reports that the case was closed with no concerns.
+T6	FoodInsecurity_Other 2415 2434;2437 2574	Food insecurity YES Food insecurity comment: Mom is connected with local food pantries (Mann Street).  She also goes to her local Mosque for food when needed
+A4	ResolutioninProgress T6
+T7	LackofTransportation 3490 3643	Transportation comment: Mom has a car. Yaseen has a carseat, which Mom reports is now very small and he needs a new one, but still uable in the meantime.
+A5	Negated T7
+T8	HomeSafety 3529 3643	Yaseen has a carseat, which Mom reports is now very small and he needs a new one, but still uable in the meantime.
+T9	FoodInsecurity_Other 3745 3976	Other existing community services/outside support comment: Mom is connected with Montgomery County Community Connections, who are assisting her with applying for SNAP and Cash Assistance. Mom utilizes Mann Street for food resources
+A6	ResolutioninProgress T9
+T10	FinancialStrain_Other 3745 3976	Other existing community services/outside support comment: Mom is connected with Montgomery County Community Connections, who are assisting her with applying for SNAP and Cash Assistance. Mom utilizes Mann Street for food resources
+A7	ResolutioninProgress T10
+T11	HomeSafety 4046 4120;4123 4211;4214 4492	Resource Needs Problem: EMPLOYMENT/INCOME;SAFE/ACCESSIBLE HOME ENVIRONMENT Goal - Safe/Accessible home environment Yaseen will have an accessible home environment. Intervention/Plan - Safe/Accessible home environment  SW discussed that SW will look into insurance resources for getting the family a wheelchair ramp and stair lift. Mom currently carries Yaseen in and out of the home, and bathes him in the sink due to bathroom being upstairs.
+A8	ResolutioninProgress T11
+T12	FinancialStrain_Other 4495 4578;4581 4705	Goal - Employment/income Mom will have support with re-applying for SSI for Yaseen. Intervention/Plan - Employment/income SW provided Mom with the phone number to reapply for SSI. SW will continue to support.
+A9	ResolutioninProgress T12
+T13	PatientCaregiver_Unemployment 6626 6710	Father confirmed that due to work, he is unable to provide physical care for Yaseen.
+A10	Negated T13
+T14	FoodInsecurity_Other 7279 7391	She is connected with her local mosque who is able to provide some food resources and confirmed food insecurity.
+A11	ResolutioninProgress T14
+T15	PatientCaregiver_Unemployment 7393 7458	She works remotely when she is able.  Father is working full time
+A12	Negated T15
+T16	DistancefromHospital 7584 7629	Father is currently living in North Carolina.

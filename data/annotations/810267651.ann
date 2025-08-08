@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 194 250;257 280;286 441	Patient and family screened today for Social Work needs. Concrete resource needs Additional Comments: SW received sign-out from PICU SW reporting mother expressed a need for clothes and car seat for discharge prior to transfer to floor.
+T2	HomeAccessibility 286 441	Additional Comments: SW received sign-out from PICU SW reporting mother expressed a need for clothes and car seat for discharge prior to transfer to floor.
+T3	FinancialStrain_Other 525 708	Mother reports she does not have clothes or car seat to take patient home in when they are ready for discharge. SW provided one newborn sized onesie from SW Emergency Clothing Closet.
+A1	ResolutioninProgress T3
+T4	HomeAccessibility 525 816	Mother reports she does not have clothes or car seat to take patient home in when they are ready for discharge. SW provided one newborn sized onesie from SW Emergency Clothing Closet. Mother was appreciative of SW assistance. SW also will order car seat from supply chain prior to discharge.
+A2	ResolutioninProgress T4

@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 161 226;229 281	Mother approved for $65 dollar gift card via Harp's Hope for gas. SW forwarded electronic gift card to mother's email.
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromHospitalization 284 368	Mother stated she is able to visit from Saturday to Monday and will be here tomorrow
+A2	Negated T2

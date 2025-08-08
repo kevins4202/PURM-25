@@ -1,0 +1,4 @@
+T1	HomeEnvironment_Other 312 581	Social worker spoke with DHS worker and provided update on admission. Social worker confirmed with DHS worker that recommendation remains the same: Patient to be discharged to dad. DHS should be alerted of discharge. No limitations or concerns with mom being at bedside
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 460 492	Patient to be discharged to dad.
+A2	Negated T2

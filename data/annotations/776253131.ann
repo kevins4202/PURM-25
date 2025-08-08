@@ -1,0 +1,7 @@
+T1	NeedTemporaryLodging 464 500	SW updated her regarding RMH denial.
+T2	ChildcareBarrierfromHospitalization 501 629	SW expressed understanding and will let MGM know to continue to search for child care in order to coordinate training next week.
+T3	LackofTransportation 633 772	Mother completed MATP application. SW sent paperwork to Lancaster County MATP Red Rose Transit Authority (717-291-1243, fax: 717-397-4761).
+A1	ResolutioninProgress T3
+T4	PermanentPlacementPending 943 1099	SW and Mother discussed the upcoming court hearing and Mother's nerves surrounding it. She is hopeful that Mirajh will be able to be discharged to her care.
+T5	FinancialStrain_Other 1355 1444;1446 1522	Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 12. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A2	ResolutioninProgress T5

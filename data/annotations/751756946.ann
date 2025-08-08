@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 454 529	Parents continue to visit daily from RMH and are active in care at bedside.
+A1	Resolved T1
+T2	LackofInsurance 627 980	Mom shared specific questions about VA MA. SW noted that the waiver has provided the family with a case manager who will be able to assist the family ongoing. SW encouraged the family to connect with this case manager. Family reviewed paperwork and gained further information on switching MCOs if interested. Family does not plan to switch at this time.
+A2	Negated T2

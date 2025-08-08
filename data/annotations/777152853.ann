@@ -1,0 +1,4 @@
+T1	LackofTransportation 662 803	SW approved a $25 gift card to assist with transportation home tomorrow afternoon. If discharge is Wed, SW will see if CYS worker can assist.
+A1	ResolutioninProgress T1
+T2	HomeEnvironment_Other 207 230;232 354;356 372	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs Outcome: Ongoing
+A2	ResolutioninProgress T2

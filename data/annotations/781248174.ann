@@ -1,0 +1,16 @@
+T1	DistancefromHospital 683 734	Mom has another child, 13 y/o who remains in Haiti.
+A1	SubjectIsNotPatient T1
+T2	NonPermanentPlacement 735 804	Mom and baby live together in rented room in a house in Hamilton, NJ.
+A2	Negated T2
+T3	HomeAccessibility 805 821	Baby has a crib.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 995 1159	Dad began working for Coca-cola (mom unsure of exact position) in beginning of February, mom is currently not working and relies on pt's aunt for financial support.
+A4	Negated T4
+T5	PatientCaregiver_Unemployment 995 1159	Dad began working for Coca-cola (mom unsure of exact position) in beginning of February, mom is currently not working and relies on pt's aunt for financial support.
+T6	HomeAccessibility 1160 1272	Per mom, family has enough infant supplies to get by at this time but is unsure how they will sustain long-term.
+T7	FinancialStrain_Other 1516 1652	SW provided 3 meal vouchers and requested Hospitality to escort mom to cafeteria to assist with navigation iso limited English literacy.
+A5	ResolutioninProgress T7
+T8	FinancialStrain_Other 2120 2177;2180 2268;2270 2399	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3. Reason for Disbursement: Unforseen/emergent admission-no available resources and Other hardship considerations: limited resources
+A6	ResolutioninProgress T8
+T9	FinancialStrain_Other 208 217;220 262	Problems: Finances, Housing and Language differences
+A7	ResolutioninProgress T9

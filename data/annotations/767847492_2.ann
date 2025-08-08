@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 603 638;641 719	Patient living situation: PARENT(S) Parent Information: Mom (18yo) and dad (20yo) live together in Jim Thorpe, PA.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 877 929	Mom works at a gas station and dad does landscaping.
+A2	Negated T2
+T3	LackofTransportation 1939 2059	Parent Strengths can articulate needs, adequate family support, understands illness, car, local family for accomodations
+A3	Negated T3
+T4	NeedTemporaryLodging 1939 2059	Parent Strengths can articulate needs, adequate family support, understands illness, car, local family for accomodations
+A4	Negated T4
+T7	LackofInsurance 2131 2198;2201 2295	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Parents noted that baby was already added to AmeriHealth PA MA.
+A5	Negated T7
+T5	DistancefromHospital 2062 2128	Parent Stressors distance from hospital, finances, hospitalization
+T6	FinancialStrain_Other 2364 2406;2409 2478	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Parents noted coping with overall finances.
+A6	Negated T6

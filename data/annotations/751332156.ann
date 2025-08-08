@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 642 698;701 897	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Elloise is the third child born to her intact parents, Djouhra and Talbi, who live together with Elloise's 13 year old sister and 14 year old brother in Northeast Philadelphia.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 898 1070	Father is employed and taking intermittent FMLA as needed. Mother is also employed and reports that her employer is understanding when she needs to take time off from work.
+A2	Negated T2
+T3	PermanentPlacementPending 2107 2174	Per CUA worker, patient is cleared for discharge home with parents.
+A3	Resolved T3
+T4	HomeEnvironment_Other 1911 2174	CPS involvment comment: Catholic Community Services CUA worker: Cydney Simmons (215-431-5855). CUA involved due to case with a family member and will be providing ongoing services for the family. Per CUA worker, patient is cleared for discharge home with parents.
+T5	LackofInsurance 2556 2623;2626 2716	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Elloise has Health Partners PA Medical Assistance coverage.
+A4	Negated T5
+T6	FinancialStrain_Other 2785 2827;2830 2948;2951 3249	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Family will have financial resources to support themselves during Elloise's hospitalization. Intervention/Plan - Household Finances Parents identified no immediate financial assistance needs at this time other than financial resource strain due to the cost of meals and parking in the hospital. Social worker continuing to provide ongoing assessment and providing parking vouchers as needed.
+A5	ResolutioninProgress T6
+T7	HomeEnvironment_Other 4208 4556	Social worker contacted CUA worker, who shared that CUA has been involved for about two weeks. CUA worker to send social worker a release of information form. Social worker was able to reach mother by phone to relay that CUA worker visited patient in the hospital and to relay that social worker will provide updates as requested by the CUA worker.

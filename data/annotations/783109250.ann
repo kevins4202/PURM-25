@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 586 613	mom interviewing for a job;
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 614 681	dad works as a HHA for his mother and plans to take pt to her house
+A2	Negated T2

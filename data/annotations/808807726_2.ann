@@ -1,0 +1,19 @@
+T1	LackofInsurance 2115 2182;2185 2288	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has NJ medicaid and mother applied for SSI - application pending
+A1	Negated T1
+T2	NonPermanentPlacement 559 615	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 703 885	Mother is starting a new job with the post office- she will get her schedule this week and then be able to plan when she is able to visit patient and potentially check into the RMDH.
+T4	NeedTemporaryLodging 703 884	Mother is starting a new job with the post office- she will get her schedule this week and then be able to plan when she is able to visit patient and potentially check into the RMDH
+A4	ResolutioninProgress T4
+T5	DistancefromHospital 2030 2112	Parent Stressors distance from home, patients NIICU admission and transfer to CHOP
+T6	FinancialStrain_Other 2400 2558	Goal- Transportation Mother stated that OSH was providing her with gas cards and that was helpful and she has not been working and is starting a new position.
+T7	PatientCaregiver_Unemployment 2400 2558	Goal- Transportation Mother stated that OSH was providing her with gas cards and that was helpful and she has not been working and is starting a new position.
+T9	FinancialStrain_Other 2601 2683	Intervention/Plan - Transportation SW applied for gas card via Harp's Hope on 6/22
+A3	ResolutioninProgress T9
+T10	NeedTemporaryLodging 2886 3037	Intervention/Plan - Adjustment to Hospitalization SW to provide on going emotional support/resources as needed, SW referred family to Philadelphia RMDH
+A5	ResolutioninProgress T10
+A6	ResolutioninProgress T7
+A7	ResolutioninProgress T6
+T8	DistancefromHospital 2559 2598	Parents live about 90 minutes from CHOP
+A8	Negated T3
+A9	Negated T7

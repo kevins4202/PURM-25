@@ -1,0 +1,5 @@
+T1	PatientCaregiver_Unemployment 2 25;27 113;115 131	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have needed supports to maintain employment/income Outcome: Ongoing
+A1	Negated T1
+T2	LackofInsurance 464 582	Parents are hopeful that they can be transferred to a hospital in Florid and understand the insurance approval process
+A2	Negated T2
+T3	DistancefromHospital 464 582	Parents are hopeful that they can be transferred to a hospital in Florid and understand the insurance approval process

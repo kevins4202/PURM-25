@@ -1,0 +1,3 @@
+T1	DistancefromHospital 400 542	Reason for Disbursement: Other hardship considerations: father lives over hour from hospital and is staying at bedside with patient overnight.
+T2	FinancialStrain_Other 250 307;310 398;400 598	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 5. Reason for Disbursement: Other hardship considerations: father lives over hour from hospital and is staying at bedside with patient overnight. father is missing work to stay at bedside with patient.
+A1	ResolutioninProgress T2

@@ -1,0 +1,22 @@
+T1	PatientCaregiver_Unemployment 727 801	Mom is employed as a counselor at Merakey and Dad is surrently unemployed.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 727 801	Mom is employed as a counselor at Merakey and Dad is surrently unemployed.
+T3	NonPermanentPlacement 563 631	Patient living situation: PARENT(S);CHILDREN IN THE HOME;RELATIVE(S)
+A2	Negated T3
+T4	SubstanceAbuse_Other 1567 1586;1589 1644	Substance Abuse YES Substance Abuse comment: Dad is currently in treatment.
+A3	ResolutioninProgress T4
+T5	HomeEnvironment_Other 1647 1663;1666 1749	Legal Issues YES Legal Issues comment: Paul is currently on probation and compliant with court order
+T6	DistancefromHospital 2076 2139	Distance from home, other child in the home, limited resources.
+T7	ChildcareBarrierfromNonHospitalization 2076 2139	Distance from home, other child in the home, limited resources.
+T8	FinancialStrain_Other 2076 2139	Distance from home, other child in the home, limited resources.
+T9	FinancialStrain_Other 2261 2313;2316 2420;2423 2587	Resource Needs Problem: HOUSEHOLD FINANCES;INSURANCE Goal - Household Finances SW will work with family and organization to make sure family's needs are met. Intervention/Plan - Household Finances SW will reach out to local cardiac organization to see if they are able to support family with cost of regional rails paases.
+A4	ResolutioninProgress T9
+T10	LackofInsurance 2590 2661;2664 2779	Goal - Insurance Baby will be active with insurance prior to discharge. Intervention/Plan - Insurance SW will work with family to help make sure baby is added to insurance policy (PA MA).
+A5	ResolutioninProgress T10
+T11	LackofInsurance 3755 3839	Baby will be added to PA MA.  SW encouraged parents to add baby to insurance policy.
+A6	ResolutioninProgress T11
+T12	LackofTransportation 3841 3901	Family has expressed financial hardship with transportation.
+T13	FinancialStrain_Other 3903 4013	SW spoke with local cardiac organization and they offered to purchase two regional rail passes for the family.
+A7	ResolutioninProgress T13
+T14	LackofTransportation 3903 4013	SW spoke with local cardiac organization and they offered to purchase two regional rail passes for the family.
+A8	ResolutioninProgress T14

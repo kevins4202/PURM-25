@@ -1,0 +1,5 @@
+T2	HomeEnvironment_Other 1353 1372;1375 1450	CPS Involvement YES CPS involvment comment: Outside report, Philadelphia DHS currently involved
+T3	HouseInstability_Other 1454 1477;1480 1543	Housing instability YES Housing instability comment: Mom currently looking for housing.
+A2	ResolutioninProgress T3
+T1	NonPermanentPlacement 579 635	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1

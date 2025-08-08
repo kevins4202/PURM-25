@@ -1,0 +1,7 @@
+T1	HomeEnvironment_Other 1403 1422;1425 1544	CPS Involvement YES CPS involvment comment: Mom informed LSW she currently has an open CYS case her workers name is Alex Chip 484-724-0336.
+T2	NonPermanentPlacement 512 547;550 686	Patient living situation: PARENT(S) Parent Information: Patient lives at home with mom Lastayesha Waller and three brothers Chase Waller, Gabriel Jackson and Uriah Jackson.
+A1	Negated T2
+T3	LackofFundsforFood 2739 2914	Mom informed LSW that she does not have any family support in Philadelphia, she has an aunt who pays for her housing and helps occasionally and she also receive SNAP benefits.
+A2	Negated T3
+T4	FinancialStrain_Other 2739 2914	Mom informed LSW that she does not have any family support in Philadelphia, she has an aunt who pays for her housing and helps occasionally and she also receive SNAP benefits.
+A3	ResolutioninProgress T4

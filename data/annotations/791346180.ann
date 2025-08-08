@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 717 785;788 854	Patient living situation: PARENT(S);RELATIVE(S);CHILDREN IN THE HOME Parent Information: Pt resides at home with her mother and father.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 855 887	Pts parents both work full-time.
+A2	Negated T2
+T3	LackofFundsforFood 2271 2290;2293 2588	Food insecurity YES Food insecurity comment: Pts mother recently applied for SNAP benefits (March 2023) and application is pending. Pts mother reported having a difficult time purchasing nutritious foods due to the cost of food. Pts mother is open to food pantry resources being provided via CHOP Resource Connects.
+A3	ResolutioninProgress T3
+T4	LackofTransportation 3081 3158	Parent Strengths Access to transportation; supportive and active in pts care.
+A4	Negated T4
+T5	LackofFundsforFood 3447 3500;3503 3627;3630 3820	Resource Needs Problem: EDUCATION PLAN;ACCESS TO FOOD Goal - Access to food Pts mother will monitor that status of SNAP benefits application and will utilize local food pantries. Intervention/Plan - Access to food Pts mother will maintain contact with CAO to monitor status of SNAP benefits. SW provided pts mother with food pantry resources via CHOP resource Connects.
+A5	ResolutioninProgress T5
+T6	LackofFundsforFood 5063 5095;5098 5195	RESOURCE PROBLEM FOOD INSECURITY Food Insecurity Comment Pending SNAP application (March 2023) and food pantry resources provided.
+A6	ResolutioninProgress T6
+T7	LackofInsurance 6494 6527	Child's primary insurer: Medicaid
+A7	Negated T7
+T8	LackofTransportation 7962 8045	Pts mother confirmed access to transportation and denied any barriers to follow-up.
+A8	Negated T8

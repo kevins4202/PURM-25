@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 158 227	Parents will begin filling out Colette Louise foundation application.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 80 157	Father shared that parents plan on visiting tomorrow, 3/17/23, via Greyhound.
+A2	Negated T2

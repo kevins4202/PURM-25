@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 1105 1162	LSW provided the patient's mother with two meal vouchers.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1478 1535;1538 1644	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Gift Cards: 1.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 142 165;167 300;302 318	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A3	ResolutioninProgress T3

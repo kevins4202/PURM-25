@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 561 872	Social worker relayed that family's application to the Colette Louise Tisdahl Foundation for financial assistance was not approved. Social worker provided information about Harp's Hope. Mother is interested in a referral. Social worker placed a referral to Harp's Hope. Family was approved for a Wawa gift card.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 30 53;55 188;190 206	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A2	ResolutioninProgress T2

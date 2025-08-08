@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 576 632;635 767	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Patient lives with adoptive parents Heather and Thomas Umstead in Linden, PA, approximately 3.5 hours from CHOP.
+A1	Negated T1
+T2	DistancefromHospital 655 767	Patient lives with adoptive parents Heather and Thomas Umstead in Linden, PA, approximately 3.5 hours from CHOP.
+T3	PatientCaregiver_Unemployment 768 870	Dad owns his own business in construction/contracting and mom stays at home with William and siblings.
+A2	Negated T3
+T4	DistancefromHospital 2376 2514	Legal Guardian Stressors Adopted child with significant medical needs, other young children in the home, single income, distance from CHOP
+T5	LackofInsurance 2796 2898	Public assistance/SSI comment: Pt is active on PAMA, family is aware of WIC/other state-based supports
+A3	Negated T5
+T6	NeedTemporaryLodging 2967 3010;3013 3104;3107 3181	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations SW will continue to support family with accomodations as needed Intervention/Plan- Local Accommodations Family has checked into local RMH.
+A4	ResolutioninProgress T6
+T8	FinancialStrain_Other 2225 2373	Legal Guardian Strengths Stable housing and income, supportive family, knowledge of resources, presenting as engaged with pt's care needs at bedside
+A6	Negated T8
+T9	PermanentPlacementPending 2517 2614;2617 2793	Existing Community Services/Outside Supports: CHILDREN AND YOUTH AGENCY/CUA;PUBLIC ASSISTANCE/SSI Children and youth agency/CUA comment: Family reports close contact with adoption caseworker in Indiana who continues to support family through finalization of adoption process
+A7	ResolutioninProgress T9
+T10	HouseInstability_Other 2225 2373	Legal Guardian Strengths Stable housing and income, supportive family, knowledge of resources, presenting as engaged with pt's care needs at bedside
+A8	Negated T10
+T7	NeedTemporaryLodging 4125 4342	Heather shared that the family has checked into local RMH, though are anticipating checking out soon so Thomas (adoptive father) can bring home 8yo sibling, who is reportedly struggling with transition to stay at RMH.
+A5	Resolved T7

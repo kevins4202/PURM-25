@@ -1,0 +1,16 @@
+T1	LackofTransportation 908 941	Also provides mom transportation.
+A1	Negated T1
+T2	DrugUse 943 1096	Mom is currently on probation due to history of drug use as well as incarceration 3/23/22-11/15/22.  DCF involved at this time and mom receiving Subutex.
+A2	HistoryOf T2
+A3	ResolutioninProgress T2
+T3	DrugUse 1958 1977;1980 2100	Substance Abuse YES Substance Abuse comment: Mom noted significant history however sober since 3/2022.  Mom receives Subutex via PCP as well
+A4	ResolutioninProgress T3
+A5	HistoryOf T3
+T4	NonPermanentPlacement 594 629;632 689	Patient living situation: PARENT(S) Parent Information: Mom currently lives with in Ewing, NJ
+A6	Negated T4
+T5	LackofTransportation 2255 2332	Parent Strengths can articulate needs, adequate family support, access to car
+A7	Negated T5
+T6	DrugUse 2335 2441	Parent Stressors court involvement, DCF involvement, drug and mental health hx/ treatment, hospitalization
+A8	HistoryOf T6
+T7	LackofInsurance 2685 2718;2721 2798	Resource Needs Problem: INSURANCE Goal - Insurance Mom is still working with DCF to access medicaid for patient
+A9	ResolutioninProgress T7

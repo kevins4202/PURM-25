@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 518 574;577 693	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Mother ( Tyesha) and Father ( Cushn) live in Pleasantville, NJ. Patient is mother's first child.
+A1	Negated T1
+T2	NeedTemporaryLodging 694 772	Parents on waitlist for RMDH , mother to stay in NIICU sleep room this evening
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 2096 2158;2161 2327;2330 2547	Resource Needs Problem: LOCAL ACCOMODATIONS;HOUSEHOLD FINANCES Goal - Household Finances Parents experiencing financial strain due to patient's hospital admission,Parents to obtain financial assistance to maintain their household Intervention/Plan - Household Finances SW provided mother with meal voucher and applied for Harp's Hope gift card for gas, SW to explore additional community resources, SW to assit parents with Opens Doors Applicaiton
+A3	ResolutioninProgress T3
+T4	NeedTemporaryLodging 2550 2654;2657 2730	Goal - Local Accommodations parents live in atlantic city area and would like to stay local with patient Intervention/Plan- Local Accommodations parents are on wait list for RMDH
+A4	ResolutioninProgress T4

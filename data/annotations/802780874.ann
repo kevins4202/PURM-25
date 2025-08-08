@@ -1,0 +1,6 @@
+T1	FinancialStrain_Other 495 637	SW informed mom that her Open Doors application was approved and she should be getting a check in the mail soon. SW provided weekly resources.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 216 225;228 261	Problems: Finances and Language differences
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1154 1211;1214 1327;1329 1423	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 5 and Gift Cards: 1. Reason for Disbursement: Other hardship considerations: limited resources, prolonged admission
+A3	ResolutioninProgress T3

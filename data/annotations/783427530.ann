@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 592 648	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	DistancefromHospital 1990 2027	Being at a new hospital far from home
+T3	NonPermanentPlacement 3735 3825	Savannah lives with her parents and older brother (Samuel) who is a senior in high school.
+A2	Negated T3
+T4	PatientCaregiver_Unemployment 3954 4081	Savannah's mother is a case manager and a behavioral health nurse and is currently on FMLA leave.  Father also works full time.
+A3	Negated T4
+T5	NeedTemporaryLodging 4250 4307	Mother is currently staying at the Ronald McDonald House.
+A4	Resolved T5

@@ -1,0 +1,8 @@
+T1	FinancialStrain_Other 202 254	SW submitted ODF application for a May rental grant.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 970 1027;1030 1118;1120 1196	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A2	ResolutioninProgress T2
+T3	LackofFundsforFood 1659 1740	SW will continue to work with Mom on obtaining SSI for herself and SNAP benefits.
+A3	ResolutioninProgress T3
+T4	HomeAccessibility 1741 1819	SW looking into options for obtaining a wheelchair ramp for the family's home.
+A4	ResolutioninProgress T4

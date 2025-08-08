@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 249 306;309 425;427 499;505 682	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 2. Reason for Disbursement: Other hardship considerations: Financial strain Additional comments: Parents report frequent travel to and from the hospital related to work, express financial strain related to the expenses associated with current admission.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 505 682	Additional comments: Parents report frequent travel to and from the hospital related to work, express financial strain related to the expenses associated with current admission.
+A2	Negated T2

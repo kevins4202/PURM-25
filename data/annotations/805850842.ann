@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 549 584	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 1964 2055	Per assessment above she does not work father does but they are not together but co-parent.
+T3	PatientCaregiver_Unemployment 1964 2055	Per assessment above she does not work father does but they are not together but co-parent.
+A2	Negated T3
+T4	FinancialStrain_Other 2057 2093	PICU SW approved concrete resources.
+A3	ResolutioninProgress T4
+T5	ChildAbuse 2097 2216	Mom did share about DCCP case open and PICU SW called DCCP worker to update them. OSH filed primarily for malnutrition.

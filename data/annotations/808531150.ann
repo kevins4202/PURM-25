@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 623 679;682 776	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Zoe lives with her married parents in Mullica Hill, NJ (Gloucester County)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 778 870	father works full-time as an electrician and mother is working part-time as dental hygienist
+A2	Negated T2
+T3	FinancialStrain_Other 1882 2022	Parent Stressors complex medical care needs, multiple emergent admissions this year, parents identify exhausting their PTO and leave options
+T4	FinancialStrain_Other 2234 2297	Transportation comment: eligible for MATP mileage reimbursement
+A3	ResolutioninProgress T4
+T5	LackofInsurance 2300 2424	Public assistance/SSI comment: NJ Medicaid, MLTSS evaluation took place and mom reports she was told eligibility will be soo
+A4	Negated T5
+T6	FinancialStrain_Other 2428 2541	Foundation support comment: MBA Opens Doors Foundations May 2022 and June 20203 grants, Fred's Footsteps May 2023
+A5	ResolutioninProgress T6

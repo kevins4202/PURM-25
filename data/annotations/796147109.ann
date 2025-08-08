@@ -1,0 +1,7 @@
+T1	LackofInsurance 453 573	Pt will be scheduled with outpatient follow-up appts post D/C and will need to be set up with Modivcare for these appts.
+A1	Negated T1
+T2	LackofTransportation 453 573	Pt will be scheduled with outpatient follow-up appts post D/C and will need to be set up with Modivcare for these appts.
+T3	LackofTransportation 709 799	Covering SW confirmed that pt is eligible for Modivcare transportation with the following.
+A2	ResolutioninProgress T3
+T4	LackofInsurance 709 799	Covering SW confirmed that pt is eligible for Modivcare transportation with the following.
+A3	Negated T4

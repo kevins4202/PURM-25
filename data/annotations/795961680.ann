@@ -1,0 +1,28 @@
+T1	NonPermanentPlacement 710 745	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 924 954	FOB is currently incarcerated.
+T3	PatientCaregiver_Unemployment 1339 1435	Mom was currently working at home depot and Target stocking but likely will be applying for SSI.
+T4	LackofFundsforFood 1437 1475	She currently receive foodstamps only.
+A3	Negated T4
+T5	HomeEnvironment_Other 2240 2261;2264 2308	Home Environment: YES Home Environment comment: resources provided
+T6	DistancefromHospital 2480 2561	Parent Strengths can articulate needs, family support, understands illness, local
+A4	Negated T6
+T7	PatientCaregiver_Unemployment 2564 2727	Parent Stressors maternal physical and emotional health (extended hospitalization), FOB incarcerated, child care, transportation, finances, trust with medical team
+T8	FinancialStrain_Other 2849 2916;2919 3019;3022 3089	Resource Needs Problem: INSURANCE;HOUSEHOLD FINANCES;TRANSPORTATION Goal - Household Finances Mom is currently not working and struggling financially. FOB incarcerated. Intervention/Plan - Household Finances SW will assist with support.
+A2	ResolutioninProgress T8
+T9	PatientCaregiver_Unemployment 2919 3019	Goal - Household Finances Mom is currently not working and struggling financially. FOB incarcerated.
+T10	LackofInsurance 3092 3176;3179 3265	Goal - Insurance Mom is still in process of adding baby to her Keystone First PA MA. Intervention/Plan - Insurance SW will continue to collaborate with HUP SW for support.
+A5	ResolutioninProgress T10
+T11	LackofTransportation 3268 3357;3360 3444	Goal- Transportation Mom is unable to drive and family has limited means/ transportation. Intervention/Plan - Transportation SW provided Lyft support in setting of discharge.
+A6	ResolutioninProgress T11
+T12	LackofTransportation 5725 5930	SW noted if transportation was the main issue between childcare for her 5yo and 1yo and scheduling, SW would request a Lyft to get maternal aunt to hospital and to get both her, mom, and baby home as well.
+A7	ResolutioninProgress T12
+T13	ChildcareBarrierfromNonHospitalization 5725 5930	SW noted if transportation was the main issue between childcare for her 5yo and 1yo and scheduling, SW would request a Lyft to get maternal aunt to hospital and to get both her, mom, and baby home as well.
+A8	ResolutioninProgress T13
+T14	LackofInsurance 5958 6093	SW also noted to continue to collaborate with HUP SW for mom's mental health support and SSI application for herself/ baby's insurance.
+A9	ResolutioninProgress T14
+T15	FinancialStrain_Other 6095 6200	SW also provided 4 meal vouchers, toiletries, and snacks upon setting of mom planning to spend the night.
+A10	ResolutioninProgress T15
+T16	LackofTransportation 6930 7168	Mom asked SW to call her a Lyft to get home however team was not comfortable doing so without a family member present to assist/ be with mom.  Mom was open to going home for the night and nursing was able to activate her Angel Eye camera.
+T17	LackofTransportation 7222 7315	SW also approved round trip Lyft for sister to be present at hospital and to assist mom home.
+A11	ResolutioninProgress T17

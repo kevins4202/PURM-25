@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 2184 2283	Staying bedside and although has a job limited in income. PICU SW approved meal vouchers while here
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 2184 2241	Staying bedside and although has a job limited in income.
+A2	Negated T2

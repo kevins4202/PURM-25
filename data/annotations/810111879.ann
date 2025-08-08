@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 648 683;686 795	Patient living situation: PARENT(S) Parent Information: Mom and dad live together in southwest philadelphia with their 13yo daughter and 3yo son.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 1130 1157	Mom noted she is unemployed
+T3	PatientCaregiver_Unemployment 1158 1205	while dad works in baggage claim at the airport
+A2	Negated T3
+T4	LackofTransportation 2118 2264	Parent Stressors severity of patient's condition, family relies on Lyft's/ no car, finances, hospitalization, childcare, recovering from c-section
+T5	FinancialStrain_Other 2118 2264	Parent Stressors severity of patient's condition, family relies on Lyft's/ no car, finances, hospitalization, childcare, recovering from c-section
+T6	FinancialStrain_Other 2634 2801	Goal - Household Finances Mom noted that she does not access TANF due to dad's employment however she does receive foodstamps and medicaid for herself and the siblings
+A3	ResolutioninProgress T6
+T7	PatientCaregiver_Unemployment 2634 2801	Goal - Household Finances Mom noted that she does not access TANF due to dad's employment however she does receive foodstamps and medicaid for herself and the siblings
+A4	Negated T7
+T8	LackofInsurance 2883 2966;2969 3026	Goal - Insurance Mom is still in process of adding baby to her Keystone First PA MA Intervention/Plan - Insurance SW will continue to support
+A5	ResolutioninProgress T8
+T9	LackofTransportation 3030 3102;3105 3219	Goal- Transportation Parents do not have access to transportation/ SEPTA Intervention/Plan - Transportation SW will support parents as possible/ needed as parents live locally to hospital
+A6	ResolutioninProgress T9

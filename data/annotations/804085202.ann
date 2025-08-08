@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 456 526	SW provided meal vouchers as parents have continued to stay at bedside
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1047 1104;1107 1195;1197 1273	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A2	ResolutioninProgress T2

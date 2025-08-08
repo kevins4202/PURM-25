@@ -1,0 +1,18 @@
+T1	NonPermanentPlacement 573 629	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	SubstanceAbuse_Other 1825 1844;1847 1926	Substance Abuse YES Substance Abuse comment: Adult paternal half brother has hx of substance abuse.
+T3	DistancefromHospital 2170 2297	Family reported stressors for Savannah including school, pain, BMT, distance from home, and separation from her dog and family.
+T4	PatientCaregiver_Unemployment 2466 2648	Parent Strengths Mom and dad both work full time and are eligible for FMLA leave. Parents will take turns taking leave/being at bedside and working/taking care of Savannah's brother.
+A2	Negated T4
+T5	LackofTransportation 2649 2666	Family has a car.
+A3	Negated T5
+T6	PatientCaregiver_Unemployment 2716 2825	Parent Stressors Mmo expressed stress related to Savannah's medical condition, time away from home, and work.
+A4	Negated T6
+T7	LackofTransportation 2994 3035	Transportation comment: Family has a car.
+A5	Negated T7
+T8	NeedTemporaryLodging 3449 3577	Other existing community services/outside support comment: Family is already staying at RMH and will stay there after discharge.
+A6	Resolved T8
+T9	PatientCaregiver_Unemployment 3775 3904	Intervention/Plan - Household Finances Dad is working during admission and then mom will work while Savannah and dad stay at RMH.
+A7	Negated T9
+T10	NeedTemporaryLodging 3775 3904	Intervention/Plan - Household Finances Dad is working during admission and then mom will work while Savannah and dad stay at RMH.
+A8	Resolved T10

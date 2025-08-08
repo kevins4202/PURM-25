@@ -1,0 +1,8 @@
+T1	DrugUse 729 795	Patient denies smoking marijuana and  use of any other substances.
+A1	Negated T1
+T2	Alcoholism 796 826	Patient denies use of alcohol.
+A2	Negated T2
+T4	HomeSafety 896 998	Per discussion, patient denies any safety concerns in his mother's home and in the school environment.
+A3	Negated T4
+T5	CommunitySafety 896 998	Per discussion, patient denies any safety concerns in his mother's home and in the school environment.
+A4	Negated T5

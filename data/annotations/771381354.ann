@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 330 540	Parents reported that they were about to go back to work when they found out that Kamilah would need additional surgery.  Dad reported that he was going to do a program to get a licence to drive garbage trucks.
+A1	Negated T1
+T2	FinancialStrain_Other 542 660	SW discussed potential financial resources with parents.  Mom reported that she is in the process of applying for SSI.
+A2	ResolutioninProgress T2
+T3	NeedTemporaryLodging 662 756	Parents reported that they will be staying at RMH but have to return home to get their things.
+A3	Resolved T3

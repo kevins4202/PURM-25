@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 275 372	Mother expressed possible interest in FMLA paperwork for Father, as well as vouchers for parking.
+A1	Negated T1
+T2	FinancialStrain_Other 275 372	Mother expressed possible interest in FMLA paperwork for Father, as well as vouchers for parking.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1045 1102;1105 1221	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 6.
+A3	ResolutioninProgress T3

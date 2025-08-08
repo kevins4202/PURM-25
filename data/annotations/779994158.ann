@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 579 626;629 711	Patient living situation: PARENT(S);RELATIVE(S) Parent Information: Mother is in gayana. Father is employed and lives with Sameer.
+A1	Negated T1
+T2	DistancefromHospital 629 669	Parent Information: Mother is in gayana.
+T3	PatientCaregiver_Unemployment 670 711	Father is employed and lives with Sameer.
+A2	Negated T3
+T4	DistancefromHospital 1590 1660	Parent Stressors Mother is far from CHOP (she is currently in gayana).
+T5	FoodInsecurity_Other 1783 1821;1824 1887	Resource Needs Problem: ACCESS TO FOOD Intervention/Plan - Access to food Writer will assess for needs
+A3	ResolutioninProgress T5

@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 121 151	Parents have checked into RMDH
+A1	Resolved T1
+T2	LackofInsurance 155 192	Mother has added patient to insurance
+A2	Negated T2

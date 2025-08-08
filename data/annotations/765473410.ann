@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 852 1009	The patient's father will be unable to attend due to his work schedule but the patient's mother would like to meet in person if her work schedule will allow.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 1131 1216	Given the mother's work schedule at this time, she is unable to meet with Psychology.
+A2	Negated T2

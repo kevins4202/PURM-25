@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 329 352;354 432;434 450	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have access to needed local accommodations Outcome: Ongoing
+T2	FinancialStrain_Other 654 1020	We discussed applying for financial assistance to offset the cost of the continued travel expenses traveling to and from home to the hospital. Provided information about Fred's Footsteps and the Colette Louise Tisdahl Foundation. Discussed that applying to the Colette Louise Tisdahl Foundation when applications reopen on 1/4/23. Parents in agreement with referral.
+A1	ResolutioninProgress T2
+T3	NeedTemporaryLodging 1021 1242	Answered parents' questions regarding Ronald McDonald House on Chestnut Street. Submitted a room request per the parents' request. Parents are unsure when/if they will stay but would like to have the option in the future.
+A2	ResolutioninProgress T3
+T4	DistancefromHospital 654 796	We discussed applying for financial assistance to offset the cost of the continued travel expenses traveling to and from home to the hospital.

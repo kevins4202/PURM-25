@@ -1,0 +1,4 @@
+T1	LackofInsurance 418 575	Progress:  Social worker emailed parents PA MA 586 form and a letter of medical necessity for Raegan's secondary PA Medical Assistance application on 4/6/23.
+A1	Negated T1
+T2	NeedofChildcare 576 660	Also emailed parents referrals to local medical daycares on 4/6/23 per their request
+A2	ResolutioninProgress T2

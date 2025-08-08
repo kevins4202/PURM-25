@@ -1,0 +1,38 @@
+T1	NonPermanentPlacement 595 651;654 734	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Pt will go home with Mom and Dad who live in Manchester, NJ.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 735 915	Dad shared that both parents work, but have been taking off of work during this admission. Parents plan to go back to work once they get pt settled in at home and with home nurses.
+A2	Negated T2
+T3	DistancefromHospital 2074 2151	Parent Stressors extended admission, distance from home, financial stressors.
+T4	FinancialStrain_Other 2074 2150	Parent Stressors extended admission, distance from home, financial stressors
+T5	LackofTransportation 2289 2418	Transportation comment: Dad shared that the family has a car and are interested in the mileage reimbursement program through MATP
+A3	Negated T5
+T6	FinancialStrain_Other 2289 2418	Transportation comment: Dad shared that the family has a car and are interested in the mileage reimbursement program through MATP
+A4	ResolutioninProgress T6
+T7	LackofInsurance 2574 2593	Pt has Secondary MA
+A5	Negated T7
+T8	LackofFundsforFood 2422 2474	Public assistance/SSI comment: Family receives SNAP.
+A6	Negated T8
+T9	FinancialStrain_Other 2597 2823	Foundation support comment: Parents are connected with Chai Lifeline, NIICU SW assistered with referrals to Fred's Footsteps (2 months of mortgage paid, Thanksgiving gift card), ODF (one month of mortgage paid), and Harps Hope
+A7	ResolutioninProgress T9
+T10	NeedTemporaryLodging 2939 3029	Other existing community services/outside support comment: Parents stay at RMH when needed
+A8	Resolved T10
+T11	FinancialStrain_Other 3104 3189;3192 3276;3279 3474	Resource Needs Problem: TRANSPORTATION;EMPLOYMENT/INCOME;HOUSEHOLD FINANCES;INSURANCE Goal - Household Finances Parents will have access to financial assistance programs. Intervention/Plan - Household Finances NIICU SW assisted the family with various FA organization referrals. SW will look into resources for other furniture items for the baby at parent's request.
+A9	ResolutioninProgress T11
+T12	LackofInsurance 3477 3546;3549 3707	Goal - Insurance Family will have knowledge of NJ Secondary Medicaid. Intervention/Plan - Insurance SW will look into potential for secondary MA to remain in place after disharge. SW will provide the family with FHCP information
+A10	Negated T12
+T13	FinancialStrain_Other 3711 3795;3798 3980	Goal- Transportation Pt will have access to NJ Modivcare Ride Reimbursement program. Intervention/Plan - Transportation SW provided information on the program and the family is interested in getting this set up. SW will provide registration information to the family.
+A11	ResolutioninProgress T13
+T14	HomeAccessibility 5187 5250	Parents confirmed that they have a crib and car seat for Ahuva.
+A12	Negated T14
+T15	FinancialStrain_Other 5511 5598	Dad expressed that this admission has been a significant financial strain on the family
+T16	HomeSafety 5187 5250	Parents confirmed that they have a crib and car seat for Ahuva.
+A13	Negated T16
+T17	LackofInsurance 5603 5762	Parents asked about Secondary Medicaid remaining in place after discharge. SW offered to look into this for the family and reach out to FHCP if they can assist
+A14	Negated T17
+A15	ResolutioninProgress T17
+T18	FinancialStrain_Other 5767 6252	SW discussed NJ ModivCare Mileage Reimbursement program (if MA remains in place), emergency letters for parents to provide their utility companies and local fire department, and a handicap placard. Parents are interested in all of these resources. Parents discussed that they are unsure if their insurance will be covering her formula. Parents expressed that if they insurance is not supplying her formula, they would like to apply for WIC. Parents requested assistance with WIC, if so
+A16	ResolutioninProgress T18
+T19	FoodInsecurity_Other 6015 6253	Parents discussed that they are unsure if their insurance will be covering her formula. Parents expressed that if they insurance is not supplying her formula, they would like to apply for WIC. Parents requested assistance with WIC, if so.
+A17	ResolutioninProgress T19
+T20	FinancialStrain_Other 6349 6522	Plan: SW will work on emergency letters, handicap placard application, NJ Modivcare information, and looking into organizations to assist the family with furniture for Ahuva
+A18	ResolutioninProgress T20

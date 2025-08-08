@@ -1,0 +1,4 @@
+T1	NonPermanentPlacement 554 610	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	FoodInsecurity_Other 1616 1635;1638 1705	Food insecurity YES Food insecurity comment: Social worker provided community resources
+A2	ResolutioninProgress T2

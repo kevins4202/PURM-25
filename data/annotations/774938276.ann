@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 333 687	Progress:   LSW spoke with Family Services at the RMD house to submit a room request for the patient's parents. The request was submitted and the RMD house will reach out to the patient's parents directly to discuss the next steps. The family hopes that a room will be available on Monday. The parents were made aware that the room request was completed.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 32 55;57 135;137 153	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have access to needed local accommodations Outcome: Ongoing
+A2	ResolutioninProgress T2
+T3	ChildcareBarrierfromHospitalization 786 912	The patient's mother shared that she is experiencing increased levels of anxiety leaving the patient and her children at home.
+T4	ChildcareBarrierfromNonHospitalization 786 912	The patient's mother shared that she is experiencing increased levels of anxiety leaving the patient and her children at home.

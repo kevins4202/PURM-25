@@ -1,0 +1,13 @@
+T1	NonPermanentPlacement 595 630;633 704	Patient living situation: PARENT(S) Parent Information: Mom and dad live in Jackson, NJ with their 3yo son.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 848 892	Mom is unemployed and dad is a longshoreman.
+T3	PatientCaregiver_Unemployment 848 892	Mom is unemployed and dad is a longshoreman.
+A2	Negated T3
+T4	LackofTransportation 1827 1915	Parent Strengths can articulate needs, adequate family support, understands illness, car
+A3	Negated T4
+T5	DistancefromHospital 1918 2012	Parent Stressors distance from hospital, prolonged approval for transfer back to OSH, finances
+T6	FinancialStrain_Other 1918 2012	Parent Stressors distance from hospital, prolonged approval for transfer back to OSH, finances
+T7	LackofInsurance 2189 2244	Baby is already added to to his Cigna insurance policy.
+A4	Negated T7
+T8	FinancialStrain_Other 2313 2355;2358 2471;2474 2640	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Parents noted they were not prepared for being displaced from home for baby's transfer. Intervention/Plan - Household Finances SW provided 4 meal vouchers and 1 Harp's Hope card for assistance as baby was intended for short stay and transfer back to OSH.
+A5	ResolutioninProgress T8

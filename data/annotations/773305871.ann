@@ -1,0 +1,4 @@
+T1	LackofInsurance 240 319	SW relayed that we are still waiting on insurance approval and bed availability
+A1	Negated T1
+T2	FinancialStrain_Other 799 856;859 948;950 1026;1030 1050;1054 1176	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Reason for Disbursement: Unforseen/emergent admission-no available resources Additional comments: SW approved additional resources for Mom prior to the weekend. Last SW approval was through 1/21. SW will reassess on 1/26
+A2	ResolutioninProgress T2

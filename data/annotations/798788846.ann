@@ -1,0 +1,6 @@
+T1	PatientCaregiver_Unemployment 559 662	Father shared that he will be taking a flight back to FL today at 6:30p to take care of things at work.
+A1	Negated T1
+T2	FinancialStrain_Other 787 1007	Mother expressed financial concerns regarding unpaid missed work time and risk of losing a new job. SW provided letter of support for mother's job. SW also discussed applying for MBA Opens Doors and provided application.
+A2	ResolutioninProgress T2
+T3	PatientCaregiver_Unemployment 787 934	Mother expressed financial concerns regarding unpaid missed work time and risk of losing a new job. SW provided letter of support for mother's job.
+A3	Negated T3

@@ -1,0 +1,7 @@
+T1	PatientCaregiver_Unemployment 1114 1209	The patient's father works six days a week and the patient's mother returned to work last week.
+A1	Negated T1
+T2	FinancialStrain_Other 1214 1304	The patient's mother has received medical bills for the patient causing additional stress.
+T3	FinancialStrain_Other 1305 1555	LSW forwarded the bills received by the patient's mother to FHC to include in the application. LSW informed the patient's mother that the Medicaid application was submitted this week and requested that it be effective from the patient's date of birth
+A2	ResolutioninProgress T3
+T4	LackofInsurance 1400 1556	LSW informed the patient's mother that the Medicaid application was submitted this week and requested that it be effective from the patient's date of birth.
+A3	ResolutioninProgress T4

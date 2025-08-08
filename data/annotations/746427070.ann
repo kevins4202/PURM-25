@@ -1,0 +1,7 @@
+T1	NonPermanentPlacement 560 616	Patient living situation: PARENT(S);CHILDREN IN THE HOME
+A1	Negated T1
+T2	ChildcareBarrierfromNonHospitalization 2659 2800	Parents report they have a 6 year old son and 9 year old daughter that are currently staying with friends who are able to get them to school.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 2901 3051	Dad works full time at a small company and is currently out on unpaid leave. Mom was just starting a new job and supposed to start this past Saturday.
+A3	Negated T3
+T4	FinancialStrain_Other 3052 3139	Parents voiced concerns about finances which social work will continue to follow up on.

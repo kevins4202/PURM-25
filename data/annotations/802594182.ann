@@ -1,0 +1,5 @@
+T1	GeneralHousingInstability 502 681	t had been shared that parents have a home to go to at the time of discharge, but the long term goal will be obtaining their own housing and the patient's father obtaining the job
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 501 682	It had been shared that parents have a home to go to at the time of discharge, but the long term goal will be obtaining their own housing and the patient's father obtaining the job.
+T3	LackofTransportation 834 917	SW will assist with providing transportation home at the time of discharge as well.
+A2	ResolutioninProgress T3

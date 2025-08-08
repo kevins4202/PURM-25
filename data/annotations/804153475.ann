@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 374 522	Mother requested assistance with gas , parking and meals when she is back . SW to leave parking passes, visa gift card  and meal vouchers at bedside
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1108 1165;1168 1303;1305 1381	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 6, Parking Passes (#'s): 3 and Gift Cards: 1 $25. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A2	ResolutioninProgress T2

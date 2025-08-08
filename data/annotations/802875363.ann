@@ -1,0 +1,6 @@
+T1	NeedTemporaryLodging 547 575	Mother on wait list for RMDH
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 500 544	SW provided male vouchers and parking passes
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1093 1150;1153 1269;1271 1347	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4 and Parking Passes (#'s): 4. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A3	ResolutioninProgress T3

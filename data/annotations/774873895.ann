@@ -1,0 +1,6 @@
+T1	LackofInsurance 205 214;217 236;240 249;252 388	Problems: Secondary Insurance Progress: SW stopped by bedside to check in with mom and answered questions in regard to NJ Medicaid. Mom is currently in the process of applying.
+A1	Negated T1
+T2	FinancialStrain_Other 569 716	SW also informed mom that her Open Door application has been officially submitted yesterday after it had been sent back for additional information.
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 1293 1350;1353 1447	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 4
+A3	ResolutioninProgress T3

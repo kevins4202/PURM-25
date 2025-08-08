@@ -1,0 +1,24 @@
+T1	NonPermanentPlacement 582 638;641 735	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Nicole and Percy Worrell. Family lives in Bath, PA about 1.5 hr from CHOP.
+A1	Negated T1
+T2	DistancefromHospital 641 735	Parent Information: Nicole and Percy Worrell. Family lives in Bath, PA about 1.5 hr from CHOP.
+T3	PatientCaregiver_Unemployment 736 815	Nicole is employed as a home health aide, Percy is employed in traffic control.
+A2	Negated T3
+T4	FinancialStrain_Other 2313 2426	Parent Stressors Recent code events. Mother reports significant outside stressors including housing and finances.
+T5	LackofFundsforFood 2713 2727	Receives SNAP.
+A3	Negated T5
+T6	NeedTemporaryLodging 2796 2879;2882 2990;2993 3440	Resource Needs Problem: LOCAL ACCOMODATIONS;HOUSING;IN-HOME SERVICES;TRANSPORTATION Goal - Housing Family will connect with available resources/programs to meet housing needs starting 8/31/23. Intervention/Plan- Housing Family reports that they were given notice by their landlord to vacate the unit for approximately 6-8 weeks starting 8/31/23 so the unit can be renovated and inspected. Family reports that landlord not providing assistance with accommodations at this time. Upon further discussion with landlord later on 5/30/23, landlord offering support during this time. SW working to connect family with community resource referrals.
+A4	ResolutioninProgress T6
+T7	NeedTemporaryLodging 2313 2426	Parent Stressors Recent code events. Mother reports significant outside stressors including housing and finances.
+T8	LackofTransportation 3443 3524;3527 3688	Goal- Transportation Family will connect with MATP for transportation assistance. Intervention/Plan - Transportation Family reports difficulty obtaining and affording transportation to outpatient appointmets. SW to provide information on MATP.
+A5	ResolutioninProgress T8
+T9	FinancialStrain_Other 3443 3524;3527 3687	Goal- Transportation Family will connect with MATP for transportation assistance. Intervention/Plan - Transportation Family reports difficulty obtaining and affording transportation to outpatient appointmets. SW to provide information on MATP
+A6	ResolutioninProgress T9
+T10	FinancialStrain_Other 3922 3991	SW provided meal vouchers and discussed ordering guest meals to room.
+A7	ResolutioninProgress T10
+T11	PatientCaregiver_Unemployment 4081 4270	Intervention/Plan- In-Home Services Mother is employed as a home health aide and expressed interest in working as Janiece's caregiver. Mother has initiated discussions with her 2 employers.
+A8	Negated T11
+T12	UnabletoPay 5231 5381	Resource needs: Mother reports financial challenges, notes difficulty affording food for all children in the home beyond what SNAP is able to provide.
+T13	NeedTemporaryLodging 5382 5657	Mother also noted above housing challenges, then had further discussions with landlord on 5/30 who shared that they will support the family during the period that they must vacate due to renovations/inspection. SW will look into additional community resources for the family.
+A9	ResolutioninProgress T13
+T14	PatientCaregiver_Unemployment 5778 6018	Home health needs: Mother reports desire to be a home health aide for Janiece, is currently employed by 2 agencies as a home health aide for adults. SW encouraged mother to discuss with employer, and mother has initiated these conversations
+A10	Negated T14

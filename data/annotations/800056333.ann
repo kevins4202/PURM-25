@@ -1,0 +1,3 @@
+T1	FinancialStrain_Other 259 316;319 407;413 433;437 840	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 4. Additional comments: SW met with mother at bedside for concrete resource assessment.  Mother reports financial strain due to unexpected critical care admission.  Mother states she resides in West Philadelphia and receives food stamps.  SW approving four meal vouchers (2 today and 2 tomorrow) with request for mother to speak with her extended family and friends to identify a long term plan for an extended hospitalization.
+T2	LackofFundsforFood 578 650	Mother states she resides in West Philadelphia and receives food stamps.
+A1	Negated T2

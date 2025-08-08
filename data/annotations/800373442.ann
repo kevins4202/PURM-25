@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 568 691	Plan: LSW will continue to follow patient and family to provide ongoing emotional support and concrete resources as needed.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 1177 1234;1237 1360	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 7 and Parking Passes (#'s): 2 (onco).
+A2	ResolutioninProgress T2

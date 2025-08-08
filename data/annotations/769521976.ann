@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 661 696;699 848	Patient living situation: PARENT(S) Parent Information: Levi is the first child born to his intact parents, Kayla and Levi, who live together in Bridgeton, NJ (about one hour from CHOP)
+A1	Negated T1
+T2	DistancefromHospital 661 696;699 848	Patient living situation: PARENT(S) Parent Information: Levi is the first child born to his intact parents, Kayla and Levi, who live together in Bridgeton, NJ (about one hour from CHOP)
+T3	LackofInsurance 2101 2168;2171 2334	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Mother has Horizon NJ Health NJ Medical Assistance insurance. She plans to contact NJ Family Care to add Levi to her insurance plan.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 2335 2408	Mother is connected with WIC and has an appointment scheduled for 1/5/23.
+A3	Negated T4
+T5	DistancefromHospital 3435 3571	She is planning to travel to and from the hospital with maternal grandmother to visit Levi and will be staying at home in NJ overnights.
+T6	LackofFundsforFood 2335 2407	Mother is connected with WIC and has an appointment scheduled for 1/5/23
+A4	Negated T6
+T7	LackofTransportation 3435 3571	She is planning to travel to and from the hospital with maternal grandmother to visit Levi and will be staying at home in NJ overnights.
+A5	Negated T7

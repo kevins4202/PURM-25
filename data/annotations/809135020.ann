@@ -1,0 +1,7 @@
+T1	LackofTransportation 273 282;286 487	Progress: SW provided patient's father with a one way train ticket from Lancaster to Philadelphia for tomorrow 6/24. He plans to visit for the day and then ride back to Lancaster with mother on Saturday evening.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 273 282;286 560;564 631;634 703	Progress: SW provided patient's father with a one way train ticket from Lancaster to Philadelphia for tomorrow 6/24. He plans to visit for the day and then ride back to Lancaster with mother on Saturday evening. SW left two meal vouchers at bedside for patient's father for his visit. SW applied for Harp's Hope gift card on behalf of patient's mother. Mother approved for $65 for gas and $30 in CHOP cafeteria gift cards.
+A2	ResolutioninProgress T2
+T3	HomeEnvironment_Other 708 956	SW received call from CYS SW Sharlene 717-468-3112. She continues to follow up with family virtually.  Patient is able to be discharged with parents but CYS will like to be notified of discharge date and if patient is transferred back to Lancaster.
+T4	FinancialStrain_Other 1615 1672;1675 1787;1789 1865	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Other: train ticket. Reason for Disbursement: Unforseen/emergent admission-no available resources
+A3	ResolutioninProgress T4

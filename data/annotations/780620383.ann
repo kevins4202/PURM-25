@@ -1,0 +1,4 @@
+T1	HomeEnvironment_Other 1275 1294;1297 1376	CPS Involvement YES CPS involvment comment: Per chart review, there is a history of CPS ivolvement.
+A1	HistoryOf T1
+T2	NonPermanentPlacement 542 577;580 648	Patient living situation: PARENT(S) Parent Information: Patient resides with mother, father and sisters.
+A2	Negated T2

@@ -1,0 +1,11 @@
+T1	NonPermanentPlacement 572 619;622 789	Patient living situation: FOSTER CARE;PARENT(S) Parent Information: Bio parents (Kimberly Ryan and Richard Krall) do not have physical or legal custody of the patient at this time, have weekly supervised visitation.
+T2	HomeEnvironment_Other 622 789;792 887	Parent Information: Bio parents (Kimberly Ryan and Richard Krall) do not have physical or legal custody of the patient at this time, have weekly supervised visitation. Agency Contact: Lebanon County CYS Caseworker Michelle Curry 717-228-4430 x2310 or 610-507-7748
+T3	NonPermanentPlacement 890 982	Foster family contact: Foster parents are Megan and Luke Larsen and reside in Pottstown, PA.
+T4	PatientCaregiver_Unemployment 983 1107	Megan works in helping run a school in Collegeville, PA and Luke is an 8th grade science teacher in Reading School District.
+A1	Negated T4
+T5	NonPermanentPlacement 2015 2034;2037 2121	CPS Involvement YES CPS involvment comment: Ethan is in legal and physical custody of Lebanon County CYS
+T6	SubstanceAbuse_Other 2170 2189;2192 2244	Substance Abuse YES Substance Abuse comment: Substance exposure in utero
+T7	HomeEnvironment_Other 2577 2652;2655 2721	Existing Community Services/Outside Supports: CHILDREN AND YOUTH AGENCY/CUA Children and youth agency/CUA comment: Lebanon County CYS as above
+T8	HomeEnvironment_Other 3276 3327;3330 3436;3439 3549	Relationships/Behavior Problems VISITATION CONCERNS Goal - Visitation concerns Visitation guidelines will be communicated to teams and followed appropriately. Intervention/Plan - Visitation concerns SW update visitation restriction in chart and will continue to assess.
+T9	NeedTemporaryLodging 4063 4208	Bio mother inquired about local lodging, SW reviewed hotels with discount, discussed that bio parents would not be eligible for RMH at this time.
+A2	ResolutioninProgress T9

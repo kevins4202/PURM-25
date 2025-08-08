@@ -1,0 +1,8 @@
+T1	PatientCaregiver_Unemployment 365 489	Mother shared she is unsure about when she can visit pending father's work schedule as he is primary form of transportation.
+A1	Negated T1
+T2	LackofTransportation 365 489	Mother shared she is unsure about when she can visit pending father's work schedule as he is primary form of transportation.
+T3	PatientCaregiver_Unemployment 691 778	Father shared that he is working but is able to step out to take phone calls as needed.
+A2	Negated T3
+T4	LackofInsurance 1644 1927	Insurance: Father confirmed that pt will be added to PAMA Keystone First. Also discussed that father has insurance through his employer and wishes to add baby to both plans. Father shared that birth certificate will be required for him to add baby to his policy to confirm paternity.
+A3	ResolutioninProgress T4
+T5	LackofInsurance 213 222;225 234	Problems: Insurance

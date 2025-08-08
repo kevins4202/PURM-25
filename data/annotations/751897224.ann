@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 671 712;715 853	Patient living situation: PARENT(S);OTHER Parent Information: Lillie lives with her adoptive mother, Tara Fears, who works as a nurse in drug and alcohol and as a home health aide.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 715 853	Parent Information: Lillie lives with her adoptive mother, Tara Fears, who works as a nurse in drug and alcohol and as a home health aide.
+A2	Negated T2
+T3	NonPermanentPlacement 1771 1790;1793 1911	CPS Involvement YES CPS involvment comment: Historical CYS involvement, as adoptive mother was Lillie's foster mother. Case is now closed.
+A3	HistoryOf T3
+T4	HomeAccessibility 2369 2599	Parent Stressors Lillie's wound, Lillie's wheelchair now requires a special cushion that they cannot get until they follow up with the adaptive equipment clinic outpatient and she is unable to use her wheelchair safely without it.
+T5	LackofTransportation 2774 2869	Transportation comment: Mom owns a wheelchair accessible van that she uses to transport Lillie.
+A4	Negated T5
+T6	HomeAccessibility 2870 2953	SW connecting the family with TransNet MATP while Lillie is without her wheelchair.
+A5	ResolutioninProgress T6
+T7	FinancialStrain_Other 2956 3091	Public assistance/SSI comment: Mom still receives Lillie's foster care benefits every month. Lillie does not receive SSI due to income.
+A6	Negated T7
+T8	HomeAccessibility 3160 3198;3201 3278;3281 3474	Resource Needs Problem: TRANSPORTATION Goal- Transportation Pt will be registered with MATP transportation services. Intervention/Plan - Transportation SW provided Mom with the MATP application at the bedside and provided a letter signed by the doctor stating the medical necessity of stretcher transportation.
+A7	ResolutioninProgress T8

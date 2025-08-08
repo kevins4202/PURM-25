@@ -1,0 +1,15 @@
+T1	NonPermanentPlacement 559 615;618 701	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Mother ( Diamond) and Father ( Jazmar) live in Springfield, NJ.
+A1	Negated T1
+T3	PatientCaregiver_Unemployment 703 884	Mother is starting a new job with the post office- she will get her schedule this week and then be able to plan when she is able to visit patient and potentially check into the RMDH
+A3	Negated T3
+T4	NeedTemporaryLodging 703 884	Mother is starting a new job with the post office- she will get her schedule this week and then be able to plan when she is able to visit patient and potentially check into the RMDH
+A4	ResolutioninProgress T4
+T2	LackofInsurance 2115 2182;2185 2288	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: patient has NJ medicaid and mother applied for SSI - application pending
+A2	Negated T2
+T5	FinancialStrain_Other 2357 2397;2400 2558	Resource Needs Problem(s) TRANSPORTATION Goal- Transportation Mother stated that OSH was providing her with gas cards and that was helpful and she has not been working and is starting a new position.
+A5	ResolutioninProgress T5
+T6	DistancefromHospital 2559 2598	Parents live about 90 minutes from CHOP
+T7	FinancialStrain_Other 2601 2683	Intervention/Plan - Transportation SW applied for gas card via Harp's Hope on 6/22
+A6	ResolutioninProgress T7
+T8	NeedTemporaryLodging 2886 3037	Intervention/Plan - Adjustment to Hospitalization SW to provide on going emotional support/resources as needed, SW referred family to Philadelphia RMDH
+A7	ResolutioninProgress T8

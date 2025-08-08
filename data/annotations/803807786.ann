@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 643 705	Kevin lives with his parents and two younger siblings locally.
+A1	Negated T1
+T2	DistancefromHospital 643 705	Kevin lives with his parents and two younger siblings locally.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 706 783	Father works for Herr's and mother works for Philadelphia Parks & Recreation.
+A3	Negated T3
+T4	HomeEnvironment_Other 830 874	Mother reports talking to DHS earlier today.
+T5	HomeEnvironment_Other 238 439	Progress: Received call from DHS RN Jessica Schaffer 215-692-9113 who is currently investigating a report made last week along with DHS worker Felicia Harrison 267-242-7951. SW provided medical update.

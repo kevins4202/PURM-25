@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 610 657	Patient living situation: PARENT(S);RELATIVE(S)
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 738 979	Pt/mom works in marketing communications. Pt/dad works as an executive for an insurance company. Pt/dad denied work letters at this time for both. Pt/dad to discuss with his employer if he will decide to maintain employment or apply for FMLA
+A2	Negated T2
+T3	LackofTransportation 2875 2935;2938 3010	Existing Community Services/Outside Supports: TRANSPORTATION Transportation comment: Pt/family has a car and access to transportation
+A3	Negated T3
+T4	NeedTemporaryLodging 3131 3183;3186 3414	Goal - Housing Pt/family live 1.5 away from hospital Intervention/Plan- Housing SW explained that their are lodging options available for pt/parents to stay given length of admission. Pt/parents to notify SW if they would like to stay at RMH or other hotel lodging options provided
+T5	DistancefromHospital 3131 3183	Goal - Housing Pt/family live 1.5 away from hospital
+T6	PatientCaregiver_Unemployment 3417 3493;3496 3601	Goal - Employment/income Pt/dad to speak with employer regarding best option Intervention/Plan - Employment/income Pt/dad to stay in touch with SW, should he decide to apply for FMLA
+A4	Negated T6
+T7	FinancialStrain_Other 4828 4972	SW provided pt/parents with SW contact information,  MFF meal vouchers, a new dx bag including a book on childhood leukemia, and parking passes.
+A5	ResolutioninProgress T7

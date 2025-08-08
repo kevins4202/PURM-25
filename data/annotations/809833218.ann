@@ -1,0 +1,11 @@
+T1	LackofTransportation 817 1017	Ammie states she has outreached several persons from her home community, and nobody is able to come to CHOP to transport she and her son home.   Ammie states her personal vehicle broke down last week.
+T2	NeedTemporaryLodging 656 815	Ammie sharing her conflictual interactions with mother while at the RMH last night, and states that mother told her she was no longer permitted to stay at RMH.
+A1	Resolved T2
+T3	LackofTransportation 1260 1556	SW collaboration with SW Leadership for case discussion; one time approval for $100.00 in Visa giftcards to purchase two one way train tickets leaving Amtrak Philadelphia 30th Street Station to Wilkes Barre for Ammie and her two year old son, due to adult aged sibling's current moment of crisis.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 1260 1556	SW collaboration with SW Leadership for case discussion; one time approval for $100.00 in Visa giftcards to purchase two one way train tickets leaving Amtrak Philadelphia 30th Street Station to Wilkes Barre for Ammie and her two year old son, due to adult aged sibling's current moment of crisis.
+A3	ResolutioninProgress T4
+T5	LackofTransportation 1783 1924	SW spoke with Ammie to discuss approval for Lyft to get to 30th Street Station, and $100 visa gift card to pay for two one way train tickets.
+A4	ResolutioninProgress T5
+T6	FinancialStrain_Other 1783 1924	SW spoke with Ammie to discuss approval for Lyft to get to 30th Street Station, and $100 visa gift card to pay for two one way train tickets.
+A5	ResolutioninProgress T6

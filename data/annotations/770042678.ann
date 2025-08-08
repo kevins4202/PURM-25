@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 597 633	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	LackofFundsforFood 2023 2090;2093 2290	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: mother has emergency medicaid for her self during the pregnancy and receievs WIC, mother applied for insurance for patient but has not yet received notice of approval
+A2	Negated T2
+T3	LackofInsurance 2023 2090;2093 2290	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: mother has emergency medicaid for her self during the pregnancy and receievs WIC, mother applied for insurance for patient but has not yet received notice of approval
+A3	ResolutioninProgress T3
+T4	LackofInsurance 2359 2407;2410 2465;2468 2525	Resource Needs Problem: INSURANCE;ACCESS TO FOOD Goal - Insurance patient to have his own insurance plan Intervention/Plan - Insurance SW referred patient to FHCP
+A4	ResolutioninProgress T4
+T5	FoodInsecurity_Other 2528 2645;2648 2720	Goal - Access to food Hospital admission is unexpected, mother unable to leave the hospital to go home and make food. Intervention/Plan - Access to food SW provided mother with meal vouchers
+A5	ResolutioninProgress T5

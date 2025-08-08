@@ -1,0 +1,5 @@
+T1	GeneralHousingInstability 305 510	She reports Mom is "living" in the hospital with patient and dad is renting a room in a house with the other children.  CUA worker reports that dad is looking for a house but has not been able to find one.
+A1	ResolutioninProgress T1
+T2	GeneralHousingInstability 604 688	SW explained that patient cannot be discharge with parents if housing is not stable.
+T3	HomeAccessibility 604 688	SW explained that patient cannot be discharge with parents if housing is not stable.
+T4	NonPermanentPlacement 689 909	CM will send referrals to transitional care centers and parents will be encouraged to learn and train in patient's care when admitted.  CUA asked that the list of facilities patient will be referred to be emailed to her.

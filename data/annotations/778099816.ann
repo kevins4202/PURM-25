@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 631 666;669 750	Patient living situation: PARENT(S) Parent Information: This is mom's fourth child, she has 3 other daughters at home
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 752 835	Mom was working as a waitress but started taking some time off prior to delivering.
+A2	Negated T2
+T3	LackofInsurance 1693 1726;1729 1781;1784 1915	Resource Needs Problem: INSURANCE Goal - Insurance Patient will have active insurance. Intervention/Plan - Insurance SW provided patient's mother with the number to the PA change center to add patient to her insurance.
+A3	ResolutioninProgress T3

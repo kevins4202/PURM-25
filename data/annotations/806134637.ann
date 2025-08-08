@@ -1,0 +1,4 @@
+T1	LackofTransportation 252 451	SW checked in to discuss flight times with the family. The family will be leaving Philadelphia Saturday at 3:10 and will arrive home at 8:00pm. SW contacted SW airlines and booked tickets for family.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 396 450	SW contacted SW airlines and booked tickets for family
+A2	ResolutioninProgress T2

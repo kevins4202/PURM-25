@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 383 421	Parents reported they applied for RMH.
+A1	ResolutioninProgress T1
+T2	PatientCaregiver_Unemployment 1008 1045	Father had some questions about FMLA.
+A2	Negated T2

@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 627 662;665 720	Patient living situation: PARENT(S) Parent Information: This is parents 3rd child together.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 785 837	Mom is a waitress and dad is currently between jobs.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 785 837	Mom is a waitress and dad is currently between jobs.
+T4	DistancefromHospital 838 890	Parents live locally and visit as often as possible.
+A3	Negated T4
+T5	LackofInsurance 1608 1641;1644 1695;1698 1789	Resource Needs Problem: INSURANCE Goal - Insurance Patient will have active insurance Intervention/Plan - Insurance Patient's mother has already added patient to their insurance
+A4	Negated T5

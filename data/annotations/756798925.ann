@@ -1,0 +1,6 @@
+T1	NonPermanentPlacement 634 669;672 787	Patient living situation: PARENT(S) Parent Information: This is parents third child together, they have a 22 month old son and a 11 month old daughter.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 788 867	Mom owns her own business and patient's father works for his father's business.
+A2	Negated T2
+T3	LackofInsurance 1617 1650;1653 1704;1707 1801	Resource Needs Problem: INSURANCE Goal - Insurance Patient will have active insurance Intervention/Plan - Insurance Parents are in the process of adding patient to their insurance.
+A3	ResolutioninProgress T3

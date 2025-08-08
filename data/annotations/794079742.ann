@@ -1,0 +1,3 @@
+T1	HomeEnvironment_Other 208 352	Progress:  SW received a call from DCPP worker, Janette Best (609-915-8543). She needs to see pt 1x/month and would like to visit bedside today.
+T2	NonPermanentPlacement 400 441	Pt cleared for discharge home to parents.
+A1	Negated T2

@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 642 710;713 958	Patient living situation: PARENT(S);CHILDREN IN THE HOME;RELATIVE(S) Parent Information: Gael and his twin brother (Ivan) will live with their mother, Jeidi, and their 11 month old brother at their maternal grandmother's home in South Philadelphia. Also residing in the home are mother's 13 year old twin brothers.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 959 1017	Mother is currently not working and is enrolled in school.
+T3	NonPermanentPlacement 1110 1221	Relative Information: Patient and his twin brother will reside with their mother at maternal grandmother's home
+A2	Negated T3
+T4	LackofInsurance 2748 2796;2799 2860;2863 2955	Resource Needs Problem: INSURANCE;ACCESS TO FOOD Goal - Insurance Gael will have active PA Medical Assistance. Intervention/Plan - Insurance Social worker will assist mother with the application process.
+A3	ResolutioninProgress T4
+T5	LackofFundsforFood 2958 3078;3081 3263	Goal - Access to food Mother will have access to WIC benefits for herself and the twins, and SNAP benefits, if eligible. Intervention/Plan - Access to food Social worker will provide a referral to WIC for the twins at discharge. Will assess whether family is eligible for changes to their SNAP benefits.
+A4	ResolutioninProgress T5
+T6	HomeEnvironment_Other 4476 4590	Of note, a report was made to Philadelphia DHS at the time of the twins' birth. DHS did not open an investigation.

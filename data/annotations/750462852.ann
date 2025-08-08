@@ -1,0 +1,4 @@
+T1	HomeEnvironment_Other 240 439	Progress: Unchanged. Social worker called and provided update to DHS worker. Patient to be discharged to dad. DHS should be alerted of discharge. No limitations or concerns with mom being at bedside.
+A1	ResolutioninProgress T1
+T2	NonPermanentPlacement 317 348	Patient to be discharged to dad
+A2	Negated T2

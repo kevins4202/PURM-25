@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 1025 1082;1085 1173	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Other: Lyft Ride.
+A1	ResolutioninProgress T1
+T2	LackofTransportation 437 547	LSW supported patient and patient family in collaboration with Hospitality services by scheduling a Lyft ride.
+A2	ResolutioninProgress T2

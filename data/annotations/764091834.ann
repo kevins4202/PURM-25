@@ -1,0 +1,7 @@
+T1	LackofInsurance 718 860	Mom reports patient is currently active on NJ medicaid and SW discussed switching Medicaid to a different state if family moves in the future.
+A1	Negated T1
+T2	Homelessness 944 1299	Mom stated that going to her mother's home was not an option. Mom reported that going to patient's father's home might be an option but she is not completely sure. SW encouraged mom to talk with patient's father to see if that is an option cause if it is not, then mom might have to begin the process again of putting in a referral for a homeless shelter.
+A3	ResolutioninProgress T2
+T4	LackofTransportation 2179 2343	Mom previously reported that she has to take care of things in NJ but it is hard as she has no transportation and being at the Philly RMH has made that a challenge.
+T3	NeedTemporaryLodging 2022 2589	SW met with mom this morning to talk about RMH. Mom is currently staying at the Philly RMH but SW inquired if staying at the NJ RMH would be easier for her. Mom previously reported that she has to take care of things in NJ but it is hard as she has no transportation and being at the Philly RMH has made that a challenge. Mom was hesitant about switching to another RMH and would let SW know if she were to change her mind. Mom also reported that she spoke with patient's father who stated that she could stay with him but mom did not seem too confident in that plan.
+A2	ResolutioninProgress T3

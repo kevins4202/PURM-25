@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 657 692;695 851	Patient living situation: PARENT(S) Parent Information: Wesley is the first child born to his intact parents, Heather and Nathan, who live together in Ephrata, PA (about 90 minutes from CHOP).
+A1	Negated T1
+T2	DistancefromHospital 695 851	Parent Information: Wesley is the first child born to his intact parents, Heather and Nathan, who live together in Ephrata, PA (about 90 minutes from CHOP).
+T3	PatientCaregiver_Unemployment 852 905	Parents are employed and currently on parental leave.
+A2	Negated T3
+T4	ChildcareBarrierfromHospitalization 1950 2090	Parent Stressors Unanticipated ICU-level hospitalization, ongoing work-up, mother remains hospitalized at birth hospital about 2 hours away.
+T5	LackofInsurance 2217 2270;2273 2442;2445 2692	Resource Needs Problem: INSURANCE;LOCAL ACCOMODATIONS Goal - Insurance Wesley will be added to parents' Personal Choice insurance and will be added to secondary PA Medical Assistance through the PH95 Special Needs Category. Intervention/Plan - Insurance Parents plan to add Wesley to their employer-sponsored insurance. Provided information to father about secondary PA Medical Assistance through PH95. Social worker offered to assist family with the application process.
+A3	ResolutioninProgress T5
+T6	NeedTemporaryLodging 2741 2870;2873 3045	Goal - Local Accommodations Family will have information about NICU parent sleep rooms and Ronald McDonald House Chestnut Street. Intervention/Plan- Local Accommodations Submitted NICU parent sleep room request for this evening. Added parents to the Ronald McDonald House Chestnut Street waitling list.
+A4	ResolutioninProgress T6

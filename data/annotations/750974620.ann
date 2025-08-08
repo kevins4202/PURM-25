@@ -1,0 +1,10 @@
+T1	NonPermanentPlacement 661 696;699 806	Patient living situation: PARENT(S) Parent Information: Parents are separated. Aneyshka lives with Mom during the week and Dad on the weekends.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 807 836	Mom is not currently working.
+T3	PatientCaregiver_Unemployment 837 868	Dad works for a window factory.
+A2	Negated T3
+T4	FinancialStrain_Other 1822 1896	Parent Stressors Current admission, limited finances and financial strain.
+T5	LackofTransportation 1899 1981;1984 2059	Existing Community Services/Outside Supports: TRANSPORTATION;PUBLIC ASSISTANCE/SSI Transportation comment: Mom has a mini van that she transports Aneyshka in.
+A3	Negated T5
+T6	FinancialStrain_Other 2179 2217;2220 2296;2299 2461	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Family will have access to food while in the hospital. Intervention/Plan - Access to food SW conducted a needs assessment and will approve resouces through the SWEF for the family throughout this admission, as needed.
+A4	ResolutioninProgress T6

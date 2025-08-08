@@ -1,0 +1,4 @@
+T1	NeedofChildcare 216 480	Patient's father remembered SW and discussed needing LOMN for medical daycare. Dad provided SW with list of requirements for LOMN to be accepted by insurance. SW confirmed understanding and uploaded to patient's media manager (see "LOMN requirements for daycare").
+A1	ResolutioninProgress T1
+T2	NeedofChildcare 1365 1513	Patient's father also showed SW two medical release forms from medical daycare. SW provided guidance regarding how father should complete ROI forms.
+A2	ResolutioninProgress T2

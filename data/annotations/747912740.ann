@@ -1,0 +1,4 @@
+T2	PatientCaregiver_Unemployment 427 503	Still recieving resources Mom still at bedside dad working but periodically.
+A1	Negated T2
+T1	FinancialStrain_Other 248 305;308 397;403 423;427 503	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 10. Additional comments: Still recieving resources Mom still at bedside dad working but periodically.
+A2	ResolutioninProgress T1

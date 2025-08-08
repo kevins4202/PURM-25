@@ -1,0 +1,10 @@
+T1	FinancialStrain_Other 253 310;313 429;431 542	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 5 and Parking Passes (#'s): 1. Reason for Disbursement: Other hardship considerations: Emergent admission with ECMO and ARDS, financial strain
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 253 310;313 429;431 542	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 5 and Parking Passes (#'s): 1. Reason for Disbursement: Other hardship considerations: Emergent admission with ECMO and ARDS, financial strain
+A2	ResolutioninProgress T2
+T3	FinancialStrain_Other 548 663	Additional comments: SW approved above via PICU Adamcyzk Fund for disbursement by Center for Families, mother aware
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 548 663	Additional comments: SW approved above via PICU Adamcyzk Fund for disbursement by Center for Families, mother aware
+A4	ResolutioninProgress T4
+T5	FinancialStrain_Other 253 310;313 429;431 542;548 663	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 5 and Parking Passes (#'s): 1. Reason for Disbursement: Other hardship considerations: Emergent admission with ECMO and ARDS, financial strain Additional comments: SW approved above via PICU Adamcyzk Fund for disbursement by Center for Families, mother aware
+A5	ResolutioninProgress T5

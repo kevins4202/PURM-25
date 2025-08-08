@@ -1,0 +1,11 @@
+T1	Homelessness 423 818	Dad reports that they are still in the hotel and no SW has come back for them yet. Dad relayed that he has been talking to other families there and they have been in the hotel for 2 weeks waiting for a place to go. Dad shared that he got money from someone and plans to uber to the Department of Housing today to speak with someone, since he doesn't have a phone number and no one has come back.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 854 919	Dad asked if we could transport Esther to Boston with the family.
+T3	LackofTransportation 920 1081	SW discussed that Mom/Dad will need to come pick Esther up and complete discharge education. Dad was understanding and requested SW purchase the tickets for him.
+T4	FinancialStrain_Other 638 818	Dad shared that he got money from someone and plans to uber to the Department of Housing today to speak with someone, since he doesn't have a phone number and no one has come back.
+T5	LackofTransportation 1482 1931	SW dicussed that SW will likely only be able to assist Dad with discharge transportation back to Boston with Esther through a bus or train ticket, but SW will still need to verify. Dad was upset about his options being a bus or train ticket and requested a plane ticket. SW discussed that SW only has access to limited resources. Dad was eventually understanding and expressed that he is going to try to find his own way there and back on the plane.
+A2	ResolutioninProgress T5
+T6	LackofTransportation 2423 2488	Dad does not have a car and does not know how he would get there.
+T7	HouseInstability_Other 2797 2987	SW expressed SW's concerns several times that the family is in Boston with no plan of stable housing and accessibility to medical follow ups, and Esther is in the hospital medically cleared.
+T8	LackofTransportation 3490 3592	Julie discussed that there is Medicaid Transportation available to the family once they have Medicaid.
+A3	ResolutioninProgress T8

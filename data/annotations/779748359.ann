@@ -1,0 +1,10 @@
+T1	HomeEnvironment_Other 1955 1974;1977 2100	CPS Involvement YES CPS involvment comment: CPS report filed when Carter was in 5th grade for school refusal; closed and no current involvement
+A1	HistoryOf T1
+T2	NonPermanentPlacement 722 784;787 974	Patient living situation: PARENT(S);CHILDREN IN THE HOME;OTHER Parent Information: On school breaks, Carter spends time at both parents' homes.   Mother's home:  mother, 10 yo sister Riley         Father's home:  father, stepmother, 6 yo half brother
+A2	Negated T2
+T3	ChildAbuse 3608 3679;3682 3801	Relationships/Behavior Problems SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time
+A3	Negated T3
+T4	NonPermanentPlacement 4395 4564	Mother states there is custody documentation and parents share legal and physical custody, while mother has primary physical.  Mother states that parents co-parent well.
+A4	Negated T4
+T5	ChildcareBarrierfromNonHospitalization 4566 4698	Mother expressing that maternal grandparents are assisting with caregiving of 10 yo sibling at home while mother is at CHOP bedside.
+A5	Resolved T5

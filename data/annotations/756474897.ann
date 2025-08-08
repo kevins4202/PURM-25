@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 622 678;681 824	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Dylan lives with his parents, Beverly and Silverio, and his 6 year old sibling in Trenton, NJ (about 45 minutes from CHOP).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 825 925	Mother is a stay at home parent. Father is working and is able to take time off from work if needed.
+A2	Negated T2
+T3	FinancialStrain_Other 2319 2357;2360 2454;2457 2671	Resource Needs Problem: ACCESS TO FOOD Goal - Access to food Family will have access to food in the hospital while Dylan is admitted. Intervention/Plan - Access to food Mother has been present with Dylan at the hospital and is not planning to go home this evening. Meal vouchers provided due to unforeseen admission and limited financial resources.
+A3	ResolutioninProgress T3
+T4	FinancialStrain_Other 4328 4385;4388 4476	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 3.
+A4	ResolutioninProgress T4

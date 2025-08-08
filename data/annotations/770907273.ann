@@ -1,0 +1,16 @@
+T1	NonPermanentPlacement 606 642	Patient living situation: PARENT(S);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 714 816	Mom is back to work as a home health aide; she cares for a family member so there is some flexibility.
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 817 912	Dad was laid off from construction work, although he worked for UPS during the recent holidays.
+A3	ResolutioninProgress T3
+T4	FoodInsecurity_Other 1754 1773;1776 1903	Food insecurity YES Food insecurity comment: Mom reports SNAP benefits are not always enough; SW will send Community Resource Connects information.
+A4	ResolutioninProgress T4
+T5	LackofInsurance 2326 2363	pt has PA Medicaid (Health Partners);
+A5	Negated T5
+T6	LackofFundsforFood 2364 2478	family receives SNAP benefits ($674/month); mom receives WIC, she reports pt and twin have been added to the case.
+A6	Negated T6
+T7	PatientCaregiver_Unemployment 2656 2792	Intervention/Plan - Household Finances Although mom has continued to work, family has the added cost of gas and parking when they visit.
+A7	Negated T7
+T8	FinancialStrain_Other 2547 2589;2592 2653;2656 2868	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Parents will be aware of resources. Intervention/Plan - Household Finances Although mom has continued to work, family has the added cost of gas and parking when they visit. SW discussed Colette Louise Foundation and will e-mail mom the application.
+A8	ResolutioninProgress T8

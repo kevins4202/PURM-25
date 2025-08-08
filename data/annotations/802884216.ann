@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 592 627;630 768	Patient living situation: PARENT(S) Parent Information: Patient lives with his mother Sabrina (clerk at Ocean inc, home energery) and father Clarence (Driver for Gold Medal).
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 630 768	Parent Information: Patient lives with his mother Sabrina (clerk at Ocean inc, home energery) and father Clarence (Driver for Gold Medal).
+A2	Negated T2
+T3	FinancialStrain_Other 2302 2392;2395 2545	Resource Needs Problem: HOUSEHOLD FINANCES;EDUCATION PLAN;EMPLOYMENT/INCOME;TRANSPORTATION Goal - Household Finances Parents mentioned that they are currently stable financially- and will work to stay financially stable throughout treatment.
+A3	Negated T3
+T4	LackofTransportation 3037 3195	Goal- Transportation Parent has access to reliable, safe transportation for all treatment appointments. Including multiple cars and family members as support.
+A4	Negated T4
+T5	PatientCaregiver_Unemployment 3313 3441	Goal - Employment/income Family is currently in the process of following up with their employer to access their FMLA paper work.
+A5	Negated T5
+T6	FinancialStrain_Other 4779 4836;4839 5046	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: Social worker provided five (5) meal vouchers for family. Family is eligible for additional meal vouchers on monday 5/29.
+A6	ResolutioninProgress T6

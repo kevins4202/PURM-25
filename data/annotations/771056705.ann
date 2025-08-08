@@ -1,0 +1,8 @@
+T1	LackofInsurance 648 782	Patient's father selected an insurance plan for Umar. FHC has requested that Umar's health coverage be back dated to his date of birth
+A1	Negated T1
+T3	LackofFundsforFood 815 880	Umar's father asked questions about Umar's SSI and SNAP benefits.
+A3	ResolutioninProgress T3
+T2	FinancialStrain_Other 815 996	Umar's father asked questions about Umar's SSI and SNAP benefits. LSW instructed the patient's father to contact SSI directly once Umar is discharged to provide them with an update.
+A2	ResolutioninProgress T2
+T4	FinancialStrain_Other 337 544	Progress:  LSW spoke with Mary (717-579-7264) from SSD to get an update on Umar's SSI application. Umar's application has been approved and the parent's will receive official notification in the coming weeks
+A4	ResolutioninProgress T4

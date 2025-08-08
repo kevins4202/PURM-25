@@ -1,0 +1,12 @@
+T1	NonPermanentPlacement 651 686	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 689 752	Parent Information: Parents live in Philadelphia (10 min away).
+A2	Negated T2
+T3	PatientCaregiver_Unemployment 753 874	Pt's mother is on partially paid maternity leave until the end of Feb. Pt's father works full time and can work remotely.
+A3	Negated T3
+T4	DistancefromHospital 1923 1983	Parent Strengths Parents live locally, are involved in plan.
+A4	Negated T4
+T5	LackofInsurance 2024 2091;2094 2167	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Pt has PA Medicaid as secondary insurance;
+A5	Negated T5
+T6	FinancialStrain_Other 2248 2290;2293 2354;2357 2522	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Parents will be aware of resources. Intervention/Plan - Household Finances SW explained foundation assistane if there is financial stress related to hospitalization; primary concern is cost of parking;
+A6	ResolutioninProgress T6

@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 583 639;642 735	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Alan resides with his mother and father in Blue Bell (Montgomery County);
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 736 812	father is working in material science, mother works in vaccine manufacturing
+A2	Negated T2
+T4	LackofInsurance 2100 2152	Public assistance/SSI comment: secondary PA Medicaid
+A4	Negated T4
+T5	LackofInsurance 2251 2378	Other existing community services/outside support comment: Care Network Flourtown, Aetna POS, attends medical daycare at Firely
+A5	Negated T5
+T6	NeedofChildcare 2251 2378	Other existing community services/outside support comment: Care Network Flourtown, Aetna POS, attends medical daycare at Firely
+A6	Negated T6
+T7	NeedofChildcare 2452 2495;2498 2667;2670 2788	Resource Needs Problem: CHILD CARE/DAY CARE Goal - Child care/Day care Mother hopes to transition Alan's day care (from Firely and Bright Horizons) pending ability to train caregivers to administer his bolus feeds Intervention/Plan- Child care/Day care SW discussed mother's questions and thoughts with Case Manager, and will follow
+T3	NeedofChildcare 892 966	Other School Status Comment: attends medical daycare, receives EI services
+A3	Negated T3
+A7	Negated T7

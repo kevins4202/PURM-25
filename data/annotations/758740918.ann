@@ -1,0 +1,9 @@
+T1	NonPermanentPlacement 673 708	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	ChildAbuse 2462 2533;2536 2656	Relationships/Behavior Problems SUSPECTED ABUSE/NEGLECT;NONE IDENTIFIED ntervention/Plan - Suspected abuse/neglect There are no SW concerns for child abuse and neglect identified at this time.
+A2	Negated T2
+T3	CommunitySafety 3082 3303	Mother states that Iris was golfing with father on Sunday.  Father was driving the golf cart, and Iris was standing in cart while in motion.  Father hit a bump and Iris fell out, striking the back of her head on concrete.
+T4	NonPermanentPlacement 3424 3481	Iris lives at home with mother, father and her five dogs.
+A3	Negated T4
+T5	PatientCaregiver_Unemployment 3483 3545	Parents own their own business, and decline note of admission.
+A4	Negated T5

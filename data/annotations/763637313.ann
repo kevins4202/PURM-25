@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 604 639	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DistancefromHospital 642 736	Parent Information: Mom and dad are spanish speaking only and live 2 hours away in Easton, PA.
+T3	PatientCaregiver_Unemployment 787 861	Mom noted she is currently not working and dad takes care of their cousin.
+T4	DistancefromHospital 1816 1922	Parent Stressors distance from hospital, finances, mom recovering from gull stone removal surgery as well.
+T5	FinancialStrain_Other 1816 1921	Parent Stressors distance from hospital, finances, mom recovering from gull stone removal surgery as well
+T6	DistancefromHospital 2044 2086;2089 2220;2223 2289	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom noted that family is coping with financial tranisition due to distance from hospital and gas support. Intervention/Plan - Household Finances SW will continue to support
+T7	FinancialStrain_Other 2044 2086;2089 2220;2223 2290	Resource Needs Problem: HOUSEHOLD FINANCES Goal - Household Finances Mom noted that family is coping with financial tranisition due to distance from hospital and gas support. Intervention/Plan - Household Finances SW will continue to support.

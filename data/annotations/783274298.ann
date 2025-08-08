@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 175 277	Father reached out to the Ronald McDonald house to see if he would be eligible to stay without Mother.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 83 174	SW intern gave Father the 2 meal vouchers and 2 military bags that had been left overnight.
+A2	ResolutioninProgress T2

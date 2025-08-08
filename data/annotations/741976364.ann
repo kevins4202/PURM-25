@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 621 725	Mom also reports that she spoke with SSI and has an appointment with them next week to begin that proces
+A1	ResolutioninProgress T1
+T2	LackofInsurance 59 143	Goal: Patient will have adequate insurance coverage to obtain necessary medical care
+A2	ResolutioninProgress T2

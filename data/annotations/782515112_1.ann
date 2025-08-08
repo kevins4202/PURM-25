@@ -1,0 +1,25 @@
+T1	NonPermanentPlacement 616 651;654 754	Patient living situation: PARENT(S) Parent Information: Nhoam lives in Hamilton, NJ in a rented room in a house with his mother, Karine.
+A1	Negated T1
+T2	LackofTransportation 755 832	Nhoam's cousin also lives in the home and supports the family with transport.
+A2	ResolutioninProgress T2
+T3	NonPermanentPlacement 887 993	Nhoam's father is involved but does not currently live with Nhoam and mom, he does live in the local area.
+A3	Negated T3
+T4	PatientCaregiver_Unemployment 1095 1175	Karine is unemployed and father, Kesnel, recently started working for Coca-cola.
+T5	PatientCaregiver_Unemployment 1095 1175	Karine is unemployed and father, Kesnel, recently started working for Coca-cola.
+A4	Negated T5
+T6	FinancialStrain_Other 1176 1223	Karine receives monetary support from her aunt.
+A5	ResolutioninProgress T6
+T7	ChildcareBarrierfromNonHospitalization 994 1040	Karine has a 13 y/o son that remains in Haiti.
+T8	DistancefromHospital 994 1040	Karine has a 13 y/o son that remains in Haiti.
+T9	GeneralHousingInstability 1891 1914;1917 2049	Housing instability YES Housing instability comment: Per mom, the family pays month-to-month for their housing arrangement and does not have a formal lease.
+T11	FinancialStrain_Other 2052 2071;2074 2195	Food insecurity YES Food insecurity comment: Per mom, the family faces significant financial strain and has difficulty affording basic needs.
+T10	FinancialStrain_Other 2431 2542	Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital
+T12	DistancefromHospital 2431 2542	Parent Stressors Language barrier, temporary protected status, financial strain, distance from home to hospital
+T13	LackofInsurance 2545 2612;2615 2717	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: Family is enrolled in NJMA, SW is assisting family in applying for SSI.
+A6	Negated T13
+T14	FinancialStrain_Other 2791 2868;2871 2976;2979 3141	Resource Needs Problem: HOUSEHOLD FINANCES;TRANSPORTATION;LOCAL ACCOMODATIONS Goal - Household Finances SW will continue to support family in accessing appropriate financial resources Intervention/Plan - Household Finances SW will assist mom in applying for SSI and connecting to local immigration agencies to provide access to eligible resources
+A7	ResolutioninProgress T14
+T15	LackofTransportation 3144 3253;3256 3390	Goal- Transportation SW confirmed with NJ Modivcare that pt is enrolled, will coach mom on how to use service Intervention/Plan - Transportation T/b with NJ Modivcare to assist in enrolling pt in services for reliable transport for medical apts
+A8	ResolutioninProgress T15
+T16	NeedTemporaryLodging 3393 3486;3489 3588	Goal - Local Accommodations SW added mom to RMH waitlist and provided information on facility Intervention/Plan- Local Accommodations Provide information on RMH and assist mom with lodging plan
+A9	ResolutioninProgress T16

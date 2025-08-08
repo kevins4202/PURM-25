@@ -1,0 +1,5 @@
+T1	LackofInsurance 753 888	SW discussed Dad's concerns with their Secondary Medicaid. Dad relayed that their whole family has Medicaid as their primary insurance.
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 970 1100	Dad relayed that he is worried that once he goes back to work, they will be over income and they will look her Secondary Medicaid.
+T3	FinancialStrain_Other 1697 2041	SW discussed ModivCare Mileage Reimbursement program. SW provided a sample log, blank log, and information about how to get reimbursed through the program. SW emailed Dad these documents, as well. SW discussed that this is a Medicaid resource, so the family will only have access to it as long as Ahuva has medicaid. Dad expressed understanding
+A2	ResolutioninProgress T3

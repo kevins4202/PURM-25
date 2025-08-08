@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 631 666;669 784	Patient living situation: PARENT(S) Parent Information: This is parents first child(ren) together (patient has a twin sister who is also hospitalized).
+A1	Negated T1
+T2	DistancefromHospital 785 847	Parents are from Ecuador and are currently staying at the RMH.
+T3	NeedTemporaryLodging 785 847	Parents are from Ecuador and are currently staying at the RMH.
+A2	Resolved T3
+T4	DistancefromHospital 1520 1599	Parent Stressors Being hospitalized in another country and being far from home.
+T5	NeedTemporaryLodging 1721 1764;1767 1815;1818 1952	Resource Needs Problem: LOCAL ACCOMODATIONS Goal - Local Accommodations Local Accommodations Intervention/Plan- Local Accommodations Parents are currently staying at the RMH and plan to remain there until patient is discharged.
+A3	Resolved T5

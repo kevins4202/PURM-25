@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 207 525	Progress:  LSW provided the patient's mother with guidance on requesting a room at the Ronald McDonald house. Parents are interested in staying there on the weekends. The patient's mother is considering leaving her job when Levi gets closer to discharge and staying at the RMD full time until Levi is ready to go home.
+T2	PatientCaregiver_Unemployment 374 525	The patient's mother is considering leaving her job when Levi gets closer to discharge and staying at the RMD full time until Levi is ready to go home.
+A1	Negated T2
+A2	ResolutioninProgress T1

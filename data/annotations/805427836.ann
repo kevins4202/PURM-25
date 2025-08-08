@@ -1,0 +1,4 @@
+T1	PermanentPlacementPending 717 828;830 921	--At time of discharge, CYS will take custody and make medical decisions, and will place Messiah with his aunt. --CYS cleared aunt's home on 5/22 and confirmed background checks have been updated on 6/6.
+A1	ResolutioninProgress T1
+T2	HomeSafety 830 921	--CYS cleared aunt's home on 5/22 and confirmed background checks have been updated on 6/6.
+A2	Resolved T2

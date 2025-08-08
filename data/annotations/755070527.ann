@@ -1,0 +1,4 @@
+T1	NeedTemporaryLodging 403 477	Mother was able to check in to the Ronald McDonald House over the weekend.
+A1	Resolved T1
+T2	PatientCaregiver_Unemployment 703 789	Social worker provided a letter of support for mother's employer per mother's request.
+A2	Negated T2

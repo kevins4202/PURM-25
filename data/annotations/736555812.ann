@@ -1,0 +1,5 @@
+T1	SubstanceAbuse_Other 1509 1701	SW contacted John Brooks Recovery Center in Mays Landing, NJ and left a voicemail to provide SW's contact information and assist with facilitating communication as appropriate for pt's mother.
+A1	ResolutioninProgress T1
+T2	ChildcareBarrierfromHospitalization 932 1076	SW explained to the family that pt's mother (Alexis) will be added back to visitor list as soon as she is able to visit again, all in agreement.
+T3	NonPermanentPlacement 1143 1238	Pt's two parents/legal guardians are the only individuals who can provide consent at this time.
+A2	Negated T3

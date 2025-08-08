@@ -1,0 +1,15 @@
+T1	PatientCaregiver_Unemployment 996 1307	Dad recently graduated from school for Massage Therapy in December 2022, but has been unable to start working due to Mia's hospitalization. Mom previously worked in the service industry (manager at a hair salon and Jersey Mikes), but is now going to be taking classes in Coding (this will be a few months long).
+T2	NonPermanentPlacement 762 818;821 902	Patient living situation: PARENT(S);CHILDREN IN THE HOME Parent Information: Mom and Dad are not together and live in separate households.
+A1	Negated T2
+T3	LackofFundsforFood 2577 2596;2599 2657	Food insecurity YES Food insecurity comment: Mom working on applying for SNAP.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 2997 3079	Parent Stressors Prolonded admission, parent relationship strain, financial strain
+T5	PermanentPlacementPending 3082 3207;3210 3296	Existing Community Services/Outside Supports: REHABILITATION SERVICES;TRANSPORTATION;PUBLIC ASSISTANCE/SSI;FOUNDATION SUPPORT Rehabilitation services comment: Mia will go to inpatient rehab once medically stable.
+T6	LackofTransportation 3299 3351	Transportation comment: Mom and Dad both have a car.
+A3	Negated T6
+T7	LackofFundsforFood 3354 3499	Public assistance/SSI comment: Mom previoulsy received SNAP, but it was cut off during the pandemic. Mom actively working on reapplying for SNAP.
+A4	ResolutioninProgress T7
+T8	LackofInsurance 3622 3641	Pt has PA Medicaid.
+A5	Negated T8
+T9	FinancialStrain_Other 3644 3838	Foundation support comment: Mom and Dad received Fred's Footsteps funding in the PICU. Mom shared that pt's school has been raising money for the family, Per PICU SW, family also has a gofundme.
+A6	ResolutioninProgress T9

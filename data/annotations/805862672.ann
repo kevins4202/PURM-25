@@ -1,0 +1,14 @@
+T1	NonPermanentPlacement 670 705	Patient living situation: PARENT(S)
+A1	Negated T1
+T2	DrugUse 1906 1925;1928 2139	Substance Abuse YES Substance Abuse comment: Mother reports her own history of addiction to Vicodin; mother reports she is currently receiving Suboxone treatment and the physician has called in her prescription to CVS local to CHOP
+A2	ResolutioninProgress T2
+T3	Alcoholism 2142 2158;2161 2300	Legal Issues YES Legal Issues comment: Mother reports her own history of arrest on two occasions for DUI; mother has no current law enforcement involvement.
+A3	HistoryOf T3
+T4	LackofInsurance 2661 2728;2731 2780	Existing Community Services/Outside Supports: PUBLIC ASSISTANCE/SSI Public assistance/SSI comment: medicaid insurance
+A4	Negated T4
+T5	HomeSafety 2849 2907;2910 2982	Resource Needs Problem(s) SAFE/ACCESSIBLE HOME ENVIRONMENT Goal - Safe/Accessible home environment Mother denies firearm ownership.
+A5	Negated T5
+T6	ChildAbuse 4346 4376;4380 4596	Goal - Suspected abuse/neglect ntervention/Plan - Suspected abuse/neglect Luzerne County CYS caseworker, Megan Donovan 570-826-8710 x 2804, contacted SW to inform of new allegation reported on 5/30/23.  Per CYS, they have been involved since 2017.
+A6	Speculation T6
+T7	ChildAbuse 1684 1719;1722 1864	Protective Services Involvement YES CPS involvment comment: Luzerne County CYS, Megan Donovan, has been involved and open since 2017; new allegation reported on 5/30/2023 per CYS
+A7	Speculation T7

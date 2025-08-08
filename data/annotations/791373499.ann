@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 622 682	Patient father works throughout the week and off on Mondays.
+A1	Negated T1
+T2	LackofTransportation 1152 1230	LSW supported patient parents with getting back home from visit utilizing Lyft
+A2	ResolutioninProgress T2

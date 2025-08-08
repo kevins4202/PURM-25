@@ -1,0 +1,8 @@
+T1	NonPermanentPlacement 2989 3051	Patient mother, father, sibling Marina, and niece live in home
+A1	Negated T1
+T2	PatientCaregiver_Unemployment 3053 3188	Patient father has contracting business and patient mother is not employed-patient mother cares for patient sibling and cousin at home.
+A2	Negated T2
+T3	LackofInsurance 3571 3660	Patient mother and father interested in SSI, PA Secondary Medicaid, and RMHP information.
+A3	Negated T3
+T4	NeedTemporaryLodging 3571 3660	Patient mother and father interested in SSI, PA Secondary Medicaid, and RMHP information.
+A4	ResolutioninProgress T4

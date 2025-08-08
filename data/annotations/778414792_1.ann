@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 253 310;313 402;404 550;556 576;580 676	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 12. Reason for Disbursement: Unforseen/emergent admission-no available resources and Critical medical status-not feasible to leave hospital at present Additional comments: SW provided meal vouchers for weekend coverage as well as toiletries, water bottle, and journal.
+A1	ResolutioninProgress T1
+T2	NeedTemporaryLodging 678 720	Family is awaiting ability to stay at RMH.
+A2	ResolutioninProgress T2

@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 32 55;57 190;192 208	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 765 822;825 920;926 946;953 1034	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Parking Passes (#'s): 3. Additional comments: Concrete resources provided after LSW provided thorough concrete need assessment.
+A2	ResolutioninProgress T2

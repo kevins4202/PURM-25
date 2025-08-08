@@ -1,0 +1,4 @@
+T1	LackofInsurance 604 694	Mom also sent SW a copy of Yaseen's Medicaid ID Card and his Social Security Card for IDS.
+A1	Negated T1
+T2	FinancialStrain_Other 1342 1617	Resource Needs - Intervention - In-home services: Assess patient's insurance status/waiver eligibility (provide patient/family/caregiver with information to apply for needed benefits including referral to Family Health Coverage Program as needed  OR relevant waiver programs)
+A2	ResolutioninProgress T2

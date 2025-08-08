@@ -1,0 +1,4 @@
+T1	PatientCaregiver_Unemployment 333 412	Mother reports her typical days off of work are Sundays, Mondays, and Tuesdays.
+A1	Negated T1
+T2	FinancialStrain_Other 413 527	We discussed recent grant approval (through MBA Opens Doors Foundation) and planning around discharge to Shriners.
+A2	ResolutioninProgress T2

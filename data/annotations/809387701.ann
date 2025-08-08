@@ -1,0 +1,9 @@
+T1	DistancefromHospital 1540 1624	Parent Stressors Being far away from home and adjusting to patient's hospitalization
+T2	NonPermanentPlacement 634 669	Patient living situation: PARENT(S)
+A1	Negated T2
+T3	PatientCaregiver_Unemployment 730 844	Patient's mother is self employed and currenlty out on leave. Patient's father is a paralegal and is back to work.
+A2	Negated T3
+T4	DistancefromHospital 845 904	Parents live about an hour away and plan to visit each day.
+T5	LackofInsurance 1693 1728;1731 1783;1786 1985	Resource Needs Problem(s) INSURANCE Goal - Insurance Patient will have active insurance. Intervention/Plan - Insurance Parents are in the process of deciding which insurance to add patient too. SW has also made a referral FHCP to help assist parents with either medicaid primary or PH-95.
+A3	ResolutioninProgress T5
+T6	HomeEnvironment_Other 2333 2386;2389 2426;2429 2592	Relationships/Behavior Problem(s) VISITATION CONCERNS Goal - Visitation concerns Visitation Intervention/Plan - Visitation concerns Patient's father must be escorted to and from the bedside by security. Please see visitor rescriction for more information.

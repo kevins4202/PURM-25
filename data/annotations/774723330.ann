@@ -1,0 +1,21 @@
+T3	LackofInsurance 1492 1847	Mother shared the she submitted the online application for Ohio Medicaid in preparation for the family's relocation to Ohio in the coming weeks, however mother explained that the application was denied as the family was missing documentation demonstrating proof of residency. Mother plans to resume the application process once the family arrives in Ohio.
+A2	ResolutioninProgress T3
+T4	FinancialStrain_Other 1852 1900	Mother received Uber gift card from Harp's Hope.
+A3	ResolutioninProgress T4
+T5	LackofTransportation 1852 1900	Mother received Uber gift card from Harp's Hope.
+A4	ResolutioninProgress T5
+T6	ChildcareBarrierfromHospitalization 1901 2027	It remains challenging for mother to visit Antonio at the hospital with limited child care for Antonio's three older siblings.
+T1	GeneralHousingInstability 1099 1256	Mother shared that she spoke with her landlord and her landlord has approved for the family to remain at their current residence through the end of February.
+A1	ResolutioninProgress T1
+T2	DistancefromHospital 1257 1432	Mother noted that she hopes that Antonio will be discharged by then so that the family can move together to Ohio. As such, mother wishes to put transfer to Nationwide on hold.
+T7	FinancialStrain_Other 2028 2300	Social worker provided information about financial assistance organizations that may be able to assist with paying bills or a month of rent. Mother is interested in a referral. Social worker will follow up to submit an application to the Colette Louise Tisdahl Foundation.
+A5	ResolutioninProgress T7
+T8	GeneralHousingInstability 2301 2437	Social worker offered to advocate to the family's landlord on behalf of the family should Antonio's hospitalization continue into March.
+A6	ResolutioninProgress T8
+T9	LackofTransportation 203 226;228 346;348 364	Problem: RESOURCE NEEDS Goal: Patient will have adequate transportation resources to access needed medical care and return to home environment Outcome: Ongoing
+A7	ResolutioninProgress T9
+T10	LackofInsurance 366 450;452 468	Goal: Patient will have adequate insurance coverage to obtain necessary medical care Outcome: Ongoing
+A8	ResolutioninProgress T10
+T11	FinancialStrain_Other 762 785;787 920;922 938	Problem: RESOURCE NEEDS Goal: Patient household finances will support family/caregiver(s) presence to participate in patient care and transition patient home Outcome: Ongoing
+A9	ResolutioninProgress T11
+T12	HomeEnvironment_Other 592 615;617 739;741 757	Problem: RESOURCE NEEDS Goal: Patient/family/caregiver will have coordination between medical team and current CPS providers to support care needs Outcome: Ongoing

@@ -1,0 +1,4 @@
+T1	FinancialStrain_Other 438 494	LSW will support patient mother with concrete resources.
+A1	ResolutioninProgress T1
+T2	FinancialStrain_Other 847 904;907 1023;1029 1049;1055 1133	Patient screened today for concrete resource eligibility: Patient is eligible and Social Work provided the following resources:  Meal Vouchers: 2 and Parking Passes (#'s): 1. Additional comments: LSW assessed patient and patient family needs and provided concrete resources.
+A2	ResolutioninProgress T2

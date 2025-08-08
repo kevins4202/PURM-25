@@ -1,0 +1,9 @@
+T1	NeedTemporaryLodging 1258 1485	Family continues to stay at local RMH-Chestnut St. Mother reports that both parents and siblings are at RMH at this time, or family sometimes has a hotel or Airbnb for when extended family members have travelled in for support.
+A1	Resolved T1
+T2	LackofInsurance 1490 1752;1754 1838	SW to check if active on insurance. Family is interested in applying for MA in their home state of TN. Mother contacted SSI and scheduled an appointment for 12/1, SW provided anticipatory guidance around application process and will continue to assist as needed. Addendum- patient is active on Cigna insurance Member ID: U5088298307 Group: 3327595
+A2	Negated T2
+T3	FinancialStrain_Other 1843 2029	SW discussed applying for two programs for financial support, Project Sweet Peas Food & Fuel Assistance and MBA Opens Doors mortgage assistance, and provided further information by email
+A3	ResolutioninProgress T3
+T4	ChildcareBarrierfromHospitalization 413 484	Family continues to visit daily and are engaged with pt's ongoing care.
+A4	Negated T4
+T5	ChildcareBarrierfromNonHospitalization 485 600	SW has primarily met with mother at bedside while father is caring for pt's siblings, who have also visited bedside
