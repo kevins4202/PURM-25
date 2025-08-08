@@ -1,8 +1,0 @@
-{
-  "train": {
-    "file_name": "train.json"
-  },
-  "val": {
-    "file_name": "val.json"
-  }
-}
